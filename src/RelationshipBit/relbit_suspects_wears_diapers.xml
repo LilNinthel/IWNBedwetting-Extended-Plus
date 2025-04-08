@@ -1,0 +1,5 @@
+<I c="RelationshipBit" i="relbit" m="relationships.relationship_bit" n="LilNinthel:relbit_suspects_wears_diapers" s="4193068179">
+  <E n="directionality">UNIDIRECTIONAL</E>
+  <T n="icon" p="InGame\UI\Icons\Debug\missing_image.png">2F7D0004:00000000:30F0846C783606F9</T>
+  <T n="visible">False</T>
+</I>

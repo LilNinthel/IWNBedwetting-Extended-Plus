@@ -1,0 +1,20 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_buff_peeing_vfx_crotch_only_add" s="16749757115929955781">
+  <L n="loot_actions">
+    <V t="buff_removal">
+      <U n="buff_removal">
+        <E n="subject">Actor</E>
+        <L n="buffs_to_remove">
+          <T>14483587111681728278<!--LilNinthel:buff_peeing_vfx_crotch_only--></T>
+        </L>
+      </U>
+    </V>
+    <V t="buff">
+      <U n="buff">
+        <E n="subject">Actor</E>
+        <U n="buff">
+          <T n="buff_type">14483587111681728278<!--LilNinthel:buff_peeing_vfx_crotch_only--></T>
+        </U>
+      </U>
+    </V>
+  </L>
+</I>

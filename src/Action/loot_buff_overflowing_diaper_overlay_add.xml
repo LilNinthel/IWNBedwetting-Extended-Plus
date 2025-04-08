@@ -1,0 +1,20 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_buff_overflowing_diaper_overlay_add" s="11932340548991546128">
+  <L n="loot_actions">
+    <V t="buff_removal">
+      <U n="buff_removal">
+        <E n="subject">Actor</E>
+        <L n="buffs_to_remove">
+          <T>10367890649802483015<!--LilNinthel:buff_leaky_diaper_overlay--></T>
+        </L>
+      </U>
+    </V>
+    <V t="buff">
+      <U n="buff">
+        <E n="subject">Actor</E>
+        <U n="buff">
+          <T n="buff_type">9966416866659479991<!--LilNinthel:buff_overflowing_diaper_overlay--></T>
+        </U>
+      </U>
+    </V>
+  </L>
+</I>

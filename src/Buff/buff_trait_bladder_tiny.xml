@@ -1,0 +1,39 @@
+<!-- S4TK Group: 80000000 -->
+<I c="Buff" s="14617635913329997248" i="buff" m="buffs.buff" n="LilNinthel:buff_trait_bladder_tiny">
+  <T n="buff_description">0x00000000</T>
+  <T n="buff_name">0x00000000</T>
+  <T n="icon">2f7d0004:00000000:c09b0954d2ef3d7f</T>
+  <T n="mood_type">0</T>
+  <T n="mood_weight">0</T>
+  <U n="game_effect_modifier">
+    <L n="_game_effect_modifiers">
+      <V t="autonomy_modifier">
+        <U n="autonomy_modifier">
+          <L n="decay_modifiers">
+            <U>
+              <T n="key">16652<!--motive_Bladder--></T>
+              <T n="value">3</T>
+            </U>
+          </L>
+          <L n="stat_use_multiplier">
+            <U>
+              <T n="key">16652<!--motive_Bladder--></T>
+              <U n="value">
+                <E n="apply_direction">DECREASE</E>
+                <T n="multiplier">3</T>
+              </U>
+            </U>
+            <U>
+              <T n="key">13859436604775548367<!--LilNinthel:commodity_DiaperLoad--></T>
+              <U n="value">
+                <E n="apply_direction">INCREASE</E>
+                <T n="multiplier">0.33</T>
+              </U>
+            </U>
+          </L>
+        </U>
+      </V>
+    </L>
+  </U>
+  <T n="visible">False</T>
+</I>

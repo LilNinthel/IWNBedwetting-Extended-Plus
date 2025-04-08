@@ -1,0 +1,9 @@
+<!-- S4TK Group: 80000000 -->
+<I c="Buff" s="13553445139389231781" i="buff" m="buffs.buff" n="LilNinthel:buff_highchairfeedposture">
+  <T n="buff_description">0x00000000</T>
+  <T n="buff_name">0x00000000</T>
+  <T n="icon">2f7d0004:00000000:c09b0954d2ef3d7f</T>
+  <T n="mood_type">0</T>
+  <T n="mood_weight">0</T>
+  <T n="visible">False</T>
+</I>

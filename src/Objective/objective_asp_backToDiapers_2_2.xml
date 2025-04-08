@@ -1,0 +1,19 @@
+<I c="Objective" i="objective" m="event_testing.objective_tuning" n="LilNinthel:objective_asp_backToDiapers_2_2" s="15756367414260610851">
+  <L n="completion_loot">
+    <T>273578<!--loot_Want_AspirationCompleted--></T>
+  </L>
+  <T n="display_text">0x139E8147<!--Wear 5 diapers--></T>
+  <V n="objective_completion_type" t="use_test_result" />
+  <V n="objective_test" t="statistic">
+    <U n="statistic">
+      <T n="must_have_stat">True</T>
+      <T n="stat">15659497102112408646<!--LilNinthel:statistic_worn_diapers--></T>
+      <V n="threshold" t="value_threshold">
+        <U n="value_threshold">
+          <T n="value">5</T>
+        </U>
+      </V>
+    </U>
+  </V>
+  <T n="satisfaction_points">600</T>
+</I>

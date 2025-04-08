@@ -1,0 +1,995 @@
+<SimData version="0x00000101" u="0x00000000">
+  <Instances>
+    <I name="motive_Bladder" schema="Commodity" type="Object">
+      <L name="ad_data">
+        <T type="Float2">-100,1024</T>
+        <T type="Float2">-76,1024</T>
+        <T type="Float2">-75,128</T>
+        <T type="Float2">-51,128</T>
+        <T type="Float2">-50,8</T>
+        <T type="Float2">-26,8</T>
+        <T type="Float2">-25,0</T>
+        <T type="Float2">100,0</T>
+      </L>
+      <U name="arrow_data" schema="TunableArrowData">
+        <T name="negative_double_arrow">-0.3</T>
+        <T name="negative_single_arrow">-0.001</T>
+        <T name="negative_triple_arrow">-0.6</T>
+        <T name="positive_double_arrow">0.25</T>
+        <T name="positive_single_arrow">0.001</T>
+        <T name="positive_triple_arrow">0.5</T>
+      </U>
+      <T name="max_value_tuning">100</T>
+      <T name="min_value_tuning">-100</T>
+      <T name="stat_name">0xD19C9345</T>
+      <L name="states">
+        <U type="Object" schema="TunableCommodityState">
+          <U name="background_color" schema="TunableColorRGBA">
+            <T name="a">255</T>
+            <T name="b">5</T>
+            <T name="g">0</T>
+            <T name="r">177</T>
+          </U>
+          <T name="data_description">0x6285D61A</T>
+          <U name="fill_color" schema="TunableColorRGBA">
+            <T name="a">255</T>
+            <T name="b">7</T>
+            <T name="g">0</T>
+            <T name="r">255</T>
+          </U>
+          <T name="fill_level">1</T>
+          <T name="icon">00B2D882-00000000-E1FE0B9E848ADC92</T>
+          <L name="tooltip_icon_list">
+            <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171A</T>
+            <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71719</T>
+            <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71718</T>
+          </L>
+          <L name="trait_based_ui_overrides">
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">133125</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0xEC683114</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171F</T>
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171E</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">266297</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0x736DD9AD</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171E</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">1891765918</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0x736DD9AD</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171E</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">381402</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0xCC20EB5C</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171A</T>
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71719</T>
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71718</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">392634</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0xE3F57166</T>
+                </V>
+                <V name="fill_color" variant="0xF8CBBF4C" schema="TunableColorRGBA">
+                  <T name="a">255</T>
+                  <T name="b">128</T>
+                  <T name="g">128</T>
+                  <T name="r">128</T>
+                </V>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xC1A03855"/>
+              </U>
+            </U>
+          </L>
+          <V name="ui_container_animation_decreasing" variant="0xC1A03855"/>
+          <V name="ui_container_animation_increasing" variant="0xC1A03855"/>
+          <T name="value">-100</T>
+        </U>
+        <U type="Object" schema="TunableCommodityState">
+          <U name="background_color" schema="TunableColorRGBA">
+            <T name="a">255</T>
+            <T name="b">0</T>
+            <T name="g">54</T>
+            <T name="r">178</T>
+          </U>
+          <T name="data_description">0x6285D61A</T>
+          <U name="fill_color" schema="TunableColorRGBA">
+            <T name="a">255</T>
+            <T name="b">0</T>
+            <T name="g">90</T>
+            <T name="r">255</T>
+          </U>
+          <T name="fill_level">0</T>
+          <T name="icon">00B2D882-00000000-E1FE0B9E848ADC92</T>
+          <L name="tooltip_icon_list">
+            <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171A</T>
+            <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71719</T>
+            <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71718</T>
+          </L>
+          <L name="trait_based_ui_overrides">
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">133125</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0xEC683114</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171F</T>
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171E</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">266297</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0x736DD9AD</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171E</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">1891765918</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0x736DD9AD</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171E</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">381402</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0xCC20EB5C</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171A</T>
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71719</T>
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71718</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">392634</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0xE3F57166</T>
+                </V>
+                <V name="fill_color" variant="0xF8CBBF4C" schema="TunableColorRGBA">
+                  <T name="a">255</T>
+                  <T name="b">128</T>
+                  <T name="g">128</T>
+                  <T name="r">128</T>
+                </V>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xC1A03855"/>
+              </U>
+            </U>
+          </L>
+          <V name="ui_container_animation_decreasing" variant="0xC1A03855"/>
+          <V name="ui_container_animation_increasing" variant="0xC1A03855"/>
+          <T name="value">-75</T>
+        </U>
+        <U type="Object" schema="TunableCommodityState">
+          <U name="background_color" schema="TunableColorRGBA">
+            <T name="a">255</T>
+            <T name="b">0</T>
+            <T name="g">139</T>
+            <T name="r">191</T>
+          </U>
+          <T name="data_description">0x6285D61A</T>
+          <U name="fill_color" schema="TunableColorRGBA">
+            <T name="a">255</T>
+            <T name="b">0</T>
+            <T name="g">222</T>
+            <T name="r">255</T>
+          </U>
+          <T name="fill_level">2</T>
+          <T name="icon">00B2D882-00000000-E1FE0B9E848ADC92</T>
+          <L name="tooltip_icon_list">
+            <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171A</T>
+            <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71719</T>
+            <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71718</T>
+          </L>
+          <L name="trait_based_ui_overrides">
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">133125</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0xEC683114</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171F</T>
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171E</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">266297</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0x736DD9AD</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171E</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">1891765918</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0x736DD9AD</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171E</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">381402</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0xCC20EB5C</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171A</T>
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71719</T>
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71718</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">392634</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0xE3F57166</T>
+                </V>
+                <V name="fill_color" variant="0xF8CBBF4C" schema="TunableColorRGBA">
+                  <T name="a">255</T>
+                  <T name="b">128</T>
+                  <T name="g">128</T>
+                  <T name="r">128</T>
+                </V>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xC1A03855"/>
+              </U>
+            </U>
+          </L>
+          <V name="ui_container_animation_decreasing" variant="0xC1A03855"/>
+          <V name="ui_container_animation_increasing" variant="0xC1A03855"/>
+          <T name="value">-50</T>
+        </U>
+        <U type="Object" schema="TunableCommodityState">
+          <U name="background_color" schema="TunableColorRGBA">
+            <T name="a">255</T>
+            <T name="b">1</T>
+            <T name="g">163</T>
+            <T name="r">1</T>
+          </U>
+          <T name="data_description">0x6285D61A</T>
+          <U name="fill_color" schema="TunableColorRGBA">
+            <T name="a">255</T>
+            <T name="b">0</T>
+            <T name="g">255</T>
+            <T name="r">36</T>
+          </U>
+          <T name="fill_level">0</T>
+          <T name="icon">00B2D882-00000000-E1FE0B9E848ADC92</T>
+          <L name="tooltip_icon_list">
+            <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171A</T>
+            <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71719</T>
+            <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71718</T>
+          </L>
+          <L name="trait_based_ui_overrides">
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">133125</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0xEC683114</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171F</T>
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171E</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">266297</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0x736DD9AD</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171E</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">1891765918</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0x736DD9AD</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171E</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">381402</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0xCC20EB5C</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171A</T>
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71719</T>
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71718</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">392634</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0xE3F57166</T>
+                </V>
+                <V name="fill_color" variant="0xF8CBBF4C" schema="TunableColorRGBA">
+                  <T name="a">255</T>
+                  <T name="b">128</T>
+                  <T name="g">128</T>
+                  <T name="r">128</T>
+                </V>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xC1A03855"/>
+              </U>
+            </U>
+          </L>
+          <V name="ui_container_animation_decreasing" variant="0xC1A03855"/>
+          <V name="ui_container_animation_increasing" variant="0xC1A03855"/>
+          <T name="value">-25</T>
+        </U>
+        <U type="Object" schema="TunableCommodityState">
+          <U name="background_color" schema="TunableColorRGBA">
+            <T name="a">255</T>
+            <T name="b">1</T>
+            <T name="g">163</T>
+            <T name="r">1</T>
+          </U>
+          <T name="data_description">0x6285D61A</T>
+          <U name="fill_color" schema="TunableColorRGBA">
+            <T name="a">255</T>
+            <T name="b">0</T>
+            <T name="g">255</T>
+            <T name="r">36</T>
+          </U>
+          <T name="fill_level">0</T>
+          <T name="icon">00B2D882-00000000-E1FE0B9E848ADC92</T>
+          <L name="tooltip_icon_list">
+            <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171A</T>
+            <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71719</T>
+            <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71718</T>
+          </L>
+          <L name="trait_based_ui_overrides">
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">133125</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0xEC683114</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171F</T>
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171E</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">266297</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0x736DD9AD</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171E</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">1891765918</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0x736DD9AD</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171E</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">381402</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0xCC20EB5C</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171A</T>
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71719</T>
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71718</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">392634</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0xE3F57166</T>
+                </V>
+                <V name="fill_color" variant="0xF8CBBF4C" schema="TunableColorRGBA">
+                  <T name="a">255</T>
+                  <T name="b">128</T>
+                  <T name="g">128</T>
+                  <T name="r">128</T>
+                </V>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xC1A03855"/>
+              </U>
+            </U>
+          </L>
+          <V name="ui_container_animation_decreasing" variant="0xC1A03855"/>
+          <V name="ui_container_animation_increasing" variant="0xC1A03855"/>
+          <T name="value">0</T>
+        </U>
+        <U type="Object" schema="TunableCommodityState">
+          <U name="background_color" schema="TunableColorRGBA">
+            <T name="a">255</T>
+            <T name="b">1</T>
+            <T name="g">163</T>
+            <T name="r">1</T>
+          </U>
+          <T name="data_description">0x6285D61A</T>
+          <U name="fill_color" schema="TunableColorRGBA">
+            <T name="a">255</T>
+            <T name="b">0</T>
+            <T name="g">255</T>
+            <T name="r">36</T>
+          </U>
+          <T name="fill_level">3</T>
+          <T name="icon">00B2D882-00000000-E1FE0B9E848ADC92</T>
+          <L name="tooltip_icon_list">
+            <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171A</T>
+            <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71719</T>
+            <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71718</T>
+          </L>
+          <L name="trait_based_ui_overrides">
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">133125</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0xEC683114</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171F</T>
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171E</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">266297</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0x736DD9AD</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171E</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">1891765918</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0x736DD9AD</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171E</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">381402</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0xCC20EB5C</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171A</T>
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71719</T>
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71718</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">392634</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0xE3F57166</T>
+                </V>
+                <V name="fill_color" variant="0xF8CBBF4C" schema="TunableColorRGBA">
+                  <T name="a">255</T>
+                  <T name="b">128</T>
+                  <T name="g">128</T>
+                  <T name="r">128</T>
+                </V>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xC1A03855"/>
+              </U>
+            </U>
+          </L>
+          <V name="ui_container_animation_decreasing" variant="0xC1A03855"/>
+          <V name="ui_container_animation_increasing" variant="0xC1A03855"/>
+          <T name="value">25</T>
+        </U>
+        <U type="Object" schema="TunableCommodityState">
+          <U name="background_color" schema="TunableColorRGBA">
+            <T name="a">255</T>
+            <T name="b">1</T>
+            <T name="g">163</T>
+            <T name="r">1</T>
+          </U>
+          <T name="data_description">0x6285D61A</T>
+          <U name="fill_color" schema="TunableColorRGBA">
+            <T name="a">255</T>
+            <T name="b">0</T>
+            <T name="g">255</T>
+            <T name="r">36</T>
+          </U>
+          <T name="fill_level">3</T>
+          <T name="icon">00B2D882-00000000-E1FE0B9E848ADC92</T>
+          <L name="tooltip_icon_list">
+            <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171A</T>
+            <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71719</T>
+            <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71718</T>
+          </L>
+          <L name="trait_based_ui_overrides">
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">133125</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0xEC683114</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171F</T>
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171E</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">266297</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0x736DD9AD</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171E</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">1891765918</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0x736DD9AD</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171E</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">381402</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0xCC20EB5C</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171A</T>
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71719</T>
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71718</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">392634</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0xE3F57166</T>
+                </V>
+                <V name="fill_color" variant="0xF8CBBF4C" schema="TunableColorRGBA">
+                  <T name="a">255</T>
+                  <T name="b">128</T>
+                  <T name="g">128</T>
+                  <T name="r">128</T>
+                </V>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xC1A03855"/>
+              </U>
+            </U>
+          </L>
+          <V name="ui_container_animation_decreasing" variant="0xC1A03855"/>
+          <V name="ui_container_animation_increasing" variant="0xC1A03855"/>
+          <T name="value">50</T>
+        </U>
+        <U type="Object" schema="TunableCommodityState">
+          <U name="background_color" schema="TunableColorRGBA">
+            <T name="a">255</T>
+            <T name="b">1</T>
+            <T name="g">163</T>
+            <T name="r">1</T>
+          </U>
+          <T name="data_description">0x6285D61A</T>
+          <U name="fill_color" schema="TunableColorRGBA">
+            <T name="a">255</T>
+            <T name="b">0</T>
+            <T name="g">255</T>
+            <T name="r">36</T>
+          </U>
+          <T name="fill_level">3</T>
+          <T name="icon">00B2D882-00000000-E1FE0B9E848ADC92</T>
+          <L name="tooltip_icon_list">
+            <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171A</T>
+            <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71719</T>
+            <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71718</T>
+          </L>
+          <L name="trait_based_ui_overrides">
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">133125</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0xEC683114</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171F</T>
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171E</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">266297</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0x736DD9AD</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171E</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">1891765918</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0x736DD9AD</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171E</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">381402</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0xCC20EB5C</T>
+                </V>
+                <V name="fill_color" variant="0xC1A03855"/>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xF8CBBF4C">
+                  <L type="Vector">
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F7171A</T>
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71719</T>
+                    <T type="ResourceKey">00B2D882-00000000-C1B88466D6F71718</T>
+                  </L>
+                </V>
+              </U>
+            </U>
+            <U type="Object" schema="TraitBasedUIOverridesMapping">
+              <T name="key">392634</T>
+              <U name="value" schema="TraitBasedUIOverrides">
+                <V name="data_description" variant="0xF8CBBF4C">
+                  <T type="LocalizationKey">0xE3F57166</T>
+                </V>
+                <V name="fill_color" variant="0xF8CBBF4C" schema="TunableColorRGBA">
+                  <T name="a">255</T>
+                  <T name="b">128</T>
+                  <T name="g">128</T>
+                  <T name="r">128</T>
+                </V>
+                <V name="icon" variant="0xC1A03855"/>
+                <V name="stat_name" variant="0xC1A03855"/>
+                <V name="tooltip_icon_list" variant="0xC1A03855"/>
+              </U>
+            </U>
+          </L>
+          <V name="ui_container_animation_decreasing" variant="0xC1A03855"/>
+          <V name="ui_container_animation_increasing" variant="0xC1A03855"/>
+          <T name="value">75</T>
+        </U>
+      </L>
+      <L name="trait_based_ui_overrides"/>
+      <T name="ui_render_style">0</T>
+      <T name="ui_sort_order">0</T>
+      <U name="ui_visible_distress_threshold" schema="TunableDistressThreshold">
+        <T name="comparison">6</T>
+        <T name="threshold_value">-25</T>
+      </U>
+      <T name="visible">1</T>
+    </I>
+  </Instances>
+  <Schemas>
+    <Schema name="Commodity" schema_hash="0xDE657D91">
+      <Columns>
+        <Column name="ad_data" type="Vector" flags="0x00000000"/>
+        <Column name="arrow_data" type="Object" flags="0x00000000"/>
+        <Column name="max_value_tuning" type="Single" flags="0x00000000"/>
+        <Column name="min_value_tuning" type="Single" flags="0x00000000"/>
+        <Column name="stat_name" type="LocalizationKey" flags="0x00000000"/>
+        <Column name="states" type="Vector" flags="0x00000000"/>
+        <Column name="trait_based_ui_overrides" type="Vector" flags="0x00000000"/>
+        <Column name="ui_render_style" type="Int64" flags="0x00000000"/>
+        <Column name="ui_sort_order" type="Int32" flags="0x00000000"/>
+        <Column name="ui_visible_distress_threshold" type="Object" flags="0x00000000"/>
+        <Column name="visible" type="Boolean" flags="0x00000000"/>
+      </Columns>
+    </Schema>
+    <Schema name="TunableArrowData" schema_hash="0x2804CCF3">
+      <Columns>
+        <Column name="negative_double_arrow" type="Single" flags="0x00000000"/>
+        <Column name="negative_single_arrow" type="Single" flags="0x00000000"/>
+        <Column name="negative_triple_arrow" type="Single" flags="0x00000000"/>
+        <Column name="positive_double_arrow" type="Single" flags="0x00000000"/>
+        <Column name="positive_single_arrow" type="Single" flags="0x00000000"/>
+        <Column name="positive_triple_arrow" type="Single" flags="0x00000000"/>
+      </Columns>
+    </Schema>
+    <Schema name="TunableCommodityState" schema_hash="0x365DF859">
+      <Columns>
+        <Column name="background_color" type="Object" flags="0x00000000"/>
+        <Column name="data_description" type="LocalizationKey" flags="0x00000000"/>
+        <Column name="fill_color" type="Object" flags="0x00000000"/>
+        <Column name="fill_level" type="Int64" flags="0x00000000"/>
+        <Column name="icon" type="ResourceKey" flags="0x00000000"/>
+        <Column name="tooltip_icon_list" type="Vector" flags="0x00000000"/>
+        <Column name="trait_based_ui_overrides" type="Vector" flags="0x00000000"/>
+        <Column name="ui_container_animation_decreasing" type="Variant" flags="0x00000000"/>
+        <Column name="ui_container_animation_increasing" type="Variant" flags="0x00000000"/>
+        <Column name="value" type="Int32" flags="0x00000000"/>
+      </Columns>
+    </Schema>
+    <Schema name="TunableColorRGBA" schema_hash="0x4A938D09">
+      <Columns>
+        <Column name="a" type="Int32" flags="0x00000000"/>
+        <Column name="b" type="Int32" flags="0x00000000"/>
+        <Column name="g" type="Int32" flags="0x00000000"/>
+        <Column name="r" type="Int32" flags="0x00000000"/>
+      </Columns>
+    </Schema>
+    <Schema name="TraitBasedUIOverridesMapping" schema_hash="0x72A5AA29">
+      <Columns>
+        <Column name="key" type="TableSetReference" flags="0x00000000"/>
+        <Column name="value" type="Object" flags="0x00000000"/>
+      </Columns>
+    </Schema>
+    <Schema name="TraitBasedUIOverrides" schema_hash="0xDA70FF04">
+      <Columns>
+        <Column name="data_description" type="Variant" flags="0x00000000"/>
+        <Column name="fill_color" type="Variant" flags="0x00000000"/>
+        <Column name="icon" type="Variant" flags="0x00000000"/>
+        <Column name="stat_name" type="Variant" flags="0x00000000"/>
+        <Column name="tooltip_icon_list" type="Variant" flags="0x00000000"/>
+      </Columns>
+    </Schema>
+    <Schema name="TunableDistressThreshold" schema_hash="0x0FF0BF5C">
+      <Columns>
+        <Column name="comparison" type="Int64" flags="0x00000000"/>
+        <Column name="threshold_value" type="Single" flags="0x00000000"/>
+      </Columns>
+    </Schema>
+  </Schemas>
+</SimData>

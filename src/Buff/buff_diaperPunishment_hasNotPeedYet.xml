@@ -1,0 +1,49 @@
+<!-- S4TK Group: 80000000 -->
+<I xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" c="Buff" s="18361089275973664144" i="buff" m="buffs.buff" n="LilNinthel:buff_diaperPunishment_hasNotPeedYet">
+  <!--<V n="appearance_modifier" t="enabled">
+    <U n="enabled">
+      <L n="appearance_modifiers">
+        <L>
+          <U>
+            <V n="modifier" t="set_cas_part">
+              <U n="set_cas_part">
+                <T n="cas_part">15102817938559141327</T>
+                <T n="expect_invalid_parts">True</T>
+                <T n="remove_conflicting">True</T>
+              </U>
+            </V>
+          </U>
+        </L>
+        <L>
+          <U>
+            <V n="modifier" t="set_cas_part">
+              <U n="set_cas_part">
+                <T n="cas_part">9263557843126228615</T>
+                <T n="expect_invalid_parts">True</T>
+                <T n="remove_conflicting">True</T>
+              </U>
+            </V>
+          </U>
+        </L>
+        <L>
+          <U>
+            <V n="modifier" t="set_cas_part">
+              <U n="set_cas_part">
+                <T n="cas_part">3201385549593850342</T>
+                <T n="expect_invalid_parts">True</T>
+                <T n="remove_conflicting">True</T>
+              </U>
+            </V>
+          </U>
+        </L>
+      </L>
+      <T n="apply_to_all_outfits">True</T>
+    </U>
+  </V>-->
+  <T n="buff_description">0x00000000</T>
+  <T n="buff_name">0x00000000</T>
+  <T n="icon">2f7d0004:00000000:c09b0954d2ef3d7f</T>
+  <T n="mood_type">0</T>
+  <T n="mood_weight">0</T>
+  <T n="visible">False</T>
+</I>

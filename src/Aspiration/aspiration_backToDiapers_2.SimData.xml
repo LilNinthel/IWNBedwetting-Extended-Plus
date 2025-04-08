@@ -1,0 +1,24 @@
+<SimData version="0x00000101" u="0x00000000">
+  <Instances>
+    <I name="LilNinthel:aspiration_backToDiapers_2" schema="Aspiration" type="Object">
+      <T name="aspiration_valid_age_type">120</T>
+      <T name="descriptive_text">0x00000000</T>
+      <T name="display_name">0x566BDC62</T>
+      <L name="objectives">
+        <T type="TableSetReference">15756367414260610848</T>
+        <T type="TableSetReference">15756367414260610851</T>
+        <T type="TableSetReference">15756367414260610850</T>
+      </L>
+    </I>
+  </Instances>
+  <Schemas>
+    <Schema name="Aspiration" schema_hash="0x36A57725">
+      <Columns>
+        <Column name="aspiration_valid_age_type" type="UInt32" flags="0x00000000"/>
+        <Column name="descriptive_text" type="LocalizationKey" flags="0x00000000"/>
+        <Column name="display_name" type="LocalizationKey" flags="0x00000000"/>
+        <Column name="objectives" type="Vector" flags="0x00000000"/>
+      </Columns>
+    </Schema>
+  </Schemas>
+</SimData>

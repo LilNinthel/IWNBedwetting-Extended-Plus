@@ -1,0 +1,25 @@
+<!-- S4TK Group: 00000036 -->
+<I c="Preference" i="trait" m="traits.preference" n="LilNinthel:trait_SimPreference_Dislikes_Characteristic_Diaper" s="12852300336187165144">
+  <L n="ages">
+    <E>TEEN</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+    <E>YOUNGADULT</E>
+    <E>CHILD</E>
+  </L>
+  <T n="cas_trait_asm_param">NegativeReactions</T>
+  <L n="conflicting_traits">
+    <T>15869719760517348156<!--LilNinthel:trait_SimPreference_Likes_Characteristic_Diaper--></T>
+  </L>
+  <T n="display_name">0x3D112F49<!--Dislikes Diapered Sims--></T>
+  <T n="display_name_gender_neutral">0x3D112F49<!--Dislikes Diapered Sims--></T>
+  <T n="icon" p="InEP13\UI\Icons\CAS\Traits\Preferences\traits_Funny.png">2f7d0004:00000000:322220fc9ba98a06</T>
+  <T n="persistable">True</T>
+  <T n="preference_item">12839846231448982180<!--LilNinthel:preferenceItem_Characteristic_Diaper--></T>
+  <L n="species">
+    <E />
+  </L>
+  <T n="trait_description">0x4FECCD33<!--Diapered Sims--></T>
+  <T n="trait_origin_description">0xDD31D5F1<!--Sim Preference Trait Origin PH--></T>
+  <E n="trait_type">DISLIKE</E>
+</I>

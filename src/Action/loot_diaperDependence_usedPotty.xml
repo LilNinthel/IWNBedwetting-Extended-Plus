@@ -1,0 +1,34 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_diaperDependence_usedPotty" s="14520123767131912383">
+  <L n="loot_actions">
+    <V t="buff_removal">
+      <U n="buff_removal">
+        <E n="subject">Actor</E>
+        <L n="buffs_to_remove">
+          <T>11286248511651031208<!--LilNinthel:buff_temporaryIncontinence--></T>
+        </L>
+      </U>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_change">
+        <U n="statistic_change">
+          <T n="amount">-10</T>
+          <T n="stat">18009954001108637828<!--LilNinthel:commodity_diaperDependence--></T>
+          <L n="subject">
+            <E>Actor</E>
+          </L>
+        </U>
+      </V>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_change">
+        <U n="statistic_change">
+          <T n="amount">-200</T>
+          <T n="stat">422049043530584573<!--LilNinthel:statistic_Skill_AdultMinor_DiaperDependence--></T>
+          <L n="subject">
+            <E>Actor</E>
+          </L>
+        </U>
+      </V>
+    </V>
+  </L>
+</I>

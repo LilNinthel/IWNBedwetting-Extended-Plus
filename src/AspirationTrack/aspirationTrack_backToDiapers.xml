@@ -1,0 +1,41 @@
+<I c="AspirationTrack" i="aspiration_track" m="aspirations.aspiration_tuning" n="LilNinthel:aspirationTrack_backToDiapers" s="16923639142609912290">
+  <L n="aspirations">
+    <U>
+      <E n="key">LEVEL_1</E>
+      <T n="value">18175447835175755539<!--LilNinthel:aspiration_backToDiapers_1--></T>
+    </U>
+    <U>
+      <E n="key">LEVEL_2</E>
+      <T n="value">18175447835175755536<!--LilNinthel:aspiration_backToDiapers_2--></T>
+    </U>
+    <U>
+      <E n="key">LEVEL_3</E>
+      <T n="value">18175447835175755537<!--LilNinthel:aspiration_backToDiapers_3--></T>
+    </U>
+    <U>
+      <E n="key">LEVEL_4</E>
+      <T n="value">18175447835175755542<!--LilNinthel:aspiration_backToDiapers_4--></T>
+    </U>
+  </L>
+  <T n="category">25545<!--Asp_Cat_Creativity--></T>
+  <T n="description_text">0xABDBBDBC<!--This Sim wants to return to a time before potty training.--></T>
+  <T n="display_text">0x5EAFC1E8<!--You Can Always Go Back--></T>
+  <T n="icon">2f7d0004:00000000:77C938699A7EEAC6</T>
+  <U n="notification">
+    <V n="text" t="single">
+      <T n="single">0x364F68DB<!--Dreams do come true after all! {0.SimFirstName} has defeated the evil potty monster and gotten {M0.his}{F0.her} beloved diapers back forever!--></T>
+    </V>
+    <V n="title" t="enabled">
+      <T n="enabled">0xC107F668<!--Aspiration Completed--></T>
+    </V>
+    <L n="ui_responses">
+      <U>
+        <T n="text">0x7E8E7CD3<!--Select New Aspiration--></T>
+        <E n="ui_request">SHOW_ASPIRATION_SELECTOR</E>
+      </U>
+    </L>
+    <E n="urgency">DEFAULT</E>
+  </U>
+  <T n="primary_trait">1432483267<!--LilNinthel:trait_curiousAbout_diapers--></T>
+  <T n="reward">17055816595040199319<!--LilNinthel:trait_RashProof_reward--></T>
+</I>

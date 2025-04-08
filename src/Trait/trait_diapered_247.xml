@@ -1,0 +1,24 @@
+<I c="Trait" i="trait" m="traits.traits" n="LilNinthel:trait_diapered_247" s="4155524921">
+  <L n="ages">
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <L n="buffs">
+    <U>
+      <T n="buff_type">10309070037716691412<!--LilNinthel_ABDL_dummybuff--></T>
+    </U>
+  </L>
+  <T n="buffs_add_on_spawn_only">False</T>
+  <T n="display_name">0xE787078F<!--Diapered 24/7--></T>
+  <T n="display_name_gender_neutral">0xE787078F<!--Diapered 24/7--></T>
+  <T n="icon" p="Generated">2f7d0004:00000000:7F46CA68B48FEBB5</T>
+  <E n="min_lod_value">MINIMUM</E>
+  <L n="species">
+    <E />
+  </L>
+  <T n="trait_description">0xA87C9ED3<!--{0.SimFirstName} has left big {M0.boy undies}{F0.girl panties} behind and embraced thick crinkly diapers full-time. {M0.His}{F0.Her} dresser is always stocked thanks to {M0.his}{F0.her} diaper subscription.--></T>
+  <E n="trait_type">GAMEPLAY</E>
+</I>

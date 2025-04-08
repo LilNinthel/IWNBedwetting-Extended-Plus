@@ -1,0 +1,39 @@
+<I c="RelationshipBit" i="relbit" m="relationships.relationship_bit" n="LilNinthel:relbit_DiaperPunishment_Buildup_1" s="2574219373">
+  <V n="bit_added_notification" t="enabled">
+    <U n="enabled">
+      <V n="notification" t="literal">
+        <U n="literal">
+          <L n="dialog_options">
+            <E>DISABLE_CLOSE_BUTTON</E>
+          </L>
+          <V n="icon" t="enabled">
+            <V n="enabled" t="resource_key">
+              <U n="resource_key">
+                <T n="key" p="InGame\UI\Icons\Headlines\Final\headline_babydiapers.png">2F7D0004:00000000:322220FC9BA98A06</T>
+              </U>
+            </V>
+          </V>
+          <V n="secondary_icon" t="enabled">
+            <V n="enabled" t="participant">
+              <U n="participant">
+                <L n="participant_type">
+                  <E>Object</E>
+                </L>
+              </U>
+            </V>
+          </V>
+          <V n="text" t="single">
+            <T n="single">0xC59BF50E<!--{0.SimFirstName} is too old to be having accidents like that. If {M0.he}{F0.she} keeps having them I'll have to do something.--></T>
+          </V>
+        </U>
+      </V>
+    </U>
+  </V>
+  <T n="bit_description">0xF4EB7C32<!--Caregiver (Little)--></T>
+  <T n="depth">1</T>
+  <E n="directionality">UNIDIRECTIONAL</E>
+  <T n="display_name">0xF4EB7C32<!--Caregiver (Little)--></T>
+  <T n="display_priority">3</T>
+  <T n="icon" p="InGame\UI\Icons\Relationships\icon_r_acquaintance.png">2F7D0004:00000000:FACF472C6DE280B3</T>
+  <T n="priority">2</T>
+</I>

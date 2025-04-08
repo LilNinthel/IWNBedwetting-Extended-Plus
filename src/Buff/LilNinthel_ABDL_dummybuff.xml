@@ -1,0 +1,64 @@
+<I c="Buff" i="buff" m="buffs.buff" n="LilNinthel_ABDL_dummybuff" s="10309070037716691412">
+  <L n="_loot_on_addition">
+    <T>9817498221303887056<!--LilNinthel:loot_Add_DiaperWearerTrait--></T>
+    <T>11267624636318205640<!--LilNinthel:loot_pantsPoopLoad_remove--></T>
+  </L>
+  <L n="_loot_on_instance">
+    <T>9817498221303887056<!--LilNinthel:loot_Add_DiaperWearerTrait--></T>
+    <T>11267624636318205640<!--LilNinthel:loot_pantsPoopLoad_remove--></T>
+  </L>
+  <L n="_loot_on_removal">
+    <T>12727012507078916191<!--LilNinthel:loot_Remove_DiaperWearerTrait--></T>
+  </L>
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0xB419BA00<!--Dummy buff for broadcasting diaper wearing--></T>
+  <T n="buff_name">0xB419BA00<!--Dummy buff for broadcasting diaper wearing--></T>
+  <V n="broadcaster" t="enabled">
+    <U n="enabled">
+      <L n="broadcaster_types">
+        <U>
+          <T n="item">10357050094274177307<!--LilNinthel_broadcaster_ABDL_DiaperWearer--></T>
+          <L n="test">
+            <L>
+              <V t="test_set_reference">
+                <T n="test_set_reference">17796732764948000262<!--IwnBedWetting_testSet_HasDiaperEquipped--></T>
+              </V>
+            </L>
+          </L>
+        </U>
+      </L>
+    </U>
+  </V>
+  <U n="game_effect_modifier">
+    <L n="_game_effect_modifiers">
+      <V t="autonomy_modifier">
+        <U n="autonomy_modifier">
+          <L n="commodities_to_add">
+            <T>14741762727861188948<!--LilNinthel:statistic_DiaperState_Basic--></T>
+          </L>
+          <L n="skill_tag_modifiers">
+            <U>
+              <E n="key">Skill_Toddler</E>
+              <T n="value">0.8</T>
+            </U>
+          </L>
+          <L n="stat_use_multiplier">
+            <U>
+              <T n="key">144913<!--statistic_Skill_Toddler_Potty--></T>
+              <U n="value">
+                <T n="multiplier">0.75</T>
+              </U>
+            </U>
+          </L>
+        </U>
+      </V>
+    </L>
+  </U>
+  <!--<L n="super_affordances">
+    <T>16617239709778473043</T>
+    <T>10785441443215295256</T>
+  </L>-->
+  <T n="icon">2f7d0004:00000000:c09b0954d2ef3d7f</T>
+  <T n="visible">False</T>
+</I>

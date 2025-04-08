@@ -1,0 +1,23 @@
+<I c="Trait" i="trait" m="traits.traits" n="LilNinthel:trait_diaperType_discreet" s="893888338">
+  <L n="ages">
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <L n="buffs">
+    <U>
+      <T n="buff_type">9332320514030447286<!--LilNinthel:buff_diaperAbsorbency_low--></T>
+    </U>
+  </L>
+  <T n="buffs_add_on_spawn_only">False</T>
+  <T n="trait_description">0x45FC4C01<!--Discreet Diaper--></T>
+  <T n="icon">2f7d0004:00000000:322220fc9ba98a06</T>
+  <E n="min_lod_value">MINIMUM</E>
+  <L n="species">
+    <E />
+  </L>
+  <T n="display_name">0x45FC4C01<!--Discreet Diaper--></T>
+  <E n="trait_type">HIDDEN</E>
+</I>

@@ -1,0 +1,14 @@
+<I c="ClubInteractionGroup" i="club_interaction_group" m="clubs.club_tuning" n="LilNinthel:clubInteractionGroup_OmorashiPoop_BodilyFunctions" s="17563093941977134063">
+  <L n="affordances">
+    <T>16161118731461566311<!--LilNinthel:pantsPooper_poop_pants--></T>
+    <T>15049844386229951623<!--LilNinthel:pantsPooper_poop_pants_continuation--></T>
+    <T>12784093406919596794<!--LilNinthel:pantsPooper_poop_pants_standing--></T>
+  </L>
+  <E n="category">HOBBIES</E>
+  <T n="category_icon">2F7D0004:00000000:F17489D8E727C38E</T>
+  <T n="club_bucks_reward">2</T>
+  <T n="is_targeted">False</T>
+  <T n="name">0x01FF69F1<!--Poop Pants--></T>
+  <T n="tooltip_template">0x01FF69F1<!--Poop Pants--></T>
+  <T n="tooltip_template_negative">0x181CFA13<!--Don't Poop Pants--></T>
+</I>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_buff_peeing_state_crotch_only_temporary_add" s="9956686772242213106">
+  <L n="loot_actions">
+    <V t="buff">
+      <U n="buff">
+        <E n="subject">Actor</E>
+        <U n="buff">
+          <T n="buff_type">6544040531505188925<!--LilNinthel:buff_peeing_state_crotch_only_temporary--></T>
+        </U>
+      </U>
+    </V>
+  </L>
+</I>

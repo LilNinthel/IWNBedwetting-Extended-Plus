@@ -1,0 +1,14 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_trait_HatesDiaperChanges_remove" s="15993762364225969410">
+  <L n="loot_actions">
+    <V t="trait_remove">
+      <U n="trait_remove">
+        <V n="trait" t="specific_trait">
+          <U n="specific_trait">
+            <T n="specific_trait">4184382890<!--LilNinthel:trait_HatesDiaperChanges--></T>
+          </U>
+        </V>
+        <E n="subject">TargetSim</E>
+      </U>
+    </V>
+  </L>
+</I>

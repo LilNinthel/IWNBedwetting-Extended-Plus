@@ -1,0 +1,41 @@
+<I xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" c="LootActions" s="9838149222569073724" i="action" m="interactions.utils.loot" n="__shim:mackico_ABDL_work_loot">
+  <L n="loot_actions">
+    <V t="buff">
+      <U n="buff">
+        <U n="buff">
+          <T n="buff_type">836767419380533503<!--mackico_ABDL_work_buff--></T>
+          <V n="buff_reason" t="enabled">
+            <T n="enabled">0x818AFDC8<!--(From Feeling Little at Work)--></T>
+          </V>
+        </U>
+        <E n="subject">Actor</E>
+        <U n="chance">
+          <T n="base_chance">15</T>
+        </U>
+        <L n="tests">
+          <L>
+            <V t="at_work">
+              <U n="at_work">
+                <E n="subject">Actor</E>
+                <V n="active_work_restriction" t="enabled">
+                  <T n="enabled">False</T>
+                </V>
+                <T n="is_at_work">True</T>
+              </U>
+            </V>
+            <V t="test_set_reference">
+              <T n="test_set_reference">17796732764948000262<!--IwnBedWetting_testSet_HasDiaperEquipped--></T>
+            </V>
+            <V t="buff">
+              <U n="buff">
+                <L n="blacklist">
+                  <T>836767419380533503<!--mackico_ABDL_work_buff--></T>
+                </L>
+              </U>
+            </V>
+          </L>
+        </L>
+      </U>
+    </V>
+  </L>
+</I>

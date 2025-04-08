@@ -1,0 +1,19 @@
+<I c="SimReward" i="reward" m="rewards.reward" n="LilNinthel:trait_diapered_247_reward" s="14086470356718095929">
+  <T n="icon">2f7d0004:00000000:7F46CA68B48FEBB5</T>
+  <T n="name">0xE787078F<!--Diapered 24/7--></T>
+  <V n="reward_description" t="enabled">
+    <T n="enabled">0xA87C9ED3<!--{0.SimFirstName} has left big {M0.boy undies}{F0.girl panties} behind and embraced thick crinkly diapers full-time. {M0.His}{F0.Her} dresser is always stocked thanks to {M0.his}{F0.her} diaper subscription.--></T>
+  </V>
+  <V n="reward_unavailable_tooltip" t="enabled">
+    <T n="enabled">0x709B9CC<!--This Reward is not available to your Sim, or it is already owned by your Sim.--></T>
+  </V>
+  <L n="rewards">
+    <V t="specific_reward">
+      <V n="specific_reward" t="trait">
+        <U n="trait">
+          <T n="trait">4155524921<!--LilNinthel:trait_diapered_247--></T>
+        </U>
+      </V>
+    </V>
+  </L>
+</I>

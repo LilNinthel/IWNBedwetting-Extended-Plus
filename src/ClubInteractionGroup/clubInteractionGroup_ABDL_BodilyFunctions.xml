@@ -1,0 +1,24 @@
+<I c="ClubInteractionGroup" i="club_interaction_group" m="clubs.club_tuning" n="LilNinthel:clubInteractionGroup_ABDL_BodilyFunctions" s="16739426031670724562">
+  <L n="affordances">
+    <T>15386335300547775969<!--LilNinthel:toddler_UseDiaper--></T>
+    <T>17846418620694466401<!--LilNinthel:toddler_UseDiaper_Continuation--></T>
+    <T>11423557801360839083<!--LilNinthel:toddler_UseDiaper_Immediate--></T>
+    <T>17336362655583455169<!--LilNinthel:toddler_UseDiaper_failure_standing--></T>
+    <T>14713553300442312551<!--LilNinthel:toddler_UseDiaperPoop--></T>
+    <T>9857974918501862535<!--LilNinthel:toddler_UseDiaperPoop_continuation--></T>
+    <T>17542224721305247405<!--LilNinthel:toddler_UseDiaperPoop_Immediate--></T>
+    <T>11921925688338352890<!--LilNinthel:toddler_UseDiaperPoop_standing--></T>
+    <T>10270159175383340941<!--LilNinthel:toddler_UseDiaperPoopOnly--></T>
+    <T>18401942594569887613<!--LilNinthel:toddler_UseDiaperPoopOnly_continuation--></T>
+    <T>18237598613162935279<!--LilNinthel:toddler_UseDiaperPoopOnly_Immediate--></T>
+    <T>11047247142804936032<!--LilNinthel:toddler_UseDiaperPoopOnly_standing--></T>
+    <T>9506916130253712957<!--LilNinthel:sim_BladderFailure_Diapered--></T>
+  </L>
+  <E n="category">HOBBIES</E>
+  <T n="category_icon">2F7D0004:00000000:820522970E5AC06D</T>
+  <T n="club_bucks_reward">2</T>
+  <T n="is_targeted">False</T>
+  <T n="name">0xE4D2EB02<!--Use Diaper--></T>
+  <T n="tooltip_template">0xE4D2EB02<!--Use Diaper--></T>
+  <T n="tooltip_template_negative">0x0678482F<!--Don't Use Diaper--></T>
+</I>

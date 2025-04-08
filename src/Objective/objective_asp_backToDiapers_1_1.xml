@@ -1,0 +1,15 @@
+<I c="Objective" i="objective" m="event_testing.objective_tuning" n="LilNinthel:objective_asp_backToDiapers_1_1" s="15759393270260879847">
+  <L n="completion_loot">
+    <T>273578<!--loot_Want_AspirationCompleted--></T>
+  </L>
+  <T n="display_text">0xDEC39240<!--Awaken your hidden curiosity--></T>
+  <V n="objective_completion_type" t="use_test_result" />
+  <V n="objective_test" t="trait">
+    <U n="trait">
+      <L n="whitelist_traits">
+        <T>1432483267<!--LilNinthel:trait_curiousAbout_diapers--></T>
+      </L>
+    </U>
+  </V>
+  <T n="satisfaction_points">50</T>
+</I>

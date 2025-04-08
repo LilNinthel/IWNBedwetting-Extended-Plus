@@ -1,0 +1,7 @@
+<I c="AnimationElement" i="animation" m="animation.animation_element" n="LilNinthel:sitOnGround_Talk_Anim" s="15938796882073217151">
+  <T n="asm_key" p="Generated">02d5df13:00000000:F6FF4731829286CD</T>
+  <L n="begin_states">
+    <T>Talk</T>
+  </L>
+  <T n="repeat">True</T>
+</I>

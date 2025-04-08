@@ -1,0 +1,15 @@
+<I xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" c="Buff" s="15462511393671880552" i="buff" m="buffs.buff" n="ADB_messedatwork_buff">
+  <T n="buff_description">0xDDAEEA0C<!--{0.SimFirstName} had a smelly accident in {M0.his}{F0.her} diaper. {M0.He}{F0.She} can usually control that, and it's alright when {M0.he}{F0.she} has an accident like that at home, but {M0.he}{F0.she} did it at WORK! Everyone could smell it and {M0.he}{F0.she}'s so embarrassed.--></T>
+  <T n="buff_name">0x62514086<!--Messy accident at work--></T>
+  <T n="icon">2f7d0004:00000000:589D905795EE0DB7</T>
+  <T n="mood_type">14635<!--Mood_Embarrassed--></T>
+  <T n="mood_weight">5</T>
+  <V n="_temporary_commodity_info" t="enabled">
+    <U n="enabled">
+      <T n="max_duration">540</T>
+      <L n="categories">
+        <E>Embarrassed_Buffs</E>
+      </L>
+    </U>
+  </V>
+</I>

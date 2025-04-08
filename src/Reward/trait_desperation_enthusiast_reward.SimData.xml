@@ -1,0 +1,20 @@
+<SimData version="0x00000101" u="0x00000000">
+  <Instances>
+    <I name="LilNinthel:trait_desperation_enthusiast_reward" schema="SimReward" type="Object">
+      <T name="icon">00B2D882-00000000-02ADF582CD0E0496</T>
+      <T name="name">0x9089F667</T>
+      <V name="reward_description" variant="0xF8CBBF4C">
+        <T type="LocalizationKey">0xEE9D5BD6</T>
+      </V>
+    </I>
+  </Instances>
+  <Schemas>
+    <Schema name="SimReward" schema_hash="0xEEED38EF">
+      <Columns>
+        <Column name="icon" type="ResourceKey" flags="0x00000000"/>
+        <Column name="name" type="LocalizationKey" flags="0x00000000"/>
+        <Column name="reward_description" type="Variant" flags="0x00000000"/>
+      </Columns>
+    </Schema>
+  </Schemas>
+</SimData>

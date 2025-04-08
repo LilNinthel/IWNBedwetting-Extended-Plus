@@ -1,0 +1,138 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_wet_bed" s="15310184364901267793">
+  <L n="loot_actions">
+    <V t="buff">
+      <U n="buff">
+        <U n="buff">
+          <V n="buff_reason" t="enabled">
+            <T n="enabled">0x1178F4AB<!--(From Wetting the Bed)--></T>
+          </V>
+          <T n="buff_type">14330950688791710728<!--LilNinthel:buff_wet_bed--></T>
+        </U>
+        <L n="tests">
+          <L>
+            <V t="trait">
+              <U n="trait">
+                <L n="blacklist_traits">
+                  <T>806286945<!--LilNinthel:trait_pants_wetter--></T>
+                </L>
+              </U>
+            </V>
+          </L>
+        </L>
+      </U>
+    </V>
+    <V t="buff">
+      <U n="buff">
+        <U n="buff">
+          <V n="buff_reason" t="enabled">
+            <T n="enabled">0x1178F4AB<!--(From Wetting the Bed)--></T>
+          </V>
+          <T n="buff_type">15600949772408234127<!--LilNinthel:buff_wetPants_overlay--></T>
+        </U>
+        <L n="tests">
+          <L>
+            <V t="posture">
+              <U n="posture">
+                <L n="prohibited_postures">
+                  <T>39398<!--posture_Swim--></T>
+                  <T>117257<!--posture_HotTubSit--></T>
+                </L>
+              </U>
+            </V>
+            <V t="statistic">
+              <U n="statistic">
+                <T n="stat">9359251128331730838<!--LilNinthel:statistic_bladder_snapshot--></T>
+                <V n="threshold" t="value_threshold">
+                  <U n="value_threshold">
+                    <E n="comparison">LESS</E>
+                    <T n="value">0</T>
+                  </U>
+                </V>
+              </U>
+            </V>
+          </L>
+          <L>
+            <V t="posture">
+              <U n="posture">
+                <L n="prohibited_postures">
+                  <T>39398<!--posture_Swim--></T>
+                  <T>117257<!--posture_HotTubSit--></T>
+                </L>
+              </U>
+            </V>
+            <V t="buff">
+              <U n="buff">
+                <V n="whitelist" t="enabled">
+                  <L n="enabled">
+                    <T>12572991107770899102<!--LilNinthel:buff_wetPants_crotch_only_overlay--></T>
+                  </L>
+                </V>
+              </U>
+            </V>
+          </L>
+          <L>
+            <V t="posture">
+              <U n="posture">
+                <L n="prohibited_postures">
+                  <T>39398<!--posture_Swim--></T>
+                  <T>117257<!--posture_HotTubSit--></T>
+                </L>
+              </U>
+            </V>
+            <V t="buff">
+              <U n="buff">
+                <V n="whitelist" t="enabled">
+                  <L n="enabled">
+                    <T>15600949772408234127<!--LilNinthel:buff_wetPants_overlay--></T>
+                  </L>
+                </V>
+              </U>
+            </V>
+          </L>
+        </L>
+      </U>
+    </V>
+    <V t="buff">
+      <U n="buff">
+        <U n="buff">
+          <V n="buff_reason" t="enabled">
+            <T n="enabled">0x1178F4AB<!--(From Wetting the Bed)--></T>
+          </V>
+          <T n="buff_type">12572991107770899102<!--LilNinthel:buff_wetPants_crotch_only_overlay--></T>
+        </U>
+        <L n="tests">
+          <L>
+            <V t="posture">
+              <U n="posture">
+                <L n="prohibited_postures">
+                  <T>39398<!--posture_Swim--></T>
+                  <T>117257<!--posture_HotTubSit--></T>
+                </L>
+              </U>
+            </V>
+            <V t="statistic">
+              <U n="statistic">
+                <T n="stat">9359251128331730838<!--LilNinthel:statistic_bladder_snapshot--></T>
+                <V n="threshold" t="value_threshold">
+                  <U n="value_threshold">
+                    <E n="comparison">GREATER_OR_EQUAL</E>
+                    <T n="value">0</T>
+                  </U>
+                </V>
+              </U>
+            </V>
+            <V t="buff">
+              <U n="buff">
+                <L n="blacklist">
+                  <T>12572991107770899102<!--LilNinthel:buff_wetPants_crotch_only_overlay--></T>
+                  <T>15600949772408234127<!--LilNinthel:buff_wetPants_overlay--></T>
+                </L>
+              </U>
+            </V>
+          </L>
+        </L>
+      </U>
+    </V>
+  </L>
+  <T n="run_test_first">True</T>
+</I>

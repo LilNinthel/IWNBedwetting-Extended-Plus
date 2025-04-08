@@ -1,0 +1,8 @@
+<I c="Statistic" i="statistic" m="statistics.statistic" n="LilNinthel:statistic_bladder_snapshot" s="9359251128331730838">
+  <U n="initial_tuning">
+    <T n="_initial_value">0</T>
+    <T n="_use_stat_value_on_init">True</T>
+  </U>
+  <T n="max_value_tuning">100</T>
+  <T n="min_value_tuning">-100</T>
+</I>

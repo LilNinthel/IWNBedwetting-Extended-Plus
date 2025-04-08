@@ -1,0 +1,22 @@
+<!-- S4TK Group: 00000036 -->
+<I c="SituationGoalActor" i="situation_goal" m="situations.situation_goal_actor" n="LilNinthel:lifeMilestoneGoal_PeedOnPurpose" s="16568892022126250211">
+  <V n="_display_data" t="enabled">
+    <U n="enabled">
+      <V n="instance_display_icon" t="disabled" />
+      <V n="instance_display_name" t="disabled" />
+      <V n="instance_display_tooltip" t="disabled" />
+    </U>
+  </V>
+  <V n="_goal_test" t="statistic">
+    <U n="statistic">
+      <T n="stat">16864196793185567039<!--LilNinthel:statistic_intentional_pants_wettings--></T>
+      <V n="threshold" t="value_threshold">
+        <U n="value_threshold">
+          <E n="comparison">GREATER</E>
+        </U>
+      </V>
+    </U>
+  </V>
+  <T n="_persist_zone">True</T>
+  <T n="audio_sting_on_complete" p="InGame\Audio\Bumper\bumper_event_goal_complete.propx">39b2aa4a:00000000:ed52c39bcc2a7111</T>
+</I>

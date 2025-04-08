@@ -1,0 +1,21 @@
+<!-- S4TK Group: 00000036 -->
+<I c="Trait" i="trait" m="traits.traits" n="trait_Human_Infant_Element_FrequentlySneezes" s="319875">
+  <L n="ages">
+    <E>INFANT</E>
+    <E>TODDLER</E>
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <T n="display_name">0x80B777FB<!--Frequently Sneezes--></T>
+  <T n="display_name_gender_neutral">0x777A0E31<!--Frequently Sneezes--></T>
+  <T n="icon" p="InEP13\UI\Icons\CAS\Traits\traits_FrequentlySneezesInfant.png">2f7d0004:00000000:d290c0db96da1b5b</T>
+  <L n="species">
+    <E />
+  </L>
+  <T n="trait_description">0x501788C6<!--This Infant is always sneezing. Infants with this Quirk clear their little noses of particles and germs more frequently. It's perfectly normal and healthy!--></T>
+  <T n="trait_origin_description">0x61E3C965<!--Infant Quirk--></T>
+  <E n="trait_type">GAMEPLAY_GENERIC</E>
+</I>

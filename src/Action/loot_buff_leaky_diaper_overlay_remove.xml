@@ -1,0 +1,12 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_buff_leaky_diaper_overlay_remove" s="16001430432910011755">
+  <L n="loot_actions">
+    <V t="buff_removal">
+      <U n="buff_removal">
+        <E n="subject">Actor</E>
+        <L n="buffs_to_remove">
+          <T>10367890649802483015<!--LilNinthel:buff_leaky_diaper_overlay--></T>
+        </L>
+      </U>
+    </V>
+  </L>
+</I>

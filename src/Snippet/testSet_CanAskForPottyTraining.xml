@@ -1,0 +1,14 @@
+<I c="TestSetInstance" i="snippet" m="event_testing.tests" n="LilNinthel:testSet_CanAskForPottyTraining" s="10268165512359499185">
+  <L n="test">
+    <L>
+      <V t="trait">
+        <U n="trait">
+          <L n="blacklist_traits">
+            <T>614588825<!--LilNinthel:trait_diaper_devotee--></T>
+            <T>2924659518<!--LilNinthel:trait_DiaperPunished--></T>
+          </L>
+        </U>
+      </V>
+    </L>
+  </L>
+</I>

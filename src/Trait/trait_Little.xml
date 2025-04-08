@@ -1,0 +1,24 @@
+<I c="Trait" i="trait" m="traits.traits" n="LilNinthel:trait_Little" s="3344421797">
+  <L n="ages">
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <L n="buffs">
+    <U>
+      <T n="buff_type">14814683103508715847<!--LilNinthel:buff_addCarriedTrait--></T>
+    </U>
+  </L>
+  <T n="buffs_add_on_spawn_only">False</T>
+  <T n="trait_description">0x33DB038F<!--Littles can be carried by other Sims and do other toddler things.--></T>
+  <T n="icon">2f7d0004:00000000:e8211399544ecd4a</T>
+  <E n="min_lod_value">MINIMUM</E>
+  <T n="display_name">0x585E71B9<!--Little--></T>
+  <T n="display_name_gender_neutral">0x585E71B9<!--Little--></T>
+  <L n="species">
+    <E />
+  </L>
+  <E n="trait_type">GAMEPLAY</E>
+</I>

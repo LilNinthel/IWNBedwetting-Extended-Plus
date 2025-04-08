@@ -1,0 +1,19 @@
+<I c="SimReward" i="reward" m="rewards.reward" n="LilNinthel:trait_pants_pooper_reward" s="13453333118594394431">
+  <T n="icon">2f7d0004:00000000:f17489d8e727c38e</T>
+  <T n="name">0xA6AA0A44<!--Pants Pooper--></T>
+  <V n="reward_description" t="enabled">
+    <T n="enabled">0xDD62F336<!--{0.SimFirstName} loves to push out messes into {M0.his underwear}{F0.her panties}.--></T>
+  </V>
+  <V n="reward_unavailable_tooltip" t="enabled">
+    <T n="enabled">0x709B9CC<!--This Reward is not available to your Sim, or it is already owned by your Sim.--></T>
+  </V>
+  <L n="rewards">
+    <V t="specific_reward">
+      <V n="specific_reward" t="trait">
+        <U n="trait">
+          <T n="trait">4058438675<!--LilNinthel:trait_pants_pooper--></T>
+        </U>
+      </V>
+    </V>
+  </L>
+</I>

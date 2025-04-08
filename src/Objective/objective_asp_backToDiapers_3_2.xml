@@ -1,0 +1,19 @@
+<I c="Objective" i="objective" m="event_testing.objective_tuning" n="LilNinthel:objective_asp_backToDiapers_3_2" s="15757493314167709658">
+  <L n="completion_loot">
+    <T>273578<!--loot_Want_AspirationCompleted--></T>
+  </L>
+  <T n="display_text">0x9E68238C<!--Experience a diaper leak--></T>
+  <V n="objective_completion_type" t="use_test_result" />
+  <V n="objective_test" t="statistic">
+    <U n="statistic">
+      <T n="must_have_stat">True</T>
+      <T n="stat">12461472240792584021<!--LilNinthel:statistic_diaper_leaks--></T>
+      <V n="threshold" t="value_threshold">
+        <U n="value_threshold">
+          <T n="value">1</T>
+        </U>
+      </V>
+    </U>
+  </V>
+  <T n="satisfaction_points">1000</T>
+</I>

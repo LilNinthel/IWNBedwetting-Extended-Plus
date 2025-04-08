@@ -1,0 +1,35 @@
+<I c="TestSetInstance" i="snippet" m="event_testing.tests" n="LilNinthel:testSet_notInHighChairPosture" s="11420473256270177220">
+  <L n="test">
+    <L>
+      <V t="buff">
+        <U n="buff">
+          <L n="blacklist">
+            <T>13553445139389231781<!--LilNinthel:buff_highchairfeedposture--></T>
+            <T>144745<!--buff_Toddler_AutonomyMod_InHighChair--></T>
+            <T>280280<!--buff_AutonomyMod_Posture_HighChair--></T>
+          </L>
+        </U>
+      </V>
+      <V t="sim_info">
+        <U n="sim_info">
+          <V n="ages" t="specified">
+            <L n="specified">
+              <E>TEEN</E>
+              <E>YOUNGADULT</E>
+              <E>ADULT</E>
+              <E>ELDER</E>
+            </L>
+          </V>
+          <V n="species" t="specified">
+            <U n="specified">
+              <L n="species">
+                <E />
+              </L>
+            </U>
+          </V>
+          <E n="who">Actor</E>
+        </U>
+      </V>
+    </L>
+  </L>
+</I>

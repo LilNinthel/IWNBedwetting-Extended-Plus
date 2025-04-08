@@ -1,0 +1,19 @@
+<I c="SimReward" i="reward" m="rewards.reward" n="LilNinthel:trait_NotAlwaysDiapered_reward" s="12590960521618865703">
+  <T n="icon">2f7d0004:00000000:322220fc9ba98a06</T>
+  <T n="name">0x11D7A341<!--Not Always Diapered--></T>
+  <V n="reward_description" t="enabled">
+    <T n="enabled">0x570BA74F<!--Disable the forced diapering effects of other traits. Does not apply to Sims that were never potty trained, are being diaper punished, or have the Diapered 24/7 trait.--></T>
+  </V>
+  <V n="reward_unavailable_tooltip" t="enabled">
+    <T n="enabled">0x709B9CC<!--This Reward is not available to your Sim, or it is already owned by your Sim.--></T>
+  </V>
+  <L n="rewards">
+    <V t="specific_reward">
+      <V n="specific_reward" t="trait">
+        <U n="trait">
+          <T n="trait">3260484891<!--LilNinthel:trait_NotAlwaysDiapered--></T>
+        </U>
+      </V>
+    </V>
+  </L>
+</I>

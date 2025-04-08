@@ -1,0 +1,33 @@
+<I c="TestSetInstance" i="snippet" m="event_testing.tests" n="LilNinthel:testSet_fake_diaperChange_target_notTarget" s="13259643231117575499">
+  <L n="test">
+    <L>
+      <V t="buff">
+        <U n="buff">
+          <L n="blacklist">
+            <T>17537878190490117241<!--LilNinthel:DiaperChange_Target_Buff--></T>
+          </L>
+        </U>
+      </V>
+      <V t="sim_info">
+        <U n="sim_info">
+          <V n="ages" t="specified">
+            <L n="specified">
+              <E>TEEN</E>
+              <E>YOUNGADULT</E>
+              <E>ADULT</E>
+              <E>ELDER</E>
+            </L>
+          </V>
+          <V n="species" t="specified">
+            <U n="specified">
+              <L n="species">
+                <E />
+              </L>
+            </U>
+          </V>
+          <E n="who">Actor</E>
+        </U>
+      </V>
+    </L>
+  </L>
+</I>

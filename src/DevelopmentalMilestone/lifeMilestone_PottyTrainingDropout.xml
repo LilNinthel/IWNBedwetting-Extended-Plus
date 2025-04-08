@@ -1,0 +1,20 @@
+<!-- S4TK Group: 00000036 -->
+<I c="DevelopmentalMilestone" i="developmental_milestone" m="developmental_milestones.developmental_milestone" n="LilNinthel:lifeMilestone_PottyTrainingDropout" s="4091784238">
+  <L n="ages">
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <E n="category">Firsts</E>
+  <T n="goal">16424150803361643989<!--LilNinthel:lifeMilestoneGoal_PottyTrainingDropout--></T>
+  <T n="icon">2f7d0004:00000000:50E7863C5DBF6867</T>
+  <L n="loot">
+    <T>315082<!--loot_LifeMilestone_LotBasedBuff_AddTimer--></T>
+  </L>
+  <T n="name">0xF9AD7832<!--Potty Training Dropout--></T>
+  <T n="ui_sort_order">1</T>
+  <T n="unlocked_text">0xAC345A15<!--{0.SimFirstName} kept on crinkling {M0.his}{F0.her} diapered butt through life after failing to potty train.--></T>
+  <T n="unlocked_text_no_context">0xAC345A15<!--{0.SimFirstName} kept on crinkling {M0.his}{F0.her} diapered butt through life after failing to potty train.--></T>
+</I>

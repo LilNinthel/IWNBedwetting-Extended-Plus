@@ -1,0 +1,9 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="__shim:loot_trait_HatesDiapers_DiaperState_add" s="17475465455792082128">
+  <L n="loot_actions">
+    <V t="trait_add">
+      <U n="trait_add">
+        <T n="trait">1937468805<!--__shim:trait_HatesDiapers_DiaperState--></T>
+      </U>
+    </V>
+  </L>
+</I>

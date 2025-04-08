@@ -1,0 +1,30 @@
+<I c="Trait" i="trait" m="traits.traits" n="LilNinthel:trait_diaper_dependent" s="1159183302">
+  <L n="ages">
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <L n="buffs">
+    <U>
+      <T n="buff_type">10309070037716691412<!--LilNinthel_ABDL_dummybuff--></T>
+    </U>
+  </L>
+  <T n="buffs_add_on_spawn_only">False</T>
+  <T n="display_name">0x5E584C8F<!--Diaper Dependent--></T>
+  <T n="display_name_gender_neutral">0x5E584C8F<!--Diaper Dependent--></T>
+  <T n="icon" p="Generated">2f7d0004:00000000:322220fc9ba98a06</T>
+  <V n="loot_on_trait_add" t="enabled">
+    <L n="enabled">
+      <T>10454616218496211880<!--LilNinthel:loot_diaperDependence_removeStat--></T>
+      <T>15904163990212670790<!--LilNinthel:loot_stat_pottyTraining_reset--></T>
+    </L>
+  </V>
+  <E n="min_lod_value">MINIMUM</E>
+  <L n="species">
+    <E />
+  </L>
+  <T n="trait_description">0x6AF1AB29<!--{0.SimFirstName} thought this only happened in stories. {M0.He}{F0.She} has gotten so used to diapers that {M0.he}{F0.she}'s now diaper dependent. Is this what {M0.he}{F0.she} wanted?--></T>
+  <E n="trait_type">GAMEPLAY</E>
+</I>

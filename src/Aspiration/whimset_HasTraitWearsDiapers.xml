@@ -1,0 +1,9 @@
+<I c="ObjectivelessWhimSet" i="aspiration" m="whims.whim_set" n="LilNinthel:whimset_HasTraitWearsDiapers" s="12350160922841085616">
+  <T n="priority">5</T>
+  <T n="whim_reason">0x2026EECF<!--(From Wearing Diapers)--></T>
+  <L n="whims">
+    <U>
+      <T n="whim">17937877559141803289<!--LilNinthel:want_Motives_Bladder_Diaper--></T>
+    </U>
+  </L>
+</I>

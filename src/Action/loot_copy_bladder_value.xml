@@ -1,0 +1,18 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_copy_bladder_value" s="10251625219716980905">
+  <L n="loot_actions">
+    <V t="statistics">
+      <V n="statistics" t="statistic_transfer">
+        <U n="statistic_transfer">
+          <T n="advertise">False</T>
+          <T n="stat">9359251128331730838<!--LilNinthel:statistic_bladder_snapshot--></T>
+          <E n="statistic_donor">Actor</E>
+          <L n="subject">
+            <E>Actor</E>
+          </L>
+          <E n="transfer_type">REPLACEMENT</E>
+          <T n="transferred_stat">16652<!--motive_Bladder--></T>
+        </U>
+      </V>
+    </V>
+  </L>
+</I>

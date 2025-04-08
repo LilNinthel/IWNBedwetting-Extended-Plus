@@ -1,0 +1,19 @@
+<I c="Buff" i="buff" m="buffs.buff" n="buff_Sim_isInBath" s="195626">
+  <L n="_loot_on_addition">
+    <T>15767301845441945093<!--LilNinthel:loot_buff_PutDiaperBackOn_addIfWearing--></T>
+    <T>13017211686655432573<!--IwnBedWetting_loot_DiaperLoad_Reset--></T>
+    <T>12578257369837801089<!--LilNinthel:loot_Remove_DiaperWearerItem_Trait--></T>
+    <T>274815<!--loot_MakeSimNotFaceGrubby--></T>
+  </L>
+  <L n="_loot_on_removal">
+    <T>195497<!--loot_Fame_Quirks_PublicNumber_ScheduleRandomText--></T>
+    <T>15767301845441945093<!--LilNinthel:loot_buff_PutDiaperBackOn_addIfWearing--></T>
+    <T>13017211686655432573<!--IwnBedWetting_loot_DiaperLoad_Reset--></T>
+    <T>12578257369837801089<!--LilNinthel:loot_Remove_DiaperWearerItem_Trait--></T>
+    <T>274815<!--loot_MakeSimNotFaceGrubby--></T>
+  </L>
+  <T n="audio_sting_on_add" p="InGame\Audio\Stings\sting_buff_gain.propx">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove" p="InGame\Audio\Stings\sting_buff_loss.propx">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="icon" p="InGame\UI\Icons\Buffs\buffs_bathtub.png">2f7d0004:00000000:d90e6d275e35a0c8</T>
+  <T n="visible">False</T>
+</I>

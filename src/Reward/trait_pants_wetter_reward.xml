@@ -1,0 +1,19 @@
+<I c="SimReward" i="reward" m="rewards.reward" n="LilNinthel:trait_pants_wetter_reward" s="16445218475423465825">
+  <T n="icon">2f7d0004:00000000:62313de8780bc7a9</T>
+  <T n="name">0xB0FFBB76<!--Pants Wetter--></T>
+  <V n="reward_description" t="enabled">
+    <T n="enabled">0xE4F42321<!--{0.SimFirstName} loves the feeling of hot warmth rushing down {M0.his}{F0.her} legs.--></T>
+  </V>
+  <V n="reward_unavailable_tooltip" t="enabled">
+    <T n="enabled">0x709B9CC<!--This Reward is not available to your Sim, or it is already owned by your Sim.--></T>
+  </V>
+  <L n="rewards">
+    <V t="specific_reward">
+      <V n="specific_reward" t="trait">
+        <U n="trait">
+          <T n="trait">806286945<!--LilNinthel:trait_pants_wetter--></T>
+        </U>
+      </V>
+    </V>
+  </L>
+</I>

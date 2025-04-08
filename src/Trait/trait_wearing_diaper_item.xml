@@ -1,0 +1,27 @@
+<I c="Trait" i="trait" m="traits.traits" n="LilNinthel:trait_wearing_diaper_item" s="4148053674">
+  <L n="ages">
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <L n="buffs">
+    <U>
+      <T n="buff_type">10309070037716691412<!--LilNinthel_ABDL_dummybuff--></T>
+    </U>
+  </L>
+  <T n="buffs_add_on_spawn_only">False</T>
+  <T n="display_name">0x7AC863C3<!--Diaper Wearer (Item)--></T>
+  <T n="display_name_gender_neutral">0x7AC863C3<!--Diaper Wearer (Item)--></T>
+  <T n="icon" p="Generated">2f7d0004:00000000:322220fc9ba98a06</T>
+  <E n="min_lod_value">MINIMUM</E>
+  <L n="species">
+    <E />
+  </L>
+  <T n="trait_description">0x7AC863C3<!--Diaper Wearer (Item)--></T>
+  <E n="trait_type">GAMEPLAY</E>
+  <L n="super_affordances">
+    <T>13997571223764220252<!--LilNinthel:remove_diaper_item--></T>
+  </L>
+</I>

@@ -1,0 +1,12 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_buff_wetPants_overlay_remove" s="15603838637725406015">
+  <L n="loot_actions">
+    <V t="buff_removal">
+      <U n="buff_removal">
+        <E n="subject">Actor</E>
+        <L n="buffs_to_remove">
+          <T>15600949772408234127<!--LilNinthel:buff_wetPants_overlay--></T>
+        </L>
+      </U>
+    </V>
+  </L>
+</I>

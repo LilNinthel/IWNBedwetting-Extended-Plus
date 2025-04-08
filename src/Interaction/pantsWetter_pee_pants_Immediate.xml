@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<I c="ImmediateSuperInteraction" i="interaction" m="interactions.base.immediate_interaction" n="LilNinthel:pantsWetter_pee_pants_Immediate" s="1236995244784619663">
+  <V n="_icon" t="resource_key">
+    <U n="resource_key">
+      <T n="key">2f7d0004:00000000:62313de8780bc7a9</T>
+    </U>
+  </V>
+  <V n="_saveable" t="enabled" />
+  <T n="_super_affordance_can_share_target">True</T>
+  <T n="acquire_targets_as_resource">False</T>
+  <V n="content_score" t="disabled" />
+  <T n="display_name">0x431FB35D<!--Pee Self--></T>
+  <U n="display_name_text_tokens">
+    <L n="tokens">
+      <V t="participant_type">
+        <U n="participant_type">
+          <V n="objects" t="from_participant">
+            <U n="from_participant">
+              <E n="participant">Actor</E>
+            </U>
+          </V>
+        </U>
+      </V>
+      <V t="participant_type">
+        <U n="participant_type">
+          <V n="objects" t="from_participant">
+            <U n="from_participant">
+              <E n="participant">Object</E>
+            </U>
+          </V>
+        </U>
+      </V>
+    </L>
+  </U>
+  <T n="ignore_exclude_all_compatibility">True</T>
+  <L n="interaction_category_tags">
+    <E>INVALID</E>
+  </L>
+  <V n="outcome" t="test_based">
+    <U n="test_based">
+      <L n="fallback_outcomes">
+        <U>
+          <U n="outcome">
+            <L n="basic_extras">
+              <V t="loot">
+                <U n="loot">
+                  <L n="loot_list">
+                    <T>10251625219716980905<!--LilNinthel:loot_copy_bladder_value--></T>
+                  </L>
+                  <V n="timing" t="at_beginning" />
+                </U>
+              </V>
+              <V t="broadcaster">
+                <U n="broadcaster">
+                  <L n="broadcaster_types">
+                    <U>
+                      <T n="item">12877732066673186069<!--LilNinthel:broadcaster_Reaction_PeeingPants--></T>
+                      <T n="item">10099478034331627930<!--LilNinthel:broadcaster_diaperPunishment_witnessAccident--></T>
+                    </U>
+                  </L>
+                </U>
+              </V>
+            </L>
+            <L n="loot_list">
+              <T>9642<!--loot_BladderFailure_PuddleChance--></T>
+              <T>16906959263546295067<!--LilNinthel:loot_pantsWetter_peeSelf--></T>
+              <T>10616734412670168306<!--LilNinthel:loot_statistic_intentional_pants_wettings--></T>
+            </L>
+          </U>
+        </U>
+      </L>
+      <L n="tested_outcomes">
+        <U>
+          <L n="potential_outcomes">
+            <U>
+              <U n="outcome">
+                <L n="basic_extras">
+                  <V t="loot">
+                    <U n="loot">
+                      <L n="loot_list">
+                        <T>10251625219716980905<!--LilNinthel:loot_copy_bladder_value--></T>
+                        <T>15967857022903290655<!--LilNinthel:loot_buff_peeing_state_temporary_add--></T>
+                      </L>
+                      <V n="timing" t="at_beginning" />
+                    </U>
+                  </V>
+                  <V t="broadcaster">
+                    <U n="broadcaster">
+                      <L n="broadcaster_types">
+                        <U>
+                          <T n="item">12877732066673186069<!--LilNinthel:broadcaster_Reaction_PeeingPants--></T>
+                          <T n="item">10099478034331627930<!--LilNinthel:broadcaster_diaperPunishment_witnessAccident--></T>
+                        </U>
+                      </L>
+                    </U>
+                  </V>
+                </L>
+                <L n="loot_list">
+                  <T>9642<!--loot_BladderFailure_PuddleChance--></T>
+                  <T>16906959263546295067<!--LilNinthel:loot_pantsWetter_peeSelf--></T>
+                  <T>10616734412670168306<!--LilNinthel:loot_statistic_intentional_pants_wettings--></T>
+                </L>
+              </U>
+            </U>
+          </L>
+          <L n="tests">
+            <L>
+              <V t="motive">
+                <U n="motive">
+                  <L n="stats">
+                    <T>16652<!--motive_Bladder--></T>
+                  </L>
+                  <U n="threshold">
+                    <E n="comparison">LESS</E>
+                    <T n="value">0</T>
+                  </U>
+                </U>
+              </V>
+            </L>
+          </L>
+        </U>
+        <U>
+          <L n="potential_outcomes">
+            <U>
+              <U n="outcome">
+                <L n="basic_extras">
+                  <V t="loot">
+                    <U n="loot">
+                      <L n="loot_list">
+                        <T>10251625219716980905<!--LilNinthel:loot_copy_bladder_value--></T>
+                        <T>9956686772242213106<!--LilNinthel:loot_buff_peeing_state_crotch_only_temporary_add--></T>
+                      </L>
+                      <V n="timing" t="at_beginning" />
+                    </U>
+                  </V>
+                  <V t="broadcaster">
+                    <U n="broadcaster">
+                      <L n="broadcaster_types">
+                        <U>
+                          <T n="item">12877732066673186069<!--LilNinthel:broadcaster_Reaction_PeeingPants--></T>
+                          <T n="item">10099478034331627930<!--LilNinthel:broadcaster_diaperPunishment_witnessAccident--></T>
+                        </U>
+                      </L>
+                    </U>
+                  </V>
+                </L>
+                <L n="loot_list">
+                  <T>9642<!--loot_BladderFailure_PuddleChance--></T>
+                  <T>16906959263546295067<!--LilNinthel:loot_pantsWetter_peeSelf--></T>
+                  <T>10616734412670168306<!--LilNinthel:loot_statistic_intentional_pants_wettings--></T>
+                </L>
+              </U>
+            </U>
+          </L>
+          <L n="tests">
+            <L>
+              <V t="motive">
+                <U n="motive">
+                  <L n="stats">
+                    <T>16652<!--motive_Bladder--></T>
+                  </L>
+                  <U n="threshold">
+                    <E n="comparison">GREATER_OR_EQUAL</E>
+                    <T n="value">0</T>
+                  </U>
+                </U>
+              </V>
+            </L>
+          </L>
+        </U>
+      </L>
+    </U>
+  </V>
+  <E n="target_type">ACTOR</E>
+  <V n="test_disallow_while_running" t="enabled">
+    <U n="enabled">
+      <T n="test_self">True</T>
+    </U>
+  </V>
+  <L n="test_globals" />
+</I>

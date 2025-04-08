@@ -1,0 +1,175 @@
+<I c="SuperInteraction" i="interaction" m="interactions.base.super_interaction" n="LilNinthel:diaperPunishment_witnessAccident" s="16953049104733518373">
+  <V n="_cancelable_by_user" t="prohibit_cancelation" />
+  <V n="_icon" t="participant">
+    <U n="participant">
+      <L n="participant_type">
+        <E>Actor</E>
+      </L>
+    </U>
+  </V>
+  <V n="_saveable" t="enabled" />
+  <T n="acquire_targets_as_resource">False</T>
+  <T n="allow_autonomous">False</T>
+  <T n="attention_cost">0</T>
+  <V n="basic_content" t="one_shot">
+    <U n="one_shot">
+      <U n="animation_ref">
+        <T n="factory">28379<!--Socials_Responses_Miscellaneous_Horrified--></T>
+        <U n="overrides">
+          <V n="balloons" t="enabled">
+            <L n="enabled">
+              <U>
+                <L n="balloon_choices">
+                  <U>
+                    <V n="item" t="balloon_icon">
+                      <U n="balloon_icon">
+                        <V n="icon" t="participant">
+                          <U n="participant">
+                            <L n="participant_type">
+                              <E>TargetSim</E>
+                            </L>
+                          </U>
+                        </V>
+                      </U>
+                    </V>
+                  </U>
+                </L>
+                <L n="balloon_target">
+                  <E>Actor</E>
+                </L>
+              </U>
+            </L>
+          </V>
+        </U>
+      </U>
+    </U>
+  </V>
+  <V n="basic_focus" t="tunable_focus">
+    <U n="tunable_focus">
+      <T n="layer">3</T>
+      <T n="score">2</T>
+      <L n="subject">
+        <E>TargetSim</E>
+      </L>
+    </U>
+  </V>
+  <L n="basic_liabilities">
+    <V t="critical_priority">
+      <U n="critical_priority">
+        <E n="priority_on_push">Critical</E>
+        <E n="priority_on_run">Critical</E>
+      </U>
+    </V>
+  </L>
+  <V n="basic_reserve_object" t="disabled" />
+  <V n="canonical_animation" t="enabled">
+    <U n="enabled">
+      <T n="factory">28379<!--Socials_Responses_Miscellaneous_Horrified--></T>
+    </U>
+  </V>
+  <T n="collapsible">True</T>
+  <V n="content_score" t="disabled" />
+  <T n="display_name">0xB53FDE4<!--See What's Happening--></T>
+  <U n="display_name_text_tokens">
+    <L n="tokens">
+      <V t="participant_type">
+        <U n="participant_type">
+          <V n="objects" t="from_participant">
+            <U n="from_participant">
+              <E n="participant">Actor</E>
+            </U>
+          </V>
+        </U>
+      </V>
+      <V t="participant_type">
+        <U n="participant_type">
+          <V n="objects" t="from_participant">
+            <U n="from_participant">
+              <E n="participant">Object</E>
+            </U>
+          </V>
+        </U>
+      </V>
+    </L>
+  </U>
+  <L n="interaction_category_tags">
+    <E>Interaction_Super</E>
+    <E>Interaction_All</E>
+  </L>
+  <V n="outcome" t="dual">
+    <U n="dual">
+      <U n="failure_actions">
+        <L n="continuation">
+          <U>
+            <T n="affordance">17017741395829529919<!--LilNinthel:diaperPunishment_deliverVerdict--></T>
+            <E n="target">TargetSim</E>
+          </U>
+        </L>
+        <E n="outcome_result">FAILURE</E>
+      </U>
+      <U n="success_actions">
+        <L n="loot_list">
+          <T>14818825549658541352<!--LilNinthel:loot_buff_diaperPunishment_witnessAccident_cooldown--></T>
+          <T>11818817792622664790<!--LilNinthel:loot_relbit_DiaperPunishment_Buildup_add--></T>
+        </L>
+        <E n="outcome_result">SUCCESS</E>
+      </U>
+      <U n="success_chance">
+        <T n="base_chance">100</T>
+        <L n="multipliers">
+          <U>
+            <T n="multiplier">0</T>
+            <L n="tests">
+              <L>
+                <V t="test_set_reference">
+                  <T n="test_set_reference">16371879517972083352<!--LilNinthel:testSetInstance_Relationship_DiaperPunishment_LastStrike--></T>
+                </V>
+              </L>
+            </L>
+          </U>
+        </L>
+      </U>
+    </U>
+  </V>
+  <U n="posture_preferences">
+    <T n="apply_posture_costs">False</T>
+  </U>
+  <E n="scoring_priority">HIGH</E>
+  <T n="subaction_selection_weight">10</T>
+  <V n="super_affordance_klobberers" t="enabled" />
+  <E n="target_type">TARGET_AND_GROUP</E>
+  <L n="test_globals">
+    <V t="test_set_reference">
+      <T n="test_set_reference">12173793130818703504<!--LilNinthel:testSet_diaperPunishment_Actor_canDiaperPunish_Target--></T>
+    </V>
+    <V t="sim_info">
+      <U n="sim_info">
+        <V n="ages" t="specified">
+          <L n="specified">
+            <E>TEEN</E>
+            <E>YOUNGADULT</E>
+            <E>ADULT</E>
+            <E>ELDER</E>
+          </L>
+        </V>
+        <V n="species" t="specified">
+          <U n="specified">
+            <L n="species">
+              <E />
+            </L>
+          </U>
+        </V>
+        <E n="who">Actor</E>
+      </U>
+    </V>
+    <V t="buff">
+      <U n="buff">
+        <L n="blacklist">
+          <T>16694441835290992421<!--LilNinthel:buff_diaperPunishment_witnessAccident_cooldown--></T>
+        </L>
+      </U>
+    </V>
+  </L>
+  <T n="time_overhead">1</T>
+  <T n="visible">False</T>
+</I>

@@ -1,0 +1,19 @@
+<I c="SimReward" i="reward" m="rewards.reward" n="LilNinthel:trait_diaper_devotee_reward" s="15312888428817002905">
+  <T n="icon" p="InGame\UI\Icons\CAS\Traits\RewardTraits\traitReward_SteelBladder.png">2f7d0004:00000000:15328605990296b0</T>
+  <T n="name">0x962C7A24<!--No Toilets Allowed--></T>
+  <V n="reward_description" t="enabled">
+    <T n="enabled">0xB7A5EAD9<!--{0.SimFirstName} is committed to doing all of {M0.his}{F0.her} business in {M0.his}{F0.her} pants, no toilets allowed. {M0.He}{F0.She} refuses to even sit on those cold, contemptible contraptions.--></T>
+  </V>
+  <V n="reward_unavailable_tooltip" t="enabled">
+    <T n="enabled">0x709B9CC<!--This Reward is not available to your Sim, or it is already owned by your Sim.--></T>
+  </V>
+  <L n="rewards">
+    <V t="specific_reward">
+      <V n="specific_reward" t="trait">
+        <U n="trait">
+          <T n="trait">614588825<!--LilNinthel:trait_diaper_devotee--></T>
+        </U>
+      </V>
+    </V>
+  </L>
+</I>

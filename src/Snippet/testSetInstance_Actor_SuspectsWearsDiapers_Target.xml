@@ -1,0 +1,21 @@
+<I c="TestSetInstance" i="snippet" m="event_testing.tests" n="LilNinthel:testSetInstance_Actor_SuspectsWearsDiapers_Target" s="11167753710436092936">
+  <L n="test">
+    <L>
+      <V t="relationship">
+        <U n="relationship">
+          <U n="required_relationship_bits">
+            <L n="match_any">
+              <T>4193068179<!--LilNinthel:relbit_suspects_wears_diapers--></T>
+            </L>
+          </U>
+          <L n="subject">
+            <E>TargetSim</E>
+          </L>
+          <L n="target_sim">
+            <E>Actor</E>
+          </L>
+        </U>
+      </V>
+    </L>
+  </L>
+</I>

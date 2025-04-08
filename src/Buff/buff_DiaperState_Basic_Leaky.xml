@@ -1,0 +1,12 @@
+<!-- S4TK Group: 80000000 -->
+<I c="Buff" i="buff" m="buffs.buff" n="LilNinthel:buff_DiaperState_Basic_Leaky" s="9857341646448097830">
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0x7375470B<!--{0.SimFirstName}'s diaper is leaking.--></T>
+  <T n="buff_name">0x9BD44F0C<!--Leaky Diaper--></T>
+  <T n="icon">2f7d0004:00000000:820522970E5AC06A</T>
+  <T n="mood_type">14646<!--Mood_Uncomfortable--></T>
+  <T n="mood_weight">1</T>
+  <T n="show_timeout">False</T>
+  <T n="ui_sort_order">0</T>
+</I>

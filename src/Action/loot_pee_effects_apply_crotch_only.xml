@@ -1,0 +1,11 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_pee_effects_apply_crotch_only" s="9880545206098346256">
+  <L n="loot_actions">
+    <V t="statistics">
+      <V n="statistics" t="statistic_set_max">
+        <U n="statistic_set_max">
+          <T n="stat">11398878711917611765<!--LilNinthel:statistic_pee_effects_crotch_only--></T>
+        </U>
+      </V>
+    </V>
+  </L>
+</I>

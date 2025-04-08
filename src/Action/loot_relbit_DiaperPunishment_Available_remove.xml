@@ -1,0 +1,16 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_relbit_DiaperPunishment_Available_remove" s="13345344887664660843">
+  <L n="loot_actions">
+    <V t="relationship_bits_loot">
+      <U n="relationship_bits_loot">
+        <L n="bit_operations">
+          <U>
+            <T n="bit">615514631<!--LilNinthel:relbit_DiaperPunishment_Available--></T>
+            <E n="operation">REMOVE</E>
+            <E n="recipients">Actor</E>
+            <E n="targets">Object</E>
+          </U>
+        </L>
+      </U>
+    </V>
+  </L>
+</I>

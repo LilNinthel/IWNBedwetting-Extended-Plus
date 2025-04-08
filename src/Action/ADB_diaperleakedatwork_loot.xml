@@ -1,0 +1,41 @@
+<I xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" c="LootActions" s="7029926301549322565" i="action" m="interactions.utils.loot" n="ADB_diaperleakedatwork_loot">
+  <L n="loot_actions">
+    <V t="buff">
+      <U n="buff">
+        <U n="buff">
+          <T n="buff_type">15892804760717127052<!--ADB_diaperleakedatwork_buff--></T>
+          <V n="buff_reason" t="enabled">
+            <T n="enabled">0x978804CB<!--(From diaper leaking at work)--></T>
+          </V>
+        </U>
+        <E n="subject">Actor</E>
+        <U n="chance">
+          <T n="base_chance">10</T>
+        </U>
+        <L n="tests">
+          <L>
+            <V t="at_work">
+              <U n="at_work">
+                <E n="subject">Actor</E>
+                <V n="active_work_restriction" t="enabled">
+                  <T n="enabled">False</T>
+                </V>
+                <T n="is_at_work">True</T>
+              </U>
+            </V>
+            <V t="test_set_reference">
+              <T n="test_set_reference">17796732764948000262<!--IwnBedWetting_testSet_HasDiaperEquipped--></T>
+            </V>
+            <V t="buff">
+              <U n="buff">
+                <L n="blacklist">
+                  <T>15892804760717127052<!--ADB_diaperleakedatwork_buff--></T>
+                </L>
+              </U>
+            </V>
+          </L>
+        </L>
+      </U>
+    </V>
+  </L>
+</I>

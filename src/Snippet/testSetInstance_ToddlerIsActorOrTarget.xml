@@ -1,0 +1,58 @@
+<I c="TestSetInstance" i="snippet" m="event_testing.tests" n="testSetInstance_ToddlerIsActorOrTarget" s="156205">
+  <L n="test">
+    <L>
+      <V t="sim_info">
+        <U n="sim_info">
+          <V n="ages" t="specified">
+            <L n="specified">
+              <E>TODDLER</E>
+            </L>
+          </V>
+          <E n="who">TargetSim</E>
+        </U>
+      </V>
+    </L>
+    <L>
+      <V t="sim_info">
+        <U n="sim_info">
+          <V n="ages" t="specified">
+            <L n="specified">
+              <E>TODDLER</E>
+            </L>
+          </V>
+        </U>
+      </V>
+    </L>
+    <L>
+      <V t="trait">
+        <U n="trait">
+          <E n="subject">TargetSim</E>
+          <L n="whitelist_traits">
+            <T>413350117<!--LilNinthel:trait_hidden_canBeCarried--></T>
+            <T>3344421797<!--LilNinthel:trait_Little--></T>
+          </L>
+        </U>
+      </V>
+    </L>
+    <L>
+      <V t="trait">
+        <U n="trait">
+          <L n="whitelist_traits">
+            <T>413350117<!--LilNinthel:trait_hidden_canBeCarried--></T>
+            <T>3344421797<!--LilNinthel:trait_Little--></T>
+          </L>
+        </U>
+      </V>
+    </L>
+    <L>
+      <V t="test_set_reference">
+        <T n="test_set_reference">9782897619574397794<!--LilNinthel:testSetInstance_Relationship_DiaperChanger_Target--></T>
+      </V>
+    </L>
+    <L>
+      <V t="test_set_reference">
+        <T n="test_set_reference">13420754617872508648<!--LilNinthel:testSetInstance_Relationship_DiaperChanger_Actor--></T>
+      </V>
+    </L>
+  </L>
+</I>

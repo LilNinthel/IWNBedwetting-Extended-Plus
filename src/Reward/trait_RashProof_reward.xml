@@ -1,0 +1,19 @@
+<I c="SimReward" i="reward" m="rewards.reward" n="LilNinthel:trait_RashProof_reward" s="17055816595040199319">
+  <T n="icon">2f7d0004:00000000:322220fc9ba98a06</T>
+  <T n="name">0xEE706939<!--Rash Proof--></T>
+  <V n="reward_description" t="enabled">
+    <T n="enabled">0xEF86E9AF<!--These Sims will never get diaper rashes.--></T>
+  </V>
+  <V n="reward_unavailable_tooltip" t="enabled">
+    <T n="enabled">0x709B9CC<!--This Reward is not available to your Sim, or it is already owned by your Sim.--></T>
+  </V>
+  <L n="rewards">
+    <V t="specific_reward">
+      <V n="specific_reward" t="trait">
+        <U n="trait">
+          <T n="trait">440037067<!--LilNinthel:trait_RashProof--></T>
+        </U>
+      </V>
+    </V>
+  </L>
+</I>

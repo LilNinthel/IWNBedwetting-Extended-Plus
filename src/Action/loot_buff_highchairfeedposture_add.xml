@@ -1,0 +1,12 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_buff_highchairfeedposture_add" s="12194202287458092582">
+  <L n="loot_actions">
+    <V t="buff">
+      <U n="buff">
+        <E n="subject">Actor</E>
+        <U n="buff">
+          <T n="buff_type">13553445139389231781<!--LilNinthel:buff_highchairfeedposture--></T>
+        </U>
+      </U>
+    </V>
+  </L>
+</I>

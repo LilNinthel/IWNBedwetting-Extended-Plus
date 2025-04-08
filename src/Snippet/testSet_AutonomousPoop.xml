@@ -1,0 +1,26 @@
+<I c="TestSetInstance" i="snippet" m="event_testing.tests" n="LilNinthel:testSet_AutonomousPoop" s="17707755950347317067">
+  <L n="test">
+    <L>
+      <V t="motive">
+        <U n="motive">
+          <L n="stats">
+            <T>12821404978606278937<!--LilNinthel:commodity_poopCooldown--></T>
+          </L>
+          <U n="threshold">
+            <E n="comparison">EQUAL</E>
+            <T n="value">0</T>
+          </U>
+        </U>
+      </V>
+    </L>
+    <L>
+      <V t="trait">
+        <U n="trait">
+          <L n="whitelist_traits">
+            <T>10641654953555617240<!--LilNinthel:trait_unlimitedPooping--></T>
+          </L>
+        </U>
+      </V>
+    </L>
+  </L>
+</I>

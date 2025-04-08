@@ -1,0 +1,61 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_Remove_DiaperWearerTrait" s="12727012507078916191">
+  <L n="loot_actions">
+    <V t="trait_remove">
+      <U n="trait_remove">
+        <V n="trait" t="specific_trait">
+          <U n="specific_trait">
+            <T n="specific_trait">1891765918<!--LilNinthel:trait_DiaperWearer--></T>
+          </U>
+        </V>
+      </U>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_remove">
+        <U n="statistic_remove">
+          <T n="stat">13859436604775548367<!--LilNinthel:commodity_DiaperLoad--></T>
+          <L n="subject">
+            <E>Actor</E>
+          </L>
+        </U>
+      </V>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_remove">
+        <U n="statistic_remove">
+          <T n="stat">15158240590669655393<!--LilNinthel:commodity_DiaperPoopLoad--></T>
+          <L n="subject">
+            <E>Actor</E>
+          </L>
+        </U>
+      </V>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_remove">
+        <U n="statistic_remove">
+          <T n="stat">14741762727861188948<!--LilNinthel:statistic_DiaperState_Basic--></T>
+          <L n="subject">
+            <E>Actor</E>
+          </L>
+        </U>
+      </V>
+    </V>
+    <V t="buff_removal">
+      <U n="buff_removal">
+        <L n="buffs_to_remove">
+          <T>14251928607352134641<!--LilNinthel:buff_DiaperRash--></T>
+          <T>15600949772408234127<!--LilNinthel:buff_wetPants_overlay--></T>
+          <T>10367890649802483015<!--LilNinthel:buff_leaky_diaper_overlay--></T>
+          <T>9966416866659479991<!--LilNinthel:buff_overflowing_diaper_overlay--></T>
+        </L>
+        <E n="subject">Actor</E>
+      </U>
+    </V>
+  </L>
+  <L n="tests">
+    <L>
+      <V t="test_set_reference">
+        <T n="test_set_reference">16874035057329897825<!--LilNinthel:testSet_DoesNot_AlwaysWearsDiapers--></T>
+      </V>
+    </L>
+  </L>
+</I>

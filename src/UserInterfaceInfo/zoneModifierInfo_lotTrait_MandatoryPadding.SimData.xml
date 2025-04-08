@@ -1,0 +1,22 @@
+<SimData version="0x00000101" u="0x00000000">
+  <Instances>
+    <I name="LilNinthel:zoneModifierInfo_lotTrait_MandatoryPadding" schema="ZoneModifierDisplayInfo" type="Object">
+      <T name="modifier_type">0</T>
+      <T name="zone_modifier_description">0x4FFDAA76</T>
+      <T name="zone_modifier_icon">00B2D882-00000000-55AC69FCE38923F0</T>
+      <T name="zone_modifier_name">0x2E64EADD</T>
+      <T name="zone_modifier_reference">10997403898984641840</T>
+    </I>
+  </Instances>
+  <Schemas>
+    <Schema name="ZoneModifierDisplayInfo" schema_hash="0xA3BAF871">
+      <Columns>
+        <Column name="modifier_type" type="Int64" flags="0x00000000"/>
+        <Column name="zone_modifier_description" type="LocalizationKey" flags="0x00000000"/>
+        <Column name="zone_modifier_icon" type="ResourceKey" flags="0x00000000"/>
+        <Column name="zone_modifier_name" type="LocalizationKey" flags="0x00000000"/>
+        <Column name="zone_modifier_reference" type="TableSetReference" flags="0x00000000"/>
+      </Columns>
+    </Schema>
+  </Schemas>
+</SimData>

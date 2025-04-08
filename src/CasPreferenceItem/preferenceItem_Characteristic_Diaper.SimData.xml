@@ -1,0 +1,22 @@
+<SimData version="0x00000101" u="0x00000036">
+  <Instances>
+    <I name="LilNinthel:preferenceItem_Characteristic_Diaper" schema="CharacteristicPreferenceItem" type="Object">
+      <T name="cas_preference_category">307793</T>
+      <T name="dislike">12852300336187165144</T>
+      <T name="like">15869719760517348156</T>
+      <V name="tooltip" variant="0xF8CBBF4C">
+        <T type="LocalizationKey">0x4FECCD33</T>
+      </V>
+    </I>
+  </Instances>
+  <Schemas>
+    <Schema name="CharacteristicPreferenceItem" schema_hash="0x9C4C79CB">
+      <Columns>
+        <Column name="cas_preference_category" type="TableSetReference" flags="0x00000000"/>
+        <Column name="dislike" type="TableSetReference" flags="0x00000000"/>
+        <Column name="like" type="TableSetReference" flags="0x00000000"/>
+        <Column name="tooltip" type="Variant" flags="0x00000000"/>
+      </Columns>
+    </Schema>
+  </Schemas>
+</SimData>

@@ -1,0 +1,103 @@
+<I c="Trait" i="trait" m="traits.traits" n="LilNinthel:trait_hidden_canBeCarried" s="413350117">
+  <L n="ages">
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <T n="trait_description">0x00000000</T>
+  <T n="icon" p="InGame\UI\Icons\Debug\missing_image.png">2f7d0004:00000000:30f0846c783606f9</T>
+  <T n="display_name">0x00000000</T>
+  <V n="interactions" t="enabled">
+    <U n="enabled">
+      <L n="affordance_links">
+        <T>286334<!--infant_BehaviorIdles_Babble--></T>
+        <T>286337<!--infant_BehaviorIdles_BlowRaspberry--></T>
+        <T>319011<!--infant_BehaviorIdles_Playmat--></T>
+        <T>275238<!--infant_BehaviorIdles_Cooing--></T>
+        <T>275234<!--infant_BehaviorIdles_GrabFeet--></T>
+        <T>275228<!--infant_BehaviorIdles_Hiccup--></T>
+        <T>286976<!--infant_BehaviorIdles_PlaceToesInMouth--></T>
+        <T>275229<!--infant_BehaviorIdles_Sneezing--></T>
+        <T>275232<!--infant_BehaviorIdles_SuckFingers--></T>
+        <T>275237<!--infant_BehaviorIdles_Wiggle--></T>
+        <T>275236<!--infant_BehaviorIdles_Wobbling--></T>
+        <T>328796<!--idle_InfantMilestones_PushAnticipation--></T>
+      </L>
+    </U>
+  </V>
+  <E n="min_lod_value">MINIMUM</E>
+  <L n="species">
+    <E />
+  </L>
+  <L n="super_affordances">
+    <T>155919<!--toddler_Self_Interactions_Dance--></T>
+    <T>155740<!--sim_Toddler_NonTouching_TeachToTalk--></T>
+    <T>155396<!--toddler_RunAround--></T>
+    <T>155725<!--waypoint_Toddler_Wander--></T>
+    <T>149612<!--napOnGround--></T>
+    <T>140698<!--toddler_ThrowTantrum--></T>
+    <T>140697<!--toddler_Cry--></T>
+    <T>151786<!--TYAE_Watch_Toddler--></T>
+    <T>145347<!--toddler_Babble_Self--></T>
+    <T>157002<!--waypoint_Toddler_Wander_Wild_TakeOffClothes--></T>
+    <T>18443046243591128659<!--LilNinthel:sim_Little_CheckLittle--></T>
+    <T>155696<!--HighChair_Nap--></T>
+    <T>157210<!--si_touching_Toddler_Apologize--></T>
+    <T>151827<!--TYAE_Watch_Toddler_MotiveDistress--></T>
+    <T>157528<!--HighChair_Cry--></T>
+    <T>156875<!--simPicker_GoingOutSocials_AskAboutAnotherSim_Toddler--></T>
+    <T>157540<!--socialSuperInteraction_CarryPickUp_ToBed_Energy_Motive_Solve--></T>
+    <T>157172<!--autonomous_Generic_Object_Toddler_Have_A_Look_NonRadial--></T>
+    <T>157171<!--autonomous_Generic_Object_Toddler_Have_A_Look_Radial--></T>
+    <T>157161<!--autonomous_Generic_Object_Toddler_Check_Out--></T>
+    <T>9540723534133235201<!--LilNinthel:sim_Little_CheckLittle_Emergency--></T>
+    <T>11634269130999133481<!--LilNinthel:sim_Little_CheckLittle_Minor--></T>
+    <T>157535<!--autonomous_Generic_Book_Read_Toddler--></T>
+    <T>157582<!--autonomous_Generic_Object_Toddler_Check_Out_CircleConstraint--></T>
+    <T>157581<!--autonomous_Generic_Object_Toddler_Have_A_Look_GardeningPlant--></T>
+    <T>161137<!--sim_TeachTo_SayPleaseAndThankYou_Actor_ToToddler--></T>
+    <T>164865<!--sim_TeachTo_SaySorry_ToToddler--></T>
+    <T>166667<!--grossManners_Fart_toddlers--></T>
+    <T>282876<!--socialSuperInteraction_CarryPickUp_Infant_CradleHold--></T>
+    <T>322464<!--social_Infant_Interim_Bottle_Feed--></T>
+    <T>322576<!--social_Infant_Interim_Body_Feed--></T>
+    <T>305159<!--babyFeed_Preference_Body--></T>
+    <T>305160<!--babyFeed_Preference_Bottle--></T>
+    <T>305161<!--babyFeed_Preference_None--></T>
+    <T>333142<!--simPicker_Infant_GetFedBy--></T>
+    <T>10670698387140325578<!--LilNinthel:Sim_Little_Add--></T>
+    <T>14625724495118305741<!--LilNinthel:Sim_Little_Remove--></T>
+    <T>275895<!--socialSuperInteraction_CarryPickUp_Infant_ToHighChair--></T>
+    <T>282427<!--socialSuperInteraction_CarryPickUp_Infant_ToHighChair_GiveFood--></T>
+    <T>307872<!--carryableInfant_SetPreferredCarrier--></T>
+    <T>287983<!--infantMilestone_TummyTime_Solo--></T>
+    <T>274648<!--generic_Infant_LayOnTummy--></T>
+    <T>274647<!--generic_Infant_LayOnBack--></T>
+    <T>307677<!--infant_PreSleep--></T>
+    <T>275896<!--socialSuperInteraction_CarryPickUp_Infant_ToCrib--></T>
+  </L>
+  <L n="target_super_affordances">
+    <U>
+      <T n="affordance">146932<!--autonomous_toybox_play_picker--></T>
+      <V n="object_filter" t="filter_by_tags">
+        <U n="filter_by_tags">
+          <L n="tags">
+            <E>Func_Toybox</E>
+          </L>
+        </U>
+      </V>
+    </U>
+    <U>
+      <T n="affordance">274891<!--infant_Watch--></T>
+    </U>
+    <U>
+      <T n="affordance">324302<!--infant_Watch_Carried--></T>
+    </U>
+    <U>
+      <T n="affordance">326839<!--infant_Watch_Immobile_InObject--></T>
+    </U>
+  </L>
+  <E n="trait_type">HIDDEN</E>
+</I>

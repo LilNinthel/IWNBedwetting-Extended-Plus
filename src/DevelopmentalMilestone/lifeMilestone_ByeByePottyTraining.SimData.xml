@@ -1,0 +1,36 @@
+<SimData version="0x00000101" u="0x00000036">
+  <Instances>
+    <I name="LilNinthel:lifeMilestone_ByeByePottyTraining" schema="DevelopmentalMilestone" type="Object">
+      <L name="ages">
+        <T type="Int64">4</T>
+        <T type="Int64">8</T>
+        <T type="Int64">16</T>
+        <T type="Int64">32</T>
+        <T type="Int64">64</T>
+      </L>
+      <T name="category">4</T>
+      <T name="icon">00B2D882-00000000-820522970E5AC06D</T>
+      <V name="is_primary_milestone" variant="0x9229B22A"/>
+      <T name="name">0xD21F720E</T>
+      <T name="ui_sort_order">1</T>
+      <T name="unlocked_text">0xAFC56C90</T>
+      <T name="unlocked_text_no_context">0xAFC56C90</T>
+      <T name="unlocked_text_target_sim_header">0x00000000</T>
+    </I>
+  </Instances>
+  <Schemas>
+    <Schema name="DevelopmentalMilestone" schema_hash="0x87ED1F96">
+      <Columns>
+        <Column name="ages" type="Vector" flags="0x00000000"/>
+        <Column name="category" type="UInt32" flags="0x00000000"/>
+        <Column name="icon" type="ResourceKey" flags="0x00000000"/>
+        <Column name="is_primary_milestone" type="Variant" flags="0x00000000"/>
+        <Column name="name" type="LocalizationKey" flags="0x00000000"/>
+        <Column name="ui_sort_order" type="Int32" flags="0x00000000"/>
+        <Column name="unlocked_text" type="LocalizationKey" flags="0x00000000"/>
+        <Column name="unlocked_text_no_context" type="LocalizationKey" flags="0x00000000"/>
+        <Column name="unlocked_text_target_sim_header" type="LocalizationKey" flags="0x00000000"/>
+      </Columns>
+    </Schema>
+  </Schemas>
+</SimData>

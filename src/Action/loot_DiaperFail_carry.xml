@@ -1,0 +1,43 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_DiaperFail_carry" s="16000253943186161860">
+  <L n="loot_actions">
+    <V t="statistics">
+      <V n="statistics" t="statistic_change">
+        <U n="statistic_change">
+          <T n="advertise">False</T>
+          <T n="amount">-20</T>
+          <T n="stat">16657<!--motive_Hygiene--></T>
+          <L n="subject">
+            <E>ActorPostureTarget</E>
+          </L>
+        </U>
+      </V>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_change">
+        <U n="statistic_change">
+          <T n="advertise">False</T>
+          <T n="amount">-100</T>
+          <T n="stat">16616<!--commodity_Motive_HygieneHands--></T>
+          <L n="subject">
+            <E>ActorPostureTarget</E>
+          </L>
+        </U>
+      </V>
+    </V>
+  </L>
+  <L n="tests">
+    <L>
+      <V t="statistic">
+        <U n="statistic">
+          <T n="stat">13859436604775548367<!--LilNinthel:commodity_DiaperLoad--></T>
+          <V n="threshold" t="value_threshold">
+            <U n="value_threshold">
+              <E n="comparison">GREATER_OR_EQUAL</E>
+              <T n="value">5</T>
+            </U>
+          </V>
+        </U>
+      </V>
+    </L>
+  </L>
+</I>

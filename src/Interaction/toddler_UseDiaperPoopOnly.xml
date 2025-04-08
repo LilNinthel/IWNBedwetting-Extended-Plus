@@ -1,0 +1,613 @@
+<!-- S4TK Group: 80000000 -->
+<I c="SuperInteraction" i="interaction" m="interactions.base.super_interaction" n="LilNinthel:toddler_UseDiaperPoopOnly" s="10270159175383340941">
+  <V n="_cancelable_by_user" t="prohibit_cancelation" />
+  <L n="_false_advertisements">
+    <V t="statistic_change">
+      <U n="statistic_change">
+        <T n="amount">10</T>
+        <T n="stat">16652<!--motive_Bladder--></T>
+      </U>
+    </V>
+  </L>
+  <V n="_icon" t="resource_key">
+    <U n="resource_key">
+      <T n="key" p="InGame\UI\Icons\InteractionQueue\IconQueueDiaper.png">2f7d0004:00000000:589D905795EE0DB7</T>
+    </U>
+  </V>
+  <V n="_saveable" t="enabled" />
+  <T n="_super_affordance_can_share_target">True</T>
+  <T n="acquire_targets_as_resource">False</T>
+  <T n="allow_autonomous">True</T>
+  <T n="allow_user_directed">True</T>
+  <T n="attention_cost">0</T>
+  <V n="basic_content" t="one_shot">
+    <U n="one_shot">
+      <U n="animation_ref">
+        <U n="overrides">
+          <V n="balloons" t="enabled">
+            <L n="enabled">
+              <U>
+                <L n="balloon_choices">
+                  <U>
+                    <V n="item" t="balloon_icon">
+                      <U n="balloon_icon">
+                        <E n="balloon_type">THOUGHT</E>
+                        <V n="icon" t="resource_key">
+                          <U n="resource_key">
+                            <T n="key" p="InGame\UI\Icons\Headlines\Final\headline_babydiapers.png">2f7d0004:00000000:589D905795EE0DB7</T>
+                          </U>
+                        </V>
+                      </U>
+                    </V>
+                  </U>
+                </L>
+                <L n="balloon_target">
+                  <E>Actor</E>
+                </L>
+              </U>
+            </L>
+          </V>
+        </U>
+      </U>
+    </U>
+  </V>
+  <L n="basic_extras">
+    <V t="loot">
+      <U n="loot">
+        <L n="loot_list">
+          <T>17736933445297037306<!--LilNinthel:loot_diaperDependence_increase--></T>
+          <T>10251625219716980905<!--LilNinthel:loot_copy_bladder_value--></T>
+        </L>
+        <V n="timing" t="at_beginning" />
+      </U>
+    </V>
+    <V t="loot">
+      <U n="loot">
+        <L n="loot_list">
+          <T>10700787611967205049<!--LilNinthel:loot_diaper_poopOnly_bladderAdjust--></T>
+        </L>
+      </U>
+    </V>
+    <V t="loot">
+      <U n="loot">
+        <L n="loot_list">
+          <T>14673699649911992883<!--LilNinthel:loot_statistic_diaper_accident--></T>
+        </L>
+        <U n="success_chance">
+          <L n="multipliers">
+            <U>
+              <T n="multiplier">0</T>
+              <L n="tests">
+                <L>
+                  <V t="statistic">
+                    <U n="statistic">
+                      <T n="stat">16652<!--motive_Bladder--></T>
+                      <V n="threshold" t="value_threshold">
+                        <U n="value_threshold">
+                          <E n="comparison">GREATER</E>
+                          <T n="value">-100</T>
+                        </U>
+                      </V>
+                    </U>
+                  </V>
+                </L>
+              </L>
+            </U>
+          </L>
+        </U>
+        <V n="timing" t="at_beginning" />
+      </U>
+    </V>
+    <V t="do_command">
+      <U n="do_command">
+        <L n="arguments">
+          <V t="participant">
+            <U n="participant">
+              <E n="argument">Actor</E>
+            </U>
+          </V>
+        </L>
+        <T n="command">iwn.diaper_load_changed</T>
+        <V n="timing" t="at_end" />
+      </U>
+    </V>
+  </L>
+  <L n="basic_liabilities">
+    <V t="timeout">
+      <U n="timeout">
+        <T n="timeout">5</T>
+        <T n="timeout_affordance">18401942594569887613<!--LilNinthel:toddler_UseDiaperPoopOnly_continuation--></T>
+      </U>
+    </V>
+  </L>
+  <V n="basic_reserve_object" t="disabled" />
+  <V n="content_score" t="disabled" />
+  <T n="display_name">0xE4D2EB02<!--Use Diaper--></T>
+  <V n="display_name_overrides" t="testable">
+    <U n="testable">
+      <L n="overrides">
+        <U>
+          <V n="new_display_name" t="enabled">
+            <T n="enabled">0xFF478EC4<!--Mess Diaper--></T>
+          </V>
+          <L n="test">
+            <L>
+              <V t="statistic">
+                <U n="statistic">
+                  <T n="stat">17688325017456302228<!--LilNinthel:statistic_wordPreference_messDiaper--></T>
+                  <V n="threshold" t="value_threshold">
+                    <U n="value_threshold">
+                      <E n="comparison">EQUAL</E>
+                      <T n="value">1</T>
+                    </U>
+                  </V>
+                </U>
+              </V>
+            </L>
+          </L>
+        </U>
+        <U>
+          <V n="new_display_name" t="enabled">
+            <T n="enabled">0x3889D79A<!--Poop Diaper--></T>
+          </V>
+          <L n="test">
+            <L>
+              <V t="statistic">
+                <U n="statistic">
+                  <T n="stat">17688325017456302228<!--LilNinthel:statistic_wordPreference_messDiaper--></T>
+                  <V n="threshold" t="value_threshold">
+                    <U n="value_threshold">
+                      <E n="comparison">EQUAL</E>
+                      <T n="value">2</T>
+                    </U>
+                  </V>
+                </U>
+              </V>
+            </L>
+          </L>
+        </U>
+        <U>
+          <V n="new_display_name" t="enabled">
+            <T n="enabled">0x0A7C74AD<!--Go Poopie--></T>
+          </V>
+          <L n="test">
+            <L>
+              <V t="statistic">
+                <U n="statistic">
+                  <T n="stat">17688325017456302228<!--LilNinthel:statistic_wordPreference_messDiaper--></T>
+                  <V n="threshold" t="value_threshold">
+                    <U n="value_threshold">
+                      <E n="comparison">EQUAL</E>
+                      <T n="value">3</T>
+                    </U>
+                  </V>
+                </U>
+              </V>
+            </L>
+          </L>
+        </U>
+        <U>
+          <V n="new_display_name" t="enabled">
+            <T n="enabled">0xBF1A4234<!--Go Poo-poo--></T>
+          </V>
+          <L n="test">
+            <L>
+              <V t="statistic">
+                <U n="statistic">
+                  <T n="stat">17688325017456302228<!--LilNinthel:statistic_wordPreference_messDiaper--></T>
+                  <V n="threshold" t="value_threshold">
+                    <U n="value_threshold">
+                      <E n="comparison">EQUAL</E>
+                      <T n="value">4</T>
+                    </U>
+                  </V>
+                </U>
+              </V>
+            </L>
+          </L>
+        </U>
+        <U>
+          <V n="new_display_name" t="enabled">
+            <T n="enabled">0x95BA6487<!--Make Poo-poos--></T>
+          </V>
+          <L n="test">
+            <L>
+              <V t="statistic">
+                <U n="statistic">
+                  <T n="stat">17688325017456302228<!--LilNinthel:statistic_wordPreference_messDiaper--></T>
+                  <V n="threshold" t="value_threshold">
+                    <U n="value_threshold">
+                      <E n="comparison">EQUAL</E>
+                      <T n="value">5</T>
+                    </U>
+                  </V>
+                </U>
+              </V>
+            </L>
+          </L>
+        </U>
+        <U>
+          <V n="new_display_name" t="enabled">
+            <T n="enabled">0x0F5361AC<!--Make Poopies--></T>
+          </V>
+          <L n="test">
+            <L>
+              <V t="statistic">
+                <U n="statistic">
+                  <T n="stat">17688325017456302228<!--LilNinthel:statistic_wordPreference_messDiaper--></T>
+                  <V n="threshold" t="value_threshold">
+                    <U n="value_threshold">
+                      <E n="comparison">EQUAL</E>
+                      <T n="value">6</T>
+                    </U>
+                  </V>
+                </U>
+              </V>
+            </L>
+          </L>
+        </U>
+        <U>
+          <V n="new_display_name" t="enabled">
+            <T n="enabled">0x61D710E5<!--Make Stinkies--></T>
+          </V>
+          <L n="test">
+            <L>
+              <V t="statistic">
+                <U n="statistic">
+                  <T n="stat">17688325017456302228<!--LilNinthel:statistic_wordPreference_messDiaper--></T>
+                  <V n="threshold" t="value_threshold">
+                    <U n="value_threshold">
+                      <E n="comparison">EQUAL</E>
+                      <T n="value">7</T>
+                    </U>
+                  </V>
+                </U>
+              </V>
+            </L>
+          </L>
+        </U>
+        <U>
+          <V n="new_display_name" t="enabled">
+            <T n="enabled">0x24B04712<!--Make Pushies--></T>
+          </V>
+          <L n="test">
+            <L>
+              <V t="statistic">
+                <U n="statistic">
+                  <T n="stat">17688325017456302228<!--LilNinthel:statistic_wordPreference_messDiaper--></T>
+                  <V n="threshold" t="value_threshold">
+                    <U n="value_threshold">
+                      <E n="comparison">EQUAL</E>
+                      <T n="value">8</T>
+                    </U>
+                  </V>
+                </U>
+              </V>
+            </L>
+          </L>
+        </U>
+        <U>
+          <V n="new_display_name" t="enabled">
+            <T n="enabled">0xD8BEE854<!--Poo-poo--></T>
+          </V>
+          <L n="test">
+            <L>
+              <V t="statistic">
+                <U n="statistic">
+                  <T n="stat">17688325017456302228<!--LilNinthel:statistic_wordPreference_messDiaper--></T>
+                  <V n="threshold" t="value_threshold">
+                    <U n="value_threshold">
+                      <E n="comparison">EQUAL</E>
+                      <T n="value">9</T>
+                    </U>
+                  </V>
+                </U>
+              </V>
+            </L>
+          </L>
+        </U>
+        <U>
+          <V n="new_display_name" t="enabled">
+            <T n="enabled">0xC080C1CD<!--Poopie--></T>
+          </V>
+          <L n="test">
+            <L>
+              <V t="statistic">
+                <U n="statistic">
+                  <T n="stat">17688325017456302228<!--LilNinthel:statistic_wordPreference_messDiaper--></T>
+                  <V n="threshold" t="value_threshold">
+                    <U n="value_threshold">
+                      <E n="comparison">EQUAL</E>
+                      <T n="value">10</T>
+                    </U>
+                  </V>
+                </U>
+              </V>
+            </L>
+          </L>
+        </U>
+        <U>
+          <V n="new_display_name" t="enabled">
+            <T n="enabled">0x472DCC92<!--Shit Diaper--></T>
+          </V>
+          <L n="test">
+            <L>
+              <V t="statistic">
+                <U n="statistic">
+                  <T n="stat">17688325017456302228<!--LilNinthel:statistic_wordPreference_messDiaper--></T>
+                  <V n="threshold" t="value_threshold">
+                    <U n="value_threshold">
+                      <E n="comparison">EQUAL</E>
+                      <T n="value">11</T>
+                    </U>
+                  </V>
+                </U>
+              </V>
+            </L>
+          </L>
+        </U>
+        <U>
+          <V n="new_display_name" t="enabled">
+            <T n="enabled">0x533227F3<!--Have Messy "Accident"--></T>
+          </V>
+          <L n="test">
+            <L>
+              <V t="statistic">
+                <U n="statistic">
+                  <T n="stat">17688325017456302228<!--LilNinthel:statistic_wordPreference_messDiaper--></T>
+                  <V n="threshold" t="value_threshold">
+                    <U n="value_threshold">
+                      <E n="comparison">EQUAL</E>
+                      <T n="value">12</T>
+                    </U>
+                  </V>
+                </U>
+              </V>
+            </L>
+          </L>
+        </U>
+      </L>
+    </U>
+  </V>
+  <U n="display_name_text_tokens">
+    <L n="tokens">
+      <V t="participant_type">
+        <U n="participant_type">
+          <V n="objects" t="from_participant">
+            <U n="from_participant">
+              <E n="participant">Actor</E>
+            </U>
+          </V>
+        </U>
+      </V>
+      <V t="participant_type">
+        <U n="participant_type">
+          <V n="objects" t="from_participant">
+            <U n="from_participant">
+              <E n="participant">Object</E>
+            </U>
+          </V>
+        </U>
+      </V>
+    </L>
+  </U>
+  <T n="ignore_exclude_all_compatibility">True</T>
+  <L n="interaction_category_tags">
+    <E>Interaction_Super</E>
+    <E>Interaction_All</E>
+  </L>
+  <V n="outcome" t="test_based">
+    <U n="test_based">
+      <L n="fallback_outcomes">
+        <U>
+          <U n="outcome">
+            <L n="loot_list">
+              <T>15492140109304376292<!--LilNinthel:loot_statistic_diaper_mess--></T>
+            </L>
+          </U>
+        </U>
+      </L>
+      <L n="tested_outcomes">
+        <U>
+          <L n="potential_outcomes">
+            <U>
+              <U n="outcome">
+                <L n="loot_list">
+                  <T>15492140109304376292<!--LilNinthel:loot_statistic_diaper_mess--></T>
+                </L>
+              </U>
+            </U>
+          </L>
+          <L n="tests">
+            <L>
+              <V t="posture">
+                <U n="posture">
+                  <L n="prohibited_postures">
+                    <T>132262<!--posture_BeCarried--></T>
+                  </L>
+                </U>
+              </V>
+            </L>
+          </L>
+        </U>
+        <U>
+          <L n="potential_outcomes">
+            <U>
+              <U n="outcome">
+                <L n="loot_list">
+                  <T>15492140109304376292<!--LilNinthel:loot_statistic_diaper_mess--></T>
+                </L>
+              </U>
+            </U>
+          </L>
+          <L n="tests">
+            <L>
+              <V t="posture">
+                <U n="posture">
+                  <L n="required_postures">
+                    <T>132262<!--posture_BeCarried--></T>
+                  </L>
+                </U>
+              </V>
+            </L>
+          </L>
+        </U>
+      </L>
+    </U>
+  </V>
+  <V n="pie_menu_icon" t="enabled">
+    <V n="enabled" t="resource_key">
+      <U n="resource_key">
+        <T n="key">2f7d0004:00000000:589D905795EE0DB7</T>
+      </U>
+    </V>
+  </V>
+  <T n="pie_menu_priority">10</T>
+  <E n="scoring_priority">NORMAL</E>
+  <T n="subaction_selection_weight">1</T>
+  <E n="target_type">ACTOR</E>
+  <L n="test_autonomous">
+    <L>
+      <V t="test_set_reference">
+        <T n="test_set_reference">14604107641136441343<!--LilNinthel:testSet_AutonomousDiaperUse--></T>
+      </V>
+      <V t="test_set_reference">
+        <T n="test_set_reference">17707755950347317067<!--LilNinthel:testSet_AutonomousPoop--></T>
+      </V>
+    </L>
+  </L>
+  <V n="test_disallow_while_running" t="enabled">
+    <U n="enabled">
+      <T n="test_self">True</T>
+    </U>
+  </V>
+  <L n="test_globals">
+    <V t="test_set_reference">
+      <T n="test_set_reference">17796732764948000262<!--IwnBedWetting_testSet_HasDiaperEquipped--></T>
+    </V>
+    <V t="statistic">
+      <U n="statistic">
+        <T n="stat">17298827354076573237<!--LilNinthel:statistic_gamePreference_splitDiaperUsage--></T>
+        <V n="threshold" t="value_threshold">
+          <U n="value_threshold">
+            <E n="comparison">EQUAL</E>
+            <T n="value">1</T>
+          </U>
+        </V>
+      </U>
+    </V>
+    <V t="sim_info">
+      <U n="sim_info">
+        <V n="ages" t="specified">
+          <L n="specified">
+            <E>TEEN</E>
+            <E>YOUNGADULT</E>
+            <E>ADULT</E>
+            <E>ELDER</E>
+            <E>CHILD</E>
+          </L>
+        </V>
+        <V n="species" t="specified">
+          <U n="specified">
+            <L n="species">
+              <E />
+            </L>
+          </U>
+        </V>
+        <E n="who">Actor</E>
+      </U>
+    </V>
+    <V t="identity">
+      <U n="identity">
+        <T n="subjects_match">True</T>
+      </U>
+    </V>
+    <V t="posture">
+      <U n="posture">
+        <L n="prohibited_postures">
+          <T>15537<!--posture_Stand--></T>
+          <T>143802<!--posture_Baththub_ToddlerInfantBath--></T>
+          <T>188318<!--posture_KiddiePool_GivePool--></T>
+          <T>277890<!--posture_TableChangeDiaper--></T>
+          <T>35351<!--posture_BathTub_BubbleBath--></T>
+          <T>15515<!--posture_BathTubTakeBath--></T>
+          <T>15520<!--posture_BedWoohoo--></T>
+          <T>125220<!--posture_BushWooHoo--></T>
+          <T>123382<!--posture_ClosetWooHoo--></T>
+          <T>154863<!--posture_CoffinWooHoo--></T>
+          <T>247299<!--posture_HotSprings_WooHoo--></T>
+          <T>117782<!--posture_HottubWoohoo--></T>
+          <T>247297<!--posture_HotSprings_Sit--></T>
+          <T>117257<!--posture_HotTubSit--></T>
+          <T>117256<!--posture_HotTubStand--></T>
+          <T>117782<!--posture_HottubWoohoo--></T>
+          <T>207291<!--posture_IslandWaterfallWooHoo--></T>
+          <T>188578<!--posture_KiddiePool_Lounge--></T>
+          <T>185751<!--posture_LeafPileWoohoo--></T>
+          <T>172241<!--posture_LighthouseWooHoo--></T>
+          <T>120382<!--posture_RelaxingBath--></T>
+          <T>15531<!--posture_RocketShipWoohoo--></T>
+          <T>15532<!--posture_Shower--></T>
+          <T>227360<!--posture_Shower_WooHoo--></T>
+          <T>200543<!--posture_SleepingPodWooHoo--></T>
+          <T>119528<!--posture_SteamRoomWooHoo--></T>
+          <T>39398<!--posture_Swim--></T>
+          <T>15538<!--posture_TelescopeWoohoo--></T>
+          <T>103266<!--posture_TentWoohoo--></T>
+          <T>309771<!--posture_TreehouseWooHoo--></T>
+          <T>193829<!--posture_WalkInSafeWooHoo--></T>
+          <T>199821<!--posture_WaterScooter--></T>
+          <T>252479<!--posture_WooHoo_Cave--></T>
+          <T>234105<!--posture_WooHoo_Dumpster--></T>
+        </L>
+      </U>
+    </V>
+    <V t="trait">
+      <U n="trait">
+        <L n="blacklist_traits">
+          <T>1653757835<!--LilNinthel:trait_no_messy_diapers--></T>
+        </L>
+      </U>
+    </V>
+    <V t="test_set_reference">
+      <T n="test_set_reference">13075969349031789538<!--LilNinthel:testSetInstance_CanPoop--></T>
+    </V>
+    <V t="motive">
+      <U n="motive">
+        <L n="stats">
+          <T>16652<!--motive_Bladder--></T>
+        </L>
+        <U n="threshold">
+          <E n="comparison">GREATER</E>
+          <T n="value">-100</T>
+        </U>
+      </U>
+    </V>
+    <V t="participant_running_interaction">
+      <U n="participant_running_interaction">
+        <T n="test_interaction_queue">True</T>
+        <L n="affordances">
+          <T>15386335300547775969<!--LilNinthel:toddler_UseDiaper--></T>
+          <T>14713553300442312551<!--LilNinthel:toddler_UseDiaperPoop--></T>
+          <T>17846418620694466401<!--LilNinthel:toddler_UseDiaper_Continuation--></T>
+          <T>9857974918501862535<!--LilNinthel:toddler_UseDiaperPoop_continuation--></T>
+          <T>18401942594569887613<!--LilNinthel:toddler_UseDiaperPoopOnly_continuation--></T>
+          <T>17336362655583455169<!--LilNinthel:toddler_UseDiaper_failure_standing--></T>
+          <T>11921925688338352890<!--LilNinthel:toddler_UseDiaperPoop_standing--></T>
+          <T>11047247142804936032<!--LilNinthel:toddler_UseDiaperPoopOnly_standing--></T>
+          <T>9506916130253712957<!--LilNinthel:sim_BladderFailure_Diapered--></T>
+          <T>11423557801360839083<!--LilNinthel:toddler_UseDiaper_Immediate--></T>
+          <T>17542224721305247405<!--LilNinthel:toddler_UseDiaperPoop_Immediate--></T>
+          <T>18237598613162935279<!--LilNinthel:toddler_UseDiaperPoopOnly_Immediate--></T>
+          <T>144936<!--ToddlerPottyChair_GoPotty--></T>
+          <T>144848<!--ToddlerPottyChair_Use--></T>
+          <T>144915<!--toddlerPottyChair_Use_WithMentor--></T>
+          <T>144936<!--ToddlerPottyChair_GoPotty--></T>
+        </L>
+        <E n="participant">Actor</E>
+        <T n="test_for_not_running">True</T>
+      </U>
+    </V>
+  </L>
+  <T n="time_overhead">5</T>
+</I>

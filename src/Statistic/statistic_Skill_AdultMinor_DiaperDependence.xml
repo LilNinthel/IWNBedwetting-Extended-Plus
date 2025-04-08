@@ -1,0 +1,60 @@
+<I c="Skill" i="statistic" m="statistics.skill" n="LilNinthel:statistic_Skill_AdultMinor_DiaperDependence" s="422049043530584573">
+  <L n="ages">
+    <E>ADULT</E>
+    <E>ELDER</E>
+    <E>YOUNGADULT</E>
+    <E>TEEN</E>
+    <E>CHILD</E>
+  </L>
+  <T n="icon">2f7d0004:00000000:a625361a6f98c2f0</T>
+  <T n="initial_value">100</T>
+  <L n="level_data">
+    <U>
+      <T n="key">1</T>
+      <U n="value">
+      </U>
+    </U>
+    <U>
+      <T n="key">2</T>
+      <U n="value">
+        <L n="loot">
+          <T>17284799433455529645<!--LilNinthel:loot_buff_temporaryIncontinence_add--></T>
+        </L>
+      </U>
+    </U>
+    <U>
+      <T n="key">3</T>
+      <U n="value">
+        <L n="loot">
+          <T>17284799433455529645<!--LilNinthel:loot_buff_temporaryIncontinence_add--></T>
+        </L>
+      </U>
+    </U>
+    <U>
+      <T n="key">4</T>
+      <U n="value">
+        <L n="loot">
+          <T>17284799433455529645<!--LilNinthel:loot_buff_temporaryIncontinence_add--></T>
+        </L>
+      </U>
+    </U>
+    <U>
+      <T n="key">5</T>
+      <U n="value">
+        <L n="loot">
+          <T>11807781264032953848<!--LilNinthel:loot_trait_diaperDependence_add--></T>
+        </L>
+      </U>
+    </U>
+  </L>
+  <T n="skill_description">0x45E6B0C1<!--Sims with this skill are losing control of their bladder from continued use of diapers.--></T>
+  <E n="skill_level_type">MINOR</E>
+  <T n="stat_name">0x1A2899D9<!--Diaper Dependence--></T>
+  <L n="tags">
+    <E>Skill_All</E>
+    <E>Skill_All_Visible</E>
+  </L>
+  <L n="tooltip_icon_list">
+    <T>2f7d0004:00000000:322220fc9ba98a06</T>
+  </L>
+</I>

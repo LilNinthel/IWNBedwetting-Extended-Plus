@@ -1,0 +1,16 @@
+<I c="Trait" i="trait" m="traits.traits" n="LilNinthel:trait_CanUseDiaperPunishment" s="1728468898">
+  <L n="ages">
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <T n="display_name">0xC410A972<!--Can Use Diaper Punishment--></T>
+  <T n="icon" p="Generated">2f7d0004:00000000:322220fc9ba98a06</T>
+  <E n="min_lod_value">MINIMUM</E>
+  <L n="species">
+    <E />
+  </L>
+  <T n="trait_description">0x00000000</T>
+  <E n="trait_type">GAMEPLAY</E>
+</I>

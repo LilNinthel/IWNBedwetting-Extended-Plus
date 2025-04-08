@@ -1,0 +1,140 @@
+<I c="TestSetInstance" i="snippet" m="event_testing.tests" n="IwnBedWetting_testSet_CanControlBladder" s="15794548069054423667">
+  <L n="test">
+    <L>
+      <V t="sim_info">
+        <U n="sim_info">
+          <V n="ages" t="specified">
+            <L n="specified">
+              <E>TODDLER</E>
+            </L>
+          </V>
+          <V n="species" t="specified">
+            <U n="specified">
+              <L n="species">
+                <E />
+              </L>
+            </U>
+          </V>
+          <E n="who">Actor</E>
+        </U>
+      </V>
+      <V t="skill_test">
+        <U n="skill_test">
+          <T n="skill">144913<!--statistic_Skill_Toddler_Potty--></T>
+          <V n="skill_range" t="threshold">
+            <U n="threshold">
+              <U n="skill_threshold">
+                <E n="comparison">GREATER</E>
+                <T n="value">2</T>
+              </U>
+            </U>
+          </V>
+        </U>
+      </V>
+      <V t="buff">
+        <U n="buff">
+          <L n="blacklist">
+            <T>27147<!--MoodBuff_Hidden_Asleep--></T>
+          </L>
+        </U>
+      </V>
+    </L>
+    <L>
+      <V t="sim_info">
+        <U n="sim_info">
+          <V n="ages" t="specified">
+            <L n="specified">
+              <E>TEEN</E>
+              <E>YOUNGADULT</E>
+              <E>ADULT</E>
+              <E>ELDER</E>
+              <E>CHILD</E>
+            </L>
+          </V>
+          <V n="species" t="specified">
+            <U n="specified">
+              <L n="species">
+                <E />
+              </L>
+            </U>
+          </V>
+          <E n="who">Actor</E>
+        </U>
+      </V>
+      <V t="trait">
+        <U n="trait">
+          <L n="blacklist_traits">
+            <T>2260700649<!--IwnBedWetting_Incontinence_Trait--></T>
+            <T>2404632404<!--LilNinthel:trait_Never_Potty_Trained--></T>
+            <T>1159183302<!--LilNinthel:trait_diaper_dependent--></T>
+          </L>
+        </U>
+      </V>
+      <V t="buff">
+        <U n="buff">
+          <E n="subject">Actor</E>
+          <L n="blacklist">
+            <T>27147<!--MoodBuff_Hidden_Asleep--></T>
+          </L>
+        </U>
+      </V>
+      <V t="buff">
+        <U n="buff">
+          <L n="blacklist">
+            <T>11286248511651031208<!--LilNinthel:buff_temporaryIncontinence--></T>
+          </L>
+        </U>
+      </V>
+    </L>
+    <L>
+      <V t="sim_info">
+        <U n="sim_info">
+          <V n="ages" t="specified">
+            <L n="specified">
+              <E>TEEN</E>
+              <E>YOUNGADULT</E>
+              <E>ADULT</E>
+              <E>ELDER</E>
+              <E>CHILD</E>
+            </L>
+          </V>
+          <V n="species" t="specified">
+            <U n="specified">
+              <L n="species">
+                <E />
+              </L>
+            </U>
+          </V>
+          <E n="who">Actor</E>
+        </U>
+      </V>
+      <V t="buff">
+        <U n="buff">
+          <E n="subject">Actor</E>
+          <V n="whitelist" t="enabled">
+            <L n="enabled">
+              <T>27147<!--MoodBuff_Hidden_Asleep--></T>
+            </L>
+          </V>
+        </U>
+      </V>
+      <V t="trait">
+        <U n="trait">
+          <L n="blacklist_traits">
+            <T>2122234430<!--IwnBedWetting_Bedwetter_Trait--></T>
+            <T>2260700649<!--IwnBedWetting_Incontinence_Trait--></T>
+            <T>2404632404<!--LilNinthel:trait_Never_Potty_Trained--></T>
+            <T>1159183302<!--LilNinthel:trait_diaper_dependent--></T>
+          </L>
+        </U>
+      </V>
+      <V t="buff">
+        <U n="buff">
+          <L n="blacklist">
+            <T>11286248511651031208<!--LilNinthel:buff_temporaryIncontinence--></T>
+          </L>
+        </U>
+      </V>
+    </L>
+  </L>
+</I>

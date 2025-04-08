@@ -1,0 +1,19 @@
+<I c="SimReward" i="reward" m="rewards.reward" n="LilNinthel:trait_Little_reward" s="12598465083538013901">
+  <T n="icon">2f7d0004:00000000:E8211399544ECD4A</T>
+  <T n="name">0x585E71B9<!--Little--></T>
+  <V n="reward_description" t="enabled">
+    <T n="enabled">0x33DB038F<!--Littles can be carried by other Sims and do other toddler things.--></T>
+  </V>
+  <V n="reward_unavailable_tooltip" t="enabled">
+    <T n="enabled">0x709B9CC<!--This Reward is not available to your Sim, or it is already owned by your Sim.--></T>
+  </V>
+  <L n="rewards">
+    <V t="specific_reward">
+      <V n="specific_reward" t="trait">
+        <U n="trait">
+          <T n="trait">3344421797<!--LilNinthel:trait_Little--></T>
+        </U>
+      </V>
+    </V>
+  </L>
+</I>

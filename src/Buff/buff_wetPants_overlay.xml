@@ -1,0 +1,53 @@
+<I c="Buff" i="buff" m="buffs.buff" n="LilNinthel:buff_wetPants_overlay" s="15600949772408234127">
+  <V n="_add_test_set" t="tests_set">
+    <L n="tests_set">
+      <L>
+        <V t="statistic">
+          <U n="statistic">
+            <T n="stat">13424594874645326842<!--LilNinthel:statistic_wetOverlay_setting--></T>
+            <V n="threshold" t="value_threshold">
+              <U n="value_threshold">
+                <E n="comparison">NOTEQUAL</E>
+                <T n="value">1</T>
+              </U>
+            </V>
+          </U>
+        </V>
+      </L>
+    </L>
+  </V>
+  <L n="_loot_on_addition">
+    <T>9624566071078425016<!--LilNinthel:loot_buff_wetPants_crotch_only_overlay_remove--></T>
+  </L>
+  <V n="_temporary_commodity_info" t="enabled">
+    <U n="enabled">
+      <T n="max_duration">120</T>
+    </U>
+    <T n="persists">True</T>
+  </V>
+  <V n="appearance_modifier" t="enabled">
+    <U n="enabled">
+      <L n="appearance_modifiers">
+        <L>
+          <U>
+            <V n="modifier" t="set_cas_part">
+              <U n="set_cas_part">
+                <T n="cas_part">15301937709863637652</T>
+                <T n="should_toggle">False</T>
+              </U>
+            </V>
+          </U>
+        </L>
+      </L>
+      <E n="priority">FROZEN</E>
+    </U>
+  </V>
+  <T n="audio_sting_on_add" p="InGame\Audio\Stings\sting_buff_gain.propx">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove" p="InGame\Audio\Stings\sting_buff_loss.propx">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0x00000000</T>
+  <T n="buff_name">0x00000000</T>
+  <T n="icon" p="InGame\UI\Icons\Buffs\Buffs_PeedSelf.png">2f7d0004:00000000:bc47961479de3b24</T>
+  <T n="mood_type">0</T>
+  <T n="mood_weight">0</T>
+  <T n="visible">False</T>
+</I>

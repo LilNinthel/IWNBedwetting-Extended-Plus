@@ -1,0 +1,34 @@
+<I c="ConsumableAffordanceInjector" i="snippet" m="iwnbedwetting.consumable_affordance_injector.snippet" n="LilNinthel:consumable_affordance_injector" s="10264588899627535392">
+  <L n="add_consumable_interactions_to_objects">
+    <U>
+      <V n="object_selection" t="objects_with_consumable_affordance">
+        <U n="objects_with_consumable_affordance">
+          <T n="affordance">142865<!--generic_consume_food_toddler--></T>
+        </U>
+      </V>
+      <L n="_super_affordances">
+        <T>13525330394385709354<!--LilNinthel:generic_consume_food_Little_HighChair--></T>
+      </L>
+    </U>
+    <U>
+      <V n="object_selection" t="objects_with_consumable_affordance">
+        <U n="objects_with_consumable_affordance">
+          <T n="affordance">146625<!--generic_consume_drink_nonbar_toddler--></T>
+        </U>
+      </V>
+      <L n="_super_affordances">
+        <T>18031205973427832454<!--LilNinthel:generic_consume_drink_Little_HighChair--></T>
+      </L>
+    </U>
+    <U>
+      <V n="object_selection" t="objects_with_consumable_affordance">
+        <U n="objects_with_consumable_affordance">
+          <T n="affordance">149500<!--generic_consume_foodball_toddler--></T>
+        </U>
+      </V>
+      <L n="_super_affordances">
+        <T>9805641070062627343<!--LilNinthel:generic_consume_foodball_Little_HighChair--></T>
+      </L>
+    </U>
+  </L>
+</I>

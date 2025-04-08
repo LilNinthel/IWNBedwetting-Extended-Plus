@@ -1,0 +1,11 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_stat_pottyTraining_reset" s="15904163990212670790">
+  <L n="loot_actions">
+    <V t="statistics">
+      <V n="statistics" t="statistic_remove">
+        <U n="statistic_remove">
+          <T n="stat">144913<!--statistic_Skill_Toddler_Potty--></T>
+        </U>
+      </V>
+    </V>
+  </L>
+</I>

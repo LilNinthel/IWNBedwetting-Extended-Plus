@@ -1,0 +1,22 @@
+<I c="Trait" i="trait" m="traits.traits" n="LilNinthel:trait_pants_wetter" s="806286945">
+  <L n="ages">
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <T n="trait_description">0xE4F42321<!--{0.SimFirstName} loves the feeling of hot warmth rushing down {M0.his}{F0.her} legs.--></T>
+  <T n="icon">2f7d0004:00000000:62313de8780bc7a9</T>
+  <T n="display_name">0xB0FFBB76<!--Pants Wetter--></T>
+  <T n="display_name_gender_neutral">0xB0FFBB76<!--Pants Wetter--></T>
+  <E n="min_lod_value">MINIMUM</E>
+  <E n="trait_type">GAMEPLAY</E>
+  <L n="species">
+    <E />
+  </L>
+  <L n="super_affordances">
+    <T>12251799722243206637<!--LilNinthel:pantsWetter_pee_pants--></T>
+    <T>11513621841802987904<!--LilNinthel:pantsWetter_pee_pants_standing--></T>
+  </L>
+</I>

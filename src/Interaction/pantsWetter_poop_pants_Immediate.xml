@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<I c="ImmediateSuperInteraction" i="interaction" m="interactions.base.immediate_interaction" n="LilNinthel:pantsWetter_poop_pants_Immediate" s="11989016065404783299">
+  <V n="_icon" t="resource_key">
+    <U n="resource_key">
+      <T n="key">2f7d0004:00000000:62313de8780bc7a9</T>
+    </U>
+  </V>
+  <V n="_saveable" t="enabled" />
+  <T n="_super_affordance_can_share_target">True</T>
+  <T n="acquire_targets_as_resource">False</T>
+  <V n="content_score" t="disabled" />
+  <T n="display_name">>0xE17A89FF<!--Poop Self--></T>
+  <U n="display_name_text_tokens">
+    <L n="tokens">
+      <V t="participant_type">
+        <U n="participant_type">
+          <V n="objects" t="from_participant">
+            <U n="from_participant">
+              <E n="participant">Actor</E>
+            </U>
+          </V>
+        </U>
+      </V>
+      <V t="participant_type">
+        <U n="participant_type">
+          <V n="objects" t="from_participant">
+            <U n="from_participant">
+              <E n="participant">Object</E>
+            </U>
+          </V>
+        </U>
+      </V>
+    </L>
+  </U>
+  <T n="ignore_exclude_all_compatibility">True</T>
+  <L n="interaction_category_tags">
+    <E>INVALID</E>
+  </L>
+  <V n="outcome" t="single">
+    <U n="single">
+      <U n="actions">
+        <L n="basic_extras">
+          <V t="loot">
+            <U n="loot">
+              <L n="loot_list">
+                <T>10251625219716980905<!--LilNinthel:loot_copy_bladder_value--></T>
+              </L>
+              <V n="timing" t="at_beginning" />
+            </U>
+          </V>
+          <V t="loot">
+            <U n="loot">
+              <L n="loot_list">
+                <T>10700787611967205049<!--LilNinthel:loot_diaper_poopOnly_bladderAdjust--></T>
+              </L>
+            </U>
+          </V>
+          <V t="broadcaster">
+            <U n="broadcaster">
+              <L n="broadcaster_types">
+                <U>
+                  <T n="item">11582239711677990335<!--LilNinthel:broadcaster_Reaction_PoopingPants--></T>
+                  <T n="item">10099478034331627930<!--LilNinthel:broadcaster_diaperPunishment_witnessAccident--></T>
+                </U>
+              </L>
+            </U>
+          </V>
+        </L>
+        <L n="loot_list">
+          <T>15744861531187650551<!--LilNinthel:loot_pantsPooper_poopSelf--></T>
+          <T>9781735413110594162<!--LilNinthel:loot_statistic_intentional_pants_messings--></T>
+        </L>
+      </U>
+    </U>
+  </V>
+  <E n="target_type">ACTOR</E>
+  <V n="test_disallow_while_running" t="enabled">
+    <U n="enabled">
+      <T n="test_self">True</T>
+    </U>
+  </V>
+  <L n="test_globals" />
+</I>

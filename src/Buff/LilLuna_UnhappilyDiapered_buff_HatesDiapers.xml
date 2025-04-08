@@ -1,0 +1,56 @@
+<!-- S4TK Group: 80000000 -->
+<I c="Buff" i="buff" m="buffs.buff" n="__shim:LilLuna_UnhappilyDiapered_buff_HatesDiapers" s="12623981993528856686">
+  <L n="_loot_on_addition">
+    <T>17475465455792082128<!--__shim:loot_trait_HatesDiapers_DiaperState_add--></T>
+  </L>
+  <L n="_loot_on_instance">
+    <T>17475465455792082128<!--__shim:loot_trait_HatesDiapers_DiaperState_add--></T>
+  </L>
+  <L n="_loot_on_removal">
+    <T>17062767518104456515<!--__shim:loot_trait_HatesDiapers_DiaperState_remove--></T>
+  </L>
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0x63284F11<!--These Sims hate that they must wear diapers, and find it more embarrasing than comforting.--></T>
+  <T n="buff_name">0x5C29FB16<!--Hates Diapers--></T>
+  <U n="game_effect_modifier">
+    <L n="_game_effect_modifiers">
+      <V t="autonomy_modifier">
+        <U n="autonomy_modifier">
+          <L n="interaction_score_modifier">
+            <U>
+              <L n="interaction_category_tags">
+                <E>Interaction_UseToilet</E>
+              </L>
+              <T n="modifier">0.1</T>
+            </U>
+          </L>
+        </U>
+      </V>
+      <V t="autonomy_modifier">
+        <U n="autonomy_modifier">
+          <L n="decay_modifiers">
+            <U>
+              <T n="key">16652<!--motive_Bladder--></T>
+              <T n="value">1.2</T>
+            </U>
+          </L>
+        </U>
+      </V>
+    </L>
+  </U>
+  <V n="interactions" t="enabled">
+    <U n="enabled">
+      <L n="interaction_items">
+        <T>10721636015838356200<!--ADB_crinklycantheyhear_interaction--></T>
+        <T>13258175503487702518<!--ADB_safeasleep_interaction--></T>
+        <T>4659728303788322993<!--ADB_diaperleakedatwork_interaction--></T>
+        <T>5383137091562999069<!--ADB_messedatwork_interaction--></T>
+        <T>1976579410425724183<!--ADB_cantheysee_interaction--></T>
+        <T>5015192333097605951<!--ADB_cantheysmellme_interaction--></T>
+      </L>
+    </U>
+  </V>
+  <T n="icon">2f7d0004:00000000:c09b0954d2ef3d7f</T>
+  <T n="visible">False</T>
+</I>

@@ -1,0 +1,56 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_trait_CanUseDiaperPunishment_remove" s="11533265014860866042">
+  <L n="loot_actions">
+    <V t="trait_remove">
+      <U n="trait_remove">
+        <V n="trait" t="specific_trait">
+          <U n="specific_trait">
+            <T n="specific_trait">1728468898<!--LilNinthel:trait_CanUseDiaperPunishment--></T>
+          </U>
+        </V>
+        <E n="subject">TargetSim</E>
+      </U>
+    </V>
+    <V t="relationship_bits_loot">
+      <U n="relationship_bits_loot">
+        <L n="bit_operations">
+          <U>
+            <T n="bit">1340936858<!--LilNinthel:relbit_DiaperPunisher--></T>
+            <E n="operation">REMOVE</E>
+            <E n="recipients">AllRelationships</E>
+            <E n="targets">TargetSim</E>
+          </U>
+          <U>
+            <T n="bit">615514631<!--LilNinthel:relbit_DiaperPunishment_Available--></T>
+            <E n="operation">REMOVE</E>
+            <E n="recipients">AllRelationships</E>
+            <E n="targets">TargetSim</E>
+          </U>
+          <U>
+            <T n="bit">1390081355<!--LilNinthel:relbit_BeingDiaperPunished--></T>
+            <E n="operation">REMOVE</E>
+            <E n="recipients">TargetSim</E>
+            <E n="targets">AllRelationships</E>
+          </U>
+          <U>
+            <T n="bit">2574219373<!--LilNinthel:relbit_DiaperPunishment_Buildup_1--></T>
+            <E n="operation">REMOVE</E>
+            <E n="recipients">AllRelationships</E>
+            <E n="targets">TargetSim</E>
+          </U>
+          <U>
+            <T n="bit">2574219374<!--LilNinthel:relbit_DiaperPunishment_Buildup_2--></T>
+            <E n="operation">REMOVE</E>
+            <E n="recipients">AllRelationships</E>
+            <E n="targets">TargetSim</E>
+          </U>
+          <U>
+            <T n="bit">2574219375<!--LilNinthel:relbit_DiaperPunishment_Buildup_3--></T>
+            <E n="operation">REMOVE</E>
+            <E n="recipients">AllRelationships</E>
+            <E n="targets">TargetSim</E>
+          </U>
+        </L>
+      </U>
+    </V>
+  </L>
+</I>

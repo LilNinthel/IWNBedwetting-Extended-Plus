@@ -1,0 +1,20 @@
+<SimData version="0x00000101" u="0x00000000">
+  <Instances>
+    <I name="LilNinthel:trait_RashProof_reward" schema="SimReward" type="Object">
+      <T name="icon">00B2D882-00000000-322220FC9BA98A06</T>
+      <T name="name">0xEE706939</T>
+      <V name="reward_description" variant="0xF8CBBF4C">
+        <T type="LocalizationKey">0xEF86E9AF</T>
+      </V>
+    </I>
+  </Instances>
+  <Schemas>
+    <Schema name="SimReward" schema_hash="0xEEED38EF">
+      <Columns>
+        <Column name="icon" type="ResourceKey" flags="0x00000000"/>
+        <Column name="name" type="LocalizationKey" flags="0x00000000"/>
+        <Column name="reward_description" type="Variant" flags="0x00000000"/>
+      </Columns>
+    </Schema>
+  </Schemas>
+</SimData>

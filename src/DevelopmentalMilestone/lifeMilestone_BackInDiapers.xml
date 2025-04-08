@@ -1,0 +1,20 @@
+<!-- S4TK Group: 00000036 -->
+<I c="DevelopmentalMilestone" i="developmental_milestone" m="developmental_milestones.developmental_milestone" n="LilNinthel:lifeMilestone_BackInDiapers" s="627824753">
+  <L n="ages">
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <E n="category">Firsts</E>
+  <T n="goal">12895802659021271464<!--LilNinthel:lifeMilestoneGoal_BackInDiapers--></T>
+  <T n="icon">2f7d0004:00000000:322220fc9ba98a06</T>
+  <L n="loot">
+    <T>315082<!--loot_LifeMilestone_LotBasedBuff_AddTimer--></T>
+  </L>
+  <T n="name">0x1429271D<!--Back in Diapers--></T>
+  <T n="ui_sort_order">1</T>
+  <T n="unlocked_text">0x39C8BBCB<!--{0.SimFirstName} wore a diaper after being potty trained.--></T>
+  <T n="unlocked_text_no_context">0x39C8BBCB<!--{0.SimFirstName} wore a diaper after being potty trained.--></T>
+</I>

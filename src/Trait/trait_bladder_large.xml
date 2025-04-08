@@ -1,0 +1,23 @@
+<I c="Trait" i="trait" m="traits.traits" n="LilNinthel:trait_bladder_large" s="2688033201">
+  <L n="ages">
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <L n="buffs">
+    <U>
+      <T n="buff_type">11408089038688355675<!--LilNinthel:buff_trait_bladder_large--></T>
+    </U>
+  </L>
+  <T n="buffs_add_on_spawn_only">False</T>
+  <T n="trait_description">0xACF7D610<!--These Sims have 2x the normal bladder capacity.--></T>
+  <T n="icon">2f7d0004:00000000:e8211399544ecd4a</T>
+  <E n="min_lod_value">MINIMUM</E>
+  <L n="species">
+    <E />
+  </L>
+  <T n="display_name">0xDA300578<!--Large Bladder--></T>
+  <E n="trait_type">HIDDEN</E>
+</I>

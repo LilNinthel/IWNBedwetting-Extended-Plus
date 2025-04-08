@@ -1,0 +1,39 @@
+<I c="TestSetInstance" i="snippet" m="event_testing.tests" n="LilNinthel:testSet_prevent_auto_toilet_use" s="14724461213419608835">
+  <L n="test">
+    <L>
+      <V t="test_set_reference">
+        <T n="test_set_reference">14313482733996641359<!--LilNinthel:testSet_DoesNotHaveDiaperEquipped--></T>
+      </V>
+      <V t="trait">
+        <U n="trait">
+          <L n="blacklist_traits">
+            <T>1274494104<!--LilNinthel:trait_desperation_enthusiast--></T>
+          </L>
+        </U>
+      </V>
+    </L>
+    <L>
+      <V t="test_set_reference">
+        <T n="test_set_reference">14313482733996641359<!--LilNinthel:testSet_DoesNotHaveDiaperEquipped--></T>
+      </V>
+      <V t="trait">
+        <U n="trait">
+          <L n="whitelist_traits">
+            <T>1274494104<!--LilNinthel:trait_desperation_enthusiast--></T>
+          </L>
+        </U>
+      </V>
+      <V t="motive">
+        <U n="motive">
+          <L n="stats">
+            <T>16652<!--motive_Bladder--></T>
+          </L>
+          <U n="threshold">
+            <E n="comparison">LESS_OR_EQUAL</E>
+            <T n="value">-95</T>
+          </U>
+        </U>
+      </V>
+    </L>
+  </L>
+</I>

@@ -1,0 +1,19 @@
+<!-- S4TK Group: 80000000 -->
+<I xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" c="Buff" s="9994857391632637294" i="buff" m="buffs.buff" n="LilNinthel:buff_ABDL_discovery_sim">
+  <L n="_loot_on_addition">
+    <T>13380120450078886761<!--LilNinthel:loot_Add_CuriousAboutDiapers_Trait--></T>
+  </L>
+  <L n="_loot_on_instance">
+    <T>13380120450078886761<!--LilNinthel:loot_Add_CuriousAboutDiapers_Trait--></T>
+  </L>
+  <T n="buff_description">0xEAF30446<!--Is that baby powder? And is that a crinkle when that Sim walks? They're old enough to use a toilet, and yet... I remember when I wore diapers, life was so much simpler...--></T>
+  <T n="buff_name">0x5E838285<!--That Nostalgic Smell--></T>
+  <T n="icon">2f7d0004:00000000:c09b0954d2ef3d7f</T>
+  <T n="mood_type">14640<!--Mood_Happy--></T>
+  <T n="mood_weight">1</T>
+  <V n="_temporary_commodity_info" t="enabled">
+    <U n="enabled">
+      <T n="max_duration">240</T>
+    </U>
+  </V>
+</I>

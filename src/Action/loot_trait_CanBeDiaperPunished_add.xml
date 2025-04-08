@@ -1,0 +1,10 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_trait_CanBeDiaperPunished_add" s="14078121692636779634">
+  <L n="loot_actions">
+    <V t="trait_add">
+      <U n="trait_add">
+        <E n="subject">TargetSim</E>
+        <T n="trait">1914700333<!--LilNinthel:trait_CanBeDiaperPunished--></T>
+      </U>
+    </V>
+  </L>
+</I>

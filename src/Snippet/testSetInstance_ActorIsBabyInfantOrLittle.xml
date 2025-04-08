@@ -1,0 +1,26 @@
+<I c="TestSetInstance" i="snippet" m="event_testing.tests" n="LilNinthel:testSetInstance_ActorIsBabyInfantOrLittle" s="14344503014240541990">
+  <L n="test">
+    <L>
+      <V t="sim_info">
+        <U n="sim_info">
+          <V n="ages" t="specified">
+            <L n="specified">
+              <E>BABY</E>
+              <E>INFANT</E>
+            </L>
+          </V>
+        </U>
+      </V>
+    </L>
+    <L>
+      <V t="trait">
+        <U n="trait">
+          <L n="whitelist_traits">
+            <T>3344421797<!--LilNinthel:trait_Little--></T>
+            <T>413350117<!--LilNinthel:trait_hidden_canBeCarried--></T>
+          </L>
+        </U>
+      </V>
+    </L>
+  </L>
+</I>

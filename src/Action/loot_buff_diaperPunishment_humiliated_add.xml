@@ -1,0 +1,15 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_buff_diaperPunishment_humiliated_add" s="14047040450147481080">
+  <L n="loot_actions">
+    <V t="buff">
+      <U n="buff">
+        <E n="subject">TargetSim</E>
+        <U n="buff">
+          <V n="buff_reason" t="enabled">
+            <T n="enabled">0x2CD78D84<!--(From Starting Diaper Punishment)--></T>
+          </V>
+          <T n="buff_type">9830622515088672313<!--LilNinthel:buff_diaperPunishment_humiliated--></T>
+        </U>
+      </U>
+    </V>
+  </L>
+</I>

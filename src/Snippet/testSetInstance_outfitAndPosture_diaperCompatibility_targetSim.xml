@@ -1,0 +1,22 @@
+<I c="TestSetInstance" i="snippet" m="event_testing.tests" n="LilNinthel:testSetInstance_outfitAndPosture_diaperCompatibility_targetSim" s="14360503470401868291">
+  <L n="test">
+    <L>
+      <V t="buff">
+        <U n="buff">
+          <E n="subject">TargetSim</E>
+          <L n="blacklist">
+            <T>156408<!--buff_Pools_Hygiene--></T>
+          </L>
+        </U>
+      </V>
+      <V t="outfit">
+        <U n="outfit">
+          <L n="blacklist_outfits">
+            <E>BATHING</E>
+          </L>
+          <E n="participant">TargetSim</E>
+        </U>
+      </V>
+    </L>
+  </L>
+</I>

@@ -1,0 +1,26 @@
+<!-- S4TK Group: 80000000 -->
+<I c="Buff" s="17512215096630610749" i="buff" m="buffs.buff" n="LilNinthel:buff_lotTrait_ToiletFreeZone">
+  <V n="_add_test_set" t="tests_set">
+    <L n="tests_set">
+      <L>
+        <V t="sim_info">
+          <U n="sim_info">
+            <V n="species" t="specified">
+              <U n="specified">
+                <L n="species">
+                  <E>HUMAN</E>
+                </L>
+              </U>
+            </V>
+          </U>
+        </V>
+      </L>
+    </L>
+  </V>
+  <T n="buff_description">0x00000000</T>
+  <T n="buff_name">0x00000000</T>
+  <T n="icon">2f7d0004:00000000:50E7863C5DBF6867</T>
+  <T n="mood_type">0</T>
+  <T n="mood_weight">0</T>
+  <T n="visible">False</T>
+</I>

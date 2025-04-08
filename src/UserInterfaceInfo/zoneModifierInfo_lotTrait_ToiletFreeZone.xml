@@ -1,0 +1,6 @@
+<I c="ZoneModifierDisplayInfo" i="user_interface_info" m="zone_modifier.zone_modifier_display_info" n="LilNinthel:zoneModifierInfo_lotTrait_ToiletFreeZone" s="18430378127024239343">
+  <T n="zone_modifier_description">0x52CF89D9<!--You can look but you can't flush! All toilets on this lot are for decoration only, Sims will need to find alternative methods of relief.--></T>
+  <T n="zone_modifier_icon">2f7d0004:00000000:DDC0956141BA5D28</T>
+  <T n="zone_modifier_name">0xDBE535BC<!--Toilet-Free Zone--></T>
+  <T n="zone_modifier_reference">9668904782353184015<!--LilNinthel:zoneModifier_lotTrait_ToiletFreeZone--></T>
+</I>

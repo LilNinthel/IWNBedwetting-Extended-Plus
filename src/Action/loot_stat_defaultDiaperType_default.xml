@@ -1,0 +1,14 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_stat_defaultDiaperType_default" s="9965086486853703946">
+  <L n="loot_actions">
+    <V t="statistics">
+      <V n="statistics" t="statistic_remove">
+        <U n="statistic_remove">
+          <T n="stat">16081202476860681629<!--LilNinthel:statistic_default_diaper_type--></T>
+          <L n="subject">
+            <E>TargetSim</E>
+          </L>
+        </U>
+      </V>
+    </V>
+  </L>
+</I>

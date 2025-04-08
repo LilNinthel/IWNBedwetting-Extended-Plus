@@ -1,0 +1,18 @@
+<I c="Trait" i="trait" m="traits.traits" n="LilNinthel:trait_HatesDiaperChanges" s="4184382890">
+  <L n="ages">
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <T n="display_name">0x89E3E3E0<!--Hates Diaper Changes--></T>
+  <T n="display_name_gender_neutral">0x89E3E3E0<!--Hates Diaper Changes--></T>
+  <T n="icon">2f7d0004:00000000:322220fc9ba98a06</T>
+  <E n="min_lod_value">MINIMUM</E>
+  <L n="species">
+    <E />
+  </L>
+  <T n="trait_description">0xF685E667<!--These Sims will never ask for a diaper change, and are likely to make a fuss if someone tries to change them.--></T>
+  <E n="trait_type">GAMEPLAY</E>
+</I>

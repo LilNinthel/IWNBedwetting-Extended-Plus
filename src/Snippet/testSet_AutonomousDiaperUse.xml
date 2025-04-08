@@ -1,0 +1,97 @@
+<I c="TestSetInstance" i="snippet" m="event_testing.tests" n="LilNinthel:testSet_AutonomousDiaperUse" s="14604107641136441343">
+  <L n="test">
+    <!--<L>
+      <V t="interaction_source_test">
+        <U n="interaction_source_test">
+          <L n="interaction_sources">
+            <E>SCRIPT</E>
+          </L>
+        </U>
+      </V>
+    </L>-->
+    <L>
+      <V t="test_set_reference">
+        <T n="test_set_reference">17607728555681978788<!--IwnBedWetting_testSet_CanNotControlBladder--></T>
+      </V>
+      <V t="motive">
+        <U n="motive">
+          <L n="stats">
+            <T>16652<!--motive_Bladder--></T>
+          </L>
+          <U n="threshold">
+            <E n="comparison">LESS_OR_EQUAL</E>
+            <T n="value">75</T>
+          </U>
+        </U>
+      </V>
+    </L>
+    <L>
+      <V t="test_set_reference">
+        <T n="test_set_reference">15794548069054423667<!--IwnBedWetting_testSet_CanControlBladder--></T>
+      </V>
+      <V t="motive">
+        <U n="motive">
+          <L n="stats">
+            <T>16652<!--motive_Bladder--></T>
+          </L>
+          <U n="threshold">
+            <E n="comparison">LESS_OR_EQUAL</E>
+            <T n="value">25</T>
+          </U>
+        </U>
+      </V>
+      <V t="trait">
+        <U n="trait">
+          <L n="blacklist_traits">
+            <T>1274494104<!--LilNinthel:trait_desperation_enthusiast--></T>
+          </L>
+        </U>
+      </V>
+      <V t="buff">
+        <U n="buff">
+          <E n="subject">Actor</E>
+          <L n="blacklist">
+            <T>27147<!--MoodBuff_Hidden_Asleep--></T>
+            <T>18361089275973664144<!--LilNinthel:buff_diaperPunishment_hasNotPeedYet--></T>
+          </L>
+        </U>
+      </V>
+    </L>
+    <L>
+      <V t="test_set_reference">
+        <T n="test_set_reference">15794548069054423667<!--IwnBedWetting_testSet_CanControlBladder--></T>
+      </V>
+      <V t="trait">
+        <U n="trait">
+          <L n="whitelist_traits">
+            <T>1274494104<!--LilNinthel:trait_desperation_enthusiast--></T>
+          </L>
+        </U>
+      </V>
+      <V t="motive">
+        <U n="motive">
+          <L n="stats">
+            <T>16652<!--motive_Bladder--></T>
+          </L>
+          <U n="threshold">
+            <E n="comparison">LESS_OR_EQUAL</E>
+            <T n="value">-90</T>
+          </U>
+        </U>
+      </V>
+    </L>
+    <!--<L>
+      <V t="motive">
+        <U n="motive">
+          <L n="stats">
+            <T>16652</T>
+          </L>
+          <U n="threshold">
+            <E n="comparison">LESS_OR_EQUAL</E>
+            <T n="value">-100</T>
+          </U>
+        </U>
+      </V>
+    </L>-->
+  </L>
+</I>

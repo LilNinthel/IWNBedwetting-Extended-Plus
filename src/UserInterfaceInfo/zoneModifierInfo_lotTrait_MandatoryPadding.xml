@@ -1,0 +1,6 @@
+<I c="ZoneModifierDisplayInfo" i="user_interface_info" m="zone_modifier.zone_modifier_display_info" n="LilNinthel:zoneModifierInfo_lotTrait_MandatoryPadding" s="13713583647305771792">
+  <T n="zone_modifier_description">0x4FFDAA76<!--Diaper up or get out! All Sims on this lot will be automatically diapered for the duration of their stay.--></T>
+  <T n="zone_modifier_icon">2f7d0004:00000000:55ac69fce38923f0</T>
+  <T n="zone_modifier_name">0x2E64EADD<!--Mandatory Padding--></T>
+  <T n="zone_modifier_reference">10997403898984641840<!--LilNinthel:zoneModifier_lotTrait_MandatoryPadding--></T>
+</I>

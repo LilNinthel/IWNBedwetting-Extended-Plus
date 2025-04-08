@@ -1,0 +1,50 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_Reaction_PoopingPants" s="14245622899143520017">
+  <L n="loot_actions">
+    <V t="reaction">
+      <U n="reaction">
+        <V n="mixer_reaction" t="enabled">
+          <U n="enabled">
+            <T n="affordance">125196<!--reaction_Generic_Shocked_Mixer_Aggregate--></T>
+            <V n="affordance_target" t="enabled" />
+          </U>
+        </V>
+        <V n="si_reaction" t="enabled">
+          <U n="enabled">
+            <T n="affordance">125127<!--reaction_Generic_ShockedAggregate--></T>
+            <E n="affordance_priority">High</E>
+          </U>
+        </V>
+        <L n="tests">
+          <L>
+            <V t="relationship">
+              <U n="relationship">
+                <U n="prohibited_relationship_bits">
+                  <L n="match_any">
+                    <T>8809<!--family_Target_IsParentOf_Actor--></T>
+                    <T>8802<!--family_Target_IsBrotherSisterOf_Actor--></T>
+                  </L>
+                </U>
+              </U>
+            </V>
+            <V t="relationship">
+              <U n="relationship">
+                <U n="prohibited_relationship_bits">
+                  <L n="match_any">
+                    <T>8809<!--family_Target_IsParentOf_Actor--></T>
+                    <T>8802<!--family_Target_IsBrotherSisterOf_Actor--></T>
+                  </L>
+                </U>
+                <L n="subject">
+                  <E>TargetSim</E>
+                </L>
+                <L n="target_sim">
+                  <E>Actor</E>
+                </L>
+              </U>
+            </V>
+          </L>
+        </L>
+      </U>
+    </V>
+  </L>
+</I>

@@ -1,0 +1,75 @@
+<I c="TestSetInstance" i="snippet" m="event_testing.tests" n="LilNinthel:testSetInstance_littleAutonomyMod" s="15768591105414661584">
+  <L n="test">
+    <L>
+      <V t="sim_info">
+        <U n="sim_info">
+          <V n="ages" t="specified">
+            <L n="specified">
+              <E>CHILD</E>
+              <E>TEEN</E>
+              <E>YOUNGADULT</E>
+              <E>ADULT</E>
+              <E>ELDER</E>
+            </L>
+          </V>
+          <V n="species" t="specified">
+            <U n="specified">
+              <L n="species">
+                <E />
+              </L>
+            </U>
+          </V>
+          <E n="who">Actor</E>
+        </U>
+      </V>
+      <V t="buff">
+        <U n="buff">
+          <E n="subject">Actor</E>
+          <L n="blacklist">
+            <T>144745<!--buff_Toddler_AutonomyMod_InHighChair--></T>
+            <T>280280<!--buff_AutonomyMod_Posture_HighChair--></T>
+            <T>280282<!--buff_AutonomyMod_Posture_Playmat--></T>
+            <T>280281<!--buff_AutonomyMod_Posture_Crib--></T>
+          </L>
+        </U>
+      </V>
+    </L>
+    <L>
+      <V t="sim_info">
+        <U n="sim_info">
+          <V n="ages" t="specified">
+            <L n="specified">
+              <E>INFANT</E>
+              <E>TODDLER</E>
+            </L>
+          </V>
+          <V n="species" t="specified">
+            <U n="specified">
+              <L n="species">
+                <E />
+              </L>
+            </U>
+          </V>
+          <E n="who">Actor</E>
+        </U>
+      </V>
+    </L>
+    <L>
+      <V t="sim_info">
+        <U n="sim_info">
+          <V n="species" t="specified">
+            <U n="specified">
+              <L n="species">
+                <E>DOG</E>
+                <E>CAT</E>
+                <E>FOX</E>
+                <E>HORSE</E>
+              </L>
+            </U>
+          </V>
+          <E n="who">Actor</E>
+        </U>
+      </V>
+    </L>
+  </L>
+</I>

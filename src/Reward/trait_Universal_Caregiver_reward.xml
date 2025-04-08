@@ -1,0 +1,19 @@
+<I c="SimReward" i="reward" m="rewards.reward" n="LilNinthel:trait_Universal_Caregiver_reward" s="17665303997060520071">
+  <T n="icon">2f7d0004:00000000:a3210663f1ba2854</T>
+  <T n="name">0xE08DD6CA<!--Universal Caregiver--></T>
+  <V n="reward_description" t="enabled">
+    <T n="enabled">0x7C80F7DF<!--These Sims can take care of any Little or ABDL they have met.--></T>
+  </V>
+  <V n="reward_unavailable_tooltip" t="enabled">
+    <T n="enabled">0x709B9CC<!--This Reward is not available to your Sim, or it is already owned by your Sim.--></T>
+  </V>
+  <L n="rewards">
+    <V t="specific_reward">
+      <V n="specific_reward" t="trait">
+        <U n="trait">
+          <T n="trait">1217135835<!--LilNinthel:trait_Universal_Caregiver--></T>
+        </U>
+      </V>
+    </V>
+  </L>
+</I>

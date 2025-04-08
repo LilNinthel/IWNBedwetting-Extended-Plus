@@ -1,0 +1,46 @@
+<I c="RelationshipBit" i="relbit" m="relationships.relationship_bit" n="LilNinthel:relbit_DiaperPunisher" s="1340936858">
+  <L n="bit_added_loot_list">
+    <T>10494097311060414127<!--LilNinthel:loot_trait_DiaperPunished_add--></T>
+  </L>
+  <V n="bit_added_notification" t="enabled">
+    <U n="enabled">
+      <V n="notification" t="literal">
+        <U n="literal">
+          <L n="dialog_options">
+            <E>DISABLE_CLOSE_BUTTON</E>
+          </L>
+          <V n="icon" t="enabled">
+            <V n="enabled" t="resource_key">
+              <U n="resource_key">
+                <T n="key" p="InGame\UI\Icons\Headlines\Final\headline_babydiapers.png">2F7D0004:00000000:322220FC9BA98A06</T>
+              </U>
+            </V>
+          </V>
+          <V n="secondary_icon" t="enabled">
+            <V n="enabled" t="participant">
+              <U n="participant">
+                <L n="participant_type">
+                  <E>Object</E>
+                </L>
+              </U>
+            </V>
+          </V>
+          <V n="text" t="single">
+            <T n="single">0x442FFB4C<!--That's it, I've had enough of {0.SimFirstName} making puddles on the floor. If {M0.he}{F0.she} won't use the toilet, I'm putting {M0.him}{F0.her} in diapers until {M0.he}{F0.she} shapes up.--></T>
+          </V>
+        </U>
+      </V>
+    </U>
+  </V>
+  <T n="bit_description">0xC610FE37<!--Diaper Punishing--></T>
+  <L n="bit_removed_loot_list">
+    <T>10945930618956170462<!--LilNinthel:loot_trait_DiaperPunished_remove--></T>
+    <T>17433977190185680507<!--LilNinthel:loot_buff_diaperPunishment_humiliated_remove--></T>
+  </L>
+  <T n="depth">1</T>
+  <E n="directionality">UNIDIRECTIONAL</E>
+  <T n="display_name">0xC610FE37<!--Diaper Punishing--></T>
+  <T n="display_priority">3</T>
+  <T n="icon" p="InGame\UI\Icons\Relationships\icon_r_acquaintance.png">2F7D0004:00000000:98D32472572255F2</T>
+  <T n="priority">2</T>
+</I>

@@ -1,0 +1,54 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_incontinence_cure_target" s="9412033597605500010">
+  <L n="loot_actions">
+    <V t="trait_remove">
+      <U n="trait_remove">
+        <E n="subject">TargetSim</E>
+        <V n="trait" t="specific_trait">
+          <U n="specific_trait">
+            <T n="specific_trait">1159183302<!--LilNinthel:trait_diaper_dependent--></T>
+          </U>
+        </V>
+      </U>
+    </V>
+    <V t="trait_remove">
+      <U n="trait_remove">
+        <E n="subject">TargetSim</E>
+        <V n="trait" t="specific_trait">
+          <U n="specific_trait">
+            <T n="specific_trait">2260700649<!--IwnBedWetting_Incontinence_Trait--></T>
+          </U>
+        </V>
+      </U>
+    </V>
+    <V t="trait_remove">
+      <U n="trait_remove">
+        <E n="subject">TargetSim</E>
+        <V n="trait" t="specific_trait">
+          <U n="specific_trait">
+            <T n="specific_trait">2122234430<!--IwnBedWetting_Bedwetter_Trait--></T>
+          </U>
+        </V>
+      </U>
+    </V>
+    <V t="trait_remove">
+      <U n="trait_remove">
+        <E n="subject">TargetSim</E>
+        <V n="trait" t="specific_trait">
+          <U n="specific_trait">
+            <T n="specific_trait">2404632404<!--LilNinthel:trait_Never_Potty_Trained--></T>
+          </U>
+        </V>
+      </U>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_remove">
+        <U n="statistic_remove">
+          <L n="subject">
+            <E>TargetSim</E>
+          </L>
+          <T n="stat">18009954001108637828<!--LilNinthel:commodity_diaperDependence--></T>
+        </U>
+      </V>
+    </V>
+  </L>
+</I>

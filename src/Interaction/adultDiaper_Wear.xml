@@ -1,0 +1,307 @@
+<I c="SuperInteraction" i="interaction" m="interactions.base.super_interaction" n="LilNinthel:adultDiaper_Wear" s="13743970654844850789">
+  <L n="_constraints">
+    <U>
+      <L n="constraints">
+        <U>
+          <V n="value" t="posture">
+            <U n="posture">
+              <L n="posture_manifest_tuning">
+                <U>
+                  <V n="posture_type" t="enabled">
+                    <T n="enabled">15537<!--posture_Stand--></T>
+                  </V>
+                </U>
+              </L>
+            </U>
+          </V>
+        </U>
+        <U>
+          <L n="constraints">
+            <U>
+              <V n="value" t="circle">
+                <U n="circle">
+                  <T n="ideal_radius">0.5</T>
+                  <T n="radius">1.5</T>
+                </U>
+              </V>
+            </U>
+          </L>
+        </U>
+        <U>
+          <L n="constraints">
+            <U>
+              <V n="value" t="facing" />
+            </U>
+          </L>
+        </U>
+      </L>
+    </U>
+  </L>
+  <V n="_icon" t="participant">
+    <U n="participant">
+      <L n="participant_type">
+        <E>Object</E>
+      </L>
+    </U>
+  </V>
+  <V n="_saveable" t="enabled" />
+  <L n="_static_commodities">
+    <U>
+      <T n="static_commodity">14039227763932861256<!--LilNinthel:commodity_RoleAutonomy_GetDiaperChanged--></T>
+    </U>
+    <U>
+      <T n="static_commodity">15969479915882814673<!--LilNinthel:commodity_DiaperItem_PutDiaperBackOn--></T>
+    </U>
+  </L>
+  <T n="allow_from_sim_inventory">True</T>
+  <T n="allow_from_world">True</T>
+  <T n="attention_cost">0.5</T>
+  <V n="basic_content" t="one_shot">
+    <U n="one_shot">
+      <U n="animation_ref">
+        <T n="factory">103247<!--animationElement_Spin--></T>
+      </U>
+    </U>
+  </V>
+  <L n="basic_extras">
+    <V t="loot">
+      <U n="loot">
+        <L n="loot_list">
+          <T>9327932635214006777<!--LilNinthel:loot_create_diaperTrash--></T>
+        </L>
+        <V n="timing" t="at_end" />
+        <U n="success_chance">
+          <L n="multipliers">
+            <U>
+              <T n="multiplier">0</T>
+              <L n="tests">
+                <L>
+                  <V t="buff">
+                    <U n="buff">
+                      <L n="blacklist">
+                        <T>12746728295223505722<!--LilNinthel:buff_PutDiaperBackOn--></T>
+                      </L>
+                    </U>
+                  </V>
+                  <V t="test_set_reference">
+                    <T n="test_set_reference">14313482733996641359<!--LilNinthel:testSet_DoesNotHaveDiaperEquipped--></T>
+                  </V>
+                </L>
+              </L>
+            </U>
+          </L>
+        </U>
+      </U>
+    </V>
+    <V t="loot">
+      <U n="loot">
+        <L n="loot_list">
+          <T>17409064684359210246<!--LilNinthel:loot_buff_PutDiaperBackOn_remove--></T>
+        </L>
+        <V n="timing" t="at_beginning" />
+      </U>
+    </V>
+    <V t="do_command">
+      <U n="do_command">
+        <L n="arguments">
+          <V t="participant">
+            <U n="participant">
+              <E n="argument">Actor</E>
+            </U>
+          </V>
+        </L>
+        <T n="command">iwn.put_on_random_diaper_accessory</T>
+        <V n="timing" t="at_end" />
+      </U>
+    </V>
+    <V t="do_command">
+      <U n="do_command">
+        <L n="arguments">
+          <V t="participant">
+            <U n="participant">
+              <E n="argument">Actor</E>
+            </U>
+          </V>
+        </L>
+        <T n="command">iwn.diaper_load_changed</T>
+        <V n="timing" t="at_end" />
+      </U>
+    </V>
+  </L>
+  <V n="content_score" t="disabled" />
+  <T n="display_name">0x0C228BB3<!--Wear Diaper--></T>
+  <V n="display_name_overrides" t="testable">
+    <U n="testable">
+      <L n="overrides">
+        <U>
+          <V n="new_display_name" t="enabled">
+            <T n="enabled">0x021A5B2D<!--Change Diaper--></T>
+          </V>
+          <L n="test">
+            <L>
+              <V t="test_set_reference">
+                <T n="test_set_reference">11154918846556146302<!--LilNinthel:testSetInstance_DiaperIsWetOrDirty_Actor--></T>
+              </V>
+            </L>
+          </L>
+        </U>
+      </L>
+    </U>
+  </V>
+  <U n="display_name_text_tokens">
+    <L n="tokens">
+      <V t="participant_type">
+        <U n="participant_type">
+          <V n="objects" t="from_participant">
+            <U n="from_participant">
+              <E n="participant">Actor</E>
+            </U>
+          </V>
+        </U>
+      </V>
+      <V t="participant_type">
+        <U n="participant_type">
+          <V n="objects" t="from_participant">
+            <U n="from_participant">
+              <E n="participant">Object</E>
+            </U>
+          </V>
+        </U>
+      </V>
+    </L>
+  </U>
+  <L n="interaction_category_tags">
+    <E>Interaction_Super</E>
+    <E>Interaction_All</E>
+  </L>
+  <V n="outcome" t="single">
+    <U n="single">
+      <U n="actions">
+        <L n="basic_extras">
+          <V t="destroy_object" />
+        </L>
+        <L n="loot_list">
+          <T>16354122224062681864<!--LilNinthel:loot_Add_DiaperWearerItem_Trait--></T>
+          <T>13017211686655432573<!--IwnBedWetting_loot_DiaperLoad_Reset--></T>
+          <T>14523230298926587703<!--LilNinthel:loot_wearing_new_diaper--></T>
+          <T>156442<!--loot_Buff_Remove_WhyWearClothes--></T>
+        </L>
+      </U>
+    </U>
+  </V>
+  <U n="post_run_autonomy_commodities">
+    <L n="requests">
+      <U>
+        <V n="randomization_override" t="enabled">
+          <E n="enabled">DISABLED</E>
+        </V>
+        <L n="static_commodities">
+          <T>280606<!--StaticCommodity_Collect_Diaper--></T>
+        </L>
+      </U>
+    </L>
+  </U>
+  <E n="scoring_priority">LOW</E>
+  <T n="subaction_selection_weight">1</T>
+  <E n="target_type">OBJECT</E>
+  <L n="test_autonomous">
+    <L>
+      <V t="test_set_reference">
+        <T n="test_set_reference">16874035057329897825<!--LilNinthel:testSet_DoesNot_AlwaysWearsDiapers--></T>
+      </V>
+      <V t="trait">
+        <U n="trait">
+          <L n="blacklist_traits">
+            <T>4184382890<!--LilNinthel:trait_HatesDiaperChanges--></T>
+            <T>14466593633043176008<!--LilNinthel:trait_NoSelfDiaperChanges--></T>
+          </L>
+          <E n="subject">Actor</E>
+        </U>
+      </V>
+    </L>
+  </L>
+  <L n="test_globals">
+    <V t="test_set_reference">
+      <T n="test_set_reference">14052404574948771338<!--LilNinthel:testSet_CanWearDiaperItem--></T>
+    </V>
+    <V t="sim_info">
+      <U n="sim_info">
+        <V n="ages" t="specified">
+          <L n="specified">
+            <E>TEEN</E>
+            <E>YOUNGADULT</E>
+            <E>ADULT</E>
+            <E>ELDER</E>
+            <E>CHILD</E>
+          </L>
+        </V>
+        <V n="species" t="specified">
+          <U n="specified">
+            <L n="species">
+              <E />
+            </L>
+          </U>
+        </V>
+        <E n="who">Actor</E>
+      </U>
+    </V>
+    <V t="participant_running_interaction">
+      <U n="participant_running_interaction">
+        <L n="affordances">
+          <T>16617239709778473043<!--LilNinthel:si_Touching_ChangeDiaper_Check--></T>
+          <T>14344559205617732950<!--LilNinthel:si_Touching_ChangeDiaper--></T>
+          <T>277966<!--tableChangeDiaper_ToddlerInfant_GetChanged_Looping--></T>
+          <T>277967<!--tableChangeDiaper_ToddlerInfant_GetChanged_Staging--></T>
+          <T>277964<!--tableChangeDiaper_Toddler_ChangeDiaper--></T>
+          <T>284045<!--socialSuperInteraction_CarryPickUp_Toddler_ToTableChangeDiaper_Diaper--></T>
+          <T>15483785028928119341<!--LilNinthel:AskForDiaper--></T>
+          <T>3954975860454133023<!--LilNinthel_ABDL_DiaperChange_Interaction--></T>
+          <T>8612311698779241887<!--LilNinthel_ABDL_AskForDiaperChange_Interaction--></T>
+        </L>
+        <E n="participant">Actor</E>
+        <T n="test_for_not_running">True</T>
+        <T n="test_interaction_queue">True</T>
+      </U>
+    </V>
+    <V t="posture">
+      <U n="posture">
+        <L n="prohibited_postures">
+          <T>143802<!--posture_Baththub_ToddlerInfantBath--></T>
+          <T>188318<!--posture_KiddiePool_GivePool--></T>
+          <T>277890<!--posture_TableChangeDiaper--></T>
+          <T>35351<!--posture_BathTub_BubbleBath--></T>
+          <T>15515<!--posture_BathTubTakeBath--></T>
+          <T>15520<!--posture_BedWoohoo--></T>
+          <T>125220<!--posture_BushWooHoo--></T>
+          <T>123382<!--posture_ClosetWooHoo--></T>
+          <T>154863<!--posture_CoffinWooHoo--></T>
+          <T>247299<!--posture_HotSprings_WooHoo--></T>
+          <T>117782<!--posture_HottubWoohoo--></T>
+          <T>247297<!--posture_HotSprings_Sit--></T>
+          <T>117257<!--posture_HotTubSit--></T>
+          <T>117256<!--posture_HotTubStand--></T>
+          <T>117782<!--posture_HottubWoohoo--></T>
+          <T>207291<!--posture_IslandWaterfallWooHoo--></T>
+          <T>188578<!--posture_KiddiePool_Lounge--></T>
+          <T>185751<!--posture_LeafPileWoohoo--></T>
+          <T>172241<!--posture_LighthouseWooHoo--></T>
+          <T>120382<!--posture_RelaxingBath--></T>
+          <T>15531<!--posture_RocketShipWoohoo--></T>
+          <T>15532<!--posture_Shower--></T>
+          <T>227360<!--posture_Shower_WooHoo--></T>
+          <T>200543<!--posture_SleepingPodWooHoo--></T>
+          <T>119528<!--posture_SteamRoomWooHoo--></T>
+          <T>39398<!--posture_Swim--></T>
+          <T>15538<!--posture_TelescopeWoohoo--></T>
+          <T>103266<!--posture_TentWoohoo--></T>
+          <T>309771<!--posture_TreehouseWooHoo--></T>
+          <T>193829<!--posture_WalkInSafeWooHoo--></T>
+          <T>199821<!--posture_WaterScooter--></T>
+          <T>252479<!--posture_WooHoo_Cave--></T>
+          <T>234105<!--posture_WooHoo_Dumpster--></T>
+        </L>
+      </U>
+    </V>
+  </L>
+  <T n="time_overhead">30</T>
+</I>

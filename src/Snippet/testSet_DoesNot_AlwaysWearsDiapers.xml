@@ -1,0 +1,12 @@
+<I c="TestSetInstance" i="snippet" m="event_testing.tests" n="LilNinthel:testSet_DoesNot_AlwaysWearsDiapers" s="16874035057329897825">
+  <V n="invert_test" t="enabled">
+    <U n="enabled" />
+  </V>
+  <L n="test">
+    <L>
+      <V t="test_set_reference">
+        <T n="test_set_reference">10782351474179251008<!--LilNinthel:testSet_AlwaysWearsDiapers--></T>
+      </V>
+    </L>
+  </L>
+</I>

@@ -1,0 +1,45 @@
+<I c="TestSetInstance" i="snippet" m="event_testing.tests" n="LilNinthel:testSet_CanWearDiaperItem" s="14052404574948771338">
+  <L n="test">
+    <L>
+      <V t="sim_info">
+        <U n="sim_info">
+          <V n="ages" t="specified">
+            <L n="specified">
+              <E>CHILD</E>
+              <E>TEEN</E>
+              <E>YOUNGADULT</E>
+              <E>ADULT</E>
+              <E>ELDER</E>
+            </L>
+          </V>
+          <V n="species" t="specified">
+            <U n="specified">
+              <L n="species">
+                <E />
+              </L>
+            </U>
+          </V>
+          <E n="who">Actor</E>
+        </U>
+      </V>
+      <V t="test_set_reference">
+        <T n="test_set_reference">17796732764948000262<!--IwnBedWetting_testSet_HasDiaperEquipped--></T>
+      </V>
+    </L>
+    <L>
+      <V t="trait">
+        <U n="trait">
+          <L n="whitelist_traits">
+            <T>2260700649<!--IwnBedWetting_Incontinence_Trait--></T>
+            <T>3851245159<!--BabyLola_LoveDiapers_trait_LovesDiapers--></T>
+            <T>3743471655<!--mackico_ABDL_trait--></T>
+            <T>2797347202<!--LilLuna_UnhappilyDiapered_trait--></T>
+            <T>3111634292<!--DiaperDump_HappilyMessy_trait--></T>
+            <T>1159183302<!--LilNinthel:trait_diaper_dependent--></T>
+            <T>1432483267<!--LilNinthel:trait_curiousAbout_diapers--></T>
+          </L>
+        </U>
+      </V>
+    </L>
+  </L>
+</I>

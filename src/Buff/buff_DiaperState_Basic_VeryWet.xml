@@ -1,0 +1,12 @@
+<!-- S4TK Group: 80000000 -->
+<I c="Buff" i="buff" m="buffs.buff" n="LilNinthel:buff_DiaperState_Basic_VeryWet" s="13718725036831628632">
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0x6291D112<!--{0.SimFirstName}'s diaper is very wet.--></T>
+  <T n="buff_name">0x79EE6568<!--Very Wet Diaper--></T>
+  <T n="icon">2f7d0004:00000000:820522970E5AC06C</T>
+  <T n="mood_type">14637<!--Mood_Fine--></T>
+  <T n="mood_weight">1</T>
+  <T n="show_timeout">False</T>
+  <T n="ui_sort_order">0</T>
+</I>

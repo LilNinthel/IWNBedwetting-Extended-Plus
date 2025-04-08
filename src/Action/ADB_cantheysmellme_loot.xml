@@ -1,0 +1,43 @@
+<I xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" c="LootActions" s="16883094172637433859" i="action" m="interactions.utils.loot" n="ADB_cantheysmellme_loot">
+  <L n="loot_actions">
+    <V t="buff">
+      <U n="buff">
+        <U n="buff">
+          <T n="buff_type">4660765688936361222<!--ADB_cantheysmellme_buff--></T>
+          <V n="buff_reason" t="enabled">
+            <T n="enabled">0x8B29C793<!--(From diaper insecurity)--></T>
+          </V>
+        </U>
+        <E n="subject">Actor</E>
+        <U n="chance">
+          <T n="base_chance">10</T>
+        </U>
+        <L n="tests">
+          <L>
+            <V t="buff">
+              <U n="buff">
+                <L n="blacklist">
+                  <T>10094<!--buff_Sim_IsSleeping--></T>
+                </L>
+                <E n="subject">Actor</E>
+              </U>
+            </V>
+            <V t="test_set_reference">
+              <T n="test_set_reference">17796732764948000262<!--IwnBedWetting_testSet_HasDiaperEquipped--></T>
+            </V>
+            <V t="buff">
+              <U n="buff">
+                <L n="blacklist">
+                  <T>4660765688936361222<!--ADB_cantheysmellme_buff--></T>
+                  <T>7570318287540438856<!--ADB_confident_buff--></T>
+                  <T>9708191925954819974<!--LilLuna_UnhappilyDiapered_buff_SmellyDiaper--></T>
+                  <T>11268579293200498259<!--BabyLola_LoveDiapers_buff_SmellyDiaper--></T>
+                </L>
+              </U>
+            </V>
+          </L>
+        </L>
+      </U>
+    </V>
+  </L>
+</I>

@@ -1,0 +1,38 @@
+<SimData version="0x00000101" u="0x00000006">
+  <Instances>
+    <I name="LilNinthel:clubInteractionGroup_ABDL_DiaperChange" schema="ClubInteractionGroup" type="Object">
+      <T name="category">7</T>
+      <T name="category_icon">00B2D882-00000000-322220FC9BA98A06</T>
+      <T name="child_safe">1</T>
+      <T name="club_rule">1</T>
+      <T name="is_targeted">1</T>
+      <T name="name">0xD6E59A1B</T>
+      <T name="small_business_customer_rule">1</T>
+      <L name="small_business_customer_tooltip"/>
+      <T name="small_business_employee_rule">1</T>
+      <L name="small_business_employee_tooltip"/>
+      <T name="teen_safe">1</T>
+      <T name="tooltip_template">0xD6E59A1B</T>
+      <T name="tooltip_template_negative">0x32B9BAB9</T>
+    </I>
+  </Instances>
+  <Schemas>
+    <Schema name="ClubInteractionGroup" schema_hash="0x3E97ABBD">
+      <Columns>
+        <Column name="category" type="Int64" flags="0x00000000"/>
+        <Column name="category_icon" type="ResourceKey" flags="0x00000000"/>
+        <Column name="child_safe" type="Boolean" flags="0x00000000"/>
+        <Column name="club_rule" type="Boolean" flags="0x00000000"/>
+        <Column name="is_targeted" type="Boolean" flags="0x00000000"/>
+        <Column name="name" type="LocalizationKey" flags="0x00000000"/>
+        <Column name="small_business_customer_rule" type="Boolean" flags="0x00000000"/>
+        <Column name="small_business_customer_tooltip" type="Vector" flags="0x00000000"/>
+        <Column name="small_business_employee_rule" type="Boolean" flags="0x00000000"/>
+        <Column name="small_business_employee_tooltip" type="Vector" flags="0x00000000"/>
+        <Column name="teen_safe" type="Boolean" flags="0x00000000"/>
+        <Column name="tooltip_template" type="LocalizationKey" flags="0x00000000"/>
+        <Column name="tooltip_template_negative" type="LocalizationKey" flags="0x00000000"/>
+      </Columns>
+    </Schema>
+  </Schemas>
+</SimData>

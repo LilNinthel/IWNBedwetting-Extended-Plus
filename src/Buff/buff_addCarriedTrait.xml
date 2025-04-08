@@ -1,0 +1,23 @@
+<I c="Buff" i="buff" m="buffs.buff" n="LilNinthel:buff_addCarriedTrait" s="14814683103508715847">
+  <L n="_loot_on_addition">
+    <T>16025724266530283046<!--LilNinthel:loot_trait_hidden_canBeCarried_add--></T>
+  </L>
+  <L n="_loot_on_instance">
+    <T>16025724266530283046<!--LilNinthel:loot_trait_hidden_canBeCarried_add--></T>
+    <T>324650<!--loot_Infant_Carry_Default_Back_Carrier--></T>
+  </L>
+  <L n="_loot_on_removal">
+    <T>12321249069249693353<!--LilNinthel:loot_trait_hidden_canBeCarried_remove--></T>
+  </L>
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <!--<V n="auto_situation" t="enabled">
+    <U n="enabled">
+      <T n="invite_actor">False</T>
+      <T n="situation">17092881264543661138</T>
+      <T n="user_facing">False</T>
+    </U>
+  </V>-->
+  <T n="icon">2f7d0004:00000000:c09b0954d2ef3d7f</T>
+  <T n="visible">False</T>
+</I>

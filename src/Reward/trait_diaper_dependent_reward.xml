@@ -1,0 +1,19 @@
+<I c="SimReward" i="reward" m="rewards.reward" n="LilNinthel:trait_diaper_dependent_reward" s="13697848174906645712">
+  <T n="icon">2f7d0004:00000000:322220FC9BA98A06</T>
+  <T n="name">0x5E584C8F<!--Diaper Dependent--></T>
+  <V n="reward_description" t="enabled">
+    <T n="enabled">0x6AF1AB29<!--{0.SimFirstName} thought this only happened in stories. {M0.He}{F0.She} has gotten so used to diapers that {M0.he}{F0.she}'s now diaper dependent. Is this what {M0.he}{F0.she} wanted?--></T>
+  </V>
+  <V n="reward_unavailable_tooltip" t="enabled">
+    <T n="enabled">0x709B9CC<!--This Reward is not available to your Sim, or it is already owned by your Sim.--></T>
+  </V>
+  <L n="rewards">
+    <V t="specific_reward">
+      <V n="specific_reward" t="trait">
+        <U n="trait">
+          <T n="trait">1159183302<!--LilNinthel:trait_diaper_dependent--></T>
+        </U>
+      </V>
+    </V>
+  </L>
+</I>

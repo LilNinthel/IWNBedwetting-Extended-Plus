@@ -1,0 +1,388 @@
+<I c="GameObject" i="object" m="objects.game_object" n="object_HighChair" s="135520">
+  <U n="_components">
+    <V n="affordance_tuning" t="enabled">
+      <U n="enabled">
+        <L n="affordance_map">
+          <U>
+            <T n="key">108755<!--retail_SetItemForSale--></T>
+            <U n="value">
+              <L n="tests">
+                <L>
+                  <V t="has_free_part">
+                    <U n="has_free_part">
+                      <T n="part_definition">139218<!--part_Surface_Seat_HighChair--></T>
+                    </U>
+                  </V>
+                </L>
+              </L>
+            </U>
+          </U>
+        </L>
+      </U>
+    </V>
+    <V n="crafting_station" t="enabled">
+      <U n="enabled">
+        <T n="children_invalidate_crafting_cache">False</T>
+        <L n="crafting_station_types">
+          <T>142504<!--craftingObjectType_HighChair--></T>
+        </L>
+      </U>
+    </V>
+    <V n="focus" t="enabled">
+      <U n="enabled">
+        <V n="_focus_score" t="globally">
+          <U n="globally">
+            <E n="base">LOW</E>
+          </U>
+        </V>
+      </U>
+    </V>
+    <V n="retail_component" t="enabled">
+      <V n="enabled" t="reference">
+        <T n="reference">115303<!--retailComponent_Default_HighAppeal--></T>
+      </V>
+    </V>
+    <V n="state" t="enabled">
+      <U n="enabled">
+        <L n="state_triggers">
+          <U>
+            <L n="at_states">
+              <T>15132<!--Dirty_Clean--></T>
+            </L>
+            <V n="set_states" t="Set_state_list">
+              <L n="Set_state_list">
+                <T>15130<!--DirtyState_Clean--></T>
+              </L>
+            </V>
+          </U>
+          <U>
+            <L n="at_states">
+              <T>15133<!--Dirty_Dirty--></T>
+            </L>
+            <V n="set_states" t="Set_state_list">
+              <L n="Set_state_list">
+                <T>15131<!--DirtyState_Dirty--></T>
+              </L>
+            </V>
+          </U>
+          <U>
+            <L n="at_states">
+              <T>39611<!--FireState_Burn_Material_Change--></T>
+            </L>
+            <V n="set_states" t="Set_state_list">
+              <L n="Set_state_list">
+                <T>101103<!--DirtyState_Neutral--></T>
+              </L>
+            </V>
+          </U>
+          <U>
+            <L n="at_states">
+              <T>39611<!--FireState_Burn_Material_Change--></T>
+            </L>
+            <V n="set_states" t="Set_state_list">
+              <L n="Set_state_list">
+                <T>15134<!--Dirty_Neutral--></T>
+              </L>
+            </V>
+          </U>
+          <U>
+            <L n="at_states">
+              <T>77532<!--FireState_Burn_Material_Change_Replace--></T>
+            </L>
+            <V n="set_states" t="Set_state_list">
+              <L n="Set_state_list">
+                <T>15132<!--Dirty_Clean--></T>
+              </L>
+            </V>
+          </U>
+          <U>
+            <L n="at_states">
+              <T>77532<!--FireState_Burn_Material_Change_Replace--></T>
+            </L>
+            <V n="set_states" t="Set_state_list">
+              <L n="Set_state_list">
+                <T>39737<!--FireState_Burn_Material_Change_Not_Burning--></T>
+              </L>
+            </V>
+          </U>
+        </L>
+        <L n="states">
+          <U>
+            <L n="client_states">
+              <U>
+                <T n="key">101103<!--DirtyState_Neutral--></T>
+              </U>
+              <U>
+                <T n="key">15130<!--DirtyState_Clean--></T>
+                <U n="value">
+                  <V n="material_state" t="apply_new_value" />
+                </U>
+              </U>
+              <U>
+                <T n="key">15131<!--DirtyState_Dirty--></T>
+                <U n="value">
+                  <V n="material_state" t="apply_new_value">
+                    <U n="apply_new_value">
+                      <V n="state_name" t="set_to_custom_value">
+                        <T n="set_to_custom_value">Dirty</T>
+                      </V>
+                    </U>
+                  </V>
+                </U>
+              </U>
+            </L>
+            <V n="default_value" t="reference">
+              <T n="reference">15130<!--DirtyState_Clean--></T>
+            </V>
+          </U>
+          <U>
+            <L n="client_states">
+              <U>
+                <T n="key">15132<!--Dirty_Clean--></T>
+              </U>
+              <U>
+                <T n="key">15133<!--Dirty_Dirty--></T>
+                <U n="value">
+                  <V n="material_state" t="apply_new_value">
+                    <U n="apply_new_value">
+                      <V n="state_name" t="set_to_custom_value">
+                        <T n="set_to_custom_value">dirty</T>
+                      </V>
+                    </U>
+                  </V>
+                </U>
+              </U>
+              <U>
+                <T n="key">15134<!--Dirty_Neutral--></T>
+              </U>
+            </L>
+            <V n="default_value" t="reference">
+              <T n="reference">15132<!--Dirty_Clean--></T>
+            </V>
+          </U>
+          <U>
+            <L n="client_states">
+              <U>
+                <T n="key">235497<!--ecoFootprint_Object_AcidRain_Outside--></T>
+              </U>
+              <U>
+                <T n="key">235498<!--ecoFootprint_Object_AcidRain_Inside--></T>
+              </U>
+            </L>
+            <V n="default_value" t="reference">
+              <T n="reference">235498<!--ecoFootprint_Object_AcidRain_Inside--></T>
+            </V>
+          </U>
+          <U>
+            <L n="client_states">
+              <U>
+                <T n="key">255047</T>
+              </U>
+              <U>
+                <T n="key">255048</T>
+              </U>
+              <U>
+                <T n="key">255049</T>
+              </U>
+              <U>
+                <T n="key">255050</T>
+              </U>
+              <U>
+                <T n="key">255051</T>
+              </U>
+            </L>
+            <V n="default_value" t="reference">
+              <T n="reference">255047</T>
+            </V>
+          </U>
+          <U>
+            <L n="client_states">
+              <U>
+                <T n="key">39611<!--FireState_Burn_Material_Change--></T>
+              </U>
+              <U>
+                <T n="key">39736<!--FireState_Burn_Material_Change_Burning--></T>
+              </U>
+              <U>
+                <T n="key">39737<!--FireState_Burn_Material_Change_Not_Burning--></T>
+              </U>
+              <U>
+                <T n="key">77532<!--FireState_Burn_Material_Change_Replace--></T>
+              </U>
+            </L>
+            <V n="default_value" t="reference">
+              <T n="reference">39737<!--FireState_Burn_Material_Change_Not_Burning--></T>
+            </V>
+          </U>
+          <U>
+            <L n="client_states">
+              <U>
+                <T n="key">35956<!--Materialistic_Admired--></T>
+              </U>
+              <U>
+                <T n="key">35957<!--Materialistic_YetToAdmire--></T>
+              </U>
+            </L>
+            <V n="default_value" t="reference">
+              <T n="reference">35957<!--Materialistic_YetToAdmire--></T>
+            </V>
+          </U>
+        </L>
+      </U>
+    </V>
+    <V n="weather_aware_component" t="enabled">
+      <U n="enabled">
+        <L n="outside_loot">
+          <U>
+            <E n="key">AnyRain</E>
+            <U n="value">
+              <L n="end_loot">
+                <T>235500<!--loot_EcoFootprint_Object_AcidRain_End--></T>
+              </L>
+              <L n="start_loot">
+                <T>235499<!--loot_EcoFootprint_Object_AcidRain--></T>
+              </L>
+            </U>
+          </U>
+        </L>
+      </U>
+    </V>
+  </U>
+  <U n="_components_native">
+    <V n="Slot" t="enabled">
+      <U n="enabled">
+        <U n="default_slot">
+          <L n="autonomy_modifiers">
+            <U>
+              <V n="provided_affordance_compatibility" t="literal">
+                <U n="literal">
+                  <V n="default_inclusion" t="exclude_all">
+                    <U n="exclude_all">
+                      <L n="include_affordances">
+                        <T>149500<!--generic_consume_foodball_toddler--></T>
+                        <T>142865<!--generic_consume_food_toddler--></T>
+                        <T>146625<!--generic_consume_drink_nonbar_toddler--></T>
+                        <T>13525330394385709354<!--LilNinthel:generic_consume_food_Little_HighChair--></T>
+                        <T>18031205973427832454<!--LilNinthel:generic_consume_drink_Little_HighChair--></T>
+                      </L>
+                    </U>
+                  </V>
+                </U>
+              </V>
+            </U>
+          </L>
+        </U>
+      </U>
+    </V>
+  </U>
+  <L n="_part_data_map">
+    <U>
+      <T n="key">feedPart</T>
+      <U n="value">
+        <L n="adjacent_parts">
+          <T>sitPart</T>
+        </L>
+        <T n="part_definition">276040<!--part_Surface_Seat_HighChair_Give--></T>
+        <V n="subroot_index" t="disabled" />
+      </U>
+    </U>
+    <U>
+      <T n="key">feedPart_mirrored</T>
+      <U n="value">
+        <L n="adjacent_parts">
+          <T>sitPart</T>
+        </L>
+        <V n="is_mirrored" t="enabled">
+          <T n="enabled">True</T>
+        </V>
+        <T n="part_definition">276040<!--part_Surface_Seat_HighChair_Give--></T>
+        <V n="subroot_index" t="disabled" />
+      </U>
+    </U>
+    <U>
+      <T n="key">sitPart</T>
+      <U n="value">
+        <L n="adjacent_parts">
+          <T>feedPart</T>
+          <T>feedPart_mirrored</T>
+        </L>
+        <T n="disable_child_aop_forwarding">False</T>
+        <T n="part_definition">139218<!--part_Surface_Seat_HighChair--></T>
+        <V n="subroot_index" t="disabled" />
+      </U>
+    </U>
+  </L>
+  <L n="_super_affordances">
+    <T>13328<!--debug_Reset--></T>
+    <T>13326<!--debug_ObjectDestroy--></T>
+    <T>103888<!--cheat_set_as_head--></T>
+    <T>196759<!--famePerks_GoodReputation_GivingBack_DonateObject--></T>
+    <T>13983<!--sim-stand--></T>
+    <T>135526<!--HighChair_Sit--></T>
+    <T>142506<!--HighChair_Clean--></T>
+    <T>276041<!--generic_SitInHighChair_feed--></T>
+    <T>286173<!--simPicker_HighChair_Adult_FeedInfant_FingerFood--></T>
+    <T>320141<!--simPicker_HighChair_Infant_GetFood_FirstFood--></T>
+    <T>13142<!--Cheat_MakeDirty--></T>
+    <T>33960<!--Cheat_MakeClean--></T>
+    <T>320142<!--simPicker_HighChair_Infant_GetFood_FirstFood_InChair--></T>
+    <T>320143<!--simPicker_HighChair_Adult_FeedInfant_FirstFood--></T>
+    <T>321893<!--immediate_Infant_HighChair_Dummy--></T>
+    <T>146417<!--HighChair_Create--></T>
+    <T>333142<!--simPicker_Infant_GetFedBy--></T>
+    <T>148724<!--highChair_ServeToSlot--></T>
+    <T>149389<!--Toddler_ChooseDelivery--></T>
+    <T>149390<!--highChair_ServeToSitSlot--></T>
+    <T>149569<!--HighChair_Stand--></T>
+    <T>151484<!--toddler_ChooseDelivery_Drink--></T>
+    <T>155841<!--HighChair_Sit_Debug--></T>
+    <T>155968<!--HighChair_CleanDishesInHighChair--></T>
+    <T>157532<!--autonomousSimPicker_Toddler_AskForFood--></T>
+    <T>144173<!--simPickerInteraction_PutDown_HighChair_Adult--></T>
+    <T>151733<!--simPickerInteraction_PutDown_HighChair_Toddler_AskForDrink--></T>
+    <T>142512<!--simPickerInteraction_PutDown_HighChair_Toddler--></T>
+    <T>151734<!--simPickerInteraction_PutDown_HighChair_Toddler_AskForFood--></T>
+    <T>151349<!--simPickerInteraction_PutDown_HighChair_Adult_GiveDrink--></T>
+    <T>151348<!--simPickerInteraction_PutDown_HighChair_Adult_GiveFood--></T>
+    <T>155832<!--simPickerInteraction_PutDown_HighChair_Toddler_AskForFood_Provided--></T>
+    <T>155834<!--simPickerInteraction_PutDown_HighChair_Toddler_AskForDrink_Provided--></T>
+    <T>274094<!--simPickerInteraction_PutDown_HighChair_Infant--></T>
+    <T>274099<!--simPicker_HighChair_Infant_GetFood--></T>
+    <T>274100<!--simPicker_HighChair_Infant_GetFingerFood--></T>
+    <T>274101<!--simPicker_HighChair_Adult_FeedInfant--></T>
+    <T>274760<!--simPicker_HighChair_Infant_GetFood_InChair--></T>
+    <T>274762<!--simPicker_HighChair_Infant_GetFingerFood_InChair--></T>
+    <T>106859<!--simRay_Transform_Object--></T>
+    <T>74457<!--fire_ReplaceBurntObject--></T>
+    <T>168502<!--Ghost_Pet_Possess--></T>
+    <T>324988<!--Ghost_Horse_Possess--></T>
+  </L>
+  <U n="aop_forward_data">
+    <T n="should_search_forwarded_child_aop">False</T>
+    <T n="should_search_forwarded_parent_aop">False</T>
+    <T n="should_search_forwarded_sim_aop">True</T>
+  </U>
+  <E n="posture_transition_target_tag">SEATING_DINING</E>
+  <U n="recycling_data">
+    <L n="recycling_values">
+      <U>
+        <E n="Bucks Type">RecycleBitsBucks</E>
+        <T n="Value">0.5</T>
+      </U>
+      <U>
+        <E n="Bucks Type">RecyclePiecesBucks</E>
+        <T n="Value">0.5</T>
+      </U>
+    </L>
+  </U>
+  <L n="slot_cost_modifiers">
+    <U>
+      <T n="key">slot_ToddlerSippyCup</T>
+      <T n="value">100</T>
+    </U>
+    <U>
+      <T n="key">slot_SitEat</T>
+      <T n="value">100</T>
+    </U>
+  </L>
+</I>

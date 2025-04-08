@@ -1,0 +1,10 @@
+<I c="AnimationElement" i="animation" m="animation.animation_element" n="LilNinthel:UseDiaperAnimation" s="10671547016984099350">
+  <T n="asm_key">02d5df13:00000000:0E3F783EE97F3E19</T>
+  <L n="begin_states">
+    <T>useDiaper</T>
+  </L>
+  <L n="end_states">
+    <T>getOut</T>
+    <T>exit</T>
+  </L>
+</I>

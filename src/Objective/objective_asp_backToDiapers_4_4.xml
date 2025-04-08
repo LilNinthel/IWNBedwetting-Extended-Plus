@@ -1,0 +1,27 @@
+<I c="Objective" i="objective" m="event_testing.objective_tuning" n="LilNinthel:objective_asp_backToDiapers_4_4" s="15754608195655851671">
+  <L n="completion_loot">
+    <T>273578<!--loot_Want_AspirationCompleted--></T>
+  </L>
+  <T n="display_text">0x08B3E87B<!--Become friends with another diapered Sim or convince your significant other to wear a diaper--></T>
+  <V n="objective_completion_type" t="iterations">
+    <U n="iterations">
+      <T n="iterations_required_to_pass">3</T>
+    </U>
+  </V>
+  <V n="objective_test" t="situation_running_test">
+    <U n="situation_running_test">
+      <V n="level" t="enabled">
+        <U n="enabled">
+          <T n="value">3</T>
+        </U>
+      </V>
+      <V n="situation_whitelist" t="enabled">
+        <L n="enabled">
+          <T>16193<!--situation_Date--></T>
+          <T>76577<!--situation_Date_Teen--></T>
+        </L>
+      </V>
+    </U>
+  </V>
+  <T n="satisfaction_points">1000</T>
+</I>

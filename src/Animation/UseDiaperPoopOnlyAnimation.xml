@@ -1,0 +1,9 @@
+<I c="AnimationElement" i="animation" m="animation.animation_element" n="LilNinthel:UseDiaperPoopOnlyAnimation" s="16681929980787431610">
+  <T n="asm_key">02d5df13:00000000:639C81D0192352ED</T>
+  <L n="begin_states">
+    <T>poop</T>
+  </L>
+  <L n="end_states">
+    <T>getOut</T>
+  </L>
+</I>

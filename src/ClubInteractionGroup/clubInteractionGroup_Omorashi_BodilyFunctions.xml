@@ -1,0 +1,15 @@
+<I c="ClubInteractionGroup" i="club_interaction_group" m="clubs.club_tuning" n="LilNinthel:clubInteractionGroup_Omorashi_BodilyFunctions" s="16643337583722696293">
+  <L n="affordances">
+    <T>12251799722243206637<!--LilNinthel:pantsWetter_pee_pants--></T>
+    <T>12122353962891477661<!--LilNinthel:pantsWetter_pee_pants_continuation--></T>
+    <T>11513621841802987904<!--LilNinthel:pantsWetter_pee_pants_standing--></T>
+    <T>13994<!--sim_BladderFailure--></T>
+  </L>
+  <E n="category">HOBBIES</E>
+  <T n="category_icon">2F7D0004:00000000:62313DE8780BC7A9</T>
+  <T n="club_bucks_reward">2</T>
+  <T n="is_targeted">False</T>
+  <T n="name">0xFFD21FAB<!--Pee Pants--></T>
+  <T n="tooltip_template">0xFFD21FAB<!--Pee Pants--></T>
+  <T n="tooltip_template_negative">0x091F6F03<!--Don't Pee Pants--></T>
+</I>

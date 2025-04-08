@@ -1,0 +1,12 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_buff_diaperPunishment_hasNotPeedYet_add" s="11586630370714537059">
+  <L n="loot_actions">
+    <V t="buff">
+      <U n="buff">
+        <E n="subject">TargetSim</E>
+        <U n="buff">
+          <T n="buff_type">18361089275973664144<!--LilNinthel:buff_diaperPunishment_hasNotPeedYet--></T>
+        </U>
+      </U>
+    </V>
+  </L>
+</I>

@@ -1,0 +1,11 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:Loot_Buff_Suppress_Reaction_SmellMessyDiaper" s="14514916709500289678">
+  <L n="loot_actions">
+    <V t="buff">
+      <U n="buff">
+        <U n="buff">
+          <T n="buff_type">9532946306499066401<!--LilNinthel:Buff_Suppress_Reaction_SmellMessyDiaper--></T>
+        </U>
+      </U>
+    </V>
+  </L>
+</I>

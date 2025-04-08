@@ -1,0 +1,20 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_Add_DiaperWearerTrait" s="9817498221303887056">
+  <L n="loot_actions">
+    <V t="trait_add">
+      <U n="trait_add">
+        <T n="trait">1891765918<!--LilNinthel:trait_DiaperWearer--></T>
+      </U>
+    </V>
+  </L>
+  <L n="tests">
+    <L>
+      <V t="trait">
+        <U n="trait">
+          <L n="blacklist_traits">
+            <T>1891765918<!--LilNinthel:trait_DiaperWearer--></T>
+          </L>
+        </U>
+      </V>
+    </L>
+  </L>
+</I>

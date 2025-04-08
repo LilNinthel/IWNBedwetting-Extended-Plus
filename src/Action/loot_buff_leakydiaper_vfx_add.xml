@@ -1,0 +1,20 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_buff_leakydiaper_vfx_add" s="11899094150883860437">
+  <L n="loot_actions">
+    <V t="buff_removal">
+      <U n="buff_removal">
+        <E n="subject">Actor</E>
+        <L n="buffs_to_remove">
+          <T>15288185128726411636<!--LilNinthel:buff_leakydiaper_vfx--></T>
+        </L>
+      </U>
+    </V>
+    <V t="buff">
+      <U n="buff">
+        <E n="subject">Actor</E>
+        <U n="buff">
+          <T n="buff_type">15288185128726411636<!--LilNinthel:buff_leakydiaper_vfx--></T>
+        </U>
+      </U>
+    </V>
+  </L>
+</I>

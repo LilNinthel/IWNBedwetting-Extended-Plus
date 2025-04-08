@@ -1,0 +1,21 @@
+<!-- S4TK Group: 00000036 -->
+<I c="Trait" i="trait" m="traits.traits" n="trait_Human_Infant_Element_HatesBeingHeld" s="319917">
+  <L n="ages">
+    <E>INFANT</E>
+    <E>TODDLER</E>
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <T n="display_name">0x62E1EAD2<!--Hates Being Held--></T>
+  <T n="display_name_gender_neutral">0xF4313502<!--Hates Being Held --></T>
+  <T n="icon" p="InEP13\UI\Icons\CAS\Traits\traits_HatesBeingHeldToddler.png">2f7d0004:00000000:03e7c758ec848b80</T>
+  <L n="species">
+    <E />
+  </L>
+  <T n="trait_description">0x45F89BBD<!--This Infant doesn't like to be held. Infants with this Quirk are more likely to get upset when they're picked up and happier to be set down.--></T>
+  <T n="trait_origin_description">0x61E3C965<!--Infant Quirk--></T>
+  <E n="trait_type">GAMEPLAY_GENERIC</E>
+</I>

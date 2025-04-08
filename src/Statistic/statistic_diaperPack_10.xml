@@ -1,0 +1,8 @@
+<I c="Statistic" i="statistic" m="statistics.statistic" n="LilNinthel:statistic_diaperPack_10" s="1506466565412493377">
+  <U n="initial_tuning">
+    <T n="_initial_value">12</T>
+    <T n="_use_stat_value_on_init">True</T>
+  </U>
+  <T n="max_value_tuning">12<!--PaintingTexture_Sml_IMP_High_01--></T>
+  <T n="min_value_tuning">0</T>
+</I>

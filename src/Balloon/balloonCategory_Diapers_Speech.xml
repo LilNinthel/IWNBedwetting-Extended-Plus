@@ -1,0 +1,39 @@
+<I c="BalloonCategory" i="balloon" m="balloon.balloon_category" n="LilNinthel:balloonCategory_Diapers_Speech" s="11194793206003602481">
+  <T n="balloon_chance">100</T>
+  <E n="balloon_type">SPEECH</E>
+  <L n="balloons">
+    <U>
+      <V n="item" t="balloon_icon">
+        <U n="balloon_icon">
+          <V n="icon" t="resource_key">
+            <U n="resource_key">
+              <T n="key" p="InGame\UI\Icons\Headlines\Final\headline_babydiapers.png">2f7d0004:00000000:322220fc9ba98a06</T>
+            </U>
+          </V>
+        </U>
+      </V>
+    </U>
+    <U>
+      <V n="item" t="balloon_icon">
+        <U n="balloon_icon">
+          <V n="icon" t="resource_key">
+            <U n="resource_key">
+              <T n="key" p="InGame\UI\Icons\Headlines\Final\headline_babydiapers.png">2f7d0004:00000000:322220fc9ba98a06</T>
+            </U>
+          </V>
+        </U>
+      </V>
+    </U>
+    <U>
+      <V n="item" t="balloon_icon">
+        <U n="balloon_icon">
+          <V n="icon" t="resource_key">
+            <U n="resource_key">
+              <T n="key" p="InGame\UI\Icons\Headlines\Final\headline_babydiapers.png">2f7d0004:00000000:322220fc9ba98a06</T>
+            </U>
+          </V>
+        </U>
+      </V>
+    </U>
+  </L>
+</I>

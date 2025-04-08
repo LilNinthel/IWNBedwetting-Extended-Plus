@@ -1,0 +1,32 @@
+<I c="Commodity" i="statistic" m="statistics.commodity" n="LilNinthel:statistic_DiaperState_Basic_Extra_SmellLikePee" s="14054028015909854876">
+  <T n="_default_convergence_value">0</T>
+  <E n="_time_passage_fixup_type">FIXUP_USING_TIME_ELAPSED</E>
+  <U n="arrow_data">
+    <T n="negative_double_arrow">-20</T>
+    <T n="negative_single_arrow">-1</T>
+    <T n="negative_triple_arrow">-30</T>
+    <T n="positive_double_arrow">20</T>
+    <T n="positive_single_arrow">1</T>
+    <T n="positive_triple_arrow">30</T>
+  </U>
+  <T n="auto_satisfy_curve_random_time_offset">10</T>
+  <T n="decay_rate">1</T>
+  <U n="initial_tuning">
+    <T n="_use_auto_satisfy_curve_as_initial_value">False</T>
+    <T n="_use_stat_value_on_init">True</T>
+    <T n="_value">0</T>
+  </U>
+  <T n="max_value_tuning">10</T>
+  <T n="min_value_tuning">0</T>
+  <L n="states">
+    <U>
+      <U n="buff">
+        <V n="buff_reason" t="enabled">
+          <T n="enabled">0xFEE757BF<!--(From Having a Dirty Diaper)--></T>
+        </V>
+        <T n="buff_type">15794358183937399459<!--LilNinthel:buff_DiaperState_Basic_Extra_SmellLikePee--></T>
+      </U>
+      <T n="value">0</T>
+    </U>
+  </L>
+</I>

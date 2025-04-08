@@ -1,0 +1,25 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_buff_temporaryIncontinence_add" s="17284799433455529645">
+  <L n="loot_actions">
+    <V t="buff">
+      <U n="buff">
+        <E n="subject">Actor</E>
+        <U n="buff">
+          <T n="buff_type">11286248511651031208<!--LilNinthel:buff_temporaryIncontinence--></T>
+        </U>
+        <L n="tests">
+          <L>
+            <V t="trait">
+              <U n="trait">
+                <L n="blacklist_traits">
+                  <T>2260700649<!--IwnBedWetting_Incontinence_Trait--></T>
+                  <T>2404632404<!--LilNinthel:trait_Never_Potty_Trained--></T>
+                  <T>1159183302<!--LilNinthel:trait_diaper_dependent--></T>
+                </L>
+              </U>
+            </V>
+          </L>
+        </L>
+      </U>
+    </V>
+  </L>
+</I>

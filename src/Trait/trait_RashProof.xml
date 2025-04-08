@@ -1,0 +1,18 @@
+<I c="Trait" i="trait" m="traits.traits" n="LilNinthel:trait_RashProof" s="440037067">
+  <L n="ages">
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <T n="display_name">0xEE706939<!--Rash Proof--></T>
+  <T n="display_name_gender_neutral">0xEE706939<!--Rash Proof--></T>
+  <T n="icon">2f7d0004:00000000:322220fc9ba98a06</T>
+  <E n="min_lod_value">MINIMUM</E>
+  <L n="species">
+    <E />
+  </L>
+  <T n="trait_description">0xEF86E9AF<!--These Sims will never get diaper rashes.--></T>
+  <E n="trait_type">GAMEPLAY</E>
+</I>

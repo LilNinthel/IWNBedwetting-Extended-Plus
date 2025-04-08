@@ -1,0 +1,29 @@
+<I s="2122234430" c="Trait" i="trait" m="traits.traits" n="IwnBedWetting_Bedwetter_Trait">
+  <L n="ages">
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <L n="buffs">
+    <U>
+      <T n="buff_type">14741944741097944991<!--IwnBedWetting_Bedwetter_Buff--></T>
+      <T n="buff_type">10309070037716691412<!--LilNinthel_ABDL_dummybuff--></T>
+    </U>
+  </L>
+  <T n="buffs_add_on_spawn_only">False</T>
+  <T n="display_name">0x3EE2640A<!--BedWetter--></T>
+  <T n="display_name_gender_neutral">0x3EE2640A<!--BedWetter--></T>
+  <T n="icon" p="Generated">2f7d0004:00000000:62313de8780bc7a9</T>
+  <E n="min_lod_value">MINIMUM</E>
+  <L n="species">
+    <E />
+  </L>
+  <L n="super_affordances">
+    <T>15386335300547775969<!--LilNinthel:toddler_UseDiaper--></T>
+    <T>14347203327565699161<!--LilNinthel:bedwet--></T>
+  </L>
+  <T n="trait_description">0x633EA08B<!--This sim is a bed wetter--></T>
+  <E n="trait_type">GAMEPLAY</E>
+</I>

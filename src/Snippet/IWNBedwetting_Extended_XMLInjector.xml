@@ -1,0 +1,252 @@
+<I c="XmlInjector" i="snippet" m="xml_injector.snippet" n="LilNinthel:IWNBedwetting_Extended_XMLInjector" s="14323563894287245875">
+  <L n="add_mixer_interactions">
+    <U>
+      <L n="mixer_snippets">
+        <T>145278<!--social_Mixers_Toddler_AskTo_NonTouching--></T>
+      </L>
+      <L n="affordances">
+        <T>15834817265148648647<!--LilNinthel:socials_Targeted_Friendly_AlwaysOn_STC_AskToChangeDiaper--></T>
+      </L>
+    </U>
+    <U>
+      <L n="mixer_snippets">
+        <T>333506<!--affordanceList_SocialSupers_Toddler_Touching--></T>
+      </L>
+      <L n="affordances">
+        <T>14344559205617732950<!--LilNinthel:si_Touching_ChangeDiaper--></T>
+        <T>16617239709778473043<!--LilNinthel:si_Touching_ChangeDiaper_Check--></T>
+        <T>10785441443215295256<!--LilNinthel:si_Touching_ChangeDiaper_Ask--></T>
+      </L>
+    </U>
+    <U>
+      <L n="mixer_snippets">
+        <T>157651<!--social_Mixers_Toddler_AskFor_NonTouching--></T>
+      </L>
+      <L n="affordances">
+        <T>15702255152029507223<!--LilNinthel:socials_AskFor_Diaper--></T>
+      </L>
+    </U>
+    <U>
+      <L n="mixer_snippets">
+        <T>24508<!--social_Mixers_Friendly_NonTouching--></T>
+      </L>
+      <L n="affordances">
+        <T>13865575691007948753<!--LilNinthel:socials_Targeted_Friendly_TalkAbout_ABDL--></T>
+        <T>13108659589475630153<!--LilNinthel:mixer_social_EnthuseAboutNewDiapers--></T>
+        <T>14905718838489572926<!--LilNinthel:mixer_social_ABDLSocials_ComplainAboutLeakyDiapers--></T>
+        <T>14943392533785635772<!--LilNinthel:mixer_social_DiscussFavoriteDiapers--></T>
+      </L>
+    </U>
+    <!--<U>
+      <L n="mixer_snippets">
+        <T>143941</T>
+      </L>
+      <L n="affordances">
+        <T>11318865500086661640</T>
+      </L>
+    </U>-->
+  </L>
+  <L n="add_interactions_to_objects">
+    <U>
+      <V n="object_selection" t="objects_matching_name">
+        <U n="objects_matching_name">
+          <T n="partial_name">object_computer</T>
+        </U>
+      </V>
+      <!--<V n="object_selection" t="objects_with_tag">
+        <U n="objects_with_tag">
+          <E n="tag">Func_Computer</E>
+        </U>
+      </V>-->
+      <L n="_super_affordances">
+        <T>12582602326555689108<!--LilNinthel:purchase_diapers_computer--></T>
+      </L>
+    </U>
+    <U>
+      <V n="object_selection" t="objects_matching_name">
+        <U n="objects_matching_name">
+          <T n="partial_name">object_Computer</T>
+        </U>
+      </V>
+      <L n="_super_affordances">
+        <T>12582602326555689108<!--LilNinthel:purchase_diapers_computer--></T>
+      </L>
+    </U>
+    <U>
+      <V n="object_selection" t="objects_matching_name">
+        <U n="objects_matching_name">
+          <T n="partial_name">dresser</T>
+        </U>
+      </V>
+      <L n="_super_affordances">
+        <T>7158177636850136246<!--IwnBedWetting_Dresser_Change_Diaper--></T>
+      </L>
+    </U>
+    <U>
+      <V n="object_selection" t="objects_matching_name">
+        <U n="objects_matching_name">
+          <T n="partial_name">object_TableChangeDiaper</T>
+        </U>
+      </V>
+      <L n="_super_affordances">
+        <T>7158177636850136246<!--IwnBedWetting_Dresser_Change_Diaper--></T>
+      </L>
+    </U>
+    <U>
+      <V n="object_selection" t="objects_matching_name">
+        <U n="objects_matching_name">
+          <T n="partial_name">object_toiletStall</T>
+        </U>
+      </V>
+      <L n="_super_affordances">
+        <T>7158177636850136246<!--IwnBedWetting_Dresser_Change_Diaper--></T>
+      </L>
+    </U>
+    <U>
+      <V n="object_selection" t="objects_matching_name">
+        <U n="objects_matching_name">
+          <T n="partial_name">object_toilet_stall</T>
+        </U>
+      </V>
+      <L n="_super_affordances">
+        <T>7158177636850136246<!--IwnBedWetting_Dresser_Change_Diaper--></T>
+      </L>
+    </U>
+  </L>
+  <L n="add_interactions_to_phones">
+    <T>13194821150396379833<!--LilNinthel:purchase_diapers_phone--></T>
+  </L>
+  <L n="add_interactions_to_sims">
+    <T>14596871083075764097<!--LilNinthel:reminisce_diaper_days--></T>
+    <T>15311357928494165949<!--LilNinthel:Sim_DiaperChanger_Add--></T>
+    <T>12995682688261733956<!--LilNinthel:Sim_DiaperChanger_Remove--></T>
+    <T>14155253238100400515<!--LilNinthel:si_diaperLifestyle_247_enable--></T>
+    <T>12062217694148515078<!--LilNinthel:si_diaperLifestyle_247_disable--></T>
+    <T>18434594154891771975<!--LilNinthel:si_diaperLifestyle_noToilets_enable--></T>
+    <T>14142462128725847194<!--LilNinthel:si_diaperLifestyle_noToilets_disable--></T>
+    <T>15893771750707179412<!--LilNinthel:si_diaperLifestyle_noMessyDiapers_enable--></T>
+    <T>18045181678675433975<!--LilNinthel:si_diaperLifestyle_noMessyDiapers_disable--></T>
+    <T>12414429578046042713<!--LilNinthel:si_diaperLifestyle_wordPreference_useDiaper_set0--></T>
+    <T>12414429578046042712<!--LilNinthel:si_diaperLifestyle_wordPreference_useDiaper_set1--></T>
+    <T>12414429578046042715<!--LilNinthel:si_diaperLifestyle_wordPreference_useDiaper_set2--></T>
+    <T>12414429578046042714<!--LilNinthel:si_diaperLifestyle_wordPreference_useDiaper_set3--></T>
+    <T>12414429578046042717<!--LilNinthel:si_diaperLifestyle_wordPreference_useDiaper_set4--></T>
+    <T>12414429578046042716<!--LilNinthel:si_diaperLifestyle_wordPreference_useDiaper_set5--></T>
+    <T>12414429578046042719<!--LilNinthel:si_diaperLifestyle_wordPreference_useDiaper_set6--></T>
+    <T>12414429578046042718<!--LilNinthel:si_diaperLifestyle_wordPreference_useDiaper_set7--></T>
+    <T>10304771230779158844<!--LilNinthel:si_diaperLifestyle_splitDiaperUsage_enable--></T>
+    <T>13922535808967989871<!--LilNinthel:si_diaperLifestyle_splitDiaperUsage_disable--></T>
+    <T>16845808079941036926<!--LilNinthel:si_diaperLifestyle_wordPreference_wetDiaper_set0--></T>
+    <T>16845808079941036927<!--LilNinthel:si_diaperLifestyle_wordPreference_wetDiaper_set1--></T>
+    <T>16845808079941036924<!--LilNinthel:si_diaperLifestyle_wordPreference_wetDiaper_set2--></T>
+    <T>16845808079941036925<!--LilNinthel:si_diaperLifestyle_wordPreference_wetDiaper_set3--></T>
+    <T>16845808079941036922<!--LilNinthel:si_diaperLifestyle_wordPreference_wetDiaper_set4--></T>
+    <T>16845808079941036923<!--LilNinthel:si_diaperLifestyle_wordPreference_wetDiaper_set5--></T>
+    <T>16845808079941036920<!--LilNinthel:si_diaperLifestyle_wordPreference_wetDiaper_set6--></T>
+    <T>16845808079941036921<!--LilNinthel:si_diaperLifestyle_wordPreference_wetDiaper_set7--></T>
+    <T>16845808079941036918<!--LilNinthel:si_diaperLifestyle_wordPreference_wetDiaper_set8--></T>
+    <T>10465346100032490070<!--LilNinthel:si_diaperLifestyle_wordPreference_messDiaper_set0--></T>
+    <T>10465346100032490071<!--LilNinthel:si_diaperLifestyle_wordPreference_messDiaper_set1--></T>
+    <T>10465346100032490068<!--LilNinthel:si_diaperLifestyle_wordPreference_messDiaper_set2--></T>
+    <T>10465346100032490069<!--LilNinthel:si_diaperLifestyle_wordPreference_messDiaper_set3--></T>
+    <T>10465346100032490066<!--LilNinthel:si_diaperLifestyle_wordPreference_messDiaper_set4--></T>
+    <T>10465346100032490067<!--LilNinthel:si_diaperLifestyle_wordPreference_messDiaper_set5--></T>
+    <T>10465346100032490064<!--LilNinthel:si_diaperLifestyle_wordPreference_messDiaper_set6--></T>
+    <T>10465346100032490065<!--LilNinthel:si_diaperLifestyle_wordPreference_messDiaper_set7--></T>
+    <T>10465346100032490078<!--LilNinthel:si_diaperLifestyle_wordPreference_messDiaper_set8--></T>
+    <T>10465346100032490079<!--LilNinthel:si_diaperLifestyle_wordPreference_messDiaper_set9--></T>
+    <T>13718773855935517157<!--LilNinthel:si_diaperLifestyle_wordPreference_messDiaper_set10--></T>
+    <T>13718773855935517156<!--LilNinthel:si_diaperLifestyle_wordPreference_messDiaper_set11--></T>
+    <T>13718773855935517159<!--LilNinthel:si_diaperLifestyle_wordPreference_messDiaper_set12--></T>
+    <T>16414261140971236016<!--LilNinthel:si_diaperLifestyle_diaperPunishment_enable--></T>
+    <T>14023486384085007219<!--LilNinthel:si_diaperLifestyle_diaperPunishment_disable--></T>
+    <T>10737543605140439711<!--LilNinthel:si_diaperLifestyle_diaperPunisher_enable--></T>
+    <T>12846355495158653794<!--LilNinthel:si_diaperLifestyle_diaperPunisher_disable--></T>
+    <T>17549575919075970337<!--LilNinthel:Iwnbedwetting_picker_Trait_Add--></T>
+    <T>18256476582106855784<!--LilNinthel:Iwnbedwetting_picker_Trait_Remove--></T>
+    <T>9941410955974660796<!--LilNinthel:Sim_Caregiver_Add--></T>
+    <T>18155728510129341167<!--LilNinthel:Sim_Caregiver_Remove--></T>
+    <T>17657993916402372753<!--LilNinthel:si_diaperLifestyle_bladderCapacity_tiny--></T>
+    <T>16597670528703350332<!--LilNinthel:si_diaperLifestyle_bladderCapacity_small--></T>
+    <T>16201447971030722846<!--LilNinthel:si_diaperLifestyle_bladderCapacity_normal--></T>
+    <T>12327693004787365908<!--LilNinthel:si_diaperLifestyle_bladderCapacity_large--></T>
+    <T>14386362981445808926<!--LilNinthel:si_diaperLifestyle_bladderCapacity_huge--></T>
+    <T>17402318489735215281<!--LilNinthel:social_convinceToTryDiapers--></T>
+    <T>9506916130253712957<!--LilNinthel:sim_BladderFailure_Diapered--></T>
+    <T>15859452976427592463<!--LilNinthel:si_diaperLifestyle_diaperPunishment_available_disable--></T>
+    <T>9640731892040355676<!--LilNinthel:si_diaperLifestyle_diaperPunishment_available_enable--></T>
+    <T>13994<!--sim_BladderFailure--></T>
+    <T>15759273023516538488<!--LilNinthel:si_diaperLifestyle_defaultDiaperType_ABDL--></T>
+    <T>11581281893755234458<!--LilNinthel:si_diaperLifestyle_defaultDiaperType_ABDL_premium--></T>
+    <T>18416410824063793128<!--LilNinthel:si_diaperLifestyle_defaultDiaperType_default--></T>
+    <T>10867622068985050094<!--LilNinthel:si_diaperLifestyle_defaultDiaperType_discreet--></T>
+    <T>12207001546443084830<!--LilNinthel:si_diaperLifestyle_defaultDiaperType_magic--></T>
+    <T>10259469682377308498<!--LilNinthel:si_diaperLifestyle_defaultDiaperType_medical--></T>
+    <T>10759831282112657668<!--LilNinthel:si_diaperLifestyle_defaultDiaperType_medical_premium--></T>
+    <T>16222166867205646783<!--LilNinthel:si_diaperLifestyle_defaultDiaperType_pullUp--></T>
+    <T>11991409802016259792<!--LilNinthel:si_diaperLifestyle_hatesDiaperChanges_disable--></T>
+    <T>11911703561254162177<!--LilNinthel:si_diaperLifestyle_hatesDiaperChanges_enable--></T>
+    <T>16280224798220699744<!--LilNinthel:si_diaperLifestyle_legacyTraitDiapers_disable--></T>
+    <T>14006236030436996049<!--LilNinthel:si_diaperLifestyle_legacyTraitDiapers_enable--></T>
+    <T>12176162681773385106<!--LilNinthel:si_diaperLifestyle_unlimitedPooping_disable--></T>
+    <T>15345395922004784271<!--LilNinthel:si_diaperLifestyle_unlimitedPooping_enable--></T>
+    <T>9955102383612450300<!--LilNinthel:si_diaperLifestyle_diaperChangeRemovePants_disable--></T>
+    <T>14092608073146588413<!--LilNinthel:si_diaperLifestyle_diaperChangeRemovePants_enable--></T>
+    <T>13500780652643351773<!--LilNinthel:si_diaperLifestyle_diaperLeakOverlay_disable--></T>
+    <T>14538962370820075158<!--LilNinthel:si_diaperLifestyle_diaperLeakOverlay_enable--></T>
+    <T>16056535538124266031<!--LilNinthel:si_diaperLifestyle_wetOverlay_disable--></T>
+    <T>17503182480305468924<!--LilNinthel:si_diaperLifestyle_wetOverlay_enable--></T>
+    <T>54254730051827696<!--LilNinthel:si_diaperLifestyle_noSelfDiaperChanges_disable--></T>
+    <T>18207244120334884769<!--LilNinthel:si_diaperLifestyle_noSelfDiaperChanges_enable--></T>
+    <!--<T></T>-->
+  </L>
+  <L n="add_buffs_to_trait">
+    <U>
+      <T n="trait">3743471655<!--mackico_ABDL_trait--></T>
+      <L n="buffs">
+        <U>
+          <V n="buff_reason" t="enabled">
+            <T n="enabled">0xB419BA00<!--Dummy buff for broadcasting diaper wearing--></T>
+          </V>
+          <T n="buff_type">10309070037716691412<!--LilNinthel_ABDL_dummybuff--></T>
+        </U>
+        <U>
+          <T n="buff_type">14814683103508715847<!--LilNinthel:buff_addCarriedTrait--></T>
+        </U>
+      </L>
+    </U>
+    <U>
+      <T n="trait">2797347202<!--LilLuna_UnhappilyDiapered_trait--></T>
+      <L n="buffs">
+        <U>
+          <V n="buff_reason" t="enabled">
+            <T n="enabled">0xB419BA00<!--Dummy buff for broadcasting diaper wearing--></T>
+          </V>
+          <T n="buff_type">10309070037716691412<!--LilNinthel_ABDL_dummybuff--></T>
+        </U>
+      </L>
+    </U>
+    <U>
+      <T n="trait">3851245159<!--BabyLola_LoveDiapers_trait_LovesDiapers--></T>
+      <L n="buffs">
+        <U>
+          <V n="buff_reason" t="enabled">
+            <T n="enabled">0xB419BA00<!--Dummy buff for broadcasting diaper wearing--></T>
+          </V>
+          <T n="buff_type">10309070037716691412<!--LilNinthel_ABDL_dummybuff--></T>
+        </U>
+      </L>
+    </U>
+    <U>
+      <T n="trait">3111634292<!--DiaperDump_HappilyMessy_trait--></T>
+      <L n="buffs">
+        <U>
+          <V n="buff_reason" t="enabled">
+            <T n="enabled">0xB419BA00<!--Dummy buff for broadcasting diaper wearing--></T>
+          </V>
+          <T n="buff_type">10309070037716691412<!--LilNinthel_ABDL_dummybuff--></T>
+        </U>
+      </L>
+    </U>
+  </L>
+</I>

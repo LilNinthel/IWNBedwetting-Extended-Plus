@@ -1,0 +1,24 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_relbit_knows_wears_diapers_add" s="17025688295062157958">
+  <L n="loot_actions">
+    <V t="relationship_bits_loot">
+      <U n="relationship_bits_loot">
+        <L n="bit_operations">
+          <U>
+            <T n="bit">4193068179<!--LilNinthel:relbit_suspects_wears_diapers--></T>
+            <E n="operation">REMOVE</E>
+            <E n="recipients">Object</E>
+            <E n="targets">Actor</E>
+          </U>
+        </L>
+        <L n="bit_operations">
+          <U>
+            <T n="bit">358442599<!--LilNinthel:relbit_knows_wears_diapers--></T>
+            <E n="operation">ADD</E>
+            <E n="recipients">Object</E>
+            <E n="targets">Actor</E>
+          </U>
+        </L>
+      </U>
+    </V>
+  </L>
+</I>

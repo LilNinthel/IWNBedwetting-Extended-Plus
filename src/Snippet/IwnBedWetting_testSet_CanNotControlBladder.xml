@@ -1,0 +1,12 @@
+<I c="TestSetInstance" i="snippet" m="event_testing.tests" n="IwnBedWetting_testSet_CanNotControlBladder" s="17607728555681978788">
+  <V n="invert_test" t="enabled">
+    <U n="enabled" />
+  </V>
+  <L n="test">
+    <L>
+      <V t="test_set_reference">
+        <T n="test_set_reference">15794548069054423667<!--IwnBedWetting_testSet_CanControlBladder--></T>
+      </V>
+    </L>
+  </L>
+</I>

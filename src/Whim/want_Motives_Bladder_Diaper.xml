@@ -1,0 +1,8 @@
+<I c="Whim" i="whim" m="whims.whim" n="LilNinthel:want_Motives_Bladder_Diaper" s="17937877559141803289">
+  <V n="chaining_whimset_chance_multiplier" t="enabled">
+    <T n="enabled">1.5</T>
+  </V>
+  <T n="fluff_description">0x96690A5C<!--I'm wearing a diaper, I don't need to hold it--></T>
+  <T n="goal">9568749013423682306<!--LilNinthel:whim_Motives_Bladder_Diaper--></T>
+  <E n="type">REACTIONARY</E>
+</I>

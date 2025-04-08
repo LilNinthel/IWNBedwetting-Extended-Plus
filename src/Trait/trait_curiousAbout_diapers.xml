@@ -1,0 +1,18 @@
+<I c="Trait" i="trait" m="traits.traits" n="LilNinthel:trait_curiousAbout_diapers" s="1432483267">
+  <L n="ages">
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <T n="trait_description">0xFF7C067C<!--{0.SimFirstName} is curious about wearing diapers. Maybe {M0.he}{F0.she} should order some...--></T>
+  <T n="icon">2f7d0004:00000000:FC84332D083ED480</T>
+  <E n="min_lod_value">MINIMUM</E>
+  <L n="species">
+    <E />
+  </L>
+  <T n="display_name">0x2559FBD8<!--Curious About Diapers--></T>
+  <T n="display_name_gender_neutral">0x2559FBD8<!--Curious About Diapers--></T>
+  <E n="trait_type">GAMEPLAY</E>
+</I>

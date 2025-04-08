@@ -1,0 +1,74 @@
+<I c="Broadcaster" i="broadcaster" m="broadcasters.broadcaster" n="LilNinthel:broadcaster_Reaction_PeeingPants" s="12877732066673186069">
+  <V n="allow_sim_test" t="enabled">
+    <L n="enabled">
+      <L>
+        <V t="mood">
+          <U n="mood">
+            <T n="disallow">True</T>
+            <T n="mood">201531<!--Mood_Possessed--></T>
+          </U>
+        </V>
+      </L>
+    </L>
+  </V>
+  <V n="clustering" t="disabled" />
+  <L n="constraints">
+    <V t="line_of_sight">
+      <U n="line_of_sight">
+        <V n="temporary_los" t="enabled" />
+      </U>
+    </V>
+  </L>
+  <L n="effects">
+    <V t="loot">
+      <U n="loot">
+        <V n="excluded_participants" t="enabled">
+          <L n="enabled">
+            <E>TargetSim</E>
+          </L>
+        </V>
+        <L n="loot_list">
+          <T>12135191792099310099<!--LilNinthel:loot_Reaction_PeeingPants--></T>
+        </L>
+        <L n="tests">
+          <L>
+            <V t="sim_info">
+              <U n="sim_info">
+                <V n="ages" t="specified">
+                  <L n="specified">
+                    <E>TEEN</E>
+                    <E>YOUNGADULT</E>
+                    <E>ADULT</E>
+                    <E>ELDER</E>
+                    <E>CHILD</E>
+                  </L>
+                </V>
+                <V n="species" t="specified">
+                  <U n="specified">
+                    <L n="species">
+                      <E />
+                    </L>
+                  </U>
+                </V>
+              </U>
+            </V>
+            <V t="trait">
+              <U n="trait">
+                <L n="blacklist_traits">
+                  <T>806286945<!--LilNinthel:trait_pants_wetter--></T>
+                  <T>16860<!--trait_Slob--></T>
+                </L>
+              </U>
+            </V>
+          </L>
+        </L>
+      </U>
+    </V>
+  </L>
+  <V n="frequency" t="on_pulse">
+    <U n="on_pulse">
+      <T n="cooldown_time">1</T>
+    </U>
+  </V>
+  <T n="immediate">True</T>
+</I>

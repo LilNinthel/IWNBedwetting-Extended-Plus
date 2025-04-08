@@ -1,0 +1,150 @@
+<I c="MixerInteraction" i="interaction" m="interactions.base.mixer_interaction" n="LilNinthel:reaction_Mixer_SmellSoakedDiaper" s="12512254087323538527">
+  <V n="_icon" t="participant">
+    <U n="participant">
+      <L n="participant_type">
+        <E>Actor</E>
+      </L>
+    </U>
+  </V>
+  <V n="_interruptible" t="enabled">
+    <T n="enabled">True</T>
+  </V>
+  <T n="allow_autonomous">False</T>
+  <V n="basic_content" t="one_shot">
+    <U n="one_shot">
+      <V n="allow_with_unholsterable_object" t="override" />
+      <U n="animation_ref">
+        <T n="factory">34556<!--EnvironmentalReaction_Smell_Negative--></T>
+        <U n="overrides">
+          <V n="balloons" t="enabled">
+            <L n="enabled">
+              <U>
+                <L n="balloon_choices">
+                  <U>
+                    <V n="item" t="balloon_icon">
+                      <U n="balloon_icon">
+                        <V n="icon" t="resource_key">
+                          <U n="resource_key">
+                            <T n="key">2f7d0004:00000000:820522970E5AC06B</T>
+                          </U>
+                        </V>
+                      </U>
+                    </V>
+                  </U>
+                </L>
+                <T n="balloon_delay">1</T>
+                <L n="balloon_target">
+                  <E>Actor</E>
+                </L>
+              </U>
+            </L>
+          </V>
+        </U>
+      </U>
+    </U>
+  </V>
+  <L n="basic_liabilities">
+    <V t="timeout">
+      <U n="timeout">
+        <T n="timeout">2</T>
+      </U>
+    </V>
+  </L>
+  <V n="content_score" t="disabled" />
+  <T n="display_name">0x529B5807<!--Foul Stench--></T>
+  <U n="display_name_text_tokens">
+    <L n="tokens">
+      <V t="participant_type">
+        <U n="participant_type">
+          <V n="objects" t="from_participant">
+            <U n="from_participant">
+              <E n="participant">Actor</E>
+            </U>
+          </V>
+        </U>
+      </V>
+      <V t="participant_type">
+        <U n="participant_type">
+          <V n="objects" t="from_participant">
+            <U n="from_participant">
+              <E n="participant">Object</E>
+            </U>
+          </V>
+        </U>
+      </V>
+    </L>
+  </U>
+  <L n="interaction_category_tags">
+    <E>Interaction_Mixer</E>
+    <E>Interaction_All</E>
+  </L>
+  <V n="outcome" t="single">
+    <U n="single">
+      <U n="actions">
+        <L n="loot_list">
+          <T>12911858141007742543<!--LilNinthel:Loot_Buff_Suppress_Reaction_SmellWetDiaper--></T>
+        </L>
+      </U>
+    </U>
+  </V>
+  <E n="target_type">OBJECT</E>
+  <L n="test_globals">
+    <V t="sim_info">
+      <U n="sim_info">
+        <V n="ages" t="specified">
+          <L n="specified">
+            <E>TEEN</E>
+            <E>YOUNGADULT</E>
+            <E>ADULT</E>
+            <E>ELDER</E>
+            <E>CHILD</E>
+          </L>
+        </V>
+        <V n="species" t="specified">
+          <U n="specified">
+            <L n="species">
+              <E />
+            </L>
+          </U>
+        </V>
+        <E n="who">Actor</E>
+      </U>
+    </V>
+    <V t="situation_job_test">
+      <U n="situation_job_test">
+        <T n="negate">True</T>
+        <L n="role_tags">
+          <E>Situation_Retail_Employee</E>
+        </L>
+      </U>
+    </V>
+    <V t="participant_running_interaction">
+      <U n="participant_running_interaction">
+        <T n="test_interaction_queue">True</T>
+        <L n="affordances">
+          <T>16617239709778473043<!--LilNinthel:si_Touching_ChangeDiaper_Check--></T>
+          <T>284045<!--socialSuperInteraction_CarryPickUp_Toddler_ToTableChangeDiaper_Diaper--></T>
+          <T>14344559205617732950<!--LilNinthel:si_Touching_ChangeDiaper--></T>
+          <T>277964<!--tableChangeDiaper_Toddler_ChangeDiaper--></T>
+          <T>3954975860454133023<!--LilNinthel_ABDL_DiaperChange_Interaction--></T>
+          <T>140910<!--sim_Toddler_Talk_CTYAE_Listen--></T>
+        </L>
+        <E n="participant">Actor</E>
+        <T n="test_for_not_running">True</T>
+      </U>
+    </V>
+  </L>
+  <L n="tests">
+    <L>
+      <V t="buff">
+        <U n="buff">
+          <L n="blacklist">
+            <T>13599066083910678596<!--LilNinthel:Buff_Suppress_Reaction_SmellWetDiaper--></T>
+            <T>145405<!--buff_Role_Butler_NPC--></T>
+          </L>
+        </U>
+      </V>
+    </L>
+  </L>
+  <T n="visible">False</T>
+</I>

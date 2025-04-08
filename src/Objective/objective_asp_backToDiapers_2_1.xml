@@ -1,0 +1,23 @@
+<I c="Objective" i="objective" m="event_testing.objective_tuning" n="LilNinthel:objective_asp_backToDiapers_2_1" s="15756367414260610848">
+  <L n="completion_loot">
+    <T>273578<!--loot_Want_AspirationCompleted--></T>
+  </L>
+  <T n="display_text">0x718D1171<!--Let it flow (in your diaper)--></T>
+  <V n="objective_completion_type" t="use_test_result" />
+  <V n="objective_test" t="ran_interaction_test">
+    <U n="ran_interaction_test">
+      <L n="affordances">
+        <T>15386335300547775969<!--LilNinthel:toddler_UseDiaper--></T>
+        <T>17336362655583455169<!--LilNinthel:toddler_UseDiaper_failure_standing--></T>
+        <T>14713553300442312551<!--LilNinthel:toddler_UseDiaperPoop--></T>
+        <T>11921925688338352890<!--LilNinthel:toddler_UseDiaperPoop_standing--></T>
+        <T>10270159175383340941<!--LilNinthel:toddler_UseDiaperPoopOnly--></T>
+        <T>11047247142804936032<!--LilNinthel:toddler_UseDiaperPoopOnly_standing--></T>
+        <T>17846418620694466401<!--LilNinthel:toddler_UseDiaper_Continuation--></T>
+        <T>9857974918501862535<!--LilNinthel:toddler_UseDiaperPoop_continuation--></T>
+        <T>18401942594569887613<!--LilNinthel:toddler_UseDiaperPoopOnly_continuation--></T>
+      </L>
+    </U>
+  </V>
+  <T n="satisfaction_points">350</T>
+</I>

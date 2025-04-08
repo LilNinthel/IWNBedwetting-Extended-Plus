@@ -1,0 +1,12 @@
+<!-- S4TK Group: 80000000 -->
+<I xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" c="Buff" s="12746728295223505722" i="buff" m="buffs.buff" n="LilNinthel:buff_PutDiaperBackOn">
+  <T n="buff_description">0x00000000</T>
+  <T n="buff_name">0x00000000</T>
+  <T n="icon">2f7d0004:00000000:c09b0954d2ef3d7f</T>
+  <T n="mood_type">0</T>
+  <T n="mood_weight">0</T>
+  <L n="static_commodity_to_add">
+    <T>15969479915882814673<!--LilNinthel:commodity_DiaperItem_PutDiaperBackOn--></T>
+  </L>
+  <T n="visible">False</T>
+</I>

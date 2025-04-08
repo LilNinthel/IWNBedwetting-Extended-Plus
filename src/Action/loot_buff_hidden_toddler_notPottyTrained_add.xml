@@ -1,0 +1,25 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_buff_hidden_toddler_notPottyTrained_add" s="13268296884925976241">
+  <L n="loot_actions">
+    <V t="buff">
+      <U n="buff">
+        <E n="subject">Actor</E>
+        <U n="buff">
+          <T n="buff_type">10508498818174104478<!--LilNinthel:buff_hidden_toddler_notPottyTrained--></T>
+        </U>
+      </U>
+    </V>
+  </L>
+  <L n="tests">
+    <L>
+      <V t="sim_info">
+        <U n="sim_info">
+          <V n="ages" t="specified">
+            <L n="specified">
+              <E>TODDLER</E>
+            </L>
+          </V>
+        </U>
+      </V>
+    </L>
+  </L>
+</I>

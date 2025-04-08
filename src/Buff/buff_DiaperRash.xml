@@ -1,0 +1,25 @@
+<I c="Buff" i="buff" m="buffs.buff" n="LilNinthel:buff_DiaperRash" s="14251928607352134641">
+  <V n="_add_test_set" t="tests_set">
+    <L n="tests_set">
+      <L>
+        <V t="trait">
+          <U n="trait">
+            <L n="blacklist_traits">
+              <T>440037067<!--LilNinthel:trait_RashProof--></T>
+            </L>
+          </U>
+        </V>
+      </L>
+    </L>
+  </V>
+  <T n="audio_sting_on_add" p="InGame\Audio\Stings\sting_buff_gain.propx">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove" p="InGame\Audio\Stings\sting_buff_loss.propx">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0x539AA99C<!--This dirty diaper is making my skin feel itchy.--></T>
+  <T n="buff_name">0x129A4073<!--Diaper Rash--></T>
+  <T n="icon" p="InGame\UI\Icons\Buffs\buffs_Diaper_neg.png">2f7d0004:00000000:a625361a6f98c2f0</T>
+  <T n="mood_type">14643<!--Mood_Sad--></T>
+  <T n="mood_weight">1</T>
+  <L n="static_commodity_to_add">
+    <T>5539523642103205402<!--IWN_scommodity_changediaper--></T>
+  </L>
+</I>

@@ -1,0 +1,22 @@
+<I c="TestSetInstance" i="snippet" m="event_testing.tests" n="LilNinthel:testSet_NotBladderFailure_or_Incontinent" s="9765387755251253846">
+  <L n="test">
+    <L>
+      <V t="test_set_reference">
+        <T n="test_set_reference">17607728555681978788<!--IwnBedWetting_testSet_CanNotControlBladder--></T>
+      </V>
+    </L>
+    <L>
+      <V t="motive">
+        <U n="motive">
+          <L n="stats">
+            <T>16652<!--motive_Bladder--></T>
+          </L>
+          <U n="threshold">
+            <E n="comparison">GREATER</E>
+            <T n="value">-100</T>
+          </U>
+        </U>
+      </V>
+    </L>
+  </L>
+</I>

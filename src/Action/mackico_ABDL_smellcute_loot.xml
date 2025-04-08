@@ -1,0 +1,42 @@
+<I xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" c="LootActions" s="15960645997265309245" i="action" m="interactions.utils.loot" n="__shim:mackico_ABDL_smellcute_loot">
+  <L n="loot_actions">
+    <V t="buff">
+      <U n="buff">
+        <U n="buff">
+          <T n="buff_type">4209189722621853619<!--mackico_ABDL_smellcute_buff--></T>
+          <V n="buff_reason" t="enabled">
+            <T n="enabled">0xC4316E86<!--(From Wearing a Diaper)--></T>
+          </V>
+        </U>
+        <E n="subject">Actor</E>
+        <U n="chance">
+          <T n="base_chance">10</T>
+        </U>
+        <L n="tests">
+          <L>
+            <V t="buff">
+              <U n="buff">
+                <L n="blacklist">
+                  <T>10094<!--buff_Sim_IsSleeping--></T>
+                </L>
+                <E n="subject">Actor</E>
+              </U>
+            </V>
+            <V t="test_set_reference">
+              <T n="test_set_reference">17796732764948000262<!--IwnBedWetting_testSet_HasDiaperEquipped--></T>
+            </V>
+            <V t="buff">
+              <U n="buff">
+                <L n="blacklist">
+                  <T>4209189722621853619<!--mackico_ABDL_smellcute_buff--></T>
+                  <T>5848363590632818747<!--mackico_ABDL_buff_SmellyDiaper--></T>
+                  <!--MABDLE Smelly Buff-->
+                </L>
+              </U>
+            </V>
+          </L>
+        </L>
+      </U>
+    </V>
+  </L>
+</I>

@@ -1,0 +1,17 @@
+<I c="Objective" i="objective" m="event_testing.objective_tuning" n="LilNinthel:objective_asp_backToDiapers_1_2" s="15759393270260879844">
+  <L n="completion_loot">
+    <T>273578<!--loot_Want_AspirationCompleted--></T>
+  </L>
+  <T n="display_text">0xC29981E1<!--Buy what your heart desires--></T>
+  <V n="objective_completion_type" t="use_test_result" />
+  <V n="objective_test" t="inventory">
+    <U n="inventory">
+      <V n="contents_check" t="has_object_with_def">
+        <U n="has_object_with_def">
+          <T n="definition">13965923130368742748</T>
+        </U>
+      </V>
+    </U>
+  </V>
+  <T n="satisfaction_points">75</T>
+</I>

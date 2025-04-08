@@ -1,0 +1,17 @@
+<I c="Trait" i="trait" m="traits.traits" n="LilNinthel:trait_no_messy_diapers" s="1653757835">
+  <L n="ages">
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <T n="display_name">0x7CB3C42B<!--No Messy Diapers--></T>
+  <T n="icon" p="Generated">2f7d0004:00000000:322220fc9ba98a06</T>
+  <E n="min_lod_value">MINIMUM</E>
+  <L n="species">
+    <E />
+  </L>
+  <T n="trait_description">0x27CFFE14<!--Some Sims may enjoy the feeling of a messy diaper, but it's not for {0.SimFirstName}. {M0.He}{F0.She} will only make a mess if {M0.he}{F0.she}'s made to or has a genuine accident.--></T>
+  <E n="trait_type">GAMEPLAY</E>
+</I>

@@ -1,0 +1,12 @@
+<I c="TestSetInstance" i="snippet" m="event_testing.tests" n="LilNinthel:testSet_diaperPunishment_Actor_isDiaperPunishing_Target_inverted" s="16889593377916398262">
+  <V n="invert_test" t="enabled">
+    <U n="enabled" />
+  </V>
+  <L n="test">
+    <L>
+      <V t="test_set_reference">
+        <T n="test_set_reference">14860755856829140858<!--LilNinthel:testSet_diaperPunishment_Actor_isDiaperPunishing_Target--></T>
+      </V>
+    </L>
+  </L>
+</I>

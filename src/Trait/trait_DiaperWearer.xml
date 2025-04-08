@@ -1,0 +1,112 @@
+<I c="Trait" i="trait" m="traits.traits" n="LilNinthel:trait_DiaperWearer" s="1891765918">
+  <L n="ages">
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <L n="buff_replacements">
+    <U>
+      <T n="key">6599520983304938591<!--mackico_ABDL_corebuff--></T>
+      <U n="value">
+        <T n="buff_type">18431600350681200506<!--__shim:mackico_ABDL_corebuff--></T>
+      </U>
+    </U>
+    <U>
+      <T n="key">1190401208031345023<!--LilLuna_UnhappilyDiapered_buff_HatesDiapers--></T>
+      <U n="value">
+        <T n="buff_type">12623981993528856686<!--__shim:LilLuna_UnhappilyDiapered_buff_HatesDiapers--></T>
+      </U>
+    </U>
+    <U>
+      <T n="key">10563953826471159022<!--DiaperDump_HappilyMessy_buff_corebuff--></T>
+      <U n="value">
+        <T n="buff_type">14028334560203141367<!--__shim:DiaperDump_HappilyMessy_buff_corebuff--></T>
+      </U>
+    </U>
+    <U>
+      <T n="key">11072466440704092092<!--BabyLola_LoveDiapers_buff_LovesDiapers--></T>
+      <U n="value">
+        <T n="buff_type">14961780449084563291<!--__shim:BabyLola_LoveDiapers_buff_LovesDiapers--></T>
+      </U>
+    </U>
+    <U>
+      <T n="key">10923212517461456717<!--LilNinthel:buff_desperation_ReallyHasToPee--></T>
+      <U n="value">
+        <V n="buff_reason" t="enabled">
+          <T n="enabled">0xD25A310F<!--(From Low Bladder)--></T>
+        </V>
+        <T n="buff_type">13980927511771235286<!--LilNinthel:buff_Diapered_desperation_ReallyHasToPee--></T>
+      </U>
+    </U>
+    <U>
+      <T n="key">10363295668338834268<!--LilNinthel:buff_desperation_HasToPee--></T>
+      <U n="value">
+        <V n="buff_reason" t="enabled">
+          <T n="enabled">0xD25A310F<!--(From Low Bladder)--></T>
+        </V>
+        <T n="buff_type">13020943780654159051<!--LilNinthel:buff_Diapered_desperation_HasToPee--></T>
+      </U>
+    </U>
+    <U>
+      <T n="key">27108<!--Buff_Motives_Bladder_ReallyHasToPee--></T>
+      <U n="value">
+        <V n="buff_reason" t="enabled">
+          <T n="enabled">0xD25A310F<!--(From Low Bladder)--></T>
+        </V>
+        <T n="buff_type">10825413388171813225<!--LilNinthel:buff_Diapered_ReallyHasToPee--></T>
+      </U>
+    </U>
+    <U>
+      <T n="key">27109<!--Buff_Motives_Bladder_HasToPee--></T>
+      <U n="value">
+        <V n="buff_reason" t="enabled">
+          <T n="enabled">0xD25A310F<!--(From Low Bladder)--></T>
+        </V>
+        <T n="buff_type">15836849666491925616<!--LilNinthel:buff_Diapered_HasToPee--></T>
+      </U>
+    </U>
+  </L>
+  <T n="trait_description">0xB3043FB1<!--This Sim is wearing a diaper.--></T>
+  <T n="icon">2f7d0004:00000000:322220fc9ba98a06</T>
+  <T n="display_name">0xEFDE733B<!--Diaper Wearer--></T>
+  <T n="display_name_gender_neutral">0xEFDE733B<!--Diaper Wearer--></T>
+  <E n="min_lod_value">MINIMUM</E>
+  <L n="species">
+    <E />
+  </L>
+  <L n="super_affordances">
+    <T>15386335300547775969<!--LilNinthel:toddler_UseDiaper--></T>
+    <T>17336362655583455169<!--LilNinthel:toddler_UseDiaper_failure_standing--></T>
+    <T>14713553300442312551<!--LilNinthel:toddler_UseDiaperPoop--></T>
+    <T>11921925688338352890<!--LilNinthel:toddler_UseDiaperPoop_standing--></T>
+    <T>10270159175383340941<!--LilNinthel:toddler_UseDiaperPoopOnly--></T>
+    <T>11047247142804936032<!--LilNinthel:toddler_UseDiaperPoopOnly_standing--></T>
+    <T>16617239709778473043<!--LilNinthel:si_Touching_ChangeDiaper_Check--></T>
+    <T>10785441443215295256<!--LilNinthel:si_Touching_ChangeDiaper_Ask--></T>
+    <T>3954975860454133023<!--LilNinthel_ABDL_DiaperChange_Interaction--></T>
+    <T>9876194458459655979<!--LilNinthel:Sim_DiaperChanger_Add_Target--></T>
+    <T>14174614305645774612<!--LilNinthel:Sim_DiaperChanger_Remove_Target--></T>
+    <T>14883131033050360437<!--LilNinthel:social_askToTryDiapers--></T>
+    <T>14347203327565699161<!--LilNinthel:bedwet--></T>
+  </L>
+  <L n="target_super_affordances">
+    <!--<U>
+      <T n="affordance">9876194458459655979</T>
+    </U>
+    <U>
+      <T n="affordance">14174614305645774612</T>
+    </U>-->
+    <U>
+      <T n="affordance">15483785028928119341<!--LilNinthel:AskForDiaper--></T>
+    </U>
+    <U>
+      <T n="affordance">8612311698779241887<!--LilNinthel_ABDL_AskForDiaperChange_Interaction--></T>
+    </U>
+  </L>
+  <E n="trait_type">HIDDEN</E>
+  <V n="whim_set" t="enabled">
+    <T n="enabled">12350160922841085616<!--LilNinthel:whimset_HasTraitWearsDiapers--></T>
+  </V>
+</I>

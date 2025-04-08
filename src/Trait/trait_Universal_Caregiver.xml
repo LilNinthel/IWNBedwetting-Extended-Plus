@@ -1,0 +1,18 @@
+<I c="Trait" i="trait" m="traits.traits" n="LilNinthel:trait_Universal_Caregiver" s="1217135835">
+  <L n="ages">
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <T n="buffs_add_on_spawn_only">False</T>
+  <T n="trait_description">0x7C80F7DF<!--These Sims can take care of any Little or ABDL they have met.--></T>
+  <T n="icon">2f7d0004:00000000:a3210663f1ba2854</T>
+  <T n="display_name">0xE08DD6CA<!--Universal Caregiver--></T>
+  <T n="display_name_gender_neutral">0xE08DD6CA<!--Universal Caregiver--></T>
+  <E n="min_lod_value">MINIMUM</E>
+  <L n="species">
+    <E />
+  </L>
+  <E n="trait_type">GAMEPLAY</E>
+</I>

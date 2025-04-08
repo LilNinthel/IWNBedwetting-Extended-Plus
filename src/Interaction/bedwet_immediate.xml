@@ -1,0 +1,66 @@
+<I c="ImmediateSuperInteraction" i="interaction" m="interactions.base.immediate_interaction" n="LilNinthel:bedwet_immediate" s="15447398414625918803">
+  <V n="_icon" t="resource_key">
+    <U n="resource_key">
+      <T n="key">2f7d0004:00000000:62313de8780bc7a9</T>
+    </U>
+  </V>
+  <V n="_saveable" t="enabled" />
+  <T n="_super_affordance_can_share_target">True</T>
+  <T n="acquire_targets_as_resource">False</T>
+  <V n="content_score" t="disabled" />
+  <T n="display_name">0x0A0B164B<!--Wet the bed--></T>
+  <U n="display_name_text_tokens">
+    <L n="tokens">
+      <V t="participant_type">
+        <U n="participant_type">
+          <V n="objects" t="from_participant">
+            <U n="from_participant">
+              <E n="participant">Actor</E>
+            </U>
+          </V>
+        </U>
+      </V>
+      <V t="participant_type">
+        <U n="participant_type">
+          <V n="objects" t="from_participant">
+            <U n="from_participant">
+              <E n="participant">Object</E>
+            </U>
+          </V>
+        </U>
+      </V>
+    </L>
+  </U>
+  <T n="ignore_exclude_all_compatibility">True</T>
+  <L n="interaction_category_tags">
+    <E>INVALID</E>
+  </L>
+  <V n="outcome" t="single">
+    <U n="single">
+      <U n="actions">
+        <L n="basic_extras">
+          <V t="loot">
+            <U n="loot">
+              <L n="loot_list">
+                <T>10251625219716980905<!--LilNinthel:loot_copy_bladder_value--></T>
+              </L>
+              <V n="timing" t="at_beginning" />
+            </U>
+          </V>
+        </L>
+        <L n="loot_list">
+          <T>96886<!--loot_Commodity_HygieneHands_ReduceMed--></T>
+          <T>15310184364901267793<!--LilNinthel:loot_wet_bed--></T>
+          <T>9642<!--loot_BladderFailure_PuddleChance--></T>
+        </L>
+      </U>
+    </U>
+  </V>
+  <E n="target_type">ACTOR</E>
+  <V n="test_disallow_while_running" t="enabled">
+    <U n="enabled">
+      <T n="test_self">True</T>
+    </U>
+  </V>
+  <L n="test_globals" />
+</I>

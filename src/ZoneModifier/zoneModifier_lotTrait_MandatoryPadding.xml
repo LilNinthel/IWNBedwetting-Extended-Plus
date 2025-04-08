@@ -1,0 +1,10 @@
+<I c="ZoneModifier" i="zone_modifier" m="zone_modifier.zone_modifier" n="LilNinthel:zoneModifier_lotTrait_MandatoryPadding" s="10997403898984641840">
+  <L n="enter_lot_loot">
+    <T>13868228643327549260<!--LilNinthel:loot_buff_ABDL_dummybuff_add--></T>
+    <T>16334679009313712523<!--LilNinthel:loot_buff_lotTrait_MandatoryPadding_add--></T>
+  </L>
+  <L n="exit_lot_loot">
+    <T>10868188419716210463<!--LilNinthel:loot_buff_ABDL_dummybuff_remove--></T>
+    <T>18106531190447833242<!--LilNinthel:loot_buff_lotTrait_MandatoryPadding_remove--></T>
+  </L>
+</I>

@@ -1,0 +1,18 @@
+<I c="Trait" i="trait" m="traits.traits" n="LilNinthel:trait_unlimitedPooping" s="10641654953555617240">
+  <L n="ages">
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <T n="buffs_add_on_spawn_only">False</T>
+  <T n="trait_description">0xED3C9533<!--{0.SimFirstName} can will themselves to poop at anytime, no matter what their bladder level is.--></T>
+  <T n="icon">2f7d0004:00000000:f17489d8e727c38e</T>
+  <E n="min_lod_value">MINIMUM</E>
+  <L n="species">
+    <E />
+  </L>
+  <T n="display_name">0x90923E29<!--Unlimited Pooping--></T>
+  <E n="trait_type">HIDDEN</E>
+</I>

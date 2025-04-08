@@ -1,0 +1,58 @@
+<I c="TestSetInstance" i="snippet" m="event_testing.tests" n="testSetInstance_Infant_CanMove" s="282535">
+  <L n="test">
+    <L>
+      <V t="sim_info">
+        <U n="sim_info">
+          <V n="ages" t="specified">
+            <L n="specified">
+              <E>INFANT</E>
+            </L>
+          </V>
+        </U>
+      </V>
+      <V t="developmental_milestone">
+        <U n="developmental_milestone">
+          <T n="developmental_milestone">286486<!--infantMilestones_GrossMotor_SitUp--></T>
+          <E n="fallback_result">PASS</E>
+        </U>
+      </V>
+    </L>
+    <L>
+      <V t="buff">
+        <U n="buff">
+          <V n="whitelist" t="enabled">
+            <L n="enabled">
+              <T>332429<!--buff_InfantMilestones_AnticipationMoment_AllowSit--></T>
+            </L>
+          </V>
+        </U>
+      </V>
+    </L>
+    <L>
+      <V t="sim_info">
+        <U n="sim_info">
+          <V n="ages" t="specified">
+            <L n="specified">
+              <E>CHILD</E>
+              <E>TEEN</E>
+              <E>YOUNGADULT</E>
+              <E>ADULT</E>
+              <E>ELDER</E>
+            </L>
+          </V>
+          <V n="species" t="specified">
+            <U n="specified">
+              <L n="species">
+                <E />
+              </L>
+            </U>
+          </V>
+          <E n="who">Actor</E>
+        </U>
+      </V>
+      <V t="test_set_reference">
+        <T n="test_set_reference">12240451678078890754<!--LilNinthel:testSetInstance_ActorIsInfantOrLittle--></T>
+      </V>
+    </L>
+  </L>
+</I>

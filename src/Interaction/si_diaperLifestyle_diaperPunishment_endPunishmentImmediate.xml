@@ -1,0 +1,78 @@
+<I c="ImmediateSuperInteraction" i="interaction" m="interactions.base.immediate_interaction" n="LilNinthel:si_diaperLifestyle_diaperPunishment_endPunishmentImmediate" s="9664829844167702274">
+  <V n="_icon" t="participant" />
+  <V n="_saveable" t="disabled" />
+  <T n="category">17668741221974933148<!--LilNinthel:pieMenuCategory_diaperPunishment--></T>
+  <V n="content_score" t="disabled" />
+  <T n="display_name">0x7A76D5F6<!--End {1.SimFirstName}'s Diaper Punishment--></T>
+  <U n="display_name_text_tokens">
+    <L n="tokens">
+      <V t="participant_type">
+        <U n="participant_type">
+          <V n="objects" t="from_participant">
+            <U n="from_participant">
+              <E n="participant">Actor</E>
+            </U>
+          </V>
+        </U>
+      </V>
+      <V t="participant_type">
+        <U n="participant_type">
+          <V n="objects" t="from_participant">
+            <U n="from_participant">
+              <E n="participant">Object</E>
+            </U>
+          </V>
+        </U>
+      </V>
+    </L>
+  </U>
+  <L n="interaction_category_tags">
+    <E>INVALID</E>
+  </L>
+  <V n="outcome" t="single">
+    <U n="single">
+      <U n="actions">
+        <L n="loot_list">
+          <T>13689429912956792056<!--LilNinthel:loot_relbit_DiaperPunisher_remove--></T>
+        </L>
+      </U>
+    </U>
+  </V>
+  <V n="pie_menu_icon" t="enabled">
+    <V n="enabled" t="resource_key">
+      <U n="resource_key">
+        <T n="key" p="InGame\UI\Icons\PieMenu\Interactions\icon_pieMenu_immediateInteraction.png">2f7d0004:00000000:25eea5cdba6a6fd6</T>
+      </U>
+    </V>
+  </V>
+  <T n="pie_menu_priority">10</T>
+  <U n="progress_bar_enabled">
+    <T n="bar_enabled">False</T>
+  </U>
+  <E n="target_type">TARGET</E>
+  <L n="test_globals">
+    <V t="sim_info">
+      <U n="sim_info">
+        <V n="ages" t="specified">
+          <L n="specified">
+            <E>CHILD</E>
+            <E>TEEN</E>
+            <E>YOUNGADULT</E>
+            <E>ADULT</E>
+            <E>ELDER</E>
+          </L>
+        </V>
+        <V n="species" t="specified">
+          <U n="specified">
+            <L n="species">
+              <E />
+            </L>
+          </U>
+        </V>
+      </U>
+    </V>
+    <V t="test_set_reference">
+      <T n="test_set_reference">14860755856829140858<!--LilNinthel:testSet_diaperPunishment_Actor_isDiaperPunishing_Target--></T>
+    </V>
+  </L>
+</I>

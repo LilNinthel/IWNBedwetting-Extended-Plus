@@ -1,0 +1,26 @@
+<!-- S4TK Group: 80000000 -->
+<I c="Buff" s="16362850560909423383" i="buff" m="buffs.buff" n="LilNinthel:buff_leakydiaper_state">
+  <L n="_loot_on_addition">
+    <T>11899094150883860437<!--LilNinthel:loot_buff_leakydiaper_vfx_add--></T>
+  </L>
+  <L n="_loot_on_removal">
+    <T>18261421004888198316<!--LilNinthel:loot_buff_leakydiaper_vfx_remove--></T>
+  </L>
+  <T n="buff_description">0x00000000</T>
+  <T n="buff_name">0x00000000</T>
+  <T n="icon">2f7d0004:00000000:c09b0954d2ef3d7f</T>
+  <T n="mood_type">0</T>
+  <T n="mood_weight">0</T>
+  <U n="game_effect_modifier">
+    <L n="_game_effect_modifiers">
+      <V t="autonomy_modifier">
+        <U n="autonomy_modifier">
+          <L n="commodities_to_add">
+            <T>9232752940900993287<!--LilNinthel:statistic_leakydiaper_effects--></T>
+          </L>
+        </U>
+      </V>
+    </L>
+  </U>
+  <T n="visible">False</T>
+</I>

@@ -1,0 +1,83 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_Reaction_SmellWetDiaper" s="17033788365760675125">
+  <L n="loot_actions">
+    <V t="reaction">
+      <U n="reaction">
+        <U n="chance">
+          <T n="base_chance">50</T>
+        </U>
+        <V n="mixer_reaction" t="enabled">
+          <U n="enabled">
+            <T n="affordance">12512254087323538527<!--LilNinthel:reaction_Mixer_SmellSoakedDiaper--></T>
+            <V n="affordance_target" t="enabled">
+              <E n="enabled">Object</E>
+            </V>
+          </U>
+        </V>
+        <V n="si_reaction" t="enabled">
+          <U n="enabled">
+            <T n="affordance">11379318871287562953<!--LilNinthel:reaction_SmellSoakedDiaper--></T>
+            <E n="affordance_priority">Low</E>
+            <V n="affordance_target" t="enabled">
+              <E n="enabled">Object</E>
+            </V>
+          </U>
+        </V>
+        <L n="tests">
+          <L>
+            <V t="trait">
+              <U n="trait">
+                <L n="blacklist_traits">
+                  <T>1891765918<!--LilNinthel:trait_DiaperWearer--></T>
+                  <T>1432483267<!--LilNinthel:trait_curiousAbout_diapers--></T>
+                  <T>16860<!--trait_Slob--></T>
+                </L>
+              </U>
+            </V>
+          </L>
+        </L>
+        <V n="text" t="use_default" />
+      </U>
+    </V>
+    <V t="reaction">
+      <U n="reaction">
+        <U n="chance">
+          <T n="base_chance">50</T>
+        </U>
+        <V n="mixer_reaction" t="enabled">
+          <U n="enabled">
+            <T n="affordance">12259846964174399783<!--LilNinthel:reaction_Mixer_SmellSoakedDiaper_LikesSmell--></T>
+            <V n="affordance_target" t="enabled">
+              <E n="enabled">Object</E>
+            </V>
+          </U>
+        </V>
+        <V n="si_reaction" t="enabled">
+          <U n="enabled">
+            <T n="affordance">13989492212908188733<!--LilNinthel:reaction_SmellSoakedDiaper_LikesSmell--></T>
+            <E n="affordance_priority">Low</E>
+            <V n="affordance_target" t="enabled">
+              <E n="enabled">Object</E>
+            </V>
+          </U>
+        </V>
+        <L n="tests">
+          <L>
+            <V t="trait">
+              <U n="trait">
+                <L n="whitelist_traits">
+                  <T>4155524921<!--LilNinthel:trait_diapered_247--></T>
+                  <T>614588825<!--LilNinthel:trait_diaper_devotee--></T>
+                  <T>3851245159<!--BabyLola_LoveDiapers_trait_LovesDiapers--></T>
+                  <T>3743471655<!--mackico_ABDL_trait--></T>
+                  <T>3111634292<!--DiaperDump_HappilyMessy_trait--></T>
+                  <T>1432483267<!--LilNinthel:trait_curiousAbout_diapers--></T>
+                </L>
+              </U>
+            </V>
+          </L>
+        </L>
+        <V n="text" t="use_default" />
+      </U>
+    </V>
+  </L>
+</I>

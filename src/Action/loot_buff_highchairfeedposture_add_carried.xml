@@ -1,0 +1,12 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_buff_highchairfeedposture_add_carried" s="12466772992324125401">
+  <L n="loot_actions">
+    <V t="buff">
+      <U n="buff">
+        <E n="subject">CarriedSim</E>
+        <U n="buff">
+          <T n="buff_type">13553445139389231781<!--LilNinthel:buff_highchairfeedposture--></T>
+        </U>
+      </U>
+    </V>
+  </L>
+</I>

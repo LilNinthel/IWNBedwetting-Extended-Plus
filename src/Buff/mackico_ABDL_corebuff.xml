@@ -1,0 +1,57 @@
+<I c="Buff" i="buff" m="buffs.buff" n="__shim:mackico_ABDL_corebuff" s="18431600350681200506">
+  <L n="_loot_on_addition">
+    <T>17970298473502593174<!--__shim:loot_trait_ABDL_DiaperState_add--></T>
+  </L>
+  <L n="_loot_on_instance">
+    <T>17970298473502593174<!--__shim:loot_trait_ABDL_DiaperState_add--></T>
+  </L>
+  <L n="_loot_on_removal">
+    <T>13833921815942320761<!--__shim:loot_trait_ABDL_DiaperState_remove--></T>
+  </L>
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0xED6F6DF5<!--These Sims sometimes act younger than they are. They wear diapers.--></T>
+  <T n="buff_name">0xC89AE2BF<!--ABDL Trait--></T>
+  <U n="game_effect_modifier">
+    <L n="_game_effect_modifiers">
+      <V t="autonomy_modifier">
+        <U n="autonomy_modifier">
+          <L n="interaction_score_modifier">
+            <U>
+              <L n="interaction_category_tags">
+                <E>Interaction_UseToilet</E>
+              </L>
+              <T n="modifier">0.1</T>
+            </U>
+          </L>
+        </U>
+      </V>
+      <V t="autonomy_modifier">
+        <U n="autonomy_modifier">
+          <L n="decay_modifiers">
+            <U>
+              <T n="key">16652<!--motive_Bladder--></T>
+              <T n="value">1.2</T>
+            </U>
+          </L>
+        </U>
+      </V>
+    </L>
+  </U>
+  <V n="interactions" t="enabled">
+    <U n="enabled">
+      <L n="interaction_items">
+        <T>13050900960360030624<!--__shim:mackico_ABDL_sleep_interaction--></T>
+        <T>16748047051609335006<!--__shim:mackico_ABDL_work_interaction--></T>
+        <T>16746791265849270905<!--__shim:mackico_ABDL_little_interaction--></T>
+        <T>4659728303788322993<!--ADB_diaperleakedatwork_interaction--></T>
+        <T>5383137091562999069<!--ADB_messedatwork_interaction--></T>
+        <T>7606046578508586365<!--ADB_confident_interaction--></T>
+        <T>1976579410425724183<!--ADB_cantheysee_interaction--></T>
+        <T>16576707630668887001<!--__shim:mackico_ABDL_smellcute_interaction--></T>
+      </L>
+    </U>
+  </V>
+  <T n="icon">2f7d0004:00000000:c09b0954d2ef3d7f</T>
+  <T n="visible">False</T>
+</I>

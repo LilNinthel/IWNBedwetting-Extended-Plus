@@ -1,0 +1,11 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_Buff_Little_Bed_TuckIn" s="9384716090783566848">
+  <L n="loot_actions">
+    <V t="buff">
+      <U n="buff">
+        <U n="buff">
+          <T n="buff_type">149394<!--buff_Toddler_Bed_TuckIn_autonomy--></T>
+        </U>
+      </U>
+    </V>
+  </L>
+</I>

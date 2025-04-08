@@ -1,0 +1,40 @@
+<I xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" c="LootActions" s="12791493277673688925" i="action" m="interactions.utils.loot" n="__shim:mackico_ABDL_little_loot">
+  <L n="loot_actions">
+    <V t="buff">
+      <U n="buff">
+        <U n="buff">
+          <T n="buff_type">12607395231429120216<!--mackico_ABDL_little_buff--></T>
+          <V n="buff_reason" t="enabled">
+            <T n="enabled">0x682CCE77<!--(From feeling Little)--></T>
+          </V>
+        </U>
+        <E n="subject">Actor</E>
+        <U n="chance">
+          <T n="base_chance">10</T>
+        </U>
+        <L n="tests">
+          <L>
+            <V t="buff">
+              <U n="buff">
+                <L n="blacklist">
+                  <T>10094<!--buff_Sim_IsSleeping--></T>
+                </L>
+                <E n="subject">Actor</E>
+              </U>
+            </V>
+            <V t="test_set_reference">
+              <T n="test_set_reference">17796732764948000262<!--IwnBedWetting_testSet_HasDiaperEquipped--></T>
+            </V>
+            <V t="buff">
+              <U n="buff">
+                <L n="blacklist">
+                  <T>12607395231429120216<!--mackico_ABDL_little_buff--></T>
+                </L>
+              </U>
+            </V>
+          </L>
+        </L>
+      </U>
+    </V>
+  </L>
+</I>

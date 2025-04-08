@@ -1,0 +1,21 @@
+<I c="RecipeInjector" i="snippet" m="iwnbedwetting.recipe_injector.snippet" n="LilNinthel:Recipe_Injector" s="13783869288696836323">
+  <L n="recipe_injections">
+    <U>
+      <L n="menu_ids">
+        <T>241823<!--herbalism_BrewPotion_Stove_Offthegrid--></T>
+        <T>103876<!--herbalism_BrewPotion_Stove--></T>
+      </L>
+      <L n="recipe_ids">
+        <T>13127390782305661001<!--LilNinthel:recipe_HerbalismPotion_ContinencePotion_Stove--></T>
+      </L>
+    </U>
+    <U>
+      <L n="menu_ids">
+        <T>103875<!--herbalism_BrewPotion_Grill--></T>
+      </L>
+      <L n="recipe_ids">
+        <T>14338774803213988834<!--LilNinthel:recipe_HerbalismPotion_ContinencePotion_Grill--></T>
+      </L>
+    </U>
+  </L>
+</I>

@@ -1,0 +1,12 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_remove_fake_diaperChange_target_buff_TargetSim" s="12813896440910882310">
+  <L n="loot_actions">
+    <V t="buff_removal">
+      <U n="buff_removal">
+        <E n="subject">TargetSim</E>
+        <L n="buffs_to_remove">
+          <T>17537878190490117241<!--LilNinthel:DiaperChange_Target_Buff--></T>
+        </L>
+      </U>
+    </V>
+  </L>
+</I>

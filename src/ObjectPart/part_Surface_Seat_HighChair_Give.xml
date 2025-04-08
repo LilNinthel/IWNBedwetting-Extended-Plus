@@ -1,0 +1,20 @@
+<I c="ObjectPart" i="object_part" m="objects.part" n="part_Surface_Seat_HighChair_Give" s="276040">
+  <L n="blacklisted_buffs">
+    <T>13553445139389231781<!--LilNinthel:buff_highchairfeedposture--></T>
+  </L>
+  <T n="subroot" o="true" />
+  <U n="supported_affordance_data">
+    <V n="compatibility" t="literal">
+      <U n="literal">
+        <V n="default_inclusion" t="include_all" />
+      </U>
+    </V>
+  </U>
+  <V n="supported_posture_types" t="literal">
+    <L n="literal">
+      <U>
+        <T n="posture_type">276036<!--posture_SitInHighChair_Feed--></T>
+      </U>
+    </L>
+  </V>
+</I>

@@ -1,0 +1,19 @@
+<!-- S4TK Group: 00000039 -->
+<I c="AttractionPreferenceItem" i="cas_preference_item" m="cas.cas_preference_item" n="LilNinthel:preferenceItem_Attraction_Characteristics_Diaper" s="15390170929127424453">
+  <T n="cas_preference_category">363385<!--PreferenceCategory_Attraction_Characteristics--></T>
+  <T n="dislike">9913571992447033702<!--LilNinthel:trait_Attraction_Characteristics_Diaper_TurnOff--></T>
+  <T n="like">10075759203541048072<!--LilNinthel:trait_Attraction_Characteristics_Diaper_TurnOn--></T>
+  <V n="tooltip" t="enabled">
+    <T n="enabled">0x4FECCD33<!--Diapered Sims--></T>
+  </V>
+  <L n="trait_map">
+    <U>
+      <T n="key">1891765918<!--LilNinthel:trait_DiaperWearer--></T>
+      <T n="value">2</T>
+    </U>
+    <U>
+      <T n="key">1432483267<!--LilNinthel:trait_curiousAbout_diapers--></T>
+      <T n="value">1</T>
+    </U>
+  </L>
+</I>

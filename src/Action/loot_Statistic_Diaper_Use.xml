@@ -1,0 +1,109 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_Statistic_Diaper_Use" s="16536190924110172361">
+  <L n="loot_actions">
+    <!--<V t="statistics">
+      <V n="statistics" t="statistic_change">
+        <U n="statistic_change">
+          <T n="amount">-13.333</T>
+          <T n="stat">16657</T>
+        </U>
+      </V>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_change">
+        <U n="statistic_change">
+          <T n="amount">-13.333</T>
+          <T n="stat">16657</T>
+          <L n="subject">
+            <E>Actor</E>
+          </L>
+          <L n="tests">
+            <L>
+              <V t="statistic">
+                <U n="statistic">
+                  <T n="stat">16657</T>
+                  <V n="threshold" t="value_threshold">
+                    <U n="value_threshold">
+                      <T n="value">0</T>
+                    </U>
+                  </V>
+                </U>
+              </V>
+            </L>
+          </L>
+        </U>
+      </V>
+    </V>-->
+    <V t="statistics">
+      <V n="statistics" t="statistic_change">
+        <U n="statistic_change">
+          <T n="amount">1</T>
+          <T n="stat">13859436604775548367<!--LilNinthel:commodity_DiaperLoad--></T>
+          <L n="statistic_multipliers">
+            <U>
+              <V n="multiplier" t="value_curve">
+                <L n="value_curve">
+                  <U>
+                    <T n="x">-100</T>
+                    <T n="y">2</T>
+                  </U>
+                  <U>
+                    <T n="x">-75</T>
+                    <T n="y">1.75</T>
+                  </U>
+                  <U>
+                    <T n="x">-50</T>
+                    <T n="y">1.5</T>
+                  </U>
+                  <U>
+                    <T n="x">-25</T>
+                    <T n="y">1.25</T>
+                  </U>
+                  <U>
+                    <T n="x">0</T>
+                    <T n="y">1</T>
+                  </U>
+                  <U>
+                    <T n="x">25</T>
+                    <T n="y">0.75</T>
+                  </U>
+                  <U>
+                    <T n="x">50</T>
+                    <T n="y">0.5</T>
+                  </U>
+                  <U>
+                    <T n="x">75</T>
+                    <T n="y">0.25</T>
+                  </U>
+                  <U>
+                    <T n="x">100</T>
+                    <T n="y">0.1</T>
+                  </U>
+                </L>
+              </V>
+              <T n="statistic">9359251128331730838<!--LilNinthel:statistic_bladder_snapshot--></T>
+            </U>
+          </L>
+        </U>
+      </V>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_change">
+        <U n="statistic_change">
+          <T n="amount">1</T>
+          <T n="stat">1828676036179222307<!--IwnBedWetting_statistic_wet_diapers--></T>
+        </U>
+      </V>
+    </V>
+    <V t="buff_removal">
+      <U n="buff_removal">
+        <E n="subject">Actor</E>
+        <L n="buffs_to_remove">
+          <T>18361089275973664144<!--LilNinthel:buff_diaperPunishment_hasNotPeedYet--></T>
+        </L>
+      </U>
+    </V>
+    <V t="actions">
+      <T n="actions">12331367283054388977<!--LilNinthel:loot_refresh_diaperState_actor--></T>
+    </V>
+  </L>
+</I>

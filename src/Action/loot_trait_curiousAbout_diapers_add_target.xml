@@ -1,0 +1,10 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_trait_curiousAbout_diapers_add_target" s="17283904513074670134">
+  <L n="loot_actions">
+    <V t="trait_add">
+      <U n="trait_add">
+        <T n="trait">1432483267<!--LilNinthel:trait_curiousAbout_diapers--></T>
+        <E n="subject">TargetSim</E>
+      </U>
+    </V>
+  </L>
+</I>

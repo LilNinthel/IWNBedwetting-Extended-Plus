@@ -1,0 +1,11 @@
+<I c="Buff" i="buff" m="buffs.buff" n="LilNinthel:buff_DiaperState_Basic_Soaked" s="17593186917640935333">
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0xD5E9991B<!--{0.SimFirstName}'s diaper is soaked.--></T>
+  <T n="buff_name">0x0D3B567B<!--Soaked Diaper--></T>
+  <T n="icon">2f7d0004:00000000:820522970E5AC06B</T>
+  <T n="mood_type">14637<!--Mood_Fine--></T>
+  <T n="mood_weight">1</T>
+  <T n="show_timeout">False</T>
+  <T n="ui_sort_order">0</T>
+</I>

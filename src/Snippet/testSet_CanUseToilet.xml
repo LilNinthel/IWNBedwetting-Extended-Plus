@@ -1,0 +1,22 @@
+<I c="TestSetInstance" i="snippet" m="event_testing.tests" n="LilNinthel:testSet_CanUseToilet" s="15481261038742746897">
+  <L n="test">
+    <L>
+      <V t="trait">
+        <U n="trait">
+          <L n="blacklist_traits">
+            <T>2404632404<!--LilNinthel:trait_Never_Potty_Trained--></T>
+            <T>614588825<!--LilNinthel:trait_diaper_devotee--></T>
+            <T>2924659518<!--LilNinthel:trait_DiaperPunished--></T>
+          </L>
+        </U>
+      </V>
+      <V t="buff">
+        <U n="buff">
+          <L n="blacklist">
+            <T>17512215096630610749<!--LilNinthel:buff_lotTrait_ToiletFreeZone--></T>
+          </L>
+        </U>
+      </V>
+    </L>
+  </L>
+</I>

@@ -1,0 +1,12 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_buff_PutDiaperBackOn_remove" s="17409064684359210246">
+  <L n="loot_actions">
+    <V t="buff_removal">
+      <U n="buff_removal">
+        <E n="subject">Actor</E>
+        <L n="buffs_to_remove">
+          <T>12746728295223505722<!--LilNinthel:buff_PutDiaperBackOn--></T>
+        </L>
+      </U>
+    </V>
+  </L>
+</I>

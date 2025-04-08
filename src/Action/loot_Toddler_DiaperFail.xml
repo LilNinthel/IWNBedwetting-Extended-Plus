@@ -1,0 +1,31 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="loot_Toddler_DiaperFail" s="146661">
+  <L n="loot_actions">
+    <V t="create_puddles">
+      <U n="create_puddles">
+        <U n="default_puddle_factory">
+          <T n="large">0</T>
+          <T n="medium">0</T>
+          <T n="none">0</T>
+          <T n="small">1</T>
+        </U>
+        <E n="target_participant_type">Actor</E>
+        <V n="trait_based_puddle_factory" t="enabled">
+          <U n="enabled">
+            <E n="subject">Actor</E>
+          </U>
+        </V>
+      </U>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_change">
+        <U n="statistic_change">
+          <T n="amount">1</T>
+          <T n="stat">12461472240792584021<!--LilNinthel:statistic_diaper_leaks--></T>
+          <L n="subject">
+            <E>Actor</E>
+          </L>
+        </U>
+      </V>
+    </V>
+  </L>
+</I>

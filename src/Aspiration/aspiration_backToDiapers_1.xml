@@ -1,0 +1,15 @@
+<I c="Aspiration" i="aspiration" m="aspirations.aspiration_tuning" n="LilNinthel:aspiration_backToDiapers_1" s="18175447835175755539">
+  <E n="aspiration_valid_age_type">TEEN_OR_OLDER</E>
+  <T n="display_name">0x5460DA77<!--The Trying Policy--></T>
+  <T n="do_not_register_events_on_load">True</T>
+  <L n="objectives">
+    <T>15759393270260879847<!--LilNinthel:objective_asp_backToDiapers_1_1--></T>
+    <T>15759393270260879844<!--LilNinthel:objective_asp_backToDiapers_1_2--></T>
+    <T>15759393270260879845<!--LilNinthel:objective_asp_backToDiapers_1_3--></T>
+  </L>
+  <V n="screen_slam" t="enabled">
+    <V n="enabled" t="reference">
+      <T n="reference">9315541103693846184<!--LilNinthel:backToDiapers_MilestoneComplete--></T>
+    </V>
+  </V>
+</I>

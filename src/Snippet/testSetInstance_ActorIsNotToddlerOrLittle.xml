@@ -1,0 +1,12 @@
+<I c="TestSetInstance" i="snippet" m="event_testing.tests" n="LilNinthel:testSetInstance_ActorIsNotToddlerOrLittle" s="16433108828612862523">
+  <V n="invert_test" t="enabled">
+    <U n="enabled" />
+  </V>
+  <L n="test">
+    <L>
+      <V t="test_set_reference">
+        <T n="test_set_reference">12648561507551528329<!--LilNinthel:testSetInstance_ActorIsToddlerOrABDL--></T>
+      </V>
+    </L>
+  </L>
+</I>

@@ -1,0 +1,11 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_pantsPoopLoad_remove" s="11267624636318205640">
+  <L n="loot_actions">
+    <V t="statistics">
+      <V n="statistics" t="statistic_remove">
+        <U n="statistic_remove">
+          <T n="stat">12238946790010332428<!--LilNinthel:commodity_PantsPoopLoad--></T>
+        </U>
+      </V>
+    </V>
+  </L>
+</I>

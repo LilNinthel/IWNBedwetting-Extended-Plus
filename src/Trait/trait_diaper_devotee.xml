@@ -1,0 +1,18 @@
+<I c="Trait" i="trait" m="traits.traits" n="LilNinthel:trait_diaper_devotee" s="614588825">
+  <L n="ages">
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <T n="display_name">0x962C7A24<!--No Toilets Allowed--></T>
+  <T n="display_name_gender_neutral">0x962C7A24<!--No Toilets Allowed--></T>
+  <T n="icon" p="InGame\UI\Icons\CAS\Traits\RewardTraits\traitReward_SteelBladder.png">2f7d0004:00000000:15328605990296b0</T>
+  <E n="min_lod_value">MINIMUM</E>
+  <L n="species">
+    <E />
+  </L>
+  <T n="trait_description">0xB7A5EAD9<!--{0.SimFirstName} is committed to doing all of {M0.his}{F0.her} business in {M0.his}{F0.her} pants, no toilets allowed. {M0.He}{F0.She} refuses to even sit on those cold, contemptible contraptions.--></T>
+  <E n="trait_type">GAMEPLAY</E>
+</I>

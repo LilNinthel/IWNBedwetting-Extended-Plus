@@ -1,0 +1,13 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="__shim:loot_trait_ABDL_DiaperState_remove" s="13833921815942320761">
+  <L n="loot_actions">
+    <V t="trait_remove">
+      <U n="trait_remove">
+        <V n="trait" t="specific_trait">
+          <U n="specific_trait">
+            <T n="specific_trait">82020227<!--__shim:trait_ABDL_DiaperState--></T>
+          </U>
+        </V>
+      </U>
+    </V>
+  </L>
+</I>

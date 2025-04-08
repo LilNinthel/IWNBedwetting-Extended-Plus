@@ -1,0 +1,21 @@
+<I c="TestSetInstance" i="snippet" m="event_testing.tests" n="LilNinthel:testSet_relbit_DiaperPunishment_Available_inverted" s="11617731439691650318">
+  <L n="test">
+    <L>
+      <V t="relationship">
+        <U n="relationship">
+          <U n="prohibited_relationship_bits">
+            <L n="match_any">
+              <T>615514631<!--LilNinthel:relbit_DiaperPunishment_Available--></T>
+            </L>
+          </U>
+          <L n="subject">
+            <E>Actor</E>
+          </L>
+          <L n="target_sim">
+            <E>TargetSim</E>
+          </L>
+        </U>
+      </V>
+    </L>
+  </L>
+</I>

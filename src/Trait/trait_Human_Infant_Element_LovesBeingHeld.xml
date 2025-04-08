@@ -1,0 +1,21 @@
+<!-- S4TK Group: 00000036 -->
+<I c="Trait" i="trait" m="traits.traits" n="trait_Human_Infant_Element_LovesBeingHeld" s="319919">
+  <L n="ages">
+    <E>INFANT</E>
+    <E>TODDLER</E>
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <T n="display_name">0x5048171A<!--Loves Being Held--></T>
+  <T n="display_name_gender_neutral">0x16E3EACA<!--Loves Being Held--></T>
+  <T n="icon" p="InEP13\UI\Icons\CAS\Traits\traits_LovesBeingHeldToddler.png">2f7d0004:00000000:a3210663f1ba2854</T>
+  <L n="species">
+    <E />
+  </L>
+  <T n="trait_description">0xC24A1F5<!--This Infant loves to be held. Infants with this Quirk are more likely to react positively when they're picked up or carried and upset when they're put down.--></T>
+  <T n="trait_origin_description">0x61E3C965<!--Infant Quirk--></T>
+  <E n="trait_type">GAMEPLAY_GENERIC</E>
+</I>

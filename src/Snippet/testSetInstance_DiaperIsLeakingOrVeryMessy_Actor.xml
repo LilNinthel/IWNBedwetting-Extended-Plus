@@ -1,0 +1,30 @@
+<I c="TestSetInstance" i="snippet" m="event_testing.tests" n="LilNinthel:testSetInstance_DiaperIsLeakingOrVeryMessy_Actor" s="9481798155481602546">
+  <L n="test">
+    <L>
+      <V t="statistic">
+        <U n="statistic">
+          <E n="who">Actor</E>
+          <T n="stat">13859436604775548367<!--LilNinthel:commodity_DiaperLoad--></T>
+          <V n="threshold" t="value_threshold">
+            <U n="value_threshold">
+              <T n="value">5</T>
+            </U>
+          </V>
+        </U>
+      </V>
+    </L>
+    <L>
+      <V t="statistic">
+        <U n="statistic">
+          <E n="who">Actor</E>
+          <T n="stat">15158240590669655393<!--LilNinthel:commodity_DiaperPoopLoad--></T>
+          <V n="threshold" t="value_threshold">
+            <U n="value_threshold">
+              <T n="value">3</T>
+            </U>
+          </V>
+        </U>
+      </V>
+    </L>
+  </L>
+</I>

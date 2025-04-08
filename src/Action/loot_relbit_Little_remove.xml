@@ -1,0 +1,22 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_relbit_Little_remove" s="13650848398177500879">
+  <L n="loot_actions">
+    <V t="relationship_bits_loot">
+      <U n="relationship_bits_loot">
+        <L n="bit_operations">
+          <U>
+            <T n="bit">3485865663<!--LilNinthel:relbit_Little--></T>
+            <E n="operation">REMOVE</E>
+            <E n="recipients">Actor</E>
+            <E n="targets">Object</E>
+          </U>
+          <U>
+            <T n="bit">1714023795<!--LilNinthel:relbit_Caregiver--></T>
+            <E n="operation">REMOVE</E>
+            <E n="recipients">Object</E>
+            <E n="targets">Actor</E>
+          </U>
+        </L>
+      </U>
+    </V>
+  </L>
+</I>

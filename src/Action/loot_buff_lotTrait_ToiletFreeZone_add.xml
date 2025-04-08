@@ -1,0 +1,12 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_buff_lotTrait_ToiletFreeZone_add" s="9568530600897582128">
+  <L n="loot_actions">
+    <V t="buff">
+      <U n="buff">
+        <E n="subject">Actor</E>
+        <U n="buff">
+          <T n="buff_type">17512215096630610749<!--LilNinthel:buff_lotTrait_ToiletFreeZone--></T>
+        </U>
+      </U>
+    </V>
+  </L>
+</I>

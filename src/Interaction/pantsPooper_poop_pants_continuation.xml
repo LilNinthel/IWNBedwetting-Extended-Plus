@@ -1,0 +1,137 @@
+<I c="SuperInteraction" i="interaction" m="interactions.base.super_interaction" n="LilNinthel:pantsPooper_poop_pants_continuation" s="15049844386229951623">
+  <V n="_cancelable_by_user" t="prohibit_cancelation" />
+  <V n="_icon" t="resource_key">
+    <U n="resource_key">
+      <T n="key">2f7d0004:00000000:f17489d8e727c38e</T>
+    </U>
+  </V>
+  <V n="_saveable" t="enabled" />
+  <T n="_super_affordance_can_share_target">True</T>
+  <T n="acquire_targets_as_resource">False</T>
+  <T n="allow_autonomous">False</T>
+  <T n="allow_user_directed">True</T>
+  <T n="attention_cost">0</T>
+  <V n="basic_content" t="one_shot">
+    <U n="one_shot">
+      <U n="animation_ref">
+        <U n="overrides">
+          <V n="balloons" t="enabled">
+            <L n="enabled">
+              <U>
+                <L n="balloon_choices">
+                  <U>
+                    <V n="item" t="balloon_icon">
+                      <U n="balloon_icon">
+                        <E n="balloon_type">THOUGHT</E>
+                        <V n="icon" t="resource_key">
+                          <U n="resource_key">
+                            <T n="key">2f7d0004:00000000:f17489d8e727c38e</T>
+                          </U>
+                        </V>
+                      </U>
+                    </V>
+                  </U>
+                </L>
+                <L n="balloon_target">
+                  <E>Actor</E>
+                </L>
+              </U>
+            </L>
+          </V>
+        </U>
+      </U>
+    </U>
+  </V>
+  <L n="basic_extras">
+    <V t="loot">
+      <U n="loot">
+        <L n="loot_list">
+          <T>10251625219716980905<!--LilNinthel:loot_copy_bladder_value--></T>
+        </L>
+        <V n="timing" t="at_beginning" />
+      </U>
+    </V>
+    <V t="loot">
+      <U n="loot">
+        <L n="loot_list">
+          <T>10700787611967205049<!--LilNinthel:loot_diaper_poopOnly_bladderAdjust--></T>
+        </L>
+      </U>
+    </V>
+    <V t="broadcaster">
+      <U n="broadcaster">
+        <L n="broadcaster_types">
+          <U>
+            <T n="item">11582239711677990335<!--LilNinthel:broadcaster_Reaction_PoopingPants--></T>
+            <T n="item">10099478034331627930<!--LilNinthel:broadcaster_diaperPunishment_witnessAccident--></T>
+          </U>
+        </L>
+      </U>
+    </V>
+  </L>
+  <L n="basic_liabilities">
+    <V t="timeout">
+      <U n="timeout">
+        <T n="timeout">5</T>
+        <T n="timeout_affordance">11989016065404783299<!--LilNinthel:pantsWetter_poop_pants_Immediate--></T>
+      </U>
+    </V>
+  </L>
+  <V n="basic_reserve_object" t="disabled" />
+  <V n="content_score" t="disabled" />
+  <T n="display_name">0xE17A89FF<!--Poop Self--></T>
+  <U n="display_name_text_tokens">
+    <L n="tokens">
+      <V t="participant_type">
+        <U n="participant_type">
+          <V n="objects" t="from_participant">
+            <U n="from_participant">
+              <E n="participant">Actor</E>
+            </U>
+          </V>
+        </U>
+      </V>
+      <V t="participant_type">
+        <U n="participant_type">
+          <V n="objects" t="from_participant">
+            <U n="from_participant">
+              <E n="participant">Object</E>
+            </U>
+          </V>
+        </U>
+      </V>
+    </L>
+  </U>
+  <T n="ignore_exclude_all_compatibility">True</T>
+  <L n="interaction_category_tags">
+    <E>Interaction_Super</E>
+    <E>Interaction_All</E>
+  </L>
+  <V n="outcome" t="single">
+    <U n="single">
+      <U n="actions">
+        <L n="loot_list">
+          <T>15744861531187650551<!--LilNinthel:loot_pantsPooper_poopSelf--></T>
+          <T>9781735413110594162<!--LilNinthel:loot_statistic_intentional_pants_messings--></T>
+        </L>
+      </U>
+    </U>
+  </V>
+  <E n="scoring_priority">NORMAL</E>
+  <T n="subaction_selection_weight">1</T>
+  <E n="target_type">ACTOR</E>
+  <L n="test_globals">
+    <V t="motive">
+      <U n="motive">
+        <L n="stats">
+          <T>16652<!--motive_Bladder--></T>
+        </L>
+        <U n="threshold">
+          <E n="comparison">LESS</E>
+          <T n="value">0</T>
+        </U>
+      </U>
+    </V>
+  </L>
+  <T n="time_overhead">5</T>
+</I>

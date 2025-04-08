@@ -1,0 +1,16 @@
+<I c="SimReward" i="reward" m="rewards.reward" n="IwnBedWetting_Incontinence_Trait_Reward" s="2926939328826942378">
+  <T n="icon" p="Generated">2f7d0004:00000000:322220fc9ba98a06</T>
+  <T n="name">0x02742110<!--Incontinence--></T>
+  <V n="reward_description" t="enabled">
+    <T n="enabled">0x7E2AAE93<!--This sim is incontinent--></T>
+  </V>
+  <L n="rewards">
+    <V t="specific_reward">
+      <V n="specific_reward" t="trait">
+        <U n="trait">
+          <T n="trait">2260700649<!--IwnBedWetting_Incontinence_Trait--></T>
+        </U>
+      </V>
+    </V>
+  </L>
+</I>

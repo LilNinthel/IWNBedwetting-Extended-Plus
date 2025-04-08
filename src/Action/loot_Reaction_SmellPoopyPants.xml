@@ -1,0 +1,63 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_Reaction_SmellPoopyPants" s="11117789792488357209">
+  <L n="loot_actions">
+    <V t="reaction">
+      <U n="reaction">
+        <U n="chance">
+          <T n="base_chance">80</T>
+        </U>
+        <V n="si_reaction" t="enabled">
+          <U n="enabled">
+            <T n="affordance">14351816774043213328<!--LilNinthel:reaction_SmellPoopyPants--></T>
+            <E n="affordance_priority">Low</E>
+            <V n="affordance_target" t="enabled">
+              <E n="enabled">Object</E>
+            </V>
+          </U>
+        </V>
+        <L n="tests">
+          <L>
+            <V t="trait">
+              <U n="trait">
+                <L n="blacklist_traits">
+                  <T>4058438675<!--LilNinthel:trait_pants_pooper--></T>
+                  <T>3111634292<!--DiaperDump_HappilyMessy_trait--></T>
+                  <T>16860<!--trait_Slob--></T>
+                </L>
+              </U>
+            </V>
+          </L>
+        </L>
+        <V n="text" t="use_default" />
+      </U>
+    </V>
+    <V t="reaction">
+      <U n="reaction">
+        <U n="chance">
+          <T n="base_chance">80</T>
+        </U>
+        <V n="si_reaction" t="enabled">
+          <U n="enabled">
+            <T n="affordance">15604859827733112198<!--LilNinthel:reaction_SmellPoopyPants_LikesSmell--></T>
+            <E n="affordance_priority">Low</E>
+            <V n="affordance_target" t="enabled">
+              <E n="enabled">Object</E>
+            </V>
+          </U>
+        </V>
+        <L n="tests">
+          <L>
+            <V t="trait">
+              <U n="trait">
+                <L n="whitelist_traits">
+                  <T>4058438675<!--LilNinthel:trait_pants_pooper--></T>
+                  <T>3111634292<!--DiaperDump_HappilyMessy_trait--></T>
+                </L>
+              </U>
+            </V>
+          </L>
+        </L>
+        <V n="text" t="use_default" />
+      </U>
+    </V>
+  </L>
+</I>

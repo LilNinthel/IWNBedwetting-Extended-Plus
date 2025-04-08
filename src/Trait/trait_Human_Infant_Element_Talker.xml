@@ -1,0 +1,21 @@
+<!-- S4TK Group: 00000036 -->
+<I c="Trait" i="trait" m="traits.traits" n="trait_Human_Infant_Element_Talker" s="319913">
+  <L n="ages">
+    <E>INFANT</E>
+    <E>TODDLER</E>
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <T n="display_name">0xDC6FBF88<!--Little Babbler--></T>
+  <T n="display_name_gender_neutral">0x549A9290<!--Little Babbler--></T>
+  <T n="icon" p="InEP13\UI\Icons\CAS\Traits\traits_TalkerInfant.png">2f7d0004:00000000:8d8b33f38d87001a</T>
+  <L n="species">
+    <E />
+  </L>
+  <T n="trait_description">0x7AA9CBA7<!--This Infant is very talkative. Infants with this Quirk are more likely to coo and babble both to themselves and others.--></T>
+  <T n="trait_origin_description">0x61E3C965<!--Infant Quirk--></T>
+  <E n="trait_type">GAMEPLAY_GENERIC</E>
+</I>

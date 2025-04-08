@@ -1,0 +1,52 @@
+{
+  "projectMetaData": {
+    "creator": "LilNinthel",
+    "modName": "IwnBedwetting_Extended_Plus",
+    "modVersion": "2.0.0"
+  },
+  "buildInstructions": {
+    "source": "src",
+    "destinations": [
+      "out"
+    ],
+    "packages": [
+      {
+        "filename": "LilNinthel_IWNBedwetting_Extended_Plus",
+        "include": [
+          "**/*"
+        ],
+        "exclude": []
+      }
+    ]
+  },
+  "buildSettings": {
+    "allowEmptyPackages": false,
+    "allowFolderCreation": false,
+    "allowMissingSourceFiles": false,
+    "allowPackageOverlap": false,
+    "allowResourceKeyOverrides": false,
+    "outputBuildSummary": "partial"
+  },
+  "releaseSettings": {
+    "overrideDestinations": [],
+    "zips": [
+      {
+        "filename": "MyZippedModFiles",
+        "internalFolder": "",
+        "packages": [
+          "MyPackage"
+        ],
+        "otherFiles": {
+          "include": [],
+          "exclude": []
+        }
+      }
+    ]
+  },
+  "stringTableSettings": {
+    "allowStringKeyOverrides": false,
+    "defaultStringTable": "src/strings/default.stbl.json",
+    "generateMissingLocales": true,
+    "mergeStringTablesInSamePackage": true
+  }
+}

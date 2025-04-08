@@ -1,0 +1,20 @@
+<SimData version="0x00000101" u="0x00000000">
+  <Instances>
+    <I name="IwnBedWetting_Incontinence_Trait_Reward" schema="SimReward" type="Object">
+      <T name="icon">2F7D0004-00000000-322220FC9BA98A06</T>
+      <T name="name">0x02742110</T>
+      <V name="reward_description" variant="0xF8CBBF4C">
+        <T type="LocalizationKey">0x7E2AAE93</T>
+      </V>
+    </I>
+  </Instances>
+  <Schemas>
+    <Schema name="SimReward" schema_hash="0xEEE438EF">
+      <Columns>
+        <Column name="icon" type="ResourceKey" flags="0x00000000"/>
+        <Column name="name" type="LocalizationKey" flags="0x00000000"/>
+        <Column name="reward_description" type="Variant" flags="0x00000000"/>
+      </Columns>
+    </Schema>
+  </Schemas>
+</SimData>

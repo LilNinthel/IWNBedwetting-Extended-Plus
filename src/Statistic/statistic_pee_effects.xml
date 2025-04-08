@@ -1,0 +1,31 @@
+<I c="Commodity" i="statistic" m="statistics.commodity" n="LilNinthel:statistic_pee_effects" s="17783556320541886920">
+  <T n="_default_convergence_value">0</T>
+  <U n="arrow_data">
+    <T n="negative_double_arrow">-20</T>
+    <T n="negative_single_arrow">-1</T>
+    <T n="negative_triple_arrow">-30</T>
+    <T n="positive_double_arrow">20</T>
+    <T n="positive_single_arrow">1</T>
+    <T n="positive_triple_arrow">30</T>
+  </U>
+  <T n="auto_satisfy_curve_random_time_offset">0</T>
+  <T n="decay_rate">1</T>
+  <U n="initial_tuning">
+    <T n="_value">2.5</T>
+  </U>
+  <T n="max_value_tuning">2.5</T>
+  <T n="min_value_tuning">0</T>
+  <T n="persisted_tuning">False</T>
+  <L n="states">
+    <U>
+      <L n="loot_list_on_enter_always">
+        <T>9815085040919479512<!--LilNinthel:loot_buff_peeing_vfx_add--></T>
+        <T>16809592163458619441<!--LilNinthel:loot_pee_effects_apply--></T>
+      </L>
+      <T n="value">0</T>
+    </U>
+    <U>
+      <T n="value">2</T>
+    </U>
+  </L>
+</I>

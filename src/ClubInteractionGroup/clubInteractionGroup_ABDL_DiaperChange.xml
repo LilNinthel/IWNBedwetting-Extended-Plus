@@ -1,0 +1,13 @@
+<I c="ClubInteractionGroup" i="club_interaction_group" m="clubs.club_tuning" n="LilNinthel:clubInteractionGroup_ABDL_DiaperChange" s="15626842033833680313">
+  <L n="affordances">
+    <T>3954975860454133023<!--LilNinthel_ABDL_DiaperChange_Interaction--></T>
+    <T>14344559205617732950<!--LilNinthel:si_Touching_ChangeDiaper--></T>
+    <T>277964<!--tableChangeDiaper_Toddler_ChangeDiaper--></T>
+  </L>
+  <E n="category">HOBBIES</E>
+  <T n="category_icon">2F7D0004:00000000:322220FC9BA98A06</T>
+  <T n="club_bucks_reward">2</T>
+  <T n="name">0xD6E59A1B<!--Change Diapers--></T>
+  <T n="tooltip_template">0xD6E59A1B<!--Change Diapers--></T>
+  <T n="tooltip_template_negative">0x32B9BAB9<!--Don't Change Diapers--></T>
+</I>

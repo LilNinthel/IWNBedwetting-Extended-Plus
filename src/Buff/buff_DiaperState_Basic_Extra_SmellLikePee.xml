@@ -1,0 +1,11 @@
+<I c="Buff" i="buff" m="buffs.buff" n="LilNinthel:buff_DiaperState_Basic_Extra_SmellLikePee" s="15794358183937399459">
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0xF0958ED4<!--{0.SimFirstName} is starting to smell like pee, it might be time for a change.--></T>
+  <T n="buff_name">0xBF23B72D<!--Smell Like Pee--></T>
+  <T n="icon">2f7d0004:00000000:9d895e1dd43b755c</T>
+  <T n="mood_type">14635<!--Mood_Embarrassed--></T>
+  <T n="mood_weight">1</T>
+  <T n="show_timeout">False</T>
+  <T n="ui_sort_order">0</T>
+</I>

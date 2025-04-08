@@ -1,0 +1,16 @@
+<I c="Objective" i="objective" m="event_testing.objective_tuning" n="LilNinthel:objective_asp_backToDiapers_1_3" s="15759393270260879845">
+  <L n="completion_loot">
+    <T>273578<!--loot_Want_AspirationCompleted--></T>
+  </L>
+  <T n="display_text">0x7A336983<!--Try on your new absorbent underwear--></T>
+  <V n="objective_completion_type" t="use_test_result" />
+  <V n="objective_test" t="ran_interaction_test">
+    <U n="ran_interaction_test">
+      <L n="affordances">
+        <T>13743970654844850789<!--LilNinthel:adultDiaper_Wear--></T>
+        <T>8386398162309564626<!--LilNinthel:adultDiaper_Wear_FromBag--></T>
+      </L>
+    </U>
+  </V>
+  <T n="satisfaction_points">1000</T>
+</I>

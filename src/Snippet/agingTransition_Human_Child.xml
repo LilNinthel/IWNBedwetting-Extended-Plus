@@ -1,0 +1,130 @@
+<I c="AgingTransition" i="snippet" m="snippets" n="agingTransition_Human_Child" s="165439">
+  <U n="value">
+    <U n="_age_durations">
+      <T n="age_fast">7</T>
+      <T n="age_normal">14</T>
+      <T n="age_slow">56</T>
+    </U>
+    <T n="_initial_age_randomization_limit">14.29</T>
+    <T n="_legacy_age_duration">14</T>
+    <T n="_use_initial_age_randomization">True</T>
+    <T n="age_trait">34316<!--trait_child--></T>
+    <V n="age_transition_dialog" t="show_dialog">
+      <U n="show_dialog">
+        <U n="dialog">
+          <V n="aspirations_and_trait_assignment" t="enabled">
+            <U n="enabled">
+              <T n="text">0x1274FFCA<!--Select a Trait and a Childhood Aspiration--></T>
+            </U>
+          </V>
+          <T n="secondary_title">0x4D5A2198<!--Select an Aspiration and Trait to replace trait:--></T>
+          <V n="text" t="single">
+            <T n="single">0x50C7CD6C<!--Childhood! Boundless creativity, rulebreaking, and temper-tantrums await! Let the games begin.--></T>
+          </V>
+          <V n="title" t="enabled">
+            <T n="enabled">0xB1CD7B18<!--{0.SimFirstName} Aged Up!--></T>
+          </V>
+        </U>
+      </U>
+    </V>
+    <T n="age_transition_warning">2</T>
+    <V n="age_up_available_notification" t="enabled">
+      <U n="enabled">
+        <V n="icon" t="enabled">
+          <V n="enabled" t="resource_key">
+            <U n="resource_key">
+              <T n="key" p="InGame\UI\Icons\Headlines\Final\headline_birthdaycake.png">2f7d0004:00000000:01174fbceba2cb97</T>
+            </U>
+          </V>
+        </V>
+        <V n="secondary_icon" t="enabled">
+          <V n="enabled" t="participant" />
+        </V>
+        <V n="text" t="single">
+          <T n="single">0x50B14100<!--Celebrate {0.SimFirstName}'s birthday by throwing a rocking Birthday Party!--></T>
+        </V>
+      </U>
+    </V>
+    <T n="age_up_reward_trait_text">0x413330A7<!--{0.SimFirstName}'s skills as a toddler earned a bonus trait! See all {0.SimFirstName}'s bonus traits in the Simology Panel.--></T>
+    <L n="age_up_reward_traits">
+      <T>143145<!--trait_Happy_Toddler--></T>
+      <T>143156<!--trait_Top_Notch_Toddler--></T>
+      <T>2404632404<!--LilNinthel:trait_Never_Potty_Trained--></T>
+    </L>
+    <V n="age_up_warning_notification" t="enabled">
+      <U n="enabled">
+        <V n="icon" t="enabled">
+          <V n="enabled" t="resource_key">
+            <U n="resource_key">
+              <T n="key" p="InGame\UI\Icons\Headlines\Final\headline_birthdaycake.png">2f7d0004:00000000:01174fbceba2cb97</T>
+            </U>
+          </V>
+        </V>
+        <V n="secondary_icon" t="enabled">
+          <V n="enabled" t="participant" />
+        </V>
+        <V n="text" t="single">
+          <T n="single">0x51BC146<!--It's almost {0.SimFirstName}'s birthday!--></T>
+        </V>
+      </U>
+    </V>
+    <L n="relbit_based_loot">
+      <U>
+        <L n="loot">
+          <T>164853<!--loot_FamilyGift--></T>
+        </L>
+        <L n="relationship">
+          <L>
+            <T>8829<!--family_Target_IsAuntUncleOf_Actor--></T>
+            <T>8802<!--family_Target_IsBrotherSisterOf_Actor--></T>
+            <T>8826<!--family_Target_IsCousinOf_Actor--></T>
+            <T>8807<!--family_Target_IsGrandchildOf_Actor--></T>
+            <T>8808<!--family_Target_IsGrandparentOf_Actor--></T>
+            <T>24490<!--family_Target_IsHusbandWifeOf_Actor--></T>
+            <T>9989<!--family_Target_IsNieceNephewOf_Actor--></T>
+            <T>8809<!--family_Target_IsParentOf_Actor--></T>
+            <T>8805<!--family_Target_IsSonOrDaughterOf_Actor--></T>
+            <T>8824<!--family_Target_IsStepsiblingOf_Actor--></T>
+            <T>161910<!--familyRelationshipBitsAcquired_Target_IsGrandchildOf_Actor_HighRel--></T>
+            <T>161909<!--familyRelationshipBitsAcquired_Target_IsGrandparentOf_Actor_HighRel--></T>
+            <T>161922<!--familyRelationshipBitsAcquired_Target_IsGrandchildOf_Actor_NeutralRel--></T>
+            <T>161911<!--familyRelationshipBitsAcquired_Target_IsGrandparentOf_Actor_NeutralRel--></T>
+            <T>161969<!--familyRelationshipBitsAcquired_Target_IsChildOf_Actor_HighRel_HighAuth--></T>
+            <T>161968<!--familyRelationshipBitsAcquired_Target_IsParentOf_Actor_HighRel_HighAuth--></T>
+            <T>161971<!--familyRelationshipBitsAcquired_Target_IsChildOf_Actor_HighRel_LowAuth--></T>
+            <T>161970<!--familyRelationshipBitsAcquired_Target_IsParentOf_Actor_HighRel_LowAuth--></T>
+            <T>161973<!--familyRelationshipBitsAcquired_Target_IsChildOf_Actor_MaxRel_HighAuth--></T>
+            <T>161972<!--familyRelationshipBitsAcquired_Target_IsParentOf_Actor_MaxRel_HighAuth--></T>
+            <T>161975<!--familyRelationshipBitsAcquired_Target_IsChildOf_Actor_MaxRel_LowAuth--></T>
+            <T>161974<!--familyRelationshipBitsAcquired_Target_IsParentOf_Actor_MaxRel_LowAuth--></T>
+            <T>161977<!--familyRelationshipBitsAcquired_Target_IsChildOf_Actor_NeutralRel_HighAuth--></T>
+            <T>161976<!--familyRelationshipBitsAcquired_Target_IsParentOf_Actor_NeutralRel_HighAuth--></T>
+            <T>161979<!--familyRelationshipBitsAcquired_Target_IsChildOf_Actor_NeutralRel_LowAuth--></T>
+            <T>161978<!--familyRelationshipBitsAcquired_Target_IsParentOf_Actor_NeutralRel_LowAuth--></T>
+            <T>161931<!--familyRelationshipBitsAcquired_Sibling_HighRel_HighRival--></T>
+            <T>161930<!--familyRelationshipBitsAcquired_Sibling_HighRel_LowRival--></T>
+            <T>161932<!--familyRelationshipBitsAcquired_Sibling_NeutralRel_HighRival--></T>
+            <T>161933<!--familyRelationshipBitsAcquired_Sibling_NeutralRel_LowRival--></T>
+          </L>
+        </L>
+      </U>
+      <U>
+        <L n="loot">
+          <T>162493<!--loot_AddCTCaregiver--></T>
+        </L>
+        <L n="relationship">
+          <L>
+            <T>146488<!--toddler_notParent_Actor_IsCareGiverOf_Target--></T>
+          </L>
+        </L>
+      </U>
+    </L>
+    <L n="single_sim_loot">
+      <T>420178<!--loot_Grimborn_Birthmark_AgeUp--></T>
+      <T>162505<!--loot_RemoveToddlerCaregivers--></T>
+      <T>190803<!--loot_Toddler_Age_Up_Remove_Toddler_Buffs--></T>
+      <T>143144<!--loot_Trait_Toddler_AgeUp_Traits--></T>
+      <T>334128<!--loot_Child_AgeUp_Fitness--></T>
+    </L>
+  </U>
+</I>

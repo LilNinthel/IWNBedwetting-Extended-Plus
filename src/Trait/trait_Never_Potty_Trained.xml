@@ -1,0 +1,31 @@
+<I c="Trait" i="trait" m="traits.traits" n="LilNinthel:trait_Never_Potty_Trained" s="2404632404">
+  <L n="ages">
+    <E>TODDLER</E>
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <L n="buffs">
+    <U>
+      <T n="buff_type">10309070037716691412<!--LilNinthel_ABDL_dummybuff--></T>
+    </U>
+  </L>
+  <T n="buffs_add_on_spawn_only">False</T>
+  <T n="display_name">0x2CE0FF18<!--Never Potty Trained--></T>
+  <T n="display_name_gender_neutral">0x2CE0FF18<!--Never Potty Trained--></T>
+  <T n="icon">2f7d0004:00000000:50E7863C5DBF6867</T>
+  <V n="loot_on_trait_add" t="enabled">
+    <L n="enabled">
+      <T>15904163990212670790<!--LilNinthel:loot_stat_pottyTraining_reset--></T>
+    </L>
+  </V>
+  <E n="min_lod_value">MINIMUM</E>
+  <L n="species">
+    <E />
+  </L>
+  <T n="trait_description">0xF17FD324<!--Use the toilet? How do I do that? {0.SimFirstName} wasn't potty trained as a toddler, {M0.he}{F0.she} can only use {M0.his}{F0.her} diapers.--></T>
+  <T n="trait_origin_description">0x8E45CD65<!--(From not being potty trained)--></T>
+  <E n="trait_type">GAMEPLAY</E>
+</I>

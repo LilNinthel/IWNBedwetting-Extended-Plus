@@ -1,0 +1,41 @@
+<I xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" c="LootActions" s="2033773167615082494" i="action" m="interactions.utils.loot" n="ADB_crinklycantheyhear_loot">
+  <L n="loot_actions">
+    <V t="buff">
+      <U n="buff">
+        <U n="buff">
+          <T n="buff_type">14213915589173281387<!--ADB_crinklycantheyhear_buff--></T>
+          <V n="buff_reason" t="enabled">
+            <T n="enabled">0xCFE8CAE4<!--(From wearing a diaper)--></T>
+          </V>
+        </U>
+        <E n="subject">Actor</E>
+        <U n="chance">
+          <T n="base_chance">10</T>
+        </U>
+        <L n="tests">
+          <L>
+            <V t="buff">
+              <U n="buff">
+                <L n="blacklist">
+                  <T>10094<!--buff_Sim_IsSleeping--></T>
+                </L>
+                <E n="subject">Actor</E>
+              </U>
+            </V>
+            <V t="test_set_reference">
+              <T n="test_set_reference">17796732764948000262<!--IwnBedWetting_testSet_HasDiaperEquipped--></T>
+            </V>
+            <V t="buff">
+              <U n="buff">
+                <L n="blacklist">
+                  <T>14213915589173281387<!--ADB_crinklycantheyhear_buff--></T>
+                  <T>7570318287540438856<!--ADB_confident_buff--></T>
+                </L>
+              </U>
+            </V>
+          </L>
+        </L>
+      </U>
+    </V>
+  </L>
+</I>

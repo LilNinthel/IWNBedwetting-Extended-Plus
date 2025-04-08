@@ -1,0 +1,48 @@
+<I xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" c="MixerInteraction" s="7606046578508586365" i="interaction" m="interactions.base.mixer_interaction" n="ADB_confident_interaction">
+  <V n="lock_out_time" t="enabled">
+    <U n="enabled">
+      <U n="interval">
+        <T n="lower_bound">360</T>
+        <T n="upper_bound">1440</T>
+      </U>
+    </U>
+  </V>
+  <V n="lock_out_time_initial" t="enabled">
+    <U n="enabled">
+      <U n="interval">
+        <T n="lower_bound">240</T>
+        <T n="upper_bound">480</T>
+      </U>
+    </U>
+  </V>
+  <V n="outcome" t="single">
+    <U n="single">
+      <U n="actions">
+        <L n="loot_list">
+          <T>3915333828639310249<!--ADB_confident_loot--></T>
+        </L>
+        <V n="animation_ref" t="enabled">
+          <U n="enabled" />
+        </V>
+      </U>
+    </U>
+  </V>
+  <T n="allow_from_world">True</T>
+  <T n="allow_user_directed">False</T>
+  <V n="basic_focus" t="do_not_change_focus" />
+  <L n="interaction_category_tags">
+    <E>Interaction_Mixer</E>
+    <E>Interaction_All</E>
+    <E>Interaction_Mixer</E>
+    <E>Interaction_All</E>
+  </L>
+  <U n="progress_bar_enabled">
+    <T n="bar_enabled">False</T>
+  </U>
+  <U n="sub_action">
+    <T n="base_weight">5</T>
+    <E n="mixer_group">IDLES</E>
+  </U>
+  <E n="target_type">ACTOR</E>
+  <T n="visible">False</T>
+</I>

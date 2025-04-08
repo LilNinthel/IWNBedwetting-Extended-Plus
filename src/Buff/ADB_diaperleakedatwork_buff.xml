@@ -1,0 +1,15 @@
+<I xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" c="Buff" s="15892804760717127052" i="buff" m="buffs.buff" n="ADB_diaperleakedatwork_buff">
+  <T n="buff_description">0xD323D4A8<!--Oh no! {0.SimFirstName}'s diaper leaked at work and {M0.he}{F0.she} had a wet spot that all of {M0.his}{F0.her} coworkers saw!--></T>
+  <T n="buff_name">0xC550ECB0<!--Diaper leaked!--></T>
+  <T n="icon">2f7d0004:00000000:2743BA2F569152CC</T>
+  <T n="mood_type">14635<!--Mood_Embarrassed--></T>
+  <T n="mood_weight">2</T>
+  <V n="_temporary_commodity_info" t="enabled">
+    <U n="enabled">
+      <T n="max_duration">540</T>
+      <L n="categories">
+        <E>Embarrassed_Buffs</E>
+      </L>
+    </U>
+  </V>
+</I>

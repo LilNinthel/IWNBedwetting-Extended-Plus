@@ -1,0 +1,22 @@
+<I c="Trait" i="trait" m="traits.traits" n="LilNinthel:trait_pants_pooper" s="4058438675">
+  <L n="ages">
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <T n="trait_description">0xDD62F336<!--{0.SimFirstName} loves to push out messes into {M0.his underwear}{F0.her panties}.--></T>
+  <T n="icon">2f7d0004:00000000:f17489d8e727c38e</T>
+  <T n="display_name">0xA6AA0A44<!--Pants Pooper--></T>
+  <T n="display_name_gender_neutral">0xA6AA0A44<!--Pants Pooper--></T>
+  <E n="min_lod_value">MINIMUM</E>
+  <L n="species">
+    <E />
+  </L>
+  <E n="trait_type">GAMEPLAY</E>
+  <L n="super_affordances">
+    <T>16161118731461566311<!--LilNinthel:pantsPooper_poop_pants--></T>
+    <T>12784093406919596794<!--LilNinthel:pantsPooper_poop_pants_standing--></T>
+  </L>
+</I>

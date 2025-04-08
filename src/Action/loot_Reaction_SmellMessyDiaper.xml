@@ -1,0 +1,41 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_Reaction_SmellMessyDiaper" s="16023560830142500872">
+  <L n="loot_actions">
+    <V t="reaction">
+      <U n="reaction">
+        <U n="chance">
+          <T n="base_chance">50</T>
+        </U>
+        <V n="mixer_reaction" t="enabled">
+          <U n="enabled">
+            <T n="affordance">14878271320949258409<!--LilNinthel:reaction_Mixer_SmellMessyDiaper--></T>
+            <V n="affordance_target" t="enabled">
+              <E n="enabled">Object</E>
+            </V>
+          </U>
+        </V>
+        <V n="si_reaction" t="enabled">
+          <U n="enabled">
+            <T n="affordance">18098795898329396395<!--LilNinthel:reaction_SmellMessyDiaper--></T>
+            <E n="affordance_priority">Low</E>
+            <V n="affordance_target" t="enabled">
+              <E n="enabled">Object</E>
+            </V>
+          </U>
+        </V>
+        <L n="tests">
+          <L>
+            <V t="trait">
+              <U n="trait">
+                <L n="blacklist_traits">
+                  <T>3111634292<!--DiaperDump_HappilyMessy_trait--></T>
+                  <T>16860<!--trait_Slob--></T>
+                </L>
+              </U>
+            </V>
+          </L>
+        </L>
+        <V n="text" t="use_default" />
+      </U>
+    </V>
+  </L>
+</I>

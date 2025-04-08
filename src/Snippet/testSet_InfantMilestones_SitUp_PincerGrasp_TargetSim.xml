@@ -1,0 +1,47 @@
+<!-- S4TK Group: 00000036 -->
+<I c="TestSetInstance" i="snippet" m="event_testing.tests" n="testSet_InfantMilestones_SitUp_PincerGrasp_TargetSim" s="321318">
+  <L n="test">
+    <L>
+      <V t="developmental_milestone">
+        <U n="developmental_milestone">
+          <T n="developmental_milestone">286486<!--infantMilestones_GrossMotor_SitUp--></T>
+          <E n="subject">TargetSim</E>
+        </U>
+      </V>
+    </L>
+    <L>
+      <V t="developmental_milestone">
+        <U n="developmental_milestone">
+          <T n="developmental_milestone">286459<!--infantMilestones_FineMotor_PincerGrasp--></T>
+          <E n="subject">TargetSim</E>
+        </U>
+      </V>
+    </L>
+    <L>
+      <V t="sim_info">
+        <U n="sim_info">
+          <V n="ages" t="specified">
+            <L n="specified">
+              <E>CHILD</E>
+              <E>TEEN</E>
+              <E>YOUNGADULT</E>
+              <E>ADULT</E>
+              <E>ELDER</E>
+            </L>
+          </V>
+          <V n="species" t="specified">
+            <U n="specified">
+              <L n="species">
+                <E />
+              </L>
+            </U>
+          </V>
+          <E n="who">TargetSim</E>
+        </U>
+      </V>
+      <V t="test_set_reference">
+        <T n="test_set_reference">9663647790308326074<!--LilNinthel:testSetInstance_TargetIsInfantOrLittle--></T>
+      </V>
+    </L>
+  </L>
+</I>

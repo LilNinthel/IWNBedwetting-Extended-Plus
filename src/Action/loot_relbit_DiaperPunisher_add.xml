@@ -1,0 +1,52 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_relbit_DiaperPunisher_add" s="17490554378249448337">
+  <L n="loot_actions">
+    <V t="relationship_bits_loot">
+      <U n="relationship_bits_loot">
+        <L n="bit_operations">
+          <U>
+            <T n="bit">1340936858<!--LilNinthel:relbit_DiaperPunisher--></T>
+            <E n="operation">ADD</E>
+            <E n="recipients">Object</E>
+            <E n="targets">Actor</E>
+          </U>
+          <U>
+            <T n="bit">1390081355<!--LilNinthel:relbit_BeingDiaperPunished--></T>
+            <E n="operation">ADD</E>
+            <E n="recipients">Actor</E>
+            <E n="targets">Object</E>
+          </U>
+          <U>
+            <T n="bit">358442599<!--LilNinthel:relbit_knows_wears_diapers--></T>
+            <E n="operation">ADD</E>
+            <E n="recipients">Object</E>
+            <E n="targets">Actor</E>
+          </U>
+          <U>
+            <T n="bit">4193068179<!--LilNinthel:relbit_suspects_wears_diapers--></T>
+            <E n="operation">REMOVE</E>
+            <E n="recipients">Object</E>
+            <E n="targets">Actor</E>
+          </U>
+          <U>
+            <T n="bit">2574219373<!--LilNinthel:relbit_DiaperPunishment_Buildup_1--></T>
+            <E n="operation">REMOVE</E>
+            <E n="recipients">Object</E>
+            <E n="targets">Actor</E>
+          </U>
+          <U>
+            <T n="bit">2574219374<!--LilNinthel:relbit_DiaperPunishment_Buildup_2--></T>
+            <E n="operation">REMOVE</E>
+            <E n="recipients">Object</E>
+            <E n="targets">Actor</E>
+          </U>
+          <U>
+            <T n="bit">2574219375<!--LilNinthel:relbit_DiaperPunishment_Buildup_3--></T>
+            <E n="operation">REMOVE</E>
+            <E n="recipients">Object</E>
+            <E n="targets">Actor</E>
+          </U>
+        </L>
+      </U>
+    </V>
+  </L>
+</I>

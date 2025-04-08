@@ -1,0 +1,21 @@
+<!-- S4TK Group: 00000036 -->
+<I c="Trait" i="trait" m="traits.traits" n="trait_Human_Infant_Element_HappySpitter" s="319916">
+  <L n="ages">
+    <E>INFANT</E>
+    <E>TODDLER</E>
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <T n="display_name">0x6A772302<!--Happy Spitter--></T>
+  <T n="display_name_gender_neutral">0xFEA41492<!--Happy Spitter--></T>
+  <T n="icon" p="InEP13\UI\Icons\CAS\Traits\traits_HappySpitterInfant.png">2f7d0004:00000000:e86d4f441337ef58</T>
+  <L n="species">
+    <E />
+  </L>
+  <T n="trait_description">0x5A91840D<!--This Infant is prone to spitting up while they feed. Infants with this Quirk are perfectly normal—their digestive systems are just still maturing.--></T>
+  <T n="trait_origin_description">0x61E3C965<!--Infant Quirk--></T>
+  <E n="trait_type">GAMEPLAY_GENERIC</E>
+</I>

@@ -1,0 +1,13 @@
+<I s="14741944741097944991" c="Buff" i="buff" m="buffs.buff" n="IwnBedWetting_Bedwetter_Buff">
+  <T n="audio_sting_on_add" p="InGame\Audio\Stings\sting_buff_gain.propx">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove" p="InGame\Audio\Stings\sting_buff_loss.propx">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0x633EA08B<!--This sim is a bed wetter--></T>
+  <T n="buff_name">0x3EE2640A<!--BedWetter--></T>
+  <T n="icon" p="Generated">2f7d0004:00000000:62313de8780bc7a9</T>
+  <T n="refresh_on_add">True</T>
+  <T n="show_timeout">False</T>
+  <T n="success_modifier">0</T>
+  <T n="ui_sort_order">1</T>
+  <T n="visible">False</T>
+  <V n="walkstyle" t="disabled" />
+</I>

@@ -1,0 +1,26 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_wearing_new_diaper" s="14523230298926587703">
+  <L n="loot_actions">
+    <V t="statistics">
+      <V n="statistics" t="statistic_change">
+        <U n="statistic_change">
+          <T n="amount">1</T>
+          <T n="stat">15659497102112408646<!--LilNinthel:statistic_worn_diapers--></T>
+          <L n="subject">
+            <E>Actor</E>
+          </L>
+        </U>
+      </V>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_change">
+        <U n="statistic_change">
+          <T n="amount">1</T>
+          <T n="stat">14963448730728041376<!--LilNinthel:statistic_consecutive_diapers--></T>
+          <L n="subject">
+            <E>Actor</E>
+          </L>
+        </U>
+      </V>
+    </V>
+  </L>
+</I>

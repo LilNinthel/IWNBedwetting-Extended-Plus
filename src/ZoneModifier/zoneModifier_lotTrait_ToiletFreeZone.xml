@@ -1,0 +1,8 @@
+<I c="ZoneModifier" i="zone_modifier" m="zone_modifier.zone_modifier" n="LilNinthel:zoneModifier_lotTrait_ToiletFreeZone" s="9668904782353184015">
+  <L n="enter_lot_loot">
+    <T>9568530600897582128<!--LilNinthel:loot_buff_lotTrait_ToiletFreeZone_add--></T>
+  </L>
+  <L n="exit_lot_loot">
+    <T>14886332225912263715<!--LilNinthel:loot_buff_lotTrait_ToiletFreeZone_remove--></T>
+  </L>
+</I>

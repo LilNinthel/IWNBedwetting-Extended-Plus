@@ -1,0 +1,768 @@
+<I c="SuperInteraction" i="interaction" m="interactions.base.super_interaction" n="infant_Watch_Immobile_InObject" s="326839">
+  <L n="_constraints" />
+  <V n="_saveable" t="enabled" />
+  <L n="_static_commodities">
+    <U>
+      <T n="static_commodity">277617<!--staticCommodity_Infant_Calm--></T>
+    </U>
+  </L>
+  <T n="attention_cost">0.5</T>
+  <V n="basic_content" t="flexible_length">
+    <U n="flexible_length">
+      <L n="conditional_actions">
+        <V t="list_reference">
+          <T n="list_reference">333381<!--exitConditionList_Infants_BoredomExit_WatchSim--></T>
+        </V>
+        <V t="list_reference">
+          <T n="list_reference">321769<!--exitConditionList_Infants_MotiveNearFailExit--></T>
+        </V>
+      </L>
+      <V n="content" t="looping_content">
+        <U n="looping_content">
+          <U n="animation_ref">
+            <T n="factory">129906<!--reactions_Watch_Idle--></T>
+          </U>
+        </U>
+      </V>
+    </U>
+  </V>
+  <L n="basic_extras">
+    <V t="balloon">
+      <U n="balloon">
+        <L n="balloon_choices">
+          <U>
+            <V n="item" t="balloon_icon">
+              <U n="balloon_icon">
+                <V n="icon" t="participant">
+                  <U n="participant">
+                    <L n="participant_type">
+                      <E>Object</E>
+                    </L>
+                  </U>
+                </V>
+              </U>
+            </V>
+          </U>
+        </L>
+        <T n="balloon_delay">5</T>
+        <L n="balloon_target">
+          <E>Actor</E>
+        </L>
+      </U>
+    </V>
+  </L>
+  <V n="basic_focus" t="tunable_focus" />
+  <V n="basic_reserve_object" t="disabled" />
+  <T n="category">15507<!--sim_Friendly--></T>
+  <V n="content_score" t="enabled">
+    <U n="enabled">
+      <T n="base_score">5</T>
+      <V n="cross_age_preferences" t="enabled">
+        <V n="enabled" t="reference">
+          <T n="reference">309975<!--crossAgeTuning_Pie_Menu_Score--></T>
+        </V>
+      </V>
+      <V n="front_page_cooldown" t="enabled">
+        <U n="enabled">
+          <U n="interval">
+            <T n="lower_bound">60</T>
+            <T n="upper_bound">60</T>
+          </U>
+          <T n="penalty">-4</T>
+        </U>
+      </V>
+      <L n="mood_preference">
+        <U>
+          <T n="key">14632<!--Mood_Angry--></T>
+        </U>
+        <U>
+          <T n="key">14633<!--Mood_Bored--></T>
+        </U>
+        <U>
+          <T n="key">14634<!--Mood_Confident--></T>
+          <T n="value">2</T>
+        </U>
+        <U>
+          <T n="key">14635<!--Mood_Embarrassed--></T>
+        </U>
+        <U>
+          <T n="key">14636<!--Mood_Energized--></T>
+          <T n="value">2</T>
+        </U>
+        <U>
+          <T n="key">14637<!--Mood_Fine--></T>
+          <T n="value">3</T>
+        </U>
+        <U>
+          <T n="key">14638<!--Mood_Flirty--></T>
+          <T n="value">1</T>
+        </U>
+        <U>
+          <T n="key">14639<!--Mood_Focused--></T>
+          <T n="value">2</T>
+        </U>
+        <U>
+          <T n="key">14640<!--Mood_Happy--></T>
+          <T n="value">3</T>
+        </U>
+        <U>
+          <T n="key">14641<!--Mood_Inspired--></T>
+          <T n="value">2</T>
+        </U>
+        <U>
+          <T n="key">14642<!--Mood_Playful--></T>
+          <T n="value">15</T>
+        </U>
+        <U>
+          <T n="key">14643<!--Mood_Sad--></T>
+        </U>
+        <U>
+          <T n="key">14644<!--Mood_Dazed--></T>
+          <T n="value">1</T>
+        </U>
+        <U>
+          <T n="key">14645<!--Mood_Stressed--></T>
+          <T n="value">3</T>
+        </U>
+        <U>
+          <T n="key">14646<!--Mood_Uncomfortable--></T>
+          <T n="value">3</T>
+        </U>
+      </L>
+      <L n="relationship_bit_collection_preference">
+        <U>
+          <T n="key">240103<!--rbc_Sentiment_Close--></T>
+          <T n="value">8</T>
+        </U>
+        <U>
+          <T n="key">240104<!--rbc_Sentiment_Bitter--></T>
+          <T n="value">-10</T>
+        </U>
+        <U>
+          <T n="key">240105<!--rbc_Sentiment_Furious--></T>
+          <T n="value">-15</T>
+        </U>
+        <U>
+          <T n="key">240107<!--rbc_Sentiment_Enamored--></T>
+        </U>
+        <U>
+          <T n="key">240109<!--rbc_Sentiment_Positive--></T>
+        </U>
+        <U>
+          <T n="key">240110<!--rbc_Sentiment_Negative--></T>
+        </U>
+        <U>
+          <T n="key">246490<!--rbc_Sentiment_Hurt--></T>
+          <T n="value">-3</T>
+        </U>
+        <U>
+          <T n="key">246491<!--rbc_Sentiment_Guilty--></T>
+          <T n="value">5</T>
+        </U>
+        <U>
+          <T n="key">246492<!--rbc_Sentiment_Adoring--></T>
+          <T n="value">10</T>
+        </U>
+      </L>
+      <L n="relationship_bit_preference">
+        <U>
+          <T n="key">10150<!--romantic_FirstKiss--></T>
+        </U>
+        <U>
+          <T n="key">15792<!--friendship-acquaintances--></T>
+        </U>
+        <U>
+          <T n="key">15794<!--friendship-bff--></T>
+        </U>
+        <U>
+          <T n="key">15795<!--friendship-bff_Evil--></T>
+        </U>
+        <U>
+          <T n="key">15796<!--friendship-despised--></T>
+        </U>
+        <U>
+          <T n="key">15797<!--friendship-friend--></T>
+        </U>
+        <U>
+          <T n="key">15798<!--friendship-friend_Evil--></T>
+        </U>
+        <U>
+          <T n="key">15799<!--friendship-good_friends--></T>
+        </U>
+        <U>
+          <T n="key">15800<!--friendship-good_friends_Evil--></T>
+        </U>
+        <U>
+          <T n="key">15802<!--friendship-disliked--></T>
+        </U>
+        <U>
+          <T n="key">15811<!--romantic-Broken_Up--></T>
+        </U>
+        <U>
+          <T n="key">15812<!--romantic-Broken_Up_Engaged--></T>
+        </U>
+        <U>
+          <T n="key">15814<!--romantic-Despised_Ex--></T>
+        </U>
+        <U>
+          <T n="key">15815<!--romantic-Divorced--></T>
+        </U>
+        <U>
+          <T n="key">15816<!--romantic-Engaged--></T>
+        </U>
+        <U>
+          <T n="key">15817<!--romantic-Frustrated_Ex--></T>
+        </U>
+        <U>
+          <T n="key">15822<!--romantic-Married--></T>
+        </U>
+        <U>
+          <T n="key">15825<!--romantic-Significant_Other--></T>
+        </U>
+        <U>
+          <T n="key">15828<!--RomanticCombo_BadMatch--></T>
+        </U>
+        <U>
+          <T n="key">15829<!--RomanticCombo_Lovebirds--></T>
+        </U>
+        <U>
+          <T n="key">15830<!--RomanticCombo_EnemiesWithBenefits--></T>
+        </U>
+        <U>
+          <T n="key">15831<!--RomanticCombo_Frenemies--></T>
+        </U>
+        <U>
+          <T n="key">15832<!--RomanticCombo_HotAndCold--></T>
+        </U>
+        <U>
+          <T n="key">15833<!--RomanticCombo_ItsAwkward--></T>
+        </U>
+        <U>
+          <T n="key">15834<!--RomanticCombo_ItsComplicated--></T>
+        </U>
+        <U>
+          <T n="key">15835<!--RomanticCombo_ItsVeryAwkward--></T>
+        </U>
+        <U>
+          <T n="key">15836<!--RomanticCombo_ItsVeryComplicated--></T>
+        </U>
+        <U>
+          <T n="key">15837<!--RomanticCombo_Lovers--></T>
+        </U>
+        <U>
+          <T n="key">15838<!--RomanticCombo_RomanticInterest--></T>
+        </U>
+        <U>
+          <T n="key">15839<!--RomanticCombo_Soulmates--></T>
+        </U>
+        <U>
+          <T n="key">15840<!--RomanticCombo_Sweethearts--></T>
+        </U>
+        <U>
+          <T n="key">15841<!--RomanticCombo_TerribleMatch--></T>
+        </U>
+        <U>
+          <T n="key">15842<!--RomanticCombo_TotalOpposites--></T>
+        </U>
+        <U>
+          <T n="key">15843<!--RomanticCombo_BadRomance--></T>
+        </U>
+        <U>
+          <T n="key">161909<!--familyRelationshipBitsAcquired_Target_IsGrandparentOf_Actor_HighRel--></T>
+        </U>
+        <U>
+          <T n="key">161910<!--familyRelationshipBitsAcquired_Target_IsGrandchildOf_Actor_HighRel--></T>
+        </U>
+        <U>
+          <T n="key">161911<!--familyRelationshipBitsAcquired_Target_IsGrandparentOf_Actor_NeutralRel--></T>
+        </U>
+        <U>
+          <T n="key">161922<!--familyRelationshipBitsAcquired_Target_IsGrandchildOf_Actor_NeutralRel--></T>
+        </U>
+        <U>
+          <T n="key">161923<!--familyRelationshipBitsAcquired_Target_IsGrandparentOf_Actor_PoorRel--></T>
+        </U>
+        <U>
+          <T n="key">161924<!--familyRelationshipBitsAcquired_Target_IsGrandchildOf_Actor_PoorRel--></T>
+        </U>
+        <U>
+          <T n="key">161930<!--familyRelationshipBitsAcquired_Sibling_HighRel_LowRival--></T>
+        </U>
+        <U>
+          <T n="key">161931<!--familyRelationshipBitsAcquired_Sibling_HighRel_HighRival--></T>
+        </U>
+        <U>
+          <T n="key">161932<!--familyRelationshipBitsAcquired_Sibling_NeutralRel_HighRival--></T>
+        </U>
+        <U>
+          <T n="key">161933<!--familyRelationshipBitsAcquired_Sibling_NeutralRel_LowRival--></T>
+        </U>
+        <U>
+          <T n="key">161934<!--familyRelationshipBitsAcquired_Sibling_PoorRel_HighRival--></T>
+        </U>
+        <U>
+          <T n="key">161935<!--familyRelationshipBitsAcquired_Sibling_PoorRel_LowRival--></T>
+        </U>
+        <U>
+          <T n="key">161968<!--familyRelationshipBitsAcquired_Target_IsParentOf_Actor_HighRel_HighAuth--></T>
+        </U>
+        <U>
+          <T n="key">161969<!--familyRelationshipBitsAcquired_Target_IsChildOf_Actor_HighRel_HighAuth--></T>
+        </U>
+        <U>
+          <T n="key">161970<!--familyRelationshipBitsAcquired_Target_IsParentOf_Actor_HighRel_LowAuth--></T>
+        </U>
+        <U>
+          <T n="key">161971<!--familyRelationshipBitsAcquired_Target_IsChildOf_Actor_HighRel_LowAuth--></T>
+        </U>
+        <U>
+          <T n="key">161972<!--familyRelationshipBitsAcquired_Target_IsParentOf_Actor_MaxRel_HighAuth--></T>
+        </U>
+        <U>
+          <T n="key">161973<!--familyRelationshipBitsAcquired_Target_IsChildOf_Actor_MaxRel_HighAuth--></T>
+        </U>
+        <U>
+          <T n="key">161974<!--familyRelationshipBitsAcquired_Target_IsParentOf_Actor_MaxRel_LowAuth--></T>
+        </U>
+        <U>
+          <T n="key">161975<!--familyRelationshipBitsAcquired_Target_IsChildOf_Actor_MaxRel_LowAuth--></T>
+        </U>
+        <U>
+          <T n="key">161976<!--familyRelationshipBitsAcquired_Target_IsParentOf_Actor_NeutralRel_HighAuth--></T>
+        </U>
+        <U>
+          <T n="key">161977<!--familyRelationshipBitsAcquired_Target_IsChildOf_Actor_NeutralRel_HighAuth--></T>
+        </U>
+        <U>
+          <T n="key">161978<!--familyRelationshipBitsAcquired_Target_IsParentOf_Actor_NeutralRel_LowAuth--></T>
+        </U>
+        <U>
+          <T n="key">161979<!--familyRelationshipBitsAcquired_Target_IsChildOf_Actor_NeutralRel_LowAuth--></T>
+        </U>
+        <U>
+          <T n="key">161980<!--familyRelationshipBitsAcquired_Target_IsParentOf_Actor_PoorRel_HighAuth--></T>
+        </U>
+        <U>
+          <T n="key">161981<!--familyRelationshipBitsAcquired_Target_IsChildOf_Actor_PoorRel_HighAuth--></T>
+        </U>
+        <U>
+          <T n="key">161982<!--familyRelationshipBitsAcquired_Target_IsParentOf_Actor_PoorRel_LowAuth--></T>
+        </U>
+        <U>
+          <T n="key">161983<!--familyRelationshipBitsAcquired_Target_IsChildOf_Actor_PoorRel_LowAuth--></T>
+        </U>
+        <U>
+          <T n="key">162482<!--CT_notParent_Actor_IsCareGiverOf_Target--></T>
+        </U>
+        <U>
+          <T n="key">248676<!--friendship-Confidant--></T>
+          <T n="value">-10</T>
+        </U>
+        <U>
+          <T n="key">26560<!--SpecialBits_Enemy--></T>
+        </U>
+        <U>
+          <T n="key">306279<!--familyTrope_Jokesters--></T>
+        </U>
+        <U>
+          <T n="key">306282<!--familyTrope_distant--></T>
+        </U>
+        <U>
+          <T n="key">306289<!--familyTrope_permissive_target_isAuthorityOf_actor--></T>
+        </U>
+        <U>
+          <T n="key">306291<!--familyTrope_compliant_target_isAuthorityOf_actor--></T>
+        </U>
+        <U>
+          <T n="key">306293<!--familyTrope_close--></T>
+        </U>
+        <U>
+          <T n="key">306294<!--familyTrope_compliant_target_IsSubordinateOf_actor--></T>
+        </U>
+        <U>
+          <T n="key">306296<!--familyTrope_permissive_target_isSubordinateOf_actor--></T>
+        </U>
+        <U>
+          <T n="key">306356<!--familyTrope_loving_target_IsAuthorityOf_actor--></T>
+        </U>
+        <U>
+          <T n="key">306357<!--familyTrope_loving_target_isSubordinateOf_actor--></T>
+        </U>
+        <U>
+          <T n="key">310888<!--familyTrope_difficult--></T>
+          <T n="value">-2</T>
+        </U>
+        <U>
+          <T n="key">34619<!--romantic-HaveDoneWooHoo--></T>
+        </U>
+        <U>
+          <T n="key">75294<!--neighbor--></T>
+        </U>
+        <U>
+          <T n="key">77585<!--RomanticCombo_Acquaintances--></T>
+        </U>
+        <U>
+          <T n="key">77633<!--RomanticCombo_JustFriends--></T>
+        </U>
+        <U>
+          <T n="key">77634<!--RomanticCombo_JustGoodFriends--></T>
+        </U>
+        <U>
+          <T n="key">77647<!--RomanticCombo_Disliked--></T>
+        </U>
+        <U>
+          <T n="key">77648<!--RomanticCombo_Despised--></T>
+        </U>
+        <U>
+          <T n="key">8802<!--family_Target_IsBrotherSisterOf_Actor--></T>
+        </U>
+        <U>
+          <T n="key">8805<!--family_Target_IsSonOrDaughterOf_Actor--></T>
+        </U>
+        <U>
+          <T n="key">8807<!--family_Target_IsGrandchildOf_Actor--></T>
+        </U>
+        <U>
+          <T n="key">8808<!--family_Target_IsGrandparentOf_Actor--></T>
+        </U>
+        <U>
+          <T n="key">8809<!--family_Target_IsParentOf_Actor--></T>
+        </U>
+        <U>
+          <T n="key">8812<!--living_roommate--></T>
+        </U>
+        <U>
+          <T n="key">8824<!--family_Target_IsStepsiblingOf_Actor--></T>
+        </U>
+        <U>
+          <T n="key">8826<!--family_Target_IsCousinOf_Actor--></T>
+        </U>
+        <U>
+          <T n="key">8829<!--family_Target_IsAuntUncleOf_Actor--></T>
+        </U>
+        <U>
+          <T n="key">99429<!--romantic-Promised--></T>
+        </U>
+        <U>
+          <T n="key">9989<!--family_Target_IsNieceNephewOf_Actor--></T>
+        </U>
+      </L>
+      <L n="social_context_preference">
+        <U>
+          <T n="key">111600<!--relationshipBit_SocialContext_Retail_Uninterested--></T>
+        </U>
+        <U>
+          <T n="key">111601<!--relationshipBit_SocialContext_Retail_VeryInterested--></T>
+        </U>
+        <U>
+          <T n="key">111602<!--relationshipBit_SocialContext_Retail_MildlyInterested--></T>
+        </U>
+        <U>
+          <T n="key">24032<!--relbit_SocialContext_Casual--></T>
+          <T n="value">3</T>
+        </U>
+        <U>
+          <T n="key">24076<!--relbit_SocialContext_Romance_Amorous--></T>
+          <T n="value">-10</T>
+        </U>
+        <U>
+          <T n="key">24077<!--relbit_SocialContext_Fun_Funny--></T>
+          <T n="value">3</T>
+        </U>
+        <U>
+          <T n="key">24078<!--relbit_SocialContext_Romance_Suggestive--></T>
+        </U>
+        <U>
+          <T n="key">24079<!--relbit_SocialContext_Fun_Hilarious--></T>
+          <T n="value">3</T>
+        </U>
+        <U>
+          <T n="key">24080<!--relbit_SocialContext_Romance_Steamy--></T>
+          <T n="value">-15</T>
+        </U>
+        <U>
+          <T n="key">24081<!--relbit_SocialContext_Fun_Boring--></T>
+          <T n="value">3</T>
+        </U>
+        <U>
+          <T n="key">24082<!--relbit_SocialContext_Fun_Tedious--></T>
+        </U>
+        <U>
+          <T n="key">24083<!--relbit_SocialContext_Fun_InsufferablyTedious--></T>
+        </U>
+        <U>
+          <T n="key">24085<!--relbit_SocialContext_Friendship_Friendly--></T>
+          <T n="value">15</T>
+        </U>
+        <U>
+          <T n="key">24086<!--relbit_SocialContext_Friendship_Distasteful--></T>
+        </U>
+        <U>
+          <T n="key">24087<!--relbit_SocialContext_Friendship_Offensive--></T>
+          <T n="value">-15</T>
+        </U>
+        <U>
+          <T n="key">24088<!--relbit_SocialContext_Friendship_Abhorrent--></T>
+          <T n="value">-20</T>
+        </U>
+        <U>
+          <T n="key">24089<!--relbit_SocialContext_Awkwardness_Awkward--></T>
+          <T n="value">5</T>
+        </U>
+        <U>
+          <T n="key">24090<!--relbit_SocialContext_Awkwardness_VeryAwkward--></T>
+          <T n="value">5</T>
+        </U>
+      </L>
+      <L n="trait_preference">
+        <U>
+          <T n="key">102336<!--trait_Squeamish--></T>
+        </U>
+        <U>
+          <T n="key">124879<!--trait_Jealous--></T>
+        </U>
+        <U>
+          <T n="key">125437<!--trait_Insider--></T>
+        </U>
+        <U>
+          <T n="key">126088<!--trait_DanceMachine--></T>
+        </U>
+        <U>
+          <T n="key">131783<!--trait_Kleptomaniac--></T>
+        </U>
+        <U>
+          <T n="key">132589<!--trait_Unflirty--></T>
+        </U>
+        <U>
+          <T n="key">132627<!--trait_Vegetarian--></T>
+        </U>
+        <U>
+          <T n="key">157978<!--trait_CatLover--></T>
+        </U>
+        <U>
+          <T n="key">157979<!--trait_DogLover--></T>
+        </U>
+        <U>
+          <T n="key">16823<!--trait_Ambitious--></T>
+        </U>
+        <U>
+          <T n="key">16824<!--trait_SelfAssured--></T>
+        </U>
+        <U>
+          <T n="key">16826<!--trait_Bro--></T>
+        </U>
+        <U>
+          <T n="key">16830<!--trait_Childish--></T>
+        </U>
+        <U>
+          <T n="key">16832<!--trait_Clumsy--></T>
+        </U>
+        <U>
+          <T n="key">16833<!--trait_CommitmentIssues--></T>
+        </U>
+        <U>
+          <T n="key">16836<!--trait_Evil--></T>
+        </U>
+        <U>
+          <T n="key">16838<!--trait_FamilyOriented--></T>
+        </U>
+        <U>
+          <T n="key">16841<!--trait_Geek--></T>
+        </U>
+        <U>
+          <T n="key">16843<!--trait_Glutton--></T>
+        </U>
+        <U>
+          <T n="key">16844<!--trait_HatesChildren--></T>
+        </U>
+        <U>
+          <T n="key">16845<!--trait_HotHeaded--></T>
+        </U>
+        <U>
+          <T n="key">16848<!--trait_Insane--></T>
+        </U>
+        <U>
+          <T n="key">16850<!--trait_Creative--></T>
+        </U>
+        <U>
+          <T n="key">16857<!--trait_Mean--></T>
+        </U>
+        <U>
+          <T n="key">16858<!--trait_Neat--></T>
+        </U>
+        <U>
+          <T n="key">16860<!--trait_Slob--></T>
+        </U>
+        <U>
+          <T n="key">251970<!--trait_Proper--></T>
+        </U>
+        <U>
+          <T n="key">27176<!--trait_Foodie--></T>
+        </U>
+        <U>
+          <T n="key">27419<!--trait_active--></T>
+        </U>
+        <U>
+          <T n="key">27454<!--Trait_Romantic--></T>
+        </U>
+        <U>
+          <T n="key">27913<!--trait_Materialistic--></T>
+        </U>
+        <U>
+          <T n="key">27914<!--trait_LovesOutdoors--></T>
+        </U>
+        <U>
+          <T n="key">27915<!--trait_Good--></T>
+          <T n="value">5</T>
+        </U>
+        <U>
+          <T n="key">27916<!--trait_Bookworm--></T>
+        </U>
+        <U>
+          <T n="key">27917<!--trait_Genius--></T>
+        </U>
+        <U>
+          <T n="key">27918<!--trait_ArtLover--></T>
+        </U>
+        <U>
+          <T n="key">29571<!--trait_Outgoing--></T>
+        </U>
+        <U>
+          <T n="key">34316<!--trait_child--></T>
+        </U>
+        <U>
+          <T n="key">34317<!--trait_teen--></T>
+        </U>
+        <U>
+          <T n="key">34318<!--trait_youngAdult--></T>
+        </U>
+        <U>
+          <T n="key">34319<!--trait_adult--></T>
+        </U>
+        <U>
+          <T n="key">34320<!--trait_elder--></T>
+        </U>
+        <U>
+          <T n="key">9322<!--trait_Cheerful--></T>
+        </U>
+        <U>
+          <T n="key">9332<!--trait_Gloomy--></T>
+        </U>
+        <U>
+          <T n="key">9337<!--trait_Goofball--></T>
+        </U>
+        <U>
+          <T n="key">9599<!--trait_Lazy--></T>
+        </U>
+        <U>
+          <T n="key">9602<!--trait_Loner--></T>
+        </U>
+        <U>
+          <T n="key">9604<!--trait_MusicLover--></T>
+        </U>
+        <U>
+          <T n="key">9617<!--trait_Perfectionist--></T>
+        </U>
+        <U>
+          <T n="key">9620<!--trait_Snob--></T>
+        </U>
+      </L>
+    </U>
+  </V>
+  <T n="display_name">0xAFD1E539<!--Watch {1.SimFirstName}--></T>
+  <U n="display_name_text_tokens">
+    <L n="tokens">
+      <V t="participant_type">
+        <U n="participant_type">
+          <V n="objects" t="from_participant">
+            <U n="from_participant">
+              <E n="participant">Actor</E>
+            </U>
+          </V>
+        </U>
+      </V>
+      <V t="participant_type">
+        <U n="participant_type">
+          <V n="objects" t="from_participant">
+            <U n="from_participant">
+              <E n="participant">Object</E>
+            </U>
+          </V>
+        </U>
+      </V>
+    </L>
+  </U>
+  <E n="duplicate_affordance_group">DuplicateAffordance_Infant_Watch</E>
+  <L n="interaction_category_tags">
+    <E>Interaction_Super</E>
+    <E>Interaction_All</E>
+  </L>
+  <V n="outcome" t="single">
+    <U n="single">
+      <U n="actions">
+        <L n="loot_list">
+          <T>130279<!--rel_Gain_Small_TargetSim--></T>
+          <T>274241<!--loot_Sentiment_AddSentiment_Adoring_infantPreferredSim--></T>
+          <T>159219<!--loot_SimToPet_Rel_Gain_Small--></T>
+        </L>
+      </U>
+    </U>
+  </V>
+  <E n="scoring_priority">NORMAL</E>
+  <T n="subaction_selection_weight">1</T>
+  <E n="target_type">OBJECT</E>
+  <L n="test_globals">
+    <V t="test_set_reference">
+      <T n="test_set_reference">12240451678078890754<!--LilNinthel:testSetInstance_ActorIsInfantOrLittle--></T>
+    </V>
+    <V t="posture">
+      <U n="posture">
+        <L n="prohibited_postures">
+          <T>132262<!--posture_BeCarried--></T>
+        </L>
+      </U>
+    </V>
+    <V t="distance">
+      <U n="distance">
+        <U n="distance_threshold">
+          <E n="comparison">LESS_OR_EQUAL</E>
+          <T n="value">5</T>
+        </U>
+        <V n="tooltip" t="enabled">
+          <T n="enabled">0x90EFBFE8<!--{0.SimFirstName} is too far away.--></T>
+        </V>
+      </U>
+    </V>
+    <V t="can_see_object">
+      <U n="can_see_object">
+        <V n="tooltip" t="enabled">
+          <T n="enabled">0x394FCD32<!--{0.SimFirstName} can't see this.--></T>
+        </V>
+      </U>
+    </V>
+  </L>
+  <L n="tests">
+    <L>
+      <V t="developmental_milestone">
+        <U n="developmental_milestone">
+          <T n="developmental_milestone">286486<!--infantMilestones_GrossMotor_SitUp--></T>
+          <T n="invert">True</T>
+        </U>
+      </V>
+    </L>
+    <L>
+      <V t="buff">
+        <U n="buff">
+          <V n="whitelist" t="enabled">
+            <L n="enabled">
+              <T>280281<!--buff_AutonomyMod_Posture_Crib--></T>
+              <T>280280<!--buff_AutonomyMod_Posture_HighChair--></T>
+              <T>280282<!--buff_AutonomyMod_Posture_Playmat--></T>
+            </L>
+          </V>
+        </U>
+      </V>
+    </L>
+  </L>
+  <T n="time_overhead">30</T>
+</I>

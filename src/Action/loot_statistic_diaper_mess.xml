@@ -1,0 +1,49 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_statistic_diaper_mess" s="15492140109304376292">
+  <L n="loot_actions">
+    <V t="statistics">
+      <V n="statistics" t="statistic_change">
+        <U n="statistic_change">
+          <T n="amount">-20.00</T>
+          <T n="stat">16657<!--motive_Hygiene--></T>
+        </U>
+      </V>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_change">
+        <U n="statistic_change">
+          <T n="amount">1</T>
+          <T n="stat">10413409197395212511<!--LilNinthel:statistic_messy_diapers--></T>
+          <L n="subject">
+            <E>Actor</E>
+          </L>
+        </U>
+      </V>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_change">
+        <U n="statistic_change">
+          <T n="amount">1</T>
+          <T n="stat">15158240590669655393<!--LilNinthel:commodity_DiaperPoopLoad--></T>
+          <L n="subject">
+            <E>Actor</E>
+          </L>
+        </U>
+      </V>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_set_in_range">
+        <U n="statistic_set_in_range">
+          <T n="stat">12821404978606278937<!--LilNinthel:commodity_poopCooldown--></T>
+          <V n="value_type" t="int_range">
+            <U n="int_range">
+              <U n="value_range">
+                <T n="lower_bound">960</T>
+                <T n="upper_bound">1440</T>
+              </U>
+            </U>
+          </V>
+        </U>
+      </V>
+    </V>
+  </L>
+</I>

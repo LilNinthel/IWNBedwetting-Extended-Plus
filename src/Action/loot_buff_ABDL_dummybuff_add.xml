@@ -1,0 +1,12 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_buff_ABDL_dummybuff_add" s="13868228643327549260">
+  <L n="loot_actions">
+    <V t="buff">
+      <U n="buff">
+        <E n="subject">Actor</E>
+        <U n="buff">
+          <T n="buff_type">10309070037716691412<!--LilNinthel_ABDL_dummybuff--></T>
+        </U>
+      </U>
+    </V>
+  </L>
+</I>

@@ -1,0 +1,26 @@
+<!-- S4TK Group: 80000000 -->
+<I c="Buff" s="9332320514030447286" i="buff" m="buffs.buff" n="LilNinthel:buff_diaperAbsorbency_low">
+  <T n="buff_description">0x00000000</T>
+  <T n="buff_name">0x00000000</T>
+  <T n="icon">2f7d0004:00000000:c09b0954d2ef3d7f</T>
+  <T n="mood_type">0</T>
+  <T n="mood_weight">0</T>
+  <U n="game_effect_modifier">
+    <L n="_game_effect_modifiers">
+      <V t="autonomy_modifier">
+        <U n="autonomy_modifier">
+          <L n="stat_use_multiplier">
+            <U>
+              <T n="key">13859436604775548367<!--LilNinthel:commodity_DiaperLoad--></T>
+              <U n="value">
+                <E n="apply_direction">INCREASE</E>
+                <T n="multiplier">1.5</T>
+              </U>
+            </U>
+          </L>
+        </U>
+      </V>
+    </L>
+  </U>
+  <T n="visible">False</T>
+</I>

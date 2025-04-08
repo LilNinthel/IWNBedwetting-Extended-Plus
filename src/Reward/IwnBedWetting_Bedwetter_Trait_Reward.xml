@@ -1,0 +1,16 @@
+<I c="SimReward" i="reward" m="rewards.reward" n="IwnBedWetting_Bedwetter_Trait_Reward" s="11589092927928958152">
+  <T n="icon" p="Generated">2f7d0004:00000000:62313de8780bc7a9</T>
+  <T n="name">0x3EE2640A<!--BedWetter--></T>
+  <V n="reward_description">
+    <T n="enabled">0x633EA08B<!--This sim is a bed wetter--></T>
+  </V>
+  <L n="rewards">
+    <V t="specific_reward">
+      <V n="specific_reward" t="trait">
+        <U n="trait">
+          <T n="trait">2122234430<!--IwnBedWetting_Bedwetter_Trait--></T>
+        </U>
+      </V>
+    </V>
+  </L>
+</I>

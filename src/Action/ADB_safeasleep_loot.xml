@@ -1,0 +1,42 @@
+<I xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" c="LootActions" s="12240944651517296100" i="action" m="interactions.utils.loot" n="ADB_safeasleep_loot">
+  <L n="loot_actions">
+    <V t="buff">
+      <U n="buff">
+        <U n="buff">
+          <T n="buff_type">3649953427719767629<!--ADB_safeasleep_buff--></T>
+          <V n="buff_reason" t="enabled">
+            <T n="enabled">0xFAA1C7AB<!--(From wearing a diaper to bed)--></T>
+          </V>
+        </U>
+        <E n="subject">Actor</E>
+        <U n="chance">
+          <T n="base_chance">30</T>
+        </U>
+        <L n="tests">
+          <L>
+            <V t="buff">
+              <U n="buff">
+                <V n="whitelist" t="enabled">
+                  <L n="enabled">
+                    <T>27147<!--MoodBuff_Hidden_Asleep--></T>
+                  </L>
+                </V>
+                <E n="subject">Actor</E>
+              </U>
+            </V>
+            <V t="test_set_reference">
+              <T n="test_set_reference">17796732764948000262<!--IwnBedWetting_testSet_HasDiaperEquipped--></T>
+            </V>
+            <V t="buff">
+              <U n="buff">
+                <L n="blacklist">
+                  <T>3649953427719767629<!--ADB_safeasleep_buff--></T>
+                </L>
+              </U>
+            </V>
+          </L>
+        </L>
+      </U>
+    </V>
+  </L>
+</I>

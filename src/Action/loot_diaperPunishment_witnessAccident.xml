@@ -1,0 +1,21 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_diaperPunishment_witnessAccident" s="16722650082516330268">
+  <L n="loot_actions">
+    <V t="reaction">
+      <U n="reaction">
+        <V n="si_reaction" t="enabled">
+          <U n="enabled">
+            <T n="affordance">16953049104733518373<!--LilNinthel:diaperPunishment_witnessAccident--></T>
+            <E n="affordance_priority">Critical</E>
+          </U>
+        </V>
+        <L n="tests">
+          <L>
+            <V t="test_set_reference">
+              <T n="test_set_reference">12173793130818703504<!--LilNinthel:testSet_diaperPunishment_Actor_canDiaperPunish_Target--></T>
+            </V>
+          </L>
+        </L>
+      </U>
+    </V>
+  </L>
+</I>

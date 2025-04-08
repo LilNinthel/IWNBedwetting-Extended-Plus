@@ -1,0 +1,41 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_stat_diaperPack_10_use" s="10381284400155728040">
+  <L n="loot_actions">
+    <V t="statistics">
+      <V n="statistics" t="statistic_add">
+        <U n="statistic_add">
+          <T n="stat">1506466565412493377<!--LilNinthel:statistic_diaperPack_10--></T>
+          <L n="subject">
+            <E>Object</E>
+          </L>
+          <L n="tests">
+            <L>
+              <V t="statistic">
+                <U n="statistic">
+                  <T n="stat">1506466565412493377<!--LilNinthel:statistic_diaperPack_10--></T>
+                  <V t="value_threshold" n="threshold">
+                    <U n="value_threshold">
+                      <E n="comparison">EQUAL</E>
+                      <T n="value">0</T>
+                    </U>
+                  </V>
+                  <E n="who">Object</E>
+                </U>
+              </V>
+            </L>
+          </L>
+        </U>
+      </V>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_change">
+        <U n="statistic_change">
+          <T n="amount">-1</T>
+          <T n="stat">1506466565412493377<!--LilNinthel:statistic_diaperPack_10--></T>
+          <L n="subject">
+            <E>Object</E>
+          </L>
+        </U>
+      </V>
+    </V>
+  </L>
+</I>

@@ -1,0 +1,18 @@
+<I c="Trait" i="trait" m="traits.traits" n="LilNinthel:trait_NotAlwaysDiapered" s="3260484891">
+  <L n="ages">
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <T n="display_name">0x11D7A341<!--Not Always Diapered--></T>
+  <T n="display_name_gender_neutral">0x11D7A341<!--Not Always Diapered--></T>
+  <T n="icon">2f7d0004:00000000:322220fc9ba98a06</T>
+  <E n="min_lod_value">MINIMUM</E>
+  <L n="species">
+    <E />
+  </L>
+  <T n="trait_description">0x570BA74F<!--Disable the forced diapering effects of other traits. Does not apply to Sims that were never potty trained, are being diaper punished, or have the Diapered 24/7 trait.--></T>
+  <E n="trait_type">GAMEPLAY</E>
+</I>

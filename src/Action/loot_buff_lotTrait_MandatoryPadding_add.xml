@@ -1,0 +1,12 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_buff_lotTrait_MandatoryPadding_add" s="16334679009313712523">
+  <L n="loot_actions">
+    <V t="buff">
+      <U n="buff">
+        <E n="subject">Actor</E>
+        <U n="buff">
+          <T n="buff_type">11535732151856529074<!--LilNinthel:buff_lotTrait_MandatoryPadding--></T>
+        </U>
+      </U>
+    </V>
+  </L>
+</I>

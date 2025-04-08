@@ -1,0 +1,23 @@
+<I c="Trait" i="trait" m="traits.traits" n="LilNinthel:trait_diaperType_ABDL_premium" s="2147996870">
+  <L n="ages">
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <L n="buffs">
+    <U>
+      <T n="buff_type">13925725310446370984<!--LilNinthel:buff_diaperAbsorbency_veryHigh--></T>
+    </U>
+  </L>
+  <T n="buffs_add_on_spawn_only">False</T>
+  <T n="trait_description">0x152916E0<!--Premium ABDL Diaper--></T>
+  <T n="icon">2f7d0004:00000000:322220fc9ba98a06</T>
+  <E n="min_lod_value">MINIMUM</E>
+  <L n="species">
+    <E />
+  </L>
+  <T n="display_name">0x152916E0<!--Premium ABDL Diaper--></T>
+  <E n="trait_type">HIDDEN</E>
+</I>

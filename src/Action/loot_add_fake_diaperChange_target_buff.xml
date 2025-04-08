@@ -1,0 +1,12 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_add_fake_diaperChange_target_buff" s="10121360976962672844">
+  <L n="loot_actions">
+    <V t="buff">
+      <U n="buff">
+        <E n="subject">Actor</E>
+        <U n="buff">
+          <T n="buff_type">17537878190490117241<!--LilNinthel:DiaperChange_Target_Buff--></T>
+        </U>
+      </U>
+    </V>
+  </L>
+</I>

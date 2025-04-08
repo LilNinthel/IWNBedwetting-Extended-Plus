@@ -1,0 +1,20 @@
+<!-- S4TK Group: 00000036 -->
+<I c="DevelopmentalMilestone" i="developmental_milestone" m="developmental_milestones.developmental_milestone" n="LilNinthel:lifeMilestone_PeedOnPurpose" s="433575406">
+  <L n="ages">
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <E n="category">Firsts</E>
+  <T n="goal">16568892022126250211<!--LilNinthel:lifeMilestoneGoal_PeedOnPurpose--></T>
+  <T n="icon">2f7d0004:00000000:62313de8780bc7a9</T>
+  <L n="loot">
+    <T>315082<!--loot_LifeMilestone_LotBasedBuff_AddTimer--></T>
+  </L>
+  <T n="name">0x4BF8A5E1<!--Peeing Your Pants is Cool--></T>
+  <T n="ui_sort_order">1</T>
+  <T n="unlocked_text">0x30442D31<!--{0.SimFirstName} could have used a toilet, but decided that {M0.his}{F0.her} pants were the better option.--></T>
+  <T n="unlocked_text_no_context">0x30442D31<!--{0.SimFirstName} could have used a toilet, but decided that {M0.his}{F0.her} pants were the better option.--></T>
+</I>

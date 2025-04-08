@@ -1,0 +1,354 @@
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_ChangeDiaper_tableChangeDiaper" s="13511037669876511378">
+  <L n="loot_actions">
+    <V t="buff_removal">
+      <U n="buff_removal">
+        <L n="buffs_to_remove">
+          <T>14251928607352134641<!--LilNinthel:buff_DiaperRash--></T>
+          <T>10367890649802483015<!--LilNinthel:buff_leaky_diaper_overlay--></T>
+          <T>9966416866659479991<!--LilNinthel:buff_overflowing_diaper_overlay--></T>
+          <T>12572991107770899102<!--LilNinthel:buff_wetPants_crotch_only_overlay--></T>
+          <T>15600949772408234127<!--LilNinthel:buff_wetPants_overlay--></T>
+        </L>
+        <E n="subject">TargetSim</E>
+      </U>
+    </V>
+    <V t="generate_clothing_pile">
+      <U n="generate_clothing_pile">
+        <V n="ground_pile_loot" t="enabled">
+          <T n="enabled">309786<!--loot_Laundry_Create_ClothingPile_Diaper--></T>
+        </V>
+        <V n="initial_states_for_hamper" t="enabled">
+          <L n="enabled">
+            <U>
+              <T n="state">175404<!--laundry_Cleanliness_Values_Filthy--></T>
+              <L n="tests">
+                <L>
+                  <V t="buff">
+                    <U n="buff">
+                      <E n="subject">TargetSim</E>
+                      <V n="whitelist" t="enabled">
+                        <L n="enabled">
+                          <T>12823<!--Buff_Motives_Hygiene_Filthy--></T>
+                          <T>176293<!--buff_Laundry_Filthy--></T>
+                          <T>329250<!--buff_Infant_Hidden_Diaper_Overfull--></T>
+                        </L>
+                      </V>
+                    </U>
+                  </V>
+                </L>
+              </L>
+            </U>
+            <U>
+              <T n="state">175405<!--laundry_Cleanliness_Values_Grungy--></T>
+              <L n="tests">
+                <L>
+                  <V t="buff">
+                    <U n="buff">
+                      <E n="subject">TargetSim</E>
+                      <V n="whitelist" t="enabled">
+                        <L n="enabled">
+                          <T>27114<!--Buff_Motives_Hygiene_Grungy--></T>
+                          <T>176292<!--buff_Laundry_Grungy--></T>
+                          <T>309713<!--buff_Infant_Hidden_StinkyDiaper_Actor--></T>
+                        </L>
+                      </V>
+                    </U>
+                  </V>
+                </L>
+              </L>
+            </U>
+            <U>
+              <T n="state">175406<!--laundry_Cleanliness_Values_Used--></T>
+              <L n="tests">
+                <L>
+                  <V t="buff">
+                    <U n="buff">
+                      <L n="blacklist">
+                        <T>12823<!--Buff_Motives_Hygiene_Filthy--></T>
+                        <T>27114<!--Buff_Motives_Hygiene_Grungy--></T>
+                      </L>
+                      <E n="subject">TargetSim</E>
+                      <V n="whitelist" t="enabled">
+                        <L n="enabled">
+                          <T>176289<!--buff_Laundry_Used--></T>
+                          <T>329248<!--buff_Infant_Hidden_Diaper_PartialFull--></T>
+                        </L>
+                      </V>
+                    </U>
+                  </V>
+                </L>
+              </L>
+            </U>
+            <U>
+              <T n="state">175425<!--laundry_Dyness_Values_Soaked--></T>
+              <L n="tests">
+                <L>
+                  <V t="buff">
+                    <U n="buff">
+                      <E n="subject">TargetSim</E>
+                      <V n="whitelist" t="enabled">
+                        <L n="enabled">
+                          <T>178758<!--buff_HasBeen_Wet--></T>
+                          <T>156408<!--buff_Pools_Hygiene--></T>
+                          <T>178524<!--buff_Laundry_Soaked--></T>
+                          <T>183761<!--buff_Sim_Wetness_Wet--></T>
+                          <T>329250<!--buff_Infant_Hidden_Diaper_Overfull--></T>
+                        </L>
+                      </V>
+                    </U>
+                  </V>
+                </L>
+              </L>
+            </U>
+            <U>
+              <T n="state">175426<!--laundry_Dyness_Values_Damp--></T>
+              <L n="tests">
+                <L>
+                  <V t="buff">
+                    <U n="buff">
+                      <L n="blacklist">
+                        <T>178758<!--buff_HasBeen_Wet--></T>
+                        <T>156408<!--buff_Pools_Hygiene--></T>
+                        <T>183761<!--buff_Sim_Wetness_Wet--></T>
+                        <T>329250<!--buff_Infant_Hidden_Diaper_Overfull--></T>
+                      </L>
+                      <E n="subject">TargetSim</E>
+                      <V n="whitelist" t="enabled">
+                        <L n="enabled">
+                          <T>176291<!--buff_Laundry_Damp--></T>
+                          <T>309713<!--buff_Infant_Hidden_StinkyDiaper_Actor--></T>
+                          <T>329248<!--buff_Infant_Hidden_Diaper_PartialFull--></T>
+                        </L>
+                      </V>
+                    </U>
+                  </V>
+                </L>
+              </L>
+            </U>
+            <U>
+              <T n="state">175427<!--laundry_Dyness_Values_Dry--></T>
+              <L n="tests">
+                <L>
+                  <V t="buff">
+                    <U n="buff">
+                      <L n="blacklist">
+                        <T>178758<!--buff_HasBeen_Wet--></T>
+                        <T>156408<!--buff_Pools_Hygiene--></T>
+                        <T>183761<!--buff_Sim_Wetness_Wet--></T>
+                        <T>309713<!--buff_Infant_Hidden_StinkyDiaper_Actor--></T>
+                        <T>329250<!--buff_Infant_Hidden_Diaper_Overfull--></T>
+                      </L>
+                      <E n="subject">TargetSim</E>
+                      <V n="whitelist" t="enabled">
+                        <L n="enabled">
+                          <T>176290<!--buff_Laundry_Dry--></T>
+                        </L>
+                      </V>
+                    </U>
+                  </V>
+                </L>
+              </L>
+            </U>
+            <U>
+              <T n="state">175428<!--laundry_Dyness_Values_Warm--></T>
+              <L n="tests">
+                <L>
+                  <V t="buff">
+                    <U n="buff">
+                      <L n="blacklist">
+                        <T>178758<!--buff_HasBeen_Wet--></T>
+                        <T>156408<!--buff_Pools_Hygiene--></T>
+                        <T>183761<!--buff_Sim_Wetness_Wet--></T>
+                      </L>
+                      <E n="subject">TargetSim</E>
+                      <V n="whitelist" t="enabled">
+                        <L n="enabled">
+                          <T>178522<!--buff_Laundry_Warm--></T>
+                        </L>
+                      </V>
+                    </U>
+                  </V>
+                </L>
+              </L>
+            </U>
+            <U>
+              <T n="state">175432<!--laundry_Values_Scented_Rank--></T>
+              <L n="tests">
+                <L>
+                  <V t="buff">
+                    <U n="buff">
+                      <E n="subject">TargetSim</E>
+                      <V n="whitelist" t="enabled">
+                        <L n="enabled">
+                          <T>178525<!--buff_Laundry_Rank--></T>
+                        </L>
+                      </V>
+                    </U>
+                  </V>
+                </L>
+              </L>
+            </U>
+            <U>
+              <T n="state">175434<!--laundry_Values_Scented_Fragrant--></T>
+              <L n="tests">
+                <L>
+                  <V t="buff">
+                    <U n="buff">
+                      <E n="subject">TargetSim</E>
+                      <V n="whitelist" t="enabled">
+                        <L n="enabled">
+                          <T>178523<!--buff_Laundry_Fragrant--></T>
+                        </L>
+                      </V>
+                    </U>
+                  </V>
+                </L>
+              </L>
+            </U>
+          </L>
+        </V>
+        <L n="tests">
+          <L>
+            <V t="trait">
+              <U n="trait">
+                <E n="subject">TargetSim</E>
+                <L n="whitelist_traits">
+                  <T>306617<!--trait_BabyDiaper_Preference_Cloth--></T>
+                </L>
+              </U>
+            </V>
+            <V t="laundry_hero_object" />
+            <V t="sim_info">
+              <U n="sim_info">
+                <V n="npc" t="enabled" />
+              </U>
+            </V>
+          </L>
+        </L>
+      </U>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_remove">
+        <U n="statistic_remove">
+          <T n="stat">13859436604775548367<!--LilNinthel:commodity_DiaperLoad--></T>
+          <L n="subject">
+            <E>TargetSim</E>
+          </L>
+        </U>
+      </V>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_remove">
+        <U n="statistic_remove">
+          <T n="stat">15158240590669655393<!--LilNinthel:commodity_DiaperPoopLoad--></T>
+          <L n="subject">
+            <E>TargetSim</E>
+          </L>
+        </U>
+      </V>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_remove">
+        <U n="statistic_remove">
+          <T n="stat">12238946790010332428<!--LilNinthel:commodity_PantsPoopLoad--></T>
+          <L n="subject">
+            <E>TargetSim</E>
+          </L>
+        </U>
+      </V>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_remove">
+        <U n="statistic_remove">
+          <T n="stat">140764<!--commodity_Toddler_DiaperLoad--></T>
+          <L n="subject">
+            <E>TargetSim</E>
+          </L>
+        </U>
+      </V>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_change">
+        <U n="statistic_change">
+          <T n="amount">10</T>
+          <T n="stat">16657<!--motive_Hygiene--></T>
+          <L n="subject">
+            <E>TargetSim</E>
+          </L>
+        </U>
+      </V>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_change">
+        <U n="statistic_change">
+          <T n="amount">-10</T>
+          <T n="stat">16657<!--motive_Hygiene--></T>
+          <L n="subject">
+            <E>Actor</E>
+          </L>
+          <L n="tests">
+            <L>
+              <V t="trait">
+                <U n="trait">
+                  <L n="blacklist_traits">
+                    <T>102336<!--trait_Squeamish--></T>
+                  </L>
+                </U>
+              </V>
+            </L>
+          </L>
+        </U>
+      </V>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_change">
+        <U n="statistic_change">
+          <T n="amount">-5</T>
+          <U n="chance">
+            <T n="base_chance">100</T>
+          </U>
+          <T n="stat">16657<!--motive_Hygiene--></T>
+          <L n="subject">
+            <E>Actor</E>
+          </L>
+          <L n="tests">
+            <L>
+              <V t="trait">
+                <U n="trait">
+                  <L n="whitelist_traits">
+                    <T>102336<!--trait_Squeamish--></T>
+                  </L>
+                </U>
+              </V>
+            </L>
+          </L>
+        </U>
+      </V>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_change">
+        <U n="statistic_change">
+          <T n="amount">1</T>
+          <T n="stat">15659497102112408646<!--LilNinthel:statistic_worn_diapers--></T>
+          <L n="subject">
+            <E>TargetSim</E>
+          </L>
+        </U>
+      </V>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_change">
+        <U n="statistic_change">
+          <T n="amount">1</T>
+          <T n="stat">14963448730728041376<!--LilNinthel:statistic_consecutive_diapers--></T>
+          <L n="subject">
+            <E>TargetSim</E>
+          </L>
+        </U>
+      </V>
+    </V>
+    <V t="actions">
+      <T n="actions">17379325803857487041<!--LilNinthel:loot_refresh_diaperState_target--></T>
+    </V>
+  </L>
+</I>
