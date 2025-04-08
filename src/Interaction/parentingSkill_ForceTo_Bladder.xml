@@ -389,6 +389,17 @@
         <T n="test_set_reference">8775441245525711463<!--LilNinthel_TargetSim_DiaperTest--></T>
       </V>
     </L>
+    <L>
+      <V t="trait">
+        <U n="trait">
+          <L n="whitelist_traits">
+            <T>806286945<!--LilNinthel:trait_pants_wetter--></T>
+            <T>4058438675<!--LilNinthel:trait_pants_pooper--></T>
+          </L>
+          <E n="subject">TargetSim</E>
+        </U>
+      </V>
+    </L>
   </L>
   <T n="time_overhead">30</T>
 </I>
