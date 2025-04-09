@@ -23,6 +23,16 @@
     <V t="statistics">
       <V n="statistics" t="statistic_remove">
         <U n="statistic_remove">
+          <T n="stat">3832573560122933219<!--LilNinthel:commodity_PantsWetness--></T>
+          <L n="subject">
+            <E>TargetSim</E>
+          </L>
+        </U>
+      </V>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_remove">
+        <U n="statistic_remove">
           <T n="stat">12238946790010332428<!--LilNinthel:commodity_PantsPoopLoad--></T>
           <L n="subject">
             <E>TargetSim</E>

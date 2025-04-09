@@ -17,7 +17,7 @@
       <T name="skill_category">0</T>
       <T name="skill_description">0x45E6B0C1</T>
       <T name="skill_level_type">1</T>
-      <T name="stat_name">0x1A2899D9<!--Diaper Dependence--></T>
+      <T name="stat_name">0x1A2899D9<!--Diaper Training--></T>
       <L name="tooltip_icon_list">
         <T type="ResourceKey">00B2D882-00000000-322220fc9ba98a06</T>
       </L>

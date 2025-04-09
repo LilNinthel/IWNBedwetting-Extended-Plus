@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<I c="Commodity" i="statistic" m="statistics.commodity" n="LilNinthel:statistic_TotalUrinaryIncontinence_Tracker" s="15105330414396651143">
+  <T n="_default_convergence_value">0</T>
+  <U n="arrow_data">
+    <T n="negative_double_arrow">-20</T>
+    <T n="negative_single_arrow">-1</T>
+    <T n="negative_triple_arrow">-30</T>
+    <T n="positive_double_arrow">20</T>
+    <T n="positive_single_arrow">1</T>
+    <T n="positive_triple_arrow">30</T>
+  </U>
+  <T n="auto_satisfy_curve_random_time_offset">10</T>
+  <T n="decay_rate">1</T>
+  <U n="initial_tuning">
+    <T n="_value">2</T>
+  </U>
+  <T n="max_value_tuning">20</T>
+  <T n="min_value_tuning">0</T>
+  <T n="persisted_tuning">False</T>
+  <L n="states">
+    <U>
+      <L n="loot_list_on_enter_always">
+        <T>10251625219716980905<!--LilNinthel:loot_copy_bladder_value--></T>
+        <T>3135099122567206882<!--LilNinthel:loot_TotalUrinaryIncontinence_Diaper--></T>
+        <T>6435908614741883616<!--LilNinthel:loot_TotalUrinaryIncontinence_Underwear--></T>
+        <!--<T>9820816904738408212</T>-->
+      </L>
+      <T n="value">0</T>
+    </U>
+    <U>
+      <T n="value">2</T>
+    </U>
+  </L>
+</I>

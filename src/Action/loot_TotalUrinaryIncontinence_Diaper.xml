@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_TotalUrinaryIncontinence_Diaper" s="3135099122567206882">
+  <L n="loot_actions">
+    <V t="statistics">
+      <V n="statistics" t="statistic_change">
+        <U n="statistic_change">
+          <T n="amount">1</T>
+          <T n="stat">13859436604775548367<!--LilNinthel:commodity_DiaperLoad--></T>
+          <L n="statistic_multipliers">
+            <U>
+              <V n="multiplier" t="value_curve">
+                <L n="value_curve">
+                  <U>
+                    <T n="x">-100</T>
+                    <T n="y">6</T>
+                  </U>
+                  <U>
+                    <T n="x">100</T>
+                    <T n="y">0</T>
+                  </U>
+                </L>
+              </V>
+              <T n="statistic">9359251128331730838<!--LilNinthel:statistic_bladder_snapshot--></T>
+            </U>
+          </L>
+        </U>
+      </V>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_change">
+        <U n="statistic_change">
+          <T n="advertise">False</T>
+          <T n="amount">200</T>
+          <T n="stat">16652<!--motive_Bladder--></T>
+        </U>
+      </V>
+    </V>
+    <V t="actions">
+      <T n="actions">12331367283054388977<!--LilNinthel:loot_refresh_diaperState_actor--></T>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_set_max">
+        <U n="statistic_set_max">
+          <T n="stat">15105330414396651143<!--LilNinthel:statistic_TotalUrinaryIncontinence_Tracker--></T>
+        </U>
+      </V>
+    </V>
+  </L>
+  <L n="tests">
+    <L>
+      <V t="test_set_reference">
+        <T n="test_set_reference">17796732764948000262<!--IwnBedWetting_testSet_HasDiaperEquipped--></T>
+      </V>
+    </L>
+  </L>
+</I>
