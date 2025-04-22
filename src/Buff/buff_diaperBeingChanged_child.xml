@@ -39,6 +39,28 @@
             </V>
           </U>
         </L>
+        <L>
+          <U>
+            <V n="modifier" t="set_cas_part">
+              <U n="set_cas_part">
+                <T n="cas_part">11394100940241741095</T>
+                <T n="expect_invalid_parts">True</T>
+                <T n="remove_conflicting">True</T>
+              </U>
+            </V>
+          </U>
+        </L>
+        <L>
+          <U>
+            <V n="modifier" t="set_cas_part">
+              <U n="set_cas_part">
+                <T n="cas_part">13842892064731599638</T>
+                <T n="expect_invalid_parts">True</T>
+                <T n="remove_conflicting">True</T>
+              </U>
+            </V>
+          </U>
+        </L>
       </L>
       <E n="priority">FROZEN</E>
     </U>
