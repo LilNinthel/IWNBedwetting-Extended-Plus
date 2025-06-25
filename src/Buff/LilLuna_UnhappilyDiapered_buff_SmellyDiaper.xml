@@ -1,0 +1,10 @@
+<I c="Buff" i="buff" m="buffs.buff" n="LilLuna_UnhappilyDiapered_buff_SmellyDiaper" s="9708191925954819974">
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0x84F4A14E<!--{0.SimFirstName}'s diaper can be smelled by nearby Sims. How gross! {0.SimFirstName} is about ready to curl up into a ball of embarrasment. At least ghosts don't have to worry about this!--></T>
+  <T n="buff_name">0x04D62BE7<!--Smelly Diaper!--></T>
+  <T n="icon">2f7d0004:00000000:9d895e1dd43b755c</T>
+  <T n="mood_type">14635<!--Mood_Embarrassed--></T>
+  <T n="mood_weight">2</T>
+  <T n="show_timeout">False</T>
+</I>

@@ -1,0 +1,10 @@
+<I c="Buff" i="buff" m="buffs.buff" n="LilLuna_UnhappilyDiapered_buff_Wet" s="920530613315164920">
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0xA4199366<!--{0.SimFirstName} is in a wet diaper and {M0.he}{F0.she} doesn't appreciate it. Hopefully, {M0.he}{F0.she} can change it soon. As if using it wasn't bad enough, {M0.he}{F0.she} didn't even notice it happening...--></T>
+  <T n="buff_name">0xD202AC3C<!--Uncomfortably Wet--></T>
+  <T n="icon">2f7d0004:00000000:820522970E5AC06D</T>
+  <T n="mood_type">14646<!--Mood_Uncomfortable--></T>
+  <T n="mood_weight">3</T>
+  <T n="show_timeout">False</T>
+</I>

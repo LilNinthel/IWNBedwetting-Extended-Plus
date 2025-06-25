@@ -19,6 +19,22 @@
   <T n="club_bucks_reward">2</T>
   <T n="is_targeted">False</T>
   <T n="name">0xE4D2EB02<!--Use Diaper--></T>
+  <L n="small_business_customer_tooltip">
+    <U>
+      <E n="key">BASE_GAME</E>
+      <L n="value">
+        <T>0x1244118D<!--Sims will use their diapers.--></T>
+      </L>
+    </U>
+  </L>
+  <L n="small_business_employee_tooltip">
+    <U>
+      <E n="key">BASE_GAME</E>
+      <L n="value">
+        <T>0x1244118D<!--Sims will use their diapers.--></T>
+      </L>
+    </U>
+  </L>
   <T n="tooltip_template">0xE4D2EB02<!--Use Diaper--></T>
   <T n="tooltip_template_negative">0x0678482F<!--Don't Use Diaper--></T>
 </I>

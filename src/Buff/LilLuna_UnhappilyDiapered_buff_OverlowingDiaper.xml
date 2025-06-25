@@ -1,0 +1,13 @@
+<I c="Buff" i="buff" m="buffs.buff" n="LilLuna_UnhappilyDiapered_buff_OverlowingDiaper" s="7690887837209389329">
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0x694C9A1D<!--{0.SimFirstName} really doesn't want to be in this diaper anymore... It's leaking, and stinky, and gross. Wasn't the whole point of diapers to keep everything a little cleaner? What's the point of wearing a diaper if it's gonna get everywhere anyways?--></T>
+  <T n="buff_name">0x3D5EFB82<!--Diapered and Dying of Embarrasment--></T>
+  <T n="icon">2f7d0004:00000000:820522970E5AC06A</T>
+  <T n="mood_type">14635<!--Mood_Embarrassed--></T>
+  <T n="mood_weight">5</T>
+  <L n="static_commodity_to_add">
+    <T>553952364210320540</T>
+  </L>
+  <T n="show_timeout">False</T>
+</I>

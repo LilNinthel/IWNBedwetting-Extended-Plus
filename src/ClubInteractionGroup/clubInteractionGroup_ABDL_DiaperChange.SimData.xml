@@ -8,9 +8,23 @@
       <T name="is_targeted">1</T>
       <T name="name">0xD6E59A1B</T>
       <T name="small_business_customer_rule">1</T>
-      <L name="small_business_customer_tooltip"/>
+      <L name="small_business_customer_tooltip">
+        <U type="Object" schema="RulesTooltipsStringsTuple">
+          <T name="key">0</T>
+          <L name="value">
+            <T type="LocalizationKey">0x1E03DFEA</T>
+          </L>
+        </U>
+      </L>
       <T name="small_business_employee_rule">1</T>
-      <L name="small_business_employee_tooltip"/>
+      <L name="small_business_employee_tooltip">
+        <U type="Object" schema="RulesTooltipsStringsTuple">
+          <T name="key">0</T>
+          <L name="value">
+            <T type="LocalizationKey">0x1E03DFEA</T>
+          </L>
+        </U>
+      </L>
       <T name="teen_safe">1</T>
       <T name="tooltip_template">0xD6E59A1B</T>
       <T name="tooltip_template_negative">0x32B9BAB9</T>
@@ -32,6 +46,12 @@
         <Column name="teen_safe" type="Boolean" flags="0x00000000"/>
         <Column name="tooltip_template" type="LocalizationKey" flags="0x00000000"/>
         <Column name="tooltip_template_negative" type="LocalizationKey" flags="0x00000000"/>
+      </Columns>
+    </Schema>
+    <Schema name="RulesTooltipsStringsTuple" schema_hash="0x898E52D2">
+      <Columns>
+        <Column name="key" type="Int64" flags="0x00000000" />
+        <Column name="value" type="Vector" flags="0x00000000" />
       </Columns>
     </Schema>
   </Schemas>

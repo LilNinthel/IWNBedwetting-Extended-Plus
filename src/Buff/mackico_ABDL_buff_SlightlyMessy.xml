@@ -1,0 +1,11 @@
+<I c="Buff" i="buff" m="buffs.buff" n="mackico_ABDL_buff_SlightlyMessy" s="14652479160138982342">
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0x5FDDCB41<!--Oops! {0.SimFirstName} had a messy accident in {M0.his}{F0.her} diaper.--></T>
+  <T n="buff_name">0xE3DAE563<!--Messy Diaper!--></T>
+  <T n="icon">2f7d0004:00000000:589D905795EE0DB7</T>
+  <T n="mood_type">14640<!--Mood_Happy--></T>
+  <T n="mood_weight">1</T>
+  <T n="show_timeout">False</T>
+  <T n="ui_sort_order">0</T>
+</I>

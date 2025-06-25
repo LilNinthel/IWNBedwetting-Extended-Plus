@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<I c="Buff" i="buff" m="buffs.buff" n="BabyLola_LoveDiapers_buff_SlightlyMessy" s="12995544417238269144">
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0x0683FE23<!--{0.SimFirstName} had a little messy accident in {M0.his}{F0.her} diaper. {M0.He}{F0.She} doesn't mind! That's part of wearing diapers, and {M0.he}{F0.she} loves wearing diapers!--></T>
+  <T n="buff_name">0x73262E89<!--Slightly Messy and Happy--></T>
+  <T n="icon">2f7d0004:00000000:589D905795EE0DB7</T>
+  <T n="mood_type">14640<!--Mood_Happy--></T>
+  <T n="mood_weight">2</T>
+  <T n="show_timeout">False</T>
+  <T n="ui_sort_order">0</T>
+</I>

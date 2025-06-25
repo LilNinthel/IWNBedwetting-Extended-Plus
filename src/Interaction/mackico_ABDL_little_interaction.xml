@@ -28,6 +28,7 @@
   <T n="allow_from_world">True</T>
   <T n="allow_user_directed">False</T>
   <V n="basic_focus" t="do_not_change_focus" />
+" t="do_not_change_focus" />
   <L n="interaction_category_tags">
     <E>Interaction_Mixer</E>
     <E>Interaction_All</E>

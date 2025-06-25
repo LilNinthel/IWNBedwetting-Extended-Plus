@@ -1,0 +1,11 @@
+<I c="Buff" i="buff" m="buffs.buff" n="mackico_ABDL_buff_VeryMessy" s="2668620384609291674">
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0x4B8A61B5<!--Oh no. {0.SimFirstName}'s diaper is completely packed now, it smells really bad, and {M0.he}{F0.she} is starting to feel all itchy and sore from spending too long in a dirty diaper. This is miserable.--></T>
+  <T n="buff_name">0xE3DAE563<!--Messy Diaper!--></T>
+  <T n="icon">2f7d0004:00000000:BE40C21E6AB22BCE</T>
+  <T n="mood_type">14646<!--Mood_Uncomfortable--></T>
+  <T n="mood_weight">2</T>
+  <T n="show_timeout">False</T>
+  <T n="ui_sort_order">0</T>
+</I>

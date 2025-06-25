@@ -1,0 +1,11 @@
+<I c="Buff" i="buff" m="buffs.buff" n="LilLuna_UnhappilyDiapered_buff_Messy" s="16378505075857051701">
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0x4481B85E<!--{0.SimFirstName}'s diaper is all soft and mushy and full of poop. {M0.He}{F0.She} is so uncomfortable! The only thing to make this situation worse would be if {M0.he}{F0.she} had another messy accident.--></T>
+  <T n="buff_name">0xE72263C8<!--Uncomfortably Messy--></T>
+  <T n="icon">2f7d0004:00000000:C30C0E1629EAE4EF</T>
+  <T n="mood_type">14646<!--Mood_Uncomfortable--></T>
+  <T n="mood_weight">3</T>
+  <T n="show_timeout">False</T>
+  <T n="ui_sort_order">0</T>
+</I>

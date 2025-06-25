@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<I c="Buff" i="buff" m="buffs.buff" n="BabyLola_LoveDiapers_buff_SmellyDiaper" s="11268579293200498259">
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0x52A4212F<!--{0.SimFirstName}'s diaper can be smelled by nearby sims. How embarrassing!--></T>
+  <T n="buff_name">0x25669876<!--Smelly Diaper!--></T>
+  <T n="icon">2f7d0004:00000000:9d895e1dd43b755c</T>
+  <T n="mood_type">14635</T>
+  <T n="mood_weight">2</T>
+  <T n="show_timeout">False</T>
+</I>

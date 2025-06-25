@@ -1,0 +1,10 @@
+<I c="Buff" i="buff" m="buffs.buff" n="mackico_ABDL_buff_LittleWet" s="14753154571738608934">
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0xE862A3EE<!--{0.SimFirstName} had a little accident... Good thing {M0.he}{F0.she} was wearing {M0.his}{F0.her} diapers!--></T>
+  <T n="buff_name">0x068C2453<!--All Wet--></T>
+  <T n="icon">2f7d0004:00000000:820522970E5AC06E</T>
+  <T n="mood_type">14640<!--Mood_Happy--></T>
+  <T n="mood_weight">2</T>
+  <T n="show_timeout">False</T>
+</I>

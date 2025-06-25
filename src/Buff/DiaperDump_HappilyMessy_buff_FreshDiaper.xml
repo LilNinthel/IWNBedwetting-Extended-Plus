@@ -1,0 +1,10 @@
+<I c="Buff" i="buff" m="buffs.buff" n="DiaperDump_HappilyMessy_buff_FreshDiaper" s="6571694997569538776">
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0x8DE3EA9C<!--There's nothing quite like the delightful potential of a clean, fresh diaper for {0.SimFirstName}.--></T>
+  <T n="buff_name">0xF1E6AB36<!--Fresh Diaper!--></T>
+  <T n="icon">2f7d0004:00000000:820522970E5AC06F</T>
+  <T n="mood_type">14640<!--Mood_Happy--></T>
+  <T n="mood_weight">1</T>
+  <T n="show_timeout">False</T>
+</I>

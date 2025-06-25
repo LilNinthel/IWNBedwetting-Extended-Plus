@@ -1,0 +1,10 @@
+<I c="Buff" i="buff" m="buffs.buff" n="LilLuna_UnhappilyDiapered_buff_LeakyDiaper" s="10501523425170783064">
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0x9B89AF09<!--{0.SimFirstName}'s diaper is starting to leak at the gathers. It's chafing and feels horrible, and {0.SimFirstName} is sure people can see how much the seat of {M0.his}{F0.her} pants is drooping. This is the worst!--></T>
+  <T n="buff_name">0x3D5EFB82<!--Diapered and Dying of Embarrasment--></T>
+  <T n="icon">2f7d0004:00000000:820522970E5AC06A</T>
+  <T n="mood_type">14635<!--Mood_Embarrassed--></T>
+  <T n="mood_weight">5</T>
+  <T n="show_timeout">False</T>
+</I>

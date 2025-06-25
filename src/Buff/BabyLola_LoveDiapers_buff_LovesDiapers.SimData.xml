@@ -1,10 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <SimData version="0x00000101" u="0x00000000">
   <Instances>
-    <I name="__shim:BabyLola_LoveDiapers_buff_LovesDiapers" schema="Buff" type="Object">
+    <I name="BabyLola_LoveDiapers_buff_LovesDiapers" schema="Buff" type="Object">
       <T name="audio_sting_on_add">FD04E3BE-00000000-8AF8B916CF64C646</T>
       <T name="audio_sting_on_remove">FD04E3BE-00000000-3BF33216A25546EA</T>
-      <T name="buff_description">0x8A3A5915</T>
-      <T name="buff_name">0x99CA1CBA</T>
+      <T name="buff_description">0x8A3A5915<!--These Sims enjoy wearing and using diapers.--></T>
+      <T name="buff_name">0x99CA1CBA<!--Loves Diapers--></T>
       <T name="icon">00B2D882-00000000-C09B0954D2EF3D7F</T>
       <T name="mood_type">0</T>
       <T name="mood_weight">0</T>

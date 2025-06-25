@@ -1,0 +1,10 @@
+<I c="Buff" i="buff" m="buffs.buff" n="DiaperDump_HappilyMessy_buff_LittleWet" s="18123708370786204652">
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0x7EF028C8<!--{0.SimFirstName}'s only wet {M0.his}{F0.her} diaper a little bit. {M0.He}{F0.She} doesn't need to worry about a change yet.--></T>
+  <T n="buff_name">0xFADF876A<!--Comfortably Wet--></T>
+  <T n="icon">2f7d0004:00000000:820522970E5AC06E</T>
+  <T n="mood_type">14640<!--Mood_Happy--></T>
+  <T n="mood_weight">2</T>
+  <T n="show_timeout">False</T>
+</I>

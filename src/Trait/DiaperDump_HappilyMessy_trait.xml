@@ -1,0 +1,24 @@
+<I c="Trait" i="trait" m="traits.traits" n="DiaperDump_HappilyMessy_trait" s="3111634292">
+  <L n="ages">
+    <E>ELDER</E>
+    <E>ADULT</E>
+    <E>YOUNGADULT</E>
+    <E>TEEN</E>
+  </L>
+  <L n="buffs">
+    <U>
+      <T n="buff_type">10563953826471159022<!--DiaperDump_HappilyMessy_buff_corebuff--></T>
+    </U>
+  </L>
+  <T n="display_name">0xD6648066<!--Loves Messing Diapers--></T>
+  <T n="icon">2f7d0004:00000000:c09b0954d2ef3d7f</T>
+  <L n="species">
+    <E>HUMAN</E>
+  </L>
+  <L n="tags">
+    <E>TraitPersonality</E>
+    <E>TraitEmotional</E>
+  </L>
+  <T n="trait_description">0x51C229EC<!--These Sims enjoy wearing and using diapers to their fullest extent.--></T>
+  <E n="trait_type">PERSONALITY</E>
+</I>

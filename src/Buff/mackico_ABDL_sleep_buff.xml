@@ -1,0 +1,15 @@
+<I c="Buff" s="16560529310292704060" i="buff" m="buffs.buff" n="mackico_ABDL_sleep_buff">
+  <T n="buff_description">0x1AF64578<!--Wearing diapers to bed always leaves {0.SimFirstName} feeling really little, but {M0.he}{F0.she} never sleeps so well.--></T>
+  <T n="buff_name">0x778341BA<!--Like a Baby--></T>
+  <T n="icon">2f7d0004:00000000:3da968bb826b9623</T>
+  <T n="mood_type">14640<!--Mood_Happy--></T>
+  <T n="mood_weight">2</T>
+  <V n="_temporary_commodity_info" t="enabled">
+    <U n="enabled">
+      <T n="max_duration">460</T>
+      <L n="categories">
+        <E>Happy_Buffs</E>
+      </L>
+    </U>
+  </V>
+</I>

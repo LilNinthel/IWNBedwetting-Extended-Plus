@@ -1,0 +1,15 @@
+<I xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" c="Buff" s="2272302705646757902" i="buff" m="buffs.buff" n="DD_HM_messedatwork_buff">
+  <T n="buff_description">0xA1F04546<!--Oh no! {0.SimFirstName} messed {M0.his}{F0.her} diaper at work! It's great fun at home, but at work, amongst peers and colleagues, all of whom could smell {M0.him}{F0.her}? It was BAD! It's going to take a while for {0.SimFirstName} forget {M0.his}{F0.her} mortification.--></T>
+  <T n="buff_name">0x454E2DCC<!--Messed at Work--></T>
+  <T n="icon">2f7d0004:00000000:589D905795EE0DB7</T>
+  <T n="mood_type">14635<!--Mood_Embarrassed--></T>
+  <T n="mood_weight">3</T>
+  <V n="_temporary_commodity_info" t="enabled">
+    <U n="enabled">
+      <T n="max_duration">540</T>
+      <L n="categories">
+        <E>Embarrassed_Buffs</E>
+      </L>
+    </U>
+  </V>
+</I>

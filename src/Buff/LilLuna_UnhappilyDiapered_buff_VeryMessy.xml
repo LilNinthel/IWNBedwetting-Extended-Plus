@@ -1,0 +1,11 @@
+<I c="Buff" i="buff" m="buffs.buff" n="LilLuna_UnhappilyDiapered_buff_VeryMessy" s="1651854410185512873">
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0x53221082<!--{0.SimFirstName}'s diaper absolutely disgusting. It's completely filled with revolting mess, {M0.he}{F0.she}'s itchy and sore, and {M0.he}{F0.she} just wants out of his diaper ASAP!--></T>
+  <T n="buff_name">0x2165A6D0<!--Absolutely Disgusting Diaper!--></T>
+  <T n="icon">2f7d0004:00000000:BE40C21E6AB22BCE</T>
+  <T n="mood_type">14646<!--Mood_Uncomfortable--></T>
+  <T n="mood_weight">5</T>
+  <T n="show_timeout">False</T>
+  <T n="ui_sort_order">0</T>
+</I>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<I c="Buff" i="buff" m="buffs.buff" n="BabyLola_LoveDiapers_buff_LeakyDiaper" s="5049911975135564731">
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0x74A35155<!--{0.SimFirstName}'s diaper is starting to leak about the gathers, and is beginning to chafe. {M0.He}{F0.She}'d really like a change right about now!--></T>
+  <T n="buff_name">0x45B1C383<!--Can I Be Changed Now?--></T>
+  <T n="icon">2f7d0004:00000000:820522970E5AC06A</T>
+  <T n="mood_type">14646</T>
+  <T n="mood_weight">2</T>
+  <T n="show_timeout">False</T>
+</I>

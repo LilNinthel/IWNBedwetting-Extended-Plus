@@ -1,0 +1,12 @@
+<I c="Buff" s="836767419380533503" i="buff" m="buffs.buff" n="mackico_ABDL_work_buff">
+  <T n="buff_description">0x91E6C9C7<!--{0.SimFirstName} is feeling really little but {M0.he}{F0.she} had to go to work like a {M0.boy}{F0.girl} and it's horrible! Everything is just too hard right now!--></T>
+  <T n="buff_name">0x0598DEE5<!--Grown-Up Jobs are Too Hard!--></T>
+  <T n="icon">2f7d0004:00000000:7845fd29307853ab</T>
+  <T n="mood_type">14643<!--Mood_Sad--></T>
+  <T n="mood_weight">2</T>
+  <V n="_temporary_commodity_info" t="enabled">
+    <U n="enabled">
+      <T n="max_duration">360</T>
+    </U>
+  </V>
+</I>

@@ -1,0 +1,11 @@
+<I c="Buff" i="buff" m="buffs.buff" n="LilLuna_UnhappilyDiapered_buff_SlightlyMessy" s="7233071287123742081">
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0x3BB0E6BA<!--{0.SimFirstName} didn't want to do it, but {M0.he}{F0.she} couldn't help it and {M0.he}{F0.she} had messy accident in {M0.his}{F0.her} diaper. It feels so gross! At least {M0.he}{F0.she} was wearing a diaper and it didn't make a mess.--></T>
+  <T n="buff_name">0xE72263C8<!--Uncomfortably Messy--></T>
+  <T n="icon">2f7d0004:00000000:589D905795EE0DB7</T>
+  <T n="mood_type">14646<!--Mood_Uncomfortable--></T>
+  <T n="mood_weight">1</T>
+  <T n="show_timeout">False</T>
+  <T n="ui_sort_order">0</T>
+</I>

@@ -1,0 +1,10 @@
+<I c="Buff" i="buff" m="buffs.buff" n="LilLuna_UnhappilyDiapered_buff_FullDiaper" s="577175084307323802">
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0x2BBC802F<!--{0.SimFirstName} desperately needs to be changed... One more accident and {M0.his}{F0.her} diaper will overflow.--></T>
+  <T n="buff_name">0x5EE87CD7<!--I need to change it NOW!--></T>
+  <T n="icon">2f7d0004:00000000:820522970E5AC06B</T>
+  <T n="mood_type">14645<!--Mood_Stressed--></T>
+  <T n="mood_weight">5</T>
+  <T n="show_timeout">False</T>
+</I>

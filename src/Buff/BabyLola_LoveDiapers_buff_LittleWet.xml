@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<I c="Buff" i="buff" m="buffs.buff" n="BabyLola_LoveDiapers_buff_LittleWet" s="13769024452903882822">
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0xAB766406<!--{0.SimFirstName}'s diaper is just a little damp. {M0.He}{F0.She} doesn't need to worry about a change right now.--></T>
+  <T n="buff_name">0x8646F0A7<!--Comfortably Wet--></T>
+  <T n="icon">2f7d0004:00000000:820522970E5AC06E</T>
+  <T n="mood_type">14640</T>
+  <T n="mood_weight">2</T>
+  <T n="show_timeout">False</T>
+</I>

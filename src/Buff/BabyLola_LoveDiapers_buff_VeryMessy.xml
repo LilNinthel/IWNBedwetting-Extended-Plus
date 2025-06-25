@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<I c="Buff" i="buff" m="buffs.buff" n="BabyLola_LoveDiapers_buff_VeryMessy" s="6268116697687501748">
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0x117E2B2F<!--{0.SimFirstName}'s is packed with poop. It's getting very uncomfortable, if {M0.he}{F0.she} stays like this, {M0.he}{F0.she} will get a rash! {M0.He}{F0.She} wants a change, and now!--></T>
+  <T n="buff_name">0x960CFA6D<!--Very Messy Diaper!--></T>
+  <T n="icon">2f7d0004:00000000:BE40C21E6AB22BCE</T>
+  <T n="mood_type">14646</T>
+  <T n="mood_weight">2</T>
+  <T n="show_timeout">False</T>
+  <T n="ui_sort_order">0</T>
+</I>

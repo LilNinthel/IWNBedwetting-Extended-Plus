@@ -1,5 +1,5 @@
 <!-- S4TK Group: 80000000 -->
-<I c="Buff" i="buff" m="buffs.buff" n="__shim:LilLuna_UnhappilyDiapered_buff_HatesDiapers" s="12623981993528856686">
+<I c="Buff" i="buff" m="buffs.buff" n="LilLuna_UnhappilyDiapered_buff_HatesDiapers" s="1190401208031345023">
   <L n="_loot_on_addition">
     <T>17475465455792082128<!--__shim:loot_trait_HatesDiapers_DiaperState_add--></T>
   </L>

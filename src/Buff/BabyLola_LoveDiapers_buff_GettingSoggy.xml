@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<I c="Buff" i="buff" m="buffs.buff" n="BabyLola_LoveDiapers_buff_GettingSoggy" s="10675871615540082624">
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0xEFB8E184<!--{0.SimFirstName}'s diaper is starting to feel really soggy. It's not much fun when they need to worry if they might leak next time they have an accident...--></T>
+  <T n="buff_name">0x8646F0A7<!--Comfortably Wet--></T>
+  <T n="icon">2f7d0004:00000000:820522970E5AC06C</T>
+  <T n="mood_type">14640</T>
+  <T n="mood_weight">2</T>
+  <T n="show_timeout">False</T>
+</I>

@@ -1,0 +1,13 @@
+<I c="Buff" i="buff" m="buffs.buff" n="mackico_ABDL_buff_OverflowingDiaper" s="14753151273203724380">
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0x6ABF124C<!--{0.SimFirstName}'s diaper is starting to feel really gross. {M0.He}{F0.She} really doesn't want to wear it anymore.--></T>
+  <T n="buff_name">0xEF5FD5C6<!--This Diaper's Really Yucky...--></T>
+  <T n="icon">2f7d0004:00000000:820522970E5AC06A</T>
+  <T n="mood_type">14646<!--Mood_Uncomfortable--></T>
+  <T n="mood_weight">5</T>
+  <L n="static_commodity_to_add">
+    <T>553952364210320540</T>
+  </L>
+  <T n="show_timeout">False</T>
+</I>

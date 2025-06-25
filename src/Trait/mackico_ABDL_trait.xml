@@ -1,0 +1,24 @@
+<I c="Trait" i="trait" m="traits.traits" n="mackico_ABDL_trait" s="3743471655">
+  <L n="ages">
+    <E>ELDER</E>
+    <E>ADULT</E>
+    <E>YOUNGADULT</E>
+    <E>TEEN</E>
+  </L>
+  <L n="buffs">
+    <U>
+      <T n="buff_type">6599520983304938591<!--mackico_ABDL_corebuff--></T>
+    </U>
+  </L>
+  <T n="display_name">0xC89AE2BF<!--ABDL Trait--></T>
+  <T n="icon">2f7d0004:00000000:c09b0954d2ef3d7f</T>
+  <L n="species">
+    <E>HUMAN</E>
+  </L>
+  <L n="tags">
+    <E>TraitPersonality</E>
+    <E>TraitEmotional</E>
+  </L>
+  <T n="trait_description">0xED6F6DF5<!--These Sims sometimes act younger than they are. They wear diapers.--></T>
+  <E n="trait_type">PERSONALITY</E>
+</I>

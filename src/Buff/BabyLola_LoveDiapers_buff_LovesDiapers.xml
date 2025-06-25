@@ -1,4 +1,5 @@
-<I c="Buff" i="buff" m="buffs.buff" n="__shim:BabyLola_LoveDiapers_buff_LovesDiapers" s="14961780449084563291">
+<?xml version="1.0" encoding="utf-8"?>
+<I c="Buff" i="buff" m="buffs.buff" n="BabyLola_LoveDiapers_buff_LovesDiapers" s="11072466440704092092">
   <L n="_loot_on_addition">
     <T>10141045969745293000<!--__shim:loot_trait_LovesDiapers_DiaperState_add--></T>
   </L>

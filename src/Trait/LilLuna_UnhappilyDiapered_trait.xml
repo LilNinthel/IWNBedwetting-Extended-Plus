@@ -1,0 +1,24 @@
+<I c="Trait" i="trait" m="traits.traits" n="LilLuna_UnhappilyDiapered_trait" s="2797347202">
+  <L n="ages">
+    <E>ELDER</E>
+    <E>ADULT</E>
+    <E>YOUNGADULT</E>
+    <E>TEEN</E>
+  </L>
+  <L n="buffs">
+    <U>
+      <T n="buff_type">1190401208031345023<!--LilLuna_UnhappilyDiapered_buff_HatesDiapers--></T>
+    </U>
+  </L>
+  <T n="display_name">0x5C29FB16<!--Hates Diapers--></T>
+  <T n="icon">2f7d0004:00000000:c09b0954d2ef3d7f</T>
+  <L n="species">
+    <E>HUMAN</E>
+  </L>
+  <L n="tags">
+    <E>TraitPersonality</E>
+    <E>TraitEmotional</E>
+  </L>
+  <T n="trait_description">0x63284F11<!--These Sims hate that they must wear diapers, and find it more embarrasing than comforting.--></T>
+  <E n="trait_type">PERSONALITY</E>
+</I>

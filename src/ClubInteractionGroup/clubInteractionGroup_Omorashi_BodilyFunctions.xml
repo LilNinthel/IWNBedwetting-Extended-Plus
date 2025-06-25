@@ -10,6 +10,22 @@
   <T n="club_bucks_reward">2</T>
   <T n="is_targeted">False</T>
   <T n="name">0xFFD21FAB<!--Pee Pants--></T>
+  <L n="small_business_customer_tooltip">
+    <U>
+      <E n="key">BASE_GAME</E>
+      <L n="value">
+        <T>0xDDDF581C<!--Sims will pee their pants.--></T>
+      </L>
+    </U>
+  </L>
+  <L n="small_business_employee_tooltip">
+    <U>
+      <E n="key">BASE_GAME</E>
+      <L n="value">
+        <T>0xDDDF581C<!--Sims will pee their pants.--></T>
+      </L>
+    </U>
+  </L>
   <T n="tooltip_template">0xFFD21FAB<!--Pee Pants--></T>
   <T n="tooltip_template_negative">0x091F6F03<!--Don't Pee Pants--></T>
 </I>

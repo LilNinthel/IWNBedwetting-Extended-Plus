@@ -1,4 +1,5 @@
-<I c="Buff" i="buff" m="buffs.buff" n="__shim:mackico_ABDL_corebuff" s="18431600350681200506">
+<?xml version="1.0" encoding="utf-8"?>
+<I c="Buff" i="buff" m="buffs.buff" n="mackico_ABDL_corebuff" s="6599520983304938591">
   <L n="_loot_on_addition">
     <T>17970298473502593174<!--__shim:loot_trait_ABDL_DiaperState_add--></T>
   </L>

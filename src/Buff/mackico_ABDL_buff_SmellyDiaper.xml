@@ -1,0 +1,10 @@
+<I c="Buff" i="buff" m="buffs.buff" n="mackico_ABDL_buff_SmellyDiaper" s="5848363590632818747">
+  <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
+  <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
+  <T n="buff_description">0x322808A1<!--{0.SimFirstName}'s is dirty and stinky and other Sims can smell it. The way their noses are wrinkling up is making {0.SimFirstName} sad.--></T>
+  <T n="buff_name">0xB6238FC3<!--Stinky Diaper!--></T>
+  <T n="icon">2f7d0004:00000000:9d895e1dd43b755c</T>
+  <T n="mood_type">14643<!--Mood_Sad--></T>
+  <T n="mood_weight">1</T>
+  <T n="show_timeout">False</T>
+</I>
