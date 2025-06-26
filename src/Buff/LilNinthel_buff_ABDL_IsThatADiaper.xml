@@ -1,5 +1,5 @@
 <!-- S4TK Group: 80000000 -->
-<I xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" c="Buff" s="16963619974102794352" i="buff" m="buffs.buff" n="LilNinthel_buff_ABDL_IsThatADiaper">
+<I c="Buff" s="16963619974102794352" i="buff" m="buffs.buff" n="LilNinthel_buff_ABDL_IsThatADiaper">
   <T n="buff_description">0xF663BF0A<!--Someone nearby smells sweet, like baby powder. {0.SimFirstName} can't be sure, but... is that Sim wearing diapers?--></T>
   <T n="buff_name">0x82746DF8<!--What smells like Baby Powder?--></T>
   <T n="icon">2f7d0004:00000000:c09b0954d2ef3d7f</T>

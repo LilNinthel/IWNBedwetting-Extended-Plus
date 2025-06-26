@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_trait_abdl_add" s="8050980817248390429">
+  <L n="loot_actions">
+    <V t="trait_add">
+      <U n="trait_add">
+        <T n="trait">17953003439969208284<!--LilNinthel:trait_abdl--></T>
+        <E n="subject">Actor</E>
+      </U>
+    </V>
+    <V t="trait_add">
+      <U n="trait_add">
+        <T n="trait">4155524921<!--LilNinthel:trait_diapered_247--></T>
+        <E n="subject">Actor</E>
+      </U>
+    </V>
+    <V t="trait_add">
+      <U n="trait_add">
+        <T n="trait">3344421797<!--LilNinthel:trait_Little--></T>
+        <E n="subject">Actor</E>
+      </U>
+    </V>
+    <V t="trait_remove">
+      <U n="trait_remove">
+        <V n="trait" t="specific_trait">
+          <U n="specific_trait">
+            <T n="specific_trait">3743471655<!--mackico_ABDL_trait--></T>
+          </U>
+        </V>
+      </U>
+    </V>
+  </L>
+</I>

@@ -1,5 +1,5 @@
 <!-- S4TK Group: 80000000 -->
-<I c="Buff" s="16661879496306121880" i="buff" m="buffs.buff" n="LilNinthel:buff_peeing_state">
+<I c="Buff" i="buff" m="buffs.buff" n="LilNinthel:buff_peeing_state" s="16661879496306121880">
   <L n="_loot_on_addition">
     <T>9815085040919479512<!--LilNinthel:loot_buff_peeing_vfx_add--></T>
   </L>

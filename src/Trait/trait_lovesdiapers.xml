@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<I c="Trait" i="trait" m="traits.traits" n="LilNinthel:trait_lovesdiapers" s="18266490616307070102">
+  <L n="ages">
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <L n="buffs">
+    <U>
+      <T n="buff_type">11072466440704092092<!--BabyLola_LoveDiapers_buff_LovesDiapers--></T>
+    </U>
+  </L>
+  <T n="buffs_add_on_spawn_only">False</T>
+  <T n="display_name">0x99CA1CBA<!--Loves Diapers--></T>
+  <T n="icon">2f7d0004:00000000:c09b0954d2ef3d7f</T>
+  <E n="min_lod_value">MINIMUM</E>
+  <L n="species">
+    <E>HUMAN</E>
+  </L>
+  <L n="tags">
+    <E>TraitPersonality</E>
+    <E>TraitGroup_Emotional</E>
+  </L>
+  <T n="trait_description">0x8A3A5915<!--These Sims enjoy wearing and using diapers.--></T>
+  <E n="trait_type">PERSONALITY</E>
+</I>

@@ -1,5 +1,5 @@
 <!-- S4TK Group: 80000000 -->
-<I xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" c="Buff" s="9994857391632637294" i="buff" m="buffs.buff" n="LilNinthel:buff_ABDL_discovery_sim">
+<I c="Buff" s="9994857391632637294" i="buff" m="buffs.buff" n="LilNinthel:buff_ABDL_discovery_sim">
   <L n="_loot_on_addition">
     <T>13380120450078886761<!--LilNinthel:loot_Add_CuriousAboutDiapers_Trait--></T>
   </L>

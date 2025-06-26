@@ -186,8 +186,6 @@
     <T>16222166867205646783<!--LilNinthel:si_diaperLifestyle_defaultDiaperType_pullUp--></T>
     <T>11991409802016259792<!--LilNinthel:si_diaperLifestyle_hatesDiaperChanges_disable--></T>
     <T>11911703561254162177<!--LilNinthel:si_diaperLifestyle_hatesDiaperChanges_enable--></T>
-    <T>16280224798220699744<!--LilNinthel:si_diaperLifestyle_legacyTraitDiapers_disable--></T>
-    <T>14006236030436996049<!--LilNinthel:si_diaperLifestyle_legacyTraitDiapers_enable--></T>
     <T>12176162681773385106<!--LilNinthel:si_diaperLifestyle_unlimitedPooping_disable--></T>
     <T>15345395922004784271<!--LilNinthel:si_diaperLifestyle_unlimitedPooping_enable--></T>
     <T>9955102383612450300<!--LilNinthel:si_diaperLifestyle_diaperChangeRemovePants_disable--></T>
@@ -199,54 +197,5 @@
     <T>54254730051827696<!--LilNinthel:si_diaperLifestyle_noSelfDiaperChanges_disable--></T>
     <T>18207244120334884769<!--LilNinthel:si_diaperLifestyle_noSelfDiaperChanges_enable--></T>
     <!--<T></T>-->
-  </L>
-  <L n="add_buffs_to_trait">
-    <U>
-      <T n="trait">3743471655<!--mackico_ABDL_trait--></T>
-      <L n="buffs">
-        <U>
-          <V n="buff_reason" t="enabled">
-            <T n="enabled">0xB419BA00<!--Dummy buff for broadcasting diaper wearing--></T>
-          </V>
-          <T n="buff_type">10309070037716691412<!--LilNinthel_ABDL_dummybuff--></T>
-        </U>
-        <U>
-          <T n="buff_type">14814683103508715847<!--LilNinthel:buff_addCarriedTrait--></T>
-        </U>
-      </L>
-    </U>
-    <U>
-      <T n="trait">2797347202<!--LilLuna_UnhappilyDiapered_trait--></T>
-      <L n="buffs">
-        <U>
-          <V n="buff_reason" t="enabled">
-            <T n="enabled">0xB419BA00<!--Dummy buff for broadcasting diaper wearing--></T>
-          </V>
-          <T n="buff_type">10309070037716691412<!--LilNinthel_ABDL_dummybuff--></T>
-        </U>
-      </L>
-    </U>
-    <U>
-      <T n="trait">3851245159<!--BabyLola_LoveDiapers_trait_LovesDiapers--></T>
-      <L n="buffs">
-        <U>
-          <V n="buff_reason" t="enabled">
-            <T n="enabled">0xB419BA00<!--Dummy buff for broadcasting diaper wearing--></T>
-          </V>
-          <T n="buff_type">10309070037716691412<!--LilNinthel_ABDL_dummybuff--></T>
-        </U>
-      </L>
-    </U>
-    <U>
-      <T n="trait">3111634292<!--DiaperDump_HappilyMessy_trait--></T>
-      <L n="buffs">
-        <U>
-          <V n="buff_reason" t="enabled">
-            <T n="enabled">0xB419BA00<!--Dummy buff for broadcasting diaper wearing--></T>
-          </V>
-          <T n="buff_type">10309070037716691412<!--LilNinthel_ABDL_dummybuff--></T>
-        </U>
-      </L>
-    </U>
   </L>
 </I>

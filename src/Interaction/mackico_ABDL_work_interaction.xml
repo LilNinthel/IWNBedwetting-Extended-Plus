@@ -1,4 +1,4 @@
-<I xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" c="MixerInteraction" s="16748047051609335006" i="interaction" m="interactions.base.mixer_interaction" n="__shim:mackico_ABDL_work_interaction">
+<I c="MixerInteraction" s="16748047051609335006" i="interaction" m="interactions.base.mixer_interaction" n="__shim:mackico_ABDL_work_interaction">
   <V n="lock_out_time" t="enabled">
     <U n="enabled">
       <U n="interval">

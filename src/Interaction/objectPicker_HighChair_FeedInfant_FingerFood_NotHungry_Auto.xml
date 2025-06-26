@@ -88,9 +88,6 @@
       </L>
     </U>
   </V>
-  <V n="order_by_proximity" t="enabled">
-    <E n="enabled">TargetSim</E>
-  </V>
   <V n="picker_dialog" t="object_picker">
     <U n="object_picker">
       <L n="dialog_options">

@@ -47,6 +47,6 @@
     "allowStringKeyOverrides": false,
     "defaultStringTable": "src/strings/default.stbl.json",
     "generateMissingLocales": true,
-    "mergeStringTablesInSamePackage": true
+    "mergeStringTablesInSamePackage": false
   }
 }

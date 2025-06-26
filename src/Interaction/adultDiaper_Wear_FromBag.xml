@@ -16,23 +16,15 @@
           </V>
         </U>
         <U>
-          <L n="constraints">
-            <U>
-              <V n="value" t="circle">
-                <U n="circle">
-                  <T n="ideal_radius">0.5</T>
-                  <T n="radius">1.5</T>
-                </U>
-              </V>
+          <V n="value" t="circle">
+            <U n="circle">
+              <T n="ideal_radius">0.5</T>
+              <T n="radius">1.5</T>
             </U>
-          </L>
+          </V>
         </U>
         <U>
-          <L n="constraints">
-            <U>
-              <V n="value" t="facing" />
-            </U>
-          </L>
+          <V n="value" t="facing" />
         </U>
       </L>
     </U>

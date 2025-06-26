@@ -86,12 +86,8 @@
                   <T n="part_definition">14791<!--part_monkeyBar_play--></T>
                 </U>
               </V>
-              <V t="sim_info">
-                <U n="sim_info">
-                  <V t="test_set_reference">
-                    <T n="test_set_reference">15428714204985498200<!--LilNinthel:testSetInstance_ActorIsChildChildishOrLittle--></T>
-                  </V>
-                </U>
+              <V t="test_set_reference">
+                <T n="test_set_reference">15428714204985498200<!--LilNinthel:testSetInstance_ActorIsChildChildishOrLittle--></T>
               </V>
             </L>
           </L>

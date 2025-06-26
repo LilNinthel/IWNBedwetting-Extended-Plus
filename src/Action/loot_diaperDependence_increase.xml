@@ -322,7 +322,7 @@
     <V t="dynamic_skill_loot">
       <U n="dynamic_skill_loot">
         <U n="skill_loot_data_override">
-          <E n="effectiveness">NORMAL</E>
+          <E n="effectiveness">STANDARD</E>
           <V n="level_range" t="disabled" />
           <T n="stat">422049043530584573<!--LilNinthel:statistic_Skill_AdultMinor_DiaperDependence--></T>
         </U>

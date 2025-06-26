@@ -1,5 +1,5 @@
 <!-- S4TK Group: 80000000 -->
-<I xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" c="Buff" s="18361089275973664144" i="buff" m="buffs.buff" n="LilNinthel:buff_diaperPunishment_hasNotPeedYet">
+<I c="Buff" s="18361089275973664144" i="buff" m="buffs.buff" n="LilNinthel:buff_diaperPunishment_hasNotPeedYet">
   <!--<V n="appearance_modifier" t="enabled">
     <U n="enabled">
       <L n="appearance_modifiers">

@@ -1,4 +1,4 @@
-<I xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" c="LootActions" s="3915333828639310249" i="action" m="interactions.utils.loot" n="ADB_confident_loot">
+<I c="LootActions" s="3915333828639310249" i="action" m="interactions.utils.loot" n="ADB_confident_loot">
   <L n="loot_actions">
     <V t="buff">
       <U n="buff">

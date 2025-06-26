@@ -44,7 +44,9 @@
     <E>Interaction_All</E>
   </L>
   <V n="order_by_proximity" t="enabled">
-    <E n="enabled">CarryCancellationOriginatorTarget</E>
+    <U n="enabled">
+      <E n="participant">CarryCancellationOriginatorTarget</E>
+    </U>
   </V>
   <V n="radius" t="enabled">
     <T n="enabled">10</T>

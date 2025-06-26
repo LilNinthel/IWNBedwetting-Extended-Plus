@@ -14,7 +14,9 @@
       <T name="cas_idle_asm_state"></T>
       <T name="cas_selected_icon">00000000-00000000-0000000000000000</T>
       <T name="cas_trait_asm_param">None</T>
-      <L name="conflicting_traits"/>
+      <L name="conflicting_traits">
+        <T type="TableSetReference">2260700649</T>
+      </L>
       <T name="display_name">0x3EE2640A</T>
       <L name="genders"/>
       <T name="icon">00B2D882-00000000-62313DE8780BC7A9</T>

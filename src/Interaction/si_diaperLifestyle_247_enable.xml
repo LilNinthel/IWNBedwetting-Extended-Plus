@@ -64,6 +64,7 @@
         <E n="subject">TargetSim</E>
         <L n="blacklist_traits">
           <T>2404632404<!--LilNinthel:trait_Never_Potty_Trained--></T>
+          <T>3769768489<!--LilNinthel:trait_diapered_247_medical--></T>
         </L>
         <V n="tooltip" t="enabled">
           <T n="enabled">0xFE32A769<!--{1.SimFirstName} already wears 24/7 for medical reasons.--></T>

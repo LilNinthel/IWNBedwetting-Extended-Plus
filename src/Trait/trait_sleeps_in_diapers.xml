@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<I c="Trait" i="trait" m="traits.traits" n="LilNinthel:trait_sleeps_in_diapers" s="10427919831435622034">
+  <L n="ages">
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <L n="buffs">
+    <U>
+      <T n="buff_type">10309070037716691412<!--LilNinthel_ABDL_dummybuff--></T>
+    </U>
+  </L>
+  <T n="buffs_add_on_spawn_only">False</T>
+  <T n="display_name">0x9B690DBB<!--Sleeps in Diapers--></T>
+  <T n="display_name_gender_neutral">0x9B690DBB<!--Sleeps in Diapers--></T>
+  <T n="icon" p="Generated">2f7d0004:00000000:7F46CA68B48FEBB5</T>
+  <E n="min_lod_value">MINIMUM</E>
+  <L n="species">
+    <E/>
+  </L>
+  <T n="trait_description">0x0539FA61<!--{0.SimFirstName} automatically wears protection at night for {M0.his}{F0.her} bedwetting.--></T>
+  <E n="trait_type">GAMEPLAY</E>
+</I>

@@ -1,4 +1,4 @@
-<I xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" c="LootActions" s="9838149222569073724" i="action" m="interactions.utils.loot" n="__shim:mackico_ABDL_work_loot">
+<I c="LootActions" s="9838149222569073724" i="action" m="interactions.utils.loot" n="__shim:mackico_ABDL_work_loot">
   <L n="loot_actions">
     <V t="buff">
       <U n="buff">

@@ -4,21 +4,19 @@
     <E>ADULT</E>
     <E>YOUNGADULT</E>
     <E>TEEN</E>
+    <E>CHILD</E>
   </L>
   <L n="buffs">
     <U>
-      <T n="buff_type">10563953826471159022<!--DiaperDump_HappilyMessy_buff_corebuff--></T>
+      <T n="buff_type">15007954427118238495<!--LilNinthel:buff_addLovesMessyDiapersTrait--></T>
     </U>
   </L>
-  <T n="display_name">0xD6648066<!--Loves Messing Diapers--></T>
-  <T n="icon">2f7d0004:00000000:c09b0954d2ef3d7f</T>
+  <T n="buffs_add_on_spawn_only">False</T>
+  <T n="display_name">0x00000000</T>
+  <T n="icon" p="InGame\UI\Icons\Debug\missing_image.png">2f7d0004:00000000:30f0846c783606f9</T>
   <L n="species">
     <E>HUMAN</E>
   </L>
-  <L n="tags">
-    <E>TraitPersonality</E>
-    <E>TraitEmotional</E>
-  </L>
-  <T n="trait_description">0x51C229EC<!--These Sims enjoy wearing and using diapers to their fullest extent.--></T>
-  <E n="trait_type">PERSONALITY</E>
+  <T n="trait_description">0x00000000</T>
+  <E n="trait_type">HIDDEN</E>
 </I>

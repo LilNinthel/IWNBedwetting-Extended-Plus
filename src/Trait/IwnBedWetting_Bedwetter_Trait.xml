@@ -13,6 +13,9 @@
     </U>
   </L>
   <T n="buffs_add_on_spawn_only">False</T>
+  <L n="conflicting_traits">
+    <T>2260700649<!--IwnBedWetting_Incontinence_Trait--></T>
+  </L>
   <T n="display_name">0x3EE2640A<!--BedWetter--></T>
   <T n="display_name_gender_neutral">0x3EE2640A<!--BedWetter--></T>
   <T n="icon" p="Generated">2f7d0004:00000000:62313de8780bc7a9</T>

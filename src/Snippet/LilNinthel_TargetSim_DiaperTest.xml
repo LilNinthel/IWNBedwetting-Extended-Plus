@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <I c="TestSetInstance" i="snippet" m="event_testing.tests" n="LilNinthel_TargetSim_DiaperTest" s="8775441245525711463">
   <L n="test">
     <L>
@@ -8,6 +9,23 @@
         <U n="statistic">
           <E n="who">TargetSim</E>
           <T n="stat">140764<!--commodity_Toddler_DiaperLoad--></T>
+          <V n="threshold" t="value_threshold">
+            <U n="value_threshold">
+              <E n="comparison">GREATER</E>
+              <T n="value">0</T>
+            </U>
+          </V>
+        </U>
+      </V>
+    </L>
+    <L>
+      <V t="test_set_reference">
+        <T n="test_set_reference">14360503470401868291<!--LilNinthel:testSetInstance_outfitAndPosture_diaperCompatibility_targetSim--></T>
+      </V>
+      <V t="statistic">
+        <U n="statistic">
+          <E n="who">TargetSim</E>
+          <T n="stat">13859436604775548367<!--LilNinthel:commodity_DiaperLoad--></T>
           <V n="threshold" t="value_threshold">
             <U n="value_threshold">
               <E n="comparison">GREATER</E>
@@ -46,7 +64,7 @@
           <V n="species" t="specified">
             <U n="specified">
               <L n="species">
-                <E />
+                <E/>
               </L>
             </U>
           </V>
@@ -58,17 +76,8 @@
       <V t="test_set_reference">
         <T n="test_set_reference">14360503470401868291<!--LilNinthel:testSetInstance_outfitAndPosture_diaperCompatibility_targetSim--></T>
       </V>
-      <V t="statistic">
-        <U n="statistic">
-          <E n="who">TargetSim</E>
-          <T n="stat">13859436604775548367<!--LilNinthel:commodity_DiaperLoad--></T>
-          <V n="threshold" t="value_threshold">
-            <U n="value_threshold">
-              <E n="comparison">GREATER</E>
-              <T n="value">0</T>
-            </U>
-          </V>
-        </U>
+      <V t="test_set_reference">
+        <T n="test_set_reference">10214401946647821328<!--LilNinthel:testSet_AlwaysWearsDiapers_Target--></T>
       </V>
     </L>
     <L>
@@ -79,36 +88,7 @@
         <U n="trait">
           <E n="subject">TargetSim</E>
           <L n="whitelist_traits">
-            <T>2260700649<!--IwnBedWetting_Incontinence_Trait--></T>
-            <T>3851245159<!--BabyLola_LoveDiapers_trait_LovesDiapers--></T>
-            <T>3743471655<!--mackico_ABDL_trait--></T>
-            <T>2797347202<!--LilLuna_UnhappilyDiapered_trait--></T>
-            <T>3111634292<!--DiaperDump_HappilyMessy_trait--></T>
-            <T>1159183302<!--LilNinthel:trait_diaper_dependent--></T>
-          </L>
-        </U>
-      </V>
-      <V t="trait">
-        <U n="trait">
-          <E n="subject">TargetSim</E>
-          <L n="blacklist_traits">
-            <T>3260484891<!--LilNinthel:trait_NotAlwaysDiapered--></T>
-          </L>
-        </U>
-      </V>
-    </L>
-    <L>
-      <V t="test_set_reference">
-        <T n="test_set_reference">14360503470401868291<!--LilNinthel:testSetInstance_outfitAndPosture_diaperCompatibility_targetSim--></T>
-      </V>
-      <V t="trait">
-        <U n="trait">
-          <E n="subject">TargetSim</E>
-          <L n="whitelist_traits">
-            <T>2404632404<!--LilNinthel:trait_Never_Potty_Trained--></T>
             <T>4148053674<!--LilNinthel:trait_wearing_diaper_item--></T>
-            <T>4155524921<!--LilNinthel:trait_diapered_247--></T>
-            <T>2924659518<!--LilNinthel:trait_DiaperPunished--></T>
           </L>
         </U>
       </V>

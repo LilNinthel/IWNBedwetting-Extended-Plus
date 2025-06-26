@@ -7,28 +7,24 @@
         <T type="Int64">32</T>
         <T type="Int64">16</T>
         <T type="Int64">8</T>
+        <T type="Int64">4</T>
       </L>
       <T name="cas_idle_asm_key">00000000-00000000-0000000000000000</T>
       <T name="cas_idle_asm_state"></T>
       <T name="cas_selected_icon">00000000-00000000-0000000000000000</T>
-      <T name="cas_trait_asm_param">Active</T>
-      <L name="conflicting_traits" />
-      <T name="display_name">0xC89AE2BF</T>
-      <L name="genders" />
-      <T name="icon">00B2D882-00000000-C09B0954D2EF3D7F</T>
+      <T name="cas_trait_asm_param">None</T>
+      <L name="conflicting_traits"/>
+      <T name="display_name">0x00000000</T>
+      <L name="genders"/>
+      <T name="icon">00B2D882-00000000-30F0846C783606F9</T>
       <L name="species">
         <T type="Int64">1</T>
       </L>
-      <L name="tags">
-        <T type="Int64">234</T>
-        <T type="Int64">753</T>
-      </L>
-      <T name="trait_description">0xED6F6DF5</T>
+      <L name="tags"/>
+      <T name="trait_description">0x00000000</T>
       <T name="trait_origin_description">0x00000000</T>
-      <T name="trait_type">0</T>
-      <V name="ui_category" variant="0x603EAA6C">
-        <T type="Int64">0</T>
-      </V>
+      <T name="trait_type">4</T>
+      <V name="ui_category" variant="0xC1A03855"/>
     </I>
   </Instances>
   <Schemas>

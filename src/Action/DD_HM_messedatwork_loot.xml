@@ -1,4 +1,4 @@
-<I xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" c="LootActions" s="13981634778402767397" i="action" m="interactions.utils.loot" n="__shim:DD_HM_messedatwork_loot">
+<I c="LootActions" s="13981634778402767397" i="action" m="interactions.utils.loot" n="__shim:DD_HM_messedatwork_loot">
   <L n="loot_actions">
     <V t="buff">
       <U n="buff">

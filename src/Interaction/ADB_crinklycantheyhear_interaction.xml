@@ -1,4 +1,4 @@
-<I xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" c="MixerInteraction" s="10721636015838356200" i="interaction" m="interactions.base.mixer_interaction" n="ADB_crinklycantheyhear_interaction">
+<I c="MixerInteraction" s="10721636015838356200" i="interaction" m="interactions.base.mixer_interaction" n="ADB_crinklycantheyhear_interaction">
   <V n="lock_out_time" t="enabled">
     <U n="enabled">
       <U n="interval">
@@ -9,10 +9,8 @@
   </V>
   <V n="lock_out_time_initial" t="enabled">
     <U n="enabled">
-      <U n="interval">
-        <T n="lower_bound">240</T>
-        <T n="upper_bound">480</T>
-      </U>
+      <T n="lower_bound">240</T>
+      <T n="upper_bound">480</T>
     </U>
   </V>
   <V n="outcome" t="single">

@@ -1,5 +1,5 @@
 <!-- S4TK Group: 80000000 -->
-<I xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" c="Buff" s="10426337867575941359" i="buff" m="buffs.buff" n="LilNinthel_buff_ABDL_ImNotAlone">
+<I c="Buff" s="10426337867575941359" i="buff" m="buffs.buff" n="LilNinthel_buff_ABDL_ImNotAlone">
   <T n="buff_description">0x55C8F814<!--{0.SimFirstName} can smell someone else's diaper. It isn't bad stinky, but the pleasant smells of baby powder and barrier cream. Someone else nearby is wearing diapers, too? It's nice to know {M0.he}{F0.she} isn't alone!--></T>
   <T n="buff_name">0x7798D14E<!--I Know That Smell!--></T>
   <T n="icon">2f7d0004:00000000:c09b0954d2ef3d7f</T>

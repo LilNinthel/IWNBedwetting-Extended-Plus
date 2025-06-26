@@ -1,4 +1,4 @@
-<I xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" c="Buff" s="2225423019818297150" i="buff" m="buffs.buff" n="ADB_cantheysee_buff">
+<I c="Buff" s="2225423019818297150" i="buff" m="buffs.buff" n="ADB_cantheysee_buff">
   <T n="buff_description">0x9CA67C30<!--{0.SimFirstName} is worried that other Sims will be able to see {M0.his}{F0.her} diaper through {M0.his}{F0.her} clothes. Maybe it would be better just to stay at home today, where no one can laugh at {M0.him}{F0.her}.--></T>
   <T n="buff_name">0xD662F372<!--Can other Sims see my diaper bulge?--></T>
   <T n="icon">2f7d0004:00000000:c09b0954d2ef3d7f</T>

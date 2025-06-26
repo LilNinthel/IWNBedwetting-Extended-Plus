@@ -35,6 +35,16 @@
         <E n="subject">Actor</E>
         <V n="trait" t="specific_trait">
           <U n="specific_trait">
+            <T n="specific_trait">10130971893846669676<!--LilNinthel:trait_Incontinence_Urinary_Total--></T>
+          </U>
+        </V>
+      </U>
+    </V>
+    <V t="trait_remove">
+      <U n="trait_remove">
+        <E n="subject">Actor</E>
+        <V n="trait" t="specific_trait">
+          <U n="specific_trait">
             <T n="specific_trait">2404632404<!--LilNinthel:trait_Never_Potty_Trained--></T>
           </U>
         </V>

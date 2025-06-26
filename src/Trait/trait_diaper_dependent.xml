@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <I c="Trait" i="trait" m="traits.traits" n="LilNinthel:trait_diaper_dependent" s="1159183302">
   <L n="ages">
     <E>CHILD</E>
@@ -8,7 +9,7 @@
   </L>
   <L n="buffs">
     <U>
-      <T n="buff_type">10309070037716691412<!--LilNinthel_ABDL_dummybuff--></T>
+      <!-- <T n="buff_type">10309070037716691412</T> -->
       <T n="buff_type">18387649698602079241<!--LilNinthel:buff_TotalUrinaryIncontinence--></T>
     </U>
   </L>
@@ -24,7 +25,7 @@
   </V>
   <E n="min_lod_value">MINIMUM</E>
   <L n="species">
-    <E />
+    <E/>
   </L>
   <T n="trait_description">0x6AF1AB29<!--{0.SimFirstName} thought this only happened in stories. {M0.He}{F0.She} has gotten so used to diapers that {M0.he}{F0.she}'s now diaper dependent. Is this what {M0.he}{F0.she} wanted?--></T>
   <E n="trait_type">GAMEPLAY</E>
