@@ -391,14 +391,48 @@
       <L n="overrides">
         <U>
           <V n="new_display_name" t="enabled">
-            <T n="enabled">0xFC75CCAB<!--Wolf Down {1.ObjectName}--></T>
+            <T n="enabled">0x8C04485B<!--String: "Wolfishly Ingest {1.ObjectName}"--></T>
+          </V>
+          <L n="test">
+            <L>
+              <V t="trait">
+                <U n="trait">
+                  <T n="num_whitelist_required">2</T>
+                  <L n="whitelist_traits">
+                    <T>381402<!--Trait: trait_IsGhost--></T>
+                    <T>289780<!--Trait: trait_OccultWerewolf--></T>
+                  </L>
+                </U>
+              </V>
+            </L>
+          </L>
+        </U>
+        <U>
+          <V n="new_display_name" t="enabled">
+            <T n="enabled">0x3F75AF4C<!--String: "Ingest {1.ObjectName}"--></T>
           </V>
           <L n="test">
             <L>
               <V t="trait">
                 <U n="trait">
                   <L n="whitelist_traits">
-                    <T>289780<!--trait_OccultWerewolf--></T>
+                    <T>381402<!--Trait: trait_IsGhost--></T>
+                  </L>
+                </U>
+              </V>
+            </L>
+          </L>
+        </U>
+        <U>
+          <V n="new_display_name" t="enabled">
+            <T n="enabled">0xFC75CCAB<!--String: "Wolf Down {1.ObjectName}"--></T>
+          </V>
+          <L n="test">
+            <L>
+              <V t="trait">
+                <U n="trait">
+                  <L n="whitelist_traits">
+                    <T>289780<!--Trait: trait_OccultWerewolf--></T>
                   </L>
                 </U>
               </V>
