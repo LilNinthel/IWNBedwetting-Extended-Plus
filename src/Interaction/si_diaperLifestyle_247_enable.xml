@@ -71,6 +71,17 @@
         </V>
       </U>
     </V>
+    <V t="trait">
+      <U n="trait">
+        <E n="subject">TargetSim</E>
+        <L n="blacklist_traits">
+          <T>2924659518<!--LilNinthel:trait_DiaperPunished--></T>
+        </L>
+        <V n="tooltip" t="enabled">
+          <T n="enabled">0xDB3EB461<!--{0.SimFirstName} is being diaper punished--></T>
+        </V>
+      </U>
+    </V>
     <!--<V t="statistic">
       <U n="statistic">
         <E n="who">TargetSim</E>

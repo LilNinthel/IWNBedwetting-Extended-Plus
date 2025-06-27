@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<I c="AdventureMoment" i="snippet" m="snippets" n="LilNinthel:adventureMoment_bladderControl_doctorAdvice_gone_diapers" s="2279822387746824975">
+  <U n="value">
+    <L n="_finish_actions">
+      <U>
+        <V n="display_text" t="single">
+          <T n="single">0xD8BD935C<!--Ok--></T>
+        </V>
+      </U>
+    </L>
+    <V n="_visibility" t="show_dialog">
+      <U n="show_dialog">
+        <V n="icon" t="enabled">
+          <V n="enabled" t="participant"/>
+        </V>
+        <V n="text" t="single">
+          <T n="single">0x12C69F44<!--I'm sorry to inform you that your bladder control is now irreversibly lost. I'm glad see that you are already wearing diapers, that's the best way to manage your condition--></T>
+        </V>
+        <V n="title" t="enabled">
+          <T n="enabled">0x804A7DBC<!--Bladder Doctor Report--></T>
+        </V>
+      </U>
+    </V>
+  </U>
+</I>

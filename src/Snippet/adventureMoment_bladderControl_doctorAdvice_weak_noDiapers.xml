@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<I c="AdventureMoment" i="snippet" m="snippets" n="LilNinthel:adventureMoment_bladderControl_doctorAdvice_weak_noDiapers" s="11577583257300638673">
+  <U n="value">
+    <L n="_finish_actions">
+      <U>
+        <L n="action_results">
+          <U>
+            <L n="loot_actions">
+              <T>6624137222393735819<!--LilNinthel:loot_trait_diapered247_medical_add_actor--></T>
+            </L>
+          </U>
+        </L>
+        <V n="display_text" t="single">
+          <T n="single">0x14689AE8<!--Start Wearing Diapers--></T>
+        </V>
+      </U>
+      <U>
+        <V n="display_text" t="single">
+          <T n="single">0x5B220A39<!--Decline Doctor's Recommendation--></T>
+        </V>
+      </U>
+    </L>
+    <V n="_visibility" t="show_dialog">
+      <U n="show_dialog">
+        <V n="icon" t="enabled">
+          <V n="enabled" t="participant"/>
+        </V>
+        <V n="text" t="single">
+          <T n="single">0x10370D86<!--Your bladder control has gotten quite bad, you need to really work on using the toilet or you may lose it for good. You may want to wear protection to catch any accidents, but you will lose control faster if you rely on it.--></T>
+        </V>
+        <V n="title" t="enabled">
+          <T n="enabled">0x804A7DBC<!--Bladder Doctor Report--></T>
+        </V>
+      </U>
+    </V>
+  </U>
+</I>

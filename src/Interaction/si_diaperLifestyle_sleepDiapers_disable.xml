@@ -1,9 +1,10 @@
-<I c="ImmediateSuperInteraction" i="interaction" m="interactions.base.immediate_interaction" n="LilNinthel:si_diaperLifestyle_247_disable" s="12062217694148515078">
+<?xml version="1.0" encoding="utf-8"?>
+<I c="ImmediateSuperInteraction" i="interaction" m="interactions.base.immediate_interaction" n="LilNinthel:si_diaperLifestyle_sleepDiapers_disable" s="6124557341457078874">
   <T n="acquire_targets_as_resource">False</T>
   <T n="allow_user_directed">True</T>
   <T n="category">10797383338851717190<!--LilNinthel:pieMenuCategory_gameplayPrefs--></T>
-  <V n="content_score" t="disabled" />
-  <T n="display_name">0xEFD7ED12<!--Stop Wearing 24/7--></T>
+  <V n="content_score" t="disabled"/>
+  <T n="display_name">0xFF15A2AD<!--Stop Sleeping in Diapers--></T>
   <U n="display_name_text_tokens">
     <L n="tokens">
       <V t="participant_type">
@@ -33,7 +34,7 @@
     <U n="single">
       <U n="actions">
         <L n="loot_list">
-          <T>18290406618866460524<!--LilNinthel:loot_trait_diapered247_remove--></T>
+          <T>16135241023523793016<!--LilNinthel:loot_trait_sleeps_in_diapers_remove--></T>
         </L>
       </U>
     </U>
@@ -54,7 +55,7 @@
       <U n="trait">
         <E n="subject">TargetSim</E>
         <L n="whitelist_traits">
-          <T>4155524921<!--LilNinthel:trait_diapered_247--></T>
+          <T>10427919831435622034<!--LilNinthel:trait_sleeps_in_diapers--></T>
         </L>
       </U>
     </V>
@@ -94,7 +95,7 @@
         <V n="species" t="specified">
           <U n="specified">
             <L n="species">
-              <E />
+              <E/>
             </L>
           </U>
         </V>

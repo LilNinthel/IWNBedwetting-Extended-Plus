@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_trait_diapered247_medical_add_actor" s="6624137222393735819">
+  <L n="loot_actions">
+    <V t="trait_add">
+      <U n="trait_add">
+        <T n="trait">3769768489<!--LilNinthel:trait_diapered_247_medical--></T>
+        <E n="subject">Actor</E>
+      </U>
+    </V>
+  </L>
+</I>

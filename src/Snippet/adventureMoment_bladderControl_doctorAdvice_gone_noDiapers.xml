@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<I c="AdventureMoment" i="snippet" m="snippets" n="LilNinthel:adventureMoment_bladderControl_doctorAdvice_gone_noDiapers" s="15720216143346960620">
+  <U n="value">
+    <L n="_finish_actions">
+      <U>
+        <L n="action_results">
+          <U>
+            <L n="loot_actions">
+              <T>6624137222393735819<!--LilNinthel:loot_trait_diapered247_medical_add_actor--></T>
+            </L>
+          </U>
+        </L>
+        <V n="display_text" t="single">
+          <T n="single">0x14689AE8<!--Start Wearing Diapers--></T>
+        </V>
+      </U>
+      <U>
+        <V n="display_text" t="single">
+          <T n="single">0xF33AAAC4<!--Ignore Reality--></T>
+        </V>
+      </U>
+    </L>
+    <V n="_visibility" t="show_dialog">
+      <U n="show_dialog">
+        <V n="icon" t="enabled">
+          <V n="enabled" t="participant"/>
+        </V>
+        <V n="text" t="single">
+          <T n="single">0xA83D7637<!--I'm sorry to inform you that your bladder control is now irreversibly lost. I highly recommend you start wearing diapers all the time from now on, it's time to accept the reality of your condition.--></T>
+        </V>
+        <V n="title" t="enabled">
+          <T n="enabled">0x804A7DBC<!--Bladder Doctor Report--></T>
+        </V>
+      </U>
+    </V>
+  </U>
+</I>

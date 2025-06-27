@@ -11,7 +11,7 @@
         <T name="positive_single_arrow">1</T>
         <T name="positive_triple_arrow">30</T>
       </U>
-      <T name="max_value_tuning">2</T>
+      <T name="max_value_tuning">4</T>
       <T name="min_value_tuning">0</T>
       <T name="stat_name">0x00000000</T>
       <L name="stat_name_overrides"/>

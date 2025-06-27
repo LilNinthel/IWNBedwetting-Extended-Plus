@@ -85,6 +85,30 @@
           <L name="tooltip_icon_list_overrides"/>
           <V name="ui_container_animation_decreasing" variant="0xC1A03855"/>
           <V name="ui_container_animation_increasing" variant="0xC1A03855"/>
+          <T name="value">30</T>
+        </U>
+        <U type="Object" schema="TunableCommodityState">
+          <U name="background_color" schema="TunableColorRGBA">
+            <T name="a">255</T>
+            <T name="b">255</T>
+            <T name="g">255</T>
+            <T name="r">255</T>
+          </U>
+          <T name="data_description">0x00000000</T>
+          <L name="data_description_overrides"/>
+          <U name="fill_color" schema="TunableColorRGBA">
+            <T name="a">255</T>
+            <T name="b">255</T>
+            <T name="g">255</T>
+            <T name="r">255</T>
+          </U>
+          <T name="fill_level">0</T>
+          <T name="icon">00000000-00000000-0000000000000000</T>
+          <L name="icon_overrides"/>
+          <L name="tooltip_icon_list"/>
+          <L name="tooltip_icon_list_overrides"/>
+          <V name="ui_container_animation_decreasing" variant="0xC1A03855"/>
+          <V name="ui_container_animation_increasing" variant="0xC1A03855"/>
           <T name="value">40</T>
         </U>
         <U type="Object" schema="TunableCommodityState">
@@ -277,7 +301,79 @@
           <L name="tooltip_icon_list_overrides"/>
           <V name="ui_container_animation_decreasing" variant="0xC1A03855"/>
           <V name="ui_container_animation_increasing" variant="0xC1A03855"/>
-          <T name="value">95</T>
+          <T name="value">92</T>
+        </U>
+        <U type="Object" schema="TunableCommodityState">
+          <U name="background_color" schema="TunableColorRGBA">
+            <T name="a">255</T>
+            <T name="b">255</T>
+            <T name="g">255</T>
+            <T name="r">255</T>
+          </U>
+          <T name="data_description">0x00000000</T>
+          <L name="data_description_overrides"/>
+          <U name="fill_color" schema="TunableColorRGBA">
+            <T name="a">255</T>
+            <T name="b">255</T>
+            <T name="g">255</T>
+            <T name="r">255</T>
+          </U>
+          <T name="fill_level">0</T>
+          <T name="icon">00000000-00000000-0000000000000000</T>
+          <L name="icon_overrides"/>
+          <L name="tooltip_icon_list"/>
+          <L name="tooltip_icon_list_overrides"/>
+          <V name="ui_container_animation_decreasing" variant="0xC1A03855"/>
+          <V name="ui_container_animation_increasing" variant="0xC1A03855"/>
+          <T name="value">94</T>
+        </U>
+        <U type="Object" schema="TunableCommodityState">
+          <U name="background_color" schema="TunableColorRGBA">
+            <T name="a">255</T>
+            <T name="b">255</T>
+            <T name="g">255</T>
+            <T name="r">255</T>
+          </U>
+          <T name="data_description">0x00000000</T>
+          <L name="data_description_overrides"/>
+          <U name="fill_color" schema="TunableColorRGBA">
+            <T name="a">255</T>
+            <T name="b">255</T>
+            <T name="g">255</T>
+            <T name="r">255</T>
+          </U>
+          <T name="fill_level">0</T>
+          <T name="icon">00000000-00000000-0000000000000000</T>
+          <L name="icon_overrides"/>
+          <L name="tooltip_icon_list"/>
+          <L name="tooltip_icon_list_overrides"/>
+          <V name="ui_container_animation_decreasing" variant="0xC1A03855"/>
+          <V name="ui_container_animation_increasing" variant="0xC1A03855"/>
+          <T name="value">96</T>
+        </U>
+        <U type="Object" schema="TunableCommodityState">
+          <U name="background_color" schema="TunableColorRGBA">
+            <T name="a">255</T>
+            <T name="b">255</T>
+            <T name="g">255</T>
+            <T name="r">255</T>
+          </U>
+          <T name="data_description">0x00000000</T>
+          <L name="data_description_overrides"/>
+          <U name="fill_color" schema="TunableColorRGBA">
+            <T name="a">255</T>
+            <T name="b">255</T>
+            <T name="g">255</T>
+            <T name="r">255</T>
+          </U>
+          <T name="fill_level">0</T>
+          <T name="icon">00000000-00000000-0000000000000000</T>
+          <L name="icon_overrides"/>
+          <L name="tooltip_icon_list"/>
+          <L name="tooltip_icon_list_overrides"/>
+          <V name="ui_container_animation_decreasing" variant="0xC1A03855"/>
+          <V name="ui_container_animation_increasing" variant="0xC1A03855"/>
+          <T name="value">98</T>
         </U>
         <U type="Object" schema="TunableCommodityState">
           <U name="background_color" schema="TunableColorRGBA">

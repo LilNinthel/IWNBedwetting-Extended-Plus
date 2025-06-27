@@ -1,9 +1,10 @@
-<I c="ImmediateSuperInteraction" i="interaction" m="interactions.base.immediate_interaction" n="LilNinthel:si_diaperLifestyle_247_disable" s="12062217694148515078">
+<?xml version="1.0" encoding="utf-8"?>
+<I c="ImmediateSuperInteraction" i="interaction" m="interactions.base.immediate_interaction" n="LilNinthel:si_diaperLifestyle_sleepDiapers_enable" s="7133949557469796359">
   <T n="acquire_targets_as_resource">False</T>
   <T n="allow_user_directed">True</T>
   <T n="category">10797383338851717190<!--LilNinthel:pieMenuCategory_gameplayPrefs--></T>
-  <V n="content_score" t="disabled" />
-  <T n="display_name">0xEFD7ED12<!--Stop Wearing 24/7--></T>
+  <V n="content_score" t="disabled"/>
+  <T n="display_name">0xB84B1AE7<!--Start Sleeping in Diapers--></T>
   <U n="display_name_text_tokens">
     <L n="tokens">
       <V t="participant_type">
@@ -33,7 +34,7 @@
     <U n="single">
       <U n="actions">
         <L n="loot_list">
-          <T>18290406618866460524<!--LilNinthel:loot_trait_diapered247_remove--></T>
+          <T>7995221120299458065<!--LilNinthel:loot_trait_sleeps_in_diapers_add--></T>
         </L>
       </U>
     </U>
@@ -53,8 +54,8 @@
     <V t="trait">
       <U n="trait">
         <E n="subject">TargetSim</E>
-        <L n="whitelist_traits">
-          <T>4155524921<!--LilNinthel:trait_diapered_247--></T>
+        <L n="blacklist_traits">
+          <T>10427919831435622034<!--LilNinthel:trait_sleeps_in_diapers--></T>
         </L>
       </U>
     </V>
@@ -63,9 +64,11 @@
         <E n="subject">TargetSim</E>
         <L n="blacklist_traits">
           <T>2404632404<!--LilNinthel:trait_Never_Potty_Trained--></T>
+          <T>3769768489<!--LilNinthel:trait_diapered_247_medical--></T>
+          <T>4155524921<!--LilNinthel:trait_diapered_247--></T>
         </L>
         <V n="tooltip" t="enabled">
-          <T n="enabled">0x0007C4A6<!--{1.SimFirstName} has no bladder control and needs diapers.--></T>
+          <T n="enabled">0xFE32A769<!--{1.SimFirstName} already wears 24/7 for medical reasons.--></T>
         </V>
       </U>
     </V>
@@ -80,6 +83,21 @@
         </V>
       </U>
     </V>
+    <!--<V t="statistic">
+      <U n="statistic">
+        <E n="who">TargetSim</E>
+        <T n="stat">15659497102112408646</T>
+        <V n="threshold" t="value_threshold">
+          <U n="value_threshold">
+            <E n="comparison">GREATER_OR_EQUAL</E>
+            <T n="value">30</T>
+          </U>
+        </V>
+        <V n="tooltip" t="enabled">
+          <T n="enabled">0x41195F91</T>
+        </V>
+      </U>
+    </V>-->
     <V t="sim_info">
       <U n="sim_info">
         <V n="ages" t="specified">
@@ -94,7 +112,7 @@
         <V n="species" t="specified">
           <U n="specified">
             <L n="species">
-              <E />
+              <E/>
             </L>
           </U>
         </V>

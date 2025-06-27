@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<I c="AdventureMoment" i="snippet" m="snippets" n="LilNinthel:adventureMoment_bladderControl_doctorAdvice_weak_diapers" s="16410744659932300306">
+  <U n="value">
+    <L n="_finish_actions">
+      <U>
+        <!-- <L n="action_results">
+          <U>
+            <L n="loot_actions">
+              <T>13380120450078886761</T>
+            </L>
+          </U>
+        </L> -->
+        <V n="display_text" t="single">
+          <T n="single">0xD8BD935C<!--Ok--></T>
+        </V>
+      </U>
+    </L>
+    <V n="_visibility" t="show_dialog">
+      <U n="show_dialog">
+        <V n="icon" t="enabled">
+          <V n="enabled" t="participant"/>
+        </V>
+        <V n="text" t="single">
+          <T n="single">0xDE52A0E8<!--Your bladder control has gotten quite bad, you need to really work on using the toilet or you may lose it for good. If you keep relying on diapers you'll soon need them forever.--></T>
+        </V>
+        <V n="title" t="enabled">
+          <T n="enabled">0x804A7DBC<!--Bladder Doctor Report--></T>
+        </V>
+      </U>
+    </V>
+  </U>
+</I>

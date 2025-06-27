@@ -30,6 +30,12 @@
       <L n="loot_list_on_enter_increasing">
         <T>17284799433455529645<!--LilNinthel:loot_buff_temporaryIncontinence_add--></T>
       </L>
+      <T n="value">30</T>
+    </U>
+    <U>
+      <L n="loot_list_on_enter_increasing">
+        <T>17284799433455529645<!--LilNinthel:loot_buff_temporaryIncontinence_add--></T>
+      </L>
       <T n="value">40</T>
     </U>
     <U>
@@ -78,7 +84,25 @@
       <L n="loot_list_on_enter_increasing">
         <T>17284799433455529645<!--LilNinthel:loot_buff_temporaryIncontinence_add--></T>
       </L>
-      <T n="value">95</T>
+      <T n="value">92</T>
+    </U>
+    <U>
+      <L n="loot_list_on_enter_increasing">
+        <T>17284799433455529645<!--LilNinthel:loot_buff_temporaryIncontinence_add--></T>
+      </L>
+      <T n="value">94</T>
+    </U>
+    <U>
+      <L n="loot_list_on_enter_increasing">
+        <T>17284799433455529645<!--LilNinthel:loot_buff_temporaryIncontinence_add--></T>
+      </L>
+      <T n="value">96</T>
+    </U>
+    <U>
+      <L n="loot_list_on_enter_increasing">
+        <T>17284799433455529645<!--LilNinthel:loot_buff_temporaryIncontinence_add--></T>
+      </L>
+      <T n="value">98</T>
     </U>
     <U>
       <T n="apply_loot_on_load">True</T>
