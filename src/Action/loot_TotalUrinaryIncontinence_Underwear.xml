@@ -1,39 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_TotalUrinaryIncontinence_Underwear" s="6435908614741883616">
   <L n="loot_actions">
-    <V t="statistics">
-      <V n="statistics" t="statistic_change">
-        <U n="statistic_change">
-          <T n="amount">1</T>
-          <T n="stat">3832573560122933219<!--LilNinthel:commodity_PantsWetness--></T>
-          <L n="statistic_multipliers">
-            <U>
-              <V n="multiplier" t="value_curve">
-                <L n="value_curve">
-                  <U>
-                    <T n="x">-100</T>
-                    <T n="y">4</T>
-                  </U>
-                  <U>
-                    <T n="x">100</T>
-                    <T n="y">0</T>
-                  </U>
-                </L>
-              </V>
-              <T n="statistic">9359251128331730838<!--LilNinthel:statistic_bladder_snapshot--></T>
-            </U>
-          </L>
-        </U>
-      </V>
+    <V t="buff_removal">
+      <U n="buff_removal">
+        <L n="buffs_to_remove">
+          <T>14124640347152239816<!--LilNinthel:buff_TotalUrinaryIncontinence_DiaperWetness--></T>
+          <T>1189056563910849303<!--LilNinthel:buff_TotalUrinaryIncontinence_PantsWetness--></T>
+        </L>
+      </U>
     </V>
-    <V t="statistics">
-      <V n="statistics" t="statistic_change">
-        <U n="statistic_change">
-          <T n="advertise">False</T>
-          <T n="amount">200</T>
-          <T n="stat">16652<!--motive_Bladder--></T>
+    <V t="buff">
+      <U n="buff">
+        <U n="buff">
+          <T n="buff_type">1189056563910849303<!--LilNinthel:buff_TotalUrinaryIncontinence_PantsWetness--></T>
         </U>
-      </V>
+      </U>
     </V>
     <V t="statistics">
       <V n="statistics" t="statistic_set_max">

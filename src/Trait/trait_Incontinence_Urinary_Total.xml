@@ -7,6 +7,17 @@
     <E>ADULT</E>
     <E>ELDER</E>
   </L>
+  <L n="buff_replacements">
+    <U>
+      <T n="key">13989700988696467818<!--LilNinthel:buff_trait_hyperactive_bladder--></T>
+      <U n="value">
+        <V n="buff_reason" t="enabled">
+          <T n="enabled">0xD25A310F<!--(From Low Bladder)--></T>
+        </V>
+        <T n="buff_type">11541779177266311748<!--LilNinthel:buff_trait_hyperactive_bladder_incontinent--></T>
+      </U>
+    </U>
+  </L>
   <L n="buffs">
     <U>
       <T n="buff_type">18387649698602079241<!--LilNinthel:buff_TotalUrinaryIncontinence--></T>

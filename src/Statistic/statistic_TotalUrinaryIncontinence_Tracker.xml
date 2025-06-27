@@ -20,7 +20,7 @@
   <L n="states">
     <U>
       <L n="loot_list_on_enter_always">
-        <T>10251625219716980905<!--LilNinthel:loot_copy_bladder_value--></T>
+        <!-- <T>10251625219716980905</T> -->
         <T>3135099122567206882<!--LilNinthel:loot_TotalUrinaryIncontinence_Diaper--></T>
         <T>6435908614741883616<!--LilNinthel:loot_TotalUrinaryIncontinence_Underwear--></T>
         <!--<T>9820816904738408212</T>-->

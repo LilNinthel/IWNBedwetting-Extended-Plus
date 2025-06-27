@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <I c="Buff" i="buff" m="buffs.buff" n="LilNinthel:buff_TotalUrinaryIncontinence" s="18387649698602079241">
+  <L n="_loot_on_addition">
+    <T>3135099122567206882<!--LilNinthel:loot_TotalUrinaryIncontinence_Diaper--></T>
+    <T>6435908614741883616<!--LilNinthel:loot_TotalUrinaryIncontinence_Underwear--></T>
+  </L>
+  <L n="_loot_on_instance">
+    <T>3135099122567206882<!--LilNinthel:loot_TotalUrinaryIncontinence_Diaper--></T>
+    <T>6435908614741883616<!--LilNinthel:loot_TotalUrinaryIncontinence_Underwear--></T>
+  </L>
   <T n="audio_sting_on_add" p="InGame\Audio\Stings\sting_buff_gain.propx">39b2aa4a:00000000:8af8b916cf64c646</T>
   <T n="audio_sting_on_remove" p="InGame\Audio\Stings\sting_buff_loss.propx">39b2aa4a:00000000:3bf33216a25546ea</T>
   <T n="buff_description">0x7E2AAE93<!--This sim is incontinent--></T>
@@ -11,6 +19,41 @@
           <L n="commodities_to_add">
             <T>15105330414396651143<!--LilNinthel:statistic_TotalUrinaryIncontinence_Tracker--></T>
           </L>
+          <L n="decay_modifiers">
+            <U>
+              <T n="key">16652<!--motive_Bladder--></T>
+              <T n="value">0</T>
+            </U>
+          </L>
+          <L n="stat_use_multiplier">
+            <U>
+              <T n="key">16652<!--motive_Bladder--></T>
+              <U n="value">
+                <E n="apply_direction">DECREASE</E>
+                <T n="multiplier">0</T>
+              </U>
+            </U>
+            <U>
+              <T n="key">16652<!--motive_Bladder--></T>
+              <U n="value">
+                <E n="apply_direction">DECREASE</E>
+                <T n="multiplier">0</T>
+              </U>
+            </U>
+          </L>
+          <V n="subject" t="apply_on_interaction_to_participant">
+            <V n="apply_on_interaction_to_participant" t="enabled">
+              <L n="enabled">
+                <E>Actor</E>
+              </L>
+            </V>
+          </V>
+        </U>
+      </V>
+      <V t="continuous_statistic_modifier">
+        <U n="continuous_statistic_modifier">
+          <T n="modifier_value">1</T>
+          <T n="statistic">16652<!--motive_Bladder--></T>
         </U>
       </V>
     </L>
