@@ -1,4 +1,13 @@
 <I c="Buff" i="buff" m="buffs.buff" n="LilLuna_UnhappilyDiapered_buff_LittleWet" s="3827260535818899323">
+  <V n="_add_test_set" t="tests_set">
+    <L n="tests_set">
+      <L>
+        <V t="test_set_reference">
+          <T n="test_set_reference">17796732764948000262<!--IwnBedWetting_testSet_HasDiaperEquipped--></T>
+        </V>
+      </L>
+    </L>
+  </V>
   <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
   <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
   <T n="buff_description">0xDAB6EA98<!--When did {0.SimFirstName} have an accident? {M0.He}{F0.She} doesn't remember a thing. At least it was just a little accident, and {M0.he}{F0.she} shouldn't need to change yet.--></T>

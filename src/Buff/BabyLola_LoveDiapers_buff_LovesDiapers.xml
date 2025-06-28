@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <I c="Buff" i="buff" m="buffs.buff" n="BabyLola_LoveDiapers_buff_LovesDiapers" s="11072466440704092092">
+  <V n="_add_test_set" t="tests_set">
+    <L n="tests_set">
+      <L>
+        <V t="test_set_reference">
+          <T n="test_set_reference">17796732764948000262<!--IwnBedWetting_testSet_HasDiaperEquipped--></T>
+        </V>
+      </L>
+    </L>
+  </V>
   <L n="_loot_on_addition">
     <T>10141045969745293000<!--__shim:loot_trait_LovesDiapers_DiaperState_add--></T>
   </L>

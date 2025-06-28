@@ -6,6 +6,8 @@
           <E n="subject">TargetSim</E>
           <L n="blacklist">
             <T>156408<!--buff_Pools_Hygiene--></T>
+            <T>195626</T>
+            <T>206484</T>
           </L>
         </U>
       </V>

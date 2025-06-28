@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<I c="Trait" i="trait" m="traits.traits" n="LilNinthel:trait_no_visible_diapers" s="12749121714103691140">
+  <L n="ages">
+    <E>CHILD</E>
+    <E>TEEN</E>
+    <E>YOUNGADULT</E>
+    <E>ADULT</E>
+    <E>ELDER</E>
+  </L>
+  <T n="display_name">0x77A0027A<!--No Automatic Visible Diapers--></T>
+  <T n="icon" p="Generated">2f7d0004:00000000:322220fc9ba98a06</T>
+  <E n="min_lod_value">MINIMUM</E>
+  <L n="species">
+    <E/>
+  </L>
+  <T n="trait_description">0x8618CA61<!--This SIm will not have visible diapers automatically added or removed by the mod.--></T>
+  <E n="trait_type">GAMEPLAY</E>
+</I>

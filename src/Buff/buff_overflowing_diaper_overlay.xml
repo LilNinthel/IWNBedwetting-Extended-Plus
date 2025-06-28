@@ -2,6 +2,15 @@
   <V n="_add_test_set" t="tests_set">
     <L n="tests_set">
       <L>
+        <V t="buff">
+          <U n="buff">
+            <L n="blacklist">
+              <T>156408</T>
+              <T>206484</T>
+              <T>195626</T>
+            </L>
+          </U>
+        </V>
         <V t="statistic">
           <U n="statistic">
             <T n="stat">13884694505725481657<!--LilNinthel:statistic_leakyDiaperOverlay_setting--></T>

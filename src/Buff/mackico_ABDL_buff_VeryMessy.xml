@@ -1,4 +1,13 @@
 <I c="Buff" i="buff" m="buffs.buff" n="mackico_ABDL_buff_VeryMessy" s="2668620384609291674">
+  <V n="_add_test_set" t="tests_set">
+    <L n="tests_set">
+      <L>
+        <V t="test_set_reference">
+          <T n="test_set_reference">17796732764948000262<!--IwnBedWetting_testSet_HasDiaperEquipped--></T>
+        </V>
+      </L>
+    </L>
+  </V>
   <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
   <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
   <T n="buff_description">0x4B8A61B5<!--Oh no. {0.SimFirstName}'s diaper is completely packed now, it smells really bad, and {M0.he}{F0.she} is starting to feel all itchy and sore from spending too long in a dirty diaper. This is miserable.--></T>
@@ -7,5 +16,8 @@
   <T n="mood_type">14646<!--Mood_Uncomfortable--></T>
   <T n="mood_weight">2</T>
   <T n="show_timeout">False</T>
+  <L n="static_commodity_to_add">
+    <T>5539523642103205402<!--IWN_scommodity_changediaper--></T>
+  </L>
   <T n="ui_sort_order">0</T>
 </I>

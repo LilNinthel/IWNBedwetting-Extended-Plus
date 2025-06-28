@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_trait_little_add" s="6875792001152029328">
+  <L n="loot_actions">
+    <V t="trait_add">
+      <U n="trait_add">
+        <T n="trait">3344421797<!--LilNinthel:trait_Little--></T>
+        <E n="subject">TargetSim</E>
+      </U>
+    </V>
+  </L>
+</I>

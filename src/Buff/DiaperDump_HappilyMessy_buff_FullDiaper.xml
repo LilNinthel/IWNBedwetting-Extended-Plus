@@ -1,4 +1,13 @@
 <I c="Buff" i="buff" m="buffs.buff" n="DiaperDump_HappilyMessy_buff_FullDiaper" s="7099998981336523968">
+  <V n="_add_test_set" t="tests_set">
+    <L n="tests_set">
+      <L>
+        <V t="test_set_reference">
+          <T n="test_set_reference">17796732764948000262<!--IwnBedWetting_testSet_HasDiaperEquipped--></T>
+        </V>
+      </L>
+    </L>
+  </V>
   <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
   <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
   <T n="buff_description">0x8089CFC4<!--{0.SimFirstName}'s diaper is soft and squishy from all the wettings!--></T>

@@ -1,5 +1,20 @@
 <!-- S4TK Group: 80000000 -->
 <I c="Buff" s="16362850560909423383" i="buff" m="buffs.buff" n="LilNinthel:buff_leakydiaper_state">
+  <V n="_add_test_set" t="tests_set">
+    <L n="tests_set">
+      <L>
+        <V t="buff">
+          <U n="buff">
+            <L n="blacklist">
+              <T>156408</T>
+              <T>206484</T>
+              <T>195626</T>
+            </L>
+          </U>
+        </V>
+      </L>
+    </L>
+  </V>
   <L n="_loot_on_addition">
     <T>11899094150883860437<!--LilNinthel:loot_buff_leakydiaper_vfx_add--></T>
   </L>

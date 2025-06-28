@@ -1,4 +1,13 @@
 <I c="Buff" s="4209189722621853619" i="buff" m="buffs.buff" n="mackico_ABDL_smellcute_buff">
+  <V n="_add_test_set" t="tests_set">
+    <L n="tests_set">
+      <L>
+        <V t="test_set_reference">
+          <T n="test_set_reference">17796732764948000262<!--IwnBedWetting_testSet_HasDiaperEquipped--></T>
+        </V>
+      </L>
+    </L>
+  </V>
   <T n="buff_description">0x20B16AE3<!--{0.SimFirstName} smells all cute and nice, from baby powder. It makes {M0.him}{F0.her} feel extra little.--></T>
   <T n="buff_name">0x8D539B49<!--I Smell Cute!--></T>
   <T n="icon">2f7d0004:00000000:c09b0954d2ef3d7f</T>

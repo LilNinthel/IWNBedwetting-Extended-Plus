@@ -3,6 +3,12 @@
   "group": "0x80000000",
   "instanceBase": "0xF7A04C15A66A5A",
   "entries": {
+    "0x1DE9894F": "Disable Infant & Toddler Interactions",
+    "0x652B7555": "Enable Infant & Toddler Interactions",
+    "0x2AC008A1": "Enable Automatic Visible Diapers",
+    "0xD3A28948": "Disable Automatic Visible Diapers",
+    "0x8618CA61": "This Sim will not have visible diapers automatically added or removed by the mod.",
+    "0x77A0027A": "No Automatic Visible Diapers",
     "0x8C84C099": "It's embarrassing, but I really should get this checked out before it gets worse",
     "0x935C0519": "Go to Bladder Doctor",
     "0x9499B1E7": "Bladder Doctor Appointment",

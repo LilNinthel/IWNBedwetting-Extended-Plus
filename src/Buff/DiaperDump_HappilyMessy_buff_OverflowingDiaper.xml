@@ -1,4 +1,13 @@
 <I c="Buff" i="buff" m="buffs.buff" n="DiaperDump_HappilyMessy_buff_OverflowingDiaper" s="7703221577432946627">
+  <V n="_add_test_set" t="tests_set">
+    <L n="tests_set">
+      <L>
+        <V t="test_set_reference">
+          <T n="test_set_reference">17796732764948000262<!--IwnBedWetting_testSet_HasDiaperEquipped--></T>
+        </V>
+      </L>
+    </L>
+  </V>
   <T n="audio_sting_on_add">39b2aa4a:00000000:8af8b916cf64c646</T>
   <T n="audio_sting_on_remove">39b2aa4a:00000000:3bf33216a25546ea</T>
   <T n="buff_description">0x0966B7B3<!--{0.SimFirstName} really doesn't want to be in this diaper anymore. It's just no longer fun when {M0.he}{F0.she}'s sore and itchy, and there's going to have to be a clean-up because {M0.his}{F0.her} diaper is leaking everywhere.--></T>
@@ -6,5 +15,8 @@
   <T n="icon">2f7d0004:00000000:820522970E5AC06A</T>
   <T n="mood_type">14646<!--Mood_Uncomfortable--></T>
   <T n="mood_weight">5</T>
+  <L n="static_commodity_to_add">
+    <T>5539523642103205402<!--IWN_scommodity_changediaper--></T>
+  </L>
   <T n="show_timeout">False</T>
 </I>
