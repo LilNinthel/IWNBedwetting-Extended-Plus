@@ -1,0 +1,6 @@
+.DS_Store
+out/
+BuildSummary.json
+HowToUseS4TK.md
+desktop.ini
+*.pyc
