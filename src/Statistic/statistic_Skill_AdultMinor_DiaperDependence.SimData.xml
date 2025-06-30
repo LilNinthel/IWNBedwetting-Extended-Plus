@@ -9,7 +9,7 @@
         <T type="Int64">4</T>
       </L>
       <T name="hidden">0</T>
-      <T name="icon">00B2D882-00000000-a625361a6f98c2f0</T>
+      <T name="icon">00B2D882-00000000-820522970E5AC06D</T>
       <T name="locked_description">0x00000000</T>
       <T name="mood_id">0</T>
       <L name="next_level_teaser"/>
@@ -19,7 +19,7 @@
       <T name="skill_level_type">1</T>
       <T name="stat_name">0x1A2899D9<!--Diaper Training--></T>
       <L name="tooltip_icon_list">
-        <T type="ResourceKey">00B2D882-00000000-322220fc9ba98a06</T>
+        <T type="ResourceKey">00B2D882-00000000-820522970E5AC06D</T>
       </L>
     </I>
   </Instances>

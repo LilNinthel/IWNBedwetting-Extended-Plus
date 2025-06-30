@@ -7,7 +7,7 @@
     <E>TEEN</E>
     <E>CHILD</E>
   </L>
-  <T n="icon">2f7d0004:00000000:a625361a6f98c2f0</T>
+  <T n="icon">00B2D882:00000000:820522970E5AC06D</T>
   <T n="initial_value">100</T>
   <L n="level_data">
     <U>
@@ -17,6 +17,24 @@
     <U>
       <T n="key">2</T>
       <U n="value">
+        <U n="level_up_notification">
+          <V n="audio_sting" t="enabled">
+            <U n="enabled">
+              <T n="audio" p="InGame\Audio\Stings\sting_skill_progress.propx">39b2aa4a:00000000:54381264540dd53c</T>
+            </U>
+          </V>
+          <V n="text" t="single">
+            <T n="single">0x38617053<!--Am I wet? That's odd, I don't remember peeing. Oh well, must have just forgotten.--></T>
+          </V>
+          <V n="title" t="enabled">
+            <T n="enabled">0xAB115BEC<!--Reached Diaper Training Level 2--></T>
+          </V>
+        </U>
+        <V n="level_up_screen_slam" t="enabled">
+          <V n="enabled" t="reference">
+            <T n="reference">4787705826085869395<!--LilNinthel:screenSlam_Skill_DiaperTraining_LevelUp--></T>
+          </V>
+        </V>
         <L n="loot">
           <T>17284799433455529645<!--LilNinthel:loot_buff_temporaryIncontinence_add--></T>
         </L>
@@ -25,6 +43,24 @@
     <U>
       <T n="key">3</T>
       <U n="value">
+        <U n="level_up_notification">
+          <V n="audio_sting" t="enabled">
+            <U n="enabled">
+              <T n="audio" p="InGame\Audio\Stings\sting_skill_progress.propx">39b2aa4a:00000000:54381264540dd53c</T>
+            </U>
+          </V>
+          <V n="text" t="single">
+            <T n="single">0xDA44C1BD<!--Something's not right, I definitely did not pee yet, so why am I wet? Am I actually losing bladder control?--></T>
+          </V>
+          <V n="title" t="enabled">
+            <T n="enabled">0xC312DF9F<!--Reached Diaper Training Level 3--></T>
+          </V>
+        </U>
+        <V n="level_up_screen_slam" t="enabled">
+          <V n="enabled" t="reference">
+            <T n="reference">4787705826085869395<!--LilNinthel:screenSlam_Skill_DiaperTraining_LevelUp--></T>
+          </V>
+        </V>
         <L n="loot">
           <T>17284799433455529645<!--LilNinthel:loot_buff_temporaryIncontinence_add--></T>
         </L>
@@ -33,6 +69,24 @@
     <U>
       <T n="key">4</T>
       <U n="value">
+        <U n="level_up_notification">
+          <V n="audio_sting" t="enabled">
+            <U n="enabled">
+              <T n="audio" p="InGame\Audio\Stings\sting_skill_progress.propx">39b2aa4a:00000000:54381264540dd53c</T>
+            </U>
+          </V>
+          <V n="text" t="single">
+            <T n="single">0x5931EED0<!--I'm barely aware of when I pee anymore, I'm going to become completely diaper dependent if I continue on this path.--></T>
+          </V>
+          <V n="title" t="enabled">
+            <T n="enabled">0x13D98158<!--Reached Diaper Training Level 4--></T>
+          </V>
+        </U>
+        <V n="level_up_screen_slam" t="enabled">
+          <V n="enabled" t="reference">
+            <T n="reference">4787705826085869395<!--LilNinthel:screenSlam_Skill_DiaperTraining_LevelUp--></T>
+          </V>
+        </V>
         <L n="loot">
           <T>17284799433455529645<!--LilNinthel:loot_buff_temporaryIncontinence_add--></T>
         </L>
@@ -41,6 +95,24 @@
     <U>
       <T n="key">5</T>
       <U n="value">
+        <U n="level_up_notification">
+          <V n="audio_sting" t="enabled">
+            <U n="enabled">
+              <T n="audio" p="InGame\Audio\Stings\sting_skill_progress.propx">39b2aa4a:00000000:54381264540dd53c</T>
+            </U>
+          </V>
+          <V n="text" t="single">
+            <T n="single">0x5D0F059B<!--My bladder control is totally gone, I can only tell that I'm peeing when I feel my diaper get warm.--></T>
+          </V>
+          <V n="title" t="enabled">
+            <T n="enabled">0xF4F414DF<!--Reached Diaper Training Level 5--></T>
+          </V>
+        </U>
+        <V n="level_up_screen_slam" t="enabled">
+          <V n="enabled" t="reference">
+            <T n="reference">4787705826085869395<!--LilNinthel:screenSlam_Skill_DiaperTraining_LevelUp--></T>
+          </V>
+        </V>
         <L n="loot">
           <T>11807781264032953848<!--LilNinthel:loot_trait_diaperDependence_add--></T>
         </L>
@@ -55,6 +127,6 @@
     <E>Skill_All_Visible</E>
   </L>
   <L n="tooltip_icon_list">
-    <T>2f7d0004:00000000:322220fc9ba98a06</T>
+    <T>00B2D882:00000000:820522970E5AC06D</T>
   </L>
 </I>
