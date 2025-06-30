@@ -27,6 +27,7 @@ from iwnbedwetting.enums.wickedwhims import WW_SimStatistic, WW_NudityReason, WW
 from ui.ui_dialog_notification import UiDialogNotification
 from distributor.shared_messages import IconInfoData
 import objects
+from native_enums.traits import NativeTrait
 from zone import Zone
 from sims4.collections import make_immutable_slots_class
 from types import MappingProxyType
@@ -878,11 +879,11 @@ def put_on_random_diaper_bottom(owner_id:int=None, _connection=None, remove_full
                             outfit_parts[BodyType.LOWER_BODY] = (CasPart((0)),)
 
                         diaper_part_id = None
-                        if sim_info.gender == Gender.MALE:
+                        if has_trait(sim_info.id, NativeTrait.GENDER_OPTIONS_FRAME_MASCULINE):
                             diaper_part_id = random.choice(
                                 DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.LOWER_BODY,
                                                                                                _male_bottom))
-                        elif sim_info.gender == Gender.FEMALE:
+                        elif has_trait(sim_info.id, NativeTrait.GENDER_OPTIONS_FRAME_FEMININE):
                             diaper_part_id = random.choice(
                                 DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.LOWER_BODY,
                                                                                                _female_bottom))
@@ -939,12 +940,12 @@ def put_on_random_diaper_accessory(owner_id:int=None, _connection=None, outfit_c
                                 outfit_parts[BodyType.EARRINGS] = (CasPart((0)),)
 
                         diaper_part_id = None
-                        has_trait()
-                        if sim_info.gender == Gender.MALE:
+
+                        if has_trait(sim_info.id, NativeTrait.GENDER_OPTIONS_FRAME_MASCULINE):
                             diaper_part_id = random.choice(
                                 DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.INDEX_FINGER_LEFT,
                                                                                                _male_accessory))
-                        elif sim_info.gender == Gender.FEMALE:
+                        elif has_trait(sim_info.id, NativeTrait.GENDER_OPTIONS_FRAME_FEMININE):
                             diaper_part_id = random.choice(
                                 DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.INDEX_FINGER_LEFT,
                                                                                                _female_accessory))
