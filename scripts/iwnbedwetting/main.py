@@ -700,7 +700,11 @@ def is_wearing_diaper(owner_id):
             for buff in remove_diaper_buffs:
                 if has_buff(owner_id, buff):
                     return False
-            if get_statistic_value(sim_info, IwnBedwettingStatistic.DIAPER_WETNESS) > 0 or get_statistic_value(sim_info, IwnBedwettingStatistic.DIAPER_WETNESS) > 0:
+
+            wetness = get_statistic_value(sim_info, IwnBedwettingStatistic.DIAPER_WETNESS) or 0
+            messiness = get_statistic_value(sim_info, IwnBedwettingStatistic.DIAPER_WETNESS) or 0
+
+            if wetness > 0 or messiness > 0:
                 return True
 
             if has_trait(owner_id, IwnBedwettingTrait.SLEEPS_IN_DIAPERS) and has_buff(27147):
@@ -1249,12 +1253,8 @@ def apply_outfit_parts_for_diaper_load(sim_info=None,outfit_category_and_index=N
     try:
         if sim_info is not None:
             logger.info("apply_outfit_parts_for_diaper_load: {}", sim_info)
-            wetness_level = get_statistic_value(sim_info, IwnBedwettingStatistic.DIAPER_WETNESS)
-            if wetness_level is None:
-                wetness_level = 0
-            mess_level = get_statistic_value(sim_info, IwnBedwettingStatistic.DIAPER_MESSINESS)
-            if mess_level is None:
-                mess_level = 0
+            wetness_level = get_statistic_value(sim_info, IwnBedwettingStatistic.DIAPER_WETNESS) or 0
+            mess_level = get_statistic_value(sim_info, IwnBedwettingStatistic.DIAPER_MESSINESS) or 0
             logger.info("diaper wetness: {}", wetness_level)
             logger.info("diaper messiness: {}", mess_level)
 
