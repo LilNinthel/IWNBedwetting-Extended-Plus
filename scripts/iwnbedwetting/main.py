@@ -212,7 +212,7 @@ def get_mods_files_info():
             if file_name.endswith('.package'):
                 if file_name in old_mod_packages:
                     _old_mods_detected = True
-                if file_name.startswith('[Ember]') and file_name.endswith('wall_accessory.package'):
+                if file_name.startswith('[Ember]') and file_name.endswith('accessory.package'):
                     _ember_detected = True
                 for prefix in old_addons:
                     if file_name.startswith(prefix):
@@ -757,8 +757,8 @@ def _on_buff_added(buff_type, sim_id):
             if has_trait(sim_id, visible_diapers_opt_out_trait):
                 return
 
-            if not is_wearing_diaper(sim_id):
-                remove_diaper(sim_id)
+            # if not is_wearing_diaper(sim_id):
+            #     remove_diaper(sim_id)
             # logger.info('on_buff_added: {} {}'.format(buff_type, sim_id))
             elif buff_type.guid64 in remove_diaper_buffs:
                 remove_diaper(sim_id)
@@ -1445,10 +1445,10 @@ def open_ember_mod_page(_connection=None):
 @sims4.commands.Command('iwn.set_statistic_value', command_type=(sims4.commands.CommandType.Live))
 def set_statistic_value(owner_id:int=None, statistic_id=None, new_value=None, _connection=None):
     if owner_id is not None and statistic_id is not None and new_value is not None:
-        output = sims4.commands.CheatOutput(_connection)
+        # output = sims4.commands.CheatOutput(_connection)
         sim_info = services.sim_info_manager().get(owner_id)
         if sim_info is not None:
-            output('Setting statistic {} on {} to {}'.format(statistic_id, sim_info, new_value))
+            # output('Setting statistic {} on {} to {}'.format(statistic_id, sim_info, new_value))
             statistic_instance = _get_statistic_manager().get(int(statistic_id))
             if statistic_instance is not None:
                 if not sim_info.has_component(objects.components.types.STATISTIC_COMPONENT):

@@ -4,10 +4,12 @@
   </L>
   <T n="display_text">0xDEC39240<!--Awaken your hidden curiosity--></T>
   <V n="objective_completion_type" t="use_test_result" />
-  <V n="objective_test" t="trait">
-    <U n="trait">
-      <L n="whitelist_traits">
-        <T>1432483267<!--LilNinthel:trait_curiousAbout_diapers--></T>
+  <V n="objective_test" t="ran_interaction_test">
+    <U n="ran_interaction_test">
+      <L n="affordances">
+        <T>14596871083075764097<!--LilNinthel:reminisce_diaper_days--></T>
+        <T>13194821150396379833<!--LilNinthel:purchase_diapers_phone--></T>
+        <T>12582602326555689108<!--LilNinthel:purchase_diapers_computer--></T>
       </L>
     </U>
   </V>
