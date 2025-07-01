@@ -752,6 +752,8 @@ def has_trait(owner_id, *trait_ids):
     return False
 
 
+check_diaper_buffs = [IwnBedwettingBuff.DIAPER_DUMMY_BUFF, 27147]
+
 def _on_buff_added(buff_type, sim_id, update_client=True):
     if buff_type is not None:
         if sim_id is not None:
@@ -771,7 +773,7 @@ def _on_buff_added(buff_type, sim_id, update_client=True):
                     put_on_random_diaper_bottom(sim_id, update_client)
                 elif buff_type.guid64 in force_diaper_accessory_buffs:
                     put_on_random_diaper_accessory(sim_id, update_client)
-                elif buff_type.guid64 == IwnBedwettingBuff.DIAPER_DUMMY_BUFF:
+                elif buff_type.guid64 in check_diaper_buffs and is_wearing_diaper(sim_id):
                     put_on_random_diaper_accessory(sim_id, update_client)
 
 
@@ -781,11 +783,11 @@ def _on_buff_removed(buff_type, sim_id):
             if has_trait(sim_id, visible_diapers_opt_out_trait):
                 return
 
-            if buff_type.guid64 == IwnBedwettingBuff.DIAPER_DUMMY_BUFF:
+            if buff_type.guid64 in check_diaper_buffs and not is_wearing_diaper(sim_id):
                 remove_diaper(sim_id)
 
             if buff_type.guid64 in remove_diaper_buffs and is_wearing_diaper(sim_id):
-                remove_diaper(sim_id)
+                # remove_diaper(sim_id)
                 put_on_random_diaper_accessory(sim_id)
             # logger.info('on_buff_added: {} {}'.format(buff_type, sim_id))
             # if buff_type.guid64 in force_diaper_pants_buffs:
