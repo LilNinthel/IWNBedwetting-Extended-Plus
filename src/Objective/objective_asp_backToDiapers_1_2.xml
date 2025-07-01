@@ -4,13 +4,12 @@
   </L>
   <T n="display_text">0xC29981E1<!--Buy what your heart desires--></T>
   <V n="objective_completion_type" t="use_test_result" />
-  <V n="objective_test" t="inventory">
-    <U n="inventory">
-      <V n="contents_check" t="has_object_with_def">
-        <U n="has_object_with_def">
-          <T n="definition">13965923130368742748</T>
-        </U>
-      </V>
+  <V n="objective_test" t="ran_interaction_test">
+    <U n="ran_interaction_test">
+      <L n="affordances">
+        <T>13194821150396379833<!--LilNinthel:purchase_diapers_phone--></T>
+        <T>12582602326555689108<!--LilNinthel:purchase_diapers_computer--></T>
+      </L>
     </U>
   </V>
   <T n="satisfaction_points">75</T>

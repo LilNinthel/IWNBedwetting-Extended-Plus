@@ -26,6 +26,7 @@
           <T>17736933445297037306<!--LilNinthel:loot_diaperDependence_increase--></T>
           <T>10251625219716980905<!--LilNinthel:loot_copy_bladder_value--></T>
           <T>16536190924110172361<!--LilNinthel:loot_Statistic_Diaper_Use--></T>
+          <T>9820816904738408212<!--LilNinthel:loot_DiaperFail--></T>
         </L>
         <U n="success_chance">
           <L n="multipliers">
@@ -47,6 +48,10 @@
     <V t="loot">
       <U n="loot">
         <L n="loot_list">
+          <T>17736933445297037306<!--LilNinthel:loot_diaperDependence_increase--></T>
+          <T>10251625219716980905<!--LilNinthel:loot_copy_bladder_value--></T>
+          <T>16536190924110172361<!--LilNinthel:loot_Statistic_Diaper_Use--></T>
+          <T>9820816904738408212<!--LilNinthel:loot_DiaperFail--></T>
           <T>13017211686655432573<!--IwnBedWetting_loot_DiaperLoad_Reset--></T>
           <T>14523230298926587703<!--LilNinthel:loot_wearing_new_diaper--></T>
         </L>
@@ -121,7 +126,6 @@
       <U n="actions">
         <L n="loot_list">
           <T>23931<!--loot_Commodity_Bladder_200_NoAd--></T>
-          <T>9820816904738408212<!--LilNinthel:loot_DiaperFail--></T>
         </L>
       </U>
     </U>

@@ -21,7 +21,4 @@
   </L>
   <T n="trait_description">0x7AC863C3<!--Diaper Wearer (Item)--></T>
   <E n="trait_type">GAMEPLAY</E>
-  <L n="super_affordances">
-    <T>13997571223764220252<!--LilNinthel:remove_diaper_item--></T>
-  </L>
 </I>

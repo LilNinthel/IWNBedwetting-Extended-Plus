@@ -35,6 +35,7 @@ class IwnBedwettingTraitPickerSuperInteraction(TraitPickerSuperInteraction):
         target_traits.add(IwnBedwettingTrait.HYPERACTIVE_BLADDER)
         target_traits.add(IwnBedwettingTrait.TOTAL_URINARY_INCONTINENCE)
         target_traits.add(IwnBedwettingTrait.DIAPERED_247_MEDICAL)
+        target_traits.add(IwnBedwettingTrait.SLEEPS_IN_DIAPERS)
 
 
 

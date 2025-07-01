@@ -25,6 +25,11 @@
         <E n="subject">Actor</E>
       </U>
     </V>
+    <V t="statistic_set_max">
+      <U n="statistic_set_max">
+        <T n="stat">422049043530584573<!--LilNinthel:statistic_Skill_AdultMinor_DiaperDependence--></T>
+      </U>
+    </V>
     <V t="statistics">
       <V n="statistics" t="statistic_remove">
         <U n="statistic_remove">

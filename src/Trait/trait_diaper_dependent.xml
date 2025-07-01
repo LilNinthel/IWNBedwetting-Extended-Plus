@@ -10,7 +10,7 @@
   <L n="buffs">
     <U>
       <!-- <T n="buff_type">10309070037716691412</T> -->
-      <T n="buff_type">18387649698602079241<!--LilNinthel:buff_TotalUrinaryIncontinence--></T>
+      <!--<T n="buff_type">18387649698602079241</T>-->
     </U>
   </L>
   <T n="buffs_add_on_spawn_only">False</T>
