@@ -27,7 +27,7 @@ from iwnbedwetting.enums.wickedwhims import WW_SimStatistic, WW_NudityReason, WW
 from ui.ui_dialog_notification import UiDialogNotification
 from distributor.shared_messages import IconInfoData
 import objects
-from native_enums.traits import NativeTrait
+from iwnbedwetting.native_enums.traits import NativeTrait
 from zone import Zone
 from sims4.collections import make_immutable_slots_class
 from types import MappingProxyType
@@ -434,11 +434,11 @@ def _iwnbedwetting_sim_info_load_sim_info(original, self, *args, **kwargs):
     return result
 
 
-def evaluate_buffs(sim_info):
+def evaluate_buffs(sim_info, update_client=True):
     if sim_info is not None:
         logger.info("evaluate_buffs {}".format(sim_info))
         for buff_type in list(sim_info.get_active_buff_types()):
-            _on_buff_added(buff_type, sim_info.id)
+            _on_buff_added(buff_type, sim_info.id, update_client)
 
 
 def register_on_buff_added_callback(sim_info, callback):
@@ -503,7 +503,7 @@ def _on_sim_outfit_change(sim_info, new_outfit, previous_outfit):
                         set_outfit_parts(sim_info, new_outfit, new_parts)
                     elif len(get_diaper_parts(get_outfit_parts(sim_info, new_outfit)).keys()) == 0:
                         logger.info("{} needs a diaper".format(sim_info))
-                        put_on_random_diaper_accessory(sim_info.id)
+                        put_on_random_diaper_accessory(sim_info.id, update_client=False)
             # else:
             #     if _wicked_whims_installed:
             #         turbo_sim = TurboSim(sim_info.id)
@@ -533,8 +533,8 @@ def _on_sim_outfit_change(sim_info, new_outfit, previous_outfit):
 
             # for callback in sim_info.on_outfit_changed:
             #     logger.info(str(callback.__qualname__))
-            evaluate_buffs(sim_info)
-            apply_outfit_parts_for_diaper_load(sim_info)
+            evaluate_buffs(sim_info, update_client=False)
+            apply_outfit_parts_for_diaper_load(sim_info, update_client=False)
         finally:
             logger.info("_on_sim_outfit_change done {}".format(sim_info))
             # sim_info.register_for_outfit_changed_callback(_on_sim_outfit_change)
@@ -752,24 +752,27 @@ def has_trait(owner_id, *trait_ids):
     return False
 
 
-def _on_buff_added(buff_type, sim_id):
+def _on_buff_added(buff_type, sim_id, update_client=True):
     if buff_type is not None:
         if sim_id is not None:
             if has_trait(sim_id, visible_diapers_opt_out_trait):
                 return
 
+            # if not has_buff(10309070037716691412):
+            #     remove_diaper(sim_id)
+
             # if not is_wearing_diaper(sim_id):
             #     remove_diaper(sim_id)
             # logger.info('on_buff_added: {} {}'.format(buff_type, sim_id))
-            elif buff_type.guid64 in remove_diaper_buffs:
-                remove_diaper(sim_id)
+            if buff_type.guid64 in remove_diaper_buffs:
+                remove_diaper(sim_id, update_client)
             else:
-                if is_wearing_diaper(sim_id):
-                    put_on_random_diaper_accessory(sim_id)
-                elif buff_type.guid64 in force_diaper_pants_buffs:
-                    put_on_random_diaper_bottom(sim_id)
+                if buff_type.guid64 in force_diaper_pants_buffs:
+                    put_on_random_diaper_bottom(sim_id, update_client)
                 elif buff_type.guid64 in force_diaper_accessory_buffs:
-                    put_on_random_diaper_accessory(sim_id)
+                    put_on_random_diaper_accessory(sim_id, update_client)
+                elif buff_type.guid64 == IwnBedwettingBuff.DIAPER_DUMMY_BUFF:
+                    put_on_random_diaper_accessory(sim_id, update_client)
 
 
 def _on_buff_removed(buff_type, sim_id):
@@ -777,19 +780,26 @@ def _on_buff_removed(buff_type, sim_id):
         if sim_id is not None:
             if has_trait(sim_id, visible_diapers_opt_out_trait):
                 return
+
+            if buff_type.guid64 == IwnBedwettingBuff.DIAPER_DUMMY_BUFF:
+                remove_diaper(sim_id)
+
+            if buff_type.guid64 in remove_diaper_buffs and is_wearing_diaper(sim_id):
+                remove_diaper(sim_id)
+                put_on_random_diaper_accessory(sim_id)
             # logger.info('on_buff_added: {} {}'.format(buff_type, sim_id))
-            if buff_type.guid64 in force_diaper_pants_buffs:
-                if not is_wearing_diaper(sim_id):
-                    logger.info("Not a diaper wearer")
-                    remove_diaper(sim_id)
-                else:
-                    logger.info("Diaper wearer")
-            if buff_type.guid64 in force_diaper_accessory_buffs:
-                if not is_wearing_diaper(sim_id):
-                    logger.info("Not a diaper wearer")
-                    remove_diaper(sim_id)
-                else:
-                    logger.info("Diaper wearer")
+            # if buff_type.guid64 in force_diaper_pants_buffs:
+            #     if not is_wearing_diaper(sim_id):
+            #         logger.info("Not a diaper wearer")
+            #         remove_diaper(sim_id)
+            #     else:
+            #         logger.info("Diaper wearer")
+            # if buff_type.guid64 in force_diaper_accessory_buffs:
+            #     if not is_wearing_diaper(sim_id):
+            #         logger.info("Not a diaper wearer")
+            #         remove_diaper(sim_id)
+            #     else:
+            #         logger.info("Diaper wearer")
 
 
 def add_buff(sim_info, buff_id, buff_reason=None):
@@ -833,7 +843,7 @@ _child_accessory = [16089036029714611952]
 
 @sims4.commands.Command('iwn.force_into_diaper', command_type=(sims4.commands.CommandType.Live))
 def force_into_diaper(owner_id:int=None, _connection=None):
-    put_on_random_diaper_bottom(owner_id, _connection, True, True)
+    put_on_random_diaper_bottom(owner_id, _connection, remove_full_body=True, remove_tights=True, update_client=True)
 
 outfit_categories_excluded_from_diaper = [OutfitCategory.SWIMWEAR,OutfitCategory.BATHING,OutfitCategory.SPECIAL]
 
@@ -1390,9 +1400,9 @@ def apply(sim_info, outfit_body_types=[], outfit_part_ids=[], outfit_color_shift
     # logger.info('outfit {}', sim_info._base.outfits)
     # sim_info._base.outfit_type_and_index = current_outfit
     sim_info.set_outfit_dirty(outfit_category_and_index[0])
-    # if update_client:
-        # sim_info.resend_outfits()
-        # sim_info.appearance_tracker.evaluate_appearance_modifiers()
+    if update_client:
+        sim_info.resend_outfits()
+        sim_info.appearance_tracker.evaluate_appearance_modifiers()
 
 
 update_check_url = 'http://lilninthel.cc/currentversion.txt'
