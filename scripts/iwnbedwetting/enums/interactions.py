@@ -1,13 +1,7 @@
-import inspect
+from iwnbedwetting.enums.base import EnumBase
 
 
-class InteractionEnum:
-    @classmethod
-    def _get_enum_values(cls):
-        return set(obj for name, obj in inspect.getmembers(cls) if not name.startswith('_') and not callable(obj))
-
-
-class ToiletInteraction(InteractionEnum):
+class ToiletInteraction(EnumBase):
     TOILET_USE_SITTING = 14427
     TOILET_USE_SITTING_STALL = 214054
     TOILET_USE_SITTING_STALL_PRANKED = 226866
@@ -36,7 +30,7 @@ class ToiletInteraction(InteractionEnum):
     WEREWOLF_BLADDER = 287249
 
 
-class DiaperInteraction(InteractionEnum):
+class DiaperInteraction(EnumBase):
     PEE = 15386335300547775969
     PEE_CONTINUATION = 17846418620694466401
     PEE_STANDING = 17336362655583455169
@@ -51,7 +45,7 @@ class DiaperInteraction(InteractionEnum):
     COMBINED_IMMEDIATE = 18237598613162935279
 
 
-class PantsInteraction(InteractionEnum):
+class PantsInteraction(EnumBase):
     PEE = 12251799722243206637
     PEE_CONTINUATION = 12122353962891477661
     PEE_STANDING = 11513621841802987904
@@ -62,7 +56,7 @@ class PantsInteraction(InteractionEnum):
     POOP_IMMEDIATE = 11989016065404783299
 
 
-class WickedWhimsPeeHereInteraction(InteractionEnum):
+class WickedWhimsPeeHereInteraction(EnumBase):
     PEE_HERE_MALE = 17116239088056458440
     PEE_HERE_FEMALE = 13179972971674662715
     NATURISM_GO_TO_PEE = 9751987170744393579
@@ -70,7 +64,7 @@ class WickedWhimsPeeHereInteraction(InteractionEnum):
 
 
 class InteractionSets:
-    TOILET_USE_INTERACTIONS = ToiletInteraction._get_enum_values()
-    DIAPER_USE_INTERACTIONS = DiaperInteraction._get_enum_values()
-    PANTS_USE_INTERACTIONS = PantsInteraction._get_enum_values()
-    WW_PEE_HERE_INTERACTIONS = WickedWhimsPeeHereInteraction._get_enum_values()
+    TOILET_USE_INTERACTIONS = ToiletInteraction.get_enum_values()
+    DIAPER_USE_INTERACTIONS = DiaperInteraction.get_enum_values()
+    PANTS_USE_INTERACTIONS = PantsInteraction.get_enum_values()
+    WW_PEE_HERE_INTERACTIONS = WickedWhimsPeeHereInteraction.get_enum_values()

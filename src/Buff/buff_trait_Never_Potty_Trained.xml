@@ -1,5 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
 <!-- S4TK Group: 80000000 -->
-<I c="Buff" s="13553445139389231781" i="buff" m="buffs.buff" n="LilNinthel:buff_highchairfeedposture">
+<I c="Buff" s="8084979201725891234" i="buff" m="buffs.buff" n="LilNinthel:buff_trait_Never_Potty_Trained">
   <T n="buff_description">0x00000000</T>
   <T n="buff_name">0x00000000</T>
   <T n="icon">2f7d0004:00000000:30f0846c783606f9</T>

@@ -69,12 +69,6 @@
     <T>13997571223764220252<!--LilNinthel:remove_diaper_item--></T>
   </L>
   <L n="target_super_affordances">
-    <!--<U>
-      <T n="affordance">9876194458459655979</T>
-    </U>
-    <U>
-      <T n="affordance">14174614305645774612</T>
-    </U>-->
     <U>
       <T n="affordance">15483785028928119341<!--LilNinthel:AskForDiaper--></T>
     </U>

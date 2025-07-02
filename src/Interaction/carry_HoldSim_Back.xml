@@ -68,6 +68,11 @@
       </U>
     </U>
   </L>
+  <V n="carry_back_compatibility_override" t="enabled">
+    <U n="enabled">
+      <T n="wings">False</T>
+    </U>
+  </V>
   <V n="content_score" t="disabled" />
   <T n="disable_transitions">True</T>
   <U n="display_name_text_tokens">
@@ -92,6 +97,7 @@
       </V>
     </L>
   </U>
+  <T n="ignore_exclude_all_compatibility">True</T>
   <L n="interaction_category_tags">
     <E>Situation_CookingInteractions</E>
     <E>Interaction_Super</E>

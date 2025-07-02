@@ -2,8 +2,8 @@ import services
 import sims4.log
 from sims4.resources import Types
 from sims4.tuning.instances import HashedTunedInstanceMetaclass
-from sims4.tuning.tunable import HasTunableReference, TunableSet, TunableReference, TunableMapping, AutoFactoryInit,  \
-    HasTunableReference, HasTunableSingletonFactory, Tunable, TunableTuple, TunableList, TunableReference, \
+from sims4.tuning.tunable import TunableSet, TunableReference, TunableMapping, AutoFactoryInit,  \
+    HasTunableReferenceFactory, HasTunableSingletonFactory, Tunable, TunableTuple, TunableList, TunableReference, \
     TunableVariant, TunableEnumEntry, OptionalTunable, TunableResourceKey
 import traceback
 
@@ -41,7 +41,7 @@ class ConsumableObjectSelection(TunableVariant):
             **kwargs)
 
 
-class ConsumableAffordanceInjector(HasTunableReference, metaclass=HashedTunedInstanceMetaclass, manager=services.get_instance_manager(Types.SNIPPET)):
+class ConsumableAffordanceInjector(HasTunableReferenceFactory, metaclass=HashedTunedInstanceMetaclass, manager=services.get_instance_manager(Types.SNIPPET)):
 
     INSTANCE_TUNABLES = {
         'add_consumable_interactions_to_objects': TunableList(

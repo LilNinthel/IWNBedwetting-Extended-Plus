@@ -26,7 +26,13 @@
       </L>
     </U>
   </V>
-  <V n="_saveable" t="enabled" />
+  <V n="_saveable" t="enabled">
+    <U n="enabled">
+      <V n="transition_affordance_to_save" t="enabled">
+        <T n="enabled">289859<!--ImmediateSuperInteraction: immediate_Preroll_LayOnBackOnObject--></T>
+      </V>
+    </U>
+  </V>
   <T n="allow_user_directed">False</T>
   <T n="attention_cost">0.5</T>
   <V n="basic_content" t="flexible_length">

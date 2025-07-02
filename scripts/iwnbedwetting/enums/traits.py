@@ -1,4 +1,7 @@
-class IwnBedwettingTrait:
+from iwnbedwetting.enums.base import EnumBase
+
+
+class IwnBedwettingTrait(EnumBase):
     INCONTINENCE = 2260700649
     BEDWETTER = 2122234430
     PANTS_WETTER = 806286945

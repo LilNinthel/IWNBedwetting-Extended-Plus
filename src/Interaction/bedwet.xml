@@ -262,6 +262,8 @@
         <V n="whitelist" t="enabled">
           <L n="enabled">
             <T>27147<!--MoodBuff_Hidden_Asleep--></T>
+            <T>10094<!--Buff: buff_Sim_IsSleeping--></T>
+            <T>275549<!--Buff: buff_Sim_IsSleeping_Hidden--></T>
           </L>
         </V>
       </U>

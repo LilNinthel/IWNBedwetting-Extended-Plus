@@ -6,15 +6,15 @@ from sims.sim_info_types import Age
 from sims4.resources import Types
 from sims.outfits.outfit_enums import BodyType
 from sims4.tuning.instances import HashedTunedInstanceMetaclass
-from sims4.tuning.tunable import HasTunableReference, TunableSet, TunableReference, TunableMapping, AutoFactoryInit,  \
-    HasTunableReference, HasTunableSingletonFactory, Tunable, TunableTuple, TunableList, TunableReference, \
+from sims4.tuning.tunable import HasTunableReferenceFactory, TunableSet, TunableReference, TunableMapping, AutoFactoryInit,  \
+     HasTunableSingletonFactory, Tunable, TunableTuple, TunableList, TunableReference, \
     TunableVariant, TunableEnumEntry, OptionalTunable, TunableResourceKey, TunableCasPart
 import traceback
 
 logger = sims4.log.Logger('DiaperLoadCASConfig')
 
 
-class DiaperLoadCASConfig(HasTunableReference, metaclass=HashedTunedInstanceMetaclass, manager=services.get_instance_manager(Types.SNIPPET)):
+class DiaperLoadCASConfig(HasTunableReferenceFactory, metaclass=HashedTunedInstanceMetaclass, manager=services.get_instance_manager(Types.SNIPPET)):
 
     supported_cc_installed = False
 
