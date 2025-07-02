@@ -1,4 +1,4 @@
-<I c="SocialSuperInteraction" i="interaction" m="interactions.social.social_super_interaction" n="LilNinthel:book_social_listen_to_reader" s="14984010739728176191">
+<I c="SocialSuperInteraction" i="interaction" m="interactions.social.social_super_interaction" n="book_social_listen_to_reader" s="13124">
   <L n="_constraints">
     <U>
       <L n="constraints">
@@ -276,8 +276,25 @@
         <E n="who">TargetSim</E>
       </U>
     </V>
+    <!--<V t="sim_info">
+      <U n="sim_info">
+        <V n="ages" t="specified">
+          <L n="specified">
+            <E>CHILD</E>
+          </L>
+        </V>
+        <V n="species" t="specified">
+          <U n="specified">
+            <L n="species">
+              <E />
+            </L>
+          </U>
+        </V>
+        <E n="who">Actor</E>
+      </U>
+    </V>-->
     <V t="test_set_reference">
-      <T n="test_set_reference">13928772041813978245<!--LilNinthel:testSetInstance_ActorIsLittle--></T>
+      <T n="test_set_reference">12648561507551528329<!--LilNinthel:testSetInstance_ActorIsToddlerOrABDL--></T>
     </V>
   </L>
   <T n="time_overhead">30</T>
