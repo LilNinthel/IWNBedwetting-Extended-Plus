@@ -14,6 +14,9 @@
       </U>
     </L>
   </U>
+  <U n="_carry_aspect_forwarding">
+    <T n="forward_back">True</T>
+  </U>
   <L n="_supported_postures">
     <U>
       <T n="posture_type">15537<!--posture_Stand--></T>

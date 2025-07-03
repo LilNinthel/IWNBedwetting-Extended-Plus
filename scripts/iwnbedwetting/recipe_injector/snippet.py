@@ -3,14 +3,14 @@ from crafting.recipe import Recipe
 import sims4.log
 from sims4.resources import Types
 from sims4.tuning.instances import HashedTunedInstanceMetaclass
-from sims4.tuning.tunable import HasTunableReference, TunableSet, TunableReference, TunableMapping
+from sims4.tuning.tunable import HasTunableReferenceFactory, TunableSet, TunableReference, TunableMapping
 
 import traceback
 
 logger = sims4.log.Logger('RecipeInjector')
 
 
-class RecipeInjector(HasTunableReference, metaclass=HashedTunedInstanceMetaclass, manager=services.get_instance_manager(Types.SNIPPET)):
+class RecipeInjector(HasTunableReferenceFactory, metaclass=HashedTunedInstanceMetaclass, manager=services.get_instance_manager(Types.SNIPPET)):
 
     class MenuKey(TunableSet):
 

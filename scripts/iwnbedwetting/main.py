@@ -28,6 +28,7 @@ from ui.ui_dialog_notification import UiDialogNotification
 from distributor.shared_messages import IconInfoData
 import objects
 from iwnbedwetting.native_enums.traits import NativeTrait
+from iwnbedwetting.native_enums.buffs import NativeBuff
 from zone import Zone
 from sims4.collections import make_immutable_slots_class
 from types import MappingProxyType
@@ -57,7 +58,7 @@ import urllib.request
 import urllib.error
 import urllib.response
 
-IWN_BED_WETTING_VERSION = "2.0.2"
+IWN_BED_WETTING_VERSION = "2.0.3"
 REWARD_BEDWETTER = 11589092927928958152
 REWARD_INCONTINENCE = 2926939328826942378
 dTittleFull = (265058837, 265058838, 265058839, 323983041, 323983042, 323983043, 269972373,
@@ -88,81 +89,16 @@ try:
     from wickedwhims.sex.generic.utils.state import is_sim_in_sex_interaction, is_sim_going_to_sex_interaction
     from turbolib2.wrappers.sim.sim import TurboSim
     # import wickedwhims.nudity.body.sim_outfit_utils as ww_outfit_utils
-    # from wickedwhims.nudity.body.sim_outfit_utils import strip_outfit
+    from wickedwhims.nudity.body.sim_outfit_utils import strip_outfit, _wickedwhims_register_nudity_outfit_change_callback, _wickedwhims_register_nudity_outfit_change_callback_on_new_sim
     import wickedwhims.sex.integral.sex_handlers.active_sex.utils.outfit as ww_sex_outfit
     from wickedwhims.sex.integral.sex_handlers.active_sex.utils.outfit import update_sim_sex_outfit
+    from wickedwhims.sex.integral.sex_handlers.active_sex.active_sex_handlers import get_active_sex_instance
     from wickedwhims.sex.sex_settings import get_sex_setting, SexSetting
     # from wickedwhims.sex.generic.interactions.instant_undressing import _UndressActorBodyTypesInteraction
 
     # logger.info(str(inspect.signature(strip_outfit)))
 
-
-    @inject(ww_sex_outfit, 'update_sim_sex_outfit')
-    def ww_update_sim_sex_outfit(original, self, *args, **kwargs):
-        logger.info("update_sim_sex_outfit")
-        logger.info(str(self))
-        logger.info(str(args))
-        logger.info(str(kwargs))
-        try:
-            if self is not None:
-                # if not has_trait(self.get_sim_id(), visible_diapers_opt_out_trait):
-                undress_setting = get_sex_setting(SexSetting.SEX_UNDRESSING_TYPE)
-                npc_undress_setting = get_sex_setting(SexSetting.NPC_SEX_UNDRESSING_TYPE)
-                # is_npc_only = kwargs.get("is_npc_only", False)
-                if self.is_npc():
-                    undress_setting = npc_undress_setting
-                if undress_setting != WW_SexUndressingTypeSetting.DISABLED:
-                    if len(args) > 0 and args[0] is not None:
-                        animation_instance = args[0]
-                        logger.info(str(type(args[0]).__name__))
-                        if animation_instance.get_naked_type() == WW_SexNakedType.BOTTOM or animation_instance.get_naked_type() == WW_SexNakedType.ALL or animation_instance.get_naked_type() == WW_SexNakedType.FORCE_ALL or undress_setting == WW_SexUndressingTypeSetting.COMPLETE:
-                            remove_diaper(self.get_sim_id(), force_remove=True, update_client=False)
-
-        except Exception as e:
-            logger.error("update_sim_sex_outfit injection failed to run.")
-            logger.error(traceback.format_exc())
-        finally:
-            result = original(self, *args, **kwargs)
-
-        return result
-
-
-    # @inject(_UndressActorBodyTypesInteraction, 'on_interaction_start')
-    # def ww_UndressActorBodyTypesInteraction(original, self, *args, **kwargs):
-    #     logger.info("_UndressActorBodyTypesInteraction.on_interaction_start")
-    #     logger.info(str(kwargs))
-    #     result = original(self, *args, **kwargs)
-    #     try:
-    #         turbo_sim = kwargs.get("turbo_sim", None)
-    #     except Exception as e:
-    #         logger.error("_UndressActorBodyTypesInteraction.on_interaction_start injection failed to run.")
-    #         logger.error(traceback.format_exc())
-    #
-    #     return result
-
-
-    # @inject(ww_outfit_utils, 'strip_outfit')
-    # def ww_strip_outfit(original, self, *args, **kwargs):
-    #     logger.info("strip_outfit")
-    #     logger.info(str(self))
-    #     logger.info(str(args))
-    #     logger.info(str(kwargs))
-    #     result = original(self, *args, **kwargs)
-    #     try:
-    #         turbo_sim = kwargs.get("turbo_sim", None)
-    #         nudity_reason = kwargs.get("nudity_reason", None)
-    #         strip_type_bottom = kwargs.get("strip_type_bottom", None)
-    #         if turbo_sim is not None and strip_type_bottom == 2 and nudity_reason is not None:
-    #             if nudity_reason == WW_NudityReason.SEX:
-    #                 logger.info("Removing diaper for sex strip_outfit inject")
-    #                 remove_diaper(turbo_sim.get_sim_id(), True)
-    #     except Exception as e:
-    #         logger.error("wickedwhims.nudity.body.sim_outfit_utils.strip_outfit injection failed to run.")
-    #         logger.error(traceback.format_exc())
-    #
-    #     return result
-
-except ImportError:
+except Exception:
     logger.error("Error importing WickedWhims modules")
     logger.error(traceback.format_exc())
     _wicked_whims_installed = False
@@ -310,6 +246,14 @@ def add_diaper_load_tracking(sim_info):
     trackers.append(get_statistic_tracker(sim_info, IwnBedwettingStatistic.DIAPER_WETNESS))
     trackers.append(get_statistic_tracker(sim_info, IwnBedwettingStatistic.DIAPER_MESSINESS))
     trackers.append(get_statistic_tracker(sim_info, IwnBedwettingStatistic.DIAPER_DEPENDENCE))
+    sex_tracker = get_statistic_tracker(sim_info, WW_SimStatistic.WW_SEX_ACTIVE_INSTANCE_IDENTIFIER)
+    if sex_tracker is not None:
+        sex_tracker.add_watcher(wrapper.wicked_whims_stat_watcher)
+        sex_tracker.add_on_remove_callback(wrapper.wicked_whims_stat_removed)
+    sex_animation_tracker = get_statistic_tracker(sim_info, WW_SimStatistic.WW_SEX_ACTIVE_INSTANCE_ANIMATION_INDEX)
+    if sex_animation_tracker is not None:
+        sex_animation_tracker.add_watcher(wrapper.wicked_whims_stat_watcher)
+        sex_animation_tracker.add_on_remove_callback(wrapper.wicked_whims_stat_removed)
     for tracker in trackers:
         if tracker is not None:
             logger.info("Adding tracker {} to {}".format(tracker, sim_info))
@@ -391,6 +335,60 @@ class DiaperWatcherWrapper():
             if new_value is not None:
                 set_statistic_value(self.sim_info.id, IwnBedwettingStatistic.DIAPER_TRAINING_SKILL, 100 + new_value*51.8)
 
+    def wicked_whims_stat_watcher(self, stat_type, old_value, new_value):
+        if stat_type.guid64 == WW_SimStatistic.WW_SEX_ACTIVE_INSTANCE_IDENTIFIER or stat_type.guid64 == WW_SimStatistic.WW_SEX_ACTIVE_INSTANCE_ANIMATION_INDEX or stat_type.guid64 == WW_SimStatistic.WW_IS_SIM_IN_SEX:
+            try:
+                logger.info("wicked_whims_stat_watcher {}".format(stat_type))
+                if stat_type.guid64 in self.value_dict:
+                    logger.info("old {} new {}".format(self.value_dict[stat_type.guid64], new_value))
+                    if self.value_dict[stat_type.guid64] == new_value:
+                        logger.info("No change in value")
+                        return
+
+                active_sex_id = get_statistic_value(self.sim_info, WW_SimStatistic.WW_SEX_ACTIVE_INSTANCE_IDENTIFIER) or 0
+                if active_sex_id != 0:
+                    sex_instance = get_active_sex_instance(active_sex_id)
+                    if sex_instance is not None:
+                        # logger.info(str(sex_instance))
+                        animation_instance = sex_instance.get_animation_instance()
+                        # logger.info(str(animation_instance))
+                        if animation_instance is not None:
+                            actors = animation_instance.get_actors()
+                            if len(actors) > 0:
+                                for actor in actors:
+                                    sim_id = sex_instance.get_sim_id_by_actor_id(actor.get_actor_id())
+                                    if sim_id == self.sim_info.id:
+                                        # logger.info(str(actor))
+                                        # if not has_trait(self.get_sim_id(), visible_diapers_opt_out_trait):
+                                        undress_setting = get_sex_setting(SexSetting.SEX_UNDRESSING_TYPE)
+                                        npc_undress_setting = get_sex_setting(SexSetting.NPC_SEX_UNDRESSING_TYPE)
+                                        # is_npc_only = kwargs.get("is_npc_only", False)
+                                        if self.sim_info.is_npc:
+                                            undress_setting = npc_undress_setting
+                                        if undress_setting != WW_SexUndressingTypeSetting.DISABLED:
+                                            if actor.get_naked_type() == WW_SexNakedType.BOTTOM or actor.get_naked_type() == WW_SexNakedType.ALL or actor.get_naked_type() == WW_SexNakedType.FORCE_ALL or undress_setting == WW_SexUndressingTypeSetting.COMPLETE:
+                                                remove_diaper(self.sim_info.id, force_remove=True, update_client=True)
+
+
+
+
+
+
+                # apply_outfit_parts_for_diaper_load(self.sim_info)
+                self.value_dict[stat_type.guid64] = new_value
+            except Exception as e:
+                logger.error("wicked_whims_stat_watcher failed to run.")
+                logger.error(traceback.format_exc())
+
+    def wicked_whims_stat_removed(self, stat_type):
+        if stat_type.guid64 == WW_SimStatistic.WW_SEX_ACTIVE_INSTANCE_IDENTIFIER or stat_type.guid64 == WW_SimStatistic.WW_SEX_ACTIVE_INSTANCE_ANIMATION_INDEX or stat_type.guid64 == WW_SimStatistic.WW_IS_SIM_IN_SEX:
+            try:
+                logger.info("wicked_whims_stat_removed {}".format(stat_type))
+                self.value_dict.pop(stat_type.guid64, None)
+            except Exception as e:
+                logger.error("wicked_whims_stat_removed failed to run.")
+                logger.error(traceback.format_exc())
+
     def on_diaper_load_stat_removed(self, stat):
         # logger.info("stat {}", dir(stat))
         if stat.guid64 == IwnBedwettingStatistic.DIAPER_WETNESS or stat.guid64 == IwnBedwettingStatistic.DIAPER_MESSINESS:
@@ -416,8 +414,8 @@ class DiaperWatcherWrapper():
 def _iwnbedwetting_sim_info_load_sim_info(original, self, *args, **kwargs):
     result = original(self, *args, **kwargs)
     try:
-        register_on_pre_outfit_change_callback(self, _on_sim_outfit_change)
-        # self.register_for_outfit_changed_callback(_on_sim_outfit_change)
+        # register_on_pre_outfit_change_callback(self, _on_sim_outfit_change)
+        self.register_for_outfit_changed_callback(_on_sim_outfit_change)
         register_on_buff_added_callback(self,_on_buff_added)
         register_on_buff_removed_callback(self,_on_buff_removed)
         add_diaper_load_tracking(self)
@@ -503,7 +501,7 @@ def _on_sim_outfit_change(sim_info, new_outfit, previous_outfit):
                         set_outfit_parts(sim_info, new_outfit, new_parts)
                     elif len(get_diaper_parts(get_outfit_parts(sim_info, new_outfit)).keys()) == 0:
                         logger.info("{} needs a diaper".format(sim_info))
-                        put_on_random_diaper_accessory(sim_info.id, update_client=False)
+                        put_on_random_diaper_accessory(sim_info.id, update_client=True)
             # else:
             #     if _wicked_whims_installed:
             #         turbo_sim = TurboSim(sim_info.id)
@@ -533,8 +531,8 @@ def _on_sim_outfit_change(sim_info, new_outfit, previous_outfit):
 
             # for callback in sim_info.on_outfit_changed:
             #     logger.info(str(callback.__qualname__))
-            evaluate_buffs(sim_info, update_client=False)
-            apply_outfit_parts_for_diaper_load(sim_info, update_client=False)
+            evaluate_buffs(sim_info, update_client=True)
+            apply_outfit_parts_for_diaper_load(sim_info, update_client=True)
         finally:
             logger.info("_on_sim_outfit_change done {}".format(sim_info))
             # sim_info.register_for_outfit_changed_callback(_on_sim_outfit_change)
@@ -683,7 +681,7 @@ def _get_outfit_verification_identifier(body_types, cas_part_ids, color_shifts):
 force_diaper_pants_buffs = []
 force_diaper_accessory_buffs = [IwnBedwettingBuff.MANDATORY_PADDING]
 
-remove_diaper_buffs = [156408,206484,195626]
+remove_diaper_buffs = [NativeBuff.POOLS_HYGIENE,NativeBuff.SIMIS_SWIMMING,NativeBuff.SIM_IS_IN_BATH]
 
 visible_diapers_opt_out_trait = 12749121714103691140
 
@@ -708,7 +706,7 @@ def is_wearing_diaper(owner_id):
             if wetness > 0 or messiness > 0:
                 return True
 
-            if has_trait(owner_id, IwnBedwettingTrait.SLEEPS_IN_DIAPERS) and has_buff(27147):
+            if has_trait(owner_id, IwnBedwettingTrait.SLEEPS_IN_DIAPERS) and (has_buff(owner_id, NativeBuff.MOOD_HIDDEN_ASLEEP) or has_buff(owner_id, NativeBuff.SIM_IS_SLEEPING) or has_buff(owner_id, NativeBuff.SIM_IS_SLEEPING_HIDDEN)):
                 return True
 
             if always_wears_diapers(owner_id):
@@ -752,7 +750,7 @@ def has_trait(owner_id, *trait_ids):
     return False
 
 
-check_diaper_buffs = [IwnBedwettingBuff.DIAPER_DUMMY_BUFF, 27147]
+check_diaper_buffs = [IwnBedwettingBuff.DIAPER_DUMMY_BUFF, NativeBuff.MOOD_HIDDEN_ASLEEP, NativeBuff.SIM_IS_SLEEPING_HIDDEN, NativeBuff.SIM_IS_SLEEPING, IwnBedwettingBuff.MANDATORY_PADDING, IwnBedwettingBuff.TRAIT_DIAPERED_247, IwnBedwettingBuff.TRAIT_DIAPERED_247_MEDICAL, IwnBedwettingBuff.TRAIT_DIAPER_PUNISHED, IwnBedwettingBuff.TRAIT_WEARING_DIAPER_ITEM, IwnBedwettingBuff.TRAIT_NEVER_POTTY_TRAINED, IwnBedwettingBuff.TRAIT_SLEEPS_IN_DIAPERS]
 
 def _on_buff_added(buff_type, sim_id, update_client=True):
     if buff_type is not None:
@@ -766,7 +764,7 @@ def _on_buff_added(buff_type, sim_id, update_client=True):
             # if not is_wearing_diaper(sim_id):
             #     remove_diaper(sim_id)
             # logger.info('on_buff_added: {} {}'.format(buff_type, sim_id))
-            if buff_type.guid64 in remove_diaper_buffs:
+            if buff_type.guid64 in remove_diaper_buffs and not is_wearing_diaper(sim_id):
                 remove_diaper(sim_id, update_client)
             else:
                 if buff_type.guid64 in force_diaper_pants_buffs:
@@ -790,18 +788,18 @@ def _on_buff_removed(buff_type, sim_id):
                 # remove_diaper(sim_id)
                 put_on_random_diaper_accessory(sim_id)
             # logger.info('on_buff_added: {} {}'.format(buff_type, sim_id))
-            # if buff_type.guid64 in force_diaper_pants_buffs:
-            #     if not is_wearing_diaper(sim_id):
-            #         logger.info("Not a diaper wearer")
-            #         remove_diaper(sim_id)
-            #     else:
-            #         logger.info("Diaper wearer")
-            # if buff_type.guid64 in force_diaper_accessory_buffs:
-            #     if not is_wearing_diaper(sim_id):
-            #         logger.info("Not a diaper wearer")
-            #         remove_diaper(sim_id)
-            #     else:
-            #         logger.info("Diaper wearer")
+            if buff_type.guid64 in force_diaper_pants_buffs:
+                if not is_wearing_diaper(sim_id):
+                    logger.info("Not a diaper wearer")
+                    remove_diaper(sim_id)
+                else:
+                    logger.info("Diaper wearer")
+            if buff_type.guid64 in force_diaper_accessory_buffs:
+                if not is_wearing_diaper(sim_id):
+                    logger.info("Not a diaper wearer")
+                    remove_diaper(sim_id)
+                else:
+                    logger.info("Diaper wearer")
 
 
 def add_buff(sim_info, buff_id, buff_reason=None):
@@ -1401,10 +1399,10 @@ def apply(sim_info, outfit_body_types=[], outfit_part_ids=[], outfit_color_shift
     sim_info._base.outfits = outfits_msg.SerializeToString()
     # logger.info('outfit {}', sim_info._base.outfits)
     # sim_info._base.outfit_type_and_index = current_outfit
-    sim_info.set_outfit_dirty(outfit_category_and_index[0])
+    # sim_info.set_outfit_dirty(outfit_category_and_index[0])
     if update_client:
         sim_info.resend_outfits()
-        sim_info.appearance_tracker.evaluate_appearance_modifiers()
+        # sim_info.appearance_tracker.evaluate_appearance_modifiers()
 
 
 update_check_url = 'http://lilninthel.cc/currentversion.txt'
@@ -2011,6 +2009,8 @@ def ShowMod():
         dialog.title = lambda **_: LocalizationHelperTuning.get_raw_text('WARNING: IwnBedWetting Extended+ - XML Injector Not Detected')
         dialog.text = lambda **_: LocalizationHelperTuning.get_raw_text('This mod requires XML Injector to function. Please install the latest XML Injector from https://scumbumbomods.com/#/xml-injector/')
         dialog.show_dialog()
+
+    logger.info("WickedWhims installed: {}".format(_wicked_whims_installed))
 
     ModHasRun = True
     # if devMode:

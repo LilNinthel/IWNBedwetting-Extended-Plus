@@ -942,6 +942,25 @@
       <T n="value">75</T>
     </U>
   </L>
+  <L n="trait_based_ui_overrides">
+    <U>
+      <T n="key">381402<!--Trait: trait_IsGhost--></T>
+      <U n="value">
+        <V n="stat_name" t="enabled">
+          <T n="enabled">0x14B33583<!--String: "Goo Waste"--></T>
+        </V>
+      </U>
+    </U>
+    <U>
+      <T n="key">392634<!--Trait: trait_Hidden_GhostPowers_SuppressNeeds_lvl2--></T>
+      <U n="value">
+        <T n="priority">1</T>
+        <V n="stat_name" t="enabled">
+          <T n="enabled">0x14B33583<!--String: "Goo Waste"--></T>
+        </V>
+      </U>
+    </U>
+  </L>
   <T n="ui_sort_order">0</T>
   <U n="ui_visible_distress_threshold">
     <T n="threshold_value">-25</T>

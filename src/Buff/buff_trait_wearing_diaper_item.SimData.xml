@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <SimData version="0x00000101" u="0x00000000">
   <Instances>
-    <I name="LilNinthel:buff_highchairfeedposture" schema="Buff" type="Object">
+    <I name="LilNinthel:buff_trait_wearing_diaper_item" schema="Buff" type="Object">
       <T name="audio_sting_on_add">FD04E3BE-00000000-8AF8B916CF64C646</T>
       <T name="audio_sting_on_remove">FD04E3BE-00000000-3BF33216A25546EA</T>
       <T name="buff_description">0x00000000</T>

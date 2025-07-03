@@ -9,6 +9,7 @@
   <L n="buffs">
     <U>
       <T n="buff_type">10309070037716691412<!--LilNinthel_ABDL_dummybuff--></T>
+      <T n="buff_type">9900707161964717499<!--LilNinthel:buff_trait_diapered_247--></T>
     </U>
   </L>
   <T n="buffs_add_on_spawn_only">False</T>

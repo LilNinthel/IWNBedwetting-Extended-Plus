@@ -3,6 +3,7 @@ from traits.trait_tracker import TraitPickerSuperInteraction
 from iwnbedwetting.enums.traits import IwnBedwettingTrait
 import services
 
+
 class IwnBedwettingTraitPickerSuperInteraction(TraitPickerSuperInteraction):
     
     @classmethod

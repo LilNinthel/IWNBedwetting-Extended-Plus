@@ -488,6 +488,7 @@
           <T>144848<!--ToddlerPottyChair_Use--></T>
           <T>144915<!--toddlerPottyChair_Use_WithMentor--></T>
           <T>144936<!--ToddlerPottyChair_GoPotty--></T>
+          <T>145378<!--SuperInteraction: ToddlerPottyChair_Wait--></T>
         </L>
         <E n="participant">Actor</E>
         <T n="test_for_not_running">True</T>

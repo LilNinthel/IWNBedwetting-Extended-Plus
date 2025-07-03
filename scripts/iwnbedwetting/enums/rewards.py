@@ -1,4 +1,7 @@
-class IwnBedwettingReward:
+from iwnbedwetting.enums.base import EnumBase
+
+
+class IwnBedwettingReward(EnumBase):
     INCONTINENCE = 2926939328826942378
     BEDWETTER = 11589092927928958152
     PANTS_WETTER = 16445218475423465825

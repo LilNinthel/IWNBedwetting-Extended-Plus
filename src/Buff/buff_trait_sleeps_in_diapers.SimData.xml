@@ -1,8 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
 <SimData version="0x00000101" u="0x00000000">
   <Instances>
-    <I name="LilNinthel:buff_Little_Bed_TuckIn_autonomy" schema="Buff" type="Object">
-      <T name="audio_sting_on_add">FD04E3BE-001407EC-8AF8B916CF64C646</T>
-      <T name="audio_sting_on_remove">FD04E3BE-001407EC-3BF33216A25546EA</T>
+    <I name="LilNinthel:buff_trait_sleeps_in_diapers" schema="Buff" type="Object">
+      <T name="audio_sting_on_add">FD04E3BE-00000000-8AF8B916CF64C646</T>
+      <T name="audio_sting_on_remove">FD04E3BE-00000000-3BF33216A25546EA</T>
       <T name="buff_description">0x00000000</T>
       <T name="buff_name">0x00000000</T>
       <T name="icon">00B2D882-00000000-30F0846C783606F9</T>

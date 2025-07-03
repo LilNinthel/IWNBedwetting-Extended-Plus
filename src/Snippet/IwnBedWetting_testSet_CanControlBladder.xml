@@ -35,6 +35,8 @@
         <U n="buff">
           <L n="blacklist">
             <T>27147<!--MoodBuff_Hidden_Asleep--></T>
+            <T>10094<!--Buff: buff_Sim_IsSleeping--></T>
+            <T>275549<!--Buff: buff_Sim_IsSleeping_Hidden--></T>
           </L>
         </U>
       </V>
@@ -76,6 +78,8 @@
           <E n="subject">Actor</E>
           <L n="blacklist">
             <T>27147<!--MoodBuff_Hidden_Asleep--></T>
+            <T>10094<!--Buff: buff_Sim_IsSleeping--></T>
+            <T>275549<!--Buff: buff_Sim_IsSleeping_Hidden--></T>
           </L>
         </U>
       </V>
@@ -115,6 +119,8 @@
           <V n="whitelist" t="enabled">
             <L n="enabled">
               <T>27147<!--MoodBuff_Hidden_Asleep--></T>
+              <T>10094<!--Buff: buff_Sim_IsSleeping--></T>
+              <T>275549<!--Buff: buff_Sim_IsSleeping_Hidden--></T>
             </L>
           </V>
         </U>

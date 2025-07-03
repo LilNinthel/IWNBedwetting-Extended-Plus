@@ -99,6 +99,18 @@
             <L n="conditions">
               <V t="buff_based">
                 <U n="buff_based">
+                  <T n="buff">414192<!--Buff: buff_GhostPowers_Hidden_GiveNightmare_Wakeup_Nap--></T>
+                </U>
+              </V>
+            </L>
+            <E n="interaction_action">EXIT_NATURALLY</E>
+          </U>
+        </V>
+        <V t="literal">
+          <U n="literal">
+            <L n="conditions">
+              <V t="buff_based">
+                <U n="buff_based">
                   <T n="buff">312134<!--buff_Lose_Teeth_Missing_Tooth_AppearanceModifier--></T>
                 </U>
               </V>
@@ -164,6 +176,72 @@
             <V t="statistic_set_max">
               <U n="statistic_set_max">
                 <T n="stat">154194<!--commodity_Buff_ToddlerAwake--></T>
+              </U>
+            </V>
+            <V t="statistic_change">
+              <U n="statistic_change">
+                <T n="advertise">True</T>
+                <T n="amount">0.20835</T>
+                <T n="exclusive_to_owning_si">True</T>
+                <T n="stat">16654<!--Commodity: motive_Energy--></T>
+                <L n="subject">
+                  <E>Actor</E>
+                </L>
+                <L n="tests">
+                  <L>
+                    <V t="buff">
+                      <U n="buff">
+                        <V n="whitelist" t="enabled">
+                          <L n="enabled">
+                            <T>393245<!--Buff: buff_GhostPowers_GiveGoodDream_Flirty_SpouseLover--></T>
+                          </L>
+                        </V>
+                      </U>
+                    </V>
+                  </L>
+                  <L>
+                    <V t="buff">
+                      <U n="buff">
+                        <V n="whitelist" t="enabled">
+                          <L n="enabled">
+                            <T>393246<!--Buff: buff_GhostPowers_GiveGoodDream_Happy--></T>
+                          </L>
+                        </V>
+                      </U>
+                    </V>
+                  </L>
+                  <L>
+                    <V t="buff">
+                      <U n="buff">
+                        <V n="whitelist" t="enabled">
+                          <L n="enabled">
+                            <T>393244<!--Buff: buff_GhostPowers_GiveGoodDream_Happy_FamilyFriend--></T>
+                          </L>
+                        </V>
+                      </U>
+                    </V>
+                  </L>
+                </L>
+              </U>
+            </V>
+            <V t="statistic_change">
+              <U n="statistic_change">
+                <T n="advertise">False</T>
+                <T n="amount">2.5</T>
+                <T n="stat">420035</T>
+                <L n="tests">
+                  <L>
+                    <V t="buff">
+                      <U n="buff">
+                        <V n="whitelist" t="enabled">
+                          <L n="enabled">
+                            <T>439947</T>
+                          </L>
+                        </V>
+                      </U>
+                    </V>
+                  </L>
+                </L>
               </U>
             </V>
           </L>
@@ -243,6 +321,13 @@
     <V t="loot">
       <U n="loot">
         <L n="loot_list">
+          <T>354192<!--LootActions: loot_ObjectReward_Gemology_Effects--></T>
+        </L>
+      </U>
+    </V>
+    <V t="loot">
+      <U n="loot">
+        <L n="loot_list">
           <T>188769<!--flowerArrangement_Loot_Scent_ChristmasRose_SleepRemoval--></T>
         </L>
       </U>
@@ -313,6 +398,13 @@
               </U>
             </V>
           </L>
+        </L>
+      </U>
+    </V>
+    <V t="loot">
+      <U n="loot">
+        <L n="loot_list">
+          <T>405081<!--LootActions: loot_GhostPowers_Abilities_GiveGoodDream_HiddenBuff--></T>
         </L>
       </U>
     </V>
@@ -492,9 +584,52 @@
   <V n="outcome" t="single">
     <U n="single">
       <U n="actions">
+        <L n="basic_extras">
+          <V t="buff_fire_and_forget">
+            <U n="buff_fire_and_forget">
+              <U n="buff">
+                <V n="buff_reason" t="enabled">
+                  <T n="enabled">0xF5A73F9C<!--String: "(From Bench Nap with Natural Living Skill)"--></T>
+                </V>
+                <T n="buff_type">456831</T>
+              </U>
+              <U n="success_chance">
+                <T n="base_chance">100</T>
+              </U>
+              <L n="tests">
+                <L>
+                  <V t="skill_test">
+                    <U n="skill_test">
+                      <T n="skill">434909</T>
+                      <V n="skill_range" t="interval">
+                        <U n="interval">
+                          <U n="skill_interval">
+                            <T n="lower_bound">4</T>
+                          </U>
+                        </U>
+                      </V>
+                    </U>
+                  </V>
+                  <V t="object_definition_criteria">
+                    <U n="object_definition_criteria">
+                      <V n="identity_test" t="tags">
+                        <U n="tags">
+                          <L n="tag_set">
+                            <E>Func_Bench</E>
+                          </L>
+                        </U>
+                      </V>
+                    </U>
+                  </V>
+                </L>
+              </L>
+              <V n="timing" t="at_beginning" />
+            </U>
+          </V>
+        </L>
         <L n="loot_list">
-          <T>156535<!--loot_Wakeup_Nap_Toddler--></T>
-          <T>108604<!--loot_Career_Scientist_Breakthrough_Progress_Medium_Surprise--></T>
+          <T>156535<!--LootActions: loot_Wakeup_Nap_Toddler--></T>
+          <T>108604<!--LootActions: loot_Career_Scientist_Breakthrough_Progress_Medium_Surprise--></T>
         </L>
       </U>
     </U>

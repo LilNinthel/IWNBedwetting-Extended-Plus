@@ -541,6 +541,14 @@
     <V t="loot">
       <U n="loot">
         <L n="loot_list">
+          <T>456689</T>
+        </L>
+        <V n="timing" t="at_beginning" />
+      </U>
+    </V>
+    <V t="loot">
+      <U n="loot">
+        <L n="loot_list">
           <T>356184<!--loot_MoldSystem_GhostAngryReactionEat_Broadcaster--></T>
         </L>
         <V n="timing" t="at_beginning" />
