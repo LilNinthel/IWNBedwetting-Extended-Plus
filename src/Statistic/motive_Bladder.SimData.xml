@@ -912,7 +912,34 @@
           <T name="value">75</T>
         </U>
       </L>
-      <L name="trait_based_ui_overrides"/>
+      <L name="trait_based_ui_overrides">
+        <U type="Object" schema="TraitBasedUIOverridesMapping">
+          <T name="key">381402</T>
+          <U name="value" schema="TraitBasedUIOverrides">
+            <V name="data_description" variant="0xC1A03855" />
+            <V name="fill_color" variant="0xC1A03855" />
+            <V name="icon" variant="0xC1A03855" />
+            <T name="priority">0</T>
+            <V name="stat_name" variant="0xF8CBBF4C">
+              <T type="LocalizationKey">0x14B33583</T>
+            </V>
+            <V name="tooltip_icon_list" variant="0xC1A03855" />
+          </U>
+        </U>
+        <U type="Object" schema="TraitBasedUIOverridesMapping">
+          <T name="key">392634</T>
+          <U name="value" schema="TraitBasedUIOverrides">
+            <V name="data_description" variant="0xC1A03855" />
+            <V name="fill_color" variant="0xC1A03855" />
+            <V name="icon" variant="0xC1A03855" />
+            <T name="priority">1</T>
+            <V name="stat_name" variant="0xF8CBBF4C">
+              <T type="LocalizationKey">0x14B33583</T>
+            </V>
+            <V name="tooltip_icon_list" variant="0xC1A03855" />
+          </U>
+        </U>
+      </L>
       <T name="ui_render_style">0</T>
       <T name="ui_sort_order">0</T>
       <U name="ui_visible_distress_threshold" schema="TunableDistressThreshold">
