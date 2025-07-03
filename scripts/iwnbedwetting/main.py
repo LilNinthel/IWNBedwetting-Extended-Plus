@@ -58,7 +58,7 @@ import urllib.request
 import urllib.error
 import urllib.response
 
-IWN_BED_WETTING_VERSION = "2.0.4"
+IWN_BED_WETTING_VERSION = "2.0.5"
 REWARD_BEDWETTER = 11589092927928958152
 REWARD_INCONTINENCE = 2926939328826942378
 dTittleFull = (265058837, 265058838, 265058839, 323983041, 323983042, 323983043, 269972373,
@@ -82,6 +82,8 @@ _old_addons_detected = False
 _ember_detected = False
 _admin_flag = False
 
+xml_injector_spec = importlib.util.find_spec("xml_injector")
+_xml_injector_found = xml_injector_spec is not None
 
 try:
     import wickedwhims.nudity.outfit_nudity_reason
@@ -345,6 +347,12 @@ class DiaperWatcherWrapper():
                         logger.info("No change in value")
                         return
 
+                self.value_dict[stat_type.guid64] = new_value
+
+                keep_diaper = get_statistic_value(self.sim_info, IwnBedwettingStatistic.WW_KEEP_DIAPER_ACCESSORY_DURING_SEX) or 0
+                if keep_diaper != 0:
+                    return
+
                 active_sex_id = get_statistic_value(self.sim_info, WW_SimStatistic.WW_SEX_ACTIVE_INSTANCE_IDENTIFIER) or 0
                 if active_sex_id != 0:
                     sex_instance = get_active_sex_instance(active_sex_id)
@@ -375,7 +383,7 @@ class DiaperWatcherWrapper():
 
 
                 # apply_outfit_parts_for_diaper_load(self.sim_info)
-                self.value_dict[stat_type.guid64] = new_value
+
             except Exception as e:
                 logger.error("wicked_whims_stat_watcher failed to run.")
                 logger.error(traceback.format_exc())
@@ -1729,6 +1737,27 @@ def block_toilet_for_diapered_sims(original, self, *args, **kwargs):
 
     return result
 
+
+if _wicked_whims_installed and _xml_injector_found:
+    from xml_injector.add_to_tuning import add_super_affordances_to_sims
+
+    @inject(InstanceManager, 'load_data_into_class_instances')
+    def inject_ww_interactions(original, self, *args, **kwargs):
+        result = original(self, *args, **kwargs)
+        try:
+            affordance_manager = services.affordance_manager()
+            tunings = []
+            for guid in InteractionSets.WW_REQUIRED_INTERACTIONS:
+                tun = affordance_manager.get(guid)
+                if tun is not None:
+                    tunings.append(tun)
+            add_super_affordances_to_sims(tunings)
+        except Exception as e:
+            logger.error("InstanceManager.load_data_into_class_instances injection failed to run.")
+            logger.error(traceback.format_exc())
+        return result
+
+
 actor_not_diapered_global_test_id = 14313482733996641359
 
 @inject(InstanceManager, 'load_data_into_class_instances')
@@ -2001,10 +2030,9 @@ def ShowMod():
 
 
 
-    xml_injector_spec = importlib.util.find_spec("xml_injector")
-    found = xml_injector_spec is not None
 
-    if not found:
+
+    if not _xml_injector_found:
         dialog = UiDialogOk.TunableFactory().default(None)
         dialog.title = lambda **_: LocalizationHelperTuning.get_raw_text('WARNING: IwnBedWetting Extended+ - XML Injector Not Detected')
         dialog.text = lambda **_: LocalizationHelperTuning.get_raw_text('This mod requires XML Injector to function. Please install the latest XML Injector from https://scumbumbomods.com/#/xml-injector/')
