@@ -10,6 +10,8 @@
   <L n="buffs">
     <U>
       <T n="buff_type">10309070037716691412<!--LilNinthel_ABDL_dummybuff--></T>
+    </U>
+    <U>
       <T n="buff_type">2203152121277386396<!--LilNinthel:buff_trait_sleeps_in_diapers--></T>
     </U>
   </L>
