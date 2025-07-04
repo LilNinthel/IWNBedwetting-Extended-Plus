@@ -1,11 +1,14 @@
 from iwnbedwetting.enums.base import EnumBase
 from sims.outfits.outfit_enums import BodyType
+import sims4.log
 
+logger = sims4.log.Logger('IWNBedwettingMain')
 
-class DiaperType(EnumBase):
+class DiaperTapeStyle(EnumBase):
     SIMPLE = 0
     LANDING_ZONE = 1
     HOOK_AND_LOOP = 2
+    PULL_UP = 3
 
 
 class DiaperHeight(EnumBase):
@@ -33,132 +36,189 @@ class DiaperPrintStyle(EnumBase):
     ALL_OVER = 3
 
 
-class DiaperCC(EnumBase):
-    ember_bunny_hook_female_low_accessory = 10195004188456681347
-    ember_bunny_hook_female_low_bottom = 15901019533935666688
-    ember_bunny_hook_female_medium_accessory = 15261388862686457491
-    ember_bunny_hook_female_medium_bottom = 15863180620097396159
-    ember_bunny_hook_female_tall_accessory = 9428168299802457337
-    ember_bunny_hook_female_tall_bottom = 11723233872115429942
-    ember_bunny_hook_female_wall_accessory = 15880507622158690423
-    ember_bunny_hook_female_wall_bottom = 15119513609445981861
-    ember_bunny_hook_male_low_accessory = 11810684646282072503
-    ember_bunny_hook_male_low_bottom = 10203310771207522511
-    ember_bunny_hook_male_medium_accessory = 17416192944310124433
-    ember_bunny_hook_male_medium_bottom = 15067901750559221265
-    ember_bunny_hook_male_tall_accessory = 9315160533848448694
-    ember_bunny_hook_male_tall_bottom = 10043094098805179577
-    ember_bunny_hook_male_wall_accessory = 11301312599355066913
-    ember_bunny_hook_male_wall_bottom = 14529822570535928302
+class DiaperCASMetadata:
+    def __init__(self, creator:str, design_name:str, tape_style:int, frame:int, height:int, body_type:int, print_style:int, cas_id):
+        self.creator = creator
+        self.design_name = design_name
+        self.tape_style = tape_style
+        self.height = height
+        self.frame = frame
+        self.body_type = body_type
+        self.print_style = print_style
+        self.cas_id = cas_id
 
-    ember_plain_hook_female_low_accessory = 12038055753906119390
-    ember_plain_hook_female_low_bottom = 13882341130908228455
-    ember_plain_hook_female_medium_accessory = 13516959360892489511
-    ember_plain_hook_female_medium_bottom = 15402959911057910726
-    ember_plain_hook_female_tall_accessory = 11692781661403962981
-    ember_plain_hook_female_tall_bottom = 12174830004995219561
-    ember_plain_hook_female_wall_accessory = 15395696484973795175
-    ember_plain_hook_female_wall_bottom = 11377714707345239857
-    ember_plain_hook_male_low_accessory = 15636052488763945153
-    ember_plain_hook_male_low_bottom = 11887278681329430061
-    ember_plain_hook_male_medium_accessory = 12652172876739024969
-    ember_plain_hook_male_medium_bottom = 10971785271352205405
-    ember_plain_hook_male_tall_accessory = 9818367281225106513
-    ember_plain_hook_male_tall_bottom = 14402379719927751922
-    ember_plain_hook_male_wall_accessory = 10828777962635164723
-    ember_plain_hook_male_wall_bottom = 11377714707345239857
 
-    ember_plain_landing_female_low_accessory = 14400962012846318497
-    ember_plain_landing_female_low_bottom = 14817753706865748494
-    ember_plain_landing_female_medium_accessory = 14725808560507840298
-    ember_plain_landing_female_medium_bottom = 12723615923680595163
-    ember_plain_landing_female_tall_accessory = 14828121630287542581
-    ember_plain_landing_female_tall_bottom = 12134976349751938920
-    ember_plain_landing_female_wall_accessory = 14081768220370047012
-    ember_plain_landing_female_wall_bottom = 11798765533300344227
-    ember_plain_landing_male_low_accessory = 13957892856098405122
-    ember_plain_landing_male_low_bottom = 18175719647775004204
-    ember_plain_landing_male_medium_accessory = 13128856079699632759
-    ember_plain_landing_male_medium_bottom = 13269253604407697180
-    ember_plain_landing_male_tall_accessory = 13207486108775125984
-    ember_plain_landing_male_tall_bottom = 13903537964114171995
-    ember_plain_landing_male_wall_accessory = 13099465542238001347
-    ember_plain_landing_male_wall_bottom = 11050266238630918155
+class DiaperObjectDefinition(EnumBase):
+    ADULT_DIAPER_BAG_PLAIN = 16638570619169569261
+    ADULT_DIAPER_ITEM_PLAIN = 13965923130368742748
+    ADULT_DIAPER_ITEM_BELLISSIMO = 13965923130368742749
+    ADULT_DIAPER_ITEM_SDK = 13965923130368742750
+    ADULT_DIAPER_ITEM_BUNNY_HOPPS = 13965923130368742751
 
-    ember_nru_landing_female_low_accessory = 14958342929191587069
-    ember_nru_landing_female_low_bottom = 17209114295183730333
-    ember_nru_landing_female_medium_accessory = 12452493285954750118
-    ember_nru_landing_female_medium_bottom = 14457746686525413164
-    ember_nru_landing_female_tall_accessory = 10886232791201770012
-    ember_nru_landing_female_tall_bottom = 14130754783463696206
-    ember_nru_landing_female_wall_accessory = 18111581372537224927
-    ember_nru_landing_female_wall_bottom = 17192211726903388244
-    ember_nru_landing_male_low_accessory = 12253409016819902919
-    ember_nru_landing_male_low_bottom = 14676563098857398606
-    ember_nru_landing_male_medium_accessory = 18223001689390402665
-    ember_nru_landing_male_medium_bottom = 12409098580593266609
-    ember_nru_landing_male_tall_accessory = 10620674236963749782
-    ember_nru_landing_male_tall_bottom = 16727274354149623019
-    ember_nru_landing_male_wall_accessory = 10518520436121252549
-    ember_nru_landing_male_wall_bottom = 15862920524777542351
 
-    ember_bellissimo_landing_female_low_accessory = 11475566902572188911
-    ember_bellissimo_landing_female_low_bottom = 9358311568702710467
-    ember_bellissimo_landing_female_medium_accessory = 11133078861918141011
-    ember_bellissimo_landing_female_medium_bottom = 17231554690770013396
-    ember_bellissimo_landing_female_tall_accessory = 16957840280945323054
-    ember_bellissimo_landing_female_tall_bottom = 17054332893243336036
-    ember_bellissimo_landing_female_wall_accessory = 11649414196269637966
-    ember_bellissimo_landing_female_wall_bottom = 14847364933606234717
-    ember_bellissimo_landing_male_low_accessory = 12395518647129927303
-    ember_bellissimo_landing_male_low_bottom = 15661513248122902957
-    ember_bellissimo_landing_male_medium_accessory = 13130246627993205071
-    ember_bellissimo_landing_male_medium_bottom = 12410734985261025785
-    ember_bellissimo_landing_male_tall_accessory = 15801089200744424716
-    ember_bellissimo_landing_male_tall_bottom = 13838131288253581083
-    ember_bellissimo_landing_male_wall_accessory = 17115575128165822309
-    ember_bellissimo_landing_male_wall_bottom = 12592391533832786983
+class DiaperCC:
+    
+    _diaper_cc = []
 
-    ember_plain_simple_female_low_accessory = 17397648718324309626
-    ember_plain_simple_female_low_bottom = 10294754548094293386
-    ember_plain_simple_female_medium_accessory = 12351881240003105652
-    ember_plain_simple_female_medium_bottom = 12511731984329828297
-    ember_plain_simple_female_tall_accessory = 12357393369938480881
-    ember_plain_simple_female_tall_bottom = 14210138470179301881
-    ember_plain_simple_female_wall_accessory = 10702638174933037029
-    ember_plain_simple_female_wall_bottom = 18308005185402329887
-    ember_plain_simple_male_low_accessory = 10608126702256983234
-    ember_plain_simple_male_low_bottom = 11163130419493762065
-    ember_plain_simple_male_medium_accessory = 10250677779614694210
-    ember_plain_simple_male_medium_bottom = 17929648139096525172
-    ember_plain_simple_male_tall_accessory = 16453126801577273791
-    ember_plain_simple_male_tall_bottom = 13293234927537261145
-    ember_plain_simple_male_wall_accessory = 16477299403392253060
-    ember_plain_simple_male_wall_bottom = 18109847548095664823
+    _diaper_cc.append(DiaperCASMetadata('ember','bunny',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.FEMININE,DiaperHeight.LOW,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.ALL_OVER,10195004188456681347))
+    _diaper_cc.append(DiaperCASMetadata('ember','bunny',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.FEMININE,DiaperHeight.LOW,DiaperBodyType.BOTTOM,DiaperPrintStyle.ALL_OVER,15901019533935666688))
+    _diaper_cc.append(DiaperCASMetadata('ember','bunny',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.FEMININE,DiaperHeight.MEDIUM,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.ALL_OVER,15261388862686457491))
+    _diaper_cc.append(DiaperCASMetadata('ember','bunny',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.FEMININE,DiaperHeight.MEDIUM,DiaperBodyType.BOTTOM,DiaperPrintStyle.ALL_OVER,15863180620097396159))
+    _diaper_cc.append(DiaperCASMetadata('ember','bunny',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.FEMININE,DiaperHeight.TALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.ALL_OVER,9428168299802457337))
+    _diaper_cc.append(DiaperCASMetadata('ember','bunny',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.FEMININE,DiaperHeight.TALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.ALL_OVER,11723233872115429942))
+    _diaper_cc.append(DiaperCASMetadata('ember','bunny',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.FEMININE,DiaperHeight.WALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.ALL_OVER,15880507622158690423))
+    _diaper_cc.append(DiaperCASMetadata('ember','bunny',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.FEMININE,DiaperHeight.WALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.ALL_OVER,15119513609445981861))
+    _diaper_cc.append(DiaperCASMetadata('ember','bunny',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.MASCULINE,DiaperHeight.LOW,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.ALL_OVER,11810684646282072503))
+    _diaper_cc.append(DiaperCASMetadata('ember','bunny',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.MASCULINE,DiaperHeight.LOW,DiaperBodyType.BOTTOM,DiaperPrintStyle.ALL_OVER,10203310771207522511))
+    _diaper_cc.append(DiaperCASMetadata('ember','bunny',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.MASCULINE,DiaperHeight.MEDIUM,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.ALL_OVER,17416192944310124433))
+    _diaper_cc.append(DiaperCASMetadata('ember','bunny',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.MASCULINE,DiaperHeight.MEDIUM,DiaperBodyType.BOTTOM,DiaperPrintStyle.ALL_OVER,15067901750559221265))
+    _diaper_cc.append(DiaperCASMetadata('ember','bunny',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.MASCULINE,DiaperHeight.TALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.ALL_OVER,9315160533848448694))
+    _diaper_cc.append(DiaperCASMetadata('ember','bunny',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.MASCULINE,DiaperHeight.TALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.ALL_OVER,10043094098805179577))
+    _diaper_cc.append(DiaperCASMetadata('ember','bunny',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.MASCULINE,DiaperHeight.WALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.ALL_OVER,11301312599355066913))
+    _diaper_cc.append(DiaperCASMetadata('ember','bunny',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.MASCULINE,DiaperHeight.WALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.ALL_OVER,14529822570535928302))
 
-    ember_crinklz_simple_female_low_accessory = 11687753797074709790
-    ember_crinklz_simple_female_low_bottom = 11241462963069928728
-    ember_crinklz_simple_female_medium_accessory = 18112578257272953202
-    ember_crinklz_simple_female_medium_bottom = 14170645136690908698
-    ember_crinklz_simple_female_tall_accessory = 13930830933397578751
-    ember_crinklz_simple_female_tall_bottom = 10172764427254632969
-    ember_crinklz_simple_female_wall_accessory = 16423671842319494793
-    ember_crinklz_simple_female_wall_bottom = 15858575318118471992
-    ember_crinklz_simple_male_low_accessory = 12447728614706028788
-    ember_crinklz_simple_male_low_bottom = 9299821023585529739
-    ember_crinklz_simple_male_medium_accessory = 13140137619929574520
-    ember_crinklz_simple_male_medium_bottom = 14406157176776315349
-    ember_crinklz_simple_male_tall_accessory = 10342778039990857114
-    ember_crinklz_simple_male_tall_bottom = 17550811253687005720
-    ember_crinklz_simple_male_wall_accessory = 17109339264598132275
-    ember_crinklz_simple_male_wall_bottom = 14530773083303507666
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.FEMININE,DiaperHeight.LOW,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.PLAIN,12038055753906119390))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.FEMININE,DiaperHeight.LOW,DiaperBodyType.BOTTOM,DiaperPrintStyle.PLAIN,13882341130908228455))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.FEMININE,DiaperHeight.MEDIUM,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.PLAIN,13516959360892489511))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.FEMININE,DiaperHeight.MEDIUM,DiaperBodyType.BOTTOM,DiaperPrintStyle.PLAIN,15402959911057910726))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.FEMININE,DiaperHeight.TALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.PLAIN,11692781661403962981))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.FEMININE,DiaperHeight.TALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.PLAIN,12174830004995219561))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.FEMININE,DiaperHeight.WALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.PLAIN,15395696484973795175))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.FEMININE,DiaperHeight.WALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.PLAIN,11952805987498167279))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.MASCULINE,DiaperHeight.LOW,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.PLAIN,15636052488763945153))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.MASCULINE,DiaperHeight.LOW,DiaperBodyType.BOTTOM,DiaperPrintStyle.PLAIN,11887278681329430061))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.MASCULINE,DiaperHeight.MEDIUM,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.PLAIN,12652172876739024969))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.MASCULINE,DiaperHeight.MEDIUM,DiaperBodyType.BOTTOM,DiaperPrintStyle.PLAIN,10971785271352205405))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.MASCULINE,DiaperHeight.TALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.PLAIN,9818367281225106513))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.MASCULINE,DiaperHeight.TALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.PLAIN,14402379719927751922))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.MASCULINE,DiaperHeight.WALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.PLAIN,10828777962635164723))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.HOOK_AND_LOOP,DiaperFrame.MASCULINE,DiaperHeight.WALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.PLAIN,11377714707345239857))
 
-    lilninthel_bellissimo_landing_female_wall_accessory = 15174586519016046818
-    lilninthel_bellissimo_landing_female_wall_bottom = 9323691022453188679
-    lilninthel_bellissimo_landing_male_wall_accessory = 10626761853771937099
-    lilninthel_bellissimo_landing_male_wall_bottom = 14935196131981263092
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.LOW,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.PLAIN,14400962012846318497))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.LOW,DiaperBodyType.BOTTOM,DiaperPrintStyle.PLAIN,14817753706865748494))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.MEDIUM,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.PLAIN,14725808560507840298))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.MEDIUM,DiaperBodyType.BOTTOM,DiaperPrintStyle.PLAIN,12723615923680595163))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.TALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.PLAIN,14828121630287542581))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.TALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.PLAIN,12134976349751938920))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.WALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.PLAIN,14081768220370047012))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.WALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.PLAIN,11798765533300344227))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.LOW,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.PLAIN,13957892856098405122))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.LOW,DiaperBodyType.BOTTOM,DiaperPrintStyle.PLAIN,18175719647775004204))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.MEDIUM,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.PLAIN,13128856079699632759))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.MEDIUM,DiaperBodyType.BOTTOM,DiaperPrintStyle.PLAIN,13269253604407697180))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.TALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.PLAIN,13207486108775125984))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.TALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.PLAIN,13903537964114171995))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.WALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.PLAIN,13099465542238001347))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.WALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.PLAIN,11050266238630918155))
 
-    lilninthel_classico_landing_female_wall_accessory = 17185900473586388270
-    lilninthel_classico_landing_female_wall_bottom = 11276491982480170579
-    lilninthel_classico_landing_male_wall_accessory = 15024033459415991799
-    lilninthel_classico_landing_male_wall_bottom = 11509986916541151536
+    _diaper_cc.append(DiaperCASMetadata('ember','nru',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.LOW,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.ALL_OVER,14958342929191587069))
+    _diaper_cc.append(DiaperCASMetadata('ember','nru',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.LOW,DiaperBodyType.BOTTOM,DiaperPrintStyle.ALL_OVER,17209114295183730333))
+    _diaper_cc.append(DiaperCASMetadata('ember','nru',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.MEDIUM,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.ALL_OVER,12452493285954750118))
+    _diaper_cc.append(DiaperCASMetadata('ember','nru',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.MEDIUM,DiaperBodyType.BOTTOM,DiaperPrintStyle.ALL_OVER,14457746686525413164))
+    _diaper_cc.append(DiaperCASMetadata('ember','nru',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.TALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.ALL_OVER,10886232791201770012))
+    _diaper_cc.append(DiaperCASMetadata('ember','nru',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.TALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.ALL_OVER,14130754783463696206))
+    _diaper_cc.append(DiaperCASMetadata('ember','nru',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.WALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.ALL_OVER,18111581372537224927))
+    _diaper_cc.append(DiaperCASMetadata('ember','nru',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.WALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.ALL_OVER,17192211726903388244))
+    _diaper_cc.append(DiaperCASMetadata('ember','nru',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.LOW,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.ALL_OVER,12253409016819902919))
+    _diaper_cc.append(DiaperCASMetadata('ember','nru',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.LOW,DiaperBodyType.BOTTOM,DiaperPrintStyle.ALL_OVER,14676563098857398606))
+    _diaper_cc.append(DiaperCASMetadata('ember','nru',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.MEDIUM,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.ALL_OVER,18223001689390402665))
+    _diaper_cc.append(DiaperCASMetadata('ember','nru',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.MEDIUM,DiaperBodyType.BOTTOM,DiaperPrintStyle.ALL_OVER,12409098580593266609))
+    _diaper_cc.append(DiaperCASMetadata('ember','nru',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.TALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.ALL_OVER,10620674236963749782))
+    _diaper_cc.append(DiaperCASMetadata('ember','nru',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.TALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.ALL_OVER,16727274354149623019))
+    _diaper_cc.append(DiaperCASMetadata('ember','nru',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.WALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.ALL_OVER,10518520436121252549))
+    _diaper_cc.append(DiaperCASMetadata('ember','nru',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.WALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.ALL_OVER,15862920524777542351))
+
+    _diaper_cc.append(DiaperCASMetadata('ember','bellissimo',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.LOW,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.LANDING_ZONE,11475566902572188911))
+    _diaper_cc.append(DiaperCASMetadata('ember','bellissimo',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.LOW,DiaperBodyType.BOTTOM,DiaperPrintStyle.LANDING_ZONE,9358311568702710467))
+    _diaper_cc.append(DiaperCASMetadata('ember','bellissimo',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.MEDIUM,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.LANDING_ZONE,11133078861918141011))
+    _diaper_cc.append(DiaperCASMetadata('ember','bellissimo',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.MEDIUM,DiaperBodyType.BOTTOM,DiaperPrintStyle.LANDING_ZONE,17231554690770013396))
+    _diaper_cc.append(DiaperCASMetadata('ember','bellissimo',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.TALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.LANDING_ZONE,16957840280945323054))
+    _diaper_cc.append(DiaperCASMetadata('ember','bellissimo',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.TALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.LANDING_ZONE,17054332893243336036))
+    _diaper_cc.append(DiaperCASMetadata('ember','bellissimo',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.WALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.LANDING_ZONE,11649414196269637966))
+    _diaper_cc.append(DiaperCASMetadata('ember','bellissimo',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.WALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.LANDING_ZONE,14847364933606234717))
+    _diaper_cc.append(DiaperCASMetadata('ember','bellissimo',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.LOW,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.LANDING_ZONE,12395518647129927303))
+    _diaper_cc.append(DiaperCASMetadata('ember','bellissimo',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.LOW,DiaperBodyType.BOTTOM,DiaperPrintStyle.LANDING_ZONE,15661513248122902957))
+    _diaper_cc.append(DiaperCASMetadata('ember','bellissimo',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.MEDIUM,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.LANDING_ZONE,13130246627993205071))
+    _diaper_cc.append(DiaperCASMetadata('ember','bellissimo',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.MEDIUM,DiaperBodyType.BOTTOM,DiaperPrintStyle.LANDING_ZONE,12410734985261025785))
+    _diaper_cc.append(DiaperCASMetadata('ember','bellissimo',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.TALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.LANDING_ZONE,15801089200744424716))
+    _diaper_cc.append(DiaperCASMetadata('ember','bellissimo',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.TALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.LANDING_ZONE,13838131288253581083))
+    _diaper_cc.append(DiaperCASMetadata('ember','bellissimo',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.WALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.LANDING_ZONE,17115575128165822309))
+    _diaper_cc.append(DiaperCASMetadata('ember','bellissimo',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.WALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.LANDING_ZONE,12592391533832786983))
+
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.SIMPLE,DiaperFrame.FEMININE,DiaperHeight.LOW,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.PLAIN,17397648718324309626))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.SIMPLE,DiaperFrame.FEMININE,DiaperHeight.LOW,DiaperBodyType.BOTTOM,DiaperPrintStyle.PLAIN,10294754548094293386))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.SIMPLE,DiaperFrame.FEMININE,DiaperHeight.MEDIUM,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.PLAIN,12351881240003105652))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.SIMPLE,DiaperFrame.FEMININE,DiaperHeight.MEDIUM,DiaperBodyType.BOTTOM,DiaperPrintStyle.PLAIN,12511731984329828297))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.SIMPLE,DiaperFrame.FEMININE,DiaperHeight.TALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.PLAIN,12357393369938480881))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.SIMPLE,DiaperFrame.FEMININE,DiaperHeight.TALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.PLAIN,14210138470179301881))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.SIMPLE,DiaperFrame.FEMININE,DiaperHeight.WALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.PLAIN,10702638174933037029))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.SIMPLE,DiaperFrame.FEMININE,DiaperHeight.WALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.PLAIN,18308005185402329887))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.SIMPLE,DiaperFrame.MASCULINE,DiaperHeight.LOW,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.PLAIN,10608126702256983234))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.SIMPLE,DiaperFrame.MASCULINE,DiaperHeight.LOW,DiaperBodyType.BOTTOM,DiaperPrintStyle.PLAIN,11163130419493762065))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.SIMPLE,DiaperFrame.MASCULINE,DiaperHeight.MEDIUM,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.PLAIN,10250677779614694210))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.SIMPLE,DiaperFrame.MASCULINE,DiaperHeight.MEDIUM,DiaperBodyType.BOTTOM,DiaperPrintStyle.PLAIN,17929648139096525172))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.SIMPLE,DiaperFrame.MASCULINE,DiaperHeight.TALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.PLAIN,16453126801577273791))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.SIMPLE,DiaperFrame.MASCULINE,DiaperHeight.TALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.PLAIN,13293234927537261145))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.SIMPLE,DiaperFrame.MASCULINE,DiaperHeight.WALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.PLAIN,16477299403392253060))
+    _diaper_cc.append(DiaperCASMetadata('ember','plain',DiaperTapeStyle.SIMPLE,DiaperFrame.MASCULINE,DiaperHeight.WALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.PLAIN,18109847548095664823))
+
+    _diaper_cc.append(DiaperCASMetadata('ember','crinklz',DiaperTapeStyle.SIMPLE,DiaperFrame.FEMININE,DiaperHeight.LOW,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.ALL_OVER,11687753797074709790))
+    _diaper_cc.append(DiaperCASMetadata('ember','crinklz',DiaperTapeStyle.SIMPLE,DiaperFrame.FEMININE,DiaperHeight.LOW,DiaperBodyType.BOTTOM,DiaperPrintStyle.ALL_OVER,11241462963069928728))
+    _diaper_cc.append(DiaperCASMetadata('ember','crinklz',DiaperTapeStyle.SIMPLE,DiaperFrame.FEMININE,DiaperHeight.MEDIUM,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.ALL_OVER,18112578257272953202))
+    _diaper_cc.append(DiaperCASMetadata('ember','crinklz',DiaperTapeStyle.SIMPLE,DiaperFrame.FEMININE,DiaperHeight.MEDIUM,DiaperBodyType.BOTTOM,DiaperPrintStyle.ALL_OVER,14170645136690908698))
+    _diaper_cc.append(DiaperCASMetadata('ember','crinklz',DiaperTapeStyle.SIMPLE,DiaperFrame.FEMININE,DiaperHeight.TALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.ALL_OVER,13930830933397578751))
+    _diaper_cc.append(DiaperCASMetadata('ember','crinklz',DiaperTapeStyle.SIMPLE,DiaperFrame.FEMININE,DiaperHeight.TALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.ALL_OVER,10172764427254632969))
+    _diaper_cc.append(DiaperCASMetadata('ember','crinklz',DiaperTapeStyle.SIMPLE,DiaperFrame.FEMININE,DiaperHeight.WALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.ALL_OVER,16423671842319494793))
+    _diaper_cc.append(DiaperCASMetadata('ember','crinklz',DiaperTapeStyle.SIMPLE,DiaperFrame.FEMININE,DiaperHeight.WALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.ALL_OVER,15858575318118471992))
+    _diaper_cc.append(DiaperCASMetadata('ember','crinklz',DiaperTapeStyle.SIMPLE,DiaperFrame.MASCULINE,DiaperHeight.LOW,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.ALL_OVER,12447728614706028788))
+    _diaper_cc.append(DiaperCASMetadata('ember','crinklz',DiaperTapeStyle.SIMPLE,DiaperFrame.MASCULINE,DiaperHeight.LOW,DiaperBodyType.BOTTOM,DiaperPrintStyle.ALL_OVER,9299821023585529739))
+    _diaper_cc.append(DiaperCASMetadata('ember','crinklz',DiaperTapeStyle.SIMPLE,DiaperFrame.MASCULINE,DiaperHeight.MEDIUM,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.ALL_OVER,13140137619929574520))
+    _diaper_cc.append(DiaperCASMetadata('ember','crinklz',DiaperTapeStyle.SIMPLE,DiaperFrame.MASCULINE,DiaperHeight.MEDIUM,DiaperBodyType.BOTTOM,DiaperPrintStyle.ALL_OVER,14406157176776315349))
+    _diaper_cc.append(DiaperCASMetadata('ember','crinklz',DiaperTapeStyle.SIMPLE,DiaperFrame.MASCULINE,DiaperHeight.TALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.ALL_OVER,10342778039990857114))
+    _diaper_cc.append(DiaperCASMetadata('ember','crinklz',DiaperTapeStyle.SIMPLE,DiaperFrame.MASCULINE,DiaperHeight.TALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.ALL_OVER,17550811253687005720))
+    _diaper_cc.append(DiaperCASMetadata('ember','crinklz',DiaperTapeStyle.SIMPLE,DiaperFrame.MASCULINE,DiaperHeight.WALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.ALL_OVER,17109339264598132275))
+    _diaper_cc.append(DiaperCASMetadata('ember','crinklz',DiaperTapeStyle.SIMPLE,DiaperFrame.MASCULINE,DiaperHeight.WALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.ALL_OVER,14530773083303507666))
+
+    _diaper_cc.append(DiaperCASMetadata('lilninthel','bellissimo',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.WALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.LANDING_ZONE,15174586519016046818))
+    _diaper_cc.append(DiaperCASMetadata('lilninthel','bellissimo',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.WALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.LANDING_ZONE,9323691022453188679))
+    _diaper_cc.append(DiaperCASMetadata('lilninthel','bellissimo',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.WALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.LANDING_ZONE,10626761853771937099))
+    _diaper_cc.append(DiaperCASMetadata('lilninthel','bellissimo',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.WALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.LANDING_ZONE,14935196131981263092))
+
+    _diaper_cc.append(DiaperCASMetadata('lilninthel','classico',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.WALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.LANDING_ZONE,17185900473586388270))
+    _diaper_cc.append(DiaperCASMetadata('lilninthel','classico',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.FEMININE,DiaperHeight.WALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.LANDING_ZONE,11276491982480170579))
+    _diaper_cc.append(DiaperCASMetadata('lilninthel','classico',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.WALL,DiaperBodyType.ACCESSORY_ADULT,DiaperPrintStyle.LANDING_ZONE,15024033459415991799))
+    _diaper_cc.append(DiaperCASMetadata('lilninthel','classico',DiaperTapeStyle.LANDING_ZONE,DiaperFrame.MASCULINE,DiaperHeight.WALL,DiaperBodyType.BOTTOM,DiaperPrintStyle.LANDING_ZONE,11509986916541151536))
+
+    @classmethod
+    def get_filtered_metadata(cls, creator:str=None, design_name:str=None, tape_style:int=None, frame:int=None, height:int=None, body_type:int=None, print_style:int=None):
+        return [x for x in cls._diaper_cc
+                if (creator is None or x.creator == creator)
+                and (design_name is None or x.design_name == design_name)
+                and (tape_style is None or x.tape_style == tape_style)
+                and (frame is None or x.frame == frame)
+                and (height is None or x.height == height)
+                and (body_type is None or x.body_type == body_type)
+                and (print_style is None or x.print_style == print_style)
+                ]
+
+    @classmethod
+    def get_filtered_cas_ids(cls, creator:str=None, design_name:str=None, tape_style:int=None, frame:int=None, height:int=None, body_type:int=None, print_style:int=None):
+        return [x.cas_id for x in cls.get_filtered_metadata(creator,design_name,tape_style,frame,height,body_type,print_style)]
+
+    @classmethod
+    def get_all_metadata(cls):
+        return cls._diaper_cc
+
+    @classmethod
+    def get_by_object_definition(cls, object_definition_id:int, frame:int=None, height:int=DiaperHeight.WALL, body_type:int=DiaperBodyType.ACCESSORY_ADULT):
+        logger.info("get_by_object_definition {}".format(object_definition_id))
+        if object_definition_id == DiaperObjectDefinition.ADULT_DIAPER_BAG_PLAIN or object_definition_id == DiaperObjectDefinition.ADULT_DIAPER_ITEM_PLAIN:
+            return cls.get_filtered_cas_ids(tape_style=DiaperTapeStyle.LANDING_ZONE,frame=frame,height=height,body_type=body_type,print_style=DiaperPrintStyle.PLAIN)
+        if object_definition_id == DiaperObjectDefinition.ADULT_DIAPER_ITEM_BELLISSIMO:
+            return cls.get_filtered_cas_ids(design_name='bellissimo',frame=frame,height=height,body_type=body_type)
+        if object_definition_id == DiaperObjectDefinition.ADULT_DIAPER_ITEM_SDK:
+            return cls.get_filtered_cas_ids(tape_style=DiaperTapeStyle.LANDING_ZONE,frame=frame,height=height,body_type=body_type,print_style=DiaperPrintStyle.LANDING_ZONE)
+        if object_definition_id == DiaperObjectDefinition.ADULT_DIAPER_ITEM_BUNNY_HOPPS:
+            return cls.get_filtered_cas_ids(design_name='bunny', frame=frame, height=height, body_type=body_type)
+        logger.info("No suitable diapers found")
+        return []

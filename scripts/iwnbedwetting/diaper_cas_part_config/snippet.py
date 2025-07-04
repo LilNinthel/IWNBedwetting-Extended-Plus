@@ -1,15 +1,12 @@
-import enum
+import traceback
+
 import services
 import sims4.log
 from iwnbedwetting.enums.tunable import DiaperWetness, DiaperMessiness
-from sims.sim_info_types import Age
-from sims4.resources import Types
 from sims.outfits.outfit_enums import BodyType
+from sims4.resources import Types
 from sims4.tuning.instances import HashedTunedInstanceMetaclass
-from sims4.tuning.tunable import HasTunableReferenceFactory, TunableSet, TunableReference, TunableMapping, AutoFactoryInit,  \
-     HasTunableSingletonFactory, Tunable, TunableTuple, TunableList, TunableReference, \
-    TunableVariant, TunableEnumEntry, OptionalTunable, TunableResourceKey, TunableCasPart
-import traceback
+from sims4.tuning.tunable import HasTunableReferenceFactory, Tunable, TunableTuple, TunableList, TunableEnumEntry, TunableCasPart
 
 logger = sims4.log.Logger('DiaperLoadCASConfig')
 
@@ -66,12 +63,12 @@ class DiaperLoadCASConfig(HasTunableReferenceFactory, metaclass=HashedTunedInsta
         if body_type in DiaperLoadCASConfig._default_diaper_lookup_by_part.keys():
             diapers = DiaperLoadCASConfig._default_diaper_lookup_by_part[body_type]
             if filter is not None:
-                diapers =  [x for x in diapers if x in filter]
+                diapers = [x for x in diapers if x in filter]
             return diapers
         return list()
 
+    _hardcoded_diaper_parts = {17916267921504688060,16089036029714611952}
 
-    _hardcoded_diaper_parts = [17916267921504688060,16089036029714611952]
     @staticmethod
     def is_diaper_part(cas_part_id):
         return cas_part_id in DiaperLoadCASConfig._default_diaper_lookup.keys() or cas_part_id in DiaperLoadCASConfig._hardcoded_diaper_parts

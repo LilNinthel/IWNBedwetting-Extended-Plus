@@ -101,6 +101,11 @@
               <E n="argument">Actor</E>
             </U>
           </V>
+          <V t="participant">
+            <U n="participant">
+              <E n="argument">Object</E>
+            </U>
+          </V>
         </L>
         <T n="command">iwn.put_on_random_diaper_accessory</T>
         <V n="timing" t="at_end" />
