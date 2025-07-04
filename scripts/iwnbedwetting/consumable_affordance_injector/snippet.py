@@ -1,11 +1,12 @@
+import traceback
+
 import services
 import sims4.log
 from sims4.resources import Types
 from sims4.tuning.instances import HashedTunedInstanceMetaclass
-from sims4.tuning.tunable import TunableSet, TunableReference, TunableMapping, AutoFactoryInit,  \
-    HasTunableReferenceFactory, HasTunableSingletonFactory, Tunable, TunableTuple, TunableList, TunableReference, \
-    TunableVariant, TunableEnumEntry, OptionalTunable, TunableResourceKey
-import traceback
+from sims4.tuning.tunable import AutoFactoryInit, \
+    HasTunableReferenceFactory, HasTunableSingletonFactory, TunableTuple, TunableList, TunableReference, \
+    TunableVariant
 
 logger = sims4.log.Logger('ConsumableAffordanceInjector')
 

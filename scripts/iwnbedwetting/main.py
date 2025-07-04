@@ -1,74 +1,62 @@
-import sims4.commands, sims4.reload, services, sims4.callback_utils, webbrowser
-from event_testing.tests import TunableTestSet, CompoundTestList, TestList
+import importlib.util
+import traceback
+import urllib
+import urllib.error
+import urllib.request
+import urllib.response
+from types import MappingProxyType
+
+import enum
+import objects
+import objects.components.types
+import os
+import random
+import services
+import sims4.callback_utils
+import sims4.commands
+import sims4.log
+import sims4.reload
+import webbrowser
+from clock import ClockSpeedMode
+from clubs.club_tuning import ClubRuleCriteriaTrait, ClubTunables
+from distributor.shared_messages import IconInfoData
+from event_testing.tests import CompoundTestList, TestList
 from interactions.base.basic import FlexibleLengthContent
-from interactions.base.super_interaction import SuperInteraction
-from interactions.utils.interaction_elements import XevtTriggeredElement
 from interactions.utils.loot_element import LootElement
 from interactions.utils.statistic_element import ExitCondition
-from iwnbedwetting.enums.interactions import InteractionSets
-import inspect
-from clock import ClockSpeedMode
-import enum, os, random
+from iwnbedwetting.diaper_cas_part_config.snippet import DiaperLoadCASConfig
+from iwnbedwetting.enums.buffs import IwnBedwettingBuff
+from iwnbedwetting.enums.diapers import DiaperCC, DiaperBodyType, DiaperHeight, DiaperFrame
+from iwnbedwetting.enums.interactions import InteractionSets, DiaperInteraction, BedwettingInteraction
+from iwnbedwetting.enums.rewards import IwnBedwettingReward
+from iwnbedwetting.enums.statistics import IwnBedwettingStatistic, DiaperStateStatistics
+from iwnbedwetting.enums.traits import IwnBedwettingTrait
+from iwnbedwetting.enums.wickedwhims import WW_SimStatistic, WW_SexNakedType, WW_SexUndressingTypeSetting
+from iwnbedwetting.native_enums.buffs import NativeBuff
+from iwnbedwetting.native_enums.traits import NativeTrait
+from iwnbedwetting.utilities.injector import inject
 from objects.components import component_definition, ComponentContainer
-import objects.components.types
-from postures.posture_scoring import InteractionPostureAffinityTag
+from protocolbuffers import S4Common_pb2, Outfits_pb2
+from satisfaction.satisfaction_tracker import SatisfactionTracker
+from sims.outfits.outfit_enums import BodyType, OutfitCategory
 from sims.sim_info import SimInfo
-from sims.sim_info_types import Age, Gender, Species
 from sims.sim_info_base_wrapper import SimInfoBaseWrapper
+from sims.sim_info_tests import BuffTest
+from sims.sim_info_types import Age, Species
+from sims4 import resources, collections
 from sims4.callback_utils import CallableList
-from sims.sim_info_tests import BuffTest, TraitTest, SimInfoTest
-from interactions.social.social_super_interaction import SocialSuperInteraction
+from sims4.collections import FrozenAttributeDict
+from sims4.collections import make_immutable_slots_class
 from sims4.localization import LocalizationHelperTuning
 from sims4.resources import Types
-from sims4.tuning.tunable import TunableList, TunableFactory
-from statistics.statistic_conditions import StatisticCondition
-from tag import Tag
-from iwnbedwetting.enums.wickedwhims import WW_SimStatistic, WW_NudityReason, WW_SexNakedType, WW_SexUndressingTypeSetting
-from ui.ui_dialog_notification import UiDialogNotification
-from distributor.shared_messages import IconInfoData
-import objects
-from iwnbedwetting.native_enums.traits import NativeTrait
-from iwnbedwetting.native_enums.buffs import NativeBuff
-from zone import Zone
-from sims4.collections import make_immutable_slots_class
-from types import MappingProxyType
-from clubs.club_tuning import ClubRuleCriteriaTrait, ClubTunables
-from interactions.utils.adventure import Adventure
-from distributor.rollback import ProtocolBufferRollback
-from sims4 import resources, collections
-from sims4.collections import FrozenAttributeDict
-from satisfaction.satisfaction_tracker import SatisfactionTracker
 from sims4.tuning.instance_manager import InstanceManager
-from iwnbedwetting.utilities.injector import inject
-from iwnbedwetting.enums.rewards import IwnBedwettingReward
-from iwnbedwetting.enums.traits import IwnBedwettingTrait
-from iwnbedwetting.enums.statistics import IwnBedwettingStatistic, DiaperStateStatistics, StatisticSets
-from iwnbedwetting.enums.buffs import IwnBedwettingBuff
-import sims4.log
-import traceback
-from sims.outfits.outfit_enums import BodyType, OutfitCategory
-from protocolbuffers import S4Common_pb2, Outfits_pb2, PersistenceBlobs_pb2
-from sims.outfits.outfit_utils import get_maximum_outfits_for_category, is_sim_info_wearing_all_outfit_parts
-from iwnbedwetting.enums.tunable import DiaperWetness, DiaperMessiness
-from iwnbedwetting.diaper_cas_part_config.snippet import DiaperLoadCASConfig
-from ui.ui_dialog import UiDialogOk, UiDialogResponse, ButtonType, UiDialogStyle, UiDialogBGStyle
-import importlib.util
-import urllib
-import urllib.request
-import urllib.error
-import urllib.response
+from sims4.tuning.tunable import TunableFactory
+from tag import Tag
+from ui.ui_dialog import UiDialogOk, UiDialogResponse, ButtonType
+from ui.ui_dialog_notification import UiDialogNotification
+from zone import Zone
 
-IWN_BED_WETTING_VERSION = "2.0.4"
-REWARD_BEDWETTER = 11589092927928958152
-REWARD_INCONTINENCE = 2926939328826942378
-dTittleFull = (265058837, 265058838, 265058839, 323983041, 323983042, 323983043, 269972373,
-               269972374, 269972375)
-dDialogFull = (579578961, 579578962, 579578963, 323375589, 323375590, 323375591, 58763729,
-               58763730, 58763731)
-dDprTittle = (4036030530, 4036030530, 4036030530, 4036030530, 4036030530, 4036030530,
-              4036030530, 4036030530, 4036030530)
-dDprDlg = (4235025683, 4235025683, 4235025683, 3891057783, 3891057783, 3891057783,
-           1657824659, 1657824659, 1657824659)
+IWN_BED_WETTING_VERSION = "2.0.5"
 ModHasRun = False
 devMode = False
 logger = sims4.log.Logger('IWNBedwettingMain')
@@ -82,6 +70,8 @@ _old_addons_detected = False
 _ember_detected = False
 _admin_flag = False
 
+xml_injector_spec = importlib.util.find_spec("xml_injector")
+_xml_injector_found = xml_injector_spec is not None
 
 try:
     import wickedwhims.nudity.outfit_nudity_reason
@@ -136,6 +126,7 @@ def register_on_pre_outfit_change_callback(sim_info, callback):
 def unregister_on_pre_outfit_change_callback(sim_info, callback):
     if callback in sim_info.pre_outfit_changed_diaper:
         sim_info.pre_outfit_changed_diaper.remove(callback)
+
 
 def get_mods_files_info():
     global _old_mods_detected
@@ -236,10 +227,6 @@ def _load_satisfaction_store_rewards(original, self, *args, **kwargs):
     return result
 
 
-bedwetter_obj_affordance_ids = (7158177636850136246, )
-bedwetter_obj_ids = (36433, )
-bedwetter_obj_names = ('dresser', )
-
 def add_diaper_load_tracking(sim_info):
     trackers = []
     wrapper = DiaperWatcherWrapper(sim_info)
@@ -260,7 +247,6 @@ def add_diaper_load_tracking(sim_info):
             tracker.add_watcher(wrapper.diaper_load_stat_watcher)
             tracker.add_on_remove_callback(wrapper.on_diaper_load_stat_removed)
 
-diaper_wetness_stats = [17047720970454098230,]
 
 def get_diaper_stats_for_state(wetness, messiness):
     stats = []
@@ -299,6 +285,7 @@ def get_diaper_stats_for_state(wetness, messiness):
         stats.append(DiaperStateStatistics.DIAPER_STATE_MESSINESS_3)
 
     return stats
+
 
 class DiaperWatcherWrapper():
     def __init__(self, sim_info):
@@ -345,6 +332,12 @@ class DiaperWatcherWrapper():
                         logger.info("No change in value")
                         return
 
+                self.value_dict[stat_type.guid64] = new_value
+
+                keep_diaper = get_statistic_value(self.sim_info, IwnBedwettingStatistic.WW_KEEP_DIAPER_ACCESSORY_DURING_SEX) or 0
+                if keep_diaper != 0:
+                    return
+
                 active_sex_id = get_statistic_value(self.sim_info, WW_SimStatistic.WW_SEX_ACTIVE_INSTANCE_IDENTIFIER) or 0
                 if active_sex_id != 0:
                     sex_instance = get_active_sex_instance(active_sex_id)
@@ -375,7 +368,7 @@ class DiaperWatcherWrapper():
 
 
                 # apply_outfit_parts_for_diaper_load(self.sim_info)
-                self.value_dict[stat_type.guid64] = new_value
+
             except Exception as e:
                 logger.error("wicked_whims_stat_watcher failed to run.")
                 logger.error(traceback.format_exc())
@@ -485,7 +478,7 @@ def _on_sim_outfit_change(sim_info, new_outfit, previous_outfit):
             else:
                 logger.info("Pants have not changed")
 
-            if has_trait(sim_info.id, visible_diapers_opt_out_trait):
+            if has_trait(sim_info.id, IwnBedwettingTrait.NO_VISIBLE_DIAPERS):
                 return
 
             if new_outfit[0] not in outfit_categories_excluded_from_diaper:
@@ -502,32 +495,6 @@ def _on_sim_outfit_change(sim_info, new_outfit, previous_outfit):
                     elif len(get_diaper_parts(get_outfit_parts(sim_info, new_outfit)).keys()) == 0:
                         logger.info("{} needs a diaper".format(sim_info))
                         put_on_random_diaper_accessory(sim_info.id, update_client=True)
-            # else:
-            #     if _wicked_whims_installed:
-            #         turbo_sim = TurboSim(sim_info.id)
-            #         if turbo_sim is not None:
-            #             if is_sim_going_to_sex_interaction(turbo_sim) or is_sim_in_sex_interaction(turbo_sim):
-            #             # nudity_reason = get_statistic_value(sim_info, WickedWhimsSimStatistic.WW_NUDITY_REASON)
-            #             # if nudity_reason == WickedWhimsNudityReason.SEX:
-            #             # (turbo_sim: turbolib2.wrappers.sim.sim.TurboSim, strip_type_top= < StripType.NONE = 0 >,
-            #             # strip_type_bottom= < StripType.NONE = 0 >, strip_body_type=-1, save_original=True,
-            #             # change_outfit=True, outfit_category_and_index=( < TurboOutfitCategory.SPECIAL = 8 >, 0),
-            #             # allow_stripping_gloves = None, allow_stripping_feet = None, allow_stripping_socks = None,
-            #             # allow_stripping_leggings = None, nudity_reason = None)
-            #             #
-            #                 if len(get_diaper_parts(get_outfit_parts(sim_info, new_outfit)).keys()) == 0:
-            #                     # strip_outfit(turbo_sim, outfit_category_and_index=new_outfit, strip_body_type=BodyType.INDEX_FINGER_LEFT)
-            #                     # logger.info("Sim is undressed for sex, removing diaper")
-            #                     # remove_diaper(sim_info, True)
-            #                     return
-            #             else:
-            #             # elif nudity_reason == WickedWhimsNudityReason.POST_SEX:
-            #                 if wearing_diaper_item(sim_info.id) or always_wears_diapers(sim_info.id):
-            #                     if len(get_diaper_parts(get_outfit_parts(sim_info, new_outfit)).keys()) == 0:
-            #                         if not has_trait(sim_info.id, visible_diapers_opt_out_trait):
-            #                             logger.info("Sim is dressing up after sex, adding diaper")
-            #                             logger.info("{} needs a diaper".format(sim_info))
-            #                             put_on_random_diaper_accessory(sim_info.id)
 
             # for callback in sim_info.on_outfit_changed:
             #     logger.info(str(callback.__qualname__))
@@ -536,36 +503,6 @@ def _on_sim_outfit_change(sim_info, new_outfit, previous_outfit):
         finally:
             logger.info("_on_sim_outfit_change done {}".format(sim_info))
             # sim_info.register_for_outfit_changed_callback(_on_sim_outfit_change)
-
-
-# @inject(objects.game_object.GameObject, 'on_add')
-def bedwetter_add_super_affordances_objects(original, self):
-    result = original(self)
-    try:
-        if hasattr(self, 'guid64') is False:
-            return
-        fcount = 0
-        for currName in bedwetter_obj_names:
-            if currName in type(self).__name__:
-                fcount = fcount + 1
-
-        if fcount < 1:
-            return
-        sa_list = []
-        affordance_manager = services.affordance_manager()
-        for sa_id in bedwetter_obj_affordance_ids:
-            tuning_class = affordance_manager.get(sa_id)
-            if tuning_class is not None:
-                sa_list.append(tuning_class)
-                logger.info('{} {} {}'.format(self.guid64, type(self).__name__, type(self).__class__.__name__))
-                logger.info('Found it and added magic!')
-
-        self._super_affordances = self._super_affordances + tuple(sa_list)
-    except Exception as e:
-        logger.error("GameObject.on_add injection failed to run.")
-        logger.error(traceback.format_exc())
-
-    return result
 
 
 @sims4.commands.Command('ccshow', command_type=(sims4.commands.CommandType.Live))
@@ -589,31 +526,6 @@ def _filter_value(value):
 
 EMPTY_DICT = MappingProxyType({})
 
-
-def get_sim_info_base(sim_info):
-    if sim_info is not None and sim_info._base is not None:
-        return sim_info._base
-
-
-# def get_outfit_parts(sim_info, outfit_category_and_index):
-#     sim_info = sim_info
-#     outfit_data = sim_info.get_outfit(outfit_category_and_index[0], outfit_category_and_index[1])
-#     if outfit_data is None:
-#         return EMPTY_DICT
-#     outfit_id = getattr(sim_info.get_outfit(outfit_category_and_index[0], outfit_category_and_index[1]), 'outfit_id', 0)
-#     outfits_msg = sim_info.save_outfits()
-#     # logger.info('get_outfit_parts outfits_msg {}', outfits_msg)
-#     outfit_data = next(iter((outfit for outfit in outfits_msg.outfits if outfit.category == outfit_category_and_index[0] and outfit.outfit_id == outfit_id)), None)
-#     # logger.info('get_outfit_parts outfit_data {}', outfit_data)
-#     if outfit_data is None:
-#         return EMPTY_DICT
-#     body_types = list(outfit_data.body_types_list.body_types)
-#     cas_parts = list(outfit_data.parts.ids)
-#     color_shifts = list(outfit_data.part_shifts.color_shift)
-#     outfit_parts = {}
-#     for (i, body_type) in enumerate(body_types):
-#         outfit_parts[body_type] = CasPart((cas_parts[i]), color_shift=(color_shifts[i]))
-#     return outfit_parts
 
 def get_outfit_parts(sim_info, outfit_category_and_index):
     # sim_info = self.get_sim_info_base() or self.get_sim_info()
@@ -654,36 +566,10 @@ def _get_outfit_verification_identifier(body_types, cas_part_ids, color_shifts):
     return frozenset([*body_types, *cas_part_ids, *color_shifts])
 
 
-# def get_appearance_modifiers_outfit_parts(sim_info, outfit_category_and_index):
-#     sim_info_base_wrapper = sim_info.appearance_tracker.appearance_override_sim_info
-#     if sim_info_base_wrapper is None:
-#         return EMPTY_DICT
-#     outfit_data = sim_info_base_wrapper.get_outfit(outfit_category_and_index[0], outfit_category_and_index[1])
-#     outfit_id = getattr(sim_info_base_wrapper.get_outfit(outfit_category_and_index[0], outfit_category_and_index[1]), 'outfit_id', 0)
-#     if outfit_data is None:
-#         return EMPTY_DICT
-#     outfits_msg = sim_info_base_wrapper.save_outfits()
-#     outfit_data = next(iter((outfit for outfit in outfits_msg.outfits if outfit.category == outfit_category_and_index[0] and outfit.outfit_id == outfit_id)), None)
-#     if outfit_data is None:
-#         return EMPTY_DICT
-#     body_types = list(outfit_data.body_types_list.body_types)
-#     cas_parts = list(outfit_data.parts.ids)
-#     color_shifts = list(outfit_data.part_shifts.color_shift)
-#     object_ids = list(outfit_data.object_ids.object_id)
-#     layer_ids = list(outfit_data.layer_ids.layer_id)
-#     outfit_parts = {}
-#     for (i, body_type) in enumerate(body_types):
-#         outfit_parts[body_type] = CasPart((cas_parts[i]), (color_shifts[i]), (object_ids[i]), (layer_ids[i]))
-#
-#     return outfit_parts
+force_diaper_pants_buffs = {}
+force_diaper_accessory_buffs = {IwnBedwettingBuff.MANDATORY_PADDING}
 
-
-force_diaper_pants_buffs = []
-force_diaper_accessory_buffs = [IwnBedwettingBuff.MANDATORY_PADDING]
-
-remove_diaper_buffs = [NativeBuff.POOLS_HYGIENE,NativeBuff.SIMIS_SWIMMING,NativeBuff.SIM_IS_IN_BATH]
-
-visible_diapers_opt_out_trait = 12749121714103691140
+remove_diaper_buffs = {NativeBuff.POOLS_HYGIENE,NativeBuff.SIMIS_SWIMMING,NativeBuff.SIM_IS_IN_BATH}
 
 def is_wearing_diaper(owner_id):
     if owner_id is not None:
@@ -715,6 +601,7 @@ def is_wearing_diaper(owner_id):
                 return True
 
     return False
+
 
 def always_wears_diapers(owner_id):
     if has_trait(owner_id, IwnBedwettingTrait.NEVER_POTTY_TRAINED, IwnBedwettingTrait.DIAPERED_247, IwnBedwettingTrait.DIAPERED_247_MEDICAL, IwnBedwettingTrait.DIAPER_PUNISHED):
@@ -750,12 +637,13 @@ def has_trait(owner_id, *trait_ids):
     return False
 
 
-check_diaper_buffs = [IwnBedwettingBuff.DIAPER_DUMMY_BUFF, NativeBuff.MOOD_HIDDEN_ASLEEP, NativeBuff.SIM_IS_SLEEPING_HIDDEN, NativeBuff.SIM_IS_SLEEPING, IwnBedwettingBuff.MANDATORY_PADDING, IwnBedwettingBuff.TRAIT_DIAPERED_247, IwnBedwettingBuff.TRAIT_DIAPERED_247_MEDICAL, IwnBedwettingBuff.TRAIT_DIAPER_PUNISHED, IwnBedwettingBuff.TRAIT_WEARING_DIAPER_ITEM, IwnBedwettingBuff.TRAIT_NEVER_POTTY_TRAINED, IwnBedwettingBuff.TRAIT_SLEEPS_IN_DIAPERS]
+check_diaper_buffs = {IwnBedwettingBuff.DIAPER_DUMMY_BUFF, NativeBuff.MOOD_HIDDEN_ASLEEP, NativeBuff.SIM_IS_SLEEPING_HIDDEN, NativeBuff.SIM_IS_SLEEPING, IwnBedwettingBuff.MANDATORY_PADDING, IwnBedwettingBuff.TRAIT_DIAPERED_247, IwnBedwettingBuff.TRAIT_DIAPERED_247_MEDICAL, IwnBedwettingBuff.TRAIT_DIAPER_PUNISHED, IwnBedwettingBuff.TRAIT_WEARING_DIAPER_ITEM, IwnBedwettingBuff.TRAIT_NEVER_POTTY_TRAINED, IwnBedwettingBuff.TRAIT_SLEEPS_IN_DIAPERS}
+
 
 def _on_buff_added(buff_type, sim_id, update_client=True):
     if buff_type is not None:
         if sim_id is not None:
-            if has_trait(sim_id, visible_diapers_opt_out_trait):
+            if has_trait(sim_id, IwnBedwettingTrait.NO_VISIBLE_DIAPERS):
                 return
 
             # if not has_buff(10309070037716691412):
@@ -778,7 +666,7 @@ def _on_buff_added(buff_type, sim_id, update_client=True):
 def _on_buff_removed(buff_type, sim_id):
     if buff_type is not None:
         if sim_id is not None:
-            if has_trait(sim_id, visible_diapers_opt_out_trait):
+            if has_trait(sim_id, IwnBedwettingTrait.NO_VISIBLE_DIAPERS):
                 return
 
             if buff_type.guid64 in check_diaper_buffs and not is_wearing_diaper(sim_id):
@@ -832,18 +720,55 @@ def diaper_load_changed(owner_id:int=None, _connection=None):
         if sim_info is not None:
             apply_outfit_parts_for_diaper_load(sim_info)
 
+_male_bottom = frozenset(DiaperCC.get_filtered_cas_ids(body_type=DiaperBodyType.BOTTOM,height=DiaperHeight.WALL,frame=DiaperFrame.MASCULINE))
+# _male_bottom = [DiaperCC.lilninthel_classico_landing_male_wall_bottom,
+#                 DiaperCC.lilninthel_bellissimo_landing_male_wall_bottom,
+#                 DiaperCC.ember_plain_hook_male_wall_bottom,
+#                 DiaperCC.ember_plain_landing_male_wall_bottom,
+#                 DiaperCC.ember_plain_simple_male_wall_bottom,
+#                 DiaperCC.ember_bunny_hook_male_wall_bottom,
+#                 DiaperCC.ember_nru_landing_male_wall_bottom,
+#                 DiaperCC.ember_bellissimo_landing_male_wall_bottom,
+#                 DiaperCC.ember_crinklz_simple_male_wall_bottom]
 
-_male_bottom = [11509986916541151536,14935196131981263092,9263557843126228615,17116738985650124656,11377714707345239857,11050266238630918155,18109847548095664823,14529822570535928302,15862920524777542351,12592391533832786983,14530773083303507666]
-_male_accessory = [15024033459415991799,10626761853771937099,14604802740542491578,11579388597978100234,10828777962635164723,13099465542238001347,16477299403392253060,11301312599355066913,10518520436121252549,17115575128165822309,17109339264598132275]
-_female_bottom = [11276491982480170579,9323691022453188679,11377714707345239857,11798765533300344227,18308005185402329887,15102817938559141327,14134628814573739421,15119513609445981861,17192211726903388244,14847364933606234717,15858575318118471992]
-_female_accessory = [17185900473586388270,15174586519016046818,15395696484973795175,14081768220370047012,10702638174933037029,11840689655989022495,14014837071704813112,15880507622158690423,18111581372537224927,11649414196269637966,16423671842319494793]
-_child_bottom = [17916267921504688060]
-_child_accessory = [16089036029714611952]
+_male_accessory = frozenset(DiaperCC.get_filtered_cas_ids(body_type=DiaperBodyType.ACCESSORY_ADULT,height=DiaperHeight.WALL,frame=DiaperFrame.MASCULINE))
+# _male_accessory = [DiaperCC.lilninthel_classico_landing_male_wall_accessory,
+#                    DiaperCC.lilninthel_bellissimo_landing_male_wall_accessory,
+#                    DiaperCC.ember_plain_hook_male_wall_accessory,
+#                    DiaperCC.ember_plain_landing_male_wall_accessory,
+#                    DiaperCC.ember_plain_simple_male_wall_accessory,
+#                    DiaperCC.ember_bunny_hook_male_wall_accessory,
+#                    DiaperCC.ember_nru_landing_male_wall_accessory,
+#                    DiaperCC.ember_bellissimo_landing_male_wall_accessory,
+#                    DiaperCC.ember_crinklz_simple_male_wall_accessory]
+
+_female_bottom = frozenset(DiaperCC.get_filtered_cas_ids(body_type=DiaperBodyType.BOTTOM,height=DiaperHeight.WALL,frame=DiaperFrame.FEMININE))
+# _female_bottom = [DiaperCC.lilninthel_classico_landing_female_wall_bottom,
+#                   DiaperCC.lilninthel_bellissimo_landing_female_wall_bottom,
+#                   DiaperCC.ember_plain_hook_female_wall_bottom,
+#                   DiaperCC.ember_plain_landing_female_wall_bottom,
+#                   DiaperCC.ember_plain_simple_female_wall_bottom,
+#                   DiaperCC.ember_bunny_hook_female_wall_bottom,
+#                   DiaperCC.ember_nru_landing_female_wall_bottom,
+#                   DiaperCC.ember_bellissimo_landing_female_wall_bottom,
+#                   DiaperCC.ember_crinklz_simple_female_wall_bottom]
+
+_female_accessory = frozenset(DiaperCC.get_filtered_cas_ids(body_type=DiaperBodyType.ACCESSORY_ADULT,height=DiaperHeight.WALL,frame=DiaperFrame.FEMININE))
+# _female_accessory = [DiaperCC.lilninthel_classico_landing_female_wall_accessory,
+#                      DiaperCC.lilninthel_bellissimo_landing_female_wall_accessory,
+#                      DiaperCC.ember_plain_hook_female_wall_accessory,
+#                      DiaperCC.ember_plain_landing_female_wall_accessory,
+#                      DiaperCC.ember_plain_simple_female_wall_accessory,
+#                      DiaperCC.ember_bunny_hook_female_wall_accessory,
+#                      DiaperCC.ember_nru_landing_female_wall_accessory,
+#                      DiaperCC.ember_bellissimo_landing_female_wall_accessory,
+#                      DiaperCC.ember_crinklz_simple_female_wall_accessory]
 
 
 @sims4.commands.Command('iwn.force_into_diaper', command_type=(sims4.commands.CommandType.Live))
 def force_into_diaper(owner_id:int=None, _connection=None):
     put_on_random_diaper_bottom(owner_id, _connection, remove_full_body=True, remove_tights=True, update_client=True)
+
 
 outfit_categories_excluded_from_diaper = [OutfitCategory.SWIMWEAR,OutfitCategory.BATHING,OutfitCategory.SPECIAL]
 
@@ -878,7 +803,7 @@ def put_on_random_diaper_bottom(owner_id:int=None, _connection=None, remove_full
                             outfit_parts.pop(BodyType.UPPER_BODY, None)
 
                         if BodyType.FULL_BODY in outfit_parts.keys():
-                            put_on_random_diaper_accessory(owner_id, _connection)
+                            put_on_random_diaper_accessory(owner_id, _connection=_connection)
                             return
 
                         if BodyType.LOWER_BODY in outfit_parts.keys():
@@ -889,20 +814,21 @@ def put_on_random_diaper_bottom(owner_id:int=None, _connection=None, remove_full
                             outfit_parts[BodyType.LOWER_BODY] = (CasPart((0)),)
 
                         diaper_part_id = None
-                        if has_trait(sim_info.id, NativeTrait.GENDER_OPTIONS_FRAME_MASCULINE):
-                            diaper_part_id = random.choice(
-                                DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.LOWER_BODY,
-                                                                                               _male_bottom))
-                        elif has_trait(sim_info.id, NativeTrait.GENDER_OPTIONS_FRAME_FEMININE):
-                            diaper_part_id = random.choice(
-                                DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.LOWER_BODY,
-                                                                                               _female_bottom))
+
+                        if sim_info.age in (Age.TEEN, Age.YOUNGADULT, Age.ADULT, Age.ELDER):
+                            if has_trait(sim_info.id, NativeTrait.GENDER_OPTIONS_FRAME_MASCULINE):
+                                diaper_part_id = random.choice(
+                                    DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.LOWER_BODY,
+                                                                                                   _male_bottom))
+                            elif has_trait(sim_info.id, NativeTrait.GENDER_OPTIONS_FRAME_FEMININE):
+                                diaper_part_id = random.choice(
+                                    DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.LOWER_BODY,
+                                                                                                   _female_bottom))
+                        elif _admin_flag and sim_info.age == Age.CHILD:
+                            diaper_part_id = 17916267921504688060
                         if diaper_part_id is not None:
-                            if sim_info.age in (Age.TEEN, Age.YOUNGADULT, Age.ADULT, Age.ELDER):
-                                outfit_parts[BodyType.LOWER_BODY] = (CasPart((diaper_part_id)),)
-                                outfit_parts.pop(BodyType.INDEX_FINGER_LEFT, None)
-                            elif _admin_flag and sim_info.age == Age.CHILD:
-                                outfit_parts[BodyType.LOWER_BODY] = (CasPart((17916267921504688060)),)
+                            outfit_parts[BodyType.LOWER_BODY] = (CasPart((diaper_part_id)),)
+                            outfit_parts.pop(BodyType.INDEX_FINGER_LEFT, None)
                             set_outfit_parts(sim_info, outfit_category_and_index, outfit_parts, update_client)
     except Exception as e:
         logger.error("put_on_random_diaper_bottom failed to run.")
@@ -910,16 +836,28 @@ def put_on_random_diaper_bottom(owner_id:int=None, _connection=None, remove_full
 
 
 @sims4.commands.Command('iwn.put_on_random_diaper_accessory', command_type=(sims4.commands.CommandType.Live))
-def put_on_random_diaper_accessory(owner_id:int=None, _connection=None, outfit_category_and_index=None, update_client=True):
+def put_on_random_diaper_accessory(owner_id:int=None, object_instance_id=None, _connection=None, outfit_category_and_index=None, update_client=True):
     if not _ember_detected:
         return
     try:
         if owner_id is not None:
+            # logger.info(str(owner_id))
+
             sim_info = services.sim_info_manager().get(owner_id)
             if sim_info is not None:
                 if sim_info.species != Species.HUMAN:
                     return
                 logger.info("iwn.put_on_random_diaper_accessory: {}", sim_info)
+
+                object_definition_id = None
+
+                if object_instance_id is not None:
+                    object_instance_id = int(object_instance_id)
+                    object_instance = services.object_manager().get(object_instance_id) or services.inventory_manager().get(object_instance_id)
+                    if object_instance is not None:
+                        object_definition_id = object_instance.definition.id
+                        logger.info("Object definition found")
+
                 if outfit_category_and_index is None:
                     outfit_category_and_index = sim_info.get_current_outfit()
                 if outfit_category_and_index is not None:
@@ -937,7 +875,8 @@ def put_on_random_diaper_accessory(owner_id:int=None, _connection=None, outfit_c
                             if BodyType.INDEX_FINGER_LEFT in outfit_parts.keys():
                                 for outfit_part in outfit_parts[BodyType.INDEX_FINGER_LEFT]:
                                     if DiaperLoadCASConfig.is_diaper_part(outfit_part.cas_part):
-                                        return
+                                        if object_definition_id is None:
+                                            return
                             else:
                                 outfit_parts[BodyType.INDEX_FINGER_LEFT] = (CasPart((0)),)
 
@@ -951,19 +890,38 @@ def put_on_random_diaper_accessory(owner_id:int=None, _connection=None, outfit_c
 
                         diaper_part_id = None
 
-                        if has_trait(sim_info.id, NativeTrait.GENDER_OPTIONS_FRAME_MASCULINE):
-                            diaper_part_id = random.choice(
-                                DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.INDEX_FINGER_LEFT,
-                                                                                               _male_accessory))
-                        elif has_trait(sim_info.id, NativeTrait.GENDER_OPTIONS_FRAME_FEMININE):
-                            diaper_part_id = random.choice(
-                                DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.INDEX_FINGER_LEFT,
-                                                                                               _female_accessory))
+                        body_type = BodyType.INDEX_FINGER_LEFT
+
+                        if sim_info.age in (Age.TEEN, Age.YOUNGADULT, Age.ADULT, Age.ELDER):
+                            if has_trait(sim_info.id, NativeTrait.GENDER_OPTIONS_FRAME_MASCULINE):
+                                if object_definition_id is not None:
+                                    rec_part_ids = DiaperCC.get_by_object_definition(object_definition_id,frame=DiaperFrame.MASCULINE,body_type=DiaperBodyType.ACCESSORY_ADULT)
+                                    if len(rec_part_ids) > 0:
+                                        logger.info("Looking up diaper part by object definition")
+                                        diaper_part_id = random.choice(
+                                            DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.INDEX_FINGER_LEFT,
+                                                                                                   rec_part_ids))
+                                if diaper_part_id is None:
+                                    diaper_part_id = random.choice(
+                                        DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.INDEX_FINGER_LEFT,
+                                                                                                       _male_accessory))
+                            elif has_trait(sim_info.id, NativeTrait.GENDER_OPTIONS_FRAME_FEMININE):
+                                if object_definition_id is not None:
+                                    rec_part_ids = DiaperCC.get_by_object_definition(object_definition_id,frame=DiaperFrame.FEMININE,body_type=DiaperBodyType.ACCESSORY_ADULT)
+                                    if len(rec_part_ids) > 0:
+                                        logger.info("Looking up diaper part by object definition")
+                                        diaper_part_id = random.choice(
+                                            DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.INDEX_FINGER_LEFT,
+                                                                                                   rec_part_ids))
+                                if diaper_part_id is None:
+                                    diaper_part_id = random.choice(
+                                        DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.INDEX_FINGER_LEFT,
+                                                                                                       _female_accessory))
+                        elif _admin_flag and sim_info.age == Age.CHILD:
+                            diaper_part_id = 16089036029714611952
+                            body_type = BodyType.EARRINGS
                         if diaper_part_id is not None:
-                            if sim_info.age in (Age.TEEN, Age.YOUNGADULT, Age.ADULT, Age.ELDER):
-                                outfit_parts[BodyType.INDEX_FINGER_LEFT] = (CasPart((diaper_part_id)),)
-                            elif _admin_flag and sim_info.age == Age.CHILD:
-                                outfit_parts[BodyType.EARRINGS] = (CasPart((16089036029714611952)),)
+                            outfit_parts[body_type] = (CasPart((diaper_part_id)),)
                             set_outfit_parts(sim_info, outfit_category_and_index, outfit_parts, update_client)
     except Exception as e:
         logger.error("put_on_random_diaper_accessory failed to run.")
@@ -1276,8 +1234,6 @@ def apply_outfit_parts_for_diaper_load(sim_info=None,outfit_category_and_index=N
 
             logger.info("original_parts {}", original_parts)
 
-
-
             modified_parts = get_modified_diaper_outfit_parts(original_parts, wetness_level, mess_level)
 
             if modified_parts is not None:
@@ -1416,6 +1372,8 @@ REQUEST_HEADER = {
   'Connection': "keep-alive"}
 
 latest_version_string = IWN_BED_WETTING_VERSION
+
+
 def is_newer_version_available():
     global latest_version_string
     try:
@@ -1442,10 +1400,12 @@ def open_loverslab_club(_connection=None):
     webbrowser.open("https://www.loverslab.com/clubs/9-little-space-private-abdl-mods-and-forums/")
     services.game_clock_service().set_clock_speed(ClockSpeedMode.PAUSED)
 
+
 @sims4.commands.Command('iwn.open_mod_page', command_type=(sims4.commands.CommandType.Live))
 def open_mod_page(_connection=None):
     webbrowser.open("https://www.loverslab.com/files/file/28368-iwnbedwetting-extended/")
     services.game_clock_service().set_clock_speed(ClockSpeedMode.PAUSED)
+
 
 @sims4.commands.Command('iwn.open_ember_mod_page', command_type=(sims4.commands.CommandType.Live))
 def open_ember_mod_page(_connection=None):
@@ -1534,13 +1494,9 @@ def DebugNotification(text, title=None):
         notification.show_dialog(icon_override=(None, client.active_sim))
 
 
-sleeping_diaper_usage_affordances = (15386335300547775969, 17846418620694466401, 14347203327565699161, 15545876685594118345)
+sleeping_diaper_usage_affordances = [DiaperInteraction.PEE, DiaperInteraction.PEE_CONTINUATION, BedwettingInteraction.BEDWET, BedwettingInteraction.BEDWET_CONTINUATION]
 motive_bladder = 16652
 bladder_control_test_guid = 15794548069054423667
-
-forced_compatibility_affordances = ()
-
-
 
 
 @inject(InstanceManager, 'load_data_into_class_instances')
@@ -1729,6 +1685,27 @@ def block_toilet_for_diapered_sims(original, self, *args, **kwargs):
 
     return result
 
+
+if _wicked_whims_installed and _xml_injector_found:
+    from xml_injector.add_to_tuning import add_super_affordances_to_sims
+
+    @inject(InstanceManager, 'load_data_into_class_instances')
+    def inject_ww_interactions(original, self, *args, **kwargs):
+        result = original(self, *args, **kwargs)
+        try:
+            affordance_manager = services.affordance_manager()
+            tunings = []
+            for guid in InteractionSets.WW_REQUIRED_INTERACTIONS:
+                tun = affordance_manager.get(guid)
+                if tun is not None:
+                    tunings.append(tun)
+            add_super_affordances_to_sims(tunings)
+        except Exception as e:
+            logger.error("InstanceManager.load_data_into_class_instances injection failed to run.")
+            logger.error(traceback.format_exc())
+        return result
+
+
 actor_not_diapered_global_test_id = 14313482733996641359
 
 @inject(InstanceManager, 'load_data_into_class_instances')
@@ -1775,8 +1752,6 @@ def block_ww_pee_here_for_diapered_sims(original, self, *args, **kwargs):
     return result
 
 
-
-
 @inject(InstanceManager, 'load_data_into_class_instances')
 def little_autonomy_fixer(original, self, *args, **kwargs):
     result = original(self, *args, **kwargs)
@@ -1786,16 +1761,19 @@ def little_autonomy_fixer(original, self, *args, **kwargs):
 
         logger.info('Injecting Little Autonomy Fixes')
 
-        little_autonomy_targets = [30917]
+        # little_autonomy_targets = [30917]
 
-        little_autonomy_tests = [15768591105414661584]
+        # little_autonomy_tests = [15768591105414661584]
 
         excluded_interactions = [16617239709778473043, 10785441443215295256,287675,276860,287683,287681,280987,275341,319632,274023,274891,326839,156159,277492,277490,277498,277497,308458,308459,151786,151827,153920,146042,146041,155696,144287]
 
-        posture_buffs = [144745,280280,280281,280282]
+        posture_buffs = [NativeBuff.TODDLER_AUTONOMY_MOD_IN_HIGH_CHAIR,
+                         NativeBuff.AUTONOMY_MOD_POSTURE_HIGH_CHAIR,
+                         NativeBuff.AUTONOMY_MOD_POSTURE_PLAYMAT,
+                         NativeBuff.AUTONOMY_MOD_POSTURE_CRIB]
 
         snippet_manager = services.snippet_manager()
-        little_autonomy_test_instances = [snippet_manager.get(x) for x in little_autonomy_tests]
+        # little_autonomy_test_instances = [snippet_manager.get(x) for x in little_autonomy_tests]
 
         standard_test = snippet_manager.get(15768591105414661584)
         social_test = snippet_manager.get(13514748390442777472)
@@ -1817,6 +1795,10 @@ def little_autonomy_fixer(original, self, *args, **kwargs):
                             continue
                     # else:
                     #     logger.info('Static commodities')
+
+                    if getattr(tun, 'guid64', 0) in BedwettingInteraction.get_enum_values():
+                        # logger.info('Skipping {}'.format(tun))
+                        continue
 
                     if getattr(tun, 'guid64', 0) in InteractionSets.DIAPER_USE_INTERACTIONS:
                         # logger.info('Skipping {}'.format(tun))
@@ -1897,6 +1879,7 @@ def little_autonomy_fixer(original, self, *args, **kwargs):
 
     return result
 
+
 def dictionary_to_immutable_slots(items):
     immutable_slots_cls = sims4.collections.make_immutable_slots_class(items.keys())
     return immutable_slots_cls(items)
@@ -1935,7 +1918,6 @@ def ShowMod():
                                         ui_request=UiDialogResponse.UiDialogUiRequest.SEND_COMMAND,
                                         response_command=ember_mod_response_command,
                                         text=(lambda **_: LocalizationHelperTuning.get_raw_text("Install Mod")))
-
 
     if update_available:
         # localized_title = lambda **_: LocalizationHelperTuning.get_raw_text('NEW VERSION AVAILABLE: IwnBedWetting Extended+')
@@ -1997,14 +1979,7 @@ def ShowMod():
                                                                    button1_response, ember_mod_response))
         dialog.show_dialog()
 
-
-
-
-
-    xml_injector_spec = importlib.util.find_spec("xml_injector")
-    found = xml_injector_spec is not None
-
-    if not found:
+    if not _xml_injector_found:
         dialog = UiDialogOk.TunableFactory().default(None)
         dialog.title = lambda **_: LocalizationHelperTuning.get_raw_text('WARNING: IwnBedWetting Extended+ - XML Injector Not Detected')
         dialog.text = lambda **_: LocalizationHelperTuning.get_raw_text('This mod requires XML Injector to function. Please install the latest XML Injector from https://scumbumbomods.com/#/xml-injector/')

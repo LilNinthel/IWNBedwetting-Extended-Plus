@@ -45,6 +45,11 @@ class DiaperInteraction(EnumBase):
     COMBINED_IMMEDIATE = 18237598613162935279
 
 
+class BedwettingInteraction(EnumBase):
+    BEDWET = 14347203327565699161
+    BEDWET_CONTINUATION = 15545876685594118345
+
+
 class PantsInteraction(EnumBase):
     PEE = 12251799722243206637
     PEE_CONTINUATION = 12122353962891477661
@@ -63,8 +68,14 @@ class WickedWhimsPeeHereInteraction(EnumBase):
     EXHIBITIONISM_GO_TO_PEE = 17478837373068061038
 
 
+class WickedWhimsRequiredInteractions(EnumBase):
+    ENABLE_DIAPER_DURING_SEX = 10948860722353324353
+    DISABLE_DIAPER_DURING_SEX = 4419950742243441936
+
+
 class InteractionSets:
     TOILET_USE_INTERACTIONS = ToiletInteraction.get_enum_values()
     DIAPER_USE_INTERACTIONS = DiaperInteraction.get_enum_values()
     PANTS_USE_INTERACTIONS = PantsInteraction.get_enum_values()
     WW_PEE_HERE_INTERACTIONS = WickedWhimsPeeHereInteraction.get_enum_values()
+    WW_REQUIRED_INTERACTIONS = WickedWhimsRequiredInteractions.get_enum_values()
