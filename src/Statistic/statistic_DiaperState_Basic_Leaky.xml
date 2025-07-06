@@ -18,6 +18,7 @@
     <T n="_value">0</T>
   </U>
   <T n="max_value_tuning">10</T>
+  <E n="min_lod_value">MINIMUM</E>
   <T n="min_value_tuning">0</T>
   <L n="states">
     <U>

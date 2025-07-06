@@ -16,6 +16,9 @@ import sims4.callback_utils
 import sims4.commands
 import sims4.log
 import sims4.reload
+from audio.primitive import play_tunable_audio, TunablePlayAudio
+from clock import interval_in_real_seconds
+import alarms
 import webbrowser
 from clock import ClockSpeedMode
 from clubs.club_tuning import ClubRuleCriteriaTrait, ClubTunables
@@ -56,7 +59,7 @@ from ui.ui_dialog import UiDialogOk, UiDialogResponse, ButtonType
 from ui.ui_dialog_notification import UiDialogNotification
 from zone import Zone
 
-IWN_BED_WETTING_VERSION = "2.0.5"
+IWN_BED_WETTING_VERSION = "2.0.6"
 ModHasRun = False
 devMode = False
 logger = sims4.log.Logger('IWNBedwettingMain')
@@ -68,6 +71,7 @@ old_addons = ('Extended BabyLola Happily Diapered','Extended HappilyMessy_Diaper
 _old_mods_detected = False
 _old_addons_detected = False
 _ember_detected = False
+_duplicate_mods = False
 _admin_flag = False
 
 xml_injector_spec = importlib.util.find_spec("xml_injector")
@@ -96,36 +100,36 @@ except Exception:
 _admin_package = 'LilNinthel_AdminOverrides.package'
 
 
-@inject(SimInfoBaseWrapper, "__init__")
-def _lilninthel_on_sim_info_base_wrapper_init(original, self, *args, **kwargs):
-    try:
-        self.pre_outfit_changed_diaper = CallableList()
-    except Exception:
-        logger.error("Error _lilninthel_on_sim_info_base_wrapper_init")
-        logger.error(traceback.format_exc())
-    return original(self, *args, **kwargs)
+# @inject(SimInfoBaseWrapper, "__init__")
+# def _lilninthel_on_sim_info_base_wrapper_init(original, self, *args, **kwargs):
+#     try:
+#         self.pre_outfit_changed_diaper = CallableList()
+#     except Exception:
+#         logger.error("Error _lilninthel_on_sim_info_base_wrapper_init")
+#         logger.error(traceback.format_exc())
+#     return original(self, *args, **kwargs)
+#
+#
+# @inject(SimInfoBaseWrapper, "_set_current_outfit_without_distribution")
+# def _lilninthel_on_set_current_outfit_without_distribution(original, self, *args, **kwargs):
+#     try:
+#         value = args[0]
+#         old_value = self._base.outfit_type_and_index
+#         self.pre_outfit_changed_diaper(self, value, old_value)
+#     except Exception:
+#         logger.error("Error _lilninthel_on_set_current_outfit_without_distribution")
+#         logger.error(traceback.format_exc())
+#     return original(self, *args, **kwargs)
 
 
-@inject(SimInfoBaseWrapper, "_set_current_outfit_without_distribution")
-def _lilninthel_on_set_current_outfit_without_distribution(original, self, *args, **kwargs):
-    try:
-        value = args[0]
-        old_value = self._base.outfit_type_and_index
-        self.pre_outfit_changed_diaper(self, value, old_value)
-    except Exception:
-        logger.error("Error _lilninthel_on_set_current_outfit_without_distribution")
-        logger.error(traceback.format_exc())
-    return original(self, *args, **kwargs)
-
-
-def register_on_pre_outfit_change_callback(sim_info, callback):
-    if callback not in sim_info.pre_outfit_changed_diaper:
-        sim_info.pre_outfit_changed_diaper.append(callback)
-
-
-def unregister_on_pre_outfit_change_callback(sim_info, callback):
-    if callback in sim_info.pre_outfit_changed_diaper:
-        sim_info.pre_outfit_changed_diaper.remove(callback)
+# def register_on_pre_outfit_change_callback(sim_info, callback):
+#     if callback not in sim_info.pre_outfit_changed_diaper:
+#         sim_info.pre_outfit_changed_diaper.append(callback)
+#
+#
+# def unregister_on_pre_outfit_change_callback(sim_info, callback):
+#     if callback in sim_info.pre_outfit_changed_diaper:
+#         sim_info.pre_outfit_changed_diaper.remove(callback)
 
 
 def get_mods_files_info():
@@ -133,28 +137,35 @@ def get_mods_files_info():
     global _old_addons_detected
     global _admin_flag
     global _ember_detected
+    global _duplicate_mods
     mod_files_names = set()
     duplicated_mod_files_names = set()
-    for _, __, files in os.walk(get_sims_mods_directory()):
+    old_files = set()
+    for dirpath, __, files in os.walk(get_sims_mods_directory()):
         for file_name in files:
-            if file_name.endswith('.package'):
-                if file_name in old_mod_packages:
-                    _old_mods_detected = True
+            if file_name.lower().endswith('.package'):
+                if file_name.lower().startswith('LilNinthel_'.lower()) and file_name.lower() != 'LilNinthel_IWNBedwetting_Extended_Plus.package'.lower():
+                    if not _admin_flag:
+                        _old_mods_detected = True
+                        old_files.add(file_name)
                 if file_name.startswith('[Ember]') and file_name.endswith('accessory.package'):
                     _ember_detected = True
                 for prefix in old_addons:
-                    if file_name.startswith(prefix):
+                    if file_name.lower().startswith(prefix.lower()):
                         _old_addons_detected = True
                 if file_name == _admin_package:
                     _admin_flag = True
+                    _old_mods_detected = False
+                    _old_files = set()
                     logger.info('Admin mode activated')
-                if file_name in mod_files_names:
+                if file_name.lower() in mod_files_names:
                     duplicated_mod_files_names.add(file_name)
+                    _duplicate_mods = True
                 else:
-                    mod_files_names.add(file_name)
+                    mod_files_names.add(file_name.lower())
 
     return (
-     sorted(mod_files_names), sorted(duplicated_mod_files_names))
+     sorted(mod_files_names), sorted(duplicated_mod_files_names), sorted(old_files))
 
 
 def get_sims_documents_directory():
@@ -320,7 +331,7 @@ class DiaperWatcherWrapper():
                 logger.error(traceback.format_exc())
         elif stat_type.guid64 == IwnBedwettingStatistic.DIAPER_DEPENDENCE:
             if new_value is not None:
-                set_statistic_value(self.sim_info.id, IwnBedwettingStatistic.DIAPER_TRAINING_SKILL, 100 + new_value*51.8)
+                set_statistic_value(self.sim_info.id, IwnBedwettingStatistic.DIAPER_TRAINING_SKILL, 100 + new_value*124.8)
 
     def wicked_whims_stat_watcher(self, stat_type, old_value, new_value):
         if stat_type.guid64 == WW_SimStatistic.WW_SEX_ACTIVE_INSTANCE_IDENTIFIER or stat_type.guid64 == WW_SimStatistic.WW_SEX_ACTIVE_INSTANCE_ANIMATION_INDEX or stat_type.guid64 == WW_SimStatistic.WW_IS_SIM_IN_SEX:
@@ -532,7 +543,7 @@ def get_outfit_parts(sim_info, outfit_category_and_index):
     outfit_data = sim_info.get_outfit(outfit_category_and_index[0], outfit_category_and_index[1])
     if outfit_data is None:
         return EMPTY_DICT
-    outfit_id = getattr(sim_info.get_outfit(outfit_category_and_index[0], outfit_category_and_index[1]), 'outfit_id', 0)
+    outfit_id = getattr(outfit_data, 'outfit_id', -1)
     outfits_msg = sim_info.save_outfits()
     # outfit_data_msg = next(iter((outfit for outfit in outfits_msg.outfits)), None)
     # if outfit_data_msg is None:
@@ -1324,21 +1335,21 @@ def set_outfit_parts(sim_info, outfit_category_and_index, outfit_parts, update_c
             outfit_object_ids.append(cas_part.object_id)
             outfit_layer_ids.append(cas_part.layer_id)
 
-        apply(sim_info, outfit_body_types, outfit_part_ids, outfit_color_shifts, outfit_object_ids, outfit_layer_ids, outfit_category_and_index, update_client)
+    apply(sim_info, outfit_body_types, outfit_part_ids, outfit_color_shifts, outfit_object_ids, outfit_layer_ids, outfit_category_and_index, update_client)
 
 
 def apply(sim_info, outfit_body_types=[], outfit_part_ids=[], outfit_color_shifts=[], outfit_object_ids=[], outfit_layer_ids=[], outfit_category_and_index=None, update_client=True,):
     outfits_msg = sim_info.save_outfits()
     if outfit_category_and_index is None:
         outfit_category_and_index = sim_info.get_current_outfit()
-    outfit_id = getattr(sim_info.get_outfit(outfit_category_and_index[0],outfit_category_and_index[1]), 'outfit_id', 0)
+    outfit_id = getattr(sim_info.get_outfit(outfit_category_and_index[0],outfit_category_and_index[1]), 'outfit_id', -1)
 
     for outfit in outfits_msg.outfits:
         if outfit.category != int(outfit_category_and_index[0]):
-            # logger.info("wrong outfit category. expected {} got {}",current_outfit[0], outfit.category)
+            logger.info("wrong outfit category. expected {} got {}",outfit_category_and_index[0], outfit.category)
             continue
         if outfit.outfit_id != outfit_id:
-            # logger.info("wrong outfit id. expected {} got {}",outfit_id, outfit.outfit_id)
+            logger.info("wrong outfit id. expected {} got {}",outfit_id, outfit.outfit_id)
             continue
         else:
             outfit.parts = S4Common_pb2.IdList()
@@ -1354,7 +1365,7 @@ def apply(sim_info, outfit_body_types=[], outfit_part_ids=[], outfit_color_shift
             break
     sim_info._base.outfits = outfits_msg.SerializeToString()
     # logger.info('outfit {}', sim_info._base.outfits)
-    # sim_info._base.outfit_type_and_index = current_outfit
+    sim_info._base.outfit_type_and_index = outfit_category_and_index
     # sim_info.set_outfit_dirty(outfit_category_and_index[0])
     if update_client:
         sim_info.resend_outfits()
@@ -1499,6 +1510,60 @@ motive_bladder = 16652
 bladder_control_test_guid = 15794548069054423667
 
 
+def start_sound(play_sound, duration, sim_info, dummy):
+    # play_sound = play_sound.audio_sting
+    logger.info("{}".format(play_sound.__class__))
+    logger.info("{}".format(play_sound))
+    logger.info("{}".format(dir(play_sound)))
+
+    dummy.sound = play_tunable_audio(play_sound.audio_sting)
+
+    def _stop_sound(*args):
+        logger.info("stop sound")
+        dummy.sound.stop()
+        dummy.sound = None
+        dummy._stop_sound_handle.cancel()
+        dummy._stop_sound_handle = None
+
+    dummy._stop_sound_handle = alarms.add_alarm(sim_info, interval_in_real_seconds(duration), _stop_sound)
+
+
+@sims4.commands.Command('iwn.play_peeing_sound', command_type=(sims4.commands.CommandType.Live))
+def play_peeing_sound(owner_id:int=None, duration=5.0, _connection=None):
+    try:
+        return
+        # logger.info("play_peeing_sound")
+        # lot_trait_manager = services.get_instance_manager(sims4.resources.Types.ZONE_MODIFIER)
+        # lot_trait = lot_trait_manager.get(144143)
+        #
+        # # logger.info(str(lot_trait.schedule._tuned_values))
+        # # logger.info(str(dir(lot_trait.schedule._tuned_values)))
+        # action = lot_trait.schedule.schedule_entries[0].actions[0]
+        #
+        # logger.info(str(action.play_sound))
+        # logger.info(str(action.play_sound.sound_effect))
+        #
+        # sim_info = services.sim_info_manager().get(owner_id)
+        # if sim_info is not None:
+        #     if owner_id is not None:
+        #         affordance_manager = services.affordance_manager()
+        #         tun = affordance_manager.get(DiaperInteraction.PEE)
+        #
+        #         # audio = tun.basic_extras[1].audio_sting
+        #         # TunablePlayAudio._factory(sim_info, audio.audio, audio.joint_name_hash, audio.play_on_active_sim_only, audio.immediate_audio)
+        #
+        #         logger.info(str(tun.basic_extras[1]))
+        #         logger.info(str(tun.basic_extras[1].audio_sting))
+        #
+        #         # start_sound(action.play_sound, duration, sim_info)
+        #         start_sound(tun.basic_extras[1], duration, sim_info)
+        #         # start_sound(action.play_sound, duration, sim_info)
+
+    except Exception:
+        logger.error("play_peeing_sound failed to run.")
+        logger.error(traceback.format_exc())
+
+
 @inject(InstanceManager, 'load_data_into_class_instances')
 def modify_sleep_affordances(original, self, *args, **kwargs):
     result = original(self, *args, **kwargs)
@@ -1509,7 +1574,38 @@ def modify_sleep_affordances(original, self, *args, **kwargs):
         logger.info('Injecting Sleep Affordances')
         bladder_control_test = services.snippet_manager().get(bladder_control_test_guid)
 
+
         affordance_manager = services.affordance_manager()
+
+        # tun = affordance_manager.get(DiaperInteraction.PEE)
+        #
+        # logger.info(str(tun.basic_extras))
+        # logger.info(str(dir(tun.basic_extras)))
+        # logger.info(str(tun.basic_extras[1]))
+        # logger.info(str(dir(tun.basic_extras[1])))
+        # logger.info(str(tun.basic_extras[1]._tuned_values))
+        # logger.info(str(dir(tun.basic_extras[1]._tuned_values)))
+        # logger.info(str(tun.basic_extras[1].audio_sting))
+        # logger.info(str(dir(tun.basic_extras[1].audio_sting)))
+        # logger.info(str(tun.basic_extras[1].audio_sting.audio))
+        # logger.info(str(dir(tun.basic_extras[1].audio_sting.audio)))
+        # logger.info(str(tun.basic_extras[1].audio_sting._tuned_values))
+        # logger.info(str(dir(tun.basic_extras[1].audio_sting._tuned_values)))
+        # logger.info(str(tun.basic_extras[1].audio_sting._tuned_values.audio))
+        # logger.info(str(dir(tun.basic_extras[1].audio_sting._tuned_values.audio)))
+
+        # lot_trait_manager = services.get_instance_manager(sims4.resources.Types.ZONE_MODIFIER)
+        # lot_trait = lot_trait_manager.get(144143)
+        #
+        # logger.info(str(lot_trait.schedule._tuned_values))
+        # logger.info(str(dir(lot_trait.schedule._tuned_values)))
+        # action = lot_trait.schedule.schedule_entries[0].actions[0]
+        #
+        # logger.info(str(action.play_sound))
+        # logger.info(str(dir(action.play_sound)))
+        # logger.info(str(action.play_sound.sound_effect))
+        # logger.info(str(dir(action.play_sound.sound_effect)))
+
         for tun in affordance_manager._tuned_classes.values():
             # if hasattr(tun, 'sim_affinity_posture_scoring_data') and tun.sim_affinity_posture_scoring_data is not None:
             if hasattr(tun, 'appropriateness_tags') and tun.appropriateness_tags is not None:
@@ -1962,6 +2058,12 @@ def ShowMod():
         dialog = UiDialogOk.TunableFactory().default(None)
         dialog.title = lambda **_: LocalizationHelperTuning.get_raw_text('WARNING: IWNBedWetting Extended+ Old Add-Ons Detected')
         dialog.text = lambda **_: LocalizationHelperTuning.get_raw_text('Please delete ALL previous versions of the following add-ons: Happily Diapered Extended by BabyLola, Unhappily Diapered Extended by Lil Luna, ABDL Extended by mackico, or Happily Messy Extended by DiaperDump. They are all now included with this mod and may cause issues.')
+        dialog.show_dialog()
+
+    if _duplicate_mods:
+        dialog = UiDialogOk.TunableFactory().default(None)
+        dialog.title = lambda **_: LocalizationHelperTuning.get_raw_text('WARNING: Duplicate Package Names Detected')
+        dialog.text = lambda **_: LocalizationHelperTuning.get_raw_text('You have duplicate package names in your mods folder, you may have installed multiple versions of the same mod.\n\n{0}'.format(str(mods[1])))
         dialog.show_dialog()
 
     if not _ember_detected:

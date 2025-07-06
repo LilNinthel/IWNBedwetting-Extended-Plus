@@ -6,9 +6,11 @@
     <E>ADULT</E>
     <E>ELDER</E>
   </L>
-  <L n="buffs">
+  <L n="always_on_buffs">
     <U>
       <T n="buff_type">17774098266968195227<!--IwnBedWetting_Incontinence_Buff--></T>
+    </U>
+    <U>
       <T n="buff_type">18387649698602079241<!--LilNinthel:buff_TotalUrinaryIncontinence--></T>
     </U>
   </L>

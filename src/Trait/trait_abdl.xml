@@ -6,7 +6,7 @@
     <E>ADULT</E>
     <E>ELDER</E>
   </L>
-  <L n="buffs">
+  <L n="always_on_buffs">
     <U>
       <T n="buff_type">6599520983304938591<!--mackico_ABDL_corebuff--></T>
     </U>

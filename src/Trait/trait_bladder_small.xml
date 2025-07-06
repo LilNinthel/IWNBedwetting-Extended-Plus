@@ -6,7 +6,7 @@
     <E>ADULT</E>
     <E>ELDER</E>
   </L>
-  <L n="buffs">
+  <L n="always_on_buffs">
     <U>
       <T n="buff_type">12671607501573716263<!--LilNinthel:buff_trait_bladder_small--></T>
     </U>

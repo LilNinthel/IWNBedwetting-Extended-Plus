@@ -6,7 +6,7 @@
     <E>ADULT</E>
     <E>ELDER</E>
   </L>
-  <L n="buffs">
+  <L n="always_on_buffs">
     <U>
       <T n="buff_type">11072466440704092092<!--BabyLola_LoveDiapers_buff_LovesDiapers--></T>
     </U>

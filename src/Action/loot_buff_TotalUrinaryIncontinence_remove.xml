@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_buff_TotalUrinaryIncontinence_remove" s="8584366914284839113">
+  <L n="loot_actions">
+    <V t="buff_removal">
+      <U n="buff_removal">
+        <E n="subject">Actor</E>
+        <L n="buffs_to_remove">
+          <T>18387649698602079241<!--LilNinthel:buff_TotalUrinaryIncontinence--></T>
+          <T>1189056563910849303<!--LilNinthel:buff_TotalUrinaryIncontinence_PantsWetness--></T>
+          <T>14124640347152239816<!--LilNinthel:buff_TotalUrinaryIncontinence_DiaperWetness--></T>
+        </L>
+      </U>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_remove">
+        <U n="statistic_remove">
+          <T n="stat">15105330414396651143<!--LilNinthel:statistic_TotalUrinaryIncontinence_Tracker--></T>
+          <L n="subject">
+            <E>Actor</E>
+          </L>
+        </U>
+      </V>
+    </V>
+  </L>
+</I>
