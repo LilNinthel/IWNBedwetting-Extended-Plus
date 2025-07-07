@@ -17,6 +17,7 @@ import sims4.commands
 import sims4.log
 import sims4.reload
 from audio.primitive import play_tunable_audio, TunablePlayAudio
+from autonomy.autonomy_modifier import AutonomyModifier
 from clock import interval_in_real_seconds
 import alarms
 import webbrowser
@@ -711,6 +712,62 @@ def add_buff(sim_info, buff_id, buff_reason=None):
     # if buff_reason is not None:
     #     buff_reason = LocalizationHelperTuning.get_localized_string(buff_reason)
     return sim_info.add_buff_from_op(buff_instance, buff_reason=buff_reason)
+
+
+def get_all_buffs():
+    buff_manager = services.get_instance_manager(sims4.resources.Types.BUFF)
+    return buff_manager.types.values()
+    # return [buff_manager.get(129473)]
+
+@inject(InstanceManager, 'load_data_into_class_instances')
+def fix_buff_compatibility(original, self, *args, **kwargs):
+    result = original(self, *args, **kwargs)
+    try:
+        if self.TYPE != Types.BUFF:
+            return result
+
+        logger.info("Injecting buff compatibility")
+        affordance_manager = services.affordance_manager()
+
+        for buff in get_all_buffs():
+            if not hasattr(buff, 'game_effect_modifier') or not hasattr(buff.game_effect_modifier, '_game_effect_modifiers'):
+                continue
+            for (index, modifier) in enumerate(buff.game_effect_modifier._game_effect_modifiers):
+                if isinstance(modifier, AutonomyModifier):
+                    if getattr(modifier, "_suppress_self_affordances", False):
+                        if modifier._provided_affordance_compatibility is not None:
+                            if hasattr(modifier._provided_affordance_compatibility._tuned_values, 'default_inclusion'):
+                                # logger.info('{}'.format(tun.super_affordance_compatibility._tuned_values))
+                                if hasattr(modifier._provided_affordance_compatibility._tuned_values.default_inclusion,
+                                           'include_all_by_default') and not modifier._provided_affordance_compatibility._tuned_values.default_inclusion.include_all_by_default:
+
+                                    logger.info('  {}: found exclude_all compatibility', buff)
+
+                                    # logger.info('{}'.format(
+                                    #     tun.super_affordance_compatibility._tuned_values.default_inclusion.include_affordances))
+
+                                    default_inclusion = dict(modifier._provided_affordance_compatibility._tuned_values.default_inclusion)
+                                    affordances = set(modifier._provided_affordance_compatibility._tuned_values.default_inclusion.include_affordances)
+                                    for interaction_id in general_diaper_usage_affordances:
+                                        tuning_class = affordance_manager.get(interaction_id)
+                                        if tuning_class is not None and tuning_class not in affordances:
+                                            affordances.add(tuning_class)
+
+                                    default_inclusion['include_affordances'] = frozenset(affordances)
+                                    default_inclusion_immutable_slots_cls = sims4.collections.make_immutable_slots_class(
+                                        default_inclusion.keys())
+                                    default_inclusion_slots = default_inclusion_immutable_slots_cls(default_inclusion)
+                                    provided_affordance_compatibility = dict(modifier._provided_affordance_compatibility._tuned_values)
+                                    provided_affordance_compatibility['default_inclusion'] = default_inclusion_slots
+                                    provided_affordance_compatibility_immutable_slots_cls = sims4.collections.make_immutable_slots_class(
+                                        provided_affordance_compatibility.keys())
+                                    provided_affordance_compatibility_slots = provided_affordance_compatibility_immutable_slots_cls(
+                                        provided_affordance_compatibility)
+                                    modifier._provided_affordance_compatibility._tuned_values = provided_affordance_compatibility_slots
+    except Exception:
+        logger.error("fix_buff_compatibility failed to run.")
+        logger.error(traceback.format_exc())
+    return result
 
 
 def remove_buff(sim_info, *buff_ids):
@@ -1508,6 +1565,20 @@ def DebugNotification(text, title=None):
 sleeping_diaper_usage_affordances = [DiaperInteraction.PEE, DiaperInteraction.PEE_CONTINUATION, BedwettingInteraction.BEDWET, BedwettingInteraction.BEDWET_CONTINUATION]
 motive_bladder = 16652
 bladder_control_test_guid = 15794548069054423667
+
+general_diaper_usage_affordances = [DiaperInteraction.PEE,
+                                    DiaperInteraction.PEE_CONTINUATION,
+                                    DiaperInteraction.PEE_IMMEDIATE,
+                                    DiaperInteraction.PEE_STANDING,
+                                    DiaperInteraction.POOP,
+                                    DiaperInteraction.POOP_CONTINUATION,
+                                    DiaperInteraction.POOP_IMMEDIATE,
+                                    DiaperInteraction.POOP_STANDING,
+                                    DiaperInteraction.COMBINED,
+                                    DiaperInteraction.COMBINED_CONTINUATION,
+                                    DiaperInteraction.COMBINED_IMMEDIATE,
+                                    DiaperInteraction.COMBINED_STANDING
+                                    ]
 
 
 def start_sound(play_sound, duration, sim_info, dummy):
