@@ -15,6 +15,9 @@
       </L>
     </L>
   </V>
+  <L n="_loot_on_instance">
+    <T>14893323625658229228<!--LilNinthel:loot_buff_TotalUrinaryIncontinence_effects_remove--></T>
+  </L>
   <T n="audio_sting_on_add" p="InGame\Audio\Stings\sting_buff_gain.propx">39b2aa4a:00000000:8af8b916cf64c646</T>
   <T n="audio_sting_on_remove" p="InGame\Audio\Stings\sting_buff_loss.propx">39b2aa4a:00000000:3bf33216a25546ea</T>
   <T n="buff_description">0x7E2AAE93<!--This sim is incontinent--></T>

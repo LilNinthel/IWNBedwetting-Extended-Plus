@@ -37,6 +37,7 @@
           <L n="commodities_to_add">
             <T>14741762727861188948<!--LilNinthel:statistic_DiaperState_Basic--></T>
           </L>
+          <T n="commodities_value_persist_for_travel">True</T>
           <L n="skill_tag_modifiers">
             <U>
               <E n="key">Skill_Toddler</E>

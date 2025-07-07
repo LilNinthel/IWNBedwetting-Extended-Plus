@@ -14,5 +14,13 @@
         </U>
       </V>
     </V>
+    <V t="buff_removal">
+      <U n="buff_removal">
+        <L n="buffs_to_remove">
+          <T>1189056563910849303<!--LilNinthel:buff_TotalUrinaryIncontinence_PantsWetness--></T>
+          <T>14124640347152239816<!--LilNinthel:buff_TotalUrinaryIncontinence_DiaperWetness--></T>
+        </L>
+      </U>
+    </V>
   </L>
 </I>

@@ -6,7 +6,7 @@
     <E>ADULT</E>
     <E>ELDER</E>
   </L>
-  <L n="buffs">
+  <L n="always_on_buffs">
     <U>
       <T n="buff_type">11729209223291656306<!--LilNinthel:buff_diaperAbsorbency_veryLow--></T>
     </U>
