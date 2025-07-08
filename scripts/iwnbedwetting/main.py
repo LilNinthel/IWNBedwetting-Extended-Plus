@@ -60,8 +60,8 @@ from ui.ui_dialog import UiDialogOk, UiDialogResponse, ButtonType
 from ui.ui_dialog_notification import UiDialogNotification
 from zone import Zone
 
-IWN_BED_WETTING_VERSION = "2.0.7"
-PACKAGE_VERSION = 1
+IWN_BED_WETTING_VERSION = "2.0.8"
+PACKAGE_VERSION = 2
 ModHasRun = False
 devMode = False
 logger = sims4.log.Logger('IWNBedwettingMain')
