@@ -150,6 +150,7 @@ def get_mods_files_info():
     duplicated_mod_files_names = set()
     mod_dict = dict()
     old_files = set()
+    old_addons = set()
     for dirpath, __, files in os.walk(get_sims_mods_directory()):
         for file_name in files:
             if file_name.lower().endswith('.package'):
@@ -166,6 +167,7 @@ def get_mods_files_info():
                 for prefix in old_addons:
                     if file_name.lower().startswith(prefix.lower()):
                         _old_addons_detected = True
+                        old_addons.add(file_name)
                 if file_name == _admin_package:
                     _admin_flag = True
                     _old_mods_detected = False
@@ -178,7 +180,7 @@ def get_mods_files_info():
                     mod_files_names.add(file_name.lower())
 
     return (
-     sorted(mod_files_names), sorted(duplicated_mod_files_names), sorted(old_files), mod_dict)
+     sorted(mod_files_names), sorted(duplicated_mod_files_names), sorted(old_files), mod_dict, old_addons)
 
 
 def get_sims_documents_directory():
@@ -2138,7 +2140,9 @@ def ShowMod():
 
     mods = get_mods_files_info()
     dup_file_names = mods[1]
+    old_files = mods[2]
     mods_dict = mods[3]
+    old_addons = mods[4]
 
     if not check_package_version():
         # localized_title = lambda **_: LocalizationHelperTuning.get_raw_text('WARNING: IwnBedWetting Extended+ Old Files Detected')
@@ -2153,18 +2157,50 @@ def ShowMod():
         # localized_title = lambda **_: LocalizationHelperTuning.get_raw_text('WARNING: IwnBedWetting Extended+ Old Files Detected')
         # localized_text = lambda **_: LocalizationHelperTuning.get_raw_text('Please delete ALL LilNinthel packages EXCEPT for LilNinthel_IWNBedwetting_Extended_Plus.package or the mod may not function correctly')
         # ShowNotificationInternal(localized_title, localized_text, None)
+        folder_dict = dict()
+
+        dup_arr = []
+        for dup in old_files:
+            for file_path in mods_dict[dup.lower()]:
+                if file_path not in folder_dict.keys():
+                    folder_dict[file_path] = []
+                folder_dict[file_path].append(dup)
+
+        for key in folder_dict.keys():
+            dup_arr.append('\n{}:'.format(key))
+            for file_name in folder_dict[key]:
+                dup_arr.append(file_name)
+
+        dup_str = '\n'.join(dup_arr)
+
         dialog = UiDialogOk.TunableFactory().default(None)
         dialog.title = lambda **_: LocalizationHelperTuning.get_raw_text('WARNING: IWNBedWetting Extended+ Old Files Detected')
-        dialog.text = lambda **_: LocalizationHelperTuning.get_raw_text('Please delete ALL LilNinthel .package files EXCEPT for LilNinthel_IWNBedwetting_Extended_Plus.package or the mod may not function correctly')
+        dialog.text = lambda **_: LocalizationHelperTuning.get_raw_text('Please delete ALL LilNinthel .package files EXCEPT for LilNinthel_IWNBedwetting_Extended_Plus.package or the mod may not function correctly\n{}'.format(dup_str))
         dialog.show_dialog()
 
     if _old_addons_detected and not _admin_flag:
         # localized_title = lambda **_: LocalizationHelperTuning.get_raw_text('WARNING: IwnBedWetting Extended+ Old Files Detected')
         # localized_text = lambda **_: LocalizationHelperTuning.get_raw_text('Please delete ALL LilNinthel packages EXCEPT for LilNinthel_IWNBedwetting_Extended_Plus.package or the mod may not function correctly')
         # ShowNotificationInternal(localized_title, localized_text, None)
+        folder_dict = dict()
+
+        dup_arr = []
+        for dup in old_addons:
+            for file_path in mods_dict[dup.lower()]:
+                if file_path not in folder_dict.keys():
+                    folder_dict[file_path] = []
+                folder_dict[file_path].append(dup)
+
+        for key in folder_dict.keys():
+            dup_arr.append('\n{}:'.format(key))
+            for file_name in folder_dict[key]:
+                dup_arr.append(file_name)
+
+        dup_str = '\n'.join(dup_arr)
+
         dialog = UiDialogOk.TunableFactory().default(None)
         dialog.title = lambda **_: LocalizationHelperTuning.get_raw_text('WARNING: IWNBedWetting Extended+ Old Add-Ons Detected')
-        dialog.text = lambda **_: LocalizationHelperTuning.get_raw_text('Please delete ALL previous versions of the following add-ons: Happily Diapered Extended by BabyLola, Unhappily Diapered Extended by Lil Luna, ABDL Extended by mackico, or Happily Messy Extended by DiaperDump. They are all now included with this mod and may cause issues.')
+        dialog.text = lambda **_: LocalizationHelperTuning.get_raw_text('Please delete ALL previous versions of the following add-ons: Happily Diapered Extended by BabyLola, Unhappily Diapered Extended by Lil Luna, ABDL Extended by mackico, or Happily Messy Extended by DiaperDump. They are all now included with this mod and may cause issues.\n{}'.format(dup_str))
         dialog.show_dialog()
 
     # if _duplicate_mods:
