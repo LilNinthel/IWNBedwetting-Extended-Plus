@@ -150,7 +150,7 @@ def get_mods_files_info():
     duplicated_mod_files_names = set()
     mod_dict = dict()
     old_files = set()
-    old_addons = set()
+    old_addon_files = set()
     for dirpath, __, files in os.walk(get_sims_mods_directory()):
         for file_name in files:
             if file_name.lower().endswith('.package'):
@@ -167,7 +167,7 @@ def get_mods_files_info():
                 for prefix in old_addons:
                     if file_name.lower().startswith(prefix.lower()):
                         _old_addons_detected = True
-                        old_addons.add(file_name)
+                        old_addon_files.add(file_name)
                 if file_name == _admin_package:
                     _admin_flag = True
                     _old_mods_detected = False
@@ -180,7 +180,7 @@ def get_mods_files_info():
                     mod_files_names.add(file_name.lower())
 
     return (
-     sorted(mod_files_names), sorted(duplicated_mod_files_names), sorted(old_files), mod_dict, old_addons)
+     sorted(mod_files_names), sorted(duplicated_mod_files_names), sorted(old_files), mod_dict, old_addon_files)
 
 
 def get_sims_documents_directory():
