@@ -37,6 +37,7 @@ from iwnbedwetting.enums.statistics import IwnBedwettingStatistic, DiaperStateSt
 from iwnbedwetting.enums.traits import IwnBedwettingTrait
 from iwnbedwetting.enums.wickedwhims import WW_SimStatistic, WW_SexNakedType, WW_SexUndressingTypeSetting
 from iwnbedwetting.native_enums.buffs import NativeBuff
+from iwnbedwetting.native_enums.interactions import NativeInteraction
 from iwnbedwetting.native_enums.traits import NativeTrait
 from iwnbedwetting.utilities.injector import inject
 from objects.components import component_definition, ComponentContainer
@@ -1937,8 +1938,55 @@ def block_ww_pee_here_for_diapered_sims(original, self, *args, **kwargs):
                     tun.test_globals = TestList(test_list)
                     # logger.info('{}'.format(tun.test_globals))
                     # tun.test_globals.add(toilet_global_test)
+    except Exception as e:
+        logger.error("InstanceManager.load_data_into_class_instances injection failed to run.")
+        logger.error(traceback.format_exc())
+
+    return result
 
 
+werewolf_mark_interactions = [NativeInteraction.WEREWOLF_ABILITIES_MARK,
+                              NativeInteraction.WEREWOLF_ABILITIES_MARK_RALLY,
+                              NativeInteraction.WEREWOLF_ABILITIES_MARK_SELF,
+                              NativeInteraction.WEREWOLF_TERRAIN_GOHERE_MARK,
+                              NativeInteraction.WEREWOLF_TERRAIN_GOHERE_MARK_RALLY]
+
+
+@inject(InstanceManager, 'load_data_into_class_instances')
+def block_werewolf_mark_territory(original, self, *args, **kwargs):
+    result = original(self, *args, **kwargs)
+    try:
+        if self.TYPE != Types.INTERACTION:
+            return result
+
+        logger.info('Injecting Werewolf Mark Territory Affordances')
+
+        snippet_manager = services.snippet_manager()
+        toilet_global_test = snippet_manager.get(actor_not_diapered_global_test_id)
+
+        affordance_manager = services.affordance_manager()
+        for guid in werewolf_mark_interactions:
+            tun = affordance_manager.get(guid)
+            if tun is not None:
+                logger.info('{}'.format(tun))
+                if hasattr(tun, 'test_globals'):
+                    # logger.info('{}'.format(tun.test_globals.__class__))
+                    # logger.info('{}'.format(tun.test_globals))
+                    # logger.info('{}'.format(dir(tun.test_globals)))
+                    if toilet_global_test not in tun.test_globals:
+                        test_list = list(tun.test_globals)
+                        test_list.append(toilet_global_test)
+                        tun.test_globals = TestList(test_list)
+                        # logger.info('{}'.format(tun.test_globals))
+                    # else:
+                        # logger.info('Toilet global tests already fixed')
+                        # logger.info('{}'.format(tun.test_globals))
+                else:
+                    test_list = list()
+                    test_list.append(toilet_global_test)
+                    tun.test_globals = TestList(test_list)
+                    # logger.info('{}'.format(tun.test_globals))
+                    # tun.test_globals.add(toilet_global_test)
     except Exception as e:
         logger.error("InstanceManager.load_data_into_class_instances injection failed to run.")
         logger.error(traceback.format_exc())
