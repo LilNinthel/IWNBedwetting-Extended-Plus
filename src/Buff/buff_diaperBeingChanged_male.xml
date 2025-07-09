@@ -1,4 +1,5 @@
-<I c="Buff" i="buff" m="buffs.buff" n="LilNinthel:buff_diaperBeingChanged" s="12095656577756951320">
+<?xml version="1.0" encoding="utf-8"?>
+<I c="Buff" i="buff" m="buffs.buff" n="LilNinthel:buff_diaperBeingChanged_male" s="15047740195163917600">
   <V n="_add_test_set" t="tests_set">
     <L n="tests_set">
       <L>
@@ -13,7 +14,7 @@
               </L>
             </V>
             <V n="gender" t="specified">
-              <E n="specified">FEMALE</E>
+              <E n="specified">MALE</E>
             </V>
           </U>
         </V>
@@ -38,7 +39,7 @@
           <U>
             <V n="modifier" t="set_cas_part">
               <U n="set_cas_part">
-                <T n="cas_part">6544<!--yfBottom_Nude--></T>
+                <T n="cas_part">6574<!--ymBottom_Nude--></T>
                 <T n="expect_invalid_parts">True</T>
                 <T n="remove_conflicting">True</T>
               </U>

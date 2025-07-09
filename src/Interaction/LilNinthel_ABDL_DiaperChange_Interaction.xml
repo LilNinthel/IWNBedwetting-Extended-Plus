@@ -50,6 +50,16 @@
     <V t="buff">
       <U n="buff">
         <U n="buff_type">
+          <T n="buff_type">15047740195163917600<!--LilNinthel:buff_diaperBeingChanged_male--></T>
+        </U>
+        <L n="subject">
+          <E>TargetSim</E>
+        </L>
+      </U>
+    </V>
+    <V t="buff">
+      <U n="buff">
+        <U n="buff_type">
           <T n="buff_type">17510949455875371615<!--LilNinthel:buff_diaperBeingChanged_child--></T>
         </U>
         <L n="subject">
@@ -84,8 +94,7 @@
                 <V n="threshold" t="enabled">
                   <U n="enabled">
                     <T n="value">3</T>
-                  </U>7
-                </V>
+                  </U>7 </V>
               </U>
             </V>
           </L>
