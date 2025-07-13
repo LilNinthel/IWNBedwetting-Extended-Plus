@@ -32,11 +32,13 @@ from iwnbedwetting.diaper_cas_part_config.snippet import DiaperLoadCASConfig
 from iwnbedwetting.enums.buffs import IwnBedwettingBuff
 from iwnbedwetting.enums.diapers import DiaperCC, DiaperBodyType, DiaperHeight, DiaperFrame
 from iwnbedwetting.enums.interactions import InteractionSets, DiaperInteraction, BedwettingInteraction
+from iwnbedwetting.enums.pacifiers import Pacifiers
 from iwnbedwetting.enums.rewards import IwnBedwettingReward
 from iwnbedwetting.enums.statistics import IwnBedwettingStatistic, DiaperStateStatistics
 from iwnbedwetting.enums.traits import IwnBedwettingTrait
 from iwnbedwetting.enums.wickedwhims import WW_SimStatistic, WW_SexNakedType, WW_SexUndressingTypeSetting
 from iwnbedwetting.native_enums.buffs import NativeBuff
+from iwnbedwetting.native_enums.interactions import NativeInteraction
 from iwnbedwetting.native_enums.traits import NativeTrait
 from iwnbedwetting.utilities.injector import inject
 from objects.components import component_definition, ComponentContainer
@@ -60,8 +62,8 @@ from ui.ui_dialog import UiDialogOk, UiDialogResponse, ButtonType
 from ui.ui_dialog_notification import UiDialogNotification
 from zone import Zone
 
-IWN_BED_WETTING_VERSION = "2.0.7"
-PACKAGE_VERSION = 1
+IWN_BED_WETTING_VERSION = "2.1.0"
+PACKAGE_VERSION = 2
 ModHasRun = False
 devMode = False
 logger = sims4.log.Logger('IWNBedwettingMain')
@@ -440,6 +442,12 @@ def _iwnbedwetting_sim_info_load_sim_info(original, self, *args, **kwargs):
         add_diaper_load_tracking(self)
         evaluate_buffs(self)
         apply_outfit_parts_for_diaper_load(self)
+        if is_wearing_pacifier(self):
+            if not has_buff(self.id, IwnBedwettingBuff.HAS_PACIFIER):
+                add_buff(self, IwnBedwettingBuff.HAS_PACIFIER)
+        else:
+            if has_buff(self, IwnBedwettingBuff.HAS_PACIFIER):
+                remove_buff(self, IwnBedwettingBuff.HAS_PACIFIER)
     except Exception as ex:
         try:
             logger.error("_iwnbedwetting_sim_info_load_sim_info failed to run.")
@@ -495,6 +503,12 @@ def _on_sim_outfit_change(sim_info, new_outfit, previous_outfit):
         # sim_info.unregister_for_outfit_changed_callback(_on_sim_outfit_change)
         try:
             logger.info("_on_sim_outfit_change to {} start {}".format(new_outfit, sim_info))
+            if is_wearing_pacifier(sim_info, new_outfit):
+                if not has_buff(sim_info.id, IwnBedwettingBuff.HAS_PACIFIER):
+                    add_buff(sim_info, IwnBedwettingBuff.HAS_PACIFIER)
+            else:
+                if has_buff(sim_info, IwnBedwettingBuff.HAS_PACIFIER):
+                    remove_buff(sim_info,IwnBedwettingBuff.HAS_PACIFIER)
             if have_pants_changed(sim_info, new_outfit, previous_outfit):
                 logger.info("Pants changed")
                 remove_buff(sim_info, IwnBedwettingBuff.WET_PANTS_OVERLAY)
@@ -717,15 +731,16 @@ def _on_buff_removed(buff_type, sim_id):
 
 
 def add_buff(sim_info, buff_id, buff_reason=None):
-    buff_manager = services.get_instance_manager(sims4.resources.Types.BUFF)
-    buff_instance = buff_manager.get(buff_id)
-    if buff_instance is None:
-        return False
-    if buff_instance in sim_info.get_active_buff_types():
-        return False
-    # if buff_reason is not None:
-    #     buff_reason = LocalizationHelperTuning.get_localized_string(buff_reason)
-    return sim_info.add_buff_from_op(buff_instance, buff_reason=buff_reason)
+    if sim_info is not None:
+        buff_manager = services.get_instance_manager(sims4.resources.Types.BUFF)
+        buff_instance = buff_manager.get(buff_id)
+        if buff_instance is None:
+            return False
+        if buff_instance in sim_info.get_active_buff_types():
+            return False
+        # if buff_reason is not None:
+        #     buff_reason = LocalizationHelperTuning.get_localized_string(buff_reason)
+        return sim_info.add_buff_from_op(buff_instance, buff_reason=buff_reason)
 
 
 def get_all_buffs():
@@ -793,6 +808,97 @@ def remove_buff(sim_info, *buff_ids):
     for buff_entry in buff_entries:
         sim_info.remove_buff_entry(buff_entry)
     return True
+
+
+@sims4.commands.Command('iwn.suck_favorite_pacifier', command_type=(sims4.commands.CommandType.Live))
+def suck_favorite_pacifier(owner_id:int=None, _connection=None):
+    if owner_id is not None:
+        sim_info = services.sim_info_manager().get(owner_id)
+        if sim_info is not None:
+            if sim_info.species != Species.HUMAN:
+                return
+            logger.info("iwn.suck_favorite_pacifier: {}", sim_info)
+            paci_index = get_statistic_value(sim_info, IwnBedwettingStatistic.FAVORITE_PACIFIER)
+            if paci_index is None or paci_index < 0:
+                suck_random_pacifier(owner_id)
+            else:
+                paci_index = int(paci_index)
+                outfit_category_and_index = sim_info.get_current_outfit()
+                if outfit_category_and_index is not None:
+                    outfit_parts = get_outfit_parts(sim_info, outfit_category_and_index)
+                    if outfit_parts is not None:
+                        pacifiers = Pacifiers.get_enum_values_ordered()
+                        if paci_index < len(pacifiers):
+                            outfit_parts[BodyType.LIP_RING_LEFT] = (CasPart((pacifiers[paci_index])),)
+                            set_outfit_parts(sim_info, outfit_category_and_index, outfit_parts)
+                            add_buff(sim_info, IwnBedwettingBuff.HAS_PACIFIER)
+                        else:
+                            remove_statistic(owner_id, IwnBedwettingStatistic.FAVORITE_PACIFIER)
+
+
+@sims4.commands.Command('iwn.suck_random_pacifier', command_type=(sims4.commands.CommandType.Live))
+def suck_random_pacifier(owner_id:int=None, _connection=None):
+    if owner_id is not None:
+        sim_info = services.sim_info_manager().get(owner_id)
+        logger.info("iwn.suck_random_pacifier: {}", sim_info)
+        if sim_info is not None:
+            if sim_info.species != Species.HUMAN:
+                return
+            outfit_category_and_index = sim_info.get_current_outfit()
+            logger.info("iwn.suck_random_pacifier outfit: {}", outfit_category_and_index)
+            if outfit_category_and_index is not None:
+                outfit_parts = get_outfit_parts(sim_info, outfit_category_and_index)
+                logger.info("iwn.suck_random_pacifier outfit_parts: {}", outfit_parts)
+                if outfit_parts is not None:
+                    # if BodyType.LIP_RING_LEFT in outfit_parts.keys():
+                    #     for outfit_part in outfit_parts[BodyType.LIP_RING_LEFT]:
+                    #         if is_pacifier(outfit_part.cas_part):
+                    #             return
+                    paci_cas_id = random.choice(Pacifiers.get_enum_values_ordered())
+                    logger.info("Pacifier ID: {}", paci_cas_id)
+                    outfit_parts[BodyType.LIP_RING_LEFT] = (CasPart((paci_cas_id)),)
+                    set_outfit_parts(sim_info, outfit_category_and_index, outfit_parts)
+                    add_buff(sim_info, IwnBedwettingBuff.HAS_PACIFIER)
+
+
+@sims4.commands.Command('iwn.remove_pacifier', command_type=(sims4.commands.CommandType.Live))
+def remove_pacifier(owner_id:int=None, _connection=None):
+    if owner_id is not None:
+        sim_info = services.sim_info_manager().get(owner_id)
+        if sim_info is not None:
+            if sim_info.species != Species.HUMAN:
+                return
+            logger.info("iwn.remove_pacifier: {}", sim_info)
+            outfit_category_and_index = sim_info.get_current_outfit()
+            if outfit_category_and_index is not None:
+                outfit_parts = get_outfit_parts(sim_info, outfit_category_and_index)
+                if outfit_parts is not None:
+                    if BodyType.LIP_RING_LEFT in outfit_parts.keys():
+                        for outfit_part in outfit_parts[BodyType.LIP_RING_LEFT]:
+                            if is_pacifier(outfit_part.cas_part):
+                                outfit_parts.pop(BodyType.LIP_RING_LEFT)
+                        set_outfit_parts(sim_info, outfit_category_and_index, outfit_parts)
+                        remove_buff(sim_info, IwnBedwettingBuff.HAS_PACIFIER)
+
+
+def is_wearing_pacifier(sim_info, outfit_category_and_index=None):
+    if sim_info is not None:
+        if sim_info.species != Species.HUMAN:
+            return False
+        if outfit_category_and_index is None:
+            outfit_category_and_index = sim_info.get_current_outfit()
+        if outfit_category_and_index is not None:
+            outfit_parts = get_outfit_parts(sim_info, outfit_category_and_index)
+            if outfit_parts is not None:
+                if BodyType.LIP_RING_LEFT in outfit_parts.keys():
+                    for outfit_part in outfit_parts[BodyType.LIP_RING_LEFT]:
+                        if is_pacifier(outfit_part.cas_part):
+                            return True
+    return False
+
+
+def is_pacifier(cas_part_id):
+    return cas_part_id in Pacifiers.get_enum_values()
 
 
 @sims4.commands.Command('iwn.diaper_load_changed', command_type=(sims4.commands.CommandType.Live))
@@ -1937,8 +2043,55 @@ def block_ww_pee_here_for_diapered_sims(original, self, *args, **kwargs):
                     tun.test_globals = TestList(test_list)
                     # logger.info('{}'.format(tun.test_globals))
                     # tun.test_globals.add(toilet_global_test)
+    except Exception as e:
+        logger.error("InstanceManager.load_data_into_class_instances injection failed to run.")
+        logger.error(traceback.format_exc())
+
+    return result
 
 
+werewolf_mark_interactions = [NativeInteraction.WEREWOLF_ABILITIES_MARK,
+                              NativeInteraction.WEREWOLF_ABILITIES_MARK_RALLY,
+                              NativeInteraction.WEREWOLF_ABILITIES_MARK_SELF,
+                              NativeInteraction.WEREWOLF_TERRAIN_GOHERE_MARK,
+                              NativeInteraction.WEREWOLF_TERRAIN_GOHERE_MARK_RALLY]
+
+
+@inject(InstanceManager, 'load_data_into_class_instances')
+def block_werewolf_mark_territory(original, self, *args, **kwargs):
+    result = original(self, *args, **kwargs)
+    try:
+        if self.TYPE != Types.INTERACTION:
+            return result
+
+        logger.info('Injecting Werewolf Mark Territory Affordances')
+
+        snippet_manager = services.snippet_manager()
+        toilet_global_test = snippet_manager.get(actor_not_diapered_global_test_id)
+
+        affordance_manager = services.affordance_manager()
+        for guid in werewolf_mark_interactions:
+            tun = affordance_manager.get(guid)
+            if tun is not None:
+                logger.info('{}'.format(tun))
+                if hasattr(tun, 'test_globals'):
+                    # logger.info('{}'.format(tun.test_globals.__class__))
+                    # logger.info('{}'.format(tun.test_globals))
+                    # logger.info('{}'.format(dir(tun.test_globals)))
+                    if toilet_global_test not in tun.test_globals:
+                        test_list = list(tun.test_globals)
+                        test_list.append(toilet_global_test)
+                        tun.test_globals = TestList(test_list)
+                        # logger.info('{}'.format(tun.test_globals))
+                    # else:
+                        # logger.info('Toilet global tests already fixed')
+                        # logger.info('{}'.format(tun.test_globals))
+                else:
+                    test_list = list()
+                    test_list.append(toilet_global_test)
+                    tun.test_globals = TestList(test_list)
+                    # logger.info('{}'.format(tun.test_globals))
+                    # tun.test_globals.add(toilet_global_test)
     except Exception as e:
         logger.error("InstanceManager.load_data_into_class_instances injection failed to run.")
         logger.error(traceback.format_exc())

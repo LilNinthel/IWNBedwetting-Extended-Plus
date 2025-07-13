@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- S4TK Group: 80000000 -->
+<I c="Buff" s="5663741787586399752" i="buff" m="buffs.buff" n="LilNinthel:buff_has_pacifier">
+  <T n="buff_description">0x00000000</T>
+  <T n="buff_name">0x00000000</T>
+  <T n="icon">2f7d0004:00000000:30f0846c783606f9</T>
+  <T n="mood_type">0</T>
+  <T n="mood_weight">0</T>
+  <T n="visible">False</T>
+</I>
