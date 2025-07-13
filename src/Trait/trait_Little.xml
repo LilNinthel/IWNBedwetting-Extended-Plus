@@ -80,9 +80,10 @@
     <T>274647<!--generic_Infant_LayOnBack--></T>
     <T>307677<!--infant_PreSleep--></T>
     <T>275896<!--socialSuperInteraction_CarryPickUp_Infant_ToCrib--></T>
-    <T>8017071453958778732<!--LilNinthel:pacifier_suck_random--></T>
     <T>1238499160374118569<!--LilNinthel:pacifier_suck_favorite--></T>
+    <T>8017071453958778732<!--LilNinthel:pacifier_suck_random--></T>
     <T>8469452520504464148<!--LilNinthel:pacifier_remove--></T>
+    <T>13662983999519255115<!--LilNinthel:pacifier_set_favorite--></T>
   </L>
   <L n="target_super_affordances">
     <U>

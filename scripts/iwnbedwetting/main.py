@@ -32,7 +32,7 @@ from iwnbedwetting.diaper_cas_part_config.snippet import DiaperLoadCASConfig
 from iwnbedwetting.enums.buffs import IwnBedwettingBuff
 from iwnbedwetting.enums.diapers import DiaperCC, DiaperBodyType, DiaperHeight, DiaperFrame
 from iwnbedwetting.enums.interactions import InteractionSets, DiaperInteraction, BedwettingInteraction
-from iwnbedwetting.enums.pacifiers import Pacifiers
+from iwnbedwetting.enums.pacifiers import AdultPacifiers, ChildPacifiers
 from iwnbedwetting.enums.rewards import IwnBedwettingReward
 from iwnbedwetting.enums.statistics import IwnBedwettingStatistic, DiaperStateStatistics
 from iwnbedwetting.enums.traits import IwnBedwettingTrait
@@ -62,7 +62,7 @@ from ui.ui_dialog import UiDialogOk, UiDialogResponse, ButtonType
 from ui.ui_dialog_notification import UiDialogNotification
 from zone import Zone
 
-IWN_BED_WETTING_VERSION = "2.1.0"
+IWN_BED_WETTING_VERSION = "2.1.1"
 PACKAGE_VERSION = 2
 ModHasRun = False
 devMode = False
@@ -142,49 +142,6 @@ def remove_prefix(text, prefix):
     return text
 
 
-def get_mods_files_info():
-    global _old_mods_detected
-    global _old_addons_detected
-    global _admin_flag
-    global _ember_detected
-    global _duplicate_mods
-    mod_files_names = set()
-    duplicated_mod_files_names = set()
-    mod_dict = dict()
-    old_files = set()
-    old_addon_files = set()
-    for dirpath, __, files in os.walk(get_sims_mods_directory()):
-        for file_name in files:
-            if file_name.lower().endswith('.package'):
-                if file_name.lower().startswith('LilNinthel_'.lower()) and file_name.lower() != 'LilNinthel_IWNBedwetting_Extended_Plus.package'.lower():
-                    if not _admin_flag:
-                        _old_mods_detected = True
-                        old_files.add(file_name)
-                if file_name.startswith('[Ember]') and file_name.endswith('accessory.package'):
-                    _ember_detected = True
-                if not file_name.lower() in mod_dict.keys():
-                    mod_dict[file_name.lower()] = []
-                # mod_dict[file_name.lower()].append(os.path.join(remove_prefix(dirpath,get_sims_mods_directory()),file_name))
-                mod_dict[file_name.lower()].append(remove_prefix(dirpath, get_sims_mods_directory()))
-                for prefix in old_addons:
-                    if file_name.lower().startswith(prefix.lower()):
-                        _old_addons_detected = True
-                        old_addon_files.add(file_name)
-                if file_name == _admin_package:
-                    _admin_flag = True
-                    _old_mods_detected = False
-                    _old_files = set()
-                    logger.info('Admin mode activated')
-                if file_name.lower() in mod_files_names:
-                    duplicated_mod_files_names.add(file_name)
-                    _duplicate_mods = True
-                else:
-                    mod_files_names.add(file_name.lower())
-
-    return (
-     sorted(mod_files_names), sorted(duplicated_mod_files_names), sorted(old_files), mod_dict, old_addon_files)
-
-
 def get_sims_documents_directory():
     file_path = os.path.normpath(os.path.dirname(os.path.realpath(__file__))).replace(os.sep, '/')
     lowercase_file_path_segments = file_path.lower().split('/')
@@ -209,6 +166,53 @@ def get_sims_game_directory():
     root_dir = os.sep.join(file_path_segments[:4]) + os.sep
     return root_dir
 
+
+mod_files_names = set()
+duplicated_mod_files_names = set()
+mods_dict = dict()
+old_files = set()
+old_addon_files = set()
+
+
+def detect_mods():
+    global _old_mods_detected
+    global _old_addons_detected
+    global _admin_flag
+    global _ember_detected
+    global _duplicate_mods
+
+    for dirpath, __, files in os.walk(get_sims_mods_directory()):
+        for file_name in files:
+            if file_name.lower().endswith('.package'):
+                if file_name.lower().startswith('LilNinthel_'.lower()) and file_name.lower() != 'LilNinthel_IWNBedwetting_Extended_Plus.package'.lower():
+                    if not _admin_flag:
+                        _old_mods_detected = True
+                        old_files.add(file_name)
+                if file_name.startswith('[Ember]') and file_name.endswith('accessory.package'):
+                    _ember_detected = True
+                if not file_name.lower() in mods_dict.keys():
+                    mods_dict[file_name.lower()] = []
+                # mod_dict[file_name.lower()].append(os.path.join(remove_prefix(dirpath,get_sims_mods_directory()),file_name))
+                mods_dict[file_name.lower()].append(remove_prefix(dirpath, get_sims_mods_directory()))
+                for prefix in old_addons:
+                    if file_name.lower().startswith(prefix.lower()):
+                        _old_addons_detected = True
+                        old_addon_files.add(file_name)
+                if file_name == _admin_package:
+                    _admin_flag = True
+                    _old_mods_detected = False
+                    _old_files = set()
+                    logger.info('Admin mode activated')
+                if file_name.lower() in mod_files_names:
+                    duplicated_mod_files_names.add(file_name)
+                    _duplicate_mods = True
+                else:
+                    mod_files_names.add(file_name.lower())
+
+
+# def get_mods_files_info():
+#     return (
+#      sorted(mod_files_names), sorted(duplicated_mod_files_names), sorted(old_files), mod_dict, old_addon_files)
 
 def register_satisfaction_store_reward(reward_id, cost, award_type=SatisfactionTracker.SatisfactionAwardTypes.TRAIT):
     """
@@ -827,7 +831,10 @@ def suck_favorite_pacifier(owner_id:int=None, _connection=None):
                 if outfit_category_and_index is not None:
                     outfit_parts = get_outfit_parts(sim_info, outfit_category_and_index)
                     if outfit_parts is not None:
-                        pacifiers = Pacifiers.get_enum_values_ordered()
+                        if sim_info.age in (Age.TEEN, Age.YOUNGADULT, Age.ADULT, Age.ELDER):
+                            pacifiers = AdultPacifiers.get_enum_values_ordered()
+                        elif _admin_flag and sim_info.age == Age.CHILD:
+                            pacifiers = ChildPacifiers.get_enum_values_ordered()
                         if paci_index < len(pacifiers):
                             outfit_parts[BodyType.LIP_RING_LEFT] = (CasPart((pacifiers[paci_index])),)
                             set_outfit_parts(sim_info, outfit_category_and_index, outfit_parts)
@@ -854,11 +861,16 @@ def suck_random_pacifier(owner_id:int=None, _connection=None):
                     #     for outfit_part in outfit_parts[BodyType.LIP_RING_LEFT]:
                     #         if is_pacifier(outfit_part.cas_part):
                     #             return
-                    paci_cas_id = random.choice(Pacifiers.get_enum_values_ordered())
-                    logger.info("Pacifier ID: {}", paci_cas_id)
-                    outfit_parts[BodyType.LIP_RING_LEFT] = (CasPart((paci_cas_id)),)
-                    set_outfit_parts(sim_info, outfit_category_and_index, outfit_parts)
-                    add_buff(sim_info, IwnBedwettingBuff.HAS_PACIFIER)
+                    paci_cas_id = 0
+                    if sim_info.age in (Age.TEEN, Age.YOUNGADULT, Age.ADULT, Age.ELDER):
+                        paci_cas_id = random.choice(AdultPacifiers.get_enum_values_ordered())
+                    elif _admin_flag and sim_info.age == Age.CHILD:
+                        paci_cas_id = random.choice(ChildPacifiers.get_enum_values_ordered())
+                    if paci_cas_id != 0:
+                        logger.info("Pacifier ID: {}", paci_cas_id)
+                        outfit_parts[BodyType.LIP_RING_LEFT] = (CasPart((paci_cas_id)),)
+                        set_outfit_parts(sim_info, outfit_category_and_index, outfit_parts)
+                        add_buff(sim_info, IwnBedwettingBuff.HAS_PACIFIER)
 
 
 @sims4.commands.Command('iwn.remove_pacifier', command_type=(sims4.commands.CommandType.Live))
@@ -881,24 +893,48 @@ def remove_pacifier(owner_id:int=None, _connection=None):
                         remove_buff(sim_info, IwnBedwettingBuff.HAS_PACIFIER)
 
 
+@sims4.commands.Command('iwn.set_favorite_pacifier', command_type=(sims4.commands.CommandType.Live))
+def set_favorite_pacifier(owner_id:int=None, _connection=None):
+    if owner_id is not None:
+        sim_info = services.sim_info_manager().get(owner_id)
+        if sim_info is not None:
+            if sim_info.species != Species.HUMAN:
+                return
+            logger.info("iwn.set_favorite_pacifier: {}", sim_info)
+            outfit_category_and_index = sim_info.get_current_outfit()
+            if outfit_category_and_index is not None:
+                outfit_parts = get_outfit_parts(sim_info, outfit_category_and_index)
+                if outfit_parts is not None:
+                    if BodyType.LIP_RING_LEFT in outfit_parts.keys():
+                        for outfit_part in outfit_parts[BodyType.LIP_RING_LEFT]:
+                            if is_pacifier(outfit_part.cas_part):
+                                if _admin_flag and sim_info.age == Age.CHILD:
+                                    paci_index = ChildPacifiers.get_enum_values_ordered().index(outfit_part.cas_part)
+                                else:
+                                    paci_index = AdultPacifiers.get_enum_values_ordered().index(outfit_part.cas_part)
+                                set_statistic_value(owner_id, IwnBedwettingStatistic.FAVORITE_PACIFIER, paci_index)
+
+
 def is_wearing_pacifier(sim_info, outfit_category_and_index=None):
     if sim_info is not None:
         if sim_info.species != Species.HUMAN:
             return False
-        if outfit_category_and_index is None:
-            outfit_category_and_index = sim_info.get_current_outfit()
-        if outfit_category_and_index is not None:
-            outfit_parts = get_outfit_parts(sim_info, outfit_category_and_index)
-            if outfit_parts is not None:
-                if BodyType.LIP_RING_LEFT in outfit_parts.keys():
-                    for outfit_part in outfit_parts[BodyType.LIP_RING_LEFT]:
-                        if is_pacifier(outfit_part.cas_part):
-                            return True
+        if sim_info.age in (Age.TEEN, Age.YOUNGADULT, Age.ADULT, Age.ELDER) or (_admin_flag and sim_info.age == Age.CHILD):
+            logger.info("Pacifier check on {}".format(sim_info))
+            if outfit_category_and_index is None:
+                outfit_category_and_index = sim_info.get_current_outfit()
+            if outfit_category_and_index is not None:
+                outfit_parts = get_outfit_parts(sim_info, outfit_category_and_index)
+                if outfit_parts is not None:
+                    if BodyType.LIP_RING_LEFT in outfit_parts.keys():
+                        for outfit_part in outfit_parts[BodyType.LIP_RING_LEFT]:
+                            if is_pacifier(outfit_part.cas_part):
+                                return True
     return False
 
 
 def is_pacifier(cas_part_id):
-    return cas_part_id in Pacifiers.get_enum_values()
+    return cas_part_id in AdultPacifiers.get_enum_values() or cas_part_id in ChildPacifiers.get_enum_values()
 
 
 @sims4.commands.Command('iwn.diaper_load_changed', command_type=(sims4.commands.CommandType.Live))
@@ -919,7 +955,7 @@ _male_bottom = frozenset(DiaperCC.get_filtered_cas_ids(body_type=DiaperBodyType.
 #                 DiaperCC.ember_bellissimo_landing_male_wall_bottom,
 #                 DiaperCC.ember_crinklz_simple_male_wall_bottom]
 
-_male_accessory = frozenset(DiaperCC.get_filtered_cas_ids(body_type=DiaperBodyType.ACCESSORY_ADULT,height=DiaperHeight.WALL,frame=DiaperFrame.MASCULINE))
+_male_accessory = frozenset(DiaperCC.get_filtered_cas_ids(body_type=DiaperBodyType.ACCESSORY,height=DiaperHeight.WALL,frame=DiaperFrame.MASCULINE))
 # _male_accessory = [DiaperCC.lilninthel_classico_landing_male_wall_accessory,
 #                    DiaperCC.lilninthel_bellissimo_landing_male_wall_accessory,
 #                    DiaperCC.ember_plain_hook_male_wall_accessory,
@@ -941,7 +977,7 @@ _female_bottom = frozenset(DiaperCC.get_filtered_cas_ids(body_type=DiaperBodyTyp
 #                   DiaperCC.ember_bellissimo_landing_female_wall_bottom,
 #                   DiaperCC.ember_crinklz_simple_female_wall_bottom]
 
-_female_accessory = frozenset(DiaperCC.get_filtered_cas_ids(body_type=DiaperBodyType.ACCESSORY_ADULT,height=DiaperHeight.WALL,frame=DiaperFrame.FEMININE))
+_female_accessory = frozenset(DiaperCC.get_filtered_cas_ids(body_type=DiaperBodyType.ACCESSORY,height=DiaperHeight.WALL,frame=DiaperFrame.FEMININE))
 # _female_accessory = [DiaperCC.lilninthel_classico_landing_female_wall_accessory,
 #                      DiaperCC.lilninthel_bellissimo_landing_female_wall_accessory,
 #                      DiaperCC.ember_plain_hook_female_wall_accessory,
@@ -1069,12 +1105,12 @@ def put_on_random_diaper_accessory(owner_id:int=None, object_instance_id=None, _
                                 outfit_parts[BodyType.INDEX_FINGER_LEFT] = (CasPart((0)),)
 
                         elif _admin_flag and sim_info.age == Age.CHILD:
-                            if BodyType.EARRINGS in outfit_parts.keys():
-                                for outfit_part in outfit_parts[BodyType.EARRINGS]:
+                            if BodyType.INDEX_FINGER_LEFT in outfit_parts.keys():
+                                for outfit_part in outfit_parts[BodyType.INDEX_FINGER_LEFT]:
                                     if DiaperLoadCASConfig.is_diaper_part(outfit_part.cas_part):
                                         return
                             else:
-                                outfit_parts[BodyType.EARRINGS] = (CasPart((0)),)
+                                outfit_parts[BodyType.INDEX_FINGER_LEFT] = (CasPart((0)),)
 
                         diaper_part_id = None
 
@@ -1083,7 +1119,7 @@ def put_on_random_diaper_accessory(owner_id:int=None, object_instance_id=None, _
                         if sim_info.age in (Age.TEEN, Age.YOUNGADULT, Age.ADULT, Age.ELDER):
                             if has_trait(sim_info.id, NativeTrait.GENDER_OPTIONS_FRAME_MASCULINE):
                                 if object_definition_id is not None:
-                                    rec_part_ids = DiaperCC.get_by_object_definition(object_definition_id,frame=DiaperFrame.MASCULINE,body_type=DiaperBodyType.ACCESSORY_ADULT)
+                                    rec_part_ids = DiaperCC.get_by_object_definition(object_definition_id,frame=DiaperFrame.MASCULINE,body_type=DiaperBodyType.ACCESSORY)
                                     if len(rec_part_ids) > 0:
                                         logger.info("Looking up diaper part by object definition")
                                         diaper_part_id = random.choice(
@@ -1095,7 +1131,7 @@ def put_on_random_diaper_accessory(owner_id:int=None, object_instance_id=None, _
                                                                                                        _male_accessory))
                             elif has_trait(sim_info.id, NativeTrait.GENDER_OPTIONS_FRAME_FEMININE):
                                 if object_definition_id is not None:
-                                    rec_part_ids = DiaperCC.get_by_object_definition(object_definition_id,frame=DiaperFrame.FEMININE,body_type=DiaperBodyType.ACCESSORY_ADULT)
+                                    rec_part_ids = DiaperCC.get_by_object_definition(object_definition_id,frame=DiaperFrame.FEMININE,body_type=DiaperBodyType.ACCESSORY)
                                     if len(rec_part_ids) > 0:
                                         logger.info("Looking up diaper part by object definition")
                                         diaper_part_id = random.choice(
@@ -1107,7 +1143,7 @@ def put_on_random_diaper_accessory(owner_id:int=None, object_instance_id=None, _
                                                                                                        _female_accessory))
                         elif _admin_flag and sim_info.age == Age.CHILD:
                             diaper_part_id = 16089036029714611952
-                            body_type = BodyType.EARRINGS
+                            body_type = BodyType.INDEX_FINGER_LEFT
                         if diaper_part_id is not None:
                             outfit_parts[body_type] = (CasPart((diaper_part_id)),)
                             set_outfit_parts(sim_info, outfit_category_and_index, outfit_parts, update_client)
@@ -1162,11 +1198,11 @@ def remove_diaper(owner_id:int=None, _connection=None, force_remove=False, outfi
                                     logger.info("remove_diaper on INDEX_FINGER_LEFT: {}", sim_info)
                                     outfit_parts.pop(BodyType.INDEX_FINGER_LEFT, None)
                                     set_outfit_parts(sim_info, outfit_category_and_index, outfit_parts, update_client)
-                        if _admin_flag and sim_info.age == Age.CHILD and BodyType.EARRINGS in outfit_parts.keys():
-                            for outfit_part in outfit_parts[BodyType.EARRINGS]:
+                        if _admin_flag and sim_info.age == Age.CHILD and BodyType.INDEX_FINGER_LEFT in outfit_parts.keys():
+                            for outfit_part in outfit_parts[BodyType.INDEX_FINGER_LEFT]:
                                 if DiaperLoadCASConfig.is_diaper_part(outfit_part.cas_part):
-                                    logger.info("remove_diaper on EARRINGS: {}", sim_info)
-                                    outfit_parts.pop(BodyType.EARRINGS, None)
+                                    logger.info("remove_diaper on INDEX_FINGER_LEFT: {}", sim_info)
+                                    outfit_parts.pop(BodyType.INDEX_FINGER_LEFT, None)
                                     set_outfit_parts(sim_info, outfit_category_and_index, outfit_parts, update_client)
     except Exception as e:
         logger.error("remove_diaper failed to run.")
@@ -1357,15 +1393,15 @@ def is_diaper_accessory_removed(sim_info, current_outfit, previous_outfit):
                         if DiaperLoadCASConfig.is_diaper_part(outfit_part.cas_part):
                             return False
                     return True
-            if _admin_flag and sim_info.age == Age.CHILD and BodyType.EARRINGS in previous_parts.keys():
-                for outfit_part in previous_parts[BodyType.EARRINGS]:
+            if _admin_flag and sim_info.age == Age.CHILD and BodyType.INDEX_FINGER_LEFT in previous_parts.keys():
+                for outfit_part in previous_parts[BodyType.INDEX_FINGER_LEFT]:
                     if DiaperLoadCASConfig.is_diaper_part(outfit_part.cas_part):
                         had_diaper = True
                         break
                 if had_diaper:
-                    if BodyType.EARRINGS not in current_parts.keys():
+                    if BodyType.INDEX_FINGER_LEFT not in current_parts.keys():
                         return True
-                    for outfit_part in current_parts[BodyType.EARRINGS]:
+                    for outfit_part in current_parts[BodyType.INDEX_FINGER_LEFT]:
                         if DiaperLoadCASConfig.is_diaper_part(outfit_part.cas_part):
                             return False
                     return True
@@ -2291,11 +2327,11 @@ def ShowMod():
 
     # dialog.show_dialog()
 
-    mods = get_mods_files_info()
-    dup_file_names = mods[1]
-    old_files = mods[2]
-    mods_dict = mods[3]
-    old_addons = mods[4]
+    # mods = get_mods_files_info()
+    # dup_file_names = mods[1]
+    # old_files = mods[2]
+    # mods_dict = mods[3]
+    # old_addons = mods[4]
 
     if not check_package_version():
         # localized_title = lambda **_: LocalizationHelperTuning.get_raw_text('WARNING: IwnBedWetting Extended+ Old Files Detected')
@@ -2496,3 +2532,6 @@ def inject_club_traits(original, _, criteria_proto, *args, **kwargs):
         # sims4.log.exception("Injection", "ClubRuleCriteriaTrait.populate_possibilities injection failed to run.", exc=e)
 
     return original(criteria_proto, *args, **kwargs)
+
+
+detect_mods()
