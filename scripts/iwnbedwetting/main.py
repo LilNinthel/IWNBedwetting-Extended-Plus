@@ -442,6 +442,12 @@ def _iwnbedwetting_sim_info_load_sim_info(original, self, *args, **kwargs):
         add_diaper_load_tracking(self)
         evaluate_buffs(self)
         apply_outfit_parts_for_diaper_load(self)
+        if is_wearing_pacifier(self):
+            if not has_buff(self.id, IwnBedwettingBuff.HAS_PACIFIER):
+                add_buff(self, IwnBedwettingBuff.HAS_PACIFIER)
+        else:
+            if has_buff(self, IwnBedwettingBuff.HAS_PACIFIER):
+                remove_buff(self, IwnBedwettingBuff.HAS_PACIFIER)
     except Exception as ex:
         try:
             logger.error("_iwnbedwetting_sim_info_load_sim_info failed to run.")
@@ -497,6 +503,12 @@ def _on_sim_outfit_change(sim_info, new_outfit, previous_outfit):
         # sim_info.unregister_for_outfit_changed_callback(_on_sim_outfit_change)
         try:
             logger.info("_on_sim_outfit_change to {} start {}".format(new_outfit, sim_info))
+            if is_wearing_pacifier(sim_info, new_outfit):
+                if not has_buff(sim_info.id, IwnBedwettingBuff.HAS_PACIFIER):
+                    add_buff(sim_info, IwnBedwettingBuff.HAS_PACIFIER)
+            else:
+                if has_buff(sim_info, IwnBedwettingBuff.HAS_PACIFIER):
+                    remove_buff(sim_info,IwnBedwettingBuff.HAS_PACIFIER)
             if have_pants_changed(sim_info, new_outfit, previous_outfit):
                 logger.info("Pants changed")
                 remove_buff(sim_info, IwnBedwettingBuff.WET_PANTS_OVERLAY)
@@ -719,15 +731,16 @@ def _on_buff_removed(buff_type, sim_id):
 
 
 def add_buff(sim_info, buff_id, buff_reason=None):
-    buff_manager = services.get_instance_manager(sims4.resources.Types.BUFF)
-    buff_instance = buff_manager.get(buff_id)
-    if buff_instance is None:
-        return False
-    if buff_instance in sim_info.get_active_buff_types():
-        return False
-    # if buff_reason is not None:
-    #     buff_reason = LocalizationHelperTuning.get_localized_string(buff_reason)
-    return sim_info.add_buff_from_op(buff_instance, buff_reason=buff_reason)
+    if sim_info is not None:
+        buff_manager = services.get_instance_manager(sims4.resources.Types.BUFF)
+        buff_instance = buff_manager.get(buff_id)
+        if buff_instance is None:
+            return False
+        if buff_instance in sim_info.get_active_buff_types():
+            return False
+        # if buff_reason is not None:
+        #     buff_reason = LocalizationHelperTuning.get_localized_string(buff_reason)
+        return sim_info.add_buff_from_op(buff_instance, buff_reason=buff_reason)
 
 
 def get_all_buffs():
@@ -804,35 +817,48 @@ def suck_favorite_pacifier(owner_id:int=None, _connection=None):
         if sim_info is not None:
             if sim_info.species != Species.HUMAN:
                 return
-            paci_cas_part_id = get_statistic_value(sim_info, IwnBedwettingStatistic.FAVORITE_PACIFIER)
-            if paci_cas_part_id is None:
+            logger.info("iwn.suck_favorite_pacifier: {}", sim_info)
+            paci_index = get_statistic_value(sim_info, IwnBedwettingStatistic.FAVORITE_PACIFIER)
+            if paci_index is None or paci_index < 0:
                 suck_random_pacifier(owner_id)
             else:
+                paci_index = int(paci_index)
                 outfit_category_and_index = sim_info.get_current_outfit()
                 if outfit_category_and_index is not None:
                     outfit_parts = get_outfit_parts(sim_info, outfit_category_and_index)
                     if outfit_parts is not None:
-                        outfit_parts[BodyType.LIP_RING_LEFT] = (CasPart((paci_cas_part_id)),)
-                        set_outfit_parts(sim_info, outfit_category_and_index, outfit_parts)
+                        pacifiers = Pacifiers.get_enum_values_ordered()
+                        if paci_index < len(pacifiers):
+                            outfit_parts[BodyType.LIP_RING_LEFT] = (CasPart((pacifiers[paci_index])),)
+                            set_outfit_parts(sim_info, outfit_category_and_index, outfit_parts)
+                            add_buff(sim_info, IwnBedwettingBuff.HAS_PACIFIER)
+                        else:
+                            remove_statistic(owner_id, IwnBedwettingStatistic.FAVORITE_PACIFIER)
 
 
 @sims4.commands.Command('iwn.suck_random_pacifier', command_type=(sims4.commands.CommandType.Live))
 def suck_random_pacifier(owner_id:int=None, _connection=None):
     if owner_id is not None:
         sim_info = services.sim_info_manager().get(owner_id)
+        logger.info("iwn.suck_random_pacifier: {}", sim_info)
         if sim_info is not None:
             if sim_info.species != Species.HUMAN:
                 return
             outfit_category_and_index = sim_info.get_current_outfit()
+            logger.info("iwn.suck_random_pacifier outfit: {}", outfit_category_and_index)
             if outfit_category_and_index is not None:
                 outfit_parts = get_outfit_parts(sim_info, outfit_category_and_index)
+                logger.info("iwn.suck_random_pacifier outfit_parts: {}", outfit_parts)
                 if outfit_parts is not None:
-                    if BodyType.LIP_RING_LEFT in outfit_parts.keys():
-                        for outfit_part in outfit_parts[BodyType.LIP_RING_LEFT]:
-                            if is_pacifier(outfit_part.cas_part):
-                                return
-                    outfit_parts[BodyType.LIP_RING_LEFT] = (CasPart((random.choice(Pacifiers.get_enum_values()))),)
+                    # if BodyType.LIP_RING_LEFT in outfit_parts.keys():
+                    #     for outfit_part in outfit_parts[BodyType.LIP_RING_LEFT]:
+                    #         if is_pacifier(outfit_part.cas_part):
+                    #             return
+                    paci_cas_id = random.choice(Pacifiers.get_enum_values_ordered())
+                    logger.info("Pacifier ID: {}", paci_cas_id)
+                    outfit_parts[BodyType.LIP_RING_LEFT] = (CasPart((paci_cas_id)),)
                     set_outfit_parts(sim_info, outfit_category_and_index, outfit_parts)
+                    add_buff(sim_info, IwnBedwettingBuff.HAS_PACIFIER)
 
 
 @sims4.commands.Command('iwn.remove_pacifier', command_type=(sims4.commands.CommandType.Live))
@@ -842,6 +868,7 @@ def remove_pacifier(owner_id:int=None, _connection=None):
         if sim_info is not None:
             if sim_info.species != Species.HUMAN:
                 return
+            logger.info("iwn.remove_pacifier: {}", sim_info)
             outfit_category_and_index = sim_info.get_current_outfit()
             if outfit_category_and_index is not None:
                 outfit_parts = get_outfit_parts(sim_info, outfit_category_and_index)
@@ -851,13 +878,15 @@ def remove_pacifier(owner_id:int=None, _connection=None):
                             if is_pacifier(outfit_part.cas_part):
                                 outfit_parts.pop(BodyType.LIP_RING_LEFT)
                         set_outfit_parts(sim_info, outfit_category_and_index, outfit_parts)
+                        remove_buff(sim_info, IwnBedwettingBuff.HAS_PACIFIER)
 
 
-def is_wearing_pacifier(sim_info):
+def is_wearing_pacifier(sim_info, outfit_category_and_index=None):
     if sim_info is not None:
         if sim_info.species != Species.HUMAN:
             return False
-        outfit_category_and_index = sim_info.get_current_outfit()
+        if outfit_category_and_index is None:
+            outfit_category_and_index = sim_info.get_current_outfit()
         if outfit_category_and_index is not None:
             outfit_parts = get_outfit_parts(sim_info, outfit_category_and_index)
             if outfit_parts is not None:

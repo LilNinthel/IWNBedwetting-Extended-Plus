@@ -3,7 +3,7 @@
   <Instances>
     <I name="LilNinthel:statistic_favorite_pacifier_index" schema="Statistic" type="Object">
       <T name="max_value_tuning">10000</T>
-      <T name="min_value_tuning">0</T>
+      <T name="min_value_tuning">-1</T>
       <T name="stat_name">0x00000000</T>
     </I>
   </Instances>
