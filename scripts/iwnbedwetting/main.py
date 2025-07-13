@@ -32,6 +32,7 @@ from iwnbedwetting.diaper_cas_part_config.snippet import DiaperLoadCASConfig
 from iwnbedwetting.enums.buffs import IwnBedwettingBuff
 from iwnbedwetting.enums.diapers import DiaperCC, DiaperBodyType, DiaperHeight, DiaperFrame
 from iwnbedwetting.enums.interactions import InteractionSets, DiaperInteraction, BedwettingInteraction
+from iwnbedwetting.enums.pacifiers import Pacifiers
 from iwnbedwetting.enums.rewards import IwnBedwettingReward
 from iwnbedwetting.enums.statistics import IwnBedwettingStatistic, DiaperStateStatistics
 from iwnbedwetting.enums.traits import IwnBedwettingTrait
@@ -61,7 +62,7 @@ from ui.ui_dialog import UiDialogOk, UiDialogResponse, ButtonType
 from ui.ui_dialog_notification import UiDialogNotification
 from zone import Zone
 
-IWN_BED_WETTING_VERSION = "2.0.8"
+IWN_BED_WETTING_VERSION = "2.1.0"
 PACKAGE_VERSION = 2
 ModHasRun = False
 devMode = False
@@ -794,6 +795,81 @@ def remove_buff(sim_info, *buff_ids):
     for buff_entry in buff_entries:
         sim_info.remove_buff_entry(buff_entry)
     return True
+
+
+@sims4.commands.Command('iwn.suck_favorite_pacifier', command_type=(sims4.commands.CommandType.Live))
+def suck_favorite_pacifier(owner_id:int=None, _connection=None):
+    if owner_id is not None:
+        sim_info = services.sim_info_manager().get(owner_id)
+        if sim_info is not None:
+            if sim_info.species != Species.HUMAN:
+                return
+            paci_cas_part_id = get_statistic_value(sim_info, IwnBedwettingStatistic.FAVORITE_PACIFIER)
+            if paci_cas_part_id is None:
+                suck_random_pacifier(owner_id)
+            else:
+                outfit_category_and_index = sim_info.get_current_outfit()
+                if outfit_category_and_index is not None:
+                    outfit_parts = get_outfit_parts(sim_info, outfit_category_and_index)
+                    if outfit_parts is not None:
+                        outfit_parts[BodyType.LIP_RING_LEFT] = (CasPart((paci_cas_part_id)),)
+                        set_outfit_parts(sim_info, outfit_category_and_index, outfit_parts)
+
+
+@sims4.commands.Command('iwn.suck_random_pacifier', command_type=(sims4.commands.CommandType.Live))
+def suck_random_pacifier(owner_id:int=None, _connection=None):
+    if owner_id is not None:
+        sim_info = services.sim_info_manager().get(owner_id)
+        if sim_info is not None:
+            if sim_info.species != Species.HUMAN:
+                return
+            outfit_category_and_index = sim_info.get_current_outfit()
+            if outfit_category_and_index is not None:
+                outfit_parts = get_outfit_parts(sim_info, outfit_category_and_index)
+                if outfit_parts is not None:
+                    if BodyType.LIP_RING_LEFT in outfit_parts.keys():
+                        for outfit_part in outfit_parts[BodyType.LIP_RING_LEFT]:
+                            if is_pacifier(outfit_part.cas_part):
+                                return
+                    outfit_parts[BodyType.LIP_RING_LEFT] = (CasPart((random.choice(Pacifiers.get_enum_values()))),)
+                    set_outfit_parts(sim_info, outfit_category_and_index, outfit_parts)
+
+
+@sims4.commands.Command('iwn.remove_pacifier', command_type=(sims4.commands.CommandType.Live))
+def remove_pacifier(owner_id:int=None, _connection=None):
+    if owner_id is not None:
+        sim_info = services.sim_info_manager().get(owner_id)
+        if sim_info is not None:
+            if sim_info.species != Species.HUMAN:
+                return
+            outfit_category_and_index = sim_info.get_current_outfit()
+            if outfit_category_and_index is not None:
+                outfit_parts = get_outfit_parts(sim_info, outfit_category_and_index)
+                if outfit_parts is not None:
+                    if BodyType.LIP_RING_LEFT in outfit_parts.keys():
+                        for outfit_part in outfit_parts[BodyType.LIP_RING_LEFT]:
+                            if is_pacifier(outfit_part.cas_part):
+                                outfit_parts.pop(BodyType.LIP_RING_LEFT)
+                        set_outfit_parts(sim_info, outfit_category_and_index, outfit_parts)
+
+
+def is_wearing_pacifier(sim_info):
+    if sim_info is not None:
+        if sim_info.species != Species.HUMAN:
+            return False
+        outfit_category_and_index = sim_info.get_current_outfit()
+        if outfit_category_and_index is not None:
+            outfit_parts = get_outfit_parts(sim_info, outfit_category_and_index)
+            if outfit_parts is not None:
+                if BodyType.LIP_RING_LEFT in outfit_parts.keys():
+                    for outfit_part in outfit_parts[BodyType.LIP_RING_LEFT]:
+                        if is_pacifier(outfit_part.cas_part):
+                            return True
+    return False
+
+
+def is_pacifier(cas_part_id):
+    return cas_part_id in Pacifiers.get_enum_values()
 
 
 @sims4.commands.Command('iwn.diaper_load_changed', command_type=(sims4.commands.CommandType.Live))

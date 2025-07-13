@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_TotalUrinaryIncontinence_Underwear" s="6435908614741883616">
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_TotalUrinaryIncontinence_Removal" s="3682862461815523719">
   <L n="loot_actions">
     <V t="buff_removal">
       <U n="buff_removal">
@@ -9,30 +9,22 @@
         </L>
       </U>
     </V>
-    <V t="buff">
-      <U n="buff">
-        <U n="buff">
-          <T n="buff_type">1189056563910849303<!--LilNinthel:buff_TotalUrinaryIncontinence_PantsWetness--></T>
-        </U>
-      </U>
-    </V>
     <V t="statistics">
-      <V n="statistics" t="statistic_set_max">
-        <U n="statistic_set_max">
+      <V n="statistics" t="statistic_remove">
+        <U n="statistic_remove">
           <T n="stat">15105330414396651143<!--LilNinthel:statistic_TotalUrinaryIncontinence_Tracker--></T>
+          <L n="subject">
+            <E>Actor</E>
+          </L>
         </U>
       </V>
     </V>
   </L>
-  <T n="run_test_first">True</T>
   <L n="tests">
     <L>
-      <V t="test_set_reference">
-        <T n="test_set_reference">14313482733996641359<!--LilNinthel:testSet_DoesNotHaveDiaperEquipped--></T>
-      </V>
       <V t="trait">
         <U n="trait">
-          <L n="whitelist_traits">
+          <L n="blacklist_traits">
             <T>2260700649<!--IwnBedWetting_Incontinence_Trait--></T>
             <T>1159183302<!--LilNinthel:trait_diaper_dependent--></T>
             <T>10130971893846669676<!--LilNinthel:trait_Incontinence_Urinary_Total--></T>
