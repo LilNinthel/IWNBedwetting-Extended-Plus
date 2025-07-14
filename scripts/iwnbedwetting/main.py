@@ -319,7 +319,7 @@ def get_diaper_stats_for_state(wetness, messiness):
     return stats
 
 
-class DiaperWatcherWrapper():
+class DiaperWatcherWrapper:
     def __init__(self, sim_info):
         self.sim_info = sim_info
         self.value_dict = dict()
@@ -549,7 +549,7 @@ def _on_sim_outfit_change(sim_info, new_outfit, previous_outfit):
             # sim_info.register_for_outfit_changed_callback(_on_sim_outfit_change)
 
 
-@sims4.commands.Command('ccshow', command_type=(sims4.commands.CommandType.Live))
+@sims4.commands.Command('ccshow', command_type=sims4.commands.CommandType.Live)
 def ccshow(_connection=None):
     output = sims4.commands.CheatOutput(_connection)
     output('mod started:')
@@ -752,6 +752,7 @@ def get_all_buffs():
     return buff_manager.types.values()
     # return [buff_manager.get(129473)]
 
+
 @inject(InstanceManager, 'load_data_into_class_instances')
 def fix_buff_compatibility(original, self, *args, **kwargs):
     result = original(self, *args, **kwargs)
@@ -814,7 +815,7 @@ def remove_buff(sim_info, *buff_ids):
     return True
 
 
-@sims4.commands.Command('iwn.suck_favorite_pacifier', command_type=(sims4.commands.CommandType.Live))
+@sims4.commands.Command('iwn.suck_favorite_pacifier', command_type=sims4.commands.CommandType.Live)
 def suck_favorite_pacifier(owner_id:int=None, _connection=None):
     if owner_id is not None:
         sim_info = services.sim_info_manager().get(owner_id)
@@ -831,6 +832,7 @@ def suck_favorite_pacifier(owner_id:int=None, _connection=None):
                 if outfit_category_and_index is not None:
                     outfit_parts = get_outfit_parts(sim_info, outfit_category_and_index)
                     if outfit_parts is not None:
+                        pacifiers = list()
                         if sim_info.age in (Age.TEEN, Age.YOUNGADULT, Age.ADULT, Age.ELDER):
                             pacifiers = AdultPacifiers.get_enum_values_ordered()
                         elif _admin_flag and sim_info.age == Age.CHILD:
@@ -843,7 +845,7 @@ def suck_favorite_pacifier(owner_id:int=None, _connection=None):
                             remove_statistic(owner_id, IwnBedwettingStatistic.FAVORITE_PACIFIER)
 
 
-@sims4.commands.Command('iwn.suck_random_pacifier', command_type=(sims4.commands.CommandType.Live))
+@sims4.commands.Command('iwn.suck_random_pacifier', command_type=sims4.commands.CommandType.Live)
 def suck_random_pacifier(owner_id:int=None, _connection=None):
     if owner_id is not None:
         sim_info = services.sim_info_manager().get(owner_id)
@@ -852,10 +854,10 @@ def suck_random_pacifier(owner_id:int=None, _connection=None):
             if sim_info.species != Species.HUMAN:
                 return
             outfit_category_and_index = sim_info.get_current_outfit()
-            logger.info("iwn.suck_random_pacifier outfit: {}", outfit_category_and_index)
+            # logger.info("iwn.suck_random_pacifier outfit: {}", outfit_category_and_index)
             if outfit_category_and_index is not None:
                 outfit_parts = get_outfit_parts(sim_info, outfit_category_and_index)
-                logger.info("iwn.suck_random_pacifier outfit_parts: {}", outfit_parts)
+                # logger.info("iwn.suck_random_pacifier outfit_parts: {}", outfit_parts)
                 if outfit_parts is not None:
                     # if BodyType.LIP_RING_LEFT in outfit_parts.keys():
                     #     for outfit_part in outfit_parts[BodyType.LIP_RING_LEFT]:
@@ -867,13 +869,13 @@ def suck_random_pacifier(owner_id:int=None, _connection=None):
                     elif _admin_flag and sim_info.age == Age.CHILD:
                         paci_cas_id = random.choice(ChildPacifiers.get_enum_values_ordered())
                     if paci_cas_id != 0:
-                        logger.info("Pacifier ID: {}", paci_cas_id)
+                        logger.info("Pacifier CAS part: {}", paci_cas_id)
                         outfit_parts[BodyType.LIP_RING_LEFT] = (CasPart((paci_cas_id)),)
                         set_outfit_parts(sim_info, outfit_category_and_index, outfit_parts)
                         add_buff(sim_info, IwnBedwettingBuff.HAS_PACIFIER)
 
 
-@sims4.commands.Command('iwn.remove_pacifier', command_type=(sims4.commands.CommandType.Live))
+@sims4.commands.Command('iwn.remove_pacifier', command_type=sims4.commands.CommandType.Live)
 def remove_pacifier(owner_id:int=None, _connection=None):
     if owner_id is not None:
         sim_info = services.sim_info_manager().get(owner_id)
@@ -893,7 +895,7 @@ def remove_pacifier(owner_id:int=None, _connection=None):
                         remove_buff(sim_info, IwnBedwettingBuff.HAS_PACIFIER)
 
 
-@sims4.commands.Command('iwn.set_favorite_pacifier', command_type=(sims4.commands.CommandType.Live))
+@sims4.commands.Command('iwn.set_favorite_pacifier', command_type=sims4.commands.CommandType.Live)
 def set_favorite_pacifier(owner_id:int=None, _connection=None):
     if owner_id is not None:
         sim_info = services.sim_info_manager().get(owner_id)
@@ -937,14 +939,15 @@ def is_pacifier(cas_part_id):
     return cas_part_id in AdultPacifiers.get_enum_values() or cas_part_id in ChildPacifiers.get_enum_values()
 
 
-@sims4.commands.Command('iwn.diaper_load_changed', command_type=(sims4.commands.CommandType.Live))
+@sims4.commands.Command('iwn.diaper_load_changed', command_type=sims4.commands.CommandType.Live)
 def diaper_load_changed(owner_id:int=None, _connection=None):
     if owner_id is not None:
         sim_info = services.sim_info_manager().get(owner_id)
         if sim_info is not None:
             apply_outfit_parts_for_diaper_load(sim_info)
 
-_male_bottom = frozenset(DiaperCC.get_filtered_cas_ids(body_type=DiaperBodyType.BOTTOM,height=DiaperHeight.WALL,frame=DiaperFrame.MASCULINE))
+
+_male_bottom = frozenset(DiaperCC.get_filtered_cas_ids(body_type=DiaperBodyType.BOTTOM, height=DiaperHeight.WALL, frame=DiaperFrame.MASCULINE))
 # _male_bottom = [DiaperCC.lilninthel_classico_landing_male_wall_bottom,
 #                 DiaperCC.lilninthel_bellissimo_landing_male_wall_bottom,
 #                 DiaperCC.ember_plain_hook_male_wall_bottom,
@@ -955,7 +958,7 @@ _male_bottom = frozenset(DiaperCC.get_filtered_cas_ids(body_type=DiaperBodyType.
 #                 DiaperCC.ember_bellissimo_landing_male_wall_bottom,
 #                 DiaperCC.ember_crinklz_simple_male_wall_bottom]
 
-_male_accessory = frozenset(DiaperCC.get_filtered_cas_ids(body_type=DiaperBodyType.ACCESSORY,height=DiaperHeight.WALL,frame=DiaperFrame.MASCULINE))
+_male_accessory = frozenset(DiaperCC.get_filtered_cas_ids(body_type=DiaperBodyType.ACCESSORY, height=DiaperHeight.WALL, frame=DiaperFrame.MASCULINE))
 # _male_accessory = [DiaperCC.lilninthel_classico_landing_male_wall_accessory,
 #                    DiaperCC.lilninthel_bellissimo_landing_male_wall_accessory,
 #                    DiaperCC.ember_plain_hook_male_wall_accessory,
@@ -966,7 +969,7 @@ _male_accessory = frozenset(DiaperCC.get_filtered_cas_ids(body_type=DiaperBodyTy
 #                    DiaperCC.ember_bellissimo_landing_male_wall_accessory,
 #                    DiaperCC.ember_crinklz_simple_male_wall_accessory]
 
-_female_bottom = frozenset(DiaperCC.get_filtered_cas_ids(body_type=DiaperBodyType.BOTTOM,height=DiaperHeight.WALL,frame=DiaperFrame.FEMININE))
+_female_bottom = frozenset(DiaperCC.get_filtered_cas_ids(body_type=DiaperBodyType.BOTTOM, height=DiaperHeight.WALL, frame=DiaperFrame.FEMININE))
 # _female_bottom = [DiaperCC.lilninthel_classico_landing_female_wall_bottom,
 #                   DiaperCC.lilninthel_bellissimo_landing_female_wall_bottom,
 #                   DiaperCC.ember_plain_hook_female_wall_bottom,
@@ -977,7 +980,7 @@ _female_bottom = frozenset(DiaperCC.get_filtered_cas_ids(body_type=DiaperBodyTyp
 #                   DiaperCC.ember_bellissimo_landing_female_wall_bottom,
 #                   DiaperCC.ember_crinklz_simple_female_wall_bottom]
 
-_female_accessory = frozenset(DiaperCC.get_filtered_cas_ids(body_type=DiaperBodyType.ACCESSORY,height=DiaperHeight.WALL,frame=DiaperFrame.FEMININE))
+_female_accessory = frozenset(DiaperCC.get_filtered_cas_ids(body_type=DiaperBodyType.ACCESSORY, height=DiaperHeight.WALL, frame=DiaperFrame.FEMININE))
 # _female_accessory = [DiaperCC.lilninthel_classico_landing_female_wall_accessory,
 #                      DiaperCC.lilninthel_bellissimo_landing_female_wall_accessory,
 #                      DiaperCC.ember_plain_hook_female_wall_accessory,
@@ -989,7 +992,7 @@ _female_accessory = frozenset(DiaperCC.get_filtered_cas_ids(body_type=DiaperBody
 #                      DiaperCC.ember_crinklz_simple_female_wall_accessory]
 
 
-@sims4.commands.Command('iwn.force_into_diaper', command_type=(sims4.commands.CommandType.Live))
+@sims4.commands.Command('iwn.force_into_diaper', command_type=sims4.commands.CommandType.Live)
 def force_into_diaper(owner_id:int=None, _connection=None):
     put_on_random_diaper_bottom(owner_id, _connection, remove_full_body=True, remove_tights=True, update_client=True)
 
@@ -997,7 +1000,7 @@ def force_into_diaper(owner_id:int=None, _connection=None):
 outfit_categories_excluded_from_diaper = [OutfitCategory.SWIMWEAR,OutfitCategory.BATHING,OutfitCategory.SPECIAL]
 
 
-@sims4.commands.Command('iwn.put_on_random_diaper_bottom', command_type=(sims4.commands.CommandType.Live))
+@sims4.commands.Command('iwn.put_on_random_diaper_bottom', command_type=sims4.commands.CommandType.Live)
 def put_on_random_diaper_bottom(owner_id:int=None, _connection=None, remove_full_body:bool=False, remove_tights:bool=False, remove_top:bool=False, outfit_category_and_index=None, update_client=True):
     if not _ember_detected:
         return
@@ -1059,7 +1062,7 @@ def put_on_random_diaper_bottom(owner_id:int=None, _connection=None, remove_full
         logger.error(traceback.format_exc())
 
 
-@sims4.commands.Command('iwn.put_on_random_diaper_accessory', command_type=(sims4.commands.CommandType.Live))
+@sims4.commands.Command('iwn.put_on_random_diaper_accessory', command_type=sims4.commands.CommandType.Live)
 def put_on_random_diaper_accessory(owner_id:int=None, object_instance_id=None, _connection=None, outfit_category_and_index=None, update_client=True):
     if not _ember_detected:
         return
@@ -1152,7 +1155,7 @@ def put_on_random_diaper_accessory(owner_id:int=None, object_instance_id=None, _
         logger.error(traceback.format_exc())
 
 
-@sims4.commands.Command('iwn.remove_diaper', command_type=(sims4.commands.CommandType.Live))
+@sims4.commands.Command('iwn.remove_diaper', command_type=sims4.commands.CommandType.Live)
 def remove_diaper(owner_id:int=None, _connection=None, force_remove=False, outfit_category_and_index=None, update_client=True):
     # if not _ember_detected:
     #     return
@@ -1572,10 +1575,10 @@ def apply(sim_info, outfit_body_types=[], outfit_part_ids=[], outfit_color_shift
 
     for outfit in outfits_msg.outfits:
         if outfit.category != int(outfit_category_and_index[0]):
-            logger.info("wrong outfit category. expected {} got {}",outfit_category_and_index[0], outfit.category)
+            # logger.info("wrong outfit category. expected {} got {}",outfit_category_and_index[0], outfit.category)
             continue
         if outfit.outfit_id != outfit_id:
-            logger.info("wrong outfit id. expected {} got {}",outfit_id, outfit.outfit_id)
+            # logger.info("wrong outfit id. expected {} got {}",outfit_id, outfit.outfit_id)
             continue
         else:
             outfit.parts = S4Common_pb2.IdList()
@@ -1632,25 +1635,25 @@ def is_newer_version_available():
         logger.error(traceback.format_exc())
 
 
-@sims4.commands.Command('iwn.open_loverslab_club', command_type=(sims4.commands.CommandType.Live))
+@sims4.commands.Command('iwn.open_loverslab_club', command_type=sims4.commands.CommandType.Live)
 def open_loverslab_club(_connection=None):
     webbrowser.open("https://www.loverslab.com/clubs/9-little-space-private-abdl-mods-and-forums/")
     services.game_clock_service().set_clock_speed(ClockSpeedMode.PAUSED)
 
 
-@sims4.commands.Command('iwn.open_mod_page', command_type=(sims4.commands.CommandType.Live))
+@sims4.commands.Command('iwn.open_mod_page', command_type=sims4.commands.CommandType.Live)
 def open_mod_page(_connection=None):
     webbrowser.open("https://www.loverslab.com/files/file/28368-iwnbedwetting-extended/")
     services.game_clock_service().set_clock_speed(ClockSpeedMode.PAUSED)
 
 
-@sims4.commands.Command('iwn.open_ember_mod_page', command_type=(sims4.commands.CommandType.Live))
+@sims4.commands.Command('iwn.open_ember_mod_page', command_type=sims4.commands.CommandType.Live)
 def open_ember_mod_page(_connection=None):
     webbrowser.open("https://www.loverslab.com/files/file/30769-universal-adult-diaper-with-automatic-bulge-and-peek-effects-female-and-male/")
     services.game_clock_service().set_clock_speed(ClockSpeedMode.PAUSED)
 
 
-@sims4.commands.Command('iwn.set_statistic_value', command_type=(sims4.commands.CommandType.Live))
+@sims4.commands.Command('iwn.set_statistic_value', command_type=sims4.commands.CommandType.Live)
 def set_statistic_value(owner_id:int=None, statistic_id=None, new_value=None, _connection=None):
     if owner_id is not None and statistic_id is not None and new_value is not None:
         # output = sims4.commands.CheatOutput(_connection)
@@ -1670,7 +1673,7 @@ def set_statistic_value(owner_id:int=None, statistic_id=None, new_value=None, _c
                         statistics_tracker.set_value(statistic_instance, (_filter_value(new_value)), add=True)
 
 
-@sims4.commands.Command('iwn.remove_statistic', command_type=(sims4.commands.CommandType.Live))
+@sims4.commands.Command('iwn.remove_statistic', command_type=sims4.commands.CommandType.Live)
 def remove_statistic(owner_id:int=None, statistic_id=None, _connection=None):
     output = sims4.commands.CheatOutput(_connection)
     sim_info = services.sim_info_manager().get(owner_id)
@@ -1768,7 +1771,7 @@ def start_sound(play_sound, duration, sim_info, dummy):
     dummy._stop_sound_handle = alarms.add_alarm(sim_info, interval_in_real_seconds(duration), _stop_sound)
 
 
-@sims4.commands.Command('iwn.play_peeing_sound', command_type=(sims4.commands.CommandType.Live))
+@sims4.commands.Command('iwn.play_peeing_sound', command_type=sims4.commands.CommandType.Live)
 def play_peeing_sound(owner_id:int=None, duration=5.0, _connection=None):
     try:
         return
