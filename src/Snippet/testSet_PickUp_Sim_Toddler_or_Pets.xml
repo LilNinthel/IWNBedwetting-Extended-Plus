@@ -268,13 +268,6 @@
           <E n="who">TargetSim</E>
         </U>
       </V>
-      <V t="trait">
-        <U n="trait">
-          <L n="blacklist_traits">
-            <T>15375075297777072992<!--LilNinthel:trait_no_carrying--></T>
-          </L>
-        </U>
-      </V>
       <V t="test_set_reference">
         <T n="test_set_reference">13420754617872508648<!--LilNinthel:testSetInstance_Relationship_DiaperChanger_Actor--></T>
       </V>
