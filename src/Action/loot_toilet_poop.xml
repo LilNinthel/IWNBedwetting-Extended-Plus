@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_toilet_poop" s="9942098895842860377">
+  <L n="loot_actions">
+    <V t="statistics">
+      <V n="statistics" t="statistic_change">
+        <U n="statistic_change">
+          <T n="amount">200</T>
+          <T n="stat">12595814091995505583<!--LilNinthel:commodity_motive_Bowels--></T>
+        </U>
+      </V>
+    </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_set_in_range">
+        <U n="statistic_set_in_range">
+          <T n="stat">12821404978606278937<!--LilNinthel:commodity_poopCooldown--></T>
+          <V n="value_type" t="int_range">
+            <U n="int_range">
+              <U n="value_range">
+                <T n="lower_bound">960</T>
+                <T n="upper_bound">1440</T>
+              </U>
+            </U>
+          </V>
+        </U>
+      </V>
+    </V>
+  </L>
+</I>

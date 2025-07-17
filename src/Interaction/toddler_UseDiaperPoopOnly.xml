@@ -8,6 +8,12 @@
         <T n="stat">16652<!--motive_Bladder--></T>
       </U>
     </V>
+    <V t="statistic_change">
+      <U n="statistic_change">
+        <T n="amount">10</T>
+        <T n="stat">12595814091995505583<!--LilNinthel:commodity_motive_Bowels--></T>
+      </U>
+    </V>
   </L>
   <V n="_icon" t="resource_key">
     <U n="resource_key">
@@ -59,13 +65,6 @@
           <T>10251625219716980905<!--LilNinthel:loot_copy_bladder_value--></T>
         </L>
         <V n="timing" t="at_beginning" />
-      </U>
-    </V>
-    <V t="loot">
-      <U n="loot">
-        <L n="loot_list">
-          <T>10700787611967205049<!--LilNinthel:loot_diaper_poopOnly_bladderAdjust--></T>
-        </L>
       </U>
     </V>
     <V t="loot">
@@ -402,6 +401,7 @@
         <U>
           <U n="outcome">
             <L n="loot_list">
+              <T>10700787611967205049<!--LilNinthel:loot_diaper_poopOnly_bladderAdjust--></T>
               <T>15492140109304376292<!--LilNinthel:loot_statistic_diaper_mess--></T>
             </L>
           </U>
@@ -413,6 +413,7 @@
             <U>
               <U n="outcome">
                 <L n="loot_list">
+                  <T>10700787611967205049<!--LilNinthel:loot_diaper_poopOnly_bladderAdjust--></T>
                   <T>15492140109304376292<!--LilNinthel:loot_statistic_diaper_mess--></T>
                 </L>
               </U>
@@ -435,6 +436,7 @@
             <U>
               <U n="outcome">
                 <L n="loot_list">
+                  <T>10700787611967205049<!--LilNinthel:loot_diaper_poopOnly_bladderAdjust--></T>
                   <T>15492140109304376292<!--LilNinthel:loot_statistic_diaper_mess--></T>
                 </L>
               </U>

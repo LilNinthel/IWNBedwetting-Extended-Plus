@@ -155,6 +155,13 @@
       </V>
       <V t="trait">
         <U n="trait">
+          <L n="blacklist_traits">
+            <T>15375075297777072992<!--LilNinthel:trait_no_carrying--></T>
+          </L>
+        </U>
+      </V>
+      <V t="trait">
+        <U n="trait">
           <E n="subject">TargetSim</E>
           <L n="whitelist_traits">
             <T>3344421797<!--LilNinthel:trait_Little--></T>
@@ -192,6 +199,13 @@
             </U>
           </V>
           <E n="who">TargetSim</E>
+        </U>
+      </V>
+      <V t="trait">
+        <U n="trait">
+          <L n="blacklist_traits">
+            <T>15375075297777072992<!--LilNinthel:trait_no_carrying--></T>
+          </L>
         </U>
       </V>
       <V t="test_set_reference">

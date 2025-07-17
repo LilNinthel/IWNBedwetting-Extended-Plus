@@ -47,7 +47,7 @@ from satisfaction.satisfaction_tracker import SatisfactionTracker
 from sims.outfits.outfit_enums import BodyType, OutfitCategory
 from sims.sim_info import SimInfo
 from sims.sim_info_base_wrapper import SimInfoBaseWrapper
-from sims.sim_info_tests import BuffTest
+from sims.sim_info_tests import BuffTest, SimInfoTest
 from sims.sim_info_types import Age, Species
 from sims4 import resources, collections
 from sims4.callback_utils import CallableList
@@ -1935,8 +1935,12 @@ def modify_sleep_affordances(original, self, *args, **kwargs):
 
 
 toilet_autonomy_test_id = 14724461213419608835
+toilet_poop_autonomy_test_id = 0
 toilet_global_test_id = 15481261038742746897
+toilet_bowels_test_id = 7044116528228840097
+can_poop_test_id = 13075969349031789538
 loot_diaper_dependence_used_potty_id = 14520123767131912383
+loot_pooped = 9942098895842860377
 
 
 @inject(InstanceManager, 'load_data_into_class_instances')
@@ -1950,21 +1954,57 @@ def block_toilet_for_diapered_sims(original, self, *args, **kwargs):
 
         snippet_manager = services.snippet_manager()
         toilet_autonomy_test = snippet_manager.get(toilet_autonomy_test_id)
+        toilet_poop_autonomy_test = snippet_manager.get(toilet_poop_autonomy_test_id)
         toilet_global_test = snippet_manager.get(toilet_global_test_id)
+        toilet_bowels_test = snippet_manager.get(toilet_bowels_test_id)
 
         affordance_manager = services.affordance_manager()
         for guid in InteractionSets.TOILET_USE_INTERACTIONS:
             tun = affordance_manager.get(guid)
             if tun is not None:
                 logger.info('{}'.format(tun))
+
+                if hasattr(tun, 'basic_content') and isinstance(tun.basic_content, FlexibleLengthContent):
+                    # logger.info('{}'.format(tun.basic_content))
+                    # logger.info('{}'.format(dir(tun.basic_content)))
+                    if hasattr(tun.basic_content, 'conditional_actions'):
+                        logger.info('{}'.format(tun.basic_content.conditional_actions))
+                        for exitCondition in tun.basic_content.conditional_actions:
+                            has_bladder = False
+                            if isinstance(exitCondition, ExitCondition):
+                                for condition in exitCondition.conditions:
+                                    if hasattr(condition._tuned_values, 'stat'):
+                                        if condition._tuned_values.stat.guid64 == motive_bladder:
+                                            logger.info("{}".format(condition._tuned_values))
+                                            logger.info("{}".format(dir(condition._tuned_values)))
+                                            has_bladder = True
+                                            break
+                                # if has_bladder:
+                                #     dict(ExitCondition.TunableFactory().default._tuned_values)
+                                #     break
+                                    # logger.info('{}'.format(dir(exitCondition.tests)))
+                                    # for idx, test_group in enumerate(exitCondition.tests):
+                                    #     # logger.info('{}'.format(y))
+                                    #     # logger.info('{}'.format(dir(y)))
+                                    #     # if not any(hasattr(x, 'guid64') and x.guid64 == bladder_control_test_guid for x in y):
+                                    #     if bladder_control_test not in test_group:
+                                    #         exitCondition.tests[idx] = test_group + (bladder_control_test,)
+                                    #         # logger.info('{}'.format(exitCondition.tests))
+                                    # # tests = set(exitCondition.tests)
+
+
                 if hasattr(tun, 'test_autonomous') and len(tun.test_autonomous) > 0:
                     # logger.info('{}'.format(tun.test_autonomous))
                     # logger.info('{}'.format(tun.test_autonomous.__class__))
                     for idx, test_group in enumerate(tun.test_autonomous):
                         # logger.info('{}'.format(tun.test_autonomous[idx].__class__))
                         # logger.info('{}'.format(tun.test_autonomous[idx]))
-                        if toilet_autonomy_test not in test_group:
-                            tun.test_autonomous[idx] = test_group + (toilet_autonomy_test,)
+                        if guid in InteractionSets.TOILET_POOP_INTERACTIONS:
+                            if toilet_poop_autonomy_test not in test_group:
+                                tun.test_autonomous[idx] = test_group + (toilet_poop_autonomy_test,)
+                        else:
+                            if toilet_autonomy_test not in test_group:
+                                tun.test_autonomous[idx] = test_group + (toilet_autonomy_test,)
                             # logger.info('{}'.format(tun.test_autonomous[idx]))
                         # else:
                         #     logger.info('Toilet autonomy already fixed')
@@ -1995,6 +2035,18 @@ def block_toilet_for_diapered_sims(original, self, *args, **kwargs):
                     # logger.info('{}'.format(tun.test_globals))
                     # tun.test_globals.add(toilet_global_test)
 
+                if guid in InteractionSets.TOILET_POOP_INTERACTIONS:
+                    if hasattr(tun, 'tests'):
+                        test_groups = []
+                        for test_group in tun.tests:
+                            tests = []
+                            for test in test_group:
+                                tests.append(test)
+                            test_groups.append(tuple(tests))
+
+                        test_groups.append(tuple([toilet_bowels_test]))
+                        tun.tests = CompoundTestList(test_groups)
+
                 # if hasattr(tun, 'basic_extras'):
                 #     logger.info('{}'.format(tun.basic_extras))
                 #     logger.info('{}'.format(tun.basic_extras.__class__))
@@ -2010,6 +2062,8 @@ def block_toilet_for_diapered_sims(original, self, *args, **kwargs):
                 tuned_values['timing'] = timing
                 loot_list = list()
                 loot_list.append(services.action_manager().get(loot_diaper_dependence_used_potty_id))
+                if guid in InteractionSets.TOILET_POOP_INTERACTIONS:
+                    loot_list.append(services.action_manager().get(loot_pooped))
                 tuned_values['loot_list'] = tuple(loot_list)
                 immutable_slots_cls = sims4.collections.make_immutable_slots_class(tuned_values.keys())
                 tuned_values = immutable_slots_cls(tuned_values)

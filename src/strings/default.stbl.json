@@ -3,6 +3,7 @@
   "group": "0x80000000",
   "instanceBase": "0xF7A04C15A66A5A",
   "entries": {
+    "0x5A01290A": "Bowels",
     "0x63C00816": "Pacifier",
     "0xC6FE72EF": "Set as Favorite Pacifier",
     "0x512AE5BE": "Remove Pacifier",

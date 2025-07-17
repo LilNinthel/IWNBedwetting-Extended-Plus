@@ -21,5 +21,15 @@
         </U>
       </V>
     </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_remove">
+        <U n="statistic_remove">
+          <T n="stat">12595814091995505583<!--LilNinthel:commodity_motive_Bowels--></T>
+          <L n="subject">
+            <E>Actor</E>
+          </L>
+        </U>
+      </V>
+    </V>
   </L>
 </I>
