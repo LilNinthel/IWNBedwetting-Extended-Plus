@@ -3,6 +3,9 @@
   "group": "0x80000000",
   "instanceBase": "0xF7A04C15A66A5A",
   "entries": {
+    "0xD6A4AC87": "Does not prevent picking up Sims that have this Sim set as a diaper changer or caregiver",
+    "0xA53C4D11": "Enable Carrying Littles",
+    "0xC07769B7": "Disable Carrying Littles",
     "0x5A01290A": "Bowels",
     "0x63C00816": "Pacifier",
     "0xC6FE72EF": "Set as Favorite Pacifier",
