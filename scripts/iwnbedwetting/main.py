@@ -2036,6 +2036,7 @@ def block_toilet_for_diapered_sims(original, self, *args, **kwargs):
                     # tun.test_globals.add(toilet_global_test)
 
                 if guid in InteractionSets.TOILET_POOP_INTERACTIONS:
+                    logger.info("Toilet poop detected")
                     if hasattr(tun, 'tests'):
                         test_groups = []
                         for test_group in tun.tests:
