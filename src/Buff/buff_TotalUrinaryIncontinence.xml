@@ -60,7 +60,11 @@
   <T n="refresh_on_add">True</T>
   <T n="show_timeout">False</T>
   <T n="success_modifier">0</T>
+  <L n="super_affordances">
+    <T>12274581912977129596<!--LilNinthel:sim_BowelDistress--></T>
+    <T>4548980772411624089<!--LilNinthel:sim_BowelDistress_CarrySim--></T>
+  </L>
   <T n="ui_sort_order">1</T>
   <T n="visible">False</T>
-  <V n="walkstyle" t="disabled"/>
+  <V n="walkstyle" t="disabled" />
 </I>
