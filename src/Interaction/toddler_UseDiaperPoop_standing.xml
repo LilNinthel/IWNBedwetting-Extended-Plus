@@ -421,6 +421,13 @@
     <V t="test_set_reference">
       <T n="test_set_reference">17796732764948000262<!--IwnBedWetting_testSet_HasDiaperEquipped--></T>
     </V>
+    <V t="buff">
+      <U n="buff">
+        <L n="blacklist">
+          <T>18387649698602079241<!--LilNinthel:buff_TotalUrinaryIncontinence--></T>
+        </L>
+      </U>
+    </V>
     <V t="sim_info">
       <U n="sim_info">
         <V n="ages" t="specified">

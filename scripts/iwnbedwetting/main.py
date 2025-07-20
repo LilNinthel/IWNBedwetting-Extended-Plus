@@ -25,20 +25,23 @@ from clock import ClockSpeedMode
 from clubs.club_tuning import ClubRuleCriteriaTrait, ClubTunables
 from distributor.shared_messages import IconInfoData
 from event_testing.tests import CompoundTestList, TestList
+from interactions import ParticipantType
 from interactions.base.basic import FlexibleLengthContent
 from interactions.utils.loot_element import LootElement
 from interactions.utils.statistic_element import ExitCondition
 from iwnbedwetting.diaper_cas_part_config.snippet import DiaperLoadCASConfig
 from iwnbedwetting.enums.buffs import IwnBedwettingBuff
 from iwnbedwetting.enums.diapers import DiaperCC, DiaperBodyType, DiaperHeight, DiaperFrame
-from iwnbedwetting.enums.interactions import InteractionSets, DiaperInteraction, BedwettingInteraction
+from iwnbedwetting.enums.interactions import InteractionSets, DiaperInteraction, BedwettingInteraction, DiaperChangeInteraction
 from iwnbedwetting.enums.pacifiers import AdultPacifiers, ChildPacifiers
 from iwnbedwetting.enums.rewards import IwnBedwettingReward
+from iwnbedwetting.enums.snippets import IwnBedwettingTestSet
 from iwnbedwetting.enums.statistics import IwnBedwettingStatistic, DiaperStateStatistics
 from iwnbedwetting.enums.traits import IwnBedwettingTrait
 from iwnbedwetting.enums.wickedwhims import WW_SimStatistic, WW_SexNakedType, WW_SexUndressingTypeSetting
 from iwnbedwetting.native_enums.buffs import NativeBuff
 from iwnbedwetting.native_enums.interactions import NativeInteraction
+from iwnbedwetting.native_enums.motives import NativeMotive
 from iwnbedwetting.native_enums.traits import NativeTrait
 from iwnbedwetting.utilities.injector import inject
 from objects.components import component_definition, ComponentContainer
@@ -57,12 +60,13 @@ from sims4.localization import LocalizationHelperTuning
 from sims4.resources import Types
 from sims4.tuning.instance_manager import InstanceManager
 from sims4.tuning.tunable import TunableFactory
+from statistics.statistic_ops import StatisticChangeOp
 from tag import Tag
 from ui.ui_dialog import UiDialogOk, UiDialogResponse, ButtonType
 from ui.ui_dialog_notification import UiDialogNotification
 from zone import Zone
 
-IWN_BED_WETTING_VERSION = "2.1.1"
+IWN_BED_WETTING_VERSION = "2.2.0"
 PACKAGE_VERSION = 2
 ModHasRun = False
 devMode = False
@@ -78,8 +82,8 @@ _ember_detected = False
 _duplicate_mods = False
 _admin_flag = False
 
-xml_injector_spec = importlib.util.find_spec("xml_injector")
-_xml_injector_found = xml_injector_spec is not None
+# xml_injector_spec = importlib.util.find_spec("xml_injector")
+# _xml_injector_found = xml_injector_spec is not None
 
 try:
     import wickedwhims.nudity.outfit_nudity_reason
@@ -1735,8 +1739,6 @@ def DebugNotification(text, title=None):
 
 
 sleeping_diaper_usage_affordances = [DiaperInteraction.PEE, DiaperInteraction.PEE_CONTINUATION, BedwettingInteraction.BEDWET, BedwettingInteraction.BEDWET_CONTINUATION]
-motive_bladder = 16652
-bladder_control_test_guid = 15794548069054423667
 
 general_diaper_usage_affordances = [DiaperInteraction.PEE,
                                     DiaperInteraction.PEE_CONTINUATION,
@@ -1815,7 +1817,7 @@ def modify_sleep_affordances(original, self, *args, **kwargs):
             return result
 
         logger.info('Injecting Sleep Affordances')
-        bladder_control_test = services.snippet_manager().get(bladder_control_test_guid)
+        bladder_control_test = services.snippet_manager().get(IwnBedwettingTestSet.CAN_CONTROL_BLADDER)
 
 
         affordance_manager = services.affordance_manager()
@@ -1867,7 +1869,7 @@ def modify_sleep_affordances(original, self, *args, **kwargs):
                             if isinstance(exitCondition, ExitCondition):
                                 for condition in exitCondition.conditions:
                                     if hasattr(condition._tuned_values, 'stat'):
-                                        if condition._tuned_values.stat.guid64 == motive_bladder:
+                                        if condition._tuned_values.stat.guid64 == NativeMotive.BLADDER:
                                             has_bladder = True
                                             break
                                 if has_bladder:
@@ -1937,10 +1939,12 @@ def modify_sleep_affordances(original, self, *args, **kwargs):
 toilet_autonomy_test_id = 14724461213419608835
 toilet_poop_autonomy_test_id = 0
 toilet_global_test_id = 15481261038742746897
+toilet_poop_global_test_id = 10256216486312683154
 toilet_bowels_test_id = 7044116528228840097
-can_poop_test_id = 13075969349031789538
+# can_poop_test_id = 13075969349031789538
 loot_diaper_dependence_used_potty_id = 14520123767131912383
 loot_pooped = 9942098895842860377
+loot_copy_bowels_to_bladder = 16078470156163414351
 
 
 @inject(InstanceManager, 'load_data_into_class_instances')
@@ -1956,6 +1960,7 @@ def block_toilet_for_diapered_sims(original, self, *args, **kwargs):
         toilet_autonomy_test = snippet_manager.get(toilet_autonomy_test_id)
         toilet_poop_autonomy_test = snippet_manager.get(toilet_poop_autonomy_test_id)
         toilet_global_test = snippet_manager.get(toilet_global_test_id)
+        toilet_poop_global_test = snippet_manager.get(toilet_poop_global_test_id)
         toilet_bowels_test = snippet_manager.get(toilet_bowels_test_id)
 
         affordance_manager = services.affordance_manager()
@@ -1963,35 +1968,87 @@ def block_toilet_for_diapered_sims(original, self, *args, **kwargs):
             tun = affordance_manager.get(guid)
             if tun is not None:
                 logger.info('{}'.format(tun))
+                if guid in InteractionSets.TOILET_POOP_INTERACTIONS:
+                    logger.info("Toilet poop detected")
+                    if hasattr(tun, 'basic_content') and isinstance(tun.basic_content, FlexibleLengthContent):
+                        # logger.info('{}'.format(tun.basic_content))
+                        # logger.info('{}'.format(dir(tun.basic_content)))
+                        if hasattr(tun.basic_content, 'periodic_stat_change'):
+                            # logger.info('{}'.format(tun.basic_content.periodic_stat_change._tuned_values))
+                            # logger.info('{}'.format(tun.basic_content.periodic_stat_change._tuned_values.__class__))
+                            tuned_values = dict(tun.basic_content.periodic_stat_change._tuned_values)
+                            #(< StatisticChangeOp <class 'sims4.tuning.instances.commodity_dirtiness'> ParticipantType.Object >, < StatisticChangeOp < class 'sims4.tuning.instances.commodity_dirtiness' > ParticipantType.Object >, < StatisticChangeOp < class 'sims4.tuning.instances.motive_Bladder' > ParticipantType.Actor >, < StatisticChangeOp < class 'sims4.tuning.instances.motive_Bladder' > ParticipantType.Actor >, < StatisticChangeOp < class 'sims4.tuning.instances.motive_Bladder' > ParticipantType.Actor >, < StatisticChangeOp < class 'sims4.tuning.instances.commodity_Motive_HygieneHands' > ParticipantType.Actor >, < StatisticChangeOp < class 'sims4.tuning.instances.motive_Fun' > ParticipantType.Actor >, < StatisticChangeOp < class 'sims4.tuning.instances.commodity_Utilities_Power' > ParticipantType.Lot > )
+                            if 'operations' in tuned_values.keys():
+                                # logger.info('{}'.format(tuned_values['operations'].__class__))
 
-                if hasattr(tun, 'basic_content') and isinstance(tun.basic_content, FlexibleLengthContent):
-                    # logger.info('{}'.format(tun.basic_content))
-                    # logger.info('{}'.format(dir(tun.basic_content)))
-                    if hasattr(tun.basic_content, 'conditional_actions'):
-                        logger.info('{}'.format(tun.basic_content.conditional_actions))
-                        for exitCondition in tun.basic_content.conditional_actions:
-                            has_bladder = False
-                            if isinstance(exitCondition, ExitCondition):
-                                for condition in exitCondition.conditions:
-                                    if hasattr(condition._tuned_values, 'stat'):
-                                        if condition._tuned_values.stat.guid64 == motive_bladder:
-                                            logger.info("{}".format(condition._tuned_values))
-                                            logger.info("{}".format(dir(condition._tuned_values)))
-                                            has_bladder = True
+                                # tuned_values = dict(StatisticChangeOp.TunableFactory().default._tuned_values)
+                                # timing = dict(tuned_values['timing'])
+                                # timing['timing'] = 'at_end'
+                                # timing = dictionary_to_immutable_slots(timing)
+                                # tuned_values['timing'] = timing
+                                # loot_list = list()
+                                # loot_list.append(services.action_manager().get(loot_diaper_dependence_used_potty_id))
+                                # if guid in InteractionSets.TOILET_POOP_INTERACTIONS:
+                                #     loot_list.append(services.action_manager().get(loot_pooped))
+                                # tuned_values['loot_list'] = tuple(loot_list)
+                                # immutable_slots_cls = sims4.collections.make_immutable_slots_class(tuned_values.keys())
+                                # tuned_values = immutable_slots_cls(tuned_values)
+                                # e = TunableFactory.TunableFactoryWr apper(tuned_values, StatisticChangeOp.__name__, StatisticChangeOp)
+
+
+                                needs_stat = True
+                                for op in tuned_values['operations']:
+                                    if isinstance(op, StatisticChangeOp):
+                                        if op.stat.guid64 == IwnBedwettingStatistic.MOTIVE_BOWELS:
+                                            needs_stat = False
                                             break
-                                # if has_bladder:
-                                #     dict(ExitCondition.TunableFactory().default._tuned_values)
-                                #     break
-                                    # logger.info('{}'.format(dir(exitCondition.tests)))
-                                    # for idx, test_group in enumerate(exitCondition.tests):
-                                    #     # logger.info('{}'.format(y))
-                                    #     # logger.info('{}'.format(dir(y)))
-                                    #     # if not any(hasattr(x, 'guid64') and x.guid64 == bladder_control_test_guid for x in y):
-                                    #     if bladder_control_test not in test_group:
-                                    #         exitCondition.tests[idx] = test_group + (bladder_control_test,)
-                                    #         # logger.info('{}'.format(exitCondition.tests))
-                                    # # tests = set(exitCondition.tests)
+                                if needs_stat:
+                                    bowel_stat = _get_statistic_manager().get(IwnBedwettingStatistic.MOTIVE_BOWELS)
+                                    stat_op = StatisticChangeOp(amount=20, stat=bowel_stat, subject=ParticipantType.Actor, exclusive_to_owning_si=True, min_value=200)
+                                    operations = list(tuned_values['operations'])
+                                    operations.append(stat_op)
+                                    tuned_values_cls = make_immutable_slots_class(tuned_values.keys())
+                                    tuned_values['operations'] = tuple(operations)
+                                    # tun.basic_content.periodic_stat_change._tuned_values = tuned_values_cls(tuned_values)
+                                # logger.info('{}'.format(tun.basic_content.periodic_stat_change._tuned_values))
 
+
+                                # logger.info('{}'.format(tuned_values['operations']))
+                                # logger.info('{}'.format(tuned_values['operations'].__class__))
+                                #
+                                # for operation in tuned_values['operations']:
+                                #     logger.info('{}'.format(operation))
+                                #     logger.info('{}'.format(operation.__class__))
+
+                        # if hasattr(tun.basic_content, 'conditional_actions'):
+                        #     logger.info('{}'.format(tun.basic_content.conditional_actions))
+                        #     for exitCondition in tun.basic_content.conditional_actions:
+                        #         has_bladder = False
+                        #         if isinstance(exitCondition, ExitCondition):
+                        #             for condition in exitCondition.conditions:
+                        #                 if hasattr(condition._tuned_values, 'stat'):
+                        #                     # ImmutableSlots({'absolute': True, 'stat': <class 'sims4.tuning.instances.motive_Bladder'>, 'threshold': <Threshold >= 100.0>, 'who': <ParticipantType.Actor = 1>})
+                        #                     if condition._tuned_values.stat.guid64 == NativeMotive.BLADDER:
+                        #                         tuned_values = dict(condition._tuned_values)
+                        #                         timing = dict(tuned_values['timing'])
+                        #                         timing['timing'] = 'at_end'
+                        #                         timing = dictionary_to_immutable_slots(timing)
+                        #                         logger.info("{}".format(condition._tuned_values))
+                        #                         logger.info("{}".format(dir(condition._tuned_values)))
+                        #                         has_bladder = True
+                        #                         break
+                                    # if has_bladder:
+                                    #     dict(ExitCondition.TunableFactory().default._tuned_values)
+                                    #     break
+                                        # logger.info('{}'.format(dir(exitCondition.tests)))
+                                        # for idx, test_group in enumerate(exitCondition.tests):
+                                        #     # logger.info('{}'.format(y))
+                                        #     # logger.info('{}'.format(dir(y)))
+                                        #     # if not any(hasattr(x, 'guid64') and x.guid64 == bladder_control_test_guid for x in y):
+                                        #     if bladder_control_test not in test_group:
+                                        #         exitCondition.tests[idx] = test_group + (bladder_control_test,)
+                                        #         # logger.info('{}'.format(exitCondition.tests))
+                                        # # tests = set(exitCondition.tests)
 
                 if hasattr(tun, 'test_autonomous') and len(tun.test_autonomous) > 0:
                     # logger.info('{}'.format(tun.test_autonomous))
@@ -2011,18 +2068,26 @@ def block_toilet_for_diapered_sims(original, self, *args, **kwargs):
                         #     logger.info('{}'.format(tun.test_autonomous[idx]))
                 else:
                     tun.test_autonomous = CompoundTestList()
-                    tun.test_autonomous.append((toilet_autonomy_test,))
+                    # if guid in InteractionSets.TOILET_POOP_INTERACTIONS:
+                    #     tun.test_autonomous.append(list((toilet_poop_autonomy_test,)))
+                    # else:
+                    #     tun.test_autonomous.append(list((toilet_autonomy_test,)))
                     # tun.test_autonomous[0] = (toilet_autonomy_test,)
-                    # tun.test_autonomous.append(list((toilet_autonomy_test,)))
+                    tun.test_autonomous.append((toilet_autonomy_test,))
                     # logger.info('{}'.format(tun.test_autonomous))
                 #
+
+                if guid in InteractionSets.TOILET_POOP_INTERACTIONS:
+                    test = toilet_poop_global_test
+                else:
+                    test = toilet_global_test
                 if hasattr(tun, 'test_globals'):
                     # logger.info('{}'.format(tun.test_globals.__class__))
                     # logger.info('{}'.format(tun.test_globals))
                     # logger.info('{}'.format(dir(tun.test_globals)))
-                    if toilet_global_test not in tun.test_globals:
+                    if test not in tun.test_globals:
                         test_list = list(tun.test_globals)
-                        test_list.append(toilet_global_test)
+                        test_list.append(test)
                         tun.test_globals = TestList(test_list)
                         # logger.info('{}'.format(tun.test_globals))
                     # else:
@@ -2030,13 +2095,13 @@ def block_toilet_for_diapered_sims(original, self, *args, **kwargs):
                         # logger.info('{}'.format(tun.test_globals))
                 else:
                     test_list = list()
-                    test_list.append(toilet_global_test)
+                    test_list.append(test)
                     tun.test_globals = TestList(test_list)
                     # logger.info('{}'.format(tun.test_globals))
                     # tun.test_globals.add(toilet_global_test)
 
                 if guid in InteractionSets.TOILET_POOP_INTERACTIONS:
-                    logger.info("Toilet poop detected")
+                    # logger.info("Toilet poop detected")
                     if hasattr(tun, 'tests'):
                         test_groups = []
                         for test_group in tun.tests:
@@ -2070,7 +2135,21 @@ def block_toilet_for_diapered_sims(original, self, *args, **kwargs):
                 tuned_values = immutable_slots_cls(tuned_values)
                 e = TunableFactory.TunableFactoryWrapper(tuned_values, LootElement.__name__, LootElement)
                 tun.basic_extras = tun.basic_extras + (e,)
-                # logger.info('{}'.format(tun.basic_extras))
+
+                if guid in InteractionSets.TOILET_POOP_INTERACTIONS:
+                    tuned_values = dict(LootElement.TunableFactory().default._tuned_values)
+                    timing = dict(tuned_values['timing'])
+                    timing['timing'] = 'at_beginning'
+                    timing = dictionary_to_immutable_slots(timing)
+                    tuned_values['timing'] = timing
+                    loot_list = list()
+                    loot_list.append(services.action_manager().get(loot_copy_bowels_to_bladder))
+                    tuned_values['loot_list'] = tuple(loot_list)
+                    immutable_slots_cls = sims4.collections.make_immutable_slots_class(tuned_values.keys())
+                    tuned_values = immutable_slots_cls(tuned_values)
+                    e = TunableFactory.TunableFactoryWrapper(tuned_values, LootElement.__name__, LootElement)
+                    tun.basic_extras = (e,) + tun.basic_extras
+                    logger.info('{}'.format(tun.basic_extras))
 
 
     except Exception as e:
@@ -2080,8 +2159,8 @@ def block_toilet_for_diapered_sims(original, self, *args, **kwargs):
     return result
 
 
-if _wicked_whims_installed and _xml_injector_found:
-    from xml_injector.add_to_tuning import add_super_affordances_to_sims
+if _wicked_whims_installed:
+    from iwnbedwetting.xml_injector.add_to_tuning import add_super_affordances_to_sims
 
     @inject(InstanceManager, 'load_data_into_class_instances')
     def inject_ww_interactions(original, self, *args, **kwargs):
@@ -2202,11 +2281,32 @@ def little_autonomy_fixer(original, self, *args, **kwargs):
 
         logger.info('Injecting Little Autonomy Fixes')
 
-        # little_autonomy_targets = [30917]
-
-        # little_autonomy_tests = [15768591105414661584]
-
-        excluded_interactions = [16617239709778473043, 10785441443215295256,287675,276860,287683,287681,280987,275341,319632,274023,274891,326839,156159,277492,277490,277498,277497,308458,308459,151786,151827,153920,146042,146041,155696,144287]
+        excluded_interactions = [DiaperChangeInteraction.SI_TOUCHING_CHANGEDIAPER_CHECK,
+                                 DiaperChangeInteraction.SI_TOUCHING_CHANGEDIAPER_ASK,
+                                 NativeInteraction.TYAE_WATCH_INFANT_AUTONOMOUS,
+                                 NativeInteraction.TYAE_CHECKON_INFANT_MINOR,
+                                 NativeInteraction.CRIB_SOCIALS_KISSGOODNIGHT_AUTONOMOUS,
+                                 NativeInteraction.CRIB_SOCIALS_TELLBEDTIMESTORY_AUTONOMOUS,
+                                 NativeInteraction.INFANT_PRESLEEP_CRIB,
+                                 NativeInteraction.INFANT_SLEEP_CRIB,
+                                 NativeInteraction.INFANT_PRESLEEP_CRIB_NOIDENTITYTEST,
+                                 NativeInteraction.SIM_INFANT_CHAT,
+                                 NativeInteraction.INFANT_WATCH,
+                                 NativeInteraction.INFANT_WATCH_IMMOBILE_INOBJECT,
+                                 NativeInteraction.SOCIALSUPERINTERACTION_CARRYPICKUP_SAVETODDLER,
+                                 NativeInteraction.PLAYMAT_SOCIALS_WATCHINFANT,
+                                 NativeInteraction.PLAYMAT_SOCIALS_PLAYWITHINFANT,
+                                 NativeInteraction.PLAYMAT_PLAYWITHTOYS,
+                                 NativeInteraction.PLAYMAT_LOOKATTOYS,
+                                 NativeInteraction.INFANT_PRESLEEP_PLAYMAT,
+                                 NativeInteraction.INFANT_SLEEPNORMAL_PLAYMAT,
+                                 NativeInteraction.TYAE_WATCH_TODDLER,
+                                 NativeInteraction.TYAE_WATCH_TODDLER_MOTIVEDISTRESS,
+                                 NativeInteraction.HIGHCHAIR_GIVEDESSERTAUTONOMOUSLY,
+                                 NativeInteraction.HIGHCHAIR_GIVEDRINKAUTONOMOUSLY,
+                                 NativeInteraction.HIGHCHAIR_GIVEFOODAUTONOMOUSLY,
+                                 NativeInteraction.HIGHCHAIR_NAP,
+                                 NativeInteraction.TODDLER_WATCH_THINKING]
 
         posture_buffs = [NativeBuff.TODDLER_AUTONOMY_MOD_IN_HIGH_CHAIR,
                          NativeBuff.AUTONOMY_MOD_POSTURE_HIGH_CHAIR,
@@ -2214,10 +2314,9 @@ def little_autonomy_fixer(original, self, *args, **kwargs):
                          NativeBuff.AUTONOMY_MOD_POSTURE_CRIB]
 
         snippet_manager = services.snippet_manager()
-        # little_autonomy_test_instances = [snippet_manager.get(x) for x in little_autonomy_tests]
 
-        standard_test = snippet_manager.get(15768591105414661584)
-        social_test = snippet_manager.get(13514748390442777472)
+        standard_test = snippet_manager.get(IwnBedwettingTestSet.LITTLE_AUTONOMY_MOD_ACTOR)
+        social_test = snippet_manager.get(IwnBedwettingTestSet.LITTLE_AUTONOMY_MOD_TARGETSIM)
 
         affordance_manager = services.affordance_manager()
         for tun in affordance_manager._tuned_classes.values():
@@ -2486,11 +2585,11 @@ def ShowMod():
                                                                    button1_response, ember_mod_response))
         dialog.show_dialog()
 
-    if not _xml_injector_found:
-        dialog = UiDialogOk.TunableFactory().default(None)
-        dialog.title = lambda **_: LocalizationHelperTuning.get_raw_text('WARNING: IwnBedWetting Extended+ - XML Injector Not Detected')
-        dialog.text = lambda **_: LocalizationHelperTuning.get_raw_text('This mod requires XML Injector to function. Please install the latest XML Injector from https://scumbumbomods.com/#/xml-injector/')
-        dialog.show_dialog()
+    # if not _xml_injector_found:
+    #     dialog = UiDialogOk.TunableFactory().default(None)
+    #     dialog.title = lambda **_: LocalizationHelperTuning.get_raw_text('WARNING: IwnBedWetting Extended+ - XML Injector Not Detected')
+    #     dialog.text = lambda **_: LocalizationHelperTuning.get_raw_text('This mod requires XML Injector to function. Please install the latest XML Injector from https://scumbumbomods.com/#/xml-injector/')
+    #     dialog.show_dialog()
 
     logger.info("WickedWhims installed: {}".format(_wicked_whims_installed))
 

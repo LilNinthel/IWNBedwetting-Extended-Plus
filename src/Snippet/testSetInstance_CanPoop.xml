@@ -82,8 +82,8 @@
           <T n="stat">12595814091995505583<!--LilNinthel:commodity_motive_Bowels--></T>
           <V n="threshold" t="value_threshold">
             <U n="value_threshold">
-              <E n="comparison">LESS_OR_EQUAL</E>
-              <T n="value">100</T>
+              <E n="comparison">LESS</E>
+              <T n="value">0</T>
             </U>
           </V>
         </U>

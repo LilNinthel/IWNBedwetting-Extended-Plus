@@ -46,13 +46,6 @@
               </U>
             </U>
           </L>
-          <V n="subject" t="apply_on_interaction_to_participant">
-            <V n="apply_on_interaction_to_participant" t="enabled">
-              <L n="enabled">
-                <E>Actor</E>
-              </L>
-            </V>
-          </V>
         </U>
       </V>
       <V t="continuous_statistic_modifier">

@@ -45,6 +45,10 @@ class DiaperInteraction(EnumBase):
     COMBINED_IMMEDIATE = 18237598613162935279
 
 
+class DiaperChangeInteraction(EnumBase):
+    SI_TOUCHING_CHANGEDIAPER_CHECK = 16617239709778473043
+    SI_TOUCHING_CHANGEDIAPER_ASK = 10785441443215295256
+
 class BedwettingInteraction(EnumBase):
     BEDWET = 14347203327565699161
     BEDWET_CONTINUATION = 15545876685594118345
@@ -84,6 +88,7 @@ class InteractionSets:
         ToiletInteraction.TOILET_USE_SITTING_STALL,
         ToiletInteraction.TOILET_USE_SITTING_STALL_PRANKED,
         ToiletInteraction.SQUAT_TOILET_USE,
+        ToiletInteraction.TALKING_TOILET_USE_MASSAGE,
         ToiletInteraction.TALKING_TOILET_USE_SITTING,
         ToiletInteraction.TALKING_TOILET_USE_SANITIZE_SIT,
         ToiletInteraction.TALKING_TOILET_USE_WATCH_SIT,
