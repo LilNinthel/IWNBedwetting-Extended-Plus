@@ -1079,7 +1079,8 @@ def put_on_random_diaper_bottom(owner_id:int=None, object_instance_id=None,  _co
 
 @sims4.commands.Command('iwn.update_default_diaper', command_type=sims4.commands.CommandType.Live)
 def update_default_diaper(owner_id:int=None, force_change:bool=False, _connection=None):
-    put_on_random_diaper_accessory(owner_id,force_change=force_change,_connection=_connection)
+    if not has_trait(owner_id, IwnBedwettingTrait.NO_VISIBLE_DIAPERS):
+        put_on_random_diaper_accessory(owner_id,force_change=True,_connection=_connection)
 
 
 @sims4.commands.Command('iwn.put_on_random_diaper_accessory', command_type=sims4.commands.CommandType.Live)
@@ -1114,13 +1115,13 @@ def put_on_random_diaper_accessory(owner_id:int=None, object_instance_id=None, _
                     if outfit_parts is not None:
                         if BodyType.LOWER_BODY in outfit_parts.keys():
                             for outfit_part in outfit_parts[BodyType.LOWER_BODY]:
-                                if not force_change and DiaperLoadCASConfig.is_diaper_part(outfit_part.cas_part):
+                                if not force_change and object_definition_id is None and DiaperLoadCASConfig.is_diaper_part(outfit_part.cas_part):
                                     return
 
                         if sim_info.age in (Age.TEEN, Age.YOUNGADULT, Age.ADULT, Age.ELDER):
                             if BodyType.INDEX_FINGER_LEFT in outfit_parts.keys():
                                 for outfit_part in outfit_parts[BodyType.INDEX_FINGER_LEFT]:
-                                    if not force_change and DiaperLoadCASConfig.is_diaper_part(outfit_part.cas_part):
+                                    if not force_change and object_definition_id is None and DiaperLoadCASConfig.is_diaper_part(outfit_part.cas_part):
                                         if object_definition_id is None:
                                             return
                             else:
@@ -1129,7 +1130,7 @@ def put_on_random_diaper_accessory(owner_id:int=None, object_instance_id=None, _
                         elif _admin_flag and sim_info.age == Age.CHILD:
                             if BodyType.INDEX_FINGER_LEFT in outfit_parts.keys():
                                 for outfit_part in outfit_parts[BodyType.INDEX_FINGER_LEFT]:
-                                    if not force_change and DiaperLoadCASConfig.is_diaper_part(outfit_part.cas_part):
+                                    if not force_change and object_definition_id is None and DiaperLoadCASConfig.is_diaper_part(outfit_part.cas_part):
                                         return
                             else:
                                 outfit_parts[BodyType.INDEX_FINGER_LEFT] = (CasPart(0),)
@@ -1139,6 +1140,7 @@ def put_on_random_diaper_accessory(owner_id:int=None, object_instance_id=None, _
                         body_type = BodyType.INDEX_FINGER_LEFT
 
                         default_diaper_type = get_statistic_value(sim_info, IwnBedwettingStatistic.DEFAULT_DIAPER_TYPE)
+                        logger.info("Default diaper type: {}".format(default_diaper_type))
 
                         default_cas_ids = []
 
@@ -1172,11 +1174,11 @@ def put_on_random_diaper_accessory(owner_id:int=None, object_instance_id=None, _
                                         diaper_part_id = random.choice(
                                             DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.INDEX_FINGER_LEFT,
                                                                                                    rec_part_ids))
-                                    elif len(default_cas_ids) > 0:
-                                        logger.info("Looking up diaper part by default diaper type")
-                                        diaper_part_id = random.choice(
-                                            DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.INDEX_FINGER_LEFT,
-                                                                                                           default_cas_ids))
+                                elif len(default_cas_ids) > 0:
+                                    logger.info("Looking up diaper part by default diaper type")
+                                    diaper_part_id = random.choice(
+                                        DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.INDEX_FINGER_LEFT,
+                                                                                                       default_cas_ids))
                                 if diaper_part_id is None:
                                     diaper_part_id = random.choice(
                                         DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.INDEX_FINGER_LEFT,
@@ -1185,7 +1187,7 @@ def put_on_random_diaper_accessory(owner_id:int=None, object_instance_id=None, _
                             diaper_part_id = 16089036029714611952
                             body_type = BodyType.INDEX_FINGER_LEFT
                         if diaper_part_id is not None:
-                            outfit_parts[body_type] = (CasPart((diaper_part_id)),)
+                            outfit_parts[body_type] = (CasPart(diaper_part_id),)
                             set_outfit_parts(sim_info, outfit_category_and_index, outfit_parts, update_client)
     except Exception as e:
         logger.error("put_on_random_diaper_accessory failed to run.")

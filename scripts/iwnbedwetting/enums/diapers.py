@@ -58,9 +58,9 @@ class DiaperCASMetadata:
         self.body_type = body_type
         self.print_style = print_style
         self.cas_id = cas_id
-        self.diaper_types = frozenset([DefaultDiaperType.UNSPECIFIED])
-        if diaper_types is not None:
-            self.diaper_types = frozenset(list(diaper_types))
+        self.diaper_types = diaper_types
+        # if diaper_types is not None:
+        #     self.diaper_types = frozenset(list(diaper_types))
 
 
 class DiaperObjectDefinition(EnumBase):
