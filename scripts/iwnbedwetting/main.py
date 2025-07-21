@@ -1005,7 +1005,7 @@ outfit_categories_excluded_from_diaper = [OutfitCategory.SWIMWEAR,OutfitCategory
 
 
 @sims4.commands.Command('iwn.put_on_random_diaper_bottom', command_type=sims4.commands.CommandType.Live)
-def put_on_random_diaper_bottom(owner_id:int=None, _connection=None, remove_full_body:bool=False, remove_tights:bool=False, remove_top:bool=False, outfit_category_and_index=None, update_client=True):
+def put_on_random_diaper_bottom(owner_id:int=None, object_instance_id=None,  _connection=None, remove_full_body:bool=False, remove_tights:bool=False, remove_top:bool=False, outfit_category_and_index=None, update_client=True):
     if not _ember_detected:
         return
     try:
@@ -1042,21 +1042,32 @@ def put_on_random_diaper_bottom(owner_id:int=None, _connection=None, remove_full
                                 if DiaperLoadCASConfig.is_diaper_part(outfit_part.cas_part):
                                     return
                         else:
-                            outfit_parts[BodyType.LOWER_BODY] = (CasPart((0)),)
+                            outfit_parts[BodyType.LOWER_BODY] = (CasPart(0),)
 
                         diaper_part_id = None
 
-                        if sim_info.age in (Age.TEEN, Age.YOUNGADULT, Age.ADULT, Age.ELDER):
-                            if has_trait(sim_info.id, NativeTrait.GENDER_OPTIONS_FRAME_MASCULINE):
+                        default_diaper_type = get_statistic_value(sim_info, IwnBedwettingStatistic.DEFAULT_DIAPER_TYPE)
+
+                        if default_diaper_type is not None:
+                            default_diaper_type = int(default_diaper_type)
+                            default_cas_ids = DiaperCC.get_filtered_cas_ids(height=DiaperHeight.WALL,body_type=DiaperBodyType.BOTTOM,frame=get_diaper_frame_for_sim(sim_info),diaper_type=default_diaper_type)
+                            if len(default_cas_ids) > 0:
+                                logger.info("Looking up diaper part by default diaper type")
                                 diaper_part_id = random.choice(
                                     DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.LOWER_BODY,
-                                                                                                   _male_bottom))
-                            elif has_trait(sim_info.id, NativeTrait.GENDER_OPTIONS_FRAME_FEMININE):
-                                diaper_part_id = random.choice(
-                                    DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.LOWER_BODY,
-                                                                                                   _female_bottom))
-                        elif _admin_flag and sim_info.age == Age.CHILD:
-                            diaper_part_id = 17916267921504688060
+                                                                                                   default_cas_ids))
+                        if diaper_part_id is None:
+                            if sim_info.age in (Age.TEEN, Age.YOUNGADULT, Age.ADULT, Age.ELDER):
+                                if has_trait(sim_info.id, NativeTrait.GENDER_OPTIONS_FRAME_MASCULINE):
+                                    diaper_part_id = random.choice(
+                                        DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.LOWER_BODY,
+                                                                                                       _male_bottom))
+                                elif has_trait(sim_info.id, NativeTrait.GENDER_OPTIONS_FRAME_FEMININE):
+                                    diaper_part_id = random.choice(
+                                        DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.LOWER_BODY,
+                                                                                                       _female_bottom))
+                            elif _admin_flag and sim_info.age == Age.CHILD:
+                                diaper_part_id = 17916267921504688060
                         if diaper_part_id is not None:
                             outfit_parts[BodyType.LOWER_BODY] = (CasPart((diaper_part_id)),)
                             outfit_parts.pop(BodyType.INDEX_FINGER_LEFT, None)
@@ -1066,8 +1077,13 @@ def put_on_random_diaper_bottom(owner_id:int=None, _connection=None, remove_full
         logger.error(traceback.format_exc())
 
 
+@sims4.commands.Command('iwn.update_default_diaper', command_type=sims4.commands.CommandType.Live)
+def update_default_diaper(owner_id:int=None, force_change:bool=False, _connection=None):
+    put_on_random_diaper_accessory(owner_id,force_change=force_change,_connection=_connection)
+
+
 @sims4.commands.Command('iwn.put_on_random_diaper_accessory', command_type=sims4.commands.CommandType.Live)
-def put_on_random_diaper_accessory(owner_id:int=None, object_instance_id=None, _connection=None, outfit_category_and_index=None, update_client=True):
+def put_on_random_diaper_accessory(owner_id:int=None, object_instance_id=None, _connection=None, outfit_category_and_index=None, update_client=True, force_change=False):
     if not _ember_detected:
         return
     try:
@@ -1096,32 +1112,39 @@ def put_on_random_diaper_accessory(owner_id:int=None, object_instance_id=None, _
                         return
                     outfit_parts = get_outfit_parts(sim_info, outfit_category_and_index)
                     if outfit_parts is not None:
-
                         if BodyType.LOWER_BODY in outfit_parts.keys():
                             for outfit_part in outfit_parts[BodyType.LOWER_BODY]:
-                                if DiaperLoadCASConfig.is_diaper_part(outfit_part.cas_part):
+                                if not force_change and DiaperLoadCASConfig.is_diaper_part(outfit_part.cas_part):
                                     return
 
                         if sim_info.age in (Age.TEEN, Age.YOUNGADULT, Age.ADULT, Age.ELDER):
                             if BodyType.INDEX_FINGER_LEFT in outfit_parts.keys():
                                 for outfit_part in outfit_parts[BodyType.INDEX_FINGER_LEFT]:
-                                    if DiaperLoadCASConfig.is_diaper_part(outfit_part.cas_part):
+                                    if not force_change and DiaperLoadCASConfig.is_diaper_part(outfit_part.cas_part):
                                         if object_definition_id is None:
                                             return
                             else:
-                                outfit_parts[BodyType.INDEX_FINGER_LEFT] = (CasPart((0)),)
+                                outfit_parts[BodyType.INDEX_FINGER_LEFT] = (CasPart(0),)
 
                         elif _admin_flag and sim_info.age == Age.CHILD:
                             if BodyType.INDEX_FINGER_LEFT in outfit_parts.keys():
                                 for outfit_part in outfit_parts[BodyType.INDEX_FINGER_LEFT]:
-                                    if DiaperLoadCASConfig.is_diaper_part(outfit_part.cas_part):
+                                    if not force_change and DiaperLoadCASConfig.is_diaper_part(outfit_part.cas_part):
                                         return
                             else:
-                                outfit_parts[BodyType.INDEX_FINGER_LEFT] = (CasPart((0)),)
+                                outfit_parts[BodyType.INDEX_FINGER_LEFT] = (CasPart(0),)
 
                         diaper_part_id = None
 
                         body_type = BodyType.INDEX_FINGER_LEFT
+
+                        default_diaper_type = get_statistic_value(sim_info, IwnBedwettingStatistic.DEFAULT_DIAPER_TYPE)
+
+                        default_cas_ids = []
+
+                        if default_diaper_type is not None:
+                            default_diaper_type = int(default_diaper_type)
+                            default_cas_ids = DiaperCC.get_filtered_cas_ids(height=DiaperHeight.WALL,body_type=DiaperBodyType.ACCESSORY,frame=get_diaper_frame_for_sim(sim_info),diaper_type=default_diaper_type)
 
                         if sim_info.age in (Age.TEEN, Age.YOUNGADULT, Age.ADULT, Age.ELDER):
                             if has_trait(sim_info.id, NativeTrait.GENDER_OPTIONS_FRAME_MASCULINE):
@@ -1132,6 +1155,11 @@ def put_on_random_diaper_accessory(owner_id:int=None, object_instance_id=None, _
                                         diaper_part_id = random.choice(
                                             DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.INDEX_FINGER_LEFT,
                                                                                                    rec_part_ids))
+                                elif len(default_cas_ids) > 0:
+                                    logger.info("Looking up diaper part by default diaper type")
+                                    diaper_part_id = random.choice(
+                                        DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.INDEX_FINGER_LEFT,
+                                                                                                       default_cas_ids))
                                 if diaper_part_id is None:
                                     diaper_part_id = random.choice(
                                         DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.INDEX_FINGER_LEFT,
@@ -1144,6 +1172,11 @@ def put_on_random_diaper_accessory(owner_id:int=None, object_instance_id=None, _
                                         diaper_part_id = random.choice(
                                             DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.INDEX_FINGER_LEFT,
                                                                                                    rec_part_ids))
+                                    elif len(default_cas_ids) > 0:
+                                        logger.info("Looking up diaper part by default diaper type")
+                                        diaper_part_id = random.choice(
+                                            DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.INDEX_FINGER_LEFT,
+                                                                                                           default_cas_ids))
                                 if diaper_part_id is None:
                                     diaper_part_id = random.choice(
                                         DiaperLoadCASConfig.get_default_diaper_parts_ids_for_body_type(BodyType.INDEX_FINGER_LEFT,
@@ -1157,6 +1190,17 @@ def put_on_random_diaper_accessory(owner_id:int=None, object_instance_id=None, _
     except Exception as e:
         logger.error("put_on_random_diaper_accessory failed to run.")
         logger.error(traceback.format_exc())
+
+
+def get_diaper_frame_for_sim(sim_info):
+    if sim_info is not None:
+        if sim_info.age == Age.CHILD:
+            return DiaperFrame.CHILD
+        if has_trait(sim_info.id, NativeTrait.GENDER_OPTIONS_FRAME_MASCULINE):
+            return DiaperFrame.MASCULINE
+        if has_trait(sim_info.id, NativeTrait.GENDER_OPTIONS_FRAME_FEMININE):
+            return DiaperFrame.FEMININE
+    return DiaperFrame.INVALID
 
 
 @sims4.commands.Command('iwn.remove_diaper', command_type=sims4.commands.CommandType.Live)

@@ -39,6 +39,26 @@
           <T>15202463803932374878<!--LilNinthel:loot_stat_defaultDiaperType_medical_premium--></T>
           <T>15788284142631708524<!--LilNinthel:loot_defaultDiaperType_apply_Target--></T>
         </L>
+        <L n="basic_extras">
+          <V t="do_command">
+            <U n="do_command">
+              <L n="arguments">
+                <V t="participant">
+                  <U n="participant">
+                    <E n="argument">TargetSim</E>
+                  </U>
+                </V>
+                <V t="boolean">
+                  <U n="boolean">
+                    <T n="argument">True</T>
+                  </U>
+                </V>
+              </L>
+              <T n="command">iwn.update_default_diaper</T>
+              <V n="timing" t="at_end" />
+            </U>
+          </V>
+        </L>
       </U>
     </U>
   </V>
