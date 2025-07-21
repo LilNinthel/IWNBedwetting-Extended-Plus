@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<I c="LootActions" i="action" m="interactions.utils.loot" n="LilNinthel:loot_copy_bowels_value" s="16078470156163414351">
+  <L n="loot_actions">
+    <V t="statistics">
+      <V n="statistics" t="statistic_transfer">
+        <U n="statistic_transfer">
+          <T n="advertise">False</T>
+          <T n="stat">16652<!--motive_Bladder--></T>
+          <E n="statistic_donor">Actor</E>
+          <L n="subject">
+            <E>Actor</E>
+          </L>
+          <E n="transfer_type">REPLACEMENT</E>
+          <T n="transferred_stat">12595814091995505583<!--LilNinthel:commodity_motive_Bowels--></T>
+        </U>
+      </V>
+    </V>
+  </L>
+</I>

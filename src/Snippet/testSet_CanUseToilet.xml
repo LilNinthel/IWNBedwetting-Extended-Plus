@@ -7,7 +7,6 @@
             <T>2404632404<!--LilNinthel:trait_Never_Potty_Trained--></T>
             <T>614588825<!--LilNinthel:trait_diaper_devotee--></T>
             <T>2924659518<!--LilNinthel:trait_DiaperPunished--></T>
-            <T>10130971893846669676<!--LilNinthel:trait_Incontinence_Urinary_Total--></T>
           </L>
         </U>
       </V>
@@ -15,6 +14,7 @@
         <U n="buff">
           <L n="blacklist">
             <T>17512215096630610749<!--LilNinthel:buff_lotTrait_ToiletFreeZone--></T>
+            <T>18387649698602079241<!--LilNinthel:buff_TotalUrinaryIncontinence--></T>
           </L>
         </U>
       </V>

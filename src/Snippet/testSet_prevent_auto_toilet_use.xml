@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <I c="TestSetInstance" i="snippet" m="event_testing.tests" n="LilNinthel:testSet_prevent_auto_toilet_use" s="14724461213419608835">
   <L n="test">
     <L>
@@ -32,6 +33,29 @@
             <E n="comparison">LESS_OR_EQUAL</E>
             <T n="value">-95</T>
           </U>
+        </U>
+      </V>
+    </L>
+    <L>
+      <V t="trait">
+        <U n="trait">
+          <L n="blacklist_traits">
+            <T>614588825<!--LilNinthel:trait_diaper_devotee--></T>
+            <T>2924659518<!--LilNinthel:trait_DiaperPunished--></T>
+            <T>15208347844590761733<!--LilNinthel:trait_lovesmessydiapers--></T>
+          </L>
+        </U>
+      </V>
+      <V t="statistic">
+        <U n="statistic">
+          <T n="must_have_stat">True</T>
+          <T n="stat">12595814091995505583<!--LilNinthel:commodity_motive_Bowels--></T>
+          <V n="threshold" t="value_threshold">
+            <U n="value_threshold">
+              <E n="comparison">LESS</E>
+              <T n="value">0</T>
+            </U>
+          </V>
         </U>
       </V>
     </L>

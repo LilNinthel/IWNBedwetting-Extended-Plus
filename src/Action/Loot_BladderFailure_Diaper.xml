@@ -9,5 +9,14 @@
         </U>
       </V>
     </V>
+    <V t="statistics">
+      <V n="statistics" t="statistic_change">
+        <U n="statistic_change">
+          <T n="advertise">False</T>
+          <T n="amount">200</T>
+          <T n="stat">12595814091995505583<!--LilNinthel:commodity_motive_Bowels--></T>
+        </U>
+      </V>
+    </V>
   </L>
 </I>

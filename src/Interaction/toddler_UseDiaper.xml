@@ -445,6 +445,13 @@
     <V t="test_set_reference">
       <T n="test_set_reference">11999898622383714873<!--LilNinthel:testSet_Toddler_OrBladderPee--></T>
     </V>
+    <V t="buff">
+      <U n="buff">
+        <L n="blacklist">
+          <T>18387649698602079241<!--LilNinthel:buff_TotalUrinaryIncontinence--></T>
+        </L>
+      </U>
+    </V>
     <V t="sim_info">
       <U n="sim_info">
         <V n="ages" t="specified">

@@ -1,5 +1,6 @@
 "ABUniverse BunnyHopps Diaper" (https://sketchfab.com/3d-models/abuniverse-bunnyhopps-diaper-06d501b4459c46fea95f62c20708809d) by David Eichendorf (https://sketchfab.com/dev1lroot) is licensed under a Creative Commons Attribution 4.0 International License / Modified to reduce polygon count and added additional textures
 "Large UltraFresh Ultra Thin Taped Diaper" (https://sketchfab.com/3d-models/large-ultrafresh-ultra-thin-taped-diaper-3ff83a220c004581bbdeb32b7b74b637) by UltraFresh Ultra Thin Diaper (https://sketchfab.com/Ultrafreshph) is licensed under a Creative Commons Attribution 4.0 International License / Modified shape and added additonal texture
+"Pacifier Obj Model (pansexual Colors)" (https://skfb.ly/o6ZRy) by felixwoof is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/). / Modified to reduce polugon count and created additional textures
 
 You should have received a copy of the license along with this
 work. If not, see <https://creativecommons.org/licenses/by/4.0/>.

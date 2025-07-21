@@ -7,6 +7,7 @@
     <E>ELDER</E>
   </L>
   <T n="display_name">0x7CB3C42B<!--No Messy Diapers--></T>
+  <T n="display_name_gender_neutral">0x7CB3C42B<!--No Messy Diapers--></T>
   <T n="icon" p="Generated">2f7d0004:00000000:322220fc9ba98a06</T>
   <E n="min_lod_value">MINIMUM</E>
   <L n="species">

@@ -21,6 +21,7 @@
         <U n="autonomy_modifier">
           <L n="commodities_to_add">
             <T>15105330414396651143<!--LilNinthel:statistic_TotalUrinaryIncontinence_Tracker--></T>
+            <T>12595814091995505583<!--LilNinthel:commodity_motive_Bowels--></T>
           </L>
           <T n="commodities_value_persist_for_travel">True</T>
           <L n="decay_modifiers">
@@ -45,13 +46,6 @@
               </U>
             </U>
           </L>
-          <V n="subject" t="apply_on_interaction_to_participant">
-            <V n="apply_on_interaction_to_participant" t="enabled">
-              <L n="enabled">
-                <E>Actor</E>
-              </L>
-            </V>
-          </V>
         </U>
       </V>
       <V t="continuous_statistic_modifier">
@@ -66,7 +60,11 @@
   <T n="refresh_on_add">True</T>
   <T n="show_timeout">False</T>
   <T n="success_modifier">0</T>
+  <L n="super_affordances">
+    <T>12274581912977129596<!--LilNinthel:sim_BowelDistress--></T>
+    <T>4548980772411624089<!--LilNinthel:sim_BowelDistress_CarrySim--></T>
+  </L>
   <T n="ui_sort_order">1</T>
   <T n="visible">False</T>
-  <V n="walkstyle" t="disabled"/>
+  <V n="walkstyle" t="disabled" />
 </I>

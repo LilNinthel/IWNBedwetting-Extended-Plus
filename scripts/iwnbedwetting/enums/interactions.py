@@ -45,6 +45,10 @@ class DiaperInteraction(EnumBase):
     COMBINED_IMMEDIATE = 18237598613162935279
 
 
+class DiaperChangeInteraction(EnumBase):
+    SI_TOUCHING_CHANGEDIAPER_CHECK = 16617239709778473043
+    SI_TOUCHING_CHANGEDIAPER_ASK = 10785441443215295256
+
 class BedwettingInteraction(EnumBase):
     BEDWET = 14347203327565699161
     BEDWET_CONTINUATION = 15545876685594118345
@@ -79,3 +83,22 @@ class InteractionSets:
     PANTS_USE_INTERACTIONS = PantsInteraction.get_enum_values()
     WW_PEE_HERE_INTERACTIONS = WickedWhimsPeeHereInteraction.get_enum_values()
     WW_REQUIRED_INTERACTIONS = WickedWhimsRequiredInteractions.get_enum_values()
+    TOILET_POOP_INTERACTIONS = frozenset({
+        ToiletInteraction.TOILET_USE_SITTING,
+        ToiletInteraction.TOILET_USE_SITTING_STALL,
+        ToiletInteraction.TOILET_USE_SITTING_STALL_PRANKED,
+        ToiletInteraction.SQUAT_TOILET_USE,
+        ToiletInteraction.TALKING_TOILET_USE_MASSAGE,
+        ToiletInteraction.TALKING_TOILET_USE_SITTING,
+        ToiletInteraction.TALKING_TOILET_USE_SANITIZE_SIT,
+        ToiletInteraction.TALKING_TOILET_USE_WATCH_SIT,
+        ToiletInteraction.PUBLIC_BATHROOM_USE_MALE,
+        ToiletInteraction.PUBLIC_BATHROOM_USE,
+        ToiletInteraction.CAMPING_BATHROOM_USE_FEMALE,
+        ToiletInteraction.CAMPING_BATHROOM_USE_MALE,
+        ToiletInteraction.BUSH_FERTILIZE,
+        ToiletInteraction.BUSH_FERTILIZE_AGGREGATE,
+        ToiletInteraction.BUSH_FERTILIZE_TEMPLE,
+        ToiletInteraction.TOWN_HALL_USE_AMENITIES,
+        ToiletInteraction.WEDDING_TOWN_HALL_USE_BATHROOM
+    })

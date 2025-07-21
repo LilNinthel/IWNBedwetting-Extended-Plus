@@ -67,7 +67,7 @@ class DiaperLoadCASConfig(HasTunableReferenceFactory, metaclass=HashedTunedInsta
             return diapers
         return list()
 
-    _hardcoded_diaper_parts = {17916267921504688060,16089036029714611952}
+    _hardcoded_diaper_parts = frozenset({17916267921504688060,16089036029714611952})
 
     @staticmethod
     def is_diaper_part(cas_part_id):
