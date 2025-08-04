@@ -2,7 +2,7 @@ import traceback
 
 import services
 import sims4.log
-from iwnbedwetting.enums.tunable import DiaperWetness, DiaperMessiness
+from omutsulib.enums.tunable import DiaperWetness, DiaperMessiness
 from sims.outfits.outfit_enums import BodyType
 from sims4.resources import Types
 from sims4.tuning.instances import HashedTunedInstanceMetaclass
