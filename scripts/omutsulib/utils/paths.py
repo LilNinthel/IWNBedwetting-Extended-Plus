@@ -1,5 +1,6 @@
 import enum, os
 
+
 def get_sims_documents_directory():
     file_path = os.path.normpath(os.path.dirname(os.path.realpath(__file__))).replace(os.sep, "/")
     lowercase_file_path_segments = file_path.lower().split("/")

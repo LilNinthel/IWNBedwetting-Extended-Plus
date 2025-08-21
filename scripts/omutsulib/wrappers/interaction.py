@@ -7,14 +7,17 @@ from omutsulib.services.world_service import get_zone_service
 from omutsulib.utils.math import SurfaceIdentifier
 from omutsulib.utils.singletons import ZERO_VECTOR3
 from omutsulib.wrappers.wrappers_manager import OmutsuInstance
+
 _OmutsuInteractionInfo = namedtuple("_OmutsuInteraction", ('sim', 'target', 'source',
-                                                         'affordance_tags'))
+                                                           'affordance_tags'))
+
 
 def _create_omutsu_interaction(interaction):
     return _OmutsuInteractionInfo(interaction.sim, interaction.target, interaction.source, interaction.get_category_tags())
 
 
 OmutsuInteractionInfo = _create_omutsu_interaction
+
 
 class _SuperOmutsuInteraction(OmutsuInstance):
 

@@ -1,6 +1,7 @@
 import os
 from omutsulib.utils.paths import get_sims_documents_directory
 
+
 def get_game_version():
     game_version_file_path = get_sims_documents_directory() + "GameVersion.txt"
     if os.path.exists(game_version_file_path):

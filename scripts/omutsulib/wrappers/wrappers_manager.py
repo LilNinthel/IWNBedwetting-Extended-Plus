@@ -1,6 +1,8 @@
 from weakref import WeakValueDictionary
 import sims4.log
+
 logger = sims4.log.Logger('IWNBedwettingMain')
+
 
 class OmutsuInstanceSingleton(type):
     _is_persistent = False
@@ -10,7 +12,7 @@ class OmutsuInstanceSingleton(type):
 
     def get_key(cls, inst_id, *args, **kwargs):
         return (
-         inst_id, cls.__name__)
+            inst_id, cls.__name__)
 
     def get_persistence_key(cls):
         raise NotImplementedError
@@ -26,16 +28,16 @@ class OmutsuInstanceSingleton(type):
         key = cls.get_key(inst_id, *args, **kwargs)
         # logger.info('key {}'.format(key))
         if key is None:
-            return (super(OmutsuInstanceSingleton, cls).__call__)(inst_id, *args, **kwargs)
+            return super(OmutsuInstanceSingleton, cls).__call__(inst_id, *args, **kwargs)
         # logger.info('_is_persistent {}'.format(cls._is_persistent))
         if not cls._is_persistent:
             if key not in cls._weak_instances:
-                instance = (super(OmutsuInstanceSingleton, cls).__call__)(inst_id, *args, **kwargs)
+                instance = super(OmutsuInstanceSingleton, cls).__call__(inst_id, *args, **kwargs)
                 cls._weak_instances[key] = instance
                 # logger.info('weak_instance {}'.format(instance))
         if cls._is_persistent:
             if key not in cls._instances:
-                instance = (super(OmutsuInstanceSingleton, cls).__call__)(inst_id, *args, **kwargs)
+                instance = super(OmutsuInstanceSingleton, cls).__call__(inst_id, *args, **kwargs)
                 cls._instances[key] = instance
                 # logger.info('instance {}'.format(instance))
         instance = cls._weak_instances[key] if (not cls._is_persistent) else (cls._instances[key])

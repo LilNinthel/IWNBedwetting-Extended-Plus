@@ -3,7 +3,7 @@ import sims4.hash_util
 from carry.carry_postures import CarryingObject
 from objects import MaterialState
 from objects.object_enums import ResetReason
-from native_enums.tags_enum import NativeGameTag
+from omutsulib.native_enums.tags import NativeGameTag
 from omutsulib.services.world_service import get_zone_service
 from omutsulib.wrappers.game_object.super_game_object import _SuperOmutsuGameObject
 if TYPE_CHECKING:

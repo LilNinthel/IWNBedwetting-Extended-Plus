@@ -1,6 +1,7 @@
 from omutsulib.services.service import OmutsuService
 from omutsulib.wrappers.enum import OmutsuIntEnum, OmutsuLongFlagsEnum
 
+
 class OmutsuPriority(OmutsuIntEnum):
     Low = 1
     High = 2
@@ -238,6 +239,7 @@ class OmutsuInteractionsService(OmutsuService):
 
 
 _INTERACTIONS_SERVICE = OmutsuInteractionsService("interactions")
+
 
 def get_fire_service() -> OmutsuInteractionsService:
     return _INTERACTIONS_SERVICE

@@ -1,6 +1,7 @@
 from types import MappingProxyType
 from omutsulib.utils.math import Vector3, Quaternion, Transform
 
+
 class DefaultType:
     pass
 

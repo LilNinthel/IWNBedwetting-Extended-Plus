@@ -66,18 +66,6 @@ class _OmutsuSimCASMixin(_SuperOmutsuSim):
         else:
             sim_info.clear_outfit_dirty(outfit_category)
 
-    # @safe_sim_info(base_wrapper=True)
-    # def register_on_pre_outfit_change_callback(self, callback):
-    #     sim_info = self.get_sim_info_base() or self.get_sim_info()
-    #     if callback not in sim_info.pre_outfit_changed:
-    #         sim_info.pre_outfit_changed.append(callback)
-    #
-    # @safe_sim_info(base_wrapper=True)
-    # def unregister_on_pre_outfit_change_callback(self, callback):
-    #     sim_info = self.get_sim_info_base() or self.get_sim_info()
-    #     if callback in sim_info.pre_outfit_changed:
-    #         sim_info.pre_outfit_changed.remove(callback)
-
     @sim_info_required(base_wrapper=True)
     def register_on_outfit_changed_callback(self, callback):
         sim_info = self.get_sim_info_base() or self.get_sim_info()

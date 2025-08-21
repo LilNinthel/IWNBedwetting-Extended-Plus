@@ -1,5 +1,6 @@
 import sims4.collections
 
+
 def create_tunable_instance(tunable_class, *args, **kwargs):
     tunable_template = tunable_class(*args)._template
     tunable_arguments = dict(((k, v.default) for (k, v) in tunable_template.tunable_items.items()))

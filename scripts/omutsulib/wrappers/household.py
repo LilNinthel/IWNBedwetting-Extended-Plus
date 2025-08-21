@@ -5,7 +5,9 @@ from omutsulib.services.persistence_service import get_persistence_service
 from omutsulib.services.world_service import get_zone_service
 from omutsulib.utils.singletons import EMPTY_DICT
 from omutsulib.wrappers.wrappers_manager import OmutsuInstance, OmutsuInstanceSingleton
+
 _super_household_persistence_key_cache = None
+
 
 def _update_persistence_key(from_load=False, **_):
     global _super_household_persistence_key_cache
@@ -14,6 +16,7 @@ def _update_persistence_key(from_load=False, **_):
 
 
 get_persistence_service().register_save_slot_id_update_callback(_update_persistence_key)
+
 
 class OmutsuFundsType:
     INTERACTION_COST = 1
@@ -82,7 +85,7 @@ class OmutsuHouseholdSingleton(OmutsuInstanceSingleton):
     @staticmethod
     def create_persistence_key():
         return (
-         get_persistence_service().get_save_slot_guid(), get_persistence_service().get_save_slot_id())
+            get_persistence_service().get_save_slot_guid(), get_persistence_service().get_save_slot_id())
 
     def get_persistence_key(cls):
         global _super_household_persistence_key_cache

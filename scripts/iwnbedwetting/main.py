@@ -1,5 +1,4 @@
 import os
-import random
 import traceback
 import urllib
 import urllib.error
@@ -25,7 +24,6 @@ from interactions.utils.loot_element import LootElement
 from interactions.utils.statistic_element import ExitCondition
 from omutsulib.enums.buffs import IwnBedwettingBuff
 from omutsulib.enums.interactions import InteractionSets, DiaperInteraction, BedwettingInteraction, DiaperChangeInteraction
-from omutsulib.enums.pacifiers import AdultPacifiers, ChildPacifiers
 from omutsulib.enums.rewards import IwnBedwettingReward
 from omutsulib.enums.snippets import IwnBedwettingTestSet
 from omutsulib.enums.statistics import IwnBedwettingStatistic, DiaperStateStatistics
@@ -34,18 +32,17 @@ from omutsulib.enums.wickedwhims import WW_SimStatistic, WW_SexNakedType, WW_Sex
 from omutsulib.native_enums.buffs import NativeBuff
 from omutsulib.native_enums.interactions import NativeInteraction
 from omutsulib.native_enums.motives import NativeMotive
-from omutsulib.services.cas_service import OmutsuCasPart
 from omutsulib.services.satisfaction_service import get_satisfaction_service
 from omutsulib.services.statistics_service import get_statistics_service
 from omutsulib.utils.injector import inject
 from omutsulib.utils.paths import get_sims_mods_directory
+from omutsulib.utils.tunables import dictionary_to_immutable_slots
 from omutsulib.wrappers.sim.diaper import remove_diaper_buffs, force_diaper_pants_buffs, force_diaper_accessory_buffs
 from omutsulib.wrappers.sim.sim import OmutsuSim
 from satisfaction.satisfaction_tracker import SatisfactionTracker
-from sims.outfits.outfit_enums import BodyType, OutfitCategory
+from sims.outfits.outfit_enums import OutfitCategory
 from sims.sim_info import SimInfo
 from sims.sim_info_tests import BuffTest
-from sims.sim_info_types import Age, Species
 from sims4 import resources, collections
 from sims4.collections import make_immutable_slots_class
 from sims4.localization import LocalizationHelperTuning
@@ -63,8 +60,6 @@ PACKAGE_VERSION = 3
 ModHasRun = False
 devMode = False
 logger = sims4.log.Logger('IWNBedwettingMain')
-
-old_mod_packages = ('LilNinthel_ABDL_Diaper_Change.package','LilNinthel_ABDL_Uppies.package','LilNinthel_Adult_Diaper_Object.package','LilNinthel_Toddler_Social_Animations.package','LilNinthel_UseDiaper_Animations.package')
 
 old_addons = ('Extended BabyLola Happily Diapered','Extended HappilyMessy_DiaperDump','Extended Lil Luna Unhappily Diapered','Extended mackico ABDL')
 
@@ -104,6 +99,7 @@ def remove_prefix(text, prefix):
     if text.startswith(prefix):
         return text[len(prefix):]
     return text
+
 
 mod_files_names = set()
 duplicated_mod_files_names = set()
@@ -147,10 +143,6 @@ def detect_mods():
                 else:
                     mod_files_names.add(file_name.lower())
 
-
-# def get_mods_files_info():
-#     return (
-#      sorted(mod_files_names), sorted(duplicated_mod_files_names), sorted(old_files), mod_dict, old_addon_files)
 
 @inject(InstanceManager, 'load_data_into_class_instances')
 def _load_satisfaction_store_rewards(original, self, *args, **kwargs):
@@ -254,18 +246,6 @@ class DiaperWatcherWrapper:
                         return
                 self.omutsu_sim.apply_outfit_parts_for_diaper_load()
                 self.value_dict[stat_type.guid64] = new_value
-                # if stat_type is not None:
-                #     logger.info("stat_type {}", stat_type)
-                #     logger.info("stat_type {}", stat_type.__class__)
-                #     logger.info("stat_type {}", dir(stat_type))
-                #     if stat_type.tracker is not None:
-                #         logger.info("stat_type.tracker {}", stat_type.tracker)
-                #         logger.info("stat_type.tracker {}", stat_type.tracker.__class__)
-                #         logger.info("stat_type.tracker {}", dir(stat_type.tracker))
-                #         stat = stat_type.tracker.get_statistic(stat_type)
-                #
-                #         if stat is not None and stat.tracker.owner is not None:
-                #             apply_outfit_parts_for_diaper_load(stat.tracker.owner)
             except Exception as e:
                 logger.error("diaper_load_stat_watcher failed to run.")
                 logger.error(traceback.format_exc())
@@ -340,15 +320,6 @@ class DiaperWatcherWrapper:
             try:
                 self.omutsu_sim.apply_outfit_parts_for_diaper_load()
                 self.value_dict.pop(stat.guid64, None)
-                # if stat is not None:
-                #     logger.info("stat {}", stat)
-                #     logger.info("stat {}", stat.__class__)
-                #     logger.info("stat {}", dir(stat))
-                #     if stat.tracker is not None:
-                #         logger.info("stat.tracker {}", stat.tracker)
-                #         logger.info("stat.tracker {}", dir(stat.tracker))
-                #         if hasattr(stat, 'owner') and stat.tracker.owner is not None:
-                #             apply_outfit_parts_for_diaper_load(stat.tracker.owner)
             except Exception as e:
                 logger.error("on_diaper_load_stat_removed failed to run.")
                 logger.error(traceback.format_exc())
@@ -609,10 +580,11 @@ def put_on_random_diaper_bottom(owner_id:int=None, object_instance_id=None,  _co
 
 @sims4.commands.Command('iwn.update_default_diaper', command_type=sims4.commands.CommandType.Live)
 def update_default_diaper(owner_id:int=None, force_change:bool=False, _connection=None):
-    omutsu_sim = OmutsuSim(owner_id)
-    if not omutsu_sim.has_trait(IwnBedwettingTrait.NO_VISIBLE_DIAPERS):
-        omutsu_sim.put_on_random_diaper_accessory(force_change=True,_connection=_connection)
-
+    try:
+        OmutsuSim(owner_id).update_default_diaper(force_change)
+    except Exception as e:
+        logger.error("update_default_diaper failed to run.")
+        logger.error(traceback.format_exc())
 
 @sims4.commands.Command('iwn.put_on_random_diaper_accessory', command_type=sims4.commands.CommandType.Live)
 def put_on_random_diaper_accessory(owner_id:int=None, object_instance_id=None, _connection=None, outfit_category_and_index=None, update_client=True, force_change=False):
@@ -1166,6 +1138,7 @@ if _wicked_whims_installed:
 
 actor_not_diapered_global_test_id = 14313482733996641359
 
+
 @inject(InstanceManager, 'load_data_into_class_instances')
 def block_ww_pee_here_for_diapered_sims(original, self, *args, **kwargs):
     result = original(self, *args, **kwargs)
@@ -1405,11 +1378,6 @@ def little_autonomy_fixer(original, self, *args, **kwargs):
     return result
 
 
-def dictionary_to_immutable_slots(items):
-    immutable_slots_cls = sims4.collections.make_immutable_slots_class(items.keys())
-    return immutable_slots_cls(items)
-
-
 def ShowMod():
     global ModHasRun
     if ModHasRun:
@@ -1534,27 +1502,6 @@ def ShowMod():
         dialog.text = lambda **_: LocalizationHelperTuning.get_raw_text('Please delete ALL previous versions of the following add-ons: Happily Diapered Extended by BabyLola, Unhappily Diapered Extended by Lil Luna, ABDL Extended by mackico, or Happily Messy Extended by DiaperDump. They are all now included with this mod and may cause issues.\n{}'.format(dup_str))
         dialog.show_dialog()
 
-    # if _duplicate_mods:
-    #     dup_arr = []
-    #     for dup in dup_file_names:
-    #         dup_arr.append('\n{}:'.format(dup))
-    #         for file_path in mods_dict[dup.lower()]:
-    #             dup_arr.append(file_path)
-    #
-    #     dup_str = '\n'.join(dup_arr)
-    #
-    #     information_level = UiDialogNotification.UiDialogNotificationLevel.SIM
-    #     urgency = UiDialogNotification.UiDialogNotificationUrgency.URGENT
-    #     localized_title = lambda **_: LocalizationHelperTuning.get_raw_text('WARNING: Duplicate Package Names Detected')
-    #     localized_text = lambda **_: LocalizationHelperTuning.get_raw_text('You have duplicate package names in your mods folder, you may have installed multiple versions of the same mod.\n{0}'.format(dup_str))
-    #     dialog = UiDialogNotification.TunableFactory().default((client.active_sim),
-    #                                                            text=localized_text,
-    #                                                            title=localized_title,
-    #                                                            urgency=urgency,
-    #                                                            information_level=information_level,
-    #                                                            visual_type=visual_type)
-    #     dialog.show_dialog()
-
     if not _ember_detected:
         information_level = UiDialogNotification.UiDialogNotificationLevel.SIM
         urgency = UiDialogNotification.UiDialogNotificationUrgency.URGENT
@@ -1570,17 +1517,9 @@ def ShowMod():
                                                                    button1_response, ember_mod_response))
         dialog.show_dialog()
 
-    # if not _xml_injector_found:
-    #     dialog = UiDialogOk.TunableFactory().default(None)
-    #     dialog.title = lambda **_: LocalizationHelperTuning.get_raw_text('WARNING: IwnBedWetting Extended+ - XML Injector Not Detected')
-    #     dialog.text = lambda **_: LocalizationHelperTuning.get_raw_text('This mod requires XML Injector to function. Please install the latest XML Injector from https://scumbumbomods.com/#/xml-injector/')
-    #     dialog.show_dialog()
-
     logger.info("WickedWhims installed: {}".format(_wicked_whims_installed))
 
     ModHasRun = True
-    # if devMode:
-    #     modify_sleep_affordances()
 
 
 def check_package_version():
@@ -1603,30 +1542,16 @@ def inject_zone_loading(original, self, *args, **kwargs):
 def _populate_criteria_info(original, _, criteria_info, trait, *args, **kwargs):
     original(criteria_info, trait, *args, **kwargs)
     try:
-        # logger.info(str(trait))
-        # logger.info("criteria_info.name: {}", str(criteria_info.name))
-        # logger.info("trait.display_name: {}", str(trait.display_name))
-        # logger.info("trait.display_name_gender_neutral: {}", str(trait.display_name_gender_neutral))
         if criteria_info.name.hash == 0:
-            # logger.info("Missing display_name_gender_neutral found")
             criteria_info.name = sims4.localization._create_localized_string(trait.display_name._string_id)
     except Exception as e:
         logger.error("ClubRuleCriteriaTrait._populate_criteria_info injection failed to run.")
         logger.error(traceback.format_exc())
-        # sims4.log.exception("Injection", "ClubRuleCriteriaTrait.populate_possibilities injection failed to run.", exc=e)
 
 
 @inject(ClubRuleCriteriaTrait, 'populate_possibilities')
 def inject_club_traits(original, _, criteria_proto, *args, **kwargs):
     try:
-        # logger.info(str(ClubTunables.CLUB_TRAITS))
-
-        # logger.info(str(dir(ClubTunables.CLUB_TRAITS)))
-
-        # logger.info(str(ClubTunables.CLUB_ICONS))
-        # logger.info(str(len(ClubTunables.CLUB_ICONS)))
-        # logger.info(str(ClubTunables))
-
         trait_manager = services.get_instance_manager(sims4.resources.Types.TRAIT)
 
         target_traits = set()
@@ -1650,24 +1575,12 @@ def inject_club_traits(original, _, criteria_proto, *args, **kwargs):
 
         traits = {trait_manager.get(trait_id) for trait_id in target_traits}
 
-        # club_icons = set(ClubTunables.CLUB_ICONS)
-
-        # ClubTunables.CLUB_ICONS = frozenset(club_icons)
-
-        #
         for trait in traits:
             if trait is None:
                 continue
             club_traits = set(ClubTunables.CLUB_TRAITS)
             club_traits.add(trait)
             ClubTunables.CLUB_TRAITS = frozenset(club_traits)
-
-        # result = original(criteria_proto, *args, **kwargs)
-        #
-        # return result
-        # for trait2 in target_traits2:
-        #     with ProtocolBufferRollback(criteria_proto.criteria_infos) as criteria_info:
-        #         ClubRuleCriteriaTrait._populate_criteria_info(criteria_info, trait2)
     except Exception as e:
         logger.error("ClubRuleCriteriaTrait.populate_possibilities injection failed to run.")
         logger.error(traceback.format_exc())

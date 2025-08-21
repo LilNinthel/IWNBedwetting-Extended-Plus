@@ -2,6 +2,7 @@ import sims4.hash_util
 from audio.primitive import PlaySound
 from omutsulib.wrappers.wrappers_manager import OmutsuInstance
 
+
 class _SuperOmutsuSFX(OmutsuInstance):
 
     def __init__(self, game_object, sound_name, immediate=True, **kwargs):

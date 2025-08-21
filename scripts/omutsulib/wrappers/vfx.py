@@ -2,12 +2,13 @@ import alarms, sims4.hash_util, vfx
 from date_and_time import TimeSpan
 from omutsulib.wrappers.wrappers_manager import OmutsuInstance
 
+
 class _SuperOmutsuVFX(OmutsuInstance):
 
     def __init__(self, game_object, effect_name, joint_name_or_hash, delay_ticks=0, expire_ticks=0, **kwargs):
         super().__init__(None)
         joint_name_hash = sims4.hash_util.hash32(joint_name_or_hash) if isinstance(joint_name_or_hash, str) else joint_name_or_hash
-        self._effect = (vfx.PlayEffect)(game_object, effect_name=effect_name, joint_name=joint_name_hash, **kwargs)
+        self._effect = vfx.PlayEffect(game_object, effect_name=effect_name, joint_name=joint_name_hash, **kwargs)
         self._delay_ticks = delay_ticks
         self._delay_alarm = None
         self._expire_ticks = expire_ticks
@@ -40,4 +41,4 @@ class _SuperOmutsuVFX(OmutsuInstance):
 class OmutsuVFX(_SuperOmutsuVFX):
 
     def __init__(self, game_object, effect_name, joint_name, **kwargs):
-        (super().__init__)(game_object, effect_name, joint_name, **kwargs)
+        super().__init__(game_object, effect_name, joint_name, **kwargs)

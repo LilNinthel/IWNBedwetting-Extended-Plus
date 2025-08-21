@@ -524,7 +524,7 @@ class _OmutsuSimDiaperMixin(_SuperOmutsuSim):
             if outfit_category_and_index is None:
                 outfit_category_and_index = omutsu_sim.get_current_outfit()
             if outfit_category_and_index is not None:
-                if outfit_category_and_index[0] in outfit_categories_excluded_from_diaper:
+                if outfit_category_and_index[0] in outfit_categories_excluded_from_diaper and object_definition_id is None:
                     return
                 outfit_parts = omutsu_sim.get_outfit_parts(outfit_category_and_index)
                 if outfit_parts is not None:
