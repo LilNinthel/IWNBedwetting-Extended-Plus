@@ -84,6 +84,11 @@
     <T>8017071453958778732<!--LilNinthel:pacifier_suck_random--></T>
     <T>8469452520504464148<!--LilNinthel:pacifier_remove--></T>
     <T>13662983999519255115<!--LilNinthel:pacifier_set_favorite--></T>
+    <T>482037<!--SuperInteraction: super_PlayPretend_Castaway--></T>
+    <T>482038<!--SuperInteraction: super_PlayPretend_FairyTale--></T>
+    <T>482039<!--SuperInteraction: super_PlayPretend_House--></T>
+    <T>482040<!--SuperInteraction: super_PlayPretend_Pirates--></T>
+    <T>482041<!--SuperInteraction: super_PlayPretend_Space--></T>
   </L>
   <L n="target_super_affordances">
     <U>
@@ -104,6 +109,21 @@
     </U>
     <U>
       <T n="affordance">326839<!--infant_Watch_Immobile_InObject--></T>
+    </U>
+    <U>
+      <T n="affordance">481960<!--SocialSuperInteraction: social_SI_PlayPretend_FairyTale--></T>
+    </U>
+    <U>
+      <T n="affordance">481961<!--SocialSuperInteraction: social_SI_PlayPretend_House--></T>
+    </U>
+    <U>
+      <T n="affordance">481959<!--SocialSuperInteraction: social_SI_PlayPretend_Castaway--></T>
+    </U>
+    <U>
+      <T n="affordance">481962<!--SocialSuperInteraction: social_SI_PlayPretend_Pirates--></T>
+    </U>
+    <U>
+      <T n="affordance">481973<!--SocialSuperInteraction: social_SI_PlayPretend_Space--></T>
     </U>
   </L>
   <E n="trait_type">GAMEPLAY</E>
