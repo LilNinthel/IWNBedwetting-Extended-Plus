@@ -64,6 +64,14 @@
         <V n="timing" t="at_beginning" />
       </U>
     </V>
+    <V t="loot">
+      <U n="loot">
+        <L n="loot_list">
+          <T>472268<!--LootActions: loot_ChildhoodInspiration_AddSuggestedChallenge_EstablishAnImage--></T>
+        </L>
+        <V n="timing" t="at_beginning" />
+      </U>
+    </V>
   </L>
   <T n="can_acquire_posture_ownership">False</T>
   <V n="canonical_animation" t="disabled" />

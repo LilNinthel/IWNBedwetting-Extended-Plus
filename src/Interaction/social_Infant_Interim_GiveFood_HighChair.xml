@@ -112,6 +112,13 @@
     <V t="loot">
       <U n="loot">
         <L n="loot_list">
+          <T>452162<!--LootActions: loot_ChildhoodInspiration_AddSuggestedChallenge_ThinkOfOthers--></T>
+        </L>
+      </U>
+    </V>
+    <V t="loot">
+      <U n="loot">
+        <L n="loot_list">
           <T>11400673895062994601<!--LilNinthel:loot_buff_highchairfeedposture_remove--></T>
         </L>
         <V n="timing" t="at_beginning" />

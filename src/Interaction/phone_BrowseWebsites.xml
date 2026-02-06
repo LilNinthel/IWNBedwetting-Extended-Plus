@@ -447,6 +447,19 @@
     <V t="test_set_reference">
       <T n="test_set_reference">237832<!--testSet_PhoneInteractions_CanUsePhone--></T>
     </V>
+    <V t="posture">
+      <U n="posture">
+        <L n="prohibited_postures">
+          <T>447068<!--MobilePosture: posture_Kayak--></T>
+          <T>447080<!--Posture: posture_Kayak_Sit--></T>
+          <T>447081<!--Posture: posture_Kayak_Stand--></T>
+          <T>206337<!--MobilePosture: posture_IslandCanoe--></T>
+          <T>208298<!--Posture: posture_IslandCanoe_Sit--></T>
+          <T>208299<!--Posture: posture_IslandCanoe_Stand--></T>
+          <T>199821<!--MobilePosture: posture_WaterScooter--></T>
+        </L>
+      </U>
+    </V>
     <V t="sim_info">
       <U n="sim_info">
         <V n="ages" t="specified">

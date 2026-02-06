@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <I c="SocialMixerInteraction" i="interaction" m="interactions.social.social_mixer_interaction" n="socials_Targeted_Friendly_AlwaysOn_STC_Toddler_AskToBathe" s="149773">
   <V n="_icon" t="resource_key">
     <U n="resource_key">
@@ -7,10 +8,14 @@
   <L n="_static_commodities">
     <U>
       <T n="desire">2</T>
-      <T n="static_commodity">120613<!--staticCommodity_InHotTub--></T>
+      <T n="static_commodity">120613<!--StaticCommodity: staticCommodity_InHotTub--></T>
     </U>
     <U>
-      <T n="static_commodity">136762<!--staticCommodity_FriendlySocials--></T>
+      <T n="static_commodity">136762<!--StaticCommodity: staticCommodity_FriendlySocials--></T>
+    </U>
+    <U>
+      <T n="desire">100</T>
+      <T n="static_commodity">465374<!--StaticCommodity: staticCommodity_EP20_IF_Socialize--></T>
     </U>
   </L>
   <T n="allow_autonomous">False</T>
@@ -19,14 +24,14 @@
     <V t="loot">
       <U n="loot">
         <L n="loot_list">
-          <T>162659<!--loot_Commodity_Culling_GhostAdd_target--></T>
+          <T>162659<!--LootActions: loot_Commodity_Culling_GhostAdd_target--></T>
         </L>
       </U>
     </V>
     <V t="loot">
       <U n="loot">
         <L n="loot_list">
-          <T>165621<!--loot_ChildhoodPhase_Clingy_SocialBuffs--></T>
+          <T>165621<!--LootActions: loot_ChildhoodPhase_Clingy_SocialBuffs--></T>
         </L>
         <V n="timing" t="at_beginning" />
       </U>
@@ -34,14 +39,14 @@
     <V t="loot">
       <U n="loot">
         <L n="loot_list">
-          <T>268592<!--loot_VillagerHelp_DiscoveryTracker_OfferHelp_Start--></T>
+          <T>268592<!--LootActions: loot_VillagerHelp_DiscoveryTracker_OfferHelp_Start--></T>
         </L>
       </U>
     </V>
     <V t="loot">
       <U n="loot">
         <L n="loot_list">
-          <T>269000<!--loot_VillagerHelp_DiscoveryTracker_NPCVillager_SocialTNS--></T>
+          <T>269000<!--LootActions: loot_VillagerHelp_DiscoveryTracker_NPCVillager_SocialTNS--></T>
         </L>
         <U n="success_chance">
           <T n="base_chance">20</T>
@@ -51,7 +56,7 @@
     <V t="loot">
       <U n="loot">
         <L n="loot_list">
-          <T>269002<!--loot_VillagerHelp_DiscoveryTracker_OfferHelp_Day3_AskingTNS--></T>
+          <T>269002<!--LootActions: loot_VillagerHelp_DiscoveryTracker_OfferHelp_Day3_AskingTNS--></T>
         </L>
         <U n="success_chance">
           <T n="base_chance">20</T>
@@ -61,18 +66,54 @@
     <V t="loot">
       <U n="loot">
         <L n="loot_list">
-          <T>269001<!--loot_VillagerHelp_DiscoveryTracker_OfferHelp_Day1_WishingTNS--></T>
+          <T>269001<!--LootActions: loot_VillagerHelp_DiscoveryTracker_OfferHelp_Day1_WishingTNS--></T>
         </L>
         <U n="success_chance">
           <T n="base_chance">20</T>
         </U>
+      </U>
+    </V>
+    <V t="loot">
+      <U n="loot">
+        <L n="loot_list">
+          <T>441165<!--LootActions: lootActions_FairyOccult_Ability_EmotionalEnergyPositiveSocials--></T>
+        </L>
+      </U>
+    </V>
+    <V t="loot">
+      <U n="loot">
+        <L n="loot_list">
+          <T>462479<!--LootActions: loot_Sentiment_AddSentiment_Adoring_ChildhoodSentiment_GrownUpsCanBeCool--></T>
+        </L>
       </U>
     </V>
   </L>
-  <T n="category">154997<!--sim_Toddler_AskTo--></T>
+  <T n="category">154997<!--PieMenuCategory: sim_Toddler_AskTo--></T>
   <V n="content_score" t="enabled">
     <U n="enabled">
       <T n="base_score">5</T>
+      <L n="buff_preference">
+        <U>
+          <T n="key">389193<!--Buff: buff_EP17World_Walkbys_EdithBasu_LunarCycle_5_FullMoon_VeryAngry--></T>
+          <T n="value">-25</T>
+        </U>
+        <U>
+          <T n="key">389194<!--Buff: buff_EP17World_Walkbys_EdithBasu_LunarCycle_3_FirstQuarter_Playful--></T>
+          <T n="value">25</T>
+        </U>
+        <U>
+          <T n="key">389246<!--Buff: buff_EP17World_Walkbys_EdithBasu_LunarCycle_7_ThirdQuarter_Playful--></T>
+          <T n="value">25</T>
+        </U>
+        <U>
+          <T n="key">420969<!--Buff: buff_EP17World_Walkbys_EdithBasu_NoLunarCycle_VeryAngry--></T>
+          <T n="value">-25</T>
+        </U>
+        <U>
+          <T n="key">420970<!--Buff: buff_EP17World_Walkbys_EdithBasu_NoLunarCycle_Playful--></T>
+          <T n="value">25</T>
+        </U>
+      </L>
       <V n="front_page_cooldown" t="enabled">
         <U n="enabled">
           <U n="interval">
@@ -84,619 +125,691 @@
       </V>
       <L n="mood_preference">
         <U>
-          <T n="key">14632<!--Mood_Angry--></T>
+          <T n="key">14632<!--Mood: Mood_Angry--></T>
           <T n="value">0</T>
         </U>
         <U>
-          <T n="key">14633<!--Mood_Bored--></T>
+          <T n="key">14633<!--Mood: Mood_Bored--></T>
           <T n="value">0</T>
         </U>
         <U>
-          <T n="key">14634<!--Mood_Confident--></T>
+          <T n="key">14634<!--Mood: Mood_Confident--></T>
           <T n="value">2</T>
         </U>
         <U>
-          <T n="key">14635<!--Mood_Embarrassed--></T>
+          <T n="key">14635<!--Mood: Mood_Embarrassed--></T>
           <T n="value">0</T>
         </U>
         <U>
-          <T n="key">14636<!--Mood_Energized--></T>
+          <T n="key">14636<!--Mood: Mood_Energized--></T>
           <T n="value">2</T>
         </U>
         <U>
-          <T n="key">14637<!--Mood_Fine--></T>
+          <T n="key">14637<!--Mood: Mood_Fine--></T>
           <T n="value">3</T>
         </U>
         <U>
-          <T n="key">14638<!--Mood_Flirty--></T>
+          <T n="key">14638<!--Mood: Mood_Flirty--></T>
           <T n="value">1</T>
         </U>
         <U>
-          <T n="key">14639<!--Mood_Focused--></T>
+          <T n="key">14639<!--Mood: Mood_Focused--></T>
           <T n="value">2</T>
         </U>
         <U>
-          <T n="key">14640<!--Mood_Happy--></T>
+          <T n="key">14640<!--Mood: Mood_Happy--></T>
           <T n="value">3</T>
         </U>
         <U>
-          <T n="key">14641<!--Mood_Inspired--></T>
+          <T n="key">14641<!--Mood: Mood_Inspired--></T>
           <T n="value">2</T>
         </U>
         <U>
-          <T n="key">14642<!--Mood_Playful--></T>
+          <T n="key">14642<!--Mood: Mood_Playful--></T>
           <T n="value">2</T>
         </U>
         <U>
-          <T n="key">14643<!--Mood_Sad--></T>
+          <T n="key">14643<!--Mood: Mood_Sad--></T>
           <T n="value">0</T>
         </U>
         <U>
-          <T n="key">14644<!--Mood_Dazed--></T>
+          <T n="key">14644<!--Mood: Mood_Dazed--></T>
           <T n="value">1</T>
         </U>
         <U>
-          <T n="key">14645<!--Mood_Stressed--></T>
+          <T n="key">14645<!--Mood: Mood_Stressed--></T>
           <T n="value">3</T>
         </U>
         <U>
-          <T n="key">14646<!--Mood_Uncomfortable--></T>
+          <T n="key">14646<!--Mood: Mood_Uncomfortable--></T>
           <T n="value">3</T>
         </U>
       </L>
       <L n="relationship_bit_collection_preference">
         <U>
-          <T n="key">240103<!--rbc_Sentiment_Close--></T>
+          <T n="key">240103<!--RelationshipBitCollection: rbc_Sentiment_Close--></T>
           <T n="value">8</T>
         </U>
         <U>
-          <T n="key">240104<!--rbc_Sentiment_Bitter--></T>
+          <T n="key">240104<!--RelationshipBitCollection: rbc_Sentiment_Bitter--></T>
           <T n="value">-10</T>
         </U>
         <U>
-          <T n="key">240105<!--rbc_Sentiment_Furious--></T>
+          <T n="key">240105<!--RelationshipBitCollection: rbc_Sentiment_Furious--></T>
           <T n="value">-15</T>
         </U>
         <U>
-          <T n="key">240107<!--rbc_Sentiment_Enamored--></T>
+          <T n="key">240107<!--RelationshipBitCollection: rbc_Sentiment_Enamored--></T>
         </U>
         <U>
-          <T n="key">240109<!--rbc_Sentiment_Positive--></T>
+          <T n="key">240109<!--RelationshipBitCollection: rbc_Sentiment_Positive--></T>
         </U>
         <U>
-          <T n="key">240110<!--rbc_Sentiment_Negative--></T>
+          <T n="key">240110<!--RelationshipBitCollection: rbc_Sentiment_Negative--></T>
         </U>
         <U>
-          <T n="key">246490<!--rbc_Sentiment_Hurt--></T>
+          <T n="key">246490<!--RelationshipBitCollection: rbc_Sentiment_Hurt--></T>
           <T n="value">-3</T>
         </U>
         <U>
-          <T n="key">246491<!--rbc_Sentiment_Guilty--></T>
+          <T n="key">246491<!--RelationshipBitCollection: rbc_Sentiment_Guilty--></T>
           <T n="value">5</T>
         </U>
         <U>
-          <T n="key">246492<!--rbc_Sentiment_Adoring--></T>
+          <T n="key">246492<!--RelationshipBitCollection: rbc_Sentiment_Adoring--></T>
           <T n="value">10</T>
         </U>
       </L>
       <L n="relationship_bit_preference">
         <U>
-          <T n="key">10150<!--romantic_FirstKiss--></T>
+          <T n="key">10150<!--RelationshipBit: romantic_FirstKiss--></T>
         </U>
         <U>
-          <T n="key">15792<!--friendship-acquaintances--></T>
+          <T n="key">15792<!--RelationshipBit: friendship-acquaintances--></T>
         </U>
         <U>
-          <T n="key">15794<!--friendship-bff--></T>
+          <T n="key">15794<!--RelationshipBit: friendship-bff--></T>
         </U>
         <U>
-          <T n="key">15795<!--friendship-bff_Evil--></T>
+          <T n="key">15795<!--RelationshipBit: friendship-bff_Evil--></T>
         </U>
         <U>
-          <T n="key">15796<!--friendship-despised--></T>
+          <T n="key">15796<!--RelationshipBit: friendship-despised--></T>
         </U>
         <U>
-          <T n="key">15797<!--friendship-friend--></T>
+          <T n="key">15797<!--RelationshipBit: friendship-friend--></T>
         </U>
         <U>
-          <T n="key">15798<!--friendship-friend_Evil--></T>
+          <T n="key">15798<!--RelationshipBit: friendship-friend_Evil--></T>
         </U>
         <U>
-          <T n="key">15799<!--friendship-good_friends--></T>
+          <T n="key">15799<!--RelationshipBit: friendship-good_friends--></T>
         </U>
         <U>
-          <T n="key">15800<!--friendship-good_friends_Evil--></T>
+          <T n="key">15800<!--RelationshipBit: friendship-good_friends_Evil--></T>
         </U>
         <U>
-          <T n="key">15802<!--friendship-disliked--></T>
+          <T n="key">15802<!--RelationshipBit: friendship-disliked--></T>
         </U>
         <U>
-          <T n="key">15811<!--romantic-Broken_Up--></T>
+          <T n="key">15811<!--RelationshipBit: romantic-Broken_Up--></T>
         </U>
         <U>
-          <T n="key">15812<!--romantic-Broken_Up_Engaged--></T>
+          <T n="key">15812<!--RelationshipBit: romantic-Broken_Up_Engaged--></T>
         </U>
         <U>
-          <T n="key">15814<!--romantic-Despised_Ex--></T>
+          <T n="key">15814<!--RelationshipBit: romantic-Despised_Ex--></T>
         </U>
         <U>
-          <T n="key">15815<!--romantic-Divorced--></T>
+          <T n="key">15815<!--RelationshipBit: romantic-Divorced--></T>
         </U>
         <U>
-          <T n="key">15816<!--romantic-Engaged--></T>
+          <T n="key">15816<!--RelationshipBit: romantic-Engaged--></T>
         </U>
         <U>
-          <T n="key">15817<!--romantic-Frustrated_Ex--></T>
+          <T n="key">15817<!--RelationshipBit: romantic-Frustrated_Ex--></T>
         </U>
         <U>
-          <T n="key">15822<!--romantic-Married--></T>
+          <T n="key">15822<!--RelationshipBit: romantic-Married--></T>
         </U>
         <U>
-          <T n="key">15825<!--romantic-Significant_Other--></T>
+          <T n="key">15825<!--RelationshipBit: romantic-Significant_Other--></T>
         </U>
         <U>
-          <T n="key">15828<!--RomanticCombo_BadMatch--></T>
+          <T n="key">15828<!--RelationshipBit: RomanticCombo_BadMatch--></T>
         </U>
         <U>
-          <T n="key">15829<!--RomanticCombo_Lovebirds--></T>
+          <T n="key">15829<!--RelationshipBit: RomanticCombo_Lovebirds--></T>
         </U>
         <U>
-          <T n="key">15830<!--RomanticCombo_EnemiesWithBenefits--></T>
+          <T n="key">15830<!--RelationshipBit: RomanticCombo_EnemiesWithBenefits--></T>
         </U>
         <U>
-          <T n="key">15831<!--RomanticCombo_Frenemies--></T>
+          <T n="key">15831<!--RelationshipBit: RomanticCombo_Frenemies--></T>
         </U>
         <U>
-          <T n="key">15832<!--RomanticCombo_HotAndCold--></T>
+          <T n="key">15832<!--RelationshipBit: RomanticCombo_HotAndCold--></T>
         </U>
         <U>
-          <T n="key">15833<!--RomanticCombo_ItsAwkward--></T>
+          <T n="key">15833<!--RelationshipBit: RomanticCombo_ItsAwkward--></T>
         </U>
         <U>
-          <T n="key">15834<!--RomanticCombo_ItsComplicated--></T>
+          <T n="key">15834<!--RelationshipBit: RomanticCombo_ItsComplicated--></T>
         </U>
         <U>
-          <T n="key">15835<!--RomanticCombo_ItsVeryAwkward--></T>
+          <T n="key">15835<!--RelationshipBit: RomanticCombo_ItsVeryAwkward--></T>
         </U>
         <U>
-          <T n="key">15836<!--RomanticCombo_ItsVeryComplicated--></T>
+          <T n="key">15836<!--RelationshipBit: RomanticCombo_ItsVeryComplicated--></T>
         </U>
         <U>
-          <T n="key">15837<!--RomanticCombo_Lovers--></T>
+          <T n="key">15837<!--RelationshipBit: RomanticCombo_Lovers--></T>
         </U>
         <U>
-          <T n="key">15838<!--RomanticCombo_RomanticInterest--></T>
+          <T n="key">15838<!--RelationshipBit: RomanticCombo_RomanticInterest--></T>
         </U>
         <U>
-          <T n="key">15839<!--RomanticCombo_Soulmates--></T>
+          <T n="key">15839<!--RelationshipBit: RomanticCombo_Soulmates--></T>
         </U>
         <U>
-          <T n="key">15840<!--RomanticCombo_Sweethearts--></T>
+          <T n="key">15840<!--RelationshipBit: RomanticCombo_Sweethearts--></T>
         </U>
         <U>
-          <T n="key">15841<!--RomanticCombo_TerribleMatch--></T>
+          <T n="key">15841<!--RelationshipBit: RomanticCombo_TerribleMatch--></T>
         </U>
         <U>
-          <T n="key">15842<!--RomanticCombo_TotalOpposites--></T>
+          <T n="key">15842<!--RelationshipBit: RomanticCombo_TotalOpposites--></T>
         </U>
         <U>
-          <T n="key">15843<!--RomanticCombo_BadRomance--></T>
+          <T n="key">15843<!--RelationshipBit: RomanticCombo_BadRomance--></T>
         </U>
         <U>
-          <T n="key">161909<!--familyRelationshipBitsAcquired_Target_IsGrandparentOf_Actor_HighRel--></T>
+          <T n="key">161909<!--RelationshipBit: familyRelationshipBitsAcquired_Target_IsGrandparentOf_Actor_HighRel--></T>
         </U>
         <U>
-          <T n="key">161910<!--familyRelationshipBitsAcquired_Target_IsGrandchildOf_Actor_HighRel--></T>
+          <T n="key">161910<!--RelationshipBit: familyRelationshipBitsAcquired_Target_IsGrandchildOf_Actor_HighRel--></T>
         </U>
         <U>
-          <T n="key">161911<!--familyRelationshipBitsAcquired_Target_IsGrandparentOf_Actor_NeutralRel--></T>
+          <T n="key">161911<!--RelationshipBit: familyRelationshipBitsAcquired_Target_IsGrandparentOf_Actor_NeutralRel--></T>
         </U>
         <U>
-          <T n="key">161922<!--familyRelationshipBitsAcquired_Target_IsGrandchildOf_Actor_NeutralRel--></T>
+          <T n="key">161922<!--RelationshipBit: familyRelationshipBitsAcquired_Target_IsGrandchildOf_Actor_NeutralRel--></T>
         </U>
         <U>
-          <T n="key">161923<!--familyRelationshipBitsAcquired_Target_IsGrandparentOf_Actor_PoorRel--></T>
+          <T n="key">161923<!--RelationshipBit: familyRelationshipBitsAcquired_Target_IsGrandparentOf_Actor_PoorRel--></T>
         </U>
         <U>
-          <T n="key">161924<!--familyRelationshipBitsAcquired_Target_IsGrandchildOf_Actor_PoorRel--></T>
+          <T n="key">161924<!--RelationshipBit: familyRelationshipBitsAcquired_Target_IsGrandchildOf_Actor_PoorRel--></T>
         </U>
         <U>
-          <T n="key">161930<!--familyRelationshipBitsAcquired_Sibling_HighRel_LowRival--></T>
+          <T n="key">161930<!--RelationshipBit: familyRelationshipBitsAcquired_Sibling_HighRel_LowRival--></T>
         </U>
         <U>
-          <T n="key">161931<!--familyRelationshipBitsAcquired_Sibling_HighRel_HighRival--></T>
+          <T n="key">161931<!--RelationshipBit: familyRelationshipBitsAcquired_Sibling_HighRel_HighRival--></T>
         </U>
         <U>
-          <T n="key">161932<!--familyRelationshipBitsAcquired_Sibling_NeutralRel_HighRival--></T>
+          <T n="key">161932<!--RelationshipBit: familyRelationshipBitsAcquired_Sibling_NeutralRel_HighRival--></T>
         </U>
         <U>
-          <T n="key">161933<!--familyRelationshipBitsAcquired_Sibling_NeutralRel_LowRival--></T>
+          <T n="key">161933<!--RelationshipBit: familyRelationshipBitsAcquired_Sibling_NeutralRel_LowRival--></T>
         </U>
         <U>
-          <T n="key">161934<!--familyRelationshipBitsAcquired_Sibling_PoorRel_HighRival--></T>
+          <T n="key">161934<!--RelationshipBit: familyRelationshipBitsAcquired_Sibling_PoorRel_HighRival--></T>
         </U>
         <U>
-          <T n="key">161935<!--familyRelationshipBitsAcquired_Sibling_PoorRel_LowRival--></T>
+          <T n="key">161935<!--RelationshipBit: familyRelationshipBitsAcquired_Sibling_PoorRel_LowRival--></T>
         </U>
         <U>
-          <T n="key">161968<!--familyRelationshipBitsAcquired_Target_IsParentOf_Actor_HighRel_HighAuth--></T>
+          <T n="key">161968<!--RelationshipBit: familyRelationshipBitsAcquired_Target_IsParentOf_Actor_HighRel_HighAuth--></T>
         </U>
         <U>
-          <T n="key">161969<!--familyRelationshipBitsAcquired_Target_IsChildOf_Actor_HighRel_HighAuth--></T>
+          <T n="key">161969<!--RelationshipBit: familyRelationshipBitsAcquired_Target_IsChildOf_Actor_HighRel_HighAuth--></T>
         </U>
         <U>
-          <T n="key">161970<!--familyRelationshipBitsAcquired_Target_IsParentOf_Actor_HighRel_LowAuth--></T>
+          <T n="key">161970<!--RelationshipBit: familyRelationshipBitsAcquired_Target_IsParentOf_Actor_HighRel_LowAuth--></T>
         </U>
         <U>
-          <T n="key">161971<!--familyRelationshipBitsAcquired_Target_IsChildOf_Actor_HighRel_LowAuth--></T>
+          <T n="key">161971<!--RelationshipBit: familyRelationshipBitsAcquired_Target_IsChildOf_Actor_HighRel_LowAuth--></T>
         </U>
         <U>
-          <T n="key">161972<!--familyRelationshipBitsAcquired_Target_IsParentOf_Actor_MaxRel_HighAuth--></T>
+          <T n="key">161972<!--RelationshipBit: familyRelationshipBitsAcquired_Target_IsParentOf_Actor_MaxRel_HighAuth--></T>
         </U>
         <U>
-          <T n="key">161973<!--familyRelationshipBitsAcquired_Target_IsChildOf_Actor_MaxRel_HighAuth--></T>
+          <T n="key">161973<!--RelationshipBit: familyRelationshipBitsAcquired_Target_IsChildOf_Actor_MaxRel_HighAuth--></T>
         </U>
         <U>
-          <T n="key">161974<!--familyRelationshipBitsAcquired_Target_IsParentOf_Actor_MaxRel_LowAuth--></T>
+          <T n="key">161974<!--RelationshipBit: familyRelationshipBitsAcquired_Target_IsParentOf_Actor_MaxRel_LowAuth--></T>
         </U>
         <U>
-          <T n="key">161975<!--familyRelationshipBitsAcquired_Target_IsChildOf_Actor_MaxRel_LowAuth--></T>
+          <T n="key">161975<!--RelationshipBit: familyRelationshipBitsAcquired_Target_IsChildOf_Actor_MaxRel_LowAuth--></T>
         </U>
         <U>
-          <T n="key">161976<!--familyRelationshipBitsAcquired_Target_IsParentOf_Actor_NeutralRel_HighAuth--></T>
+          <T n="key">161976<!--RelationshipBit: familyRelationshipBitsAcquired_Target_IsParentOf_Actor_NeutralRel_HighAuth--></T>
         </U>
         <U>
-          <T n="key">161977<!--familyRelationshipBitsAcquired_Target_IsChildOf_Actor_NeutralRel_HighAuth--></T>
+          <T n="key">161977<!--RelationshipBit: familyRelationshipBitsAcquired_Target_IsChildOf_Actor_NeutralRel_HighAuth--></T>
         </U>
         <U>
-          <T n="key">161978<!--familyRelationshipBitsAcquired_Target_IsParentOf_Actor_NeutralRel_LowAuth--></T>
+          <T n="key">161978<!--RelationshipBit: familyRelationshipBitsAcquired_Target_IsParentOf_Actor_NeutralRel_LowAuth--></T>
         </U>
         <U>
-          <T n="key">161979<!--familyRelationshipBitsAcquired_Target_IsChildOf_Actor_NeutralRel_LowAuth--></T>
+          <T n="key">161979<!--RelationshipBit: familyRelationshipBitsAcquired_Target_IsChildOf_Actor_NeutralRel_LowAuth--></T>
         </U>
         <U>
-          <T n="key">161980<!--familyRelationshipBitsAcquired_Target_IsParentOf_Actor_PoorRel_HighAuth--></T>
+          <T n="key">161980<!--RelationshipBit: familyRelationshipBitsAcquired_Target_IsParentOf_Actor_PoorRel_HighAuth--></T>
         </U>
         <U>
-          <T n="key">161981<!--familyRelationshipBitsAcquired_Target_IsChildOf_Actor_PoorRel_HighAuth--></T>
+          <T n="key">161981<!--RelationshipBit: familyRelationshipBitsAcquired_Target_IsChildOf_Actor_PoorRel_HighAuth--></T>
         </U>
         <U>
-          <T n="key">161982<!--familyRelationshipBitsAcquired_Target_IsParentOf_Actor_PoorRel_LowAuth--></T>
+          <T n="key">161982<!--RelationshipBit: familyRelationshipBitsAcquired_Target_IsParentOf_Actor_PoorRel_LowAuth--></T>
         </U>
         <U>
-          <T n="key">161983<!--familyRelationshipBitsAcquired_Target_IsChildOf_Actor_PoorRel_LowAuth--></T>
+          <T n="key">161983<!--RelationshipBit: familyRelationshipBitsAcquired_Target_IsChildOf_Actor_PoorRel_LowAuth--></T>
         </U>
         <U>
-          <T n="key">162482<!--CT_notParent_Actor_IsCareGiverOf_Target--></T>
+          <T n="key">162482<!--RelationshipBit: CT_notParent_Actor_IsCareGiverOf_Target--></T>
         </U>
         <U>
-          <T n="key">248676<!--friendship-Confidant--></T>
+          <T n="key">248676<!--RelationshipBit: friendship-Confidant--></T>
           <T n="value">-10</T>
         </U>
         <U>
-          <T n="key">26560<!--SpecialBits_Enemy--></T>
+          <T n="key">26560<!--RelationshipBit: SpecialBits_Enemy--></T>
         </U>
         <U>
-          <T n="key">306279<!--familyTrope_Jokesters--></T>
+          <T n="key">306279<!--RelationshipBit: familyTrope_Jokesters--></T>
         </U>
         <U>
-          <T n="key">306282<!--familyTrope_distant--></T>
+          <T n="key">306282<!--RelationshipBit: familyTrope_distant--></T>
           <T n="value">0</T>
         </U>
         <U>
-          <T n="key">306289<!--familyTrope_permissive_target_isAuthorityOf_actor--></T>
+          <T n="key">306289<!--RelationshipBit: familyTrope_permissive_target_isAuthorityOf_actor--></T>
           <T n="value">-25</T>
         </U>
         <U>
-          <T n="key">306291<!--familyTrope_compliant_target_isAuthorityOf_actor--></T>
+          <T n="key">306291<!--RelationshipBit: familyTrope_compliant_target_isAuthorityOf_actor--></T>
           <T n="value">25</T>
         </U>
         <U>
-          <T n="key">306293<!--familyTrope_close--></T>
+          <T n="key">306293<!--RelationshipBit: familyTrope_close--></T>
         </U>
         <U>
-          <T n="key">306294<!--familyTrope_compliant_target_IsSubordinateOf_actor--></T>
+          <T n="key">306294<!--RelationshipBit: familyTrope_compliant_target_IsSubordinateOf_actor--></T>
           <T n="value">0</T>
         </U>
         <U>
-          <T n="key">306296<!--familyTrope_permissive_target_isSubordinateOf_actor--></T>
+          <T n="key">306296<!--RelationshipBit: familyTrope_permissive_target_isSubordinateOf_actor--></T>
           <T n="value">0</T>
         </U>
         <U>
-          <T n="key">306356<!--familyTrope_loving_target_IsAuthorityOf_actor--></T>
+          <T n="key">306356<!--RelationshipBit: familyTrope_loving_target_IsAuthorityOf_actor--></T>
         </U>
         <U>
-          <T n="key">306357<!--familyTrope_loving_target_isSubordinateOf_actor--></T>
+          <T n="key">306357<!--RelationshipBit: familyTrope_loving_target_isSubordinateOf_actor--></T>
         </U>
         <U>
-          <T n="key">310888<!--familyTrope_difficult--></T>
+          <T n="key">310888<!--RelationshipBit: familyTrope_difficult--></T>
           <T n="value">-2</T>
         </U>
         <U>
-          <T n="key">34619<!--romantic-HaveDoneWooHoo--></T>
+          <T n="key">34619<!--RelationshipBit: romantic-HaveDoneWooHoo--></T>
         </U>
         <U>
-          <T n="key">75294<!--neighbor--></T>
+          <T n="key">362475<!--RelationshipBit: romanceTrope_wholesome--></T>
+          <T n="value">30</T>
         </U>
         <U>
-          <T n="key">77585<!--RomanticCombo_Acquaintances--></T>
+          <T n="key">362476<!--RelationshipBit: romanceTrope_steamy--></T>
+          <T n="value">-10</T>
         </U>
         <U>
-          <T n="key">77633<!--RomanticCombo_JustFriends--></T>
+          <T n="key">362477<!--RelationshipBit: romanceTrope_unpredictable--></T>
+          <T n="value">-30</T>
         </U>
         <U>
-          <T n="key">77634<!--RomanticCombo_JustGoodFriends--></T>
+          <T n="key">362478<!--RelationshipBit: romanceTrope_strained--></T>
+          <T n="value">-35</T>
         </U>
         <U>
-          <T n="key">77647<!--RomanticCombo_Disliked--></T>
+          <T n="key">363250<!--RelationshipBit: romanceTrope_WorkingOnRomanceDynamic--></T>
+          <T n="value">25</T>
         </U>
         <U>
-          <T n="key">77648<!--RomanticCombo_Despised--></T>
+          <T n="key">467759<!--RelationshipBit: family_Target_IsParentInLawOf_Actor--></T>
         </U>
         <U>
-          <T n="key">8802<!--family_Target_IsBrotherSisterOf_Actor--></T>
+          <T n="key">467761<!--RelationshipBit: family_Target_IsSiblingInLawOf_Actor--></T>
         </U>
         <U>
-          <T n="key">8805<!--family_Target_IsSonOrDaughterOf_Actor--></T>
+          <T n="key">467871<!--RelationshipBit: family_Target_IsChildInLawOf_Actor--></T>
         </U>
         <U>
-          <T n="key">8807<!--family_Target_IsGrandchildOf_Actor--></T>
+          <T n="key">468541<!--RelationshipBit: family_Target_IsDistantRelativeOf_Actor--></T>
         </U>
         <U>
-          <T n="key">8808<!--family_Target_IsGrandparentOf_Actor--></T>
+          <T n="key">468542<!--RelationshipBit: family_Target_IsHalfsiblingOf_Actor--></T>
         </U>
         <U>
-          <T n="key">8809<!--family_Target_IsParentOf_Actor--></T>
+          <T n="key">468543<!--RelationshipBit: family_Target_IsStepparentOf_Actor--></T>
         </U>
         <U>
-          <T n="key">8812<!--living_roommate--></T>
+          <T n="key">468544<!--RelationshipBit: family_Target_IsStepchildOf_Actor--></T>
         </U>
         <U>
-          <T n="key">8824<!--family_Target_IsStepsiblingOf_Actor--></T>
+          <T n="key">468795<!--RelationshipBit: family_Target_IsParentsCousinOf_Actor--></T>
         </U>
         <U>
-          <T n="key">8826<!--family_Target_IsCousinOf_Actor--></T>
+          <T n="key">468796<!--RelationshipBit: family_Target_IsGrandniblingOf_Actor--></T>
         </U>
         <U>
-          <T n="key">8829<!--family_Target_IsAuntUncleOf_Actor--></T>
+          <T n="key">468797<!--RelationshipBit: family_Target_IsGreatGrandchildOf_Actor--></T>
         </U>
         <U>
-          <T n="key">99429<!--romantic-Promised--></T>
+          <T n="key">468799<!--RelationshipBit: family_Target_IsGreatGrandparentOf_Actor--></T>
         </U>
         <U>
-          <T n="key">9989<!--family_Target_IsNieceNephewOf_Actor--></T>
+          <T n="key">468860<!--RelationshipBit: family_Target_IsGrandPiblingOf_Actor--></T>
+        </U>
+        <U>
+          <T n="key">470945<!--RelationshipBit: family_Target_IsDistantRelativeInLawOf_Actor--></T>
+        </U>
+        <U>
+          <T n="key">474025<!--RelationshipBit: family_Target_IsRelativeInLawOf_Actor--></T>
+        </U>
+        <U>
+          <T n="key">500510<!--RelationshipBit: family_Target_IsCousinsChildOf_Actor--></T>
+        </U>
+        <U>
+          <T n="key">75294<!--RelationshipBit: neighbor--></T>
+        </U>
+        <U>
+          <T n="key">77585<!--RelationshipBit: RomanticCombo_Acquaintances--></T>
+        </U>
+        <U>
+          <T n="key">77633<!--RelationshipBit: RomanticCombo_JustFriends--></T>
+        </U>
+        <U>
+          <T n="key">77634<!--RelationshipBit: RomanticCombo_JustGoodFriends--></T>
+        </U>
+        <U>
+          <T n="key">77647<!--RelationshipBit: RomanticCombo_Disliked--></T>
+        </U>
+        <U>
+          <T n="key">77648<!--RelationshipBit: RomanticCombo_Despised--></T>
+        </U>
+        <U>
+          <T n="key">8802<!--RelationshipBit: family_Target_IsBrotherSisterOf_Actor--></T>
+        </U>
+        <U>
+          <T n="key">8805<!--RelationshipBit: family_Target_IsSonOrDaughterOf_Actor--></T>
+        </U>
+        <U>
+          <T n="key">8807<!--RelationshipBit: family_Target_IsGrandchildOf_Actor--></T>
+        </U>
+        <U>
+          <T n="key">8808<!--RelationshipBit: family_Target_IsGrandparentOf_Actor--></T>
+        </U>
+        <U>
+          <T n="key">8809<!--RelationshipBit: family_Target_IsParentOf_Actor--></T>
+        </U>
+        <U>
+          <T n="key">8812<!--RelationshipBit: living_roommate--></T>
+        </U>
+        <U>
+          <T n="key">8824<!--RelationshipBit: family_Target_IsStepsiblingOf_Actor--></T>
+        </U>
+        <U>
+          <T n="key">8826<!--RelationshipBit: family_Target_IsCousinOf_Actor--></T>
+        </U>
+        <U>
+          <T n="key">8829<!--RelationshipBit: family_Target_IsAuntUncleOf_Actor--></T>
+        </U>
+        <U>
+          <T n="key">99429<!--RelationshipBit: romantic-Promised--></T>
+        </U>
+        <U>
+          <T n="key">9989<!--RelationshipBit: family_Target_IsNieceNephewOf_Actor--></T>
           <T n="value">0</T>
         </U>
       </L>
       <L n="social_context_preference">
         <U>
-          <T n="key">111600<!--relationshipBit_SocialContext_Retail_Uninterested--></T>
+          <T n="key">111600<!--SocialContextBit: relationshipBit_SocialContext_Retail_Uninterested--></T>
         </U>
         <U>
-          <T n="key">111601<!--relationshipBit_SocialContext_Retail_VeryInterested--></T>
+          <T n="key">111601<!--SocialContextBit: relationshipBit_SocialContext_Retail_VeryInterested--></T>
         </U>
         <U>
-          <T n="key">111602<!--relationshipBit_SocialContext_Retail_MildlyInterested--></T>
+          <T n="key">111602<!--SocialContextBit: relationshipBit_SocialContext_Retail_MildlyInterested--></T>
         </U>
         <U>
-          <T n="key">24032<!--relbit_SocialContext_Casual--></T>
+          <T n="key">24032<!--SocialContextBit: relbit_SocialContext_Casual--></T>
           <T n="value">3</T>
         </U>
         <U>
-          <T n="key">24076<!--relbit_SocialContext_Romance_Amorous--></T>
+          <T n="key">24076<!--SocialContextBit: relbit_SocialContext_Romance_Amorous--></T>
           <T n="value">-10</T>
         </U>
         <U>
-          <T n="key">24077<!--relbit_SocialContext_Fun_Funny--></T>
+          <T n="key">24077<!--SocialContextBit: relbit_SocialContext_Fun_Funny--></T>
           <T n="value">3</T>
         </U>
         <U>
-          <T n="key">24078<!--relbit_SocialContext_Romance_Suggestive--></T>
+          <T n="key">24078<!--SocialContextBit: relbit_SocialContext_Romance_Suggestive--></T>
         </U>
         <U>
-          <T n="key">24079<!--relbit_SocialContext_Fun_Hilarious--></T>
+          <T n="key">24079<!--SocialContextBit: relbit_SocialContext_Fun_Hilarious--></T>
           <T n="value">3</T>
         </U>
         <U>
-          <T n="key">24080<!--relbit_SocialContext_Romance_Steamy--></T>
+          <T n="key">24080<!--SocialContextBit: relbit_SocialContext_Romance_Steamy--></T>
           <T n="value">-15</T>
         </U>
         <U>
-          <T n="key">24081<!--relbit_SocialContext_Fun_Boring--></T>
+          <T n="key">24081<!--SocialContextBit: relbit_SocialContext_Fun_Boring--></T>
           <T n="value">3</T>
         </U>
         <U>
-          <T n="key">24082<!--relbit_SocialContext_Fun_Tedious--></T>
+          <T n="key">24082<!--SocialContextBit: relbit_SocialContext_Fun_Tedious--></T>
         </U>
         <U>
-          <T n="key">24083<!--relbit_SocialContext_Fun_InsufferablyTedious--></T>
+          <T n="key">24083<!--SocialContextBit: relbit_SocialContext_Fun_InsufferablyTedious--></T>
         </U>
         <U>
-          <T n="key">24085<!--relbit_SocialContext_Friendship_Friendly--></T>
+          <T n="key">24085<!--SocialContextBit: relbit_SocialContext_Friendship_Friendly--></T>
           <T n="value">15</T>
         </U>
         <U>
-          <T n="key">24086<!--relbit_SocialContext_Friendship_Distasteful--></T>
+          <T n="key">24086<!--SocialContextBit: relbit_SocialContext_Friendship_Distasteful--></T>
         </U>
         <U>
-          <T n="key">24087<!--relbit_SocialContext_Friendship_Offensive--></T>
+          <T n="key">24087<!--SocialContextBit: relbit_SocialContext_Friendship_Offensive--></T>
           <T n="value">-15</T>
         </U>
         <U>
-          <T n="key">24088<!--relbit_SocialContext_Friendship_Abhorrent--></T>
+          <T n="key">24088<!--SocialContextBit: relbit_SocialContext_Friendship_Abhorrent--></T>
           <T n="value">-20</T>
         </U>
         <U>
-          <T n="key">24089<!--relbit_SocialContext_Awkwardness_Awkward--></T>
+          <T n="key">24089<!--SocialContextBit: relbit_SocialContext_Awkwardness_Awkward--></T>
           <T n="value">5</T>
         </U>
         <U>
-          <T n="key">24090<!--relbit_SocialContext_Awkwardness_VeryAwkward--></T>
+          <T n="key">24090<!--SocialContextBit: relbit_SocialContext_Awkwardness_VeryAwkward--></T>
           <T n="value">5</T>
         </U>
       </L>
       <L n="trait_preference">
         <U>
-          <T n="key">102336<!--trait_Squeamish--></T>
+          <T n="key">102336<!--Trait: trait_Squeamish--></T>
         </U>
         <U>
-          <T n="key">124879<!--trait_Jealous--></T>
+          <T n="key">124879<!--Trait: trait_Jealous--></T>
         </U>
         <U>
-          <T n="key">125437<!--trait_Insider--></T>
+          <T n="key">125437<!--Trait: trait_Insider--></T>
         </U>
         <U>
-          <T n="key">126088<!--trait_DanceMachine--></T>
+          <T n="key">126088<!--Trait: trait_DanceMachine--></T>
         </U>
         <U>
-          <T n="key">131783<!--trait_Kleptomaniac--></T>
+          <T n="key">131783<!--Trait: trait_Kleptomaniac--></T>
         </U>
         <U>
-          <T n="key">132589<!--trait_Unflirty--></T>
+          <T n="key">132589<!--Trait: trait_Unflirty--></T>
         </U>
         <U>
-          <T n="key">132627<!--trait_Vegetarian--></T>
+          <T n="key">132627<!--Trait: trait_Vegetarian--></T>
         </U>
         <U>
-          <T n="key">157978<!--trait_CatLover--></T>
+          <T n="key">157978<!--Trait: trait_CatLover--></T>
         </U>
         <U>
-          <T n="key">157979<!--trait_DogLover--></T>
+          <T n="key">157979<!--Trait: trait_DogLover--></T>
         </U>
         <U>
-          <T n="key">16823<!--trait_Ambitious--></T>
+          <T n="key">16823<!--Trait: trait_Ambitious--></T>
         </U>
         <U>
-          <T n="key">16824<!--trait_SelfAssured--></T>
+          <T n="key">16824<!--Trait: trait_SelfAssured--></T>
         </U>
         <U>
-          <T n="key">16826<!--trait_Bro--></T>
+          <T n="key">16826<!--Trait: trait_Bro--></T>
         </U>
         <U>
-          <T n="key">16830<!--trait_Childish--></T>
+          <T n="key">16830<!--Trait: trait_Childish--></T>
         </U>
         <U>
-          <T n="key">16832<!--trait_Clumsy--></T>
+          <T n="key">16832<!--Trait: trait_Clumsy--></T>
         </U>
         <U>
-          <T n="key">16833<!--trait_CommitmentIssues--></T>
+          <T n="key">16833<!--Trait: trait_CommitmentIssues--></T>
         </U>
         <U>
-          <T n="key">16836<!--trait_Evil--></T>
+          <T n="key">16836<!--Trait: trait_Evil--></T>
         </U>
         <U>
-          <T n="key">16838<!--trait_FamilyOriented--></T>
+          <T n="key">16838<!--Trait: trait_FamilyOriented--></T>
         </U>
         <U>
-          <T n="key">16841<!--trait_Geek--></T>
+          <T n="key">16841<!--Trait: trait_Geek--></T>
         </U>
         <U>
-          <T n="key">16843<!--trait_Glutton--></T>
+          <T n="key">16843<!--Trait: trait_Glutton--></T>
         </U>
         <U>
-          <T n="key">16844<!--trait_HatesChildren--></T>
+          <T n="key">16844<!--Trait: trait_HatesChildren--></T>
         </U>
         <U>
-          <T n="key">16845<!--trait_HotHeaded--></T>
+          <T n="key">16845<!--Trait: trait_HotHeaded--></T>
         </U>
         <U>
-          <T n="key">16848<!--trait_Insane--></T>
+          <T n="key">16848<!--Trait: trait_Insane--></T>
         </U>
         <U>
-          <T n="key">16850<!--trait_Creative--></T>
+          <T n="key">16850<!--Trait: trait_Creative--></T>
         </U>
         <U>
-          <T n="key">16857<!--trait_Mean--></T>
+          <T n="key">16857<!--Trait: trait_Mean--></T>
         </U>
         <U>
-          <T n="key">16858<!--trait_Neat--></T>
+          <T n="key">16858<!--Trait: trait_Neat--></T>
         </U>
         <U>
-          <T n="key">16860<!--trait_Slob--></T>
+          <T n="key">16860<!--Trait: trait_Slob--></T>
         </U>
         <U>
-          <T n="key">251970<!--trait_Proper--></T>
+          <T n="key">251970<!--Trait: trait_Proper--></T>
         </U>
         <U>
-          <T n="key">27176<!--trait_Foodie--></T>
+          <T n="key">27176<!--Trait: trait_Foodie--></T>
         </U>
         <U>
-          <T n="key">27419<!--trait_active--></T>
+          <T n="key">27419<!--Trait: trait_active--></T>
         </U>
         <U>
-          <T n="key">27454<!--Trait_Romantic--></T>
+          <T n="key">27454<!--Trait: Trait_Romantic--></T>
         </U>
         <U>
-          <T n="key">27913<!--trait_Materialistic--></T>
+          <T n="key">27913<!--Trait: trait_Materialistic--></T>
         </U>
         <U>
-          <T n="key">27914<!--trait_LovesOutdoors--></T>
+          <T n="key">27914<!--Trait: trait_LovesOutdoors--></T>
         </U>
         <U>
-          <T n="key">27915<!--trait_Good--></T>
+          <T n="key">27915<!--Trait: trait_Good--></T>
           <T n="value">5</T>
         </U>
         <U>
-          <T n="key">27916<!--trait_Bookworm--></T>
+          <T n="key">27916<!--Trait: trait_Bookworm--></T>
         </U>
         <U>
-          <T n="key">27917<!--trait_Genius--></T>
+          <T n="key">27917<!--Trait: trait_Genius--></T>
         </U>
         <U>
-          <T n="key">27918<!--trait_ArtLover--></T>
+          <T n="key">27918<!--Trait: trait_ArtLover--></T>
         </U>
         <U>
-          <T n="key">29571<!--trait_Outgoing--></T>
+          <T n="key">29571<!--Trait: trait_Outgoing--></T>
         </U>
         <U>
-          <T n="key">34316<!--trait_child--></T>
+          <T n="key">34316<!--Trait: trait_child--></T>
         </U>
         <U>
-          <T n="key">34317<!--trait_teen--></T>
+          <T n="key">34317<!--Trait: trait_teen--></T>
         </U>
         <U>
-          <T n="key">34318<!--trait_youngAdult--></T>
+          <T n="key">34318<!--Trait: trait_youngAdult--></T>
         </U>
         <U>
-          <T n="key">34319<!--trait_adult--></T>
+          <T n="key">34319<!--Trait: trait_adult--></T>
         </U>
         <U>
-          <T n="key">34320<!--trait_elder--></T>
+          <T n="key">34320<!--Trait: trait_elder--></T>
         </U>
         <U>
-          <T n="key">9322<!--trait_Cheerful--></T>
+          <T n="key">378502<!--Trait: trait_Hidden_EP17World_NPC_EdithBasu--></T>
+          <T n="value">-10</T>
         </U>
         <U>
-          <T n="key">9332<!--trait_Gloomy--></T>
+          <T n="key">443222<!--Trait: trait_Competitive--></T>
         </U>
         <U>
-          <T n="key">9337<!--trait_Goofball--></T>
+          <T n="key">9322<!--Trait: trait_Cheerful--></T>
         </U>
         <U>
-          <T n="key">9599<!--trait_Lazy--></T>
+          <T n="key">9332<!--Trait: trait_Gloomy--></T>
         </U>
         <U>
-          <T n="key">9602<!--trait_Loner--></T>
+          <T n="key">9337<!--Trait: trait_Goofball--></T>
         </U>
         <U>
-          <T n="key">9604<!--trait_MusicLover--></T>
+          <T n="key">9599<!--Trait: trait_Lazy--></T>
         </U>
         <U>
-          <T n="key">9617<!--trait_Perfectionist--></T>
+          <T n="key">9602<!--Trait: trait_Loner--></T>
         </U>
         <U>
-          <T n="key">9620<!--trait_Snob--></T>
+          <T n="key">9604<!--Trait: trait_MusicLover--></T>
+        </U>
+        <U>
+          <T n="key">9617<!--Trait: trait_Perfectionist--></T>
+        </U>
+        <U>
+          <T n="key">9620<!--Trait: trait_Snob--></T>
         </U>
       </L>
     </U>
   </V>
-  <T n="display_name">0xA91E7011<!--Give Bath--></T>
+  <T n="display_name">0xA91E7011<!--String: "Give Bath"--></T>
   <V n="display_name_overrides" t="testable">
     <U n="testable">
       <L n="overrides">
         <U>
           <V n="new_display_name" t="enabled">
-            <T n="enabled">0x868E62CE<!--Give {1.SimFirstName} a Quick and Tepid Bath--></T>
+            <T n="enabled">0x868E62CE<!--String: "Give {1.SimFirstName} a Quick and Tepid Bath"--></T>
           </V>
           <V n="new_pie_menu_icon" t="enabled">
             <V n="enabled" t="resource_key">
@@ -715,7 +828,7 @@
                         <V n="whitelist" t="specify">
                           <U n="specify">
                             <L n="whitelist">
-                              <T>206665<!--zoneModifier_lotTrait_OffTheGrid--></T>
+                              <T>206665<!--ZoneModifier: zoneModifier_lotTrait_OffTheGrid--></T>
                             </L>
                           </U>
                         </V>
@@ -739,7 +852,7 @@
         </U>
         <U>
           <V n="new_display_name" t="enabled">
-            <T n="enabled">0x3907E4FA<!--Order to Take Bath--></T>
+            <T n="enabled">0x3907E4FA<!--String: "Order to Take Bath"--></T>
           </V>
           <L n="test">
             <L>
@@ -747,7 +860,7 @@
                 <U n="buff">
                   <V n="whitelist" t="enabled">
                     <L n="enabled">
-                      <T>141545<!--buff_Toddlers_Defiance_Actor_UncooperativeToddler--></T>
+                      <T>141545<!--Buff: buff_Toddlers_Defiance_Actor_UncooperativeToddler--></T>
                     </L>
                   </V>
                 </U>
@@ -755,10 +868,27 @@
             </L>
           </L>
         </U>
+        <U>
+          <V n="new_display_name" t="disabled" />
+          <V n="new_pie_menu_icon" t="enabled">
+            <V n="enabled" t="resource_key">
+              <U n="resource_key">
+                <T p="InEP21\UI\Icons\PieMenu\PieMenu_UnityAlignedAction.png" n="key">2f7d0004:00000000:79a65800e2bcdb2c</T>
+              </U>
+            </V>
+          </V>
+          <L n="test">
+            <L>
+              <V t="test_set_reference">
+                <T n="test_set_reference">501184<!--TestSetInstance: testSet_DynastyBG_SocialPrestigeIcon_Alliance--></T>
+              </V>
+            </L>
+          </L>
+        </U>
       </L>
     </U>
   </V>
-  <T n="display_name_target">0x8C71C8F7<!--Listen to {1.SimFirstName}'s Question--></T>
+  <T n="display_name_target">0x8C71C8F7<!--String: "Listen to {1.SimFirstName}'s Question"--></T>
   <U n="display_name_text_tokens">
     <L n="tokens">
       <V t="participant_type">
@@ -789,6 +919,7 @@
     <E>Interaction_SocialAll</E>
     <E>Interaction_SocialMixer</E>
     <E>Interaction_Social_Contagious</E>
+    <E>Interaction_Mixer_SocialsTargeted</E>
   </L>
   <V n="outcome" t="test_based">
     <U n="test_based">
@@ -797,13 +928,13 @@
           <U n="outcome">
             <V n="animation_ref" t="enabled">
               <U n="enabled">
-                <T n="factory">11854<!--Soc_Friendly_NT_askQuestionFriendly_success_basic--></T>
+                <T n="factory">11854<!--AnimationElement: Soc_Friendly_NT_askQuestionFriendly_success_basic--></T>
                 <U n="overrides">
                   <V n="reactionlet" t="enabled">
                     <U n="enabled">
                       <V n="selector" t="single_ref">
                         <U n="single_ref">
-                          <T n="factory">144827<!--socials_Toddlers_Accepts--></T>
+                          <T n="factory">144827<!--AnimationElement: socials_Toddlers_Accepts--></T>
                         </U>
                       </V>
                     </U>
@@ -819,7 +950,7 @@
                       <E n="key">Career_ChanceCard_01</E>
                       <U n="value">
                         <V n="adventure_moment" t="reference">
-                          <T n="reference">309922<!--adventureMoment_FamilyTrope_compliant--></T>
+                          <T n="reference">309922<!--AdventureMoment: adventureMoment_FamilyTrope_compliant--></T>
                         </V>
                       </U>
                     </U>
@@ -839,10 +970,10 @@
                               <U n="relationship">
                                 <U n="prohibited_relationship_bits">
                                   <L n="match_any">
-                                    <T>8809<!--family_Target_IsParentOf_Actor--></T>
-                                    <T>8808<!--family_Target_IsGrandparentOf_Actor--></T>
-                                    <T>8805<!--family_Target_IsSonOrDaughterOf_Actor--></T>
-                                    <T>8807<!--family_Target_IsGrandchildOf_Actor--></T>
+                                    <T>8809<!--RelationshipBit: family_Target_IsParentOf_Actor--></T>
+                                    <T>8808<!--RelationshipBit: family_Target_IsGrandparentOf_Actor--></T>
+                                    <T>8805<!--RelationshipBit: family_Target_IsSonOrDaughterOf_Actor--></T>
+                                    <T>8807<!--RelationshipBit: family_Target_IsGrandchildOf_Actor--></T>
                                   </L>
                                 </U>
                                 <L n="subject">
@@ -864,7 +995,7 @@
                               <U n="buff">
                                 <V n="whitelist" t="enabled">
                                   <L n="enabled">
-                                    <T>306626<!--buff_FamilyDynamics_FamilyTropeAdventureCooldown--></T>
+                                    <T>306626<!--Buff: buff_FamilyDynamics_FamilyTropeAdventureCooldown--></T>
                                   </L>
                                 </V>
                               </U>
@@ -880,9 +1011,9 @@
                               <U n="relationship">
                                 <U n="required_relationship_bits">
                                   <L n="match_any">
-                                    <T>306291<!--familyTrope_compliant_target_isAuthorityOf_actor--></T>
-                                    <T>306294<!--familyTrope_compliant_target_IsSubordinateOf_actor--></T>
-                                    <T>309925<!--familyTrope_NotCompliant--></T>
+                                    <T>306291<!--RelationshipBit: familyTrope_compliant_target_isAuthorityOf_actor--></T>
+                                    <T>306294<!--RelationshipBit: familyTrope_compliant_target_IsSubordinateOf_actor--></T>
+                                    <T>309925<!--RelationshipBit: familyTrope_NotCompliant--></T>
                                   </L>
                                 </U>
                                 <L n="subject">
@@ -911,7 +1042,7 @@
                                 <L n="target_sim">
                                   <E>TargetSim</E>
                                 </L>
-                                <T n="track">16650<!--LTR_Friendship_Main--></T>
+                                <T n="track">16650<!--RelationshipTrack: LTR_Friendship_Main--></T>
                               </U>
                             </V>
                           </L>
@@ -925,14 +1056,14 @@
                               <U n="relationship">
                                 <U n="required_relationship_bits">
                                   <L n="match_any">
-                                    <T>306293<!--familyTrope_close--></T>
-                                    <T>310888<!--familyTrope_difficult--></T>
-                                    <T>306282<!--familyTrope_distant--></T>
-                                    <T>306279<!--familyTrope_Jokesters--></T>
-                                    <T>306356<!--familyTrope_loving_target_IsAuthorityOf_actor--></T>
-                                    <T>306357<!--familyTrope_loving_target_isSubordinateOf_actor--></T>
-                                    <T>306289<!--familyTrope_permissive_target_isAuthorityOf_actor--></T>
-                                    <T>306296<!--familyTrope_permissive_target_isSubordinateOf_actor--></T>
+                                    <T>306293<!--RelationshipBit: familyTrope_close--></T>
+                                    <T>310888<!--RelationshipBit: familyTrope_difficult--></T>
+                                    <T>306282<!--RelationshipBit: familyTrope_distant--></T>
+                                    <T>306279<!--RelationshipBit: familyTrope_Jokesters--></T>
+                                    <T>306356<!--RelationshipBit: familyTrope_loving_target_IsAuthorityOf_actor--></T>
+                                    <T>306357<!--RelationshipBit: familyTrope_loving_target_isSubordinateOf_actor--></T>
+                                    <T>306289<!--RelationshipBit: familyTrope_permissive_target_isAuthorityOf_actor--></T>
+                                    <T>306296<!--RelationshipBit: familyTrope_permissive_target_isSubordinateOf_actor--></T>
                                   </L>
                                 </U>
                                 <L n="subject">
@@ -954,7 +1085,7 @@
                                 <L n="target_sim">
                                   <E>TargetSim</E>
                                 </L>
-                                <T n="track">24099<!--SocialContext_Friendship--></T>
+                                <T n="track">24099<!--ShortTermContextRelationshipTrack: SocialContext_Friendship--></T>
                               </U>
                             </V>
                           </L>
@@ -974,7 +1105,7 @@
             <L n="continuation">
               <U>
                 <E n="actor">Actor</E>
-                <T n="affordance">149827<!--socialSuperInteraction_CarryPickUp_ToBathe--></T>
+                <T n="affordance">149827<!--SuperInteraction: socialSuperInteraction_CarryPickUp_ToBathe--></T>
                 <V n="carry_target" t="enabled">
                   <E n="enabled">TargetSim</E>
                 </V>
@@ -982,12 +1113,15 @@
               </U>
             </L>
             <L n="loot_list">
-              <T>11036<!--Rel_Gain_Small--></T>
-              <T>24123<!--Loot_SocialContext_Friendship_Gain--></T>
-              <T>36121<!--Skill_Loot_Dynamic_Small_ChildrenOnly_Social--></T>
-              <T>10954<!--Loot_ForSocialsSocialMotiveMedium--></T>
-              <T>216556<!--randomWeightedLoot_Cauldron_Potion_Luck_RandomBenefit_Social_Friendly--></T>
-              <T>294094<!--lootActions_TeenRelationshipDrama_AddCrush_LowChance--></T>
+              <T>11036<!--LootActions: Rel_Gain_Small--></T>
+              <T>24123<!--LootActions: Loot_SocialContext_Friendship_Gain--></T>
+              <T>36121<!--LootActions: Skill_Loot_Dynamic_Small_ChildrenOnly_Social--></T>
+              <T>10954<!--LootActions: Loot_ForSocialsSocialMotiveMedium--></T>
+              <T>369793<!--LootActions: loot_BasicSocialOutcome_Friendly_All--></T>
+              <T>369794<!--LootActions: loot_BasicSocialOutcome_Friendly_Success--></T>
+              <T>399757<!--LootActions: loot_HobbyClass_SetFriendSentiment--></T>
+              <T>216556<!--RandomWeightedLoot: randomWeightedLoot_Cauldron_Potion_Luck_RandomBenefit_Social_Friendly--></T>
+              <T>294094<!--LootActions: lootActions_TeenRelationshipDrama_AddCrush_LowChance--></T>
             </L>
           </U>
         </U>
@@ -999,7 +1133,7 @@
               <U n="outcome">
                 <V n="animation_ref" t="enabled">
                   <U n="enabled">
-                    <T n="factory">28339<!--Socials_Responses_Angry_HighIntensity_Footstomp--></T>
+                    <T n="factory">28339<!--AnimationElement: Socials_Responses_Angry_HighIntensity_Footstomp--></T>
                     <U n="overrides">
                       <V n="balloons" t="enabled">
                         <L n="enabled">
@@ -1036,7 +1170,7 @@
                 <L n="continuation">
                   <U>
                     <E n="actor">Actor</E>
-                    <T n="affordance">149827<!--socialSuperInteraction_CarryPickUp_ToBathe--></T>
+                    <T n="affordance">149827<!--SuperInteraction: socialSuperInteraction_CarryPickUp_ToBathe--></T>
                     <V n="carry_target" t="enabled">
                       <E n="enabled">TargetSim</E>
                     </V>
@@ -1044,7 +1178,7 @@
                   </U>
                 </L>
                 <L n="loot_list">
-                  <T>156995<!--loot_Buff_Toddler_Defiance_Cleanup--></T>
+                  <T>156995<!--LootActions: loot_Buff_Toddler_Defiance_Cleanup--></T>
                 </L>
                 <E n="outcome_result">SUCCESS</E>
                 <V n="response" t="enabled">
@@ -1054,7 +1188,7 @@
                         <U>
                           <E n="target">TargetSim</E>
                           <U n="animation">
-                            <T n="factory">28337<!--Socials_Responses_Angry_HighIntensity--></T>
+                            <T n="factory">28337<!--AnimationElement: Socials_Responses_Angry_HighIntensity--></T>
                             <U n="overrides">
                               <V n="balloons" t="enabled">
                                 <L n="enabled">
@@ -1095,7 +1229,7 @@
                   <E n="subject">TargetSim</E>
                   <V n="whitelist" t="enabled">
                     <L n="enabled">
-                      <T>141541<!--buff_Toddlers_Defiance_DontWantTo--></T>
+                      <T>141541<!--Buff: buff_Toddlers_Defiance_DontWantTo--></T>
                     </L>
                   </V>
                 </U>
@@ -1109,7 +1243,7 @@
               <U n="outcome">
                 <V n="animation_ref" t="enabled">
                   <U n="enabled">
-                    <T n="factory">11853<!--Soc_Friendly_NT_askQuestionFriendly_fail_basic--></T>
+                    <T n="factory">11853<!--AnimationElement: Soc_Friendly_NT_askQuestionFriendly_fail_basic--></T>
                     <U n="overrides">
                       <V n="balloons" t="enabled">
                         <L n="enabled">
@@ -1121,7 +1255,7 @@
                                     <E n="balloon_type">SPEECH</E>
                                     <V n="icon" t="resource_key">
                                       <U n="resource_key">
-                                        <T n="key" p="InGame\UI\Icons\Headlines\Final\headline_bathtub.png">2f7d0004:00000000:aed5d3e6c66c1254</T>
+                                        <T p="InGame\UI\Icons\Headlines\Final\headline_bathtub.png" n="key">2f7d0004:00000000:aed5d3e6c66c1254</T>
                                       </U>
                                     </V>
                                   </U>
@@ -1138,7 +1272,7 @@
                         <U n="enabled">
                           <V n="selector" t="single_ref">
                             <U n="single_ref">
-                              <T n="factory">144828<!--socials_Toddlers_Rejects_Generic--></T>
+                              <T n="factory">144828<!--AnimationElement: socials_Toddlers_Rejects_Generic--></T>
                               <U n="overrides">
                                 <V n="balloons" t="enabled">
                                   <L n="enabled">
@@ -1150,7 +1284,7 @@
                                               <E n="balloon_type">SPEECH</E>
                                               <V n="icon" t="resource_key">
                                                 <U n="resource_key">
-                                                  <T n="key" p="InGame\UI\Icons\Headlines\Final\headline_Prohibit.png">2f7d0004:00000000:ab4a67c934164fb1</T>
+                                                  <T p="InGame\UI\Icons\Headlines\Final\headline_Prohibit.png" n="key">2f7d0004:00000000:ab4a67c934164fb1</T>
                                                 </U>
                                               </V>
                                             </U>
@@ -1179,7 +1313,7 @@
                           <E n="key">Career_ChanceCard_01</E>
                           <U n="value">
                             <V n="adventure_moment" t="reference">
-                              <T n="reference">310422<!--adventureMoment_FamilyTrope_permissive--></T>
+                              <T n="reference">310422<!--AdventureMoment: adventureMoment_FamilyTrope_permissive--></T>
                             </V>
                           </U>
                         </U>
@@ -1199,10 +1333,10 @@
                                   <U n="relationship">
                                     <U n="prohibited_relationship_bits">
                                       <L n="match_any">
-                                        <T>8809<!--family_Target_IsParentOf_Actor--></T>
-                                        <T>8808<!--family_Target_IsGrandparentOf_Actor--></T>
-                                        <T>8805<!--family_Target_IsSonOrDaughterOf_Actor--></T>
-                                        <T>8807<!--family_Target_IsGrandchildOf_Actor--></T>
+                                        <T>8809<!--RelationshipBit: family_Target_IsParentOf_Actor--></T>
+                                        <T>8808<!--RelationshipBit: family_Target_IsGrandparentOf_Actor--></T>
+                                        <T>8805<!--RelationshipBit: family_Target_IsSonOrDaughterOf_Actor--></T>
+                                        <T>8807<!--RelationshipBit: family_Target_IsGrandchildOf_Actor--></T>
                                       </L>
                                     </U>
                                     <L n="subject">
@@ -1224,7 +1358,7 @@
                                   <U n="buff">
                                     <V n="whitelist" t="enabled">
                                       <L n="enabled">
-                                        <T>306626<!--buff_FamilyDynamics_FamilyTropeAdventureCooldown--></T>
+                                        <T>306626<!--Buff: buff_FamilyDynamics_FamilyTropeAdventureCooldown--></T>
                                       </L>
                                     </V>
                                   </U>
@@ -1240,9 +1374,9 @@
                                   <U n="relationship">
                                     <U n="required_relationship_bits">
                                       <L n="match_any">
-                                        <T>306289<!--familyTrope_permissive_target_isAuthorityOf_actor--></T>
-                                        <T>306296<!--familyTrope_permissive_target_isSubordinateOf_actor--></T>
-                                        <T>310886<!--familyTrope_NotPermissive--></T>
+                                        <T>306289<!--RelationshipBit: familyTrope_permissive_target_isAuthorityOf_actor--></T>
+                                        <T>306296<!--RelationshipBit: familyTrope_permissive_target_isSubordinateOf_actor--></T>
+                                        <T>310886<!--RelationshipBit: familyTrope_NotPermissive--></T>
                                       </L>
                                     </U>
                                     <L n="subject">
@@ -1271,7 +1405,7 @@
                                     <L n="target_sim">
                                       <E>TargetSim</E>
                                     </L>
-                                    <T n="track">16650<!--LTR_Friendship_Main--></T>
+                                    <T n="track">16650<!--RelationshipTrack: LTR_Friendship_Main--></T>
                                   </U>
                                 </V>
                               </L>
@@ -1285,14 +1419,14 @@
                                   <U n="relationship">
                                     <U n="required_relationship_bits">
                                       <L n="match_any">
-                                        <T>306293<!--familyTrope_close--></T>
-                                        <T>310888<!--familyTrope_difficult--></T>
-                                        <T>306282<!--familyTrope_distant--></T>
-                                        <T>306279<!--familyTrope_Jokesters--></T>
-                                        <T>306356<!--familyTrope_loving_target_IsAuthorityOf_actor--></T>
-                                        <T>306357<!--familyTrope_loving_target_isSubordinateOf_actor--></T>
-                                        <T>306291<!--familyTrope_compliant_target_isAuthorityOf_actor--></T>
-                                        <T>306294<!--familyTrope_compliant_target_IsSubordinateOf_actor--></T>
+                                        <T>306293<!--RelationshipBit: familyTrope_close--></T>
+                                        <T>310888<!--RelationshipBit: familyTrope_difficult--></T>
+                                        <T>306282<!--RelationshipBit: familyTrope_distant--></T>
+                                        <T>306279<!--RelationshipBit: familyTrope_Jokesters--></T>
+                                        <T>306356<!--RelationshipBit: familyTrope_loving_target_IsAuthorityOf_actor--></T>
+                                        <T>306357<!--RelationshipBit: familyTrope_loving_target_isSubordinateOf_actor--></T>
+                                        <T>306291<!--RelationshipBit: familyTrope_compliant_target_isAuthorityOf_actor--></T>
+                                        <T>306294<!--RelationshipBit: familyTrope_compliant_target_IsSubordinateOf_actor--></T>
                                       </L>
                                     </U>
                                     <L n="subject">
@@ -1314,7 +1448,7 @@
                                     <L n="target_sim">
                                       <E>TargetSim</E>
                                     </L>
-                                    <T n="track">24099<!--SocialContext_Friendship--></T>
+                                    <T n="track">24099<!--ShortTermContextRelationshipTrack: SocialContext_Friendship--></T>
                                   </U>
                                 </V>
                               </L>
@@ -1356,13 +1490,13 @@
                 <L n="continuation">
                   <U>
                     <E n="actor">Actor</E>
-                    <T n="affordance">149773<!--socials_Targeted_Friendly_AlwaysOn_STC_Toddler_AskToBathe--></T>
-                    <T n="si_affordance_override">157626<!--sim_Toddler_Ask--></T>
+                    <T n="affordance">149773<!--SocialMixerInteraction: socials_Targeted_Friendly_AlwaysOn_STC_Toddler_AskToBathe--></T>
+                    <T n="si_affordance_override">157626<!--SocialSuperInteraction: sim_Toddler_Ask--></T>
                     <E n="target">TargetSim</E>
                   </U>
                 </L>
                 <L n="loot_list">
-                  <T>141539<!--loot_Buff_Toddler_Defiance--></T>
+                  <T>141539<!--LootActions: loot_Buff_Toddler_Defiance--></T>
                 </L>
                 <E n="outcome_result">FAILURE</E>
               </U>
@@ -1375,7 +1509,7 @@
                       <L>
                         <V t="mood">
                           <U n="mood">
-                            <T n="mood">14632<!--Mood_Angry--></T>
+                            <T n="mood">14632<!--Mood: Mood_Angry--></T>
                             <E n="who">TargetSim</E>
                           </U>
                         </V>
@@ -1383,7 +1517,7 @@
                       <L>
                         <V t="mood">
                           <U n="mood">
-                            <T n="mood">14643<!--Mood_Sad--></T>
+                            <T n="mood">14643<!--Mood: Mood_Sad--></T>
                             <E n="who">TargetSim</E>
                           </U>
                         </V>
@@ -1398,14 +1532,14 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>140744<!--trait_Toddler_Clingy--></T>
+                              <T>140744<!--Trait: trait_Toddler_Clingy--></T>
                             </L>
                           </U>
                         </V>
                         <V t="buff">
                           <U n="buff">
                             <L n="blacklist">
-                              <T>146494<!--buff_Relationship_Toddler_Caregiver--></T>
+                              <T>146494<!--Buff: buff_Relationship_Toddler_Caregiver--></T>
                             </L>
                           </U>
                         </V>
@@ -1420,7 +1554,7 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>273818<!--trait_Reward_Infant_Unhappy--></T>
+                              <T>273818<!--Trait: trait_Reward_Infant_Unhappy--></T>
                             </L>
                           </U>
                         </V>
@@ -1434,13 +1568,13 @@
               <U n="outcome">
                 <V n="animation_ref" t="enabled">
                   <U n="enabled">
-                    <T n="factory">11854<!--Soc_Friendly_NT_askQuestionFriendly_success_basic--></T>
+                    <T n="factory">11854<!--AnimationElement: Soc_Friendly_NT_askQuestionFriendly_success_basic--></T>
                     <U n="overrides">
                       <V n="reactionlet" t="enabled">
                         <U n="enabled">
                           <V n="selector" t="single_ref">
                             <U n="single_ref">
-                              <T n="factory">144827<!--socials_Toddlers_Accepts--></T>
+                              <T n="factory">144827<!--AnimationElement: socials_Toddlers_Accepts--></T>
                             </U>
                           </V>
                         </U>
@@ -1456,7 +1590,7 @@
                           <E n="key">Career_ChanceCard_01</E>
                           <U n="value">
                             <V n="adventure_moment" t="reference">
-                              <T n="reference">309922<!--adventureMoment_FamilyTrope_compliant--></T>
+                              <T n="reference">309922<!--AdventureMoment: adventureMoment_FamilyTrope_compliant--></T>
                             </V>
                           </U>
                         </U>
@@ -1476,10 +1610,10 @@
                                   <U n="relationship">
                                     <U n="prohibited_relationship_bits">
                                       <L n="match_any">
-                                        <T>8809<!--family_Target_IsParentOf_Actor--></T>
-                                        <T>8808<!--family_Target_IsGrandparentOf_Actor--></T>
-                                        <T>8805<!--family_Target_IsSonOrDaughterOf_Actor--></T>
-                                        <T>8807<!--family_Target_IsGrandchildOf_Actor--></T>
+                                        <T>8809<!--RelationshipBit: family_Target_IsParentOf_Actor--></T>
+                                        <T>8808<!--RelationshipBit: family_Target_IsGrandparentOf_Actor--></T>
+                                        <T>8805<!--RelationshipBit: family_Target_IsSonOrDaughterOf_Actor--></T>
+                                        <T>8807<!--RelationshipBit: family_Target_IsGrandchildOf_Actor--></T>
                                       </L>
                                     </U>
                                   </U>
@@ -1495,7 +1629,7 @@
                                   <U n="buff">
                                     <V n="whitelist" t="enabled">
                                       <L n="enabled">
-                                        <T>306626<!--buff_FamilyDynamics_FamilyTropeAdventureCooldown--></T>
+                                        <T>306626<!--Buff: buff_FamilyDynamics_FamilyTropeAdventureCooldown--></T>
                                       </L>
                                     </V>
                                   </U>
@@ -1511,9 +1645,9 @@
                                   <U n="relationship">
                                     <U n="required_relationship_bits">
                                       <L n="match_any">
-                                        <T>306291<!--familyTrope_compliant_target_isAuthorityOf_actor--></T>
-                                        <T>306294<!--familyTrope_compliant_target_IsSubordinateOf_actor--></T>
-                                        <T>309925<!--familyTrope_NotCompliant--></T>
+                                        <T>306291<!--RelationshipBit: familyTrope_compliant_target_isAuthorityOf_actor--></T>
+                                        <T>306294<!--RelationshipBit: familyTrope_compliant_target_IsSubordinateOf_actor--></T>
+                                        <T>309925<!--RelationshipBit: familyTrope_NotCompliant--></T>
                                       </L>
                                     </U>
                                   </U>
@@ -1530,7 +1664,7 @@
                                     <U n="relationship_score_interval">
                                       <T n="upper_bound">50</T>
                                     </U>
-                                    <T n="track">16650<!--LTR_Friendship_Main--></T>
+                                    <T n="track">16650<!--RelationshipTrack: LTR_Friendship_Main--></T>
                                   </U>
                                 </V>
                               </L>
@@ -1544,14 +1678,14 @@
                                   <U n="relationship">
                                     <U n="required_relationship_bits">
                                       <L n="match_any">
-                                        <T>306293<!--familyTrope_close--></T>
-                                        <T>310888<!--familyTrope_difficult--></T>
-                                        <T>306282<!--familyTrope_distant--></T>
-                                        <T>306279<!--familyTrope_Jokesters--></T>
-                                        <T>306356<!--familyTrope_loving_target_IsAuthorityOf_actor--></T>
-                                        <T>306357<!--familyTrope_loving_target_isSubordinateOf_actor--></T>
-                                        <T>306289<!--familyTrope_permissive_target_isAuthorityOf_actor--></T>
-                                        <T>306296<!--familyTrope_permissive_target_isSubordinateOf_actor--></T>
+                                        <T>306293<!--RelationshipBit: familyTrope_close--></T>
+                                        <T>310888<!--RelationshipBit: familyTrope_difficult--></T>
+                                        <T>306282<!--RelationshipBit: familyTrope_distant--></T>
+                                        <T>306279<!--RelationshipBit: familyTrope_Jokesters--></T>
+                                        <T>306356<!--RelationshipBit: familyTrope_loving_target_IsAuthorityOf_actor--></T>
+                                        <T>306357<!--RelationshipBit: familyTrope_loving_target_isSubordinateOf_actor--></T>
+                                        <T>306289<!--RelationshipBit: familyTrope_permissive_target_isAuthorityOf_actor--></T>
+                                        <T>306296<!--RelationshipBit: familyTrope_permissive_target_isSubordinateOf_actor--></T>
                                       </L>
                                     </U>
                                   </U>
@@ -1561,7 +1695,7 @@
                                     <U n="relationship_score_interval">
                                       <T n="lower_bound">75</T>
                                     </U>
-                                    <T n="track">24099<!--SocialContext_Friendship--></T>
+                                    <T n="track">24099<!--ShortTermContextRelationshipTrack: SocialContext_Friendship--></T>
                                   </U>
                                 </V>
                               </L>
@@ -1603,7 +1737,7 @@
                 <L n="continuation">
                   <U>
                     <E n="actor">Actor</E>
-                    <T n="affordance">149827<!--socialSuperInteraction_CarryPickUp_ToBathe--></T>
+                    <T n="affordance">149827<!--SuperInteraction: socialSuperInteraction_CarryPickUp_ToBathe--></T>
                     <V n="carry_target" t="enabled">
                       <E n="enabled">TargetSim</E>
                     </V>
@@ -1611,9 +1745,9 @@
                   </U>
                 </L>
                 <L n="loot_list">
-                  <T>11036<!--Rel_Gain_Small--></T>
-                  <T>24123<!--Loot_SocialContext_Friendship_Gain--></T>
-                  <T>10954<!--Loot_ForSocialsSocialMotiveMedium--></T>
+                  <T>11036<!--LootActions: Rel_Gain_Small--></T>
+                  <T>24123<!--LootActions: Loot_SocialContext_Friendship_Gain--></T>
+                  <T>10954<!--LootActions: Loot_ForSocialsSocialMotiveMedium--></T>
                 </L>
                 <E n="outcome_result">SUCCESS</E>
               </U>
@@ -1628,7 +1762,7 @@
                           <U n="buff">
                             <V n="whitelist" t="enabled">
                               <L n="enabled">
-                                <T>12794<!--CheatingIntensityBuff_Furious--></T>
+                                <T>12794<!--Buff: CheatingIntensityBuff_Furious--></T>
                               </L>
                             </V>
                           </U>
@@ -1642,7 +1776,7 @@
                       <L>
                         <V t="skill_test">
                           <U n="skill_test">
-                            <T n="skill">140504<!--statistic_Skill_Toddler_Thinking--></T>
+                            <T n="skill">140504<!--Skill: statistic_Skill_Toddler_Thinking--></T>
                             <V n="skill_range" t="interval">
                               <U n="interval">
                                 <U n="skill_interval">
@@ -1663,7 +1797,7 @@
                       <L>
                         <V t="skill_test">
                           <U n="skill_test">
-                            <T n="skill">140504<!--statistic_Skill_Toddler_Thinking--></T>
+                            <T n="skill">140504<!--Skill: statistic_Skill_Toddler_Thinking--></T>
                             <V n="skill_range" t="interval">
                               <U n="interval">
                                 <U n="skill_interval">
@@ -1684,7 +1818,7 @@
                       <L>
                         <V t="skill_test">
                           <U n="skill_test">
-                            <T n="skill">140504<!--statistic_Skill_Toddler_Thinking--></T>
+                            <T n="skill">140504<!--Skill: statistic_Skill_Toddler_Thinking--></T>
                             <V n="skill_range" t="interval">
                               <U n="interval">
                                 <U n="skill_interval">
@@ -1705,7 +1839,7 @@
                       <L>
                         <V t="skill_test">
                           <U n="skill_test">
-                            <T n="skill">140504<!--statistic_Skill_Toddler_Thinking--></T>
+                            <T n="skill">140504<!--Skill: statistic_Skill_Toddler_Thinking--></T>
                             <V n="skill_range" t="threshold">
                               <U n="threshold">
                                 <U n="skill_threshold">
@@ -1728,7 +1862,7 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>140742<!--trait_Toddler_Charmer--></T>
+                              <T>140742<!--Trait: trait_Toddler_Charmer--></T>
                             </L>
                           </U>
                         </V>
@@ -1743,7 +1877,7 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>140740<!--trait_Toddler_Angelic--></T>
+                              <T>140740<!--Trait: trait_Toddler_Angelic--></T>
                             </L>
                           </U>
                         </V>
@@ -1758,7 +1892,7 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>140739<!--trait_Toddler_Fussy--></T>
+                              <T>140739<!--Trait: trait_Toddler_Fussy--></T>
                             </L>
                           </U>
                         </V>
@@ -1773,7 +1907,7 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>140746<!--trait_Toddler_Independent--></T>
+                              <T>140746<!--Trait: trait_Toddler_Independent--></T>
                             </L>
                           </U>
                         </V>
@@ -1781,7 +1915,7 @@
                           <U n="buff">
                             <V n="whitelist" t="enabled">
                               <L n="enabled">
-                                <T>146494<!--buff_Relationship_Toddler_Caregiver--></T>
+                                <T>146494<!--Buff: buff_Relationship_Toddler_Caregiver--></T>
                               </L>
                             </V>
                           </U>
@@ -1795,7 +1929,7 @@
                       <L>
                         <V t="mood">
                           <U n="mood">
-                            <T n="mood">14634<!--Mood_Confident--></T>
+                            <T n="mood">14634<!--Mood: Mood_Confident--></T>
                           </U>
                         </V>
                       </L>
@@ -1809,7 +1943,7 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>140744<!--trait_Toddler_Clingy--></T>
+                              <T>140744<!--Trait: trait_Toddler_Clingy--></T>
                             </L>
                           </U>
                         </V>
@@ -1817,7 +1951,7 @@
                           <U n="buff">
                             <V n="whitelist" t="enabled">
                               <L n="enabled">
-                                <T>146494<!--buff_Relationship_Toddler_Caregiver--></T>
+                                <T>146494<!--Buff: buff_Relationship_Toddler_Caregiver--></T>
                               </L>
                             </V>
                           </U>
@@ -1832,7 +1966,7 @@
                         <V t="trait">
                           <U n="trait">
                             <L n="whitelist_traits">
-                              <T>16838<!--trait_FamilyOriented--></T>
+                              <T>16838<!--Trait: trait_FamilyOriented--></T>
                             </L>
                           </U>
                         </V>
@@ -1847,7 +1981,7 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>273820<!--trait_Reward_Infant_TopNotch--></T>
+                              <T>273820<!--Trait: trait_Reward_Infant_TopNotch--></T>
                             </L>
                           </U>
                         </V>
@@ -1861,7 +1995,7 @@
                         <V t="motive">
                           <U n="motive">
                             <L n="stats">
-                              <T>16657<!--motive_Hygiene--></T>
+                              <T>16657<!--Commodity: motive_Hygiene--></T>
                             </L>
                             <U n="threshold">
                               <E n="comparison">LESS_OR_EQUAL</E>
@@ -1881,7 +2015,7 @@
                           <U n="relationship">
                             <U n="required_relationship_bits">
                               <L n="match_any">
-                                <T>306294<!--familyTrope_compliant_target_IsSubordinateOf_actor--></T>
+                                <T>306294<!--RelationshipBit: familyTrope_compliant_target_IsSubordinateOf_actor--></T>
                               </L>
                             </U>
                           </U>
@@ -1896,12 +2030,12 @@
           <L n="tests">
             <L>
               <V t="test_set_reference">
-                <T n="test_set_reference">141467<!--testSetInstance_Toddler_Defiance--></T>
+                <T n="test_set_reference">141467<!--TestSetInstance: testSetInstance_Toddler_Defiance--></T>
               </V>
               <V t="buff">
                 <U n="buff">
                   <L n="blacklist">
-                    <T>141541<!--buff_Toddlers_Defiance_DontWantTo--></T>
+                    <T>141541<!--Buff: buff_Toddlers_Defiance_DontWantTo--></T>
                   </L>
                   <E n="subject">TargetSim</E>
                 </U>
@@ -1909,9 +2043,9 @@
               <V t="trait">
                 <U n="trait">
                   <L n="blacklist_traits">
-                    <T>140746<!--trait_Toddler_Independent--></T>
-                    <T>140743<!--trait_Toddler_Silly--></T>
-                    <T>140741<!--trait_Toddler_Wild--></T>
+                    <T>140746<!--Trait: trait_Toddler_Independent--></T>
+                    <T>140743<!--Trait: trait_Toddler_Silly--></T>
+                    <T>140741<!--Trait: trait_Toddler_Wild--></T>
                   </L>
                   <E n="subject">TargetSim</E>
                 </U>
@@ -1925,7 +2059,7 @@
               <U n="outcome">
                 <V n="animation_ref" t="enabled">
                   <U n="enabled">
-                    <T n="factory">11853<!--Soc_Friendly_NT_askQuestionFriendly_fail_basic--></T>
+                    <T n="factory">11853<!--AnimationElement: Soc_Friendly_NT_askQuestionFriendly_fail_basic--></T>
                     <U n="overrides">
                       <V n="balloons" t="enabled">
                         <L n="enabled">
@@ -1937,7 +2071,7 @@
                                     <E n="balloon_type">SPEECH</E>
                                     <V n="icon" t="resource_key">
                                       <U n="resource_key">
-                                        <T n="key" p="InGame\UI\Icons\Headlines\Final\headline_bathtub.png">2f7d0004:00000000:aed5d3e6c66c1254</T>
+                                        <T p="InGame\UI\Icons\Headlines\Final\headline_bathtub.png" n="key">2f7d0004:00000000:aed5d3e6c66c1254</T>
                                       </U>
                                     </V>
                                   </U>
@@ -1954,7 +2088,7 @@
                         <U n="enabled">
                           <V n="selector" t="single_ref">
                             <U n="single_ref">
-                              <T n="factory">144831<!--socials_Toddlers_Rejects_Stubborn--></T>
+                              <T n="factory">144831<!--AnimationElement: socials_Toddlers_Rejects_Stubborn--></T>
                               <U n="overrides">
                                 <V n="balloons" t="enabled">
                                   <L n="enabled">
@@ -1966,7 +2100,7 @@
                                               <E n="balloon_type">SPEECH</E>
                                               <V n="icon" t="resource_key">
                                                 <U n="resource_key">
-                                                  <T n="key" p="InGame\UI\Icons\Headlines\Final\headline_Prohibit.png">2f7d0004:00000000:ab4a67c934164fb1</T>
+                                                  <T p="InGame\UI\Icons\Headlines\Final\headline_Prohibit.png" n="key">2f7d0004:00000000:ab4a67c934164fb1</T>
                                                 </U>
                                               </V>
                                             </U>
@@ -1995,7 +2129,7 @@
                           <E n="key">Career_ChanceCard_01</E>
                           <U n="value">
                             <V n="adventure_moment" t="reference">
-                              <T n="reference">310422<!--adventureMoment_FamilyTrope_permissive--></T>
+                              <T n="reference">310422<!--AdventureMoment: adventureMoment_FamilyTrope_permissive--></T>
                             </V>
                           </U>
                         </U>
@@ -2015,10 +2149,10 @@
                                   <U n="relationship">
                                     <U n="prohibited_relationship_bits">
                                       <L n="match_any">
-                                        <T>8809<!--family_Target_IsParentOf_Actor--></T>
-                                        <T>8808<!--family_Target_IsGrandparentOf_Actor--></T>
-                                        <T>8805<!--family_Target_IsSonOrDaughterOf_Actor--></T>
-                                        <T>8807<!--family_Target_IsGrandchildOf_Actor--></T>
+                                        <T>8809<!--RelationshipBit: family_Target_IsParentOf_Actor--></T>
+                                        <T>8808<!--RelationshipBit: family_Target_IsGrandparentOf_Actor--></T>
+                                        <T>8805<!--RelationshipBit: family_Target_IsSonOrDaughterOf_Actor--></T>
+                                        <T>8807<!--RelationshipBit: family_Target_IsGrandchildOf_Actor--></T>
                                       </L>
                                     </U>
                                     <L n="subject">
@@ -2040,7 +2174,7 @@
                                   <U n="buff">
                                     <V n="whitelist" t="enabled">
                                       <L n="enabled">
-                                        <T>306626<!--buff_FamilyDynamics_FamilyTropeAdventureCooldown--></T>
+                                        <T>306626<!--Buff: buff_FamilyDynamics_FamilyTropeAdventureCooldown--></T>
                                       </L>
                                     </V>
                                   </U>
@@ -2056,9 +2190,9 @@
                                   <U n="relationship">
                                     <U n="required_relationship_bits">
                                       <L n="match_any">
-                                        <T>306289<!--familyTrope_permissive_target_isAuthorityOf_actor--></T>
-                                        <T>306296<!--familyTrope_permissive_target_isSubordinateOf_actor--></T>
-                                        <T>310886<!--familyTrope_NotPermissive--></T>
+                                        <T>306289<!--RelationshipBit: familyTrope_permissive_target_isAuthorityOf_actor--></T>
+                                        <T>306296<!--RelationshipBit: familyTrope_permissive_target_isSubordinateOf_actor--></T>
+                                        <T>310886<!--RelationshipBit: familyTrope_NotPermissive--></T>
                                       </L>
                                     </U>
                                     <L n="subject">
@@ -2087,7 +2221,7 @@
                                     <L n="target_sim">
                                       <E>TargetSim</E>
                                     </L>
-                                    <T n="track">16650<!--LTR_Friendship_Main--></T>
+                                    <T n="track">16650<!--RelationshipTrack: LTR_Friendship_Main--></T>
                                   </U>
                                 </V>
                               </L>
@@ -2101,14 +2235,14 @@
                                   <U n="relationship">
                                     <U n="required_relationship_bits">
                                       <L n="match_any">
-                                        <T>306293<!--familyTrope_close--></T>
-                                        <T>310888<!--familyTrope_difficult--></T>
-                                        <T>306282<!--familyTrope_distant--></T>
-                                        <T>306279<!--familyTrope_Jokesters--></T>
-                                        <T>306356<!--familyTrope_loving_target_IsAuthorityOf_actor--></T>
-                                        <T>306357<!--familyTrope_loving_target_isSubordinateOf_actor--></T>
-                                        <T>306291<!--familyTrope_compliant_target_isAuthorityOf_actor--></T>
-                                        <T>306294<!--familyTrope_compliant_target_IsSubordinateOf_actor--></T>
+                                        <T>306293<!--RelationshipBit: familyTrope_close--></T>
+                                        <T>310888<!--RelationshipBit: familyTrope_difficult--></T>
+                                        <T>306282<!--RelationshipBit: familyTrope_distant--></T>
+                                        <T>306279<!--RelationshipBit: familyTrope_Jokesters--></T>
+                                        <T>306356<!--RelationshipBit: familyTrope_loving_target_IsAuthorityOf_actor--></T>
+                                        <T>306357<!--RelationshipBit: familyTrope_loving_target_isSubordinateOf_actor--></T>
+                                        <T>306291<!--RelationshipBit: familyTrope_compliant_target_isAuthorityOf_actor--></T>
+                                        <T>306294<!--RelationshipBit: familyTrope_compliant_target_IsSubordinateOf_actor--></T>
                                       </L>
                                     </U>
                                     <L n="subject">
@@ -2130,7 +2264,7 @@
                                     <L n="target_sim">
                                       <E>TargetSim</E>
                                     </L>
-                                    <T n="track">24099<!--SocialContext_Friendship--></T>
+                                    <T n="track">24099<!--ShortTermContextRelationshipTrack: SocialContext_Friendship--></T>
                                   </U>
                                 </V>
                               </L>
@@ -2172,13 +2306,13 @@
                 <L n="continuation">
                   <U>
                     <E n="actor">Actor</E>
-                    <T n="affordance">149773<!--socials_Targeted_Friendly_AlwaysOn_STC_Toddler_AskToBathe--></T>
-                    <T n="si_affordance_override">157626<!--sim_Toddler_Ask--></T>
+                    <T n="affordance">149773<!--SocialMixerInteraction: socials_Targeted_Friendly_AlwaysOn_STC_Toddler_AskToBathe--></T>
+                    <T n="si_affordance_override">157626<!--SocialSuperInteraction: sim_Toddler_Ask--></T>
                     <E n="target">TargetSim</E>
                   </U>
                 </L>
                 <L n="loot_list">
-                  <T>156993<!--loot_Buff_Toddler_Defiance_Independent--></T>
+                  <T>156993<!--LootActions: loot_Buff_Toddler_Defiance_Independent--></T>
                 </L>
                 <E n="outcome_result">FAILURE</E>
               </U>
@@ -2191,7 +2325,7 @@
                       <L>
                         <V t="mood">
                           <U n="mood">
-                            <T n="mood">14632<!--Mood_Angry--></T>
+                            <T n="mood">14632<!--Mood: Mood_Angry--></T>
                             <E n="who">TargetSim</E>
                           </U>
                         </V>
@@ -2199,7 +2333,7 @@
                       <L>
                         <V t="mood">
                           <U n="mood">
-                            <T n="mood">14643<!--Mood_Sad--></T>
+                            <T n="mood">14643<!--Mood: Mood_Sad--></T>
                             <E n="who">TargetSim</E>
                           </U>
                         </V>
@@ -2214,14 +2348,14 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>140744<!--trait_Toddler_Clingy--></T>
+                              <T>140744<!--Trait: trait_Toddler_Clingy--></T>
                             </L>
                           </U>
                         </V>
                         <V t="buff">
                           <U n="buff">
                             <L n="blacklist">
-                              <T>146494<!--buff_Relationship_Toddler_Caregiver--></T>
+                              <T>146494<!--Buff: buff_Relationship_Toddler_Caregiver--></T>
                             </L>
                           </U>
                         </V>
@@ -2235,7 +2369,7 @@
               <U n="outcome">
                 <V n="animation_ref" t="enabled">
                   <U n="enabled">
-                    <T n="factory">11853<!--Soc_Friendly_NT_askQuestionFriendly_fail_basic--></T>
+                    <T n="factory">11853<!--AnimationElement: Soc_Friendly_NT_askQuestionFriendly_fail_basic--></T>
                     <U n="overrides">
                       <V n="balloons" t="enabled">
                         <L n="enabled">
@@ -2247,7 +2381,7 @@
                                     <E n="balloon_type">SPEECH</E>
                                     <V n="icon" t="resource_key">
                                       <U n="resource_key">
-                                        <T n="key" p="InGame\UI\Icons\Headlines\Final\headline_Chatty.png">2f7d0004:00000000:2b16c23e26366277</T>
+                                        <T p="InGame\UI\Icons\Headlines\Final\headline_Chatty.png" n="key">2f7d0004:00000000:2b16c23e26366277</T>
                                       </U>
                                     </V>
                                   </U>
@@ -2264,7 +2398,7 @@
                         <U n="enabled">
                           <V n="selector" t="single_ref">
                             <U n="single_ref">
-                              <T n="factory">144828<!--socials_Toddlers_Rejects_Generic--></T>
+                              <T n="factory">144828<!--AnimationElement: socials_Toddlers_Rejects_Generic--></T>
                               <U n="overrides">
                                 <V n="balloons" t="enabled">
                                   <L n="enabled">
@@ -2276,7 +2410,7 @@
                                               <E n="balloon_type">SPEECH</E>
                                               <V n="icon" t="resource_key">
                                                 <U n="resource_key">
-                                                  <T n="key" p="InGame\UI\Icons\Headlines\Final\headline_Prohibit.png">2f7d0004:00000000:ab4a67c934164fb1</T>
+                                                  <T p="InGame\UI\Icons\Headlines\Final\headline_Prohibit.png" n="key">2f7d0004:00000000:ab4a67c934164fb1</T>
                                                 </U>
                                               </V>
                                             </U>
@@ -2305,7 +2439,7 @@
                           <E n="key">Career_ChanceCard_01</E>
                           <U n="value">
                             <V n="adventure_moment" t="reference">
-                              <T n="reference">310422<!--adventureMoment_FamilyTrope_permissive--></T>
+                              <T n="reference">310422<!--AdventureMoment: adventureMoment_FamilyTrope_permissive--></T>
                             </V>
                           </U>
                         </U>
@@ -2325,10 +2459,10 @@
                                   <U n="relationship">
                                     <U n="prohibited_relationship_bits">
                                       <L n="match_any">
-                                        <T>8809<!--family_Target_IsParentOf_Actor--></T>
-                                        <T>8808<!--family_Target_IsGrandparentOf_Actor--></T>
-                                        <T>8805<!--family_Target_IsSonOrDaughterOf_Actor--></T>
-                                        <T>8807<!--family_Target_IsGrandchildOf_Actor--></T>
+                                        <T>8809<!--RelationshipBit: family_Target_IsParentOf_Actor--></T>
+                                        <T>8808<!--RelationshipBit: family_Target_IsGrandparentOf_Actor--></T>
+                                        <T>8805<!--RelationshipBit: family_Target_IsSonOrDaughterOf_Actor--></T>
+                                        <T>8807<!--RelationshipBit: family_Target_IsGrandchildOf_Actor--></T>
                                       </L>
                                     </U>
                                     <L n="subject">
@@ -2350,7 +2484,7 @@
                                   <U n="buff">
                                     <V n="whitelist" t="enabled">
                                       <L n="enabled">
-                                        <T>306626<!--buff_FamilyDynamics_FamilyTropeAdventureCooldown--></T>
+                                        <T>306626<!--Buff: buff_FamilyDynamics_FamilyTropeAdventureCooldown--></T>
                                       </L>
                                     </V>
                                   </U>
@@ -2366,9 +2500,9 @@
                                   <U n="relationship">
                                     <U n="required_relationship_bits">
                                       <L n="match_any">
-                                        <T>306289<!--familyTrope_permissive_target_isAuthorityOf_actor--></T>
-                                        <T>306296<!--familyTrope_permissive_target_isSubordinateOf_actor--></T>
-                                        <T>310886<!--familyTrope_NotPermissive--></T>
+                                        <T>306289<!--RelationshipBit: familyTrope_permissive_target_isAuthorityOf_actor--></T>
+                                        <T>306296<!--RelationshipBit: familyTrope_permissive_target_isSubordinateOf_actor--></T>
+                                        <T>310886<!--RelationshipBit: familyTrope_NotPermissive--></T>
                                       </L>
                                     </U>
                                     <L n="subject">
@@ -2397,7 +2531,7 @@
                                     <L n="target_sim">
                                       <E>TargetSim</E>
                                     </L>
-                                    <T n="track">16650<!--LTR_Friendship_Main--></T>
+                                    <T n="track">16650<!--RelationshipTrack: LTR_Friendship_Main--></T>
                                   </U>
                                 </V>
                               </L>
@@ -2411,14 +2545,14 @@
                                   <U n="relationship">
                                     <U n="required_relationship_bits">
                                       <L n="match_any">
-                                        <T>306293<!--familyTrope_close--></T>
-                                        <T>310888<!--familyTrope_difficult--></T>
-                                        <T>306282<!--familyTrope_distant--></T>
-                                        <T>306279<!--familyTrope_Jokesters--></T>
-                                        <T>306356<!--familyTrope_loving_target_IsAuthorityOf_actor--></T>
-                                        <T>306357<!--familyTrope_loving_target_isSubordinateOf_actor--></T>
-                                        <T>306291<!--familyTrope_compliant_target_isAuthorityOf_actor--></T>
-                                        <T>306294<!--familyTrope_compliant_target_IsSubordinateOf_actor--></T>
+                                        <T>306293<!--RelationshipBit: familyTrope_close--></T>
+                                        <T>310888<!--RelationshipBit: familyTrope_difficult--></T>
+                                        <T>306282<!--RelationshipBit: familyTrope_distant--></T>
+                                        <T>306279<!--RelationshipBit: familyTrope_Jokesters--></T>
+                                        <T>306356<!--RelationshipBit: familyTrope_loving_target_IsAuthorityOf_actor--></T>
+                                        <T>306357<!--RelationshipBit: familyTrope_loving_target_isSubordinateOf_actor--></T>
+                                        <T>306291<!--RelationshipBit: familyTrope_compliant_target_isAuthorityOf_actor--></T>
+                                        <T>306294<!--RelationshipBit: familyTrope_compliant_target_IsSubordinateOf_actor--></T>
                                       </L>
                                     </U>
                                     <L n="subject">
@@ -2440,7 +2574,7 @@
                                     <L n="target_sim">
                                       <E>TargetSim</E>
                                     </L>
-                                    <T n="track">24099<!--SocialContext_Friendship--></T>
+                                    <T n="track">24099<!--ShortTermContextRelationshipTrack: SocialContext_Friendship--></T>
                                   </U>
                                 </V>
                               </L>
@@ -2482,13 +2616,13 @@
                 <L n="continuation">
                   <U>
                     <E n="actor">Actor</E>
-                    <T n="affordance">149773<!--socials_Targeted_Friendly_AlwaysOn_STC_Toddler_AskToBathe--></T>
-                    <T n="si_affordance_override">157626<!--sim_Toddler_Ask--></T>
+                    <T n="affordance">149773<!--SocialMixerInteraction: socials_Targeted_Friendly_AlwaysOn_STC_Toddler_AskToBathe--></T>
+                    <T n="si_affordance_override">157626<!--SocialSuperInteraction: sim_Toddler_Ask--></T>
                     <E n="target">TargetSim</E>
                   </U>
                 </L>
                 <L n="loot_list">
-                  <T>141539<!--loot_Buff_Toddler_Defiance--></T>
+                  <T>141539<!--LootActions: loot_Buff_Toddler_Defiance--></T>
                 </L>
                 <E n="outcome_result">FAILURE</E>
               </U>
@@ -2501,7 +2635,7 @@
                       <L>
                         <V t="mood">
                           <U n="mood">
-                            <T n="mood">14632<!--Mood_Angry--></T>
+                            <T n="mood">14632<!--Mood: Mood_Angry--></T>
                             <E n="who">TargetSim</E>
                           </U>
                         </V>
@@ -2509,7 +2643,7 @@
                       <L>
                         <V t="mood">
                           <U n="mood">
-                            <T n="mood">14643<!--Mood_Sad--></T>
+                            <T n="mood">14643<!--Mood: Mood_Sad--></T>
                             <E n="who">TargetSim</E>
                           </U>
                         </V>
@@ -2524,14 +2658,14 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>140744<!--trait_Toddler_Clingy--></T>
+                              <T>140744<!--Trait: trait_Toddler_Clingy--></T>
                             </L>
                           </U>
                         </V>
                         <V t="buff">
                           <U n="buff">
                             <L n="blacklist">
-                              <T>146494<!--buff_Relationship_Toddler_Caregiver--></T>
+                              <T>146494<!--Buff: buff_Relationship_Toddler_Caregiver--></T>
                             </L>
                           </U>
                         </V>
@@ -2545,13 +2679,13 @@
               <U n="outcome">
                 <V n="animation_ref" t="enabled">
                   <U n="enabled">
-                    <T n="factory">11854<!--Soc_Friendly_NT_askQuestionFriendly_success_basic--></T>
+                    <T n="factory">11854<!--AnimationElement: Soc_Friendly_NT_askQuestionFriendly_success_basic--></T>
                     <U n="overrides">
                       <V n="reactionlet" t="enabled">
                         <U n="enabled">
                           <V n="selector" t="single_ref">
                             <U n="single_ref">
-                              <T n="factory">144827<!--socials_Toddlers_Accepts--></T>
+                              <T n="factory">144827<!--AnimationElement: socials_Toddlers_Accepts--></T>
                             </U>
                           </V>
                         </U>
@@ -2567,7 +2701,7 @@
                           <E n="key">Career_ChanceCard_01</E>
                           <U n="value">
                             <V n="adventure_moment" t="reference">
-                              <T n="reference">309922<!--adventureMoment_FamilyTrope_compliant--></T>
+                              <T n="reference">309922<!--AdventureMoment: adventureMoment_FamilyTrope_compliant--></T>
                             </V>
                           </U>
                         </U>
@@ -2587,10 +2721,10 @@
                                   <U n="relationship">
                                     <U n="prohibited_relationship_bits">
                                       <L n="match_any">
-                                        <T>8809<!--family_Target_IsParentOf_Actor--></T>
-                                        <T>8808<!--family_Target_IsGrandparentOf_Actor--></T>
-                                        <T>8805<!--family_Target_IsSonOrDaughterOf_Actor--></T>
-                                        <T>8807<!--family_Target_IsGrandchildOf_Actor--></T>
+                                        <T>8809<!--RelationshipBit: family_Target_IsParentOf_Actor--></T>
+                                        <T>8808<!--RelationshipBit: family_Target_IsGrandparentOf_Actor--></T>
+                                        <T>8805<!--RelationshipBit: family_Target_IsSonOrDaughterOf_Actor--></T>
+                                        <T>8807<!--RelationshipBit: family_Target_IsGrandchildOf_Actor--></T>
                                       </L>
                                     </U>
                                   </U>
@@ -2606,7 +2740,7 @@
                                   <U n="buff">
                                     <V n="whitelist" t="enabled">
                                       <L n="enabled">
-                                        <T>306626<!--buff_FamilyDynamics_FamilyTropeAdventureCooldown--></T>
+                                        <T>306626<!--Buff: buff_FamilyDynamics_FamilyTropeAdventureCooldown--></T>
                                       </L>
                                     </V>
                                   </U>
@@ -2622,9 +2756,9 @@
                                   <U n="relationship">
                                     <U n="required_relationship_bits">
                                       <L n="match_any">
-                                        <T>306291<!--familyTrope_compliant_target_isAuthorityOf_actor--></T>
-                                        <T>306294<!--familyTrope_compliant_target_IsSubordinateOf_actor--></T>
-                                        <T>309925<!--familyTrope_NotCompliant--></T>
+                                        <T>306291<!--RelationshipBit: familyTrope_compliant_target_isAuthorityOf_actor--></T>
+                                        <T>306294<!--RelationshipBit: familyTrope_compliant_target_IsSubordinateOf_actor--></T>
+                                        <T>309925<!--RelationshipBit: familyTrope_NotCompliant--></T>
                                       </L>
                                     </U>
                                   </U>
@@ -2641,7 +2775,7 @@
                                     <U n="relationship_score_interval">
                                       <T n="upper_bound">50</T>
                                     </U>
-                                    <T n="track">16650<!--LTR_Friendship_Main--></T>
+                                    <T n="track">16650<!--RelationshipTrack: LTR_Friendship_Main--></T>
                                   </U>
                                 </V>
                               </L>
@@ -2655,14 +2789,14 @@
                                   <U n="relationship">
                                     <U n="required_relationship_bits">
                                       <L n="match_any">
-                                        <T>306293<!--familyTrope_close--></T>
-                                        <T>310888<!--familyTrope_difficult--></T>
-                                        <T>306282<!--familyTrope_distant--></T>
-                                        <T>306279<!--familyTrope_Jokesters--></T>
-                                        <T>306356<!--familyTrope_loving_target_IsAuthorityOf_actor--></T>
-                                        <T>306357<!--familyTrope_loving_target_isSubordinateOf_actor--></T>
-                                        <T>306289<!--familyTrope_permissive_target_isAuthorityOf_actor--></T>
-                                        <T>306296<!--familyTrope_permissive_target_isSubordinateOf_actor--></T>
+                                        <T>306293<!--RelationshipBit: familyTrope_close--></T>
+                                        <T>310888<!--RelationshipBit: familyTrope_difficult--></T>
+                                        <T>306282<!--RelationshipBit: familyTrope_distant--></T>
+                                        <T>306279<!--RelationshipBit: familyTrope_Jokesters--></T>
+                                        <T>306356<!--RelationshipBit: familyTrope_loving_target_IsAuthorityOf_actor--></T>
+                                        <T>306357<!--RelationshipBit: familyTrope_loving_target_isSubordinateOf_actor--></T>
+                                        <T>306289<!--RelationshipBit: familyTrope_permissive_target_isAuthorityOf_actor--></T>
+                                        <T>306296<!--RelationshipBit: familyTrope_permissive_target_isSubordinateOf_actor--></T>
                                       </L>
                                     </U>
                                   </U>
@@ -2672,7 +2806,7 @@
                                     <U n="relationship_score_interval">
                                       <T n="lower_bound">75</T>
                                     </U>
-                                    <T n="track">24099<!--SocialContext_Friendship--></T>
+                                    <T n="track">24099<!--ShortTermContextRelationshipTrack: SocialContext_Friendship--></T>
                                   </U>
                                 </V>
                               </L>
@@ -2714,7 +2848,7 @@
                 <L n="continuation">
                   <U>
                     <E n="actor">Actor</E>
-                    <T n="affordance">149827<!--socialSuperInteraction_CarryPickUp_ToBathe--></T>
+                    <T n="affordance">149827<!--SuperInteraction: socialSuperInteraction_CarryPickUp_ToBathe--></T>
                     <V n="carry_target" t="enabled">
                       <E n="enabled">TargetSim</E>
                     </V>
@@ -2722,9 +2856,9 @@
                   </U>
                 </L>
                 <L n="loot_list">
-                  <T>11036<!--Rel_Gain_Small--></T>
-                  <T>24123<!--Loot_SocialContext_Friendship_Gain--></T>
-                  <T>10954<!--Loot_ForSocialsSocialMotiveMedium--></T>
+                  <T>11036<!--LootActions: Rel_Gain_Small--></T>
+                  <T>24123<!--LootActions: Loot_SocialContext_Friendship_Gain--></T>
+                  <T>10954<!--LootActions: Loot_ForSocialsSocialMotiveMedium--></T>
                 </L>
                 <E n="outcome_result">SUCCESS</E>
               </U>
@@ -2739,7 +2873,7 @@
                           <U n="buff">
                             <V n="whitelist" t="enabled">
                               <L n="enabled">
-                                <T>12794<!--CheatingIntensityBuff_Furious--></T>
+                                <T>12794<!--Buff: CheatingIntensityBuff_Furious--></T>
                               </L>
                             </V>
                           </U>
@@ -2753,7 +2887,7 @@
                       <L>
                         <V t="skill_test">
                           <U n="skill_test">
-                            <T n="skill">140504<!--statistic_Skill_Toddler_Thinking--></T>
+                            <T n="skill">140504<!--Skill: statistic_Skill_Toddler_Thinking--></T>
                             <V n="skill_range" t="interval">
                               <U n="interval">
                                 <U n="skill_interval">
@@ -2774,7 +2908,7 @@
                       <L>
                         <V t="skill_test">
                           <U n="skill_test">
-                            <T n="skill">140504<!--statistic_Skill_Toddler_Thinking--></T>
+                            <T n="skill">140504<!--Skill: statistic_Skill_Toddler_Thinking--></T>
                             <V n="skill_range" t="interval">
                               <U n="interval">
                                 <U n="skill_interval">
@@ -2795,7 +2929,7 @@
                       <L>
                         <V t="skill_test">
                           <U n="skill_test">
-                            <T n="skill">140504<!--statistic_Skill_Toddler_Thinking--></T>
+                            <T n="skill">140504<!--Skill: statistic_Skill_Toddler_Thinking--></T>
                             <V n="skill_range" t="interval">
                               <U n="interval">
                                 <U n="skill_interval">
@@ -2816,7 +2950,7 @@
                       <L>
                         <V t="skill_test">
                           <U n="skill_test">
-                            <T n="skill">140504<!--statistic_Skill_Toddler_Thinking--></T>
+                            <T n="skill">140504<!--Skill: statistic_Skill_Toddler_Thinking--></T>
                             <V n="skill_range" t="threshold">
                               <U n="threshold">
                                 <U n="skill_threshold">
@@ -2839,7 +2973,7 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>140742<!--trait_Toddler_Charmer--></T>
+                              <T>140742<!--Trait: trait_Toddler_Charmer--></T>
                             </L>
                           </U>
                         </V>
@@ -2854,7 +2988,7 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>140740<!--trait_Toddler_Angelic--></T>
+                              <T>140740<!--Trait: trait_Toddler_Angelic--></T>
                             </L>
                           </U>
                         </V>
@@ -2869,7 +3003,7 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>140739<!--trait_Toddler_Fussy--></T>
+                              <T>140739<!--Trait: trait_Toddler_Fussy--></T>
                             </L>
                           </U>
                         </V>
@@ -2884,7 +3018,7 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>140746<!--trait_Toddler_Independent--></T>
+                              <T>140746<!--Trait: trait_Toddler_Independent--></T>
                             </L>
                           </U>
                         </V>
@@ -2892,7 +3026,7 @@
                           <U n="buff">
                             <V n="whitelist" t="enabled">
                               <L n="enabled">
-                                <T>146494<!--buff_Relationship_Toddler_Caregiver--></T>
+                                <T>146494<!--Buff: buff_Relationship_Toddler_Caregiver--></T>
                               </L>
                             </V>
                           </U>
@@ -2906,7 +3040,7 @@
                       <L>
                         <V t="mood">
                           <U n="mood">
-                            <T n="mood">14634<!--Mood_Confident--></T>
+                            <T n="mood">14634<!--Mood: Mood_Confident--></T>
                           </U>
                         </V>
                       </L>
@@ -2920,7 +3054,7 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>140744<!--trait_Toddler_Clingy--></T>
+                              <T>140744<!--Trait: trait_Toddler_Clingy--></T>
                             </L>
                           </U>
                         </V>
@@ -2928,7 +3062,7 @@
                           <U n="buff">
                             <V n="whitelist" t="enabled">
                               <L n="enabled">
-                                <T>146494<!--buff_Relationship_Toddler_Caregiver--></T>
+                                <T>146494<!--Buff: buff_Relationship_Toddler_Caregiver--></T>
                               </L>
                             </V>
                           </U>
@@ -2943,7 +3077,7 @@
                         <V t="trait">
                           <U n="trait">
                             <L n="whitelist_traits">
-                              <T>16838<!--trait_FamilyOriented--></T>
+                              <T>16838<!--Trait: trait_FamilyOriented--></T>
                             </L>
                           </U>
                         </V>
@@ -2957,7 +3091,7 @@
                         <V t="motive">
                           <U n="motive">
                             <L n="stats">
-                              <T>16657<!--motive_Hygiene--></T>
+                              <T>16657<!--Commodity: motive_Hygiene--></T>
                             </L>
                             <U n="threshold">
                               <E n="comparison">LESS_OR_EQUAL</E>
@@ -2977,7 +3111,7 @@
                           <U n="relationship">
                             <U n="required_relationship_bits">
                               <L n="match_any">
-                                <T>306294<!--familyTrope_compliant_target_IsSubordinateOf_actor--></T>
+                                <T>306294<!--RelationshipBit: familyTrope_compliant_target_IsSubordinateOf_actor--></T>
                               </L>
                             </U>
                           </U>
@@ -2992,12 +3126,12 @@
           <L n="tests">
             <L>
               <V t="test_set_reference">
-                <T n="test_set_reference">141467<!--testSetInstance_Toddler_Defiance--></T>
+                <T n="test_set_reference">141467<!--TestSetInstance: testSetInstance_Toddler_Defiance--></T>
               </V>
               <V t="buff">
                 <U n="buff">
                   <L n="blacklist">
-                    <T>141541<!--buff_Toddlers_Defiance_DontWantTo--></T>
+                    <T>141541<!--Buff: buff_Toddlers_Defiance_DontWantTo--></T>
                   </L>
                   <E n="subject">TargetSim</E>
                 </U>
@@ -3006,7 +3140,7 @@
                 <U n="trait">
                   <E n="subject">TargetSim</E>
                   <L n="whitelist_traits">
-                    <T>140746<!--trait_Toddler_Independent--></T>
+                    <T>140746<!--Trait: trait_Toddler_Independent--></T>
                   </L>
                 </U>
               </V>
@@ -3019,7 +3153,7 @@
               <U n="outcome">
                 <V n="animation_ref" t="enabled">
                   <U n="enabled">
-                    <T n="factory">11853<!--Soc_Friendly_NT_askQuestionFriendly_fail_basic--></T>
+                    <T n="factory">11853<!--AnimationElement: Soc_Friendly_NT_askQuestionFriendly_fail_basic--></T>
                     <U n="overrides">
                       <V n="balloons" t="enabled">
                         <L n="enabled">
@@ -3031,7 +3165,7 @@
                                     <E n="balloon_type">SPEECH</E>
                                     <V n="icon" t="resource_key">
                                       <U n="resource_key">
-                                        <T n="key" p="InGame\UI\Icons\Headlines\Final\headline_bathtub.png">2f7d0004:00000000:aed5d3e6c66c1254</T>
+                                        <T p="InGame\UI\Icons\Headlines\Final\headline_bathtub.png" n="key">2f7d0004:00000000:aed5d3e6c66c1254</T>
                                       </U>
                                     </V>
                                   </U>
@@ -3048,7 +3182,7 @@
                         <U n="enabled">
                           <V n="selector" t="single_ref">
                             <U n="single_ref">
-                              <T n="factory">144829<!--socials_Toddlers_Rejects_PlayFul--></T>
+                              <T n="factory">144829<!--AnimationElement: socials_Toddlers_Rejects_PlayFul--></T>
                               <U n="overrides">
                                 <V n="balloons" t="enabled">
                                   <L n="enabled">
@@ -3060,7 +3194,7 @@
                                               <E n="balloon_type">SPEECH</E>
                                               <V n="icon" t="resource_key">
                                                 <U n="resource_key">
-                                                  <T n="key" p="InGame\UI\Icons\Headlines\Final\headline_Prohibit.png">2f7d0004:00000000:ab4a67c934164fb1</T>
+                                                  <T p="InGame\UI\Icons\Headlines\Final\headline_Prohibit.png" n="key">2f7d0004:00000000:ab4a67c934164fb1</T>
                                                 </U>
                                               </V>
                                             </U>
@@ -3089,7 +3223,7 @@
                           <E n="key">Career_ChanceCard_01</E>
                           <U n="value">
                             <V n="adventure_moment" t="reference">
-                              <T n="reference">310422<!--adventureMoment_FamilyTrope_permissive--></T>
+                              <T n="reference">310422<!--AdventureMoment: adventureMoment_FamilyTrope_permissive--></T>
                             </V>
                           </U>
                         </U>
@@ -3109,10 +3243,10 @@
                                   <U n="relationship">
                                     <U n="prohibited_relationship_bits">
                                       <L n="match_any">
-                                        <T>8809<!--family_Target_IsParentOf_Actor--></T>
-                                        <T>8808<!--family_Target_IsGrandparentOf_Actor--></T>
-                                        <T>8805<!--family_Target_IsSonOrDaughterOf_Actor--></T>
-                                        <T>8807<!--family_Target_IsGrandchildOf_Actor--></T>
+                                        <T>8809<!--RelationshipBit: family_Target_IsParentOf_Actor--></T>
+                                        <T>8808<!--RelationshipBit: family_Target_IsGrandparentOf_Actor--></T>
+                                        <T>8805<!--RelationshipBit: family_Target_IsSonOrDaughterOf_Actor--></T>
+                                        <T>8807<!--RelationshipBit: family_Target_IsGrandchildOf_Actor--></T>
                                       </L>
                                     </U>
                                     <L n="subject">
@@ -3134,7 +3268,7 @@
                                   <U n="buff">
                                     <V n="whitelist" t="enabled">
                                       <L n="enabled">
-                                        <T>306626<!--buff_FamilyDynamics_FamilyTropeAdventureCooldown--></T>
+                                        <T>306626<!--Buff: buff_FamilyDynamics_FamilyTropeAdventureCooldown--></T>
                                       </L>
                                     </V>
                                   </U>
@@ -3150,9 +3284,9 @@
                                   <U n="relationship">
                                     <U n="required_relationship_bits">
                                       <L n="match_any">
-                                        <T>306289<!--familyTrope_permissive_target_isAuthorityOf_actor--></T>
-                                        <T>306296<!--familyTrope_permissive_target_isSubordinateOf_actor--></T>
-                                        <T>310886<!--familyTrope_NotPermissive--></T>
+                                        <T>306289<!--RelationshipBit: familyTrope_permissive_target_isAuthorityOf_actor--></T>
+                                        <T>306296<!--RelationshipBit: familyTrope_permissive_target_isSubordinateOf_actor--></T>
+                                        <T>310886<!--RelationshipBit: familyTrope_NotPermissive--></T>
                                       </L>
                                     </U>
                                     <L n="subject">
@@ -3181,7 +3315,7 @@
                                     <L n="target_sim">
                                       <E>TargetSim</E>
                                     </L>
-                                    <T n="track">16650<!--LTR_Friendship_Main--></T>
+                                    <T n="track">16650<!--RelationshipTrack: LTR_Friendship_Main--></T>
                                   </U>
                                 </V>
                               </L>
@@ -3195,14 +3329,14 @@
                                   <U n="relationship">
                                     <U n="required_relationship_bits">
                                       <L n="match_any">
-                                        <T>306293<!--familyTrope_close--></T>
-                                        <T>310888<!--familyTrope_difficult--></T>
-                                        <T>306282<!--familyTrope_distant--></T>
-                                        <T>306279<!--familyTrope_Jokesters--></T>
-                                        <T>306356<!--familyTrope_loving_target_IsAuthorityOf_actor--></T>
-                                        <T>306357<!--familyTrope_loving_target_isSubordinateOf_actor--></T>
-                                        <T>306291<!--familyTrope_compliant_target_isAuthorityOf_actor--></T>
-                                        <T>306294<!--familyTrope_compliant_target_IsSubordinateOf_actor--></T>
+                                        <T>306293<!--RelationshipBit: familyTrope_close--></T>
+                                        <T>310888<!--RelationshipBit: familyTrope_difficult--></T>
+                                        <T>306282<!--RelationshipBit: familyTrope_distant--></T>
+                                        <T>306279<!--RelationshipBit: familyTrope_Jokesters--></T>
+                                        <T>306356<!--RelationshipBit: familyTrope_loving_target_IsAuthorityOf_actor--></T>
+                                        <T>306357<!--RelationshipBit: familyTrope_loving_target_isSubordinateOf_actor--></T>
+                                        <T>306291<!--RelationshipBit: familyTrope_compliant_target_isAuthorityOf_actor--></T>
+                                        <T>306294<!--RelationshipBit: familyTrope_compliant_target_IsSubordinateOf_actor--></T>
                                       </L>
                                     </U>
                                     <L n="subject">
@@ -3224,7 +3358,7 @@
                                     <L n="target_sim">
                                       <E>TargetSim</E>
                                     </L>
-                                    <T n="track">24099<!--SocialContext_Friendship--></T>
+                                    <T n="track">24099<!--ShortTermContextRelationshipTrack: SocialContext_Friendship--></T>
                                   </U>
                                 </V>
                               </L>
@@ -3266,13 +3400,13 @@
                 <L n="continuation">
                   <U>
                     <E n="actor">Actor</E>
-                    <T n="affordance">149773<!--socials_Targeted_Friendly_AlwaysOn_STC_Toddler_AskToBathe--></T>
-                    <T n="si_affordance_override">157626<!--sim_Toddler_Ask--></T>
+                    <T n="affordance">149773<!--SocialMixerInteraction: socials_Targeted_Friendly_AlwaysOn_STC_Toddler_AskToBathe--></T>
+                    <T n="si_affordance_override">157626<!--SocialSuperInteraction: sim_Toddler_Ask--></T>
                     <E n="target">TargetSim</E>
                   </U>
                 </L>
                 <L n="loot_list">
-                  <T>156992<!--loot_Buff_Toddler_Defiance_Silly--></T>
+                  <T>156992<!--LootActions: loot_Buff_Toddler_Defiance_Silly--></T>
                 </L>
                 <E n="outcome_result">FAILURE</E>
               </U>
@@ -3284,7 +3418,7 @@
               <U n="outcome">
                 <V n="animation_ref" t="enabled">
                   <U n="enabled">
-                    <T n="factory">11853<!--Soc_Friendly_NT_askQuestionFriendly_fail_basic--></T>
+                    <T n="factory">11853<!--AnimationElement: Soc_Friendly_NT_askQuestionFriendly_fail_basic--></T>
                     <U n="overrides">
                       <V n="balloons" t="enabled">
                         <L n="enabled">
@@ -3296,7 +3430,7 @@
                                     <E n="balloon_type">SPEECH</E>
                                     <V n="icon" t="resource_key">
                                       <U n="resource_key">
-                                        <T n="key" p="InGame\UI\Icons\Headlines\Final\headline_Chatty.png">2f7d0004:00000000:2b16c23e26366277</T>
+                                        <T p="InGame\UI\Icons\Headlines\Final\headline_Chatty.png" n="key">2f7d0004:00000000:2b16c23e26366277</T>
                                       </U>
                                     </V>
                                   </U>
@@ -3313,7 +3447,7 @@
                         <U n="enabled">
                           <V n="selector" t="single_ref">
                             <U n="single_ref">
-                              <T n="factory">144828<!--socials_Toddlers_Rejects_Generic--></T>
+                              <T n="factory">144828<!--AnimationElement: socials_Toddlers_Rejects_Generic--></T>
                               <U n="overrides">
                                 <V n="balloons" t="enabled">
                                   <L n="enabled">
@@ -3325,7 +3459,7 @@
                                               <E n="balloon_type">SPEECH</E>
                                               <V n="icon" t="resource_key">
                                                 <U n="resource_key">
-                                                  <T n="key" p="InGame\UI\Icons\Headlines\Final\headline_Prohibit.png">2f7d0004:00000000:ab4a67c934164fb1</T>
+                                                  <T p="InGame\UI\Icons\Headlines\Final\headline_Prohibit.png" n="key">2f7d0004:00000000:ab4a67c934164fb1</T>
                                                 </U>
                                               </V>
                                             </U>
@@ -3354,7 +3488,7 @@
                           <E n="key">Career_ChanceCard_01</E>
                           <U n="value">
                             <V n="adventure_moment" t="reference">
-                              <T n="reference">310422<!--adventureMoment_FamilyTrope_permissive--></T>
+                              <T n="reference">310422<!--AdventureMoment: adventureMoment_FamilyTrope_permissive--></T>
                             </V>
                           </U>
                         </U>
@@ -3374,10 +3508,10 @@
                                   <U n="relationship">
                                     <U n="prohibited_relationship_bits">
                                       <L n="match_any">
-                                        <T>8809<!--family_Target_IsParentOf_Actor--></T>
-                                        <T>8808<!--family_Target_IsGrandparentOf_Actor--></T>
-                                        <T>8805<!--family_Target_IsSonOrDaughterOf_Actor--></T>
-                                        <T>8807<!--family_Target_IsGrandchildOf_Actor--></T>
+                                        <T>8809<!--RelationshipBit: family_Target_IsParentOf_Actor--></T>
+                                        <T>8808<!--RelationshipBit: family_Target_IsGrandparentOf_Actor--></T>
+                                        <T>8805<!--RelationshipBit: family_Target_IsSonOrDaughterOf_Actor--></T>
+                                        <T>8807<!--RelationshipBit: family_Target_IsGrandchildOf_Actor--></T>
                                       </L>
                                     </U>
                                     <L n="subject">
@@ -3399,7 +3533,7 @@
                                   <U n="buff">
                                     <V n="whitelist" t="enabled">
                                       <L n="enabled">
-                                        <T>306626<!--buff_FamilyDynamics_FamilyTropeAdventureCooldown--></T>
+                                        <T>306626<!--Buff: buff_FamilyDynamics_FamilyTropeAdventureCooldown--></T>
                                       </L>
                                     </V>
                                   </U>
@@ -3415,9 +3549,9 @@
                                   <U n="relationship">
                                     <U n="required_relationship_bits">
                                       <L n="match_any">
-                                        <T>306289<!--familyTrope_permissive_target_isAuthorityOf_actor--></T>
-                                        <T>306296<!--familyTrope_permissive_target_isSubordinateOf_actor--></T>
-                                        <T>310886<!--familyTrope_NotPermissive--></T>
+                                        <T>306289<!--RelationshipBit: familyTrope_permissive_target_isAuthorityOf_actor--></T>
+                                        <T>306296<!--RelationshipBit: familyTrope_permissive_target_isSubordinateOf_actor--></T>
+                                        <T>310886<!--RelationshipBit: familyTrope_NotPermissive--></T>
                                       </L>
                                     </U>
                                     <L n="subject">
@@ -3446,7 +3580,7 @@
                                     <L n="target_sim">
                                       <E>TargetSim</E>
                                     </L>
-                                    <T n="track">16650<!--LTR_Friendship_Main--></T>
+                                    <T n="track">16650<!--RelationshipTrack: LTR_Friendship_Main--></T>
                                   </U>
                                 </V>
                               </L>
@@ -3460,14 +3594,14 @@
                                   <U n="relationship">
                                     <U n="required_relationship_bits">
                                       <L n="match_any">
-                                        <T>306293<!--familyTrope_close--></T>
-                                        <T>310888<!--familyTrope_difficult--></T>
-                                        <T>306282<!--familyTrope_distant--></T>
-                                        <T>306279<!--familyTrope_Jokesters--></T>
-                                        <T>306356<!--familyTrope_loving_target_IsAuthorityOf_actor--></T>
-                                        <T>306357<!--familyTrope_loving_target_isSubordinateOf_actor--></T>
-                                        <T>306291<!--familyTrope_compliant_target_isAuthorityOf_actor--></T>
-                                        <T>306294<!--familyTrope_compliant_target_IsSubordinateOf_actor--></T>
+                                        <T>306293<!--RelationshipBit: familyTrope_close--></T>
+                                        <T>310888<!--RelationshipBit: familyTrope_difficult--></T>
+                                        <T>306282<!--RelationshipBit: familyTrope_distant--></T>
+                                        <T>306279<!--RelationshipBit: familyTrope_Jokesters--></T>
+                                        <T>306356<!--RelationshipBit: familyTrope_loving_target_IsAuthorityOf_actor--></T>
+                                        <T>306357<!--RelationshipBit: familyTrope_loving_target_isSubordinateOf_actor--></T>
+                                        <T>306291<!--RelationshipBit: familyTrope_compliant_target_isAuthorityOf_actor--></T>
+                                        <T>306294<!--RelationshipBit: familyTrope_compliant_target_IsSubordinateOf_actor--></T>
                                       </L>
                                     </U>
                                     <L n="subject">
@@ -3489,7 +3623,7 @@
                                     <L n="target_sim">
                                       <E>TargetSim</E>
                                     </L>
-                                    <T n="track">24099<!--SocialContext_Friendship--></T>
+                                    <T n="track">24099<!--ShortTermContextRelationshipTrack: SocialContext_Friendship--></T>
                                   </U>
                                 </V>
                               </L>
@@ -3531,13 +3665,13 @@
                 <L n="continuation">
                   <U>
                     <E n="actor">Actor</E>
-                    <T n="affordance">149773<!--socials_Targeted_Friendly_AlwaysOn_STC_Toddler_AskToBathe--></T>
-                    <T n="si_affordance_override">157626<!--sim_Toddler_Ask--></T>
+                    <T n="affordance">149773<!--SocialMixerInteraction: socials_Targeted_Friendly_AlwaysOn_STC_Toddler_AskToBathe--></T>
+                    <T n="si_affordance_override">157626<!--SocialSuperInteraction: sim_Toddler_Ask--></T>
                     <E n="target">TargetSim</E>
                   </U>
                 </L>
                 <L n="loot_list">
-                  <T>141539<!--loot_Buff_Toddler_Defiance--></T>
+                  <T>141539<!--LootActions: loot_Buff_Toddler_Defiance--></T>
                 </L>
                 <E n="outcome_result">FAILURE</E>
               </U>
@@ -3550,7 +3684,7 @@
                       <L>
                         <V t="mood">
                           <U n="mood">
-                            <T n="mood">14632<!--Mood_Angry--></T>
+                            <T n="mood">14632<!--Mood: Mood_Angry--></T>
                             <E n="who">TargetSim</E>
                           </U>
                         </V>
@@ -3558,7 +3692,7 @@
                       <L>
                         <V t="mood">
                           <U n="mood">
-                            <T n="mood">14643<!--Mood_Sad--></T>
+                            <T n="mood">14643<!--Mood: Mood_Sad--></T>
                             <E n="who">TargetSim</E>
                           </U>
                         </V>
@@ -3573,14 +3707,14 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>140744<!--trait_Toddler_Clingy--></T>
+                              <T>140744<!--Trait: trait_Toddler_Clingy--></T>
                             </L>
                           </U>
                         </V>
                         <V t="buff">
                           <U n="buff">
                             <L n="blacklist">
-                              <T>146494<!--buff_Relationship_Toddler_Caregiver--></T>
+                              <T>146494<!--Buff: buff_Relationship_Toddler_Caregiver--></T>
                             </L>
                           </U>
                         </V>
@@ -3594,13 +3728,13 @@
               <U n="outcome">
                 <V n="animation_ref" t="enabled">
                   <U n="enabled">
-                    <T n="factory">11854<!--Soc_Friendly_NT_askQuestionFriendly_success_basic--></T>
+                    <T n="factory">11854<!--AnimationElement: Soc_Friendly_NT_askQuestionFriendly_success_basic--></T>
                     <U n="overrides">
                       <V n="reactionlet" t="enabled">
                         <U n="enabled">
                           <V n="selector" t="single_ref">
                             <U n="single_ref">
-                              <T n="factory">144827<!--socials_Toddlers_Accepts--></T>
+                              <T n="factory">144827<!--AnimationElement: socials_Toddlers_Accepts--></T>
                             </U>
                           </V>
                         </U>
@@ -3616,7 +3750,7 @@
                           <E n="key">Career_ChanceCard_01</E>
                           <U n="value">
                             <V n="adventure_moment" t="reference">
-                              <T n="reference">309922<!--adventureMoment_FamilyTrope_compliant--></T>
+                              <T n="reference">309922<!--AdventureMoment: adventureMoment_FamilyTrope_compliant--></T>
                             </V>
                           </U>
                         </U>
@@ -3636,10 +3770,10 @@
                                   <U n="relationship">
                                     <U n="prohibited_relationship_bits">
                                       <L n="match_any">
-                                        <T>8809<!--family_Target_IsParentOf_Actor--></T>
-                                        <T>8808<!--family_Target_IsGrandparentOf_Actor--></T>
-                                        <T>8805<!--family_Target_IsSonOrDaughterOf_Actor--></T>
-                                        <T>8807<!--family_Target_IsGrandchildOf_Actor--></T>
+                                        <T>8809<!--RelationshipBit: family_Target_IsParentOf_Actor--></T>
+                                        <T>8808<!--RelationshipBit: family_Target_IsGrandparentOf_Actor--></T>
+                                        <T>8805<!--RelationshipBit: family_Target_IsSonOrDaughterOf_Actor--></T>
+                                        <T>8807<!--RelationshipBit: family_Target_IsGrandchildOf_Actor--></T>
                                       </L>
                                     </U>
                                   </U>
@@ -3655,7 +3789,7 @@
                                   <U n="buff">
                                     <V n="whitelist" t="enabled">
                                       <L n="enabled">
-                                        <T>306626<!--buff_FamilyDynamics_FamilyTropeAdventureCooldown--></T>
+                                        <T>306626<!--Buff: buff_FamilyDynamics_FamilyTropeAdventureCooldown--></T>
                                       </L>
                                     </V>
                                   </U>
@@ -3671,9 +3805,9 @@
                                   <U n="relationship">
                                     <U n="required_relationship_bits">
                                       <L n="match_any">
-                                        <T>306291<!--familyTrope_compliant_target_isAuthorityOf_actor--></T>
-                                        <T>306294<!--familyTrope_compliant_target_IsSubordinateOf_actor--></T>
-                                        <T>309925<!--familyTrope_NotCompliant--></T>
+                                        <T>306291<!--RelationshipBit: familyTrope_compliant_target_isAuthorityOf_actor--></T>
+                                        <T>306294<!--RelationshipBit: familyTrope_compliant_target_IsSubordinateOf_actor--></T>
+                                        <T>309925<!--RelationshipBit: familyTrope_NotCompliant--></T>
                                       </L>
                                     </U>
                                   </U>
@@ -3690,7 +3824,7 @@
                                     <U n="relationship_score_interval">
                                       <T n="upper_bound">50</T>
                                     </U>
-                                    <T n="track">16650<!--LTR_Friendship_Main--></T>
+                                    <T n="track">16650<!--RelationshipTrack: LTR_Friendship_Main--></T>
                                   </U>
                                 </V>
                               </L>
@@ -3704,14 +3838,14 @@
                                   <U n="relationship">
                                     <U n="required_relationship_bits">
                                       <L n="match_any">
-                                        <T>306293<!--familyTrope_close--></T>
-                                        <T>310888<!--familyTrope_difficult--></T>
-                                        <T>306282<!--familyTrope_distant--></T>
-                                        <T>306279<!--familyTrope_Jokesters--></T>
-                                        <T>306356<!--familyTrope_loving_target_IsAuthorityOf_actor--></T>
-                                        <T>306357<!--familyTrope_loving_target_isSubordinateOf_actor--></T>
-                                        <T>306289<!--familyTrope_permissive_target_isAuthorityOf_actor--></T>
-                                        <T>306296<!--familyTrope_permissive_target_isSubordinateOf_actor--></T>
+                                        <T>306293<!--RelationshipBit: familyTrope_close--></T>
+                                        <T>310888<!--RelationshipBit: familyTrope_difficult--></T>
+                                        <T>306282<!--RelationshipBit: familyTrope_distant--></T>
+                                        <T>306279<!--RelationshipBit: familyTrope_Jokesters--></T>
+                                        <T>306356<!--RelationshipBit: familyTrope_loving_target_IsAuthorityOf_actor--></T>
+                                        <T>306357<!--RelationshipBit: familyTrope_loving_target_isSubordinateOf_actor--></T>
+                                        <T>306289<!--RelationshipBit: familyTrope_permissive_target_isAuthorityOf_actor--></T>
+                                        <T>306296<!--RelationshipBit: familyTrope_permissive_target_isSubordinateOf_actor--></T>
                                       </L>
                                     </U>
                                   </U>
@@ -3721,7 +3855,7 @@
                                     <U n="relationship_score_interval">
                                       <T n="lower_bound">75</T>
                                     </U>
-                                    <T n="track">24099<!--SocialContext_Friendship--></T>
+                                    <T n="track">24099<!--ShortTermContextRelationshipTrack: SocialContext_Friendship--></T>
                                   </U>
                                 </V>
                               </L>
@@ -3763,7 +3897,7 @@
                 <L n="continuation">
                   <U>
                     <E n="actor">Actor</E>
-                    <T n="affordance">149827<!--socialSuperInteraction_CarryPickUp_ToBathe--></T>
+                    <T n="affordance">149827<!--SuperInteraction: socialSuperInteraction_CarryPickUp_ToBathe--></T>
                     <V n="carry_target" t="enabled">
                       <E n="enabled">TargetSim</E>
                     </V>
@@ -3771,9 +3905,9 @@
                   </U>
                 </L>
                 <L n="loot_list">
-                  <T>11036<!--Rel_Gain_Small--></T>
-                  <T>24123<!--Loot_SocialContext_Friendship_Gain--></T>
-                  <T>10954<!--Loot_ForSocialsSocialMotiveMedium--></T>
+                  <T>11036<!--LootActions: Rel_Gain_Small--></T>
+                  <T>24123<!--LootActions: Loot_SocialContext_Friendship_Gain--></T>
+                  <T>10954<!--LootActions: Loot_ForSocialsSocialMotiveMedium--></T>
                 </L>
                 <E n="outcome_result">SUCCESS</E>
               </U>
@@ -3788,7 +3922,7 @@
                           <U n="buff">
                             <V n="whitelist" t="enabled">
                               <L n="enabled">
-                                <T>12794<!--CheatingIntensityBuff_Furious--></T>
+                                <T>12794<!--Buff: CheatingIntensityBuff_Furious--></T>
                               </L>
                             </V>
                           </U>
@@ -3802,7 +3936,7 @@
                       <L>
                         <V t="skill_test">
                           <U n="skill_test">
-                            <T n="skill">140504<!--statistic_Skill_Toddler_Thinking--></T>
+                            <T n="skill">140504<!--Skill: statistic_Skill_Toddler_Thinking--></T>
                             <V n="skill_range" t="interval">
                               <U n="interval">
                                 <U n="skill_interval">
@@ -3823,7 +3957,7 @@
                       <L>
                         <V t="skill_test">
                           <U n="skill_test">
-                            <T n="skill">140504<!--statistic_Skill_Toddler_Thinking--></T>
+                            <T n="skill">140504<!--Skill: statistic_Skill_Toddler_Thinking--></T>
                             <V n="skill_range" t="interval">
                               <U n="interval">
                                 <U n="skill_interval">
@@ -3844,7 +3978,7 @@
                       <L>
                         <V t="skill_test">
                           <U n="skill_test">
-                            <T n="skill">140504<!--statistic_Skill_Toddler_Thinking--></T>
+                            <T n="skill">140504<!--Skill: statistic_Skill_Toddler_Thinking--></T>
                             <V n="skill_range" t="interval">
                               <U n="interval">
                                 <U n="skill_interval">
@@ -3865,7 +3999,7 @@
                       <L>
                         <V t="skill_test">
                           <U n="skill_test">
-                            <T n="skill">140504<!--statistic_Skill_Toddler_Thinking--></T>
+                            <T n="skill">140504<!--Skill: statistic_Skill_Toddler_Thinking--></T>
                             <V n="skill_range" t="threshold">
                               <U n="threshold">
                                 <U n="skill_threshold">
@@ -3888,7 +4022,7 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>140742<!--trait_Toddler_Charmer--></T>
+                              <T>140742<!--Trait: trait_Toddler_Charmer--></T>
                             </L>
                           </U>
                         </V>
@@ -3903,7 +4037,7 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>140740<!--trait_Toddler_Angelic--></T>
+                              <T>140740<!--Trait: trait_Toddler_Angelic--></T>
                             </L>
                           </U>
                         </V>
@@ -3918,7 +4052,7 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>140739<!--trait_Toddler_Fussy--></T>
+                              <T>140739<!--Trait: trait_Toddler_Fussy--></T>
                             </L>
                           </U>
                         </V>
@@ -3933,7 +4067,7 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>140746<!--trait_Toddler_Independent--></T>
+                              <T>140746<!--Trait: trait_Toddler_Independent--></T>
                             </L>
                           </U>
                         </V>
@@ -3941,7 +4075,7 @@
                           <U n="buff">
                             <V n="whitelist" t="enabled">
                               <L n="enabled">
-                                <T>146494<!--buff_Relationship_Toddler_Caregiver--></T>
+                                <T>146494<!--Buff: buff_Relationship_Toddler_Caregiver--></T>
                               </L>
                             </V>
                           </U>
@@ -3955,7 +4089,7 @@
                       <L>
                         <V t="mood">
                           <U n="mood">
-                            <T n="mood">14634<!--Mood_Confident--></T>
+                            <T n="mood">14634<!--Mood: Mood_Confident--></T>
                           </U>
                         </V>
                       </L>
@@ -3969,7 +4103,7 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>140744<!--trait_Toddler_Clingy--></T>
+                              <T>140744<!--Trait: trait_Toddler_Clingy--></T>
                             </L>
                           </U>
                         </V>
@@ -3977,7 +4111,7 @@
                           <U n="buff">
                             <V n="whitelist" t="enabled">
                               <L n="enabled">
-                                <T>146494<!--buff_Relationship_Toddler_Caregiver--></T>
+                                <T>146494<!--Buff: buff_Relationship_Toddler_Caregiver--></T>
                               </L>
                             </V>
                           </U>
@@ -3992,7 +4126,7 @@
                         <V t="trait">
                           <U n="trait">
                             <L n="whitelist_traits">
-                              <T>16838<!--trait_FamilyOriented--></T>
+                              <T>16838<!--Trait: trait_FamilyOriented--></T>
                             </L>
                           </U>
                         </V>
@@ -4006,7 +4140,7 @@
                         <V t="motive">
                           <U n="motive">
                             <L n="stats">
-                              <T>16657<!--motive_Hygiene--></T>
+                              <T>16657<!--Commodity: motive_Hygiene--></T>
                             </L>
                             <U n="threshold">
                               <E n="comparison">LESS_OR_EQUAL</E>
@@ -4026,7 +4160,7 @@
                           <U n="relationship">
                             <U n="required_relationship_bits">
                               <L n="match_any">
-                                <T>306294<!--familyTrope_compliant_target_IsSubordinateOf_actor--></T>
+                                <T>306294<!--RelationshipBit: familyTrope_compliant_target_IsSubordinateOf_actor--></T>
                               </L>
                             </U>
                           </U>
@@ -4041,12 +4175,12 @@
           <L n="tests">
             <L>
               <V t="test_set_reference">
-                <T n="test_set_reference">141467<!--testSetInstance_Toddler_Defiance--></T>
+                <T n="test_set_reference">141467<!--TestSetInstance: testSetInstance_Toddler_Defiance--></T>
               </V>
               <V t="buff">
                 <U n="buff">
                   <L n="blacklist">
-                    <T>141541<!--buff_Toddlers_Defiance_DontWantTo--></T>
+                    <T>141541<!--Buff: buff_Toddlers_Defiance_DontWantTo--></T>
                   </L>
                   <E n="subject">TargetSim</E>
                 </U>
@@ -4055,7 +4189,7 @@
                 <U n="trait">
                   <E n="subject">TargetSim</E>
                   <L n="whitelist_traits">
-                    <T>140743<!--trait_Toddler_Silly--></T>
+                    <T>140743<!--Trait: trait_Toddler_Silly--></T>
                   </L>
                 </U>
               </V>
@@ -4068,13 +4202,13 @@
               <U n="outcome">
                 <V n="animation_ref" t="enabled">
                   <U n="enabled">
-                    <T n="factory">11854<!--Soc_Friendly_NT_askQuestionFriendly_success_basic--></T>
+                    <T n="factory">11854<!--AnimationElement: Soc_Friendly_NT_askQuestionFriendly_success_basic--></T>
                     <U n="overrides">
                       <V n="reactionlet" t="enabled">
                         <U n="enabled">
                           <V n="selector" t="single_ref">
                             <U n="single_ref">
-                              <T n="factory">144827<!--socials_Toddlers_Accepts--></T>
+                              <T n="factory">144827<!--AnimationElement: socials_Toddlers_Accepts--></T>
                             </U>
                           </V>
                         </U>
@@ -4090,7 +4224,7 @@
                           <E n="key">Career_ChanceCard_01</E>
                           <U n="value">
                             <V n="adventure_moment" t="reference">
-                              <T n="reference">309922<!--adventureMoment_FamilyTrope_compliant--></T>
+                              <T n="reference">309922<!--AdventureMoment: adventureMoment_FamilyTrope_compliant--></T>
                             </V>
                           </U>
                         </U>
@@ -4110,10 +4244,10 @@
                                   <U n="relationship">
                                     <U n="prohibited_relationship_bits">
                                       <L n="match_any">
-                                        <T>8809<!--family_Target_IsParentOf_Actor--></T>
-                                        <T>8808<!--family_Target_IsGrandparentOf_Actor--></T>
-                                        <T>8805<!--family_Target_IsSonOrDaughterOf_Actor--></T>
-                                        <T>8807<!--family_Target_IsGrandchildOf_Actor--></T>
+                                        <T>8809<!--RelationshipBit: family_Target_IsParentOf_Actor--></T>
+                                        <T>8808<!--RelationshipBit: family_Target_IsGrandparentOf_Actor--></T>
+                                        <T>8805<!--RelationshipBit: family_Target_IsSonOrDaughterOf_Actor--></T>
+                                        <T>8807<!--RelationshipBit: family_Target_IsGrandchildOf_Actor--></T>
                                       </L>
                                     </U>
                                   </U>
@@ -4129,7 +4263,7 @@
                                   <U n="buff">
                                     <V n="whitelist" t="enabled">
                                       <L n="enabled">
-                                        <T>306626<!--buff_FamilyDynamics_FamilyTropeAdventureCooldown--></T>
+                                        <T>306626<!--Buff: buff_FamilyDynamics_FamilyTropeAdventureCooldown--></T>
                                       </L>
                                     </V>
                                   </U>
@@ -4145,9 +4279,9 @@
                                   <U n="relationship">
                                     <U n="required_relationship_bits">
                                       <L n="match_any">
-                                        <T>306291<!--familyTrope_compliant_target_isAuthorityOf_actor--></T>
-                                        <T>306294<!--familyTrope_compliant_target_IsSubordinateOf_actor--></T>
-                                        <T>309925<!--familyTrope_NotCompliant--></T>
+                                        <T>306291<!--RelationshipBit: familyTrope_compliant_target_isAuthorityOf_actor--></T>
+                                        <T>306294<!--RelationshipBit: familyTrope_compliant_target_IsSubordinateOf_actor--></T>
+                                        <T>309925<!--RelationshipBit: familyTrope_NotCompliant--></T>
                                       </L>
                                     </U>
                                   </U>
@@ -4164,7 +4298,7 @@
                                     <U n="relationship_score_interval">
                                       <T n="upper_bound">50</T>
                                     </U>
-                                    <T n="track">16650<!--LTR_Friendship_Main--></T>
+                                    <T n="track">16650<!--RelationshipTrack: LTR_Friendship_Main--></T>
                                   </U>
                                 </V>
                               </L>
@@ -4178,14 +4312,14 @@
                                   <U n="relationship">
                                     <U n="required_relationship_bits">
                                       <L n="match_any">
-                                        <T>306293<!--familyTrope_close--></T>
-                                        <T>310888<!--familyTrope_difficult--></T>
-                                        <T>306282<!--familyTrope_distant--></T>
-                                        <T>306279<!--familyTrope_Jokesters--></T>
-                                        <T>306356<!--familyTrope_loving_target_IsAuthorityOf_actor--></T>
-                                        <T>306357<!--familyTrope_loving_target_isSubordinateOf_actor--></T>
-                                        <T>306289<!--familyTrope_permissive_target_isAuthorityOf_actor--></T>
-                                        <T>306296<!--familyTrope_permissive_target_isSubordinateOf_actor--></T>
+                                        <T>306293<!--RelationshipBit: familyTrope_close--></T>
+                                        <T>310888<!--RelationshipBit: familyTrope_difficult--></T>
+                                        <T>306282<!--RelationshipBit: familyTrope_distant--></T>
+                                        <T>306279<!--RelationshipBit: familyTrope_Jokesters--></T>
+                                        <T>306356<!--RelationshipBit: familyTrope_loving_target_IsAuthorityOf_actor--></T>
+                                        <T>306357<!--RelationshipBit: familyTrope_loving_target_isSubordinateOf_actor--></T>
+                                        <T>306289<!--RelationshipBit: familyTrope_permissive_target_isAuthorityOf_actor--></T>
+                                        <T>306296<!--RelationshipBit: familyTrope_permissive_target_isSubordinateOf_actor--></T>
                                       </L>
                                     </U>
                                   </U>
@@ -4195,7 +4329,7 @@
                                     <U n="relationship_score_interval">
                                       <T n="lower_bound">75</T>
                                     </U>
-                                    <T n="track">24099<!--SocialContext_Friendship--></T>
+                                    <T n="track">24099<!--ShortTermContextRelationshipTrack: SocialContext_Friendship--></T>
                                   </U>
                                 </V>
                               </L>
@@ -4237,7 +4371,7 @@
                 <L n="continuation">
                   <U>
                     <E n="actor">Actor</E>
-                    <T n="affordance">149827<!--socialSuperInteraction_CarryPickUp_ToBathe--></T>
+                    <T n="affordance">149827<!--SuperInteraction: socialSuperInteraction_CarryPickUp_ToBathe--></T>
                     <V n="carry_target" t="enabled">
                       <E n="enabled">TargetSim</E>
                     </V>
@@ -4245,9 +4379,9 @@
                   </U>
                 </L>
                 <L n="loot_list">
-                  <T>11036<!--Rel_Gain_Small--></T>
-                  <T>24123<!--Loot_SocialContext_Friendship_Gain--></T>
-                  <T>10954<!--Loot_ForSocialsSocialMotiveMedium--></T>
+                  <T>11036<!--LootActions: Rel_Gain_Small--></T>
+                  <T>24123<!--LootActions: Loot_SocialContext_Friendship_Gain--></T>
+                  <T>10954<!--LootActions: Loot_ForSocialsSocialMotiveMedium--></T>
                 </L>
                 <E n="outcome_result">SUCCESS</E>
               </U>
@@ -4262,7 +4396,7 @@
                           <U n="buff">
                             <V n="whitelist" t="enabled">
                               <L n="enabled">
-                                <T>12794<!--CheatingIntensityBuff_Furious--></T>
+                                <T>12794<!--Buff: CheatingIntensityBuff_Furious--></T>
                               </L>
                             </V>
                           </U>
@@ -4276,7 +4410,7 @@
                       <L>
                         <V t="skill_test">
                           <U n="skill_test">
-                            <T n="skill">140504<!--statistic_Skill_Toddler_Thinking--></T>
+                            <T n="skill">140504<!--Skill: statistic_Skill_Toddler_Thinking--></T>
                             <V n="skill_range" t="interval">
                               <U n="interval">
                                 <U n="skill_interval">
@@ -4297,7 +4431,7 @@
                       <L>
                         <V t="skill_test">
                           <U n="skill_test">
-                            <T n="skill">140504<!--statistic_Skill_Toddler_Thinking--></T>
+                            <T n="skill">140504<!--Skill: statistic_Skill_Toddler_Thinking--></T>
                             <V n="skill_range" t="interval">
                               <U n="interval">
                                 <U n="skill_interval">
@@ -4318,7 +4452,7 @@
                       <L>
                         <V t="skill_test">
                           <U n="skill_test">
-                            <T n="skill">140504<!--statistic_Skill_Toddler_Thinking--></T>
+                            <T n="skill">140504<!--Skill: statistic_Skill_Toddler_Thinking--></T>
                             <V n="skill_range" t="interval">
                               <U n="interval">
                                 <U n="skill_interval">
@@ -4339,7 +4473,7 @@
                       <L>
                         <V t="skill_test">
                           <U n="skill_test">
-                            <T n="skill">140504<!--statistic_Skill_Toddler_Thinking--></T>
+                            <T n="skill">140504<!--Skill: statistic_Skill_Toddler_Thinking--></T>
                             <V n="skill_range" t="threshold">
                               <U n="threshold">
                                 <U n="skill_threshold">
@@ -4362,7 +4496,7 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>140742<!--trait_Toddler_Charmer--></T>
+                              <T>140742<!--Trait: trait_Toddler_Charmer--></T>
                             </L>
                           </U>
                         </V>
@@ -4377,7 +4511,7 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>140740<!--trait_Toddler_Angelic--></T>
+                              <T>140740<!--Trait: trait_Toddler_Angelic--></T>
                             </L>
                           </U>
                         </V>
@@ -4392,7 +4526,7 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>140739<!--trait_Toddler_Fussy--></T>
+                              <T>140739<!--Trait: trait_Toddler_Fussy--></T>
                             </L>
                           </U>
                         </V>
@@ -4407,7 +4541,7 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>140746<!--trait_Toddler_Independent--></T>
+                              <T>140746<!--Trait: trait_Toddler_Independent--></T>
                             </L>
                           </U>
                         </V>
@@ -4415,7 +4549,7 @@
                           <U n="buff">
                             <V n="whitelist" t="enabled">
                               <L n="enabled">
-                                <T>146494<!--buff_Relationship_Toddler_Caregiver--></T>
+                                <T>146494<!--Buff: buff_Relationship_Toddler_Caregiver--></T>
                               </L>
                             </V>
                           </U>
@@ -4429,7 +4563,7 @@
                       <L>
                         <V t="mood">
                           <U n="mood">
-                            <T n="mood">14634<!--Mood_Confident--></T>
+                            <T n="mood">14634<!--Mood: Mood_Confident--></T>
                           </U>
                         </V>
                       </L>
@@ -4443,7 +4577,7 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>140744<!--trait_Toddler_Clingy--></T>
+                              <T>140744<!--Trait: trait_Toddler_Clingy--></T>
                             </L>
                           </U>
                         </V>
@@ -4451,7 +4585,7 @@
                           <U n="buff">
                             <V n="whitelist" t="enabled">
                               <L n="enabled">
-                                <T>146494<!--buff_Relationship_Toddler_Caregiver--></T>
+                                <T>146494<!--Buff: buff_Relationship_Toddler_Caregiver--></T>
                               </L>
                             </V>
                           </U>
@@ -4466,7 +4600,7 @@
                         <V t="trait">
                           <U n="trait">
                             <L n="whitelist_traits">
-                              <T>16838<!--trait_FamilyOriented--></T>
+                              <T>16838<!--Trait: trait_FamilyOriented--></T>
                             </L>
                           </U>
                         </V>
@@ -4480,7 +4614,7 @@
                         <V t="motive">
                           <U n="motive">
                             <L n="stats">
-                              <T>16657<!--motive_Hygiene--></T>
+                              <T>16657<!--Commodity: motive_Hygiene--></T>
                             </L>
                             <U n="threshold">
                               <E n="comparison">LESS_OR_EQUAL</E>
@@ -4500,7 +4634,7 @@
                           <U n="relationship">
                             <U n="required_relationship_bits">
                               <L n="match_any">
-                                <T>306294<!--familyTrope_compliant_target_IsSubordinateOf_actor--></T>
+                                <T>306294<!--RelationshipBit: familyTrope_compliant_target_IsSubordinateOf_actor--></T>
                               </L>
                             </U>
                           </U>
@@ -4515,7 +4649,7 @@
               <U n="outcome">
                 <V n="animation_ref" t="enabled">
                   <U n="enabled">
-                    <T n="factory">11853<!--Soc_Friendly_NT_askQuestionFriendly_fail_basic--></T>
+                    <T n="factory">11853<!--AnimationElement: Soc_Friendly_NT_askQuestionFriendly_fail_basic--></T>
                     <U n="overrides">
                       <V n="balloons" t="enabled">
                         <L n="enabled">
@@ -4527,7 +4661,7 @@
                                     <E n="balloon_type">SPEECH</E>
                                     <V n="icon" t="resource_key">
                                       <U n="resource_key">
-                                        <T n="key" p="InGame\UI\Icons\Headlines\Final\headline_bathtub.png">2f7d0004:00000000:aed5d3e6c66c1254</T>
+                                        <T p="InGame\UI\Icons\Headlines\Final\headline_bathtub.png" n="key">2f7d0004:00000000:aed5d3e6c66c1254</T>
                                       </U>
                                     </V>
                                   </U>
@@ -4544,7 +4678,7 @@
                         <U n="enabled">
                           <V n="selector" t="single_ref">
                             <U n="single_ref">
-                              <T n="factory">144830<!--socials_Toddlers_Rejects_Energized--></T>
+                              <T n="factory">144830<!--AnimationElement: socials_Toddlers_Rejects_Energized--></T>
                               <U n="overrides">
                                 <V n="balloons" t="enabled">
                                   <L n="enabled">
@@ -4556,7 +4690,7 @@
                                               <E n="balloon_type">SPEECH</E>
                                               <V n="icon" t="resource_key">
                                                 <U n="resource_key">
-                                                  <T n="key" p="InGame\UI\Icons\Headlines\Final\headline_Prohibit.png">2f7d0004:00000000:ab4a67c934164fb1</T>
+                                                  <T p="InGame\UI\Icons\Headlines\Final\headline_Prohibit.png" n="key">2f7d0004:00000000:ab4a67c934164fb1</T>
                                                 </U>
                                               </V>
                                             </U>
@@ -4585,7 +4719,7 @@
                           <E n="key">Career_ChanceCard_01</E>
                           <U n="value">
                             <V n="adventure_moment" t="reference">
-                              <T n="reference">310422<!--adventureMoment_FamilyTrope_permissive--></T>
+                              <T n="reference">310422<!--AdventureMoment: adventureMoment_FamilyTrope_permissive--></T>
                             </V>
                           </U>
                         </U>
@@ -4605,10 +4739,10 @@
                                   <U n="relationship">
                                     <U n="prohibited_relationship_bits">
                                       <L n="match_any">
-                                        <T>8809<!--family_Target_IsParentOf_Actor--></T>
-                                        <T>8808<!--family_Target_IsGrandparentOf_Actor--></T>
-                                        <T>8805<!--family_Target_IsSonOrDaughterOf_Actor--></T>
-                                        <T>8807<!--family_Target_IsGrandchildOf_Actor--></T>
+                                        <T>8809<!--RelationshipBit: family_Target_IsParentOf_Actor--></T>
+                                        <T>8808<!--RelationshipBit: family_Target_IsGrandparentOf_Actor--></T>
+                                        <T>8805<!--RelationshipBit: family_Target_IsSonOrDaughterOf_Actor--></T>
+                                        <T>8807<!--RelationshipBit: family_Target_IsGrandchildOf_Actor--></T>
                                       </L>
                                     </U>
                                     <L n="subject">
@@ -4630,7 +4764,7 @@
                                   <U n="buff">
                                     <V n="whitelist" t="enabled">
                                       <L n="enabled">
-                                        <T>306626<!--buff_FamilyDynamics_FamilyTropeAdventureCooldown--></T>
+                                        <T>306626<!--Buff: buff_FamilyDynamics_FamilyTropeAdventureCooldown--></T>
                                       </L>
                                     </V>
                                   </U>
@@ -4646,9 +4780,9 @@
                                   <U n="relationship">
                                     <U n="required_relationship_bits">
                                       <L n="match_any">
-                                        <T>306289<!--familyTrope_permissive_target_isAuthorityOf_actor--></T>
-                                        <T>306296<!--familyTrope_permissive_target_isSubordinateOf_actor--></T>
-                                        <T>310886<!--familyTrope_NotPermissive--></T>
+                                        <T>306289<!--RelationshipBit: familyTrope_permissive_target_isAuthorityOf_actor--></T>
+                                        <T>306296<!--RelationshipBit: familyTrope_permissive_target_isSubordinateOf_actor--></T>
+                                        <T>310886<!--RelationshipBit: familyTrope_NotPermissive--></T>
                                       </L>
                                     </U>
                                     <L n="subject">
@@ -4677,7 +4811,7 @@
                                     <L n="target_sim">
                                       <E>TargetSim</E>
                                     </L>
-                                    <T n="track">16650<!--LTR_Friendship_Main--></T>
+                                    <T n="track">16650<!--RelationshipTrack: LTR_Friendship_Main--></T>
                                   </U>
                                 </V>
                               </L>
@@ -4691,14 +4825,14 @@
                                   <U n="relationship">
                                     <U n="required_relationship_bits">
                                       <L n="match_any">
-                                        <T>306293<!--familyTrope_close--></T>
-                                        <T>310888<!--familyTrope_difficult--></T>
-                                        <T>306282<!--familyTrope_distant--></T>
-                                        <T>306279<!--familyTrope_Jokesters--></T>
-                                        <T>306356<!--familyTrope_loving_target_IsAuthorityOf_actor--></T>
-                                        <T>306357<!--familyTrope_loving_target_isSubordinateOf_actor--></T>
-                                        <T>306291<!--familyTrope_compliant_target_isAuthorityOf_actor--></T>
-                                        <T>306294<!--familyTrope_compliant_target_IsSubordinateOf_actor--></T>
+                                        <T>306293<!--RelationshipBit: familyTrope_close--></T>
+                                        <T>310888<!--RelationshipBit: familyTrope_difficult--></T>
+                                        <T>306282<!--RelationshipBit: familyTrope_distant--></T>
+                                        <T>306279<!--RelationshipBit: familyTrope_Jokesters--></T>
+                                        <T>306356<!--RelationshipBit: familyTrope_loving_target_IsAuthorityOf_actor--></T>
+                                        <T>306357<!--RelationshipBit: familyTrope_loving_target_isSubordinateOf_actor--></T>
+                                        <T>306291<!--RelationshipBit: familyTrope_compliant_target_isAuthorityOf_actor--></T>
+                                        <T>306294<!--RelationshipBit: familyTrope_compliant_target_IsSubordinateOf_actor--></T>
                                       </L>
                                     </U>
                                     <L n="subject">
@@ -4720,7 +4854,7 @@
                                     <L n="target_sim">
                                       <E>TargetSim</E>
                                     </L>
-                                    <T n="track">24099<!--SocialContext_Friendship--></T>
+                                    <T n="track">24099<!--ShortTermContextRelationshipTrack: SocialContext_Friendship--></T>
                                   </U>
                                 </V>
                               </L>
@@ -4762,13 +4896,13 @@
                 <L n="continuation">
                   <U>
                     <E n="actor">Actor</E>
-                    <T n="affordance">149773<!--socials_Targeted_Friendly_AlwaysOn_STC_Toddler_AskToBathe--></T>
-                    <T n="si_affordance_override">157626<!--sim_Toddler_Ask--></T>
+                    <T n="affordance">149773<!--SocialMixerInteraction: socials_Targeted_Friendly_AlwaysOn_STC_Toddler_AskToBathe--></T>
+                    <T n="si_affordance_override">157626<!--SocialSuperInteraction: sim_Toddler_Ask--></T>
                     <E n="target">TargetSim</E>
                   </U>
                 </L>
                 <L n="loot_list">
-                  <T>156994<!--loot_Buff_Toddler_Defiance_Wild--></T>
+                  <T>156994<!--LootActions: loot_Buff_Toddler_Defiance_Wild--></T>
                 </L>
                 <E n="outcome_result">FAILURE</E>
               </U>
@@ -4780,7 +4914,7 @@
               <U n="outcome">
                 <V n="animation_ref" t="enabled">
                   <U n="enabled">
-                    <T n="factory">11853<!--Soc_Friendly_NT_askQuestionFriendly_fail_basic--></T>
+                    <T n="factory">11853<!--AnimationElement: Soc_Friendly_NT_askQuestionFriendly_fail_basic--></T>
                     <U n="overrides">
                       <V n="balloons" t="enabled">
                         <L n="enabled">
@@ -4792,7 +4926,7 @@
                                     <E n="balloon_type">SPEECH</E>
                                     <V n="icon" t="resource_key">
                                       <U n="resource_key">
-                                        <T n="key" p="InGame\UI\Icons\Headlines\Final\headline_Chatty.png">2f7d0004:00000000:2b16c23e26366277</T>
+                                        <T p="InGame\UI\Icons\Headlines\Final\headline_Chatty.png" n="key">2f7d0004:00000000:2b16c23e26366277</T>
                                       </U>
                                     </V>
                                   </U>
@@ -4809,7 +4943,7 @@
                         <U n="enabled">
                           <V n="selector" t="single_ref">
                             <U n="single_ref">
-                              <T n="factory">144828<!--socials_Toddlers_Rejects_Generic--></T>
+                              <T n="factory">144828<!--AnimationElement: socials_Toddlers_Rejects_Generic--></T>
                               <U n="overrides">
                                 <V n="balloons" t="enabled">
                                   <L n="enabled">
@@ -4821,7 +4955,7 @@
                                               <E n="balloon_type">SPEECH</E>
                                               <V n="icon" t="resource_key">
                                                 <U n="resource_key">
-                                                  <T n="key" p="InGame\UI\Icons\Headlines\Final\headline_Prohibit.png">2f7d0004:00000000:ab4a67c934164fb1</T>
+                                                  <T p="InGame\UI\Icons\Headlines\Final\headline_Prohibit.png" n="key">2f7d0004:00000000:ab4a67c934164fb1</T>
                                                 </U>
                                               </V>
                                             </U>
@@ -4850,7 +4984,7 @@
                           <E n="key">Career_ChanceCard_01</E>
                           <U n="value">
                             <V n="adventure_moment" t="reference">
-                              <T n="reference">310422<!--adventureMoment_FamilyTrope_permissive--></T>
+                              <T n="reference">310422<!--AdventureMoment: adventureMoment_FamilyTrope_permissive--></T>
                             </V>
                           </U>
                         </U>
@@ -4870,10 +5004,10 @@
                                   <U n="relationship">
                                     <U n="prohibited_relationship_bits">
                                       <L n="match_any">
-                                        <T>8809<!--family_Target_IsParentOf_Actor--></T>
-                                        <T>8808<!--family_Target_IsGrandparentOf_Actor--></T>
-                                        <T>8805<!--family_Target_IsSonOrDaughterOf_Actor--></T>
-                                        <T>8807<!--family_Target_IsGrandchildOf_Actor--></T>
+                                        <T>8809<!--RelationshipBit: family_Target_IsParentOf_Actor--></T>
+                                        <T>8808<!--RelationshipBit: family_Target_IsGrandparentOf_Actor--></T>
+                                        <T>8805<!--RelationshipBit: family_Target_IsSonOrDaughterOf_Actor--></T>
+                                        <T>8807<!--RelationshipBit: family_Target_IsGrandchildOf_Actor--></T>
                                       </L>
                                     </U>
                                     <L n="subject">
@@ -4895,7 +5029,7 @@
                                   <U n="buff">
                                     <V n="whitelist" t="enabled">
                                       <L n="enabled">
-                                        <T>306626<!--buff_FamilyDynamics_FamilyTropeAdventureCooldown--></T>
+                                        <T>306626<!--Buff: buff_FamilyDynamics_FamilyTropeAdventureCooldown--></T>
                                       </L>
                                     </V>
                                   </U>
@@ -4911,9 +5045,9 @@
                                   <U n="relationship">
                                     <U n="required_relationship_bits">
                                       <L n="match_any">
-                                        <T>306289<!--familyTrope_permissive_target_isAuthorityOf_actor--></T>
-                                        <T>306296<!--familyTrope_permissive_target_isSubordinateOf_actor--></T>
-                                        <T>310886<!--familyTrope_NotPermissive--></T>
+                                        <T>306289<!--RelationshipBit: familyTrope_permissive_target_isAuthorityOf_actor--></T>
+                                        <T>306296<!--RelationshipBit: familyTrope_permissive_target_isSubordinateOf_actor--></T>
+                                        <T>310886<!--RelationshipBit: familyTrope_NotPermissive--></T>
                                       </L>
                                     </U>
                                     <L n="subject">
@@ -4942,7 +5076,7 @@
                                     <L n="target_sim">
                                       <E>TargetSim</E>
                                     </L>
-                                    <T n="track">16650<!--LTR_Friendship_Main--></T>
+                                    <T n="track">16650<!--RelationshipTrack: LTR_Friendship_Main--></T>
                                   </U>
                                 </V>
                               </L>
@@ -4956,14 +5090,14 @@
                                   <U n="relationship">
                                     <U n="required_relationship_bits">
                                       <L n="match_any">
-                                        <T>306293<!--familyTrope_close--></T>
-                                        <T>310888<!--familyTrope_difficult--></T>
-                                        <T>306282<!--familyTrope_distant--></T>
-                                        <T>306279<!--familyTrope_Jokesters--></T>
-                                        <T>306356<!--familyTrope_loving_target_IsAuthorityOf_actor--></T>
-                                        <T>306357<!--familyTrope_loving_target_isSubordinateOf_actor--></T>
-                                        <T>306291<!--familyTrope_compliant_target_isAuthorityOf_actor--></T>
-                                        <T>306294<!--familyTrope_compliant_target_IsSubordinateOf_actor--></T>
+                                        <T>306293<!--RelationshipBit: familyTrope_close--></T>
+                                        <T>310888<!--RelationshipBit: familyTrope_difficult--></T>
+                                        <T>306282<!--RelationshipBit: familyTrope_distant--></T>
+                                        <T>306279<!--RelationshipBit: familyTrope_Jokesters--></T>
+                                        <T>306356<!--RelationshipBit: familyTrope_loving_target_IsAuthorityOf_actor--></T>
+                                        <T>306357<!--RelationshipBit: familyTrope_loving_target_isSubordinateOf_actor--></T>
+                                        <T>306291<!--RelationshipBit: familyTrope_compliant_target_isAuthorityOf_actor--></T>
+                                        <T>306294<!--RelationshipBit: familyTrope_compliant_target_IsSubordinateOf_actor--></T>
                                       </L>
                                     </U>
                                     <L n="subject">
@@ -4985,7 +5119,7 @@
                                     <L n="target_sim">
                                       <E>TargetSim</E>
                                     </L>
-                                    <T n="track">24099<!--SocialContext_Friendship--></T>
+                                    <T n="track">24099<!--ShortTermContextRelationshipTrack: SocialContext_Friendship--></T>
                                   </U>
                                 </V>
                               </L>
@@ -5027,13 +5161,13 @@
                 <L n="continuation">
                   <U>
                     <E n="actor">Actor</E>
-                    <T n="affordance">149773<!--socials_Targeted_Friendly_AlwaysOn_STC_Toddler_AskToBathe--></T>
-                    <T n="si_affordance_override">157626<!--sim_Toddler_Ask--></T>
+                    <T n="affordance">149773<!--SocialMixerInteraction: socials_Targeted_Friendly_AlwaysOn_STC_Toddler_AskToBathe--></T>
+                    <T n="si_affordance_override">157626<!--SocialSuperInteraction: sim_Toddler_Ask--></T>
                     <E n="target">TargetSim</E>
                   </U>
                 </L>
                 <L n="loot_list">
-                  <T>141539<!--loot_Buff_Toddler_Defiance--></T>
+                  <T>141539<!--LootActions: loot_Buff_Toddler_Defiance--></T>
                 </L>
                 <E n="outcome_result">FAILURE</E>
               </U>
@@ -5046,7 +5180,7 @@
                       <L>
                         <V t="mood">
                           <U n="mood">
-                            <T n="mood">14632<!--Mood_Angry--></T>
+                            <T n="mood">14632<!--Mood: Mood_Angry--></T>
                             <E n="who">TargetSim</E>
                           </U>
                         </V>
@@ -5054,7 +5188,7 @@
                       <L>
                         <V t="mood">
                           <U n="mood">
-                            <T n="mood">14643<!--Mood_Sad--></T>
+                            <T n="mood">14643<!--Mood: Mood_Sad--></T>
                             <E n="who">TargetSim</E>
                           </U>
                         </V>
@@ -5069,14 +5203,14 @@
                           <U n="trait">
                             <E n="subject">TargetSim</E>
                             <L n="whitelist_traits">
-                              <T>140744<!--trait_Toddler_Clingy--></T>
+                              <T>140744<!--Trait: trait_Toddler_Clingy--></T>
                             </L>
                           </U>
                         </V>
                         <V t="buff">
                           <U n="buff">
                             <L n="blacklist">
-                              <T>146494<!--buff_Relationship_Toddler_Caregiver--></T>
+                              <T>146494<!--Buff: buff_Relationship_Toddler_Caregiver--></T>
                             </L>
                           </U>
                         </V>
@@ -5090,12 +5224,12 @@
           <L n="tests">
             <L>
               <V t="test_set_reference">
-                <T n="test_set_reference">141467<!--testSetInstance_Toddler_Defiance--></T>
+                <T n="test_set_reference">141467<!--TestSetInstance: testSetInstance_Toddler_Defiance--></T>
               </V>
               <V t="buff">
                 <U n="buff">
                   <L n="blacklist">
-                    <T>141541<!--buff_Toddlers_Defiance_DontWantTo--></T>
+                    <T>141541<!--Buff: buff_Toddlers_Defiance_DontWantTo--></T>
                   </L>
                   <E n="subject">TargetSim</E>
                 </U>
@@ -5104,7 +5238,7 @@
                 <U n="trait">
                   <E n="subject">TargetSim</E>
                   <L n="whitelist_traits">
-                    <T>140741<!--trait_Toddler_Wild--></T>
+                    <T>140741<!--Trait: trait_Toddler_Wild--></T>
                   </L>
                 </U>
               </V>
@@ -5127,7 +5261,7 @@
         <T n="upper_bound">10</T>
       </U>
     </V>
-    <T n="stat">16699<!--statistic_Skill_AdultMajor_Charisma--></T>
+    <T n="stat">16699<!--Skill: statistic_Skill_AdultMajor_Charisma--></T>
   </U>
   <U n="sub_action">
     <T n="base_weight">10</T>
@@ -5135,15 +5269,6 @@
   <E n="target_type">TARGET</E>
   <L n="test_autonomous" />
   <L n="test_globals">
-    <V t="user_running_interaction">
-      <U n="user_running_interaction">
-        <L n="affordances">
-          <T>106223<!--interrogate_Interrogate--></T>
-        </L>
-        <E n="participant">Actor</E>
-        <T n="test_for_not_running">True</T>
-      </U>
-    </V>
     <V t="sim_info">
       <U n="sim_info">
         <V n="ages" t="specified">
@@ -5171,7 +5296,7 @@
         <T n="num_relations">0</T>
         <U n="required_relationship_bits">
           <L n="match_all">
-            <T>15803<!--has_met--></T>
+            <T>15803<!--RelationshipBit: has_met--></T>
           </L>
         </U>
         <L n="subject">
@@ -5184,7 +5309,7 @@
         <V n="desired_state_threshold" t="enabled">
           <U n="enabled">
             <E n="comparison">EQUAL</E>
-            <T n="value">15081<!--BrokenState_Unbroken--></T>
+            <T n="value">15081<!--ObjectStateValue: BrokenState_Unbroken--></T>
           </U>
         </V>
         <V n="identity_test" t="tags">
@@ -5200,7 +5325,7 @@
         <T n="owned">False</T>
         <V n="subject_specific_tests" t="all_objects" />
         <V n="tooltip" t="enabled">
-          <T n="enabled">0xE98E1814<!--Bathtub is required.--></T>
+          <T n="enabled">0xE98E1814<!--String: "Bathtub is required."--></T>
         </V>
       </U>
     </V>

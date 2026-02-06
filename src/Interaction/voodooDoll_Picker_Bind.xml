@@ -37,7 +37,15 @@
   <L n="interaction_category_tags">
     <E>INVALID</E>
   </L>
-  <V n="picker_dialog" t="sim_picker" />
+  <V n="picker_dialog" t="sim_picker">
+    <U n="sim_picker">
+      <L n="custom_filters">
+        <V t="reference">
+          <T n="reference">499295</T>
+        </V>
+      </L>
+    </U>
+  </V>
   <V n="pie_menu_test_tooltip" t="enabled">
     <T n="enabled">0x584921A2<!--The Voodoo Doll can only be bound to nearby, non-Child Sims.--></T>
   </V>

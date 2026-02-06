@@ -306,6 +306,34 @@
             </L>
           </U>
         </V>
+        <V t="literal">
+          <U n="literal">
+            <L n="conditions">
+              <V t="time_based">
+                <U n="time_based">
+                  <T n="max_time">60</T>
+                  <T n="min_time">50</T>
+                </U>
+              </V>
+            </L>
+            <L n="loot_actions">
+              <T>485192<!--LootActions: loot_Getaway_Motives_Eat--></T>
+            </L>
+            <L n="tests">
+              <L>
+                <V t="buff">
+                  <U n="buff">
+                    <V n="whitelist" t="enabled">
+                      <L n="enabled">
+                        <T>456952<!--Buff: buff_Getaway--></T>
+                      </L>
+                    </V>
+                  </U>
+                </V>
+              </L>
+            </L>
+          </U>
+        </V>
       </L>
       <V n="content" t="staging_content">
         <U n="staging_content">
@@ -322,6 +350,12 @@
       </V>
       <V n="periodic_stat_change" t="enabled">
         <U n="enabled">
+          <U n="operation_actions">
+            <L n="actions">
+              <T>501197</T>
+              <T>501195</T>
+            </L>
+          </U>
           <L n="operations">
             <V t="statistic_change">
               <U n="statistic_change">
@@ -578,34 +612,47 @@
       <L n="overrides">
         <U>
           <V n="new_display_name" t="enabled">
-            <T n="enabled">0x8C04485B<!--String: "Wolfishly Ingest {1.ObjectName}"--></T>
+            <T n="enabled">0xACF98575<!--String: "Eat and Learn Experimental Food"--></T>
+          </V>
+          <V n="new_pie_menu_icon" t="enabled">
+            <V n="enabled" t="resource_key">
+              <U n="resource_key">
+                <T p="InEP21\UI\Icons\PieMenu\PieMenu_UnityAlignedAction.png" n="key">2f7d0004:00000000:79a65800e2bcdb2c</T>
+              </U>
+            </V>
           </V>
           <L n="test">
             <L>
-              <V t="trait">
-                <U n="trait">
-                  <T n="num_whitelist_required">2</T>
-                  <L n="whitelist_traits">
-                    <T>381402<!--Trait: trait_IsGhost--></T>
-                    <T>289780<!--Trait: trait_OccultWerewolf--></T>
-                  </L>
+              <V t="object_criteria">
+                <U n="object_criteria">
+                  <V n="identity_test" t="tags">
+                    <U n="tags">
+                      <L n="tag_set">
+                        <E>Func_ExperimentalFood</E>
+                      </L>
+                    </U>
+                  </V>
+                  <T n="owned">False</T>
+                  <V n="subject_specific_tests" t="single_object" />
                 </U>
               </V>
-            </L>
-          </L>
-        </U>
-        <U>
-          <V n="new_display_name" t="enabled">
-            <T n="enabled">0x3F75AF4C<!--String: "Ingest {1.ObjectName}"--></T>
-          </V>
-          <L n="test">
-            <L>
-              <V t="trait">
-                <U n="trait">
-                  <L n="whitelist_traits">
-                    <T>381402<!--Trait: trait_IsGhost--></T>
-                  </L>
+              <V t="skill_test">
+                <U n="skill_test">
+                  <T n="skill">16705<!--Skill: statistic_Skill_AdultMajor_HomestyleCooking--></T>
+                  <V n="skill_range" t="interval">
+                    <U n="interval">
+                      <U n="skill_interval">
+                        <T n="lower_bound">5</T>
+                      </U>
+                    </U>
+                  </V>
                 </U>
+              </V>
+              <V t="test_set_reference">
+                <T n="test_set_reference">140240<!--TestSetInstance: testSet_Restaurant_ExperimentalDisplayOverride--></T>
+              </V>
+              <V t="test_set_reference">
+                <T n="test_set_reference">488483</T>
               </V>
             </L>
           </L>
@@ -643,6 +690,79 @@
               </V>
               <V t="test_set_reference">
                 <T n="test_set_reference">140240<!--TestSetInstance: testSet_Restaurant_ExperimentalDisplayOverride--></T>
+              </V>
+            </L>
+          </L>
+        </U>
+        <U>
+          <V n="new_display_name" t="disabled" />
+          <V n="new_pie_menu_icon" t="enabled">
+            <V n="enabled" t="resource_key">
+              <U n="resource_key">
+                <T p="InEP21\UI\Icons\PieMenu\PieMenu_UnityMisalignedAction.png" n="key">2f7d0004:00000000:5ff18386c7d5e40b</T>
+              </U>
+            </V>
+          </V>
+          <L n="test">
+            <L>
+              <V t="test_set_reference">
+                <T n="test_set_reference">501191<!--TestSetInstance: testSet_DynastyBG_ConnoisseurConsumablePrestige_PoorOrJunk--></T>
+              </V>
+            </L>
+          </L>
+        </U>
+        <U>
+          <V n="new_display_name" t="disabled" />
+          <V n="new_pie_menu_icon" t="enabled">
+            <V n="enabled" t="resource_key">
+              <U n="resource_key">
+                <T p="InEP21\UI\Icons\PieMenu\PieMenu_UnityAlignedAction.png" n="key">2f7d0004:00000000:79a65800e2bcdb2c</T>
+              </U>
+            </V>
+          </V>
+          <L n="test">
+            <L>
+              <V t="test_set_reference">
+                <T n="test_set_reference">501189<!--TestSetInstance: testSet_DynastyBG_ConnoisseurConsumablePrestige_Outstanding--></T>
+              </V>
+            </L>
+            <L>
+              <V t="test_set_reference">
+                <T n="test_set_reference">501190<!--TestSetInstance: testSet_DynastyBG_ConnoisseurConsumablePrestige_FancyFood--></T>
+              </V>
+            </L>
+          </L>
+        </U>
+        <U>
+          <V n="new_display_name" t="enabled">
+            <T n="enabled">0x8C04485B<!--String: "Wolfishly Ingest {1.ObjectName}"--></T>
+          </V>
+          <L n="test">
+            <L>
+              <V t="trait">
+                <U n="trait">
+                  <T n="num_whitelist_required">2</T>
+                  <L n="whitelist_traits">
+                    <T>381402<!--Trait: trait_IsGhost--></T>
+                    <T>289780<!--Trait: trait_OccultWerewolf--></T>
+                  </L>
+                </U>
+              </V>
+            </L>
+          </L>
+        </U>
+        <U>
+          <V n="new_display_name" t="enabled">
+            <T n="enabled">0x3F75AF4C<!--String: "Ingest {1.ObjectName}"--></T>
+          </V>
+          <L n="test">
+            <L>
+              <V t="trait">
+                <U n="trait">
+                  <L n="whitelist_traits">
+                    <T>381402<!--Trait: trait_IsGhost--></T>
+                  </L>
+                </U>
               </V>
             </L>
           </L>

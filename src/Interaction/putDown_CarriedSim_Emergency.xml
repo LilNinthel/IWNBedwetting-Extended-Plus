@@ -172,6 +172,7 @@
             <T>182710<!--Consume_food_GrandMeal_CTYAE--></T>
             <T>136354<!--generic_Consume_Sample--></T>
             <T>287848<!--werewolf_Abilities_Devour--></T>
+            <T>497367<!--SuperInteraction: generic_consume_PlasmafruitSalad--></T>
           </L>
           <T n="test_interaction_queue">True</T>
         </U>

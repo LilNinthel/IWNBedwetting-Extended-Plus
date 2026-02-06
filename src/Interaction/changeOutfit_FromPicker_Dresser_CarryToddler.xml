@@ -56,6 +56,14 @@
         <V n="timing" t="at_beginning" />
       </U>
     </V>
+    <V t="loot">
+      <U n="loot">
+        <L n="loot_list">
+          <T>472268<!--LootActions: loot_ChildhoodInspiration_AddSuggestedChallenge_EstablishAnImage--></T>
+        </L>
+        <V n="timing" t="at_beginning" />
+      </U>
+    </V>
   </L>
   <V n="canonical_animation" t="disabled" />
   <V n="content_score" t="disabled" />

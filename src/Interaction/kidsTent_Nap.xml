@@ -236,6 +236,26 @@
                 </L>
               </U>
             </V>
+            <V t="statistic_change">
+              <U n="statistic_change">
+                <T n="advertise">False</T>
+                <T n="amount">2.5</T>
+                <T n="stat">420035<!--Commodity: commodity_Motive_FairyOccult_EmotionalAppetite--></T>
+                <L n="tests">
+                  <L>
+                    <V t="buff">
+                      <U n="buff">
+                        <V n="whitelist" t="enabled">
+                          <L n="enabled">
+                            <T>439947<!--Buff: buff_FairyOccult_Ability_Passive_EmotionalEnergyFromSleep--></T>
+                          </L>
+                        </V>
+                      </U>
+                    </V>
+                  </L>
+                </L>
+              </U>
+            </V>
           </L>
         </U>
       </V>

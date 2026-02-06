@@ -402,6 +402,25 @@
             <V t="statistic_change">
               <U n="statistic_change">
                 <T n="amount">1</T>
+                <T n="stat">453015<!--Commodity: commodity_CareerBenefit_ParkWorker--></T>
+                <L n="tests">
+                  <L>
+                    <V t="career_test">
+                      <U n="career_test">
+                        <V n="test_type" t="career_track">
+                          <U n="career_track">
+                            <T n="career_track">452996<!--TunableCareerTrack: careerTracks_ParkWorker_ParkCounselor--></T>
+                          </U>
+                        </V>
+                      </U>
+                    </V>
+                  </L>
+                </L>
+              </U>
+            </V>
+            <V t="statistic_change">
+              <U n="statistic_change">
+                <T n="amount">1</T>
                 <T n="stat">142037<!--motive_Toddler_Attention--></T>
                 <L n="tests">
                   <L>
@@ -531,6 +550,7 @@
     </V>
   </L>
   <V n="basic_reserve_object" t="disabled" />
+  <T n="category">457483<!--PieMenuCategory: pieMenuCategory_Getaway--></T>
   <V n="content_score" t="disabled" />
   <T n="disallow_as_mixer_target">True</T>
   <T n="display_name">0x6D61AD68<!--Play with {1.SimFirstName}--></T>

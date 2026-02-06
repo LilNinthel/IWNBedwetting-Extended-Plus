@@ -1529,7 +1529,6 @@
         <L n="blacklist">
           <T>157834<!--buff_Motives_Toddler_AllMotivesOkay_CheckToddler--></T>
           <T>155201<!--buff_Sim_Hidden_CheckToddlerCooldown--></T>
-          <T>157838<!--buff_Sim_Hidden_CheckToddler_Failed_NoObject--></T>
           <T>10094<!--buff_Sim_IsSleeping--></T>
           <T>9273<!--buff_Sim_IsEating--></T>
           <T>275549<!--buff_Sim_IsSleeping_Hidden--></T>
@@ -1571,6 +1570,14 @@
           </L>
         </U>
       </V>
+      <V t="buff">
+        <U n="buff">
+          <L n="blacklist">
+            <T>492969<!--Buff: buff_Sim_Hidden_CheckToddler_Failed_NoObject_Nanny--></T>
+          </L>
+          <E n="subject">TargetSim</E>
+        </U>
+      </V>
     </L>
     <L>
       <V t="relationship">
@@ -1580,6 +1587,14 @@
               <T>15803<!--has_met--></T>
             </L>
           </U>
+        </U>
+      </V>
+      <V t="buff">
+        <U n="buff">
+          <L n="blacklist">
+            <T>157838<!--Buff: buff_Sim_Hidden_CheckToddler_Failed_NoObject--></T>
+          </L>
+          <E n="subject">TargetSim</E>
         </U>
       </V>
     </L>

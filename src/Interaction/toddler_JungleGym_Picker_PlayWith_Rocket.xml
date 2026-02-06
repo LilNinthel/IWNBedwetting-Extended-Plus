@@ -45,7 +45,15 @@
       <T n="affordance">172006<!--toddler_JungleGym_Object_Tunnels_Use_SteeringWheel_Rocket--></T>
     </U>
   </L>
-  <V n="picker_dialog" t="sim_picker" />
+  <V n="picker_dialog" t="sim_picker">
+    <U n="sim_picker">
+      <L n="custom_filters">
+        <V t="reference">
+          <T n="reference">499295</T>
+        </V>
+      </L>
+    </U>
+  </V>
   <V n="pie_menu_test_tooltip" t="enabled">
     <T n="enabled">0xB5C19539<!--Must know a toddler with level 2 Imagination Skill.--></T>
   </V>

@@ -39,7 +39,16 @@
   <V n="_saveable" t="enabled" />
   <T n="attention_cost">0.5</T>
   <V n="basic_content" t="one_shot" />
-  <L n="basic_extras" />
+  <L n="basic_extras">
+    <V t="loot">
+      <U n="loot">
+        <L n="loot_list">
+          <T>472268<!--LootActions: loot_ChildhoodInspiration_AddSuggestedChallenge_EstablishAnImage--></T>
+        </L>
+        <V n="timing" t="at_beginning" />
+      </U>
+    </V>
+  </L>
   <V n="canonical_animation" t="disabled" />
   <V n="content_score" t="disabled" />
   <T n="display_name">0x5D12057A<!--Clean Up {2.SimFirstName}--></T>

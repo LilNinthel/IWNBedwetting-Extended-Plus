@@ -202,6 +202,15 @@
             </V>
             <V t="statistic_change">
               <U n="statistic_change">
+                <T n="amount">20</T>
+                <T n="stat">472305<!--Commodity: commodity_ChildhoodInspiration_Tracker_BeTheGeek--></T>
+                <L n="subject">
+                  <E>Actor</E>
+                </L>
+              </U>
+            </V>
+            <V t="statistic_change">
+              <U n="statistic_change">
                 <T n="amount">0.78</T>
                 <T n="stat">16655<!--motive_Fun--></T>
               </U>
@@ -258,6 +267,102 @@
       <U n="buff">
         <U n="buff_type">
           <T n="buff_type">185734<!--buff_Umbrella_Close--></T>
+        </U>
+      </U>
+    </V>
+    <V t="loot">
+      <U n="loot">
+        <L n="loot_list">
+          <T>472591<!--LootActions: loot_ChildhoodInspiration_AddSuggestedChallenge_BeInvestigative--></T>
+        </L>
+        <U n="success_chance">
+          <L n="multipliers">
+            <U>
+              <T n="multiplier">0</T>
+              <L n="tests">
+                <L>
+                  <V t="object_criteria">
+                    <U n="object_criteria">
+                      <V n="identity_test" t="tags">
+                        <U n="tags">
+                          <L n="tag_set">
+                            <E>Genre_Book_Mystery-Thriller</E>
+                          </L>
+                          <E n="test_type">CONTAINS_NO_TAGS_IN_SET</E>
+                        </U>
+                      </V>
+                      <T n="owned">False</T>
+                      <V n="subject_specific_tests" t="single_object" />
+                    </U>
+                  </V>
+                </L>
+              </L>
+            </U>
+          </L>
+        </U>
+      </U>
+    </V>
+    <V t="loot">
+      <U n="loot">
+        <L n="loot_list">
+          <T>472264<!--LootActions: loot_ChildhoodInspiration_AddSuggestedChallenge_BeATraveler--></T>
+        </L>
+        <U n="success_chance">
+          <L n="multipliers">
+            <U>
+              <T n="multiplier">0</T>
+              <L n="tests">
+                <L>
+                  <V t="object_criteria">
+                    <U n="object_criteria">
+                      <V n="identity_test" t="tags">
+                        <U n="tags">
+                          <L n="tag_set">
+                            <E>Genre_Book_Fantasy</E>
+                          </L>
+                          <E n="test_type">CONTAINS_NO_TAGS_IN_SET</E>
+                        </U>
+                      </V>
+                      <T n="owned">False</T>
+                      <V n="subject_specific_tests" t="single_object" />
+                    </U>
+                  </V>
+                </L>
+              </L>
+            </U>
+          </L>
+        </U>
+      </U>
+    </V>
+    <V t="loot">
+      <U n="loot">
+        <L n="loot_list">
+          <T>472591<!--LootActions: loot_ChildhoodInspiration_AddSuggestedChallenge_BeInvestigative--></T>
+        </L>
+        <U n="success_chance">
+          <L n="multipliers">
+            <U>
+              <T n="multiplier">0</T>
+              <L n="tests">
+                <L>
+                  <V t="object_criteria">
+                    <U n="object_criteria">
+                      <V n="identity_test" t="tags">
+                        <U n="tags">
+                          <L n="tag_set">
+                            <E>Genre_Book_Mystery-Thriller</E>
+                          </L>
+                          <E n="test_type">CONTAINS_NO_TAGS_IN_SET</E>
+                        </U>
+                      </V>
+                      <T n="owned">False</T>
+                      <V n="subject_specific_tests" t="single_object" />
+                    </U>
+                  </V>
+                </L>
+              </L>
+            </U>
+          </L>
         </U>
       </U>
     </V>

@@ -192,6 +192,12 @@
       </V>
       <V n="periodic_stat_change" t="enabled">
         <U n="enabled">
+          <U n="operation_actions">
+            <L n="actions">
+              <T>501197</T>
+              <T>501195</T>
+            </L>
+          </U>
           <L n="operations">
             <V t="statistic_change">
               <U n="statistic_change">
@@ -390,15 +396,88 @@
     <U n="testable">
       <L n="overrides">
         <U>
+          <V n="new_display_name" t="disabled" />
+          <V n="new_pie_menu_icon" t="enabled">
+            <V n="enabled" t="resource_key">
+              <U n="resource_key">
+                <T n="key" p="InEP21\UI\Icons\PieMenu\PieMenu_UnityMisalignedAction.png">2f7d0004:00000000:5ff18386c7d5e40b</T>
+              </U>
+            </V>
+          </V>
+          <L n="test">
+            <L>
+              <V t="test_set_reference">
+                <T n="test_set_reference">501191<!--TestSetInstance: testSet_DynastyBG_ConnoisseurConsumablePrestige_PoorOrJunk--></T>
+              </V>
+            </L>
+          </L>
+        </U>
+        <U>
+          <V n="new_display_name" t="disabled" />
+          <V n="new_pie_menu_icon" t="enabled">
+            <V n="enabled" t="resource_key">
+              <U n="resource_key">
+                <T n="key" p="InEP21\UI\Icons\PieMenu\PieMenu_UnityAlignedAction.png">2f7d0004:00000000:79a65800e2bcdb2c</T>
+              </U>
+            </V>
+          </V>
+          <L n="test">
+            <L>
+              <V t="test_set_reference">
+                <T n="test_set_reference">501189<!--TestSetInstance: testSet_DynastyBG_ConnoisseurConsumablePrestige_Outstanding--></T>
+              </V>
+            </L>
+            <L>
+              <V t="test_set_reference">
+                <T n="test_set_reference">501190<!--TestSetInstance: testSet_DynastyBG_ConnoisseurConsumablePrestige_FancyFood--></T>
+              </V>
+            </L>
+          </L>
+        </U>
+        <U>
           <V n="new_display_name" t="enabled">
-            <T n="enabled">0xFC75CCAB<!--Wolf Down {1.ObjectName}--></T>
+            <T n="enabled">0x8C04485B<!--String: "Wolfishly Ingest {1.ObjectName}"--></T>
+          </V>
+          <L n="test">
+            <L>
+              <V t="trait">
+                <U n="trait">
+                  <T n="num_whitelist_required">2</T>
+                  <L n="whitelist_traits">
+                    <T>381402<!--Trait: trait_IsGhost--></T>
+                    <T>289780<!--Trait: trait_OccultWerewolf--></T>
+                  </L>
+                </U>
+              </V>
+            </L>
+          </L>
+        </U>
+        <U>
+          <V n="new_display_name" t="enabled">
+            <T n="enabled">0x3F75AF4C<!--String: "Ingest {1.ObjectName}"--></T>
           </V>
           <L n="test">
             <L>
               <V t="trait">
                 <U n="trait">
                   <L n="whitelist_traits">
-                    <T>289780<!--trait_OccultWerewolf--></T>
+                    <T>381402<!--Trait: trait_IsGhost--></T>
+                  </L>
+                </U>
+              </V>
+            </L>
+          </L>
+        </U>
+        <U>
+          <V n="new_display_name" t="enabled">
+            <T n="enabled">0xFC75CCAB<!--String: "Wolf Down {1.ObjectName}"--></T>
+          </V>
+          <L n="test">
+            <L>
+              <V t="trait">
+                <U n="trait">
+                  <L n="whitelist_traits">
+                    <T>289780<!--Trait: trait_OccultWerewolf--></T>
                   </L>
                 </U>
               </V>

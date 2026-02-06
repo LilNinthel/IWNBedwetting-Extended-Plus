@@ -107,5 +107,8 @@
     <V t="test_set_reference">
       <T n="test_set_reference">230389<!--testSetInstance_MechanicalSuit_Disallow--></T>
     </V>
+    <V t="test_set_reference">
+      <T n="test_set_reference">464035<!--TestSetInstance: testSetInstance_EP20_IF_Disallow_Tooltip--></T>
+    </V>
   </L>
 </I>

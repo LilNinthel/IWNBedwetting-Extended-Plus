@@ -117,6 +117,9 @@
                             <T>8802<!--family_Target_IsBrotherSisterOf_Actor--></T>
                             <T>8809<!--family_Target_IsParentOf_Actor--></T>
                             <T>8808<!--family_Target_IsGrandparentOf_Actor--></T>
+                            <T>468542<!--RelationshipBit: family_Target_IsHalfsiblingOf_Actor--></T>
+                            <T>468543<!--RelationshipBit: family_Target_IsStepparentOf_Actor--></T>
+                            <T>8824<!--RelationshipBit: family_Target_IsStepsiblingOf_Actor--></T>
                           </L>
                         </U>
                       </U>
@@ -163,6 +166,9 @@
                             <T>8802<!--family_Target_IsBrotherSisterOf_Actor--></T>
                             <T>8809<!--family_Target_IsParentOf_Actor--></T>
                             <T>8808<!--family_Target_IsGrandparentOf_Actor--></T>
+                            <T>8824<!--RelationshipBit: family_Target_IsStepsiblingOf_Actor--></T>
+                            <T>468543<!--RelationshipBit: family_Target_IsStepparentOf_Actor--></T>
+                            <T>468542<!--RelationshipBit: family_Target_IsHalfsiblingOf_Actor--></T>
                           </L>
                         </U>
                       </U>
@@ -678,6 +684,13 @@
         </U>
       </L>
     </U>
+  </V>
+  <V n="pie_menu_icon" t="enabled">
+    <V n="enabled" t="resource_key">
+      <U n="resource_key">
+        <T p="InGame\UI\Icons\Skills\Skill_Communication.png" n="key">2f7d0004:00000000:22d470526989183d</T>
+      </U>
+    </V>
   </V>
   <U n="progress_bar_enabled">
     <T n="bar_enabled">False</T>

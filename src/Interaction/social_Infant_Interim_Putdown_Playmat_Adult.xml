@@ -108,6 +108,13 @@
         </L>
       </U>
     </V>
+    <V t="loot">
+      <U n="loot">
+        <L n="loot_list">
+          <T>452162<!--LootActions: loot_ChildhoodInspiration_AddSuggestedChallenge_ThinkOfOthers--></T>
+        </L>
+      </U>
+    </V>
   </L>
   <V n="basic_reserve_object" t="disabled" />
   <T n="category">15507<!--sim_Friendly--></T>
