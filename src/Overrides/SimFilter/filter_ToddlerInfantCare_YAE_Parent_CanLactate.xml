@@ -1,5 +1,4 @@
-<!-- S4TK Group: 00000000 -->
-<I c="TunableSimFilter" i="sim_filter" m="filters.tunable" n="LilNinthel:filter_LittleCare_Caregiver_CanLactate" s="12164843791878374424">
+<I c="TunableSimFilter" i="sim_filter" m="filters.tunable" n="filter_ToddlerInfantCare_YAE_Parent_CanLactate" s="305258">
   <L n="_filter_terms">
     <V t="trait_blacklist">
       <U n="trait_blacklist">
@@ -44,24 +43,10 @@
       </U>
     </V>
     <V t="sim_info_lod" />
-    <V t="species">
-      <U n="species">
-        <E n="species">HUMAN</E>
-      </U>
-    </V>
-    <V t="age">
-      <U n="age">
-        <E n="ideal_value">ADULT</E>
-        <E n="max_value">ELDER</E>
-        <E n="min_value">TEEN</E>
-      </U>
-    </V>
-    <V t="relationship_bit">
-      <U n="relationship_bit">
-        <V n="relationship_selector" t="use_requesting_sim" />
-        <L n="white_list">
-          <T>15803<!--has_met--></T>
-        </L>
+    <V t="species" />
+    <V t="is_hidden_relationship">
+      <U n="is_hidden_relationship">
+        <T n="invert_score">True</T>
       </U>
     </V>
     <V t="trait">
@@ -69,9 +54,18 @@
         <T n="trait">274985<!--trait_GenderOptions_Lactate_Can--></T>
       </U>
     </V>
-    <V t="trait">
-      <U n="trait">
-        <T n="trait">1217135835<!--LilNinthel:trait_Universal_Caregiver--></T>
+    <V t="relationship_bit">
+      <U n="relationship_bit">
+        <V n="relationship_selector" t="use_requesting_sim" />
+        <L n="white_list">
+          <T>8809<!--family_Target_IsParentOf_Actor--></T>
+          <T>1714023795<!--LilNinthel:relbit_Caregiver--></T>
+        </L>
+      </U>
+    </V>
+    <V t="age">
+      <U n="age">
+        <E n="min_value">TEEN</E>
       </U>
     </V>
   </L>

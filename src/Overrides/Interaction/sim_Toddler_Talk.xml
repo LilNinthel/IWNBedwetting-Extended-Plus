@@ -323,6 +323,13 @@
     <V t="loot">
       <U n="loot">
         <L n="loot_list">
+          <T>441165<!--LootActions: lootActions_FairyOccult_Ability_EmotionalEnergyPositiveSocials--></T>
+        </L>
+      </U>
+    </V>
+    <V t="loot">
+      <U n="loot">
+        <L n="loot_list">
           <T>183382<!--loot_Toddler_Talk_SetCommodities--></T>
         </L>
         <V n="timing" t="at_beginning" />

@@ -37,6 +37,15 @@
   <V n="_saveable" t="enabled" />
   <T n="attention_cost">0.5</T>
   <V n="basic_content" t="one_shot" />
+  <L n="basic_extras">
+    <V t="loot">
+      <U n="loot">
+        <L n="loot_list">
+          <T>441165<!--LootActions: lootActions_FairyOccult_Ability_EmotionalEnergyPositiveSocials--></T>
+        </L>
+      </U>
+    </V>
+  </L>
   <T n="category">282446<!--sim_Infant_Care_Feed--></T>
   <V n="content_score" t="enabled">
     <U n="enabled">
