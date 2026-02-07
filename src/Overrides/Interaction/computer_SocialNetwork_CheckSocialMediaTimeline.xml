@@ -15,6 +15,7 @@
       <T n="static_commodity">27767<!--StaticCommodity_UseComputer--></T>
     </U>
   </L>
+  <T n="allow_autonomous">True</T>
   <L n="appropriateness_tags">
     <E>Appropriateness_Computer</E>
   </L>

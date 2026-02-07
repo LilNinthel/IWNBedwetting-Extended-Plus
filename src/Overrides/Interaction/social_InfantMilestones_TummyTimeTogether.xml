@@ -291,6 +291,13 @@
         </L>
       </U>
     </V>
+    <V t="loot">
+      <U n="loot">
+        <L n="loot_list">
+          <T>441165<!--LootActions: lootActions_FairyOccult_Ability_EmotionalEnergyPositiveSocials--></T>
+        </L>
+      </U>
+    </V>
     <V t="buff">
       <U n="buff">
         <U n="buff_type">

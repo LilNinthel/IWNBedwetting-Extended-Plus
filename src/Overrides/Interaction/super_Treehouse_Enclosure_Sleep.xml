@@ -163,6 +163,35 @@
             <E n="interaction_action">EXIT_CANCEL</E>
           </U>
         </V>
+        <V t="literal">
+          <U n="literal">
+            <L n="conditions">
+              <V t="time_based">
+                <U n="time_based">
+                  <T n="max_time">300</T>
+                  <T n="min_time">300</T>
+                </U>
+              </V>
+            </L>
+            <E n="interaction_action">NO_ACTION</E>
+            <L n="loot_actions">
+              <T>485187<!--LootActions: loot_Getaway_Motives_SleepBoost--></T>
+            </L>
+            <L n="tests">
+              <L>
+                <V t="buff">
+                  <U n="buff">
+                    <V n="whitelist" t="enabled">
+                      <L n="enabled">
+                        <T>456952<!--Buff: buff_Getaway--></T>
+                      </L>
+                    </V>
+                  </U>
+                </V>
+              </L>
+            </L>
+          </U>
+        </V>
       </L>
       <V n="content" t="looping_content">
         <U n="looping_content">
@@ -528,6 +557,16 @@
     <V t="state">
       <U n="state">
         <T n="value">310368<!--state_Treehouse_SimsWooHooing_False--></T>
+      </U>
+    </V>
+    <V t="buff">
+      <U n="buff">
+        <L n="blacklist">
+          <T>433383<!--Buff: buff_Ailments_CreationImpulse_NeedToCreate--></T>
+        </L>
+        <V n="tooltip" t="enabled">
+          <T n="enabled">0xE54D4FDB<!--String: "{0.SimFirstName} has too strong a Creation Itch to sleep right now!"--></T>
+        </V>
       </U>
     </V>
   </L>

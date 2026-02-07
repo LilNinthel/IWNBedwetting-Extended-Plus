@@ -278,17 +278,18 @@
       <V n="default_inclusion" t="include_all">
         <U n="include_all">
           <L n="exclude_affordances">
-            <T>104856<!--pool-swim--></T>
-            <T>103790<!--terrain-Swimhere--></T>
-            <T>129587<!--terrain-Swim_andChatHere--></T>
-            <T>182089<!--sim_CreateCarryUmbrella--></T>
+            <T>104856<!--WaypointInteraction: pool-swim--></T>
+            <T>103790<!--GoHereSuperInteraction: terrain-Swimhere--></T>
+            <T>129587<!--GoHereSuperInteraction: terrain-Swim_andChatHere--></T>
+            <T>182089<!--SuperInteraction: sim_CreateCarryUmbrella--></T>
           </L>
           <L n="exclude_lists">
-            <T>16388<!--TV_All--></T>
-            <T>30641<!--AffordanceList_View--></T>
-            <T>36156<!--AffordanceList_Socialize--></T>
-            <T>30816<!--affordanceList_FoodConsume--></T>
-            <T>30642<!--AffordanceList_Phone--></T>
+            <T>16388<!--AffordanceList: TV_All--></T>
+            <T>30641<!--AffordanceList: AffordanceList_View--></T>
+            <T>36156<!--AffordanceList: AffordanceList_Socialize--></T>
+            <T>30816<!--AffordanceList: affordanceList_FoodConsume--></T>
+            <T>30642<!--AffordanceList: AffordanceList_Phone--></T>
+            <T>37500<!--AffordanceList: affordanceList_Read--></T>
           </L>
         </U>
       </V>

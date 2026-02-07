@@ -281,6 +281,13 @@
     <V t="loot">
       <U n="loot">
         <L n="loot_list">
+          <T>441165<!--LootActions: lootActions_FairyOccult_Ability_EmotionalEnergyPositiveSocials--></T>
+        </L>
+      </U>
+    </V>
+    <V t="loot">
+      <U n="loot">
+        <L n="loot_list">
           <T>157836<!--loot_Buff_CheckToddlerCooldown_Actor--></T>
         </L>
         <V n="timing" t="at_beginning" />

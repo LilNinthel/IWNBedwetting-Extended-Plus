@@ -39,6 +39,18 @@
         <V t="list_reference">
           <T n="list_reference">40705<!--ExitConditionList_MotivesNearFail--></T>
         </V>
+        <V t="literal">
+          <U n="literal">
+            <L n="conditions">
+              <V t="time_based">
+                <U n="time_based">
+                  <T n="max_time">60</T>
+                  <T n="min_time">30</T>
+                </U>
+              </V>
+            </L>
+          </U>
+        </V>
       </L>
       <V n="content" t="looping_content">
         <U n="looping_content">

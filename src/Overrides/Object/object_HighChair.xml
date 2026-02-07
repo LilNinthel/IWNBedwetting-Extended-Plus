@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <I c="GameObject" i="object" m="objects.game_object" n="object_HighChair" s="135520">
   <U n="_components">
     <V n="affordance_tuning" t="enabled">
@@ -313,49 +314,52 @@
     </U>
   </L>
   <L n="_super_affordances">
-    <T>13328<!--debug_Reset--></T>
-    <T>13326<!--debug_ObjectDestroy--></T>
-    <T>103888<!--cheat_set_as_head--></T>
-    <T>196759<!--famePerks_GoodReputation_GivingBack_DonateObject--></T>
-    <T>13983<!--sim-stand--></T>
-    <T>135526<!--HighChair_Sit--></T>
-    <T>142506<!--HighChair_Clean--></T>
-    <T>276041<!--generic_SitInHighChair_feed--></T>
-    <T>286173<!--simPicker_HighChair_Adult_FeedInfant_FingerFood--></T>
-    <T>320141<!--simPicker_HighChair_Infant_GetFood_FirstFood--></T>
-    <T>13142<!--Cheat_MakeDirty--></T>
-    <T>33960<!--Cheat_MakeClean--></T>
-    <T>320142<!--simPicker_HighChair_Infant_GetFood_FirstFood_InChair--></T>
-    <T>320143<!--simPicker_HighChair_Adult_FeedInfant_FirstFood--></T>
-    <T>321893<!--immediate_Infant_HighChair_Dummy--></T>
-    <T>146417<!--HighChair_Create--></T>
-    <T>333142<!--simPicker_Infant_GetFedBy--></T>
-    <T>148724<!--highChair_ServeToSlot--></T>
-    <T>149389<!--Toddler_ChooseDelivery--></T>
-    <T>149390<!--highChair_ServeToSitSlot--></T>
-    <T>149569<!--HighChair_Stand--></T>
-    <T>151484<!--toddler_ChooseDelivery_Drink--></T>
-    <T>155841<!--HighChair_Sit_Debug--></T>
-    <T>155968<!--HighChair_CleanDishesInHighChair--></T>
-    <T>157532<!--autonomousSimPicker_Toddler_AskForFood--></T>
-    <T>144173<!--simPickerInteraction_PutDown_HighChair_Adult--></T>
-    <T>151733<!--simPickerInteraction_PutDown_HighChair_Toddler_AskForDrink--></T>
-    <T>142512<!--simPickerInteraction_PutDown_HighChair_Toddler--></T>
-    <T>151734<!--simPickerInteraction_PutDown_HighChair_Toddler_AskForFood--></T>
-    <T>151349<!--simPickerInteraction_PutDown_HighChair_Adult_GiveDrink--></T>
-    <T>151348<!--simPickerInteraction_PutDown_HighChair_Adult_GiveFood--></T>
-    <T>155832<!--simPickerInteraction_PutDown_HighChair_Toddler_AskForFood_Provided--></T>
-    <T>155834<!--simPickerInteraction_PutDown_HighChair_Toddler_AskForDrink_Provided--></T>
-    <T>274094<!--simPickerInteraction_PutDown_HighChair_Infant--></T>
-    <T>274099<!--simPicker_HighChair_Infant_GetFood--></T>
-    <T>274100<!--simPicker_HighChair_Infant_GetFingerFood--></T>
-    <T>274101<!--simPicker_HighChair_Adult_FeedInfant--></T>
-    <T>274760<!--simPicker_HighChair_Infant_GetFood_InChair--></T>
-    <T>274762<!--simPicker_HighChair_Infant_GetFingerFood_InChair--></T>
-    <T>106859<!--simRay_Transform_Object--></T>
-    <T>74457<!--fire_ReplaceBurntObject--></T>
-    <T>168502<!--Ghost_Pet_Possess--></T>
-    <T>324988<!--Ghost_Horse_Possess--></T>
+    <T>13328<!--ImmediateSuperInteraction: debug_Reset--></T>
+    <T>13326<!--ImmediateSuperInteraction: debug_ObjectDestroy--></T>
+    <T>103888<!--ImmediateSuperInteraction: cheat_set_as_head--></T>
+    <T>196759<!--SuperInteraction: famePerks_GoodReputation_GivingBack_DonateObject--></T>
+    <T>13983<!--StandSuperInteraction: sim-stand--></T>
+    <T>135526<!--SuperInteraction: HighChair_Sit--></T>
+    <T>401385<!--SuperInteraction: ghost_Possess_MischieviousGhost--></T>
+    <T>142506<!--SuperInteraction: HighChair_Clean--></T>
+    <T>276041<!--SuperInteraction: generic_SitInHighChair_feed--></T>
+    <T>286173<!--SimPickerInteraction: simPicker_HighChair_Adult_FeedInfant_FingerFood--></T>
+    <T>320141<!--SimPickerInteraction: simPicker_HighChair_Infant_GetFood_FirstFood--></T>
+    <T>13142<!--ImmediateSuperInteraction: Cheat_MakeDirty--></T>
+    <T>33960<!--ImmediateSuperInteraction: Cheat_MakeClean--></T>
+    <T>320142<!--SimPickerInteraction: simPicker_HighChair_Infant_GetFood_FirstFood_InChair--></T>
+    <T>320143<!--SimPickerInteraction: simPicker_HighChair_Adult_FeedInfant_FirstFood--></T>
+    <T>321893<!--ImmediateSuperInteraction: immediate_Infant_HighChair_Dummy--></T>
+    <T>146417<!--CraftingPhaseCreateCarriedObjectSuperInteraction: HighChair_Create--></T>
+    <T>333142<!--SimPickerInteraction: simPicker_Infant_GetFedBy--></T>
+    <T>148724<!--ServeToSlotSuperInteraction: highChair_ServeToSlot--></T>
+    <T>149389<!--ChooseDeliverySuperInteraction: Toddler_ChooseDelivery--></T>
+    <T>149390<!--ServeToSitSlotSuperInteraction: highChair_ServeToSitSlot--></T>
+    <T>149569<!--SuperInteraction: HighChair_Stand--></T>
+    <T>151484<!--ChooseDeliverySuperInteraction: toddler_ChooseDelivery_Drink--></T>
+    <T>155841<!--SuperInteraction: HighChair_Sit_Debug--></T>
+    <T>155968<!--SuperInteraction: HighChair_CleanDishesInHighChair--></T>
+    <T>157532<!--AutonomousSimPickerSuperInteraction: autonomousSimPicker_Toddler_AskForFood--></T>
+    <T>144173<!--SimPickerInteraction: simPickerInteraction_PutDown_HighChair_Adult--></T>
+    <T>151733<!--SimPickerInteraction: simPickerInteraction_PutDown_HighChair_Toddler_AskForDrink--></T>
+    <T>142512<!--SimPickerInteraction: simPickerInteraction_PutDown_HighChair_Toddler--></T>
+    <T>151734<!--SimPickerInteraction: simPickerInteraction_PutDown_HighChair_Toddler_AskForFood--></T>
+    <T>151349<!--SimPickerInteraction: simPickerInteraction_PutDown_HighChair_Adult_GiveDrink--></T>
+    <T>151348<!--SimPickerInteraction: simPickerInteraction_PutDown_HighChair_Adult_GiveFood--></T>
+    <T>155832<!--SimPickerInteraction: simPickerInteraction_PutDown_HighChair_Toddler_AskForFood_Provided--></T>
+    <T>155834<!--SimPickerInteraction: simPickerInteraction_PutDown_HighChair_Toddler_AskForDrink_Provided--></T>
+    <T>274094<!--SimPickerInteraction: simPickerInteraction_PutDown_HighChair_Infant--></T>
+    <T>274099<!--SimPickerInteraction: simPicker_HighChair_Infant_GetFood--></T>
+    <T>274100<!--SimPickerInteraction: simPicker_HighChair_Infant_GetFingerFood--></T>
+    <T>274101<!--SimPickerInteraction: simPicker_HighChair_Adult_FeedInfant--></T>
+    <T>274760<!--SimPickerInteraction: simPicker_HighChair_Infant_GetFood_InChair--></T>
+    <T>274762<!--SimPickerInteraction: simPicker_HighChair_Infant_GetFingerFood_InChair--></T>
+    <T>106859<!--SuperInteraction: simRay_Transform_Object--></T>
+    <T>393854<!--SuperInteraction: ghostPowers_Abilities_Scary_SinisterPossess_Autonomous--></T>
+    <T>393658<!--SuperInteraction: ghostPowers_Abilities_Helpful_NoPossess_Instantly_Clean--></T>
+    <T>74457<!--ImmediateSuperInteraction: fire_ReplaceBurntObject--></T>
+    <T>168502<!--SuperInteraction: Ghost_Pet_Possess--></T>
+    <T>324988<!--SuperInteraction: Ghost_Horse_Possess--></T>
   </L>
   <U n="aop_forward_data">
     <T n="should_search_forwarded_child_aop">False</T>
