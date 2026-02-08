@@ -14,8 +14,12 @@
       <T name="cas_trait_asm_param">Active</T>
       <L name="conflicting_traits"/>
       <T name="display_name">0x99CA1CBA</T>
+      <T name="display_name_gender_neutral">0x99CA1CBA</T>
+      <L name="display_overrides"/>
       <L name="genders"/>
       <T name="icon">00B2D882-00000000-C09B0954D2EF3D7F</T>
+      <L name="occults" />
+      <T name="refresh_sim_thumbnail">0</T>
       <L name="species">
         <T type="Int64">1</T>
       </L>

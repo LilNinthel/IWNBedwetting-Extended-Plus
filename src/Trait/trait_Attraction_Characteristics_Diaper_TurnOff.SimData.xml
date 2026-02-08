@@ -20,6 +20,7 @@
         <T type="TableSetReference">10075759203541048072</T>
       </L>
       <T name="display_name">0x4FECCD33</T>
+      <T name="display_name_gender_neutral">0x4FECCD33</T>
       <L name="display_overrides"/>
       <L name="genders"/>
       <T name="icon">00B2D882-00000000-322220FC9BA98A06</T>

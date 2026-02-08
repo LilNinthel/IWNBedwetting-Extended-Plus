@@ -15,12 +15,17 @@
       <T name="cas_trait_asm_param">None</T>
       <L name="conflicting_traits"/>
       <T name="display_name">0x00000000</T>
+      <T name="display_name_gender_neutral">0x00000000</T>
+      <L name="display_overrides"/>
       <L name="genders"/>
       <T name="icon">00B2D882-00000000-30F0846C783606F9</T>
+      <L name="occults" />
+      <T name="refresh_sim_thumbnail">0</T>
       <L name="species">
         <T type="Int64">1</T>
       </L>
       <L name="tags"/>
+      <T name="thumbnail_type_asm_param"></T>
       <T name="trait_description">0x00000000</T>
       <T name="trait_origin_description">0x00000000</T>
       <T name="trait_type">4</T>
