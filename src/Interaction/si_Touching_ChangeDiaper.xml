@@ -125,6 +125,7 @@
     </V>
   </L>
   <V n="basic_reserve_object" t="disabled" />
+  <T n="category">457483<!--PieMenuCategory: pieMenuCategory_Getaway--></T>
   <V n="content_score" t="disabled" />
   <T n="disallow_as_mixer_target">True</T>
   <T n="display_name">0xCE9B4CF2<!--Change Diaper--></T>

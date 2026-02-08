@@ -1,6 +1,6 @@
 import sims4.resources
 from traits.trait_tracker import TraitPickerSuperInteraction
-from iwnbedwetting.enums.traits import IwnBedwettingTrait
+from omutsulib.enums.traits import IwnBedwettingTrait
 import services
 
 
@@ -37,8 +37,6 @@ class IwnBedwettingTraitPickerSuperInteraction(TraitPickerSuperInteraction):
         target_traits.add(IwnBedwettingTrait.TOTAL_URINARY_INCONTINENCE)
         target_traits.add(IwnBedwettingTrait.DIAPERED_247_MEDICAL)
         target_traits.add(IwnBedwettingTrait.SLEEPS_IN_DIAPERS)
-
-
 
         traits = {trait_manager.get(trait_id) for trait_id in target_traits}
         
