@@ -15,6 +15,17 @@
   </L>
   <T n="attention_cost">0.5</T>
   <V n="basic_content" t="one_shot" />
+  <L n="basic_extras">
+    <V t="loot">
+      <U n="loot">
+        <L n="loot_list">
+          <T>14270693017133057191<!--LilNinthel:loot_buff_highchairfeedposture_remove_target--></T>
+          <T>12813896440910882310<!--LilNinthel:loot_remove_fake_diaperChange_target_buff_TargetSim--></T>
+        </L>
+        <V n="timing" t="at_end" />
+      </U>
+    </V>
+  </L>
   <L n="basic_liabilities">
     <V t="critical_priority">
       <U n="critical_priority">
